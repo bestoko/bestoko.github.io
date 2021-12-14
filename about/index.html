@@ -13,6 +13,8 @@
 <meta name="twitter:site" content="@bestokocc">
     <meta name="twitter:creator" content="@bestokocc"><meta name="twitter:title" content="About">
 <meta name="twitter:description" content="关于">
+    <link rel="shortcut icon" href="img/bestoko.ico" />
+
     </head>
     <body class="
     article-page 
@@ -298,8 +300,8 @@
 </ul>
 <h1 id="关于-博客">关于 博客</h1>
 <ul>
-<li>Hego 搭建</li>
-<li>GIthub 托管</li>
+<li>Hugo 搭建</li>
+<li>Github 托管</li>
 <li>Aliyun 域名解析</li>
 </ul>
 
@@ -333,39 +335,6 @@
 </aside>
 
      
-    
-        
-    <div id="gitalk-container"></div>
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: "8117c58dabd443d1d7e0",
-        clientSecret: "7165d9c4cc8686c421ea38c3e6a714ec606d4f4b",
-        repo: "blog-comments",
-        owner: "bestoko",
-        admin: ["bestoko"],
-        distractionFreeMode: false, 
-        id: md5(location.pathname), 
-    });
-    (function () {
-        if (
-            ["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1
-        ) {
-            document.getElementById("gitalk-container").innerHTML =
-                "Gitalk comments not available by default when the website is previewed locally.";
-            return;
-        }
-        gitalk.render("gitalk-container");
-    })();
-</script>
-
-
-
     
 
     <footer class="site-footer">
