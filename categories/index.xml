@@ -7,11 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://bestoko.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://bestoko.github.io/categories/test/</link>
+      <title>Life</title>
+      <link>https://bestoko.github.io/categories/life/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/categories/test/</guid>
+      <guid>https://bestoko.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Play</title>
+      <link>https://bestoko.github.io/categories/play/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bestoko.github.io/categories/play/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Study</title>
+      <link>https://bestoko.github.io/categories/study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bestoko.github.io/categories/study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Work</title>
+      <link>https://bestoko.github.io/categories/work/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bestoko.github.io/categories/work/</guid>
       <description></description>
     </item>
     
