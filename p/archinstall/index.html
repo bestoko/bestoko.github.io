@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='安装过程与基本配置'><title>Arch Linux安装备忘录（一）</title>
+
+<link rel='canonical' href='https://bestoko.github.io/p/archinstall/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Arch Linux安装备忘录（一）'>
+<meta property='og:description' content='安装过程与基本配置'>
+<meta property='og:url' content='https://bestoko.github.io/p/archinstall/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:published_time' content='2021-12-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-12-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://bestoko.github.io/p/archinstall/ArchLinux.jpg' />
+<meta name="twitter:site" content="@bestokocc">
+    <meta name="twitter:creator" content="@bestokocc"><meta name="twitter:title" content="Arch Linux安装备忘录（一）">
+<meta name="twitter:description" content="安装过程与基本配置"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.github.io/p/archinstall/ArchLinux.jpg' />
+    <link rel="shortcut icon" href="img/bestoko.ico" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/archinstall/">
+                <img src="/p/archinstall/ArchLinux_hu13d81b556f6c7780a085a162084854bc_14536_800x0_resize_q75_box.jpg"
+                        srcset="/p/archinstall/ArchLinux_hu13d81b556f6c7780a085a162084854bc_14536_800x0_resize_q75_box.jpg 800w, /p/archinstall/ArchLinux_hu13d81b556f6c7780a085a162084854bc_14536_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="501" 
+                        loading="lazy"
+                        alt="Featured image of post Arch Linux安装备忘录（一）" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/work/" style="background-color: #2a9d8f; color: #fff;">
+                Work
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/archinstall/">Arch Linux安装备忘录（一）</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        安装过程与基本配置
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 14, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h2 id="写在前面">写在前面</h2>
+<p>安装<code>Arch</code>最好最全面的教程就是官方的 <a class="link" href="https://wiki.archlinux.org/title/installation_guide"  target="_blank" rel="noopener"
+    >Installation guide</a>。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备<code>Linux</code>知识的新手经常无从下手。</p>
+<p>笔者也是初学者，本篇文章仅作为自己在<code>Surface Pro 2017</code>从0开始安装配置<code>Arch</code>的记录。</p>
+<h2 id="安装准备">安装准备</h2>
+<h3 id="磁盘准备">磁盘准备</h3>
+<p>我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。</p>
+<h3 id="安装介质">安装介质</h3>
+<p><a class="link" href="https://www.archlinux.org/download/"  target="_blank" rel="noopener"
+    >https://www.archlinux.org/download/</a> 建议从下面的中国镜像下载iso文件</p>
+<p><a class="link" href="https://rufus.ie/"  target="_blank" rel="noopener"
+    >https://rufus.ie/</a>  我们用Rufus来制作引导盘，<strong>此步需要用到一个空闲U盘</strong>。需要注意的是写入方式选择DD，分区类型选择GPT而非默认的MBR。</p>
+<h3 id="设置启动顺序">设置启动顺序</h3>
+<p>接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭<code>security boot</code>，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。</p>
+<h2 id="安装过程">安装过程</h2>
+<p>正确设置好启动顺序后，启动时会看到<code>ArchLinux</code>的界面，按<code>Enter键</code>选择 <code>Boot Arch Linux</code> ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲<code>Arch</code>安装到之前准备的磁盘上。</p>
+<h3 id="网络连接">*网络连接</h3>
+<p><code>Arch</code>的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。</p>
+<p>输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">iwctl
+</span></code></pre></div><p>进入<code>iwd</code>模式，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">device list
+</span></code></pre></div><p>查看你的网卡名字，这里假设是<code>wlan0</code>，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">station wlan0 scan
+</span></code></pre></div><p>检查扫描网络，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">station wlan0 get-networks
+</span></code></pre></div><p>查看网络名字，假设名字叫<code>XXX</code>，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">station wlan0 connect XXX
+</span></code></pre></div><p>接着输入密码（如果有密码的话），输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">exit
+</span></code></pre></div><p>退出iwd模式</p>
+<p>我们可以用<code>ping</code>命令来检验下是否连接成功</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">ping -c 4 baidu.com
+</span></code></pre></div><p>接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">reflector --country China --age 24 --sort rate --portocol https --save /etc/pacman.d/mirrorlist
+</span></code></pre></div><ul>
+<li>country 限定国家</li>
+<li>age 24 限定下更新时间为24小时内的源</li>
+<li>portocol https 选择https协议更安全</li>
+</ul>
+<p>执行完毕后，可以用vim查看</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">vim /etc/pacman.d/mirrorlist
+</span></code></pre></div><h3 id="磁盘分区">磁盘分区</h3>
+<p>检查磁盘</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">lsblk
+</span></code></pre></div><p>用gdisk命令进行分区</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">gdisk  /dev/nvme0n1
+</span></code></pre></div><p>其中nvme01 为你之前准备的磁盘。</p>
+<p>一路默认回车到Last sector 部分，因为我们准备用作启动分区，准备分配512M，所以输入+512M回车，接着输入分区编号ef00。这样第一个分区完成，接着第二个分区笔者分配了+235G，并使用默认的分区编号8300（Linux filesystem），最后剩下2G左右空间一路默认，分区编号输入8200（Linux swap）。确认无误后，w保存quit退出。</p>
+<p>接着格式化我们的三个分区，将nvme01p1格式化为vfat</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkfs.vfat /dev/nvme01p1
+</span></code></pre></div><p>将nvme01p2格式化为ext4或者xfs（推荐）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkfs.xfs /dev/nvme01p2
+</span></code></pre></div><p>最后</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkswap /dev/nvme01p3
+</span></code></pre></div><h3 id="挂载分区">挂载分区</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mount /dev/nvme01p2 /mnt
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkdir -p /mnt/boot/efi
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mount /dev/nvme01p1 /mnt/boot/efi
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">swapon /dev/nvme01p3
+</span></code></pre></div><h3 id="安装基本包">安装基本包</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
+</span></code></pre></div><h4 id="配置fstab">配置Fstab</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">cat /mnt/etc/fstab
+</span></code></pre></div><p>确认下是否挂载无误</p>
+<h4 id="chroot">chroot</h4>
+<blockquote>
+<p><code>Chroot</code>意为<code>Change root</code>，相当于把操纵权交给我们新安装（或已经存在）的<code>Linux</code>系统，<strong>执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行</strong>。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">arch-chroot /mnt
+</span></code></pre></div><h4 id="安装必须软件包">安装必须软件包</h4>
+<p>现在我们已经<code>Chroot</code>到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。<code>ArchLinux</code>有非常强大的包管理工具<code>pacman</code>，大部分情况下，一行命令就可以搞定包与依赖的问题。</p>
+<p>安装包的命令格式为<code>pacman -S 包名</code>，<code>pacman</code>会自动检查这个包所需要的其他包（即为依赖）并一起装上。下面我们就通过<code>pacman</code>来安装一些包，这些包在之后会用上，在这里先提前装好。</p>
+<p>执行如下命令（注意大小写，大小写错误会导致包无法找到）：</p>
+<pre tabindex="0"><code>pacman -S grub efibootmgr efivar networkmanager intel-ucode
+</code></pre><p><strong>AMD用户请将<code>intel-ucode</code>替换成<code>amd-ucode</code></strong></p>
+<h4 id="安装bootloader">安装Bootloader</h4>
+<p>部署<code>grub</code></p>
+<pre tabindex="0"><code>grub-install /dev/nvme01 
+</code></pre><p>修改配置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">vim /etc/default/grub
+</span></code></pre></div><p>将<code>GRUB_TIMEOUT=5</code>改成<code>GRUB_TIMEOUT=2</code></p>
+<p>将<code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;loglevel=3 quiet&quot;</code> 的<code>quiet</code>字段删除，这样登录的时候会有日志，如果出现错误可以查看日志文件。</p>
+<p>接着将<code>GRUB_GFXMODE=auto</code>修改为你的分辨率，以我的surface为例，改为<code>GRUB_GFXMODE=2736x1824</code></p>
+<p>接着生成grub的配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">grub-mkconfig -o /boot/grub/grub.cfg
+</span></code></pre></div><h4 id="设置networkmanager开机自动启动">设置NetworkManager开机自动启动</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">systemctl enable NetworkManager
+</span></code></pre></div><h4 id="为root用户设置密码">为root用户设置密码</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">passwd
+</span></code></pre></div><h4 id="卸载分区-拔除介质">卸载分区 拔除介质</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">umount /mnt/boot/efi
+</span><span class="go">umount /mnt
+</span></code></pre></div><p>拔除介质重新启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">reboot
+</span></code></pre></div><h2 id="小结">小结</h2>
+<p>至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&hellip;.以及一些实用软件包。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/arch/">Arch</a>
+        
+            <a href="/tags/linux/">Linux</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/gitnotes/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gitnotes/git_logo.2a767389db86969893e17922d767fb6a_hu0871f2e332734283fcd708b643f05707_22105_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Git学习笔记"
+                        data-key="GitNotes" 
+                        data-hash="md5-KnZziduGlpiT4Xki12f7ag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git学习笔记</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/markdwonnotes/">
+        
+        
+            <div class="article-image">
+                <img src="/p/markdwonnotes/markdown.64999547e3c3252959c7a8be6d4919f3_hu593b1bacfa1a4c5df7b3aa16ecfb0c28_37213_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Markdown学习笔记"
+                        data-key="MarkdwonNotes" 
+                        data-hash="md5-ZJmVR&#43;PDJSlZx6i&#43;bUkZ8w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown学习笔记</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div id="gitalk-container"></div>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "8117c58dabd443d1d7e0",
+        clientSecret: "7165d9c4cc8686c421ea38c3e6a714ec606d4f4b",
+        repo: "blog-comments",
+        owner: "bestoko",
+        admin: ["bestoko"],
+        distractionFreeMode: false, 
+        id: md5(location.pathname), 
+    });
+    (function () {
+        if (
+            ["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1
+        ) {
+            document.getElementById("gitalk-container").innerHTML =
+                "Gitalk comments not available by default when the website is previewed locally.";
+            return;
+        }
+        gitalk.render("gitalk-container");
+    })();
+</script>
+
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#写在前面">写在前面</a></li>
+    <li><a href="#安装准备">安装准备</a>
+      <ol>
+        <li><a href="#磁盘准备">磁盘准备</a></li>
+        <li><a href="#安装介质">安装介质</a></li>
+        <li><a href="#设置启动顺序">设置启动顺序</a></li>
+      </ol>
+    </li>
+    <li><a href="#安装过程">安装过程</a>
+      <ol>
+        <li><a href="#网络连接">*网络连接</a></li>
+        <li><a href="#磁盘分区">磁盘分区</a></li>
+        <li><a href="#挂载分区">挂载分区</a></li>
+        <li><a href="#安装基本包">安装基本包</a>
+          <ol>
+            <li><a href="#配置fstab">配置Fstab</a></li>
+            <li><a href="#chroot">chroot</a></li>
+            <li><a href="#安装必须软件包">安装必须软件包</a></li>
+            <li><a href="#安装bootloader">安装Bootloader</a></li>
+            <li><a href="#设置networkmanager开机自动启动">设置NetworkManager开机自动启动</a></li>
+            <li><a href="#为root用户设置密码">为root用户设置密码</a></li>
+            <li><a href="#卸载分区-拔除介质">卸载分区 拔除介质</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#小结">小结</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

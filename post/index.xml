@@ -6,7 +6,33 @@
     <description>Recent content in Posts on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux安装备忘录（一）</title>
+      <link>https://bestoko.github.io/p/archinstall/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bestoko.github.io/p/archinstall/</guid>
+      <description>写在前面 安装Arch最好最全面的教程就是官方的 Installation guide。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备Linux知识的新手经常无从下手。
+笔者也是初学者，本篇文章仅作为自己在Surface Pro 2017从0开始安装配置Arch的记录。
+安装准备 磁盘准备 我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。
+安装介质 https://www.archlinux.org/download/ 建议从下面的中国镜像下载iso文件
+https://rufus.ie/ 我们用Rufus来制作引导盘，此步需要用到一个空闲U盘。需要注意的是写入方式选择DD，分区类型选择GPT而非默认的MBR。
+设置启动顺序 接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭security boot，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。
+安装过程 正确设置好启动顺序后，启动时会看到ArchLinux的界面，按Enter键选择 Boot Arch Linux ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲Arch安装到之前准备的磁盘上。
+*网络连接 Arch的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。
+输入
+iwctl 进入iwd模式，输入
+device list 查看你的网卡名字，这里假设是wlan0，输入
+station wlan0 scan 检查扫描网络，输入
+station wlan0 get-networks 查看网络名字，假设名字叫XXX，输入
+station wlan0 connect XXX 接着输入密码（如果有密码的话），输入
+exit 退出iwd模式
+我们可以用ping命令来检验下是否连接成功
+ping -c 4 baidu.com 接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。
+reflector --country China --age 24 --sort rate --portocol https --save /etc/pacman.d/mirrorlist  country 限定国家 age 24 限定下更新时间为24小时内的源 portocol https 选择https协议更安全  执行完毕后，可以用vim查看</description>
+    </item>
+    
     <item>
       <title>寻找两个有序数组的中位数</title>
       <link>https://bestoko.github.io/p/leetcode004/</link>
