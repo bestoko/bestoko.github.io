@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>markdown on Toko&#39;s blog</title>
+    <title>Markdown on Toko&#39;s blog</title>
     <link>https://bestoko.github.io/tags/markdown/</link>
-    <description>Recent content in markdown on Toko&#39;s blog</description>
+    <description>Recent content in Markdown on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://bestoko.github.io/p/markdown-syntax-guide/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Markdown学习笔记</title>
+      <link>https://bestoko.github.io/p/markdwonnotes/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/markdown-syntax-guide/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>https://bestoko.github.io/p/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bestoko.github.io/p/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+      <guid>https://bestoko.github.io/p/markdwonnotes/</guid>
+      <description>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+ 以下是Markdown的基础语法
+~~删除线~~ *斜体* _斜体第二种方法_ **加粗** __加粗的第二种方法__ ___粗斜体___ 两个enter是换行，或者用&amp;lt;/br&amp;gt;标签表示换行 用一行的=或者-表示一级标题和二级标题。如： 一级标题 ======= 二级标题 -------- 也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如： # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  无序列表：在前面加上 * 或者 + 或者 - 然后加个空格： * ABC * DEF * GHI + JKL + MNO + PQR - STU - VWX - YZZ 有序列表：数字+英文句点+空格。如下： 1. 呵呵 2. 哈哈 3. 嘿嘿 4. 哼哼 &amp;amp;lt; // 会显示为”&amp;lt;“ &amp;amp;amp; // 会显示为”&amp;amp;“：在 href 属性里面，必须将 &amp;amp; 转变为 &amp;amp;amp; \.</description>
     </item>
     
   </channel>

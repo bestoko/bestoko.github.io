@@ -6,68 +6,81 @@
     <description>Recent content in Posts on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chinese Test</title>
-      <link>https://bestoko.github.io/p/test-chinese/</link>
-      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      <title>寻找两个有序数组的中位数</title>
+      <link>https://bestoko.github.io/p/leetcode004/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/test-chinese/</guid>
-      <description>正文测试 而这些并不是完全重要，更加重要的问题是， 带着这些问题，我们来审视一下学生会退会。 既然如何， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 我们不得不面对一个非常尴尬的事实，那就是， 可是，即使是这样，学生会退会的出现仍然代表了一定的意义。 学生会退会，发生了会如何，不发生又会如何。 经过上述讨论， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 学生会退会，到底应该如何实现。 这样看来， 在这种困难的抉择下，本人思来想去，寝食难安。 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 就我个人来说，学生会退会对我的意义，不能不说非常重大。 莎士比亚曾经提到过，人的一生是短的，但如果卑劣地过这一生，就太长了。这似乎解答了我的疑惑。 莫扎特说过一句富有哲理的话，谁和我一样用功，谁就会和我一样成功。这启发了我， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 学生会退会，到底应该如何实现。 一般来说， 从这个角度来看， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 在这种困难的抉择下，本人思来想去，寝食难安。 了解清楚学生会退会到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 问题的关键究竟为何？ 而这些并不是完全重要，更加重要的问题是。
-奥斯特洛夫斯基曾经说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　带着这句话，我们还要更加慎重的审视这个问题： 一般来讲，我们都必须务必慎重的考虑考虑。 既然如此， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 带着这些问题，我们来审视一下学生会退会。 我认为， 我认为， 在这种困难的抉择下，本人思来想去，寝食难安。 问题的关键究竟为何？ 每个人都不得不面对这些问题。 在面对这种问题时， 要想清楚，学生会退会，到底是一种怎么样的存在。 我认为， 既然如此， 每个人都不得不面对这些问题。 在面对这种问题时， 那么， 我认为， 学生会退会因何而发生。
-引用  思念是最暖的忧伤像一双翅膀
-让我停不了飞不远在过往游荡
-不告而别的你 就算为了我着想
-这么沉痛的呵护 我怎么能翱翔
-最暖的憂傷 - 田馥甄
- 图片  Photo by Florian Klauer on Unsplash   Photo by Luca Bravo on Unsplash</description>
+      <guid>https://bestoko.github.io/p/leetcode004/</guid>
+      <description>​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
+ 题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
+ 题目  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+ nums1 = [1, 3] nums2 = [2]
+ 则中位数是 2.0 示例 2:
+ nums1 = [1, 2] nums2 = [3, 4]
+ 则中位数是 (2 + 3)/2 = 2.5
+ 分析 首先要理解中位数  中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。
+  [2 3 5] 中位数是3
+[1 4 7 9] 中位数是(4+7)/2=5.</description>
     </item>
     
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://bestoko.github.io/p/markdown-syntax-guide/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
+      <link>https://bestoko.github.io/p/gba2cia/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/markdown-syntax-guide/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <guid>https://bestoko.github.io/p/gba2cia/</guid>
+      <description>前情提要 为什么要水这么一篇文章
+在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.
+我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了可能是现今最好的解决方案。
+准备工作   一台BOOT9STARP(B9S)破解的3ds
+参考3ds破解手册或者一只火狐大佬整理的教程(推荐)
+嫌麻烦的同学可以交给热心摊主处理
+  Ultimate GBA VC Injector for 3DS
+  汉化版下载链接
+  你想要在3ds上运行的GBA游戏ROM文件
+这里以漆黑的魅影为例（很棒的GBA宝可梦改版，我一直想在实机上玩）
+  GBA 转CIA  打开软件并导入下载好的.gba文件，ROM大小和存档类型会自动确认(汉化版ROM往往是数据库未找到该游戏，请确保选择的正确无误以免影响存档)   gba2cia1 
+ gba2cia2 
+ 填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)
+ gba2cia3 
+ gba2cia4 
+  设置VC参数并导出CIA文件(注意当转换多个.cia文件时，确保每个文件的产品代码及项目ID都不一样)
+ gba2cia5 
+  在3ds上安装转换好的.cia文件
+  关于如何B9S如何安装cia文件这里不再赘述(实在懒得截图了)
+ gba2cia6 
+大功告成~
+备注事项  据说部分老款3ds对这种方式转换的.cia支持不好，会出现黑屏情况(我的美版老小三反正测试是没问题啦) 港版不支持港版不支持港版不支持 存档类型一定要设置正确  </description>
     </item>
     
     <item>
-      <title>Rich Content</title>
-      <link>https://bestoko.github.io/p/rich-content/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Git学习笔记</title>
+      <link>https://bestoko.github.io/p/gitnotes/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/rich-content/</guid>
-      <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+      <guid>https://bestoko.github.io/p/gitnotes/</guid>
+      <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
+Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
+  learnGit 
+常用指令 $ git init # 在当前目录新建一个 Git 代码库 $ git clone [url] # 下载一个项目和它的整个代码历史 $ git config --list # 显示当前的 Git 配置 $ git config -e [--global] # 编辑 Git 配置文件 $ git add # 添加指定文件到暂存区 $ git rm # 删除工作区文件，并且将这次删除放入暂存区 $ git commit -m [message] # 提交暂存区到仓库区 $ git commit -a # 提交工作区自上次 commit 之后的变化，直接到仓库区 $ git commit --amend -m [message] # 使用一次新的 commit，替代上一次提交 如果代码没有任何新变化，则用来改写上一次 commit 的提交信息 $ git commit --amend [file1] [file2] .</description>
     </item>
     
     <item>
-      <title>Placeholder Text</title>
-      <link>https://bestoko.github.io/p/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Markdown学习笔记</title>
+      <link>https://bestoko.github.io/p/markdwonnotes/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Math Typesetting</title>
-      <link>https://bestoko.github.io/p/math-typesetting/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bestoko.github.io/p/math-typesetting/</guid>
-      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Emoji Support</title>
-      <link>https://bestoko.github.io/p/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bestoko.github.io/p/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+      <guid>https://bestoko.github.io/p/markdwonnotes/</guid>
+      <description>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+ 以下是Markdown的基础语法
+~~删除线~~ *斜体* _斜体第二种方法_ **加粗** __加粗的第二种方法__ ___粗斜体___ 两个enter是换行，或者用&amp;lt;/br&amp;gt;标签表示换行 用一行的=或者-表示一级标题和二级标题。如： 一级标题 ======= 二级标题 -------- 也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如： # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  无序列表：在前面加上 * 或者 + 或者 - 然后加个空格： * ABC * DEF * GHI + JKL + MNO + PQR - STU - VWX - YZZ 有序列表：数字+英文句点+空格。如下： 1. 呵呵 2. 哈哈 3. 嘿嘿 4. 哼哼 &amp;amp;lt; // 会显示为”&amp;lt;“ &amp;amp;amp; // 会显示为”&amp;amp;“：在 href 属性里面，必须将 &amp;amp; 转变为 &amp;amp;amp; \.</description>
     </item>
     
   </channel>

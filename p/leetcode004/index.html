@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
+ 题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
+ 题目  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m &#43; n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+ nums1 = [1, 3] nums2 = [2]
+ 则中位数是 2.0 示例 2:
+ nums1 = [1, 2] nums2 = [3, 4]
+ 则中位数是 (2 &#43; 3)/2 = 2.5
+ 分析 首先要理解中位数  中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。
+  [2 3 5] 中位数是3
+[1 4 7 9] 中位数是(4&#43;7)/2=5.'><title>寻找两个有序数组的中位数</title>
+
+<link rel='canonical' href='https://bestoko.github.io/p/leetcode004/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='寻找两个有序数组的中位数'>
+<meta property='og:description' content='​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
+ 题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
+ 题目  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m &#43; n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+ nums1 = [1, 3] nums2 = [2]
+ 则中位数是 2.0 示例 2:
+ nums1 = [1, 2] nums2 = [3, 4]
+ 则中位数是 (2 &#43; 3)/2 = 2.5
+ 分析 首先要理解中位数  中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。
+  [2 3 5] 中位数是3
+[1 4 7 9] 中位数是(4&#43;7)/2=5.'>
+<meta property='og:url' content='https://bestoko.github.io/p/leetcode004/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2020-04-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-04-10T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@bestokocc">
+    <meta name="twitter:creator" content="@bestokocc"><meta name="twitter:title" content="寻找两个有序数组的中位数">
+<meta name="twitter:description" content="​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
+ 题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
+ 题目  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m &#43; n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+ nums1 = [1, 3] nums2 = [2]
+ 则中位数是 2.0 示例 2:
+ nums1 = [1, 2] nums2 = [3, 4]
+ 则中位数是 (2 &#43; 3)/2 = 2.5
+ 分析 首先要理解中位数  中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。
+  [2 3 5] 中位数是3
+[1 4 7 9] 中位数是(4&#43;7)/2=5.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/study/" style="background-color: #2a9d8f; color: #fff;">
+                Study
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/leetcode004/">寻找两个有序数组的中位数</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 10, 2020</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>​	最近刚开始刷Leetcode，第一道<code>Hard</code>题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。</p>
+<blockquote>
+<p>题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/</p>
+<p>题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/</p>
+</blockquote>
+<h2 id="题目">题目</h2>
+<blockquote>
+<p>给定两个大小为 m 和 n 的有序数组 <code>nums1</code> 和 <code>nums2</code>。</p>
+<p>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 <code>O(log(m + n))</code>。</p>
+<p>你可以假设 <code>nums1</code> 和 <code>nums2</code> 不会同时为空。</p>
+<p>示例 1:</p>
+<blockquote>
+<p>nums1 = [1, 3]
+nums2 = [2]</p>
+</blockquote>
+<p>则中位数是 <code>2.0</code>
+示例 2:</p>
+<blockquote>
+<p>nums1 = [1, 2]
+nums2 = [3, 4]</p>
+</blockquote>
+<p>则中位数是 <code>(2 + 3)/2 = 2.5</code></p>
+</blockquote>
+<h2 id="分析">分析</h2>
+<h3 id="首先要理解中位数">首先要理解中位数</h3>
+<blockquote>
+<p>中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。</p>
+</blockquote>
+<blockquote>
+<p><code>[2 3 5]</code> 中位数是<code>3</code></p>
+<p><code>[1 4 7 9]</code> 中位数是<code>(4+7)/2=5.5</code></p>
+</blockquote>
+<h3 id="割cut的概念">割(Cut)的概念</h3>
+<ul>
+<li>
+<p>通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。</p>
+</li>
+<li>
+<p>割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。</p>
+</li>
+<li>
+<p>定义<code>LMax= Max(LeftPart)</code> <code>RMin = Min(RightPart)</code>  //<strong>由小到大的有序数组</strong></p>
+</li>
+<li>
+<p><strong>割可以割在2个数中间，也可以割在1个数上，如果割在一个数上，那么这个数既属于左边，也属于右边</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>奇数组:<code> [2 3 5]</code> 对应的中位数为<code>3</code>，假定割(Cut)在3上，我们可以把3分为2个： <code>[2（3/3） 5]</code></p>
+<p>因此<code>LMax=3</code>, <code>RMin=3</code></p>
+<p>偶数组: <code>[1 4 7 9]</code> 对应的中位数为 <code>(4 + 7) /2 = 5.5</code>,假定割(Cut)在4和7之间： <code>[1 （4/7）9]</code></p>
+<p>因此<code>LMax=4</code>,<code> RMin=7</code></p>
+</blockquote>
+<h3 id="割和第k个元素">割和第<code>k</code>个元素</h3>
+<h4 id="一个数组">一个数组</h4>
+<p>对于有序数组A，如果在k的位置割一下，容易得出<code>LMax = RMin = A[k]</code></p>
+<h4 id="两个数组">两个数组</h4>
+<p>将两个数组合成一个有序数组时，第k位的元素</p>
+<blockquote>
+<p>我们设:
+<code>Ci</code>为第<code> i</code>个数组的割</p>
+<p><code>LMaxi</code>为第<code>i</code>个数组割后的左元素i</p>
+<p><code>RMini</code>为第<code>i</code>个数组割后的右元素</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Leftpart</th>
+<th style="text-align:center">Ci</th>
+<th style="text-align:center">Rightpart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a<!-- raw HTML omitted -->1<!-- raw HTML omitted -->,a<!-- raw HTML omitted -->2<!-- raw HTML omitted -->,&hellip;,a<!-- raw HTML omitted -->i<!-- raw HTML omitted --></td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">a<!-- raw HTML omitted -->i+1<!-- raw HTML omitted -->,a<!-- raw HTML omitted -->i+2<!-- raw HTML omitted -->,&hellip;,a<!-- raw HTML omitted -->m<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td style="text-align:center">b<!-- raw HTML omitted -->1<!-- raw HTML omitted -->,b<!-- raw HTML omitted -->2<!-- raw HTML omitted -->,&hellip;,b<!-- raw HTML omitted -->j<!-- raw HTML omitted --></td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">b<!-- raw HTML omitted -->j+1<!-- raw HTML omitted -->,b<!-- raw HTML omitted -->j+2<!-- raw HTML omitted -->,&hellip;,b<!-- raw HTML omitted -->n<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p>首先，因为数组是有序的，所以<code>LMax1 &lt;= RMin1</code>，<code>LMax2 &lt;= RMin2</code> //割在某个数上时左右相等</p>
+<p>其次，如果让<code>LMax1 &lt;= RMin2</code>，<code>LMax2 &lt;= RMin1</code> 呢？</p>
+<p>这表示左半边全部小于右半边。如果让左边的元素个数相加刚好为<code>k</code>，那第<code>k</code>个元素就是<code>max(LMax1, Lmax2)</code>，也就是合并后有序数组左边<code>k</code>个元素的最大值。</p>
+<p>那么如果<code>LMax1 &gt; RMin2</code>，说明数组1的左边元素太多，我们把<code>C1</code>减小，<code>C2 = k - C1</code>相应地增大。<code>LMax2 &gt; RMin1</code>同理，把<code>C2</code>减小，<code>C1 = k - C2</code>也就相应地增大。</p>
+<h5 id="举例设k--3">举例（设k = 3）</h5>
+<blockquote>
+<p>[2 3 5]
+[1 4 7 9]</p>
+</blockquote>
+<p>设<code>C1 = 1</code>，则 <code>C2 = k - C1 = 2</code> 割后：</p>
+<blockquote>
+<p>[2 3 / 5]
+[1 / 4 7 9]</p>
+</blockquote>
+<p>此时，<code>LMax1 = 3</code>, <code>RMin1 = 5</code>, <code>LMax2 = 1</code>, <code>RMin2 = 4</code>,</p>
+<p>满足 <code>LMax1 &lt; RMin2</code> 且 <code>LMax2 &lt; RMin1 </code>，</p>
+<p>所以第<code>3</code>个元素为<code>max(LMax1, LMax2) = 3</code></p>
+<h3 id="两个数组合并后的长度问题-本篇题解巧妙所在"><strong>两个数组合并后的长度问题</strong> （本篇题解巧妙所在）</h3>
+<blockquote>
+<p>两个数组的最大问题是，它们合并后，m+n总数可能为奇, 也可能为偶，所以我们得想法让m+n总是为偶数</p>
+<p>通过虚拟加入‘#’，我们让m转换成2m+1 ，n转换成2n+1, 两数之和就变成了2m+2n+2，恒为偶数。</p>
+<p>注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">before</th>
+<th style="text-align:center">len</th>
+<th style="text-align:center">after</th>
+<th style="text-align:center">len</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">[1 4 7 9]</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">[# 1 # 4 # 7 # 9]</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">[2 3 5]</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">[# 2 # 3 # 5 ]</td>
+<td style="text-align:center">7</td>
+</tr>
+</tbody>
+</table>
+<p>这么虚拟加后，<strong>每个位置可以通过/2得到原来元素的位置</strong>：</p>
+<p>比如 2，原来在<code>0</code>位，现在是1位，<code>1/2=0</code></p>
+<p>比如 3，原来在<code>1</code>位，现在是3位，<code>3/2=1</code></p>
+<p>比如 5，原来在<code>2</code>位，现在是5位，<code>5/2=2</code></p>
+<p>比如 9，原来在<code>3</code>位，现在是7位，<code>7/2=3</code></p>
+<p>而对于割(<code>Cut</code>)，如果割在<code>‘#’</code>上等于割在2个元素之间，割在数字上等于把数字划到2个部分，总是有以下成立：</p>
+<blockquote>
+<p>LMaxi = (Ci-1)/2 位置上的元素
+RMini = Ci/2 位置上的元素</p>
+</blockquote>
+<p>例如：</p>
+<p>割在<code>3</code>上，<code>C = 3</code>，<code>LMax=a[(3-1)/2]=A[1]，RMin=a[3/2] =A[1]</code>，刚好都是3的位置！</p>
+<p>割在4/7之间‘#’，<code>C = 4</code>，<code>LMax=A[(4-1)/2]=A[1]=4 ，RMin=A[4/2]=A[2]=7</code></p>
+<p>剩下的事情就好办了，把2个数组看做一个虚拟的数组A，A有<code>2m+2n+2</code>个元素，割在<code>m+n+1</code>处，所以我们只需找到<code>m+n+1</code>位置的元素和<code>m+n+2</code>位置的元素就行了。</p>
+<p>左边：<code>A[m+n+1] = Max(LMax1,LMax2)</code></p>
+<p>右边：<code>A[m+n+2] = Min(RMin1,RMin2)</code></p>
+<p>==&gt;<code>Mid = (A[m+n+1]+A[m+n+2])/2 = (Max(LMax1,LMax2) + Min(RMin1,RMin2) )/2</code></p>
+<h3 id="最快的割cut是使用二分法有2个数组我们对哪个做二分呢">最快的割(<code>Cut</code>)是使用二分法，有2个数组，我们对哪个做二分呢？</h3>
+<p>根据之前的分析，我们知道了，只要C1或C2确定，另外一个也就确定了。这里，为了效率，我们肯定是选<code>长度较短</code>的做二分，假设为<code>C1</code>。</p>
+<p><code>LMax1&gt;RMin2</code>，把<code>C1</code>减小，<code>C2</code>增大。—&gt; <code>C1</code>向左二分</p>
+<p><code>LMax2&gt;RMin1</code>，把<code>C1</code>增大，<code>C2</code>减小。—&gt; <code>C1</code>向右二分</p>
+<h3 id="如果c1或c2已经到头了怎么办">如果<code>C1</code>或<code>C2</code>已经到头了怎么办？</h3>
+<p>这种情况出现在：<code>如果有个数组完全小于或大于中值</code>。假定n&lt;m, 可能有4种情况：</p>
+<p><code>C1 = 0</code> —— 数组1整体都在右边了，所以都比中值大，中值在数组2中，简单的说就是数组1割后的左边是空了，所以我们可以假定<code>LMax1 = INT_MIN</code></p>
+<p><code>C1 =2n</code> —— 数组1整体都在左边了，所以都比中值小，中值在数组2中 ，简单的说就是数组1割后的右边是空了，所以我们可以假定<code>RMin1= INT_MAX</code>，来保证<code>LMax2 &lt; RMin1</code>恒成立</p>
+<p><code>C2 = 0 </code>—— 数组2整体在右边了，所以都比中值大，中值在数组1中 ，简单的说就是数组2割后的左边是空了，所以我们可以假定<code>LMax2 = INT_MIN</code>
+<code>C2 = 2m </code>—— 数组2整体在左边了，所以都比中值小，中值在数组1中, 简单的说就是数组2割后的右边是空了，为了让<code>LMax1 &lt; RMin2 </code>恒成立，我们可以假定<code>RMin2 = INT_MAX</code></p>
+<h2 id="代码">代码</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cp">#define max(a,b) (((a) &gt; (b)) ? (a) : (b))
+</span><span class="cp">#define min(a,b) (((a) &lt; (b)) ? (a) : (b))
+</span><span class="cp"></span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+	<span class="kt">double</span> <span class="n">findMedianSortedArrays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums1</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums2</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+		<span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">)</span>  <span class="c1">//保证数组1一定最短
+</span><span class="c1"></span>		<span class="p">{</span>
+			<span class="k">return</span> <span class="nf">findMedianSortedArrays</span><span class="p">(</span><span class="n">nums2</span><span class="p">,</span> <span class="n">nums1</span><span class="p">);</span>
+		<span class="p">}</span>
+	
+		<span class="c1">// Ci 为第i个数组的割,比如C1为2时表示第1个数组只有2个元素。LMaxi为第i个数组割后的左元素。RMini为第i个数组割后的右元素。
+</span><span class="c1"></span>		<span class="kt">int</span> <span class="n">LMax1</span><span class="p">,</span> <span class="n">LMax2</span><span class="p">,</span> <span class="n">RMin1</span><span class="p">,</span> <span class="n">RMin2</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">lo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>  <span class="c1">//我们目前是虚拟加了&#39;#&#39;所以数组1是2*n长度
+</span><span class="c1"></span>	
+		<span class="k">while</span> <span class="p">(</span><span class="n">lo</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">)</span>   <span class="c1">//二分
+</span><span class="c1"></span>		<span class="p">{</span>
+			<span class="n">c1</span> <span class="o">=</span> <span class="p">(</span><span class="n">lo</span> <span class="o">+</span> <span class="n">hi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">//c1是二分的结果
+</span><span class="c1"></span>			<span class="n">c2</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="n">c1</span><span class="p">;</span>
+	
+			<span class="n">LMax1</span> <span class="o">=</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="nl">INT_MIN</span> <span class="p">:</span> <span class="n">nums1</span><span class="p">[(</span><span class="n">c1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">];</span>
+			<span class="n">RMin1</span> <span class="o">=</span> <span class="p">(</span><span class="n">c1</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span> <span class="o">?</span> <span class="nl">INT_MAX</span> <span class="p">:</span> <span class="n">nums1</span><span class="p">[</span><span class="n">c1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">];</span>
+			<span class="n">LMax2</span> <span class="o">=</span> <span class="p">(</span><span class="n">c2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="nl">INT_MIN</span> <span class="p">:</span> <span class="n">nums2</span><span class="p">[(</span><span class="n">c2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">];</span>
+			<span class="n">RMin2</span> <span class="o">=</span> <span class="p">(</span><span class="n">c2</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">m</span><span class="p">)</span> <span class="o">?</span> <span class="nl">INT_MAX</span> <span class="p">:</span> <span class="n">nums2</span><span class="p">[</span><span class="n">c2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">];</span>
+	
+			<span class="k">if</span> <span class="p">(</span><span class="n">LMax1</span> <span class="o">&gt;</span> <span class="n">RMin2</span><span class="p">)</span>
+				<span class="n">hi</span> <span class="o">=</span> <span class="n">c1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">LMax2</span> <span class="o">&gt;</span> <span class="n">RMin1</span><span class="p">)</span>
+				<span class="n">lo</span> <span class="o">=</span> <span class="n">c1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+			<span class="k">else</span>
+				<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">LMax1</span><span class="p">,</span> <span class="n">LMax2</span><span class="p">)</span> <span class="o">+</span> <span class="n">min</span><span class="p">(</span><span class="n">RMin1</span><span class="p">,</span> <span class="n">RMin2</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums1</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nums2</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span> <span class="p">};</span>
+	
+	<span class="n">Solution</span> <span class="n">solution</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">solution</span><span class="p">.</span><span class="n">findMedianSortedArrays</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span> <span class="n">nums2</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/leetcode/">Leetcode</a>
+        
+            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/gitnotes/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gitnotes/learnGit.6bb04dc3c367f0cc6a6facbca5e7237a_hu6c00e95ffa94d0d773fe80624b67f967_105681_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Git学习笔记"
+                        data-key="GitNotes" 
+                        data-hash="md5-a7BNw8Nn8Mxqb6y8pecjeg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git学习笔记</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/markdwonnotes/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown学习笔记</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div id="gitalk-container"></div>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "8117c58dabd443d1d7e0",
+        clientSecret: "7165d9c4cc8686c421ea38c3e6a714ec606d4f4b",
+        repo: "blog-comments",
+        owner: "bestoko",
+        admin: ["bestoko"],
+        distractionFreeMode: false, 
+        id: md5(location.pathname), 
+    });
+    (function () {
+        if (
+            ["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1
+        ) {
+            document.getElementById("gitalk-container").innerHTML =
+                "Gitalk comments not available by default when the website is previewed locally.";
+            return;
+        }
+        gitalk.render("gitalk-container");
+    })();
+</script>
+
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#分析">分析</a>
+      <ol>
+        <li><a href="#首先要理解中位数">首先要理解中位数</a></li>
+        <li><a href="#割cut的概念">割(Cut)的概念</a></li>
+        <li><a href="#割和第k个元素">割和第<code>k</code>个元素</a>
+          <ol>
+            <li><a href="#一个数组">一个数组</a></li>
+            <li><a href="#两个数组">两个数组</a></li>
+          </ol>
+        </li>
+        <li><a href="#两个数组合并后的长度问题-本篇题解巧妙所在"><strong>两个数组合并后的长度问题</strong> （本篇题解巧妙所在）</a></li>
+        <li><a href="#最快的割cut是使用二分法有2个数组我们对哪个做二分呢">最快的割(<code>Cut</code>)是使用二分法，有2个数组，我们对哪个做二分呢？</a></li>
+        <li><a href="#如果c1或c2已经到头了怎么办">如果<code>C1</code>或<code>C2</code>已经到头了怎么办？</a></li>
+      </ol>
+    </li>
+    <li><a href="#代码">代码</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
