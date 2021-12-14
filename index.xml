@@ -12,7 +12,7 @@
         <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
         
         <guid>https://bestoko.github.io/p/leetcode004/</guid>
-        <description>&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
+        <description>&lt;img src="https://bestoko.github.io/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/&lt;/p&gt;
 &lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;
@@ -233,7 +233,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
         
         <guid>https://bestoko.github.io/p/gba2cia/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/gba2cia/gba2cia6.png" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
+        <description>&lt;img src="https://bestoko.github.io/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
 &lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
@@ -406,7 +406,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
         
         <guid>https://bestoko.github.io/p/gitnotes/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/gitnotes/learnGit.png" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
+        <description>&lt;img src="https://bestoko.github.io/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
 &lt;p&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
 &lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;
@@ -530,7 +530,7 @@ $ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#
         <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
         
         <guid>https://bestoko.github.io/p/markdwonnotes/</guid>
-        <description>&lt;blockquote&gt;
+        <description>&lt;img src="https://bestoko.github.io/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;
