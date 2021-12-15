@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
+安装驱动 导入密钥 首先我们需要导入用于签名软件包的密钥：
+$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \  | sudo pacman-key --add - 检查完整性并本地签名 $ sudo pacman-key --finger 56C464BAAC421453 $ sudo pacman-key --lsign-key 56C464BAAC421453 添加存储库 我们需要在/etc/pacman.conf添加如下内容
+[linux-surface] Server = https://pkg.surfacelinux.com/arch/ 更新存储库数据，安装内核，启用服务 我们需要更新存储库数据，以安装linux-surface内核及其依赖项，接着启用iptsd服务以使用触摸屏。
+$ sudo pacman -Syu $ sudo pacman -S linux-surface linux-surface-headers iptsd $ sudo systemctl enable iptsd 重启以后就完工了，屏幕触摸也支持了。'><title>Surface设备在Arch Linux下驱动问题的解决方案</title>
+
+<link rel='canonical' href='https://bestoko.github.io/p/surface-linux/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Surface设备在Arch Linux下驱动问题的解决方案'>
+<meta property='og:description' content='写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
+安装驱动 导入密钥 首先我们需要导入用于签名软件包的密钥：
+$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \  | sudo pacman-key --add - 检查完整性并本地签名 $ sudo pacman-key --finger 56C464BAAC421453 $ sudo pacman-key --lsign-key 56C464BAAC421453 添加存储库 我们需要在/etc/pacman.conf添加如下内容
+[linux-surface] Server = https://pkg.surfacelinux.com/arch/ 更新存储库数据，安装内核，启用服务 我们需要更新存储库数据，以安装linux-surface内核及其依赖项，接着启用iptsd服务以使用触摸屏。
+$ sudo pacman -Syu $ sudo pacman -S linux-surface linux-surface-headers iptsd $ sudo systemctl enable iptsd 重启以后就完工了，屏幕触摸也支持了。'>
+<meta property='og:url' content='https://bestoko.github.io/p/surface-linux/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Surface' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Arch' /><meta property='article:published_time' content='2021-12-15T23:48:33&#43;08:00'/><meta property='article:modified_time' content='2021-12-15T23:48:33&#43;08:00'/><meta property='og:image' content='https://bestoko.github.io/p/surface-linux/surface.jpg' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Surface设备在Arch Linux下驱动问题的解决方案">
+<meta name="twitter:description" content="写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
+安装驱动 导入密钥 首先我们需要导入用于签名软件包的密钥：
+$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \  | sudo pacman-key --add - 检查完整性并本地签名 $ sudo pacman-key --finger 56C464BAAC421453 $ sudo pacman-key --lsign-key 56C464BAAC421453 添加存储库 我们需要在/etc/pacman.conf添加如下内容
+[linux-surface] Server = https://pkg.surfacelinux.com/arch/ 更新存储库数据，安装内核，启用服务 我们需要更新存储库数据，以安装linux-surface内核及其依赖项，接着启用iptsd服务以使用触摸屏。
+$ sudo pacman -Syu $ sudo pacman -S linux-surface linux-surface-headers iptsd $ sudo systemctl enable iptsd 重启以后就完工了，屏幕触摸也支持了。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.github.io/p/surface-linux/surface.jpg' />
+    <link rel="shortcut icon" href="bestoko.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-215304375-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/surface-linux/">
+                <img src="/p/surface-linux/surface_hu4dfd7a842b0b08077966cbe869e7c3b7_55232_800x0_resize_q75_box.jpg"
+                        srcset="/p/surface-linux/surface_hu4dfd7a842b0b08077966cbe869e7c3b7_55232_800x0_resize_q75_box.jpg 800w, /p/surface-linux/surface_hu4dfd7a842b0b08077966cbe869e7c3b7_55232_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/work/" style="background-color: #2a9d8f; color: #fff;">
+                Work
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/surface-linux/">Surface设备在Arch Linux下驱动问题的解决方案</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 15, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h2 id="写在前面">写在前面</h2>
+<p>之前我已经在<code>Surface Pro </code>上安装了<code>Arch Linux</code>，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（<del>之前买的surface pen也成了摆设</del>），于是我在<code>github</code>上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看<a class="link" href="https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix"  target="_blank" rel="noopener"
+    >这里</a>。</p>
+<h2 id="安装驱动">安装驱动</h2>
+<h3 id="导入密钥">导入密钥</h3>
+<p>首先我们需要导入用于签名软件包的密钥：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc <span class="se">\
+</span><span class="se"></span>    <span class="p">|</span> sudo pacman-key --add -
+</code></pre></div><h3 id="检查完整性并本地签名">检查完整性并本地签名</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ sudo pacman-key --finger 56C464BAAC421453
+$ sudo pacman-key --lsign-key 56C464BAAC421453
+</code></pre></div><h3 id="添加存储库">添加存储库</h3>
+<p>我们需要在<code>/etc/pacman.conf</code>添加如下内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>linux-surface<span class="o">]</span>
+<span class="nv">Server</span> <span class="o">=</span> https://pkg.surfacelinux.com/arch/
+</code></pre></div><h3 id="更新存储库数据安装内核启用服务">更新存储库数据，安装内核，启用服务</h3>
+<p>我们需要更新存储库数据，以安装<code>linux-surface</code>内核及其依赖项，接着启用<code>iptsd</code>服务以使用触摸屏。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ sudo pacman -Syu
+$ sudo pacman -S linux-surface linux-surface-headers iptsd
+$ sudo systemctl <span class="nb">enable</span> iptsd
+</code></pre></div><p>重启以后就完工了，屏幕触摸也支持了。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/surface/">Surface</a>
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/arch/">Arch</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/archinstallextra/">
+        
+        
+            <div class="article-image">
+                <img src="/p/archinstallextra/ArchLinux.552f09aa5bc04aaa34b6acf4d93dc9dd_hu13d81b556f6c7780a085a162084854bc_14536_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Arch Linux安装备忘录（二）"
+                        data-key="ArchInstallExtra" 
+                        data-hash="md5-VS8JqlvASqo0tqz02T3J3Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Arch Linux安装备忘录（二）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/archinstall/">
+        
+        
+            <div class="article-image">
+                <img src="/p/archinstall/ArchLinux.552f09aa5bc04aaa34b6acf4d93dc9dd_hu13d81b556f6c7780a085a162084854bc_14536_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Arch Linux安装备忘录（一）"
+                        data-key="ArchInstall" 
+                        data-hash="md5-VS8JqlvASqo0tqz02T3J3Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Arch Linux安装备忘录（一）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/gitnotes/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gitnotes/git_logo.2a767389db86969893e17922d767fb6a_hu0871f2e332734283fcd708b643f05707_22105_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Git学习笔记"
+                        data-key="GitNotes" 
+                        data-hash="md5-KnZziduGlpiT4Xki12f7ag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git学习笔记</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/markdwonnotes/">
+        
+        
+            <div class="article-image">
+                <img src="/p/markdwonnotes/markdown.64999547e3c3252959c7a8be6d4919f3_hu593b1bacfa1a4c5df7b3aa16ecfb0c28_37213_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Markdown学习笔记"
+                        data-key="MarkdwonNotes" 
+                        data-hash="md5-ZJmVR&#43;PDJSlZx6i&#43;bUkZ8w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown学习笔记</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div id="gitalk-container"></div>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "8117c58dabd443d1d7e0",
+        clientSecret: "7165d9c4cc8686c421ea38c3e6a714ec606d4f4b",
+        repo: "blog-comments",
+        owner: "bestoko",
+        admin: ["bestoko"],
+        distractionFreeMode: false, 
+        id: md5(location.pathname), 
+    });
+    (function () {
+        if (
+            ["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1
+        ) {
+            document.getElementById("gitalk-container").innerHTML =
+                "Gitalk comments not available by default when the website is previewed locally.";
+            return;
+        }
+        gitalk.render("gitalk-container");
+    })();
+</script>
+
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#写在前面">写在前面</a></li>
+    <li><a href="#安装驱动">安装驱动</a>
+      <ol>
+        <li><a href="#导入密钥">导入密钥</a></li>
+        <li><a href="#检查完整性并本地签名">检查完整性并本地签名</a></li>
+        <li><a href="#添加存储库">添加存储库</a></li>
+        <li><a href="#更新存储库数据安装内核启用服务">更新存储库数据，安装内核，启用服务</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
