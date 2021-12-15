@@ -6,11 +6,11 @@
     <description>Recent content in Surface on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Dec 2021 23:48:33 +0800</lastBuildDate><atom:link href="https://bestoko.github.io/tags/surface/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Dec 2021 01:48:01 +0800</lastBuildDate><atom:link href="https://bestoko.github.io/tags/surface/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
       <link>https://bestoko.github.io/p/surface-linux/</link>
-      <pubDate>Wed, 15 Dec 2021 23:48:33 +0800</pubDate>
+      <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
       
       <guid>https://bestoko.github.io/p/surface-linux/</guid>
       <description>写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
