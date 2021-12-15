@@ -6,7 +6,29 @@
     <description>Recent content in Play on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/categories/play/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/categories/play/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一加8的Android 11 折腾指南</title>
+      <link>https://bestoko.github.io/p/oneplus8/</link>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bestoko.github.io/p/oneplus8/</guid>
+      <description>准备工作   解锁Bootloader且打开USB调试的一加8
+  氢OS Android11 Rom包
+  Payload Dumber
+  platform-tools
+打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】
+  刷入Magisk 制作magisk_patched.img   将官方包内的payload.bin 解压并放入Payload Dumber 的payload_input目录
+  打开payload_dumper.exe（看到boot解压出来就可以关闭了）
+  打开payload_output目录，将解压出的boot.img复制到手机根目录
+  下载并安装Magisk最新版本 (https://github.com/topjohnwu/Magisk/releases)
+选择安装Magisk-选择并修补一个文件，选中放在根目录的boot.img ，等待修补完成
+  将手机download目录下的修补完成的magisk_patched.img复制到电脑
+  工具刷入mgisk_patched.img   将mgisk_patched.img放入 platform-tools 目录下
+  运行
+打开CMD命令行.bat  adb reboot bootloader fastboot flash boot_a magisk_patched.img fastboot flash boot_b magisk_patched.img fastboot reboot    刷入EdXposed  刷入Riru - Core模块 刷入Riru - EdXposed(YAHFA) 或Riru - EdXposed(SandHook)模块 安装最新的Edxposed Manager  总结与注意事项   制作mgisk_patched.</description>
+    </item>
+    
     <item>
       <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
       <link>https://bestoko.github.io/p/gba2cia/</link>

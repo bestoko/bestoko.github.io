@@ -113,6 +113,167 @@
 </description>
         </item>
         <item>
+        <title>一加8的Android 11 折腾指南</title>
+        <link>https://bestoko.github.io/p/oneplus8/</link>
+        <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://bestoko.github.io/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.github.io/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;氢OS Android11 Rom包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payload Dumber&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;platform-tools&lt;/p&gt;
+&lt;p&gt;打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk&lt;/h1&gt;
+&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将官方包内的&lt;code&gt;payload.bin&lt;/code&gt; 解压并放入Payload Dumber 的payload_input目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开&lt;code&gt;payload_dumper.exe&lt;/code&gt;（看到boot解压出来就可以关闭了）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开payload_output目录，将解压出的&lt;code&gt;boot.img&lt;/code&gt;复制到手机根目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载并安装Magisk最新版本 (&lt;a class=&#34;link&#34; href=&#34;https://github.com/topjohnwu/Magisk/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/topjohnwu/Magisk/releases&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;选择安装Magisk-选择并修补一个文件，选中放在根目录的&lt;code&gt;boot.img&lt;/code&gt; ，等待修补完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将手机download目录下的修补完成的&lt;code&gt;magisk_patched.img&lt;/code&gt;复制到电脑&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将&lt;code&gt;mgisk_patched.img&lt;/code&gt;放入 platform-tools 目录下&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;打开CMD命令行.bat
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb reboot bootloader&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot_a magisk_patched.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot_b magisk_patched.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;刷入&lt;code&gt;Riru - Core&lt;/code&gt;模块&lt;/li&gt;
+&lt;li&gt;刷入&lt;code&gt;Riru - EdXposed(YAHFA)&lt;/code&gt; 或&lt;code&gt;Riru - EdXposed(SandHook)&lt;/code&gt;模块&lt;/li&gt;
+&lt;li&gt;安装最新的&lt;code&gt;Edxposed Manager&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;制作&lt;code&gt;mgisk_patched.img&lt;/code&gt;时要用最新的 v8.0.x版本，不能使用以往的v21.0版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;刷写&lt;code&gt;mgisk_patched.img&lt;/code&gt;时 a/b分区都要&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果因刷入不兼容的模块导致无法开机，可以尝试&lt;/p&gt;
+&lt;p&gt;卸载全部magisk模块&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb shell&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;magisk --remove-modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 45; 
+			flex-basis: 108px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8info.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8info.jpg&#34;
+			width=&#34;1080&#34;
+			height=&#34;2400&#34;
+			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;op8info&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;op8info&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 45; 
+			flex-basis: 108px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8magisk1.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8magisk1.jpg&#34;
+			width=&#34;1080&#34;
+			height=&#34;2400&#34;
+			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;op8magisk1&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;op8magisk1&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 45; 
+			flex-basis: 108px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8magisk2.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8magisk2.jpg&#34;
+			width=&#34;1080&#34;
+			height=&#34;2400&#34;
+			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;op8magisk2&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;op8magisk2&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 45; 
+			flex-basis: 108px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8edxposed.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8edxposed.jpg&#34;
+			width=&#34;1080&#34;
+			height=&#34;2400&#34;
+			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;op8edxposed&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;op8edxposed&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>寻找两个有序数组的中位数</title>
         <link>https://bestoko.github.io/p/leetcode004/</link>
         <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
