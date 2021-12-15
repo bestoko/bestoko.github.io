@@ -6,7 +6,113 @@
         <description>Recent content on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Arch Linux安装备忘录（二）</title>
+        <link>https://bestoko.github.io/p/archinstallextra/</link>
+        <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://bestoko.github.io/p/archinstallextra/</guid>
+        <description>&lt;img src="https://bestoko.github.io/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
+&lt;h2 id=&#34;配置网络&#34;&gt;配置网络&lt;/h2&gt;
+&lt;p&gt;我们使用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nmtui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;选择&lt;code&gt;Edit a connection&lt;/code&gt;，&lt;/p&gt;
+&lt;p&gt;选择&lt;code&gt;Add&lt;/code&gt;菜单，选择&lt;code&gt;WI-FI&lt;/code&gt;，&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Device&lt;/code&gt; 里输入 无线网卡的名字，&lt;code&gt;SSID&lt;/code&gt;里输入&lt;code&gt;WI-FI&lt;/code&gt;的名字，&lt;code&gt;Security&lt;/code&gt;选择&lt;code&gt;WPA &amp;amp;WPA2 Personal&lt;/code&gt;，OK-BACK-Quit退出。&lt;/p&gt;
+&lt;p&gt;注：使用以下命令查看无线网卡名称&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;ip link show
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;重命名主机&#34;&gt;重命名主机&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/hostname
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存想要的名字后退出。&lt;/p&gt;
+&lt;p&gt;接下来把主机名、域名以及ip地址进行映射&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入：(以下&lt;code&gt;archlinux&lt;/code&gt;为上文所保存的主机名)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;127.0.0.1		localhost
+::1		localhost
+127.0.0.1 archlinux.localdomain	archlinux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置系统时间&#34;&gt;设置系统时间&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;timedatectl set-timezone Asia/shanghai
+timedatectl set-ntp &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第二行设置为让本机时间与&lt;code&gt;ntp&lt;/code&gt;同步。&lt;/p&gt;
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/skel/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加以下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;EDITOR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;vim
+
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;grep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;egrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;egrep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;fgrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fgrep ==color=auto&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e ~/.dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -p &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e /bin/dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -b &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;bash shell&lt;/code&gt; 默认的文本编辑器设置为&lt;code&gt;vim&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;为&lt;code&gt;grep&lt;/code&gt;，&lt;code&gt;egrep&lt;/code&gt;，&lt;code&gt;fgrep&lt;/code&gt;搜索出的内容添加颜色&lt;/p&gt;
+&lt;p&gt;为看到的文件以及文件夹添加颜色&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cp -a . ~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建标准用户&#34;&gt;新建标准用户&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;useradd --create-home username
+passwd username
+usermod -aG wheel,users,storage,power,lp,adm,optical username
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;username&lt;/code&gt;替换为你所使用的名字，在创建时同时在&lt;code&gt;/home&lt;/code&gt;目录下会创建一个与用户名同名的文件夹。家目录有一个别名是&lt;code&gt;~&lt;/code&gt;，你可以在任何地方使用&lt;code&gt;~&lt;/code&gt;来代替家目录路径。&lt;/p&gt;
+&lt;h2 id=&#34;配置sudo&#34;&gt;配置sudo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;visudo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;# %wheel ALL=(ALL) ALL&lt;/code&gt; 前的&lt;code&gt;#&lt;/code&gt;号去除（去注释），保存退出。&lt;/p&gt;
+&lt;h2 id=&#34;中英字体和图形界面的安装&#34;&gt;中英字体和图形界面的安装&lt;/h2&gt;
+&lt;h3 id=&#34;安装xorg&#34;&gt;安装Xorg&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Xorg&lt;/code&gt;是&lt;code&gt;Linux&lt;/code&gt;下的一个著名的开源图形服务，我们的桌面环境需要&lt;code&gt;Xorg&lt;/code&gt;的支持。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S xorg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 272; 
+			flex-basis: 654px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.github.io/p/archinstallextra/GPUdirver.jpg&#34; data-size=&#34;955x350&#34;&gt;
+		&lt;img src=&#34;https://bestoko.github.io/p/archinstallextra/GPUdirver.jpg&#34;
+			width=&#34;955&#34;
+			height=&#34;350&#34;
+			srcset=&#34;https://bestoko.github.io/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;参照如上表格安装相应的包，以&lt;code&gt;Surface Pro&lt;/code&gt; 为例，需要安装&lt;code&gt;intel&lt;/code&gt;的集成显卡驱动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S xf86-video-intel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装字体&#34;&gt;安装字体&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/locales.gen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;en_US.UTF-8 UTF8&lt;/code&gt; &lt;code&gt;zh_CN.UTF-8 UTF8&lt;/code&gt;前的#删除（去注释），保存退出。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/locale.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;LANG=en_US.UTF-8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想生成中文，就改成&lt;code&gt;LANG=zh_TW.UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接着生成字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;locale-gen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来安装英文字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再然后是安装中文字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S ttf-hanom noto-fonts noto-fonts noto-fonts-extra not-fonts-emoji noto-fonts-cjk adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts wqy-zenhei wqy-microhei
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开&lt;code&gt;freetype2&lt;/code&gt;字体引擎&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/profile.d/freetype2.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将最后一行去注释后保存退出。&lt;/p&gt;
+&lt;h3 id=&#34;安装桌面环境&#34;&gt;安装桌面环境&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;下有很多桌面环境如&lt;code&gt;Xfce&lt;/code&gt;、&lt;code&gt;KDE(Plasma)&lt;/code&gt;、&lt;code&gt;Gnome&lt;/code&gt;、&lt;code&gt;Unity&lt;/code&gt;、&lt;code&gt;Deepin&lt;/code&gt;等等，它们的外观、操作、设计理念等各方面都有所不同，这里我们选择&lt;code&gt;Gnome&lt;/code&gt;为例，进行安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S gnome gnome-extra gdm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装好了桌面环境包以后，我们需要安装一个图形化的桌面管理器来帮助我们登录并且选择我们使用的桌面环境，这里我使用上面的&lt;code&gt;gdm&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; gdm.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装声音以及打印机系统&#34;&gt;安装声音以及打印机系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;清楚安装缓存以及无用源&#34;&gt;清楚安装缓存以及无用源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -Scc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着重启即可进入&lt;code&gt;Gnome&lt;/code&gt;桌面&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;至此，&lt;code&gt;ArchLinux&lt;/code&gt;基本安装与必要设置和图形界面都已经安装完毕。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Arch Linux安装备忘录（一）</title>
         <link>https://bestoko.github.io/p/archinstall/</link>
         <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>

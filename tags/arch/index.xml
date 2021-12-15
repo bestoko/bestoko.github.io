@@ -6,7 +6,27 @@
     <description>Recent content in Arch on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux安装备忘录（二）</title>
+      <link>https://bestoko.github.io/p/archinstallextra/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://bestoko.github.io/p/archinstallextra/</guid>
+      <description>写在前面 在安装了基本的ArchLinux后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。
+配置网络 我们使用
+nmtui 选择Edit a connection，
+选择Add菜单，选择WI-FI，
+Device 里输入 无线网卡的名字，SSID里输入WI-FI的名字，Security选择WPA &amp;amp;WPA2 Personal，OK-BACK-Quit退出。
+注：使用以下命令查看无线网卡名称
+ip link show 重命名主机 vim /etc/hostname 保存想要的名字后退出。
+接下来把主机名、域名以及ip地址进行映射
+vim /etc/hosts 输入：(以下archlinux为上文所保存的主机名)
+127.0.0.1	localhost ::1	localhost 127.0.0.1 archlinux.localdomain	archlinux 设置系统时间 timedatectl set-timezone Asia/shanghai timedatectl set-ntp true 第二行设置为让本机时间与ntp同步。
+配置环境变量 vim /etc/skel/.bashrc 添加以下内容
+export EDITOR=vim alias grep=&amp;#39;grep ==color=auto&amp;#39; alias egrep=&amp;#39;egrep ==color=auto&amp;#39; alias fgrep=&amp;#39;fgrep ==color=auto&amp;#39; [ ！ -e ~/.dircolors ] &amp;amp;&amp;amp; eval $(dircolors -p &amp;gt; ~/.dircolors) [ ！ -e /bin/dircolors ] &amp;amp;&amp;amp; eval $(dircolors -b &amp;gt; ~/.</description>
+    </item>
+    
     <item>
       <title>Arch Linux安装备忘录（一）</title>
       <link>https://bestoko.github.io/p/archinstall/</link>
