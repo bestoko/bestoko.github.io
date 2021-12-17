@@ -153,59 +153,59 @@ if (!doNotTrack) {
 <h3 id="网络连接">*网络连接</h3>
 <p><code>Arch</code>的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。</p>
 <p>输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">iwctl
-</span></code></pre></div><p>进入<code>iwd</code>模式，输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">device list
-</span></code></pre></div><p>查看你的网卡名字，这里假设是<code>wlan0</code>，输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">station wlan0 scan
-</span></code></pre></div><p>检查扫描网络，输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">station wlan0 get-networks
-</span></code></pre></div><p>查看网络名字，假设名字叫<code>XXX</code>，输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">station wlan0 connect XXX
-</span></code></pre></div><p>接着输入密码（如果有密码的话），输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">exit
-</span></code></pre></div><p>退出iwd模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">iwctl
+</code></pre></div><p>进入<code>iwd</code>模式，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">device list
+</code></pre></div><p>查看你的网卡名字，这里假设是<code>wlan0</code>，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">station wlan0 scan
+</code></pre></div><p>检查扫描网络，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">station wlan0 get-networks
+</code></pre></div><p>查看网络名字，假设名字叫<code>XXX</code>，输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">station wlan0 connect XXX
+</code></pre></div><p>接着输入密码（如果有密码的话），输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">exit</span>
+</code></pre></div><p>退出iwd模式</p>
 <p>我们可以用<code>ping</code>命令来检验下是否连接成功</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">ping -c 4 baidu.com
-</span></code></pre></div><p>接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">reflector --country China --age 24 --sort rate --portocol https --save /etc/pacman.d/mirrorlist
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">ping -c <span class="m">4</span> baidu.com
+</code></pre></div><p>接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">reflector --country China --age <span class="m">24</span> --sort rate --portocol https --save /etc/pacman.d/mirrorlist
+</code></pre></div><ul>
 <li>country 限定国家</li>
 <li>age 24 限定下更新时间为24小时内的源</li>
 <li>portocol https 选择https协议更安全</li>
 </ul>
 <p>执行完毕后，可以用vim查看</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">vim /etc/pacman.d/mirrorlist
-</span></code></pre></div><h3 id="磁盘分区">磁盘分区</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/pacman.d/mirrorlist
+</code></pre></div><h3 id="磁盘分区">磁盘分区</h3>
 <p>检查磁盘</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">lsblk
-</span></code></pre></div><p>用gdisk命令进行分区</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">gdisk  /dev/nvme0n1
-</span></code></pre></div><p>其中nvme01 为你之前准备的磁盘。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">lsblk
+</code></pre></div><p>用gdisk命令进行分区</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">gdisk  /dev/nvme0n1
+</code></pre></div><p>其中nvme01 为你之前准备的磁盘。</p>
 <p>一路默认回车到Last sector 部分，因为我们准备用作启动分区，准备分配512M，所以输入+512M回车，接着输入分区编号ef00。这样第一个分区完成，接着第二个分区笔者分配了+235G，并使用默认的分区编号8300（Linux filesystem），最后剩下2G左右空间一路默认，分区编号输入8200（Linux swap）。确认无误后，w保存quit退出。</p>
 <p>接着格式化我们的三个分区，将nvme01p1格式化为vfat</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkfs.vfat /dev/nvme01p1
-</span></code></pre></div><p>将nvme01p2格式化为ext4或者xfs（推荐）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkfs.xfs /dev/nvme01p2
-</span></code></pre></div><p>最后</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkswap /dev/nvme01p3
-</span></code></pre></div><h3 id="挂载分区">挂载分区</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mount /dev/nvme01p2 /mnt
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mkdir -p /mnt/boot/efi
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">mount /dev/nvme01p1 /mnt/boot/efi
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">swapon /dev/nvme01p3
-</span></code></pre></div><h3 id="安装基本包">安装基本包</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
-</span></code></pre></div><h4 id="配置fstab">配置Fstab</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
-</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">cat /mnt/etc/fstab
-</span></code></pre></div><p>确认下是否挂载无误</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkfs.vfat /dev/nvme01p1
+</code></pre></div><p>将nvme01p2格式化为ext4或者xfs（推荐）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkfs.xfs /dev/nvme01p2
+</code></pre></div><p>最后</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkswap /dev/nvme01p3
+</code></pre></div><h3 id="挂载分区">挂载分区</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mount /dev/nvme01p2 /mnt
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkdir -p /mnt/boot/efi
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mount /dev/nvme01p1 /mnt/boot/efi
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">swapon /dev/nvme01p3
+</code></pre></div><h3 id="安装基本包">安装基本包</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
+</code></pre></div><h4 id="配置fstab">配置Fstab</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cat /mnt/etc/fstab
+</code></pre></div><p>确认下是否挂载无误</p>
 <h4 id="chroot">chroot</h4>
 <blockquote>
 <p><code>Chroot</code>意为<code>Change root</code>，相当于把操纵权交给我们新安装（或已经存在）的<code>Linux</code>系统，<strong>执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行</strong>。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">arch-chroot /mnt
-</span></code></pre></div><h4 id="安装必须软件包">安装必须软件包</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">arch-chroot /mnt
+</code></pre></div><h4 id="安装必须软件包">安装必须软件包</h4>
 <p>现在我们已经<code>Chroot</code>到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。<code>ArchLinux</code>有非常强大的包管理工具<code>pacman</code>，大部分情况下，一行命令就可以搞定包与依赖的问题。</p>
 <p>安装包的命令格式为<code>pacman -S 包名</code>，<code>pacman</code>会自动检查这个包所需要的其他包（即为依赖）并一起装上。下面我们就通过<code>pacman</code>来安装一些包，这些包在之后会用上，在这里先提前装好。</p>
 <p>执行如下命令（注意大小写，大小写错误会导致包无法找到）：</p>
@@ -215,22 +215,22 @@ if (!doNotTrack) {
 <p>部署<code>grub</code></p>
 <pre tabindex="0"><code>grub-install /dev/nvme01 
 </code></pre><p>修改配置</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">vim /etc/default/grub
-</span></code></pre></div><p>将<code>GRUB_TIMEOUT=5</code>改成<code>GRUB_TIMEOUT=2</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/default/grub
+</code></pre></div><p>将<code>GRUB_TIMEOUT=5</code>改成<code>GRUB_TIMEOUT=2</code></p>
 <p>将<code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;loglevel=3 quiet&quot;</code> 的<code>quiet</code>字段删除，这样登录的时候会有日志，如果出现错误可以查看日志文件。</p>
 <p>接着将<code>GRUB_GFXMODE=auto</code>修改为你的分辨率，以我的surface为例，改为<code>GRUB_GFXMODE=2736x1824</code></p>
 <p>接着生成grub的配置文件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">grub-mkconfig -o /boot/grub/grub.cfg
-</span></code></pre></div><h4 id="设置networkmanager开机自动启动">设置NetworkManager开机自动启动</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">systemctl enable NetworkManager
-</span></code></pre></div><h4 id="为root用户设置密码">为root用户设置密码</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">passwd
-</span></code></pre></div><h4 id="卸载分区-拔除介质">卸载分区 拔除介质</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">umount /mnt/boot/efi
-</span><span class="go">umount /mnt
-</span></code></pre></div><p>拔除介质重新启动</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">reboot
-</span></code></pre></div><h2 id="小结">小结</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div><h4 id="设置networkmanager开机自动启动">设置NetworkManager开机自动启动</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">systemctl <span class="nb">enable</span> NetworkManager
+</code></pre></div><h4 id="为root用户设置密码">为root用户设置密码</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">passwd
+</code></pre></div><h4 id="卸载分区-拔除介质">卸载分区 拔除介质</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">umount /mnt/boot/efi
+umount /mnt
+</code></pre></div><p>拔除介质重新启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">reboot
+</code></pre></div><h2 id="小结">小结</h2>
 <p>至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&hellip;.以及一些实用软件包。</p>
 
 </section>
