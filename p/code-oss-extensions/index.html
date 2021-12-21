@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software 代表开源软件）。
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
  我之前使用
 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。
-我们可以通过修改/usr/lib/code/product.json的解决这个问题，添加如下内容：
+我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：
 &amp;#34;extensionsGallery&amp;#34;: { &amp;#34;serviceUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;, &amp;#34;cacheUrl&amp;#34;: &amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;, &amp;#34;itemUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/items&amp;#34; } 重新启动Code-OSS就可以了。'><title>ArchLinux下修改Code-OSS扩展源</title>
 
 <link rel='canonical' href='https://bestoko.github.io/p/code-oss-extensions/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='ArchLinux下修改Code-OSS扩展源'>
-<meta property='og:description' content='类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software 代表开源软件）。
+<meta property='og:description' content='类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
  我之前使用
 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。
-我们可以通过修改/usr/lib/code/product.json的解决这个问题，添加如下内容：
+我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：
 &amp;#34;extensionsGallery&amp;#34;: { &amp;#34;serviceUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;, &amp;#34;cacheUrl&amp;#34;: &amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;, &amp;#34;itemUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/items&amp;#34; } 重新启动Code-OSS就可以了。'>
 <meta property='og:url' content='https://bestoko.github.io/p/code-oss-extensions/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Code-OSS' /><meta property='article:published_time' content='2021-12-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-12-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://bestoko.github.io/p/code-oss-extensions/code-oss.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="ArchLinux下修改Code-OSS扩展源">
-<meta name="twitter:description" content="类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software 代表开源软件）。
+<meta name="twitter:description" content="类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
  我之前使用
 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。
-我们可以通过修改/usr/lib/code/product.json的解决这个问题，添加如下内容：
+我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：
 &amp;#34;extensionsGallery&amp;#34;: { &amp;#34;serviceUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;, &amp;#34;cacheUrl&amp;#34;: &amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;, &amp;#34;itemUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/items&amp;#34; } 重新启动Code-OSS就可以了。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.github.io/p/code-oss-extensions/code-oss.png' />
     <link rel="shortcut icon" href="bestoko.ico" />
@@ -351,12 +351,12 @@ if (!doNotTrack) {
 
     <section class="article-content">
     <blockquote>
-<p>类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software 代表开源软件）。</p>
+<p>类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。</p>
 </blockquote>
 <p>我之前使用</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S code
 </code></pre></div><p>所安装的正是Code-OSS ，默认不使用微软官方扩展市场。</p>
-<p>我们可以通过修改<code>/usr/lib/code/product.json</code>的解决这个问题，添加如下内容：</p>
+<p>我们可以通过修改<code>/usr/lib/code/product.json</code>解决这个问题，添加如下内容：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="s2">&#34;extensionsGallery&#34;</span>: <span class="o">{</span>
       <span class="s2">&#34;serviceUrl&#34;</span>: <span class="s2">&#34;https://marketplace.visualstudio.com/_apis/public/gallery&#34;</span>,
       <span class="s2">&#34;cacheUrl&#34;</span>: <span class="s2">&#34;https://vscode.blob.core.windows.net/gallery/index&#34;</span>,

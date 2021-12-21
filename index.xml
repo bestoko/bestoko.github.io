@@ -13,12 +13,12 @@
         
         <guid>https://bestoko.github.io/p/code-oss-extensions/</guid>
         <description>&lt;img src="https://bestoko.github.io/p/code-oss-extensions/code-oss.png" alt="Featured image of post ArchLinux下修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
-&lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software 代表开源软件）。&lt;/p&gt;
+&lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我之前使用&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S code
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所安装的正是Code-OSS ，默认不使用微软官方扩展市场。&lt;/p&gt;
-&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;的解决这个问题，添加如下内容：&lt;/p&gt;
+&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;extensionsGallery&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
       &lt;span class=&#34;s2&#34;&gt;&amp;#34;serviceUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;&lt;/span&gt;,
       &lt;span class=&#34;s2&#34;&gt;&amp;#34;cacheUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;&lt;/span&gt;,
