@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snap on Toko&#39;s blog</title>
+    <link>https://bestoko.github.io/tags/snap/</link>
+    <description>Recent content in Snap on Toko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.github.io/tags/snap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
+      <link>https://bestoko.github.io/p/snaps-mstodo/</link>
+      <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
+      
+      <guid>https://bestoko.github.io/p/snaps-mstodo/</guid>
+      <description>虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
+MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不管gnome桌面自带的ToDo，必须想办法接着用。
+ Snaps安装与配置  snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。
+ 也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。
+安装Snap软件包 首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。
+sudo pacman -S snapd 启动守护进程 sudo systemctl enable --now snapd.socket 启用classic snap support sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。
+ Strict Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).</description>
+    </item>
+    
+  </channel>
+</rss>
