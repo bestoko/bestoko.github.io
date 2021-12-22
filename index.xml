@@ -14,7 +14,7 @@
         <guid>https://bestoko.github.io/p/snaps-mstodo/</guid>
         <description>&lt;img src="https://bestoko.github.io/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
 &lt;p&gt;虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不管&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法接着用。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;snaps安装与配置&#34;&gt;Snaps安装与配置&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -47,12 +47,12 @@ Allows access to your system’s resources in much the same way traditional pack
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
-        <title>Arch Linux下修改Code-OSS扩展源</title>
+        <title>Arch Linux上修改Code-OSS扩展源</title>
         <link>https://bestoko.github.io/p/code-oss-extensions/</link>
         <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
         
         <guid>https://bestoko.github.io/p/code-oss-extensions/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux下修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
+        <description>&lt;img src="https://bestoko.github.io/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux上修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
 &lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我之前使用&lt;/p&gt;
