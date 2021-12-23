@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code-OSS on Toko&#39;s blog</title>
-    <link>https://bestoko.github.io/tags/code-oss/</link>
+    <link>https://bestoko.cc/tags/code-oss/</link>
     <description>Recent content in Code-OSS on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/code-oss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.cc/tags/code-oss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch Linux上修改Code-OSS扩展源</title>
-      <link>https://bestoko.github.io/p/code-oss-extensions/</link>
+      <link>https://bestoko.cc/p/code-oss-extensions/</link>
       <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/code-oss-extensions/</guid>
+      <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
       <description> 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
  我之前使用
 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。

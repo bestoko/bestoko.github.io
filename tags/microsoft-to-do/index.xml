@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MicroSoft To-Do on Toko&#39;s blog</title>
-    <link>https://bestoko.github.io/tags/microsoft-to-do/</link>
+    <link>https://bestoko.cc/tags/microsoft-to-do/</link>
     <description>Recent content in MicroSoft To-Do on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.github.io/tags/microsoft-to-do/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/microsoft-to-do/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
-      <link>https://bestoko.github.io/p/snaps-mstodo/</link>
+      <link>https://bestoko.cc/p/snaps-mstodo/</link>
       <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
       
-      <guid>https://bestoko.github.io/p/snaps-mstodo/</guid>
+      <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
       <description>虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
 MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。
  Snaps安装与配置  snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。

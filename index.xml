@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Toko&#39;s blog</title>
-        <link>https://bestoko.github.io/</link>
+        <link>https://bestoko.cc/</link>
         <description>Recent content on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
-        <link>https://bestoko.github.io/p/snaps-mstodo/</link>
+        <link>https://bestoko.cc/p/snaps-mstodo/</link>
         <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
         
-        <guid>https://bestoko.github.io/p/snaps-mstodo/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
 &lt;p&gt;虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -48,11 +48,11 @@
         </item>
         <item>
         <title>Arch Linux上修改Code-OSS扩展源</title>
-        <link>https://bestoko.github.io/p/code-oss-extensions/</link>
+        <link>https://bestoko.cc/p/code-oss-extensions/</link>
         <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/code-oss-extensions/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux上修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux上修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
 &lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我之前使用&lt;/p&gt;
@@ -73,11 +73,11 @@
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>https://bestoko.github.io/p/surface-linux/</link>
+        <link>https://bestoko.cc/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>https://bestoko.github.io/p/surface-linux/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+        <guid>https://bestoko.cc/p/surface-linux/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
 &lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动&lt;/h2&gt;
@@ -102,11 +102,11 @@ $ sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; iptsd
         </item>
         <item>
         <title>Arch Linux安装备忘录（二）</title>
-        <link>https://bestoko.github.io/p/archinstallextra/</link>
+        <link>https://bestoko.cc/p/archinstallextra/</link>
         <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/archinstallextra/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+        <guid>https://bestoko.cc/p/archinstallextra/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
 &lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
 &lt;h2 id=&#34;配置网络&#34;&gt;配置网络&lt;/h2&gt;
 &lt;p&gt;我们使用&lt;/p&gt;
@@ -164,11 +164,11 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
 			flex-grow: 272; 
 			flex-basis: 654px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/archinstallextra/GPUdirver.jpg&#34; data-size=&#34;955x350&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/archinstallextra/GPUdirver.jpg&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34; data-size=&#34;955x350&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
 			width=&#34;955&#34;
 			height=&#34;350&#34;
-			srcset=&#34;https://bestoko.github.io/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -208,11 +208,11 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
         </item>
         <item>
         <title>Arch Linux安装备忘录（一）</title>
-        <link>https://bestoko.github.io/p/archinstall/</link>
+        <link>https://bestoko.cc/p/archinstall/</link>
         <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/archinstall/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+        <guid>https://bestoko.cc/p/archinstall/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
 &lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
 &lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;
@@ -314,11 +314,11 @@ umount /mnt
         </item>
         <item>
         <title>一加8的Android 11 折腾指南</title>
-        <link>https://bestoko.github.io/p/oneplus8/</link>
+        <link>https://bestoko.cc/p/oneplus8/</link>
         <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/oneplus8/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+        <guid>https://bestoko.cc/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -402,11 +402,11 @@ umount /mnt
 			flex-grow: 45; 
 			flex-basis: 108px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8info.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8info.jpg&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 			width=&#34;1080&#34;
 			height=&#34;2400&#34;
-			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;op8info&#34;&gt;
 	&lt;/a&gt;
@@ -421,11 +421,11 @@ umount /mnt
 			flex-grow: 45; 
 			flex-basis: 108px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8magisk1.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8magisk1.jpg&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 			width=&#34;1080&#34;
 			height=&#34;2400&#34;
-			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;op8magisk1&#34;&gt;
 	&lt;/a&gt;
@@ -440,11 +440,11 @@ umount /mnt
 			flex-grow: 45; 
 			flex-basis: 108px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8magisk2.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8magisk2.jpg&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 			width=&#34;1080&#34;
 			height=&#34;2400&#34;
-			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;op8magisk2&#34;&gt;
 	&lt;/a&gt;
@@ -459,11 +459,11 @@ umount /mnt
 			flex-grow: 45; 
 			flex-basis: 108px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/oneplus8/op8edxposed.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/oneplus8/op8edxposed.jpg&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34; data-size=&#34;1080x2400&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 			width=&#34;1080&#34;
 			height=&#34;2400&#34;
-			srcset=&#34;https://bestoko.github.io/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.github.io/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;op8edxposed&#34;&gt;
 	&lt;/a&gt;
@@ -475,11 +475,11 @@ umount /mnt
         </item>
         <item>
         <title>寻找两个有序数组的中位数</title>
-        <link>https://bestoko.github.io/p/leetcode004/</link>
+        <link>https://bestoko.cc/p/leetcode004/</link>
         <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/leetcode004/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/leetcode004/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/&lt;/p&gt;
 &lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;
@@ -696,11 +696,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         </item>
         <item>
         <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-        <link>https://bestoko.github.io/p/gba2cia/</link>
+        <link>https://bestoko.cc/p/gba2cia/</link>
         <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/gba2cia/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
+        <guid>https://bestoko.cc/p/gba2cia/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
 &lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
@@ -738,11 +738,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 201; 
 			flex-basis: 483px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gba2cia/gba2cia1.png&#34; data-size=&#34;1185x588&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gba2cia/gba2cia1.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34; data-size=&#34;1185x588&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
 			width=&#34;1185&#34;
 			height=&#34;588&#34;
-			srcset=&#34;https://bestoko.github.io/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;gba2cia1&#34;&gt;
 	&lt;/a&gt;
@@ -757,11 +757,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 152; 
 			flex-basis: 364px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gba2cia/gba2cia2.png&#34; data-size=&#34;824x542&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gba2cia/gba2cia2.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34; data-size=&#34;824x542&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
 			width=&#34;824&#34;
 			height=&#34;542&#34;
-			srcset=&#34;https://bestoko.github.io/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;gba2cia2&#34;&gt;
 	&lt;/a&gt;
@@ -779,11 +779,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 152; 
 			flex-basis: 364px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gba2cia/gba2cia3.png&#34; data-size=&#34;824x542&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gba2cia/gba2cia3.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34; data-size=&#34;824x542&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
 			width=&#34;824&#34;
 			height=&#34;542&#34;
-			srcset=&#34;https://bestoko.github.io/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;gba2cia3&#34;&gt;
 	&lt;/a&gt;
@@ -798,11 +798,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 152; 
 			flex-basis: 364px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gba2cia/gba2cia4.png&#34; data-size=&#34;824x542&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gba2cia/gba2cia4.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34; data-size=&#34;824x542&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
 			width=&#34;824&#34;
 			height=&#34;542&#34;
-			srcset=&#34;https://bestoko.github.io/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;gba2cia4&#34;&gt;
 	&lt;/a&gt;
@@ -820,11 +820,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 152; 
 			flex-basis: 364px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gba2cia/gba2cia5.png&#34; data-size=&#34;824x542&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gba2cia/gba2cia5.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34; data-size=&#34;824x542&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
 			width=&#34;824&#34;
 			height=&#34;542&#34;
-			srcset=&#34;https://bestoko.github.io/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;gba2cia5&#34;&gt;
 	&lt;/a&gt;
@@ -846,11 +846,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gba2cia/gba2cia6.png&#34; data-size=&#34;4608x3456&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gba2cia/gba2cia6.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34; data-size=&#34;4608x3456&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
 			width=&#34;4608&#34;
 			height=&#34;3456&#34;
-			srcset=&#34;https://bestoko.github.io/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;gba2cia6&#34;&gt;
 	&lt;/a&gt;
@@ -869,11 +869,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         </item>
         <item>
         <title>Git学习笔记</title>
-        <link>https://bestoko.github.io/p/gitnotes/</link>
+        <link>https://bestoko.cc/p/gitnotes/</link>
         <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/gitnotes/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/gitnotes/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
 &lt;p&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
 &lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;
@@ -885,11 +885,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 			flex-grow: 297; 
 			flex-basis: 713px&#34;
 	&gt;
-	&lt;a href=&#34;https://bestoko.github.io/p/gitnotes/learnGit.png&#34; data-size=&#34;1401x471&#34;&gt;
-		&lt;img src=&#34;https://bestoko.github.io/p/gitnotes/learnGit.png&#34;
+	&lt;a href=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34; data-size=&#34;1401x471&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 			width=&#34;1401&#34;
 			height=&#34;471&#34;
-			srcset=&#34;https://bestoko.github.io/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_480x0_resize_box_3.png 480w, https://bestoko.github.io/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;learnGit&#34;&gt;
 	&lt;/a&gt;
@@ -993,11 +993,11 @@ $ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#
         </item>
         <item>
         <title>Markdown学习笔记</title>
-        <link>https://bestoko.github.io/p/markdwonnotes/</link>
+        <link>https://bestoko.cc/p/markdwonnotes/</link>
         <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://bestoko.github.io/p/markdwonnotes/</guid>
-        <description>&lt;img src="https://bestoko.github.io/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/markdwonnotes/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;

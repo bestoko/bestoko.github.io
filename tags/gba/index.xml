@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GBA on Toko&#39;s blog</title>
-    <link>https://bestoko.github.io/tags/gba/</link>
+    <link>https://bestoko.cc/tags/gba/</link>
     <description>Recent content in GBA on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/gba/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.cc/tags/gba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-      <link>https://bestoko.github.io/p/gba2cia/</link>
+      <link>https://bestoko.cc/p/gba2cia/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/gba2cia/</guid>
+      <guid>https://bestoko.cc/p/gba2cia/</guid>
       <description>前情提要 为什么要水这么一篇文章
 在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.
 我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了可能是现今最好的解决方案。

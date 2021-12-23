@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Study on Toko&#39;s blog</title>
-    <link>https://bestoko.github.io/categories/study/</link>
+    <link>https://bestoko.cc/categories/study/</link>
     <description>Recent content in Study on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/categories/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.cc/categories/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>寻找两个有序数组的中位数</title>
-      <link>https://bestoko.github.io/p/leetcode004/</link>
+      <link>https://bestoko.cc/p/leetcode004/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/leetcode004/</guid>
+      <guid>https://bestoko.cc/p/leetcode004/</guid>
       <description>​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
  题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
 题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
@@ -31,10 +31,10 @@
     
     <item>
       <title>Git学习笔记</title>
-      <link>https://bestoko.github.io/p/gitnotes/</link>
+      <link>https://bestoko.cc/p/gitnotes/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/gitnotes/</guid>
+      <guid>https://bestoko.cc/p/gitnotes/</guid>
       <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
@@ -44,10 +44,10 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
     
     <item>
       <title>Markdown学习笔记</title>
-      <link>https://bestoko.github.io/p/markdwonnotes/</link>
+      <link>https://bestoko.cc/p/markdwonnotes/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/markdwonnotes/</guid>
+      <guid>https://bestoko.cc/p/markdwonnotes/</guid>
       <description>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
  以下是Markdown的基础语法
 ~~删除线~~ *斜体* _斜体第二种方法_ **加粗** __加粗的第二种方法__ ___粗斜体___ 两个enter是换行，或者用&amp;lt;/br&amp;gt;标签表示换行 用一行的=或者-表示一级标题和二级标题。如： 一级标题 ======= 二级标题 -------- 也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如： # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  无序列表：在前面加上 * 或者 + 或者 - 然后加个空格： * ABC * DEF * GHI + JKL + MNO + PQR - STU - VWX - YZZ 有序列表：数字+英文句点+空格。如下： 1. 呵呵 2. 哈哈 3. 嘿嘿 4. 哼哼 &amp;amp;lt; // 会显示为”&amp;lt;“ &amp;amp;amp; // 会显示为”&amp;amp;“：在 href 属性里面，必须将 &amp;amp; 转变为 &amp;amp;amp; \.</description>

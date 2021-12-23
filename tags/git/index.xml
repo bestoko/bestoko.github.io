@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Toko&#39;s blog</title>
-    <link>https://bestoko.github.io/tags/git/</link>
+    <link>https://bestoko.cc/tags/git/</link>
     <description>Recent content in git on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.cc/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git学习笔记</title>
-      <link>https://bestoko.github.io/p/gitnotes/</link>
+      <link>https://bestoko.cc/p/gitnotes/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/gitnotes/</guid>
+      <guid>https://bestoko.cc/p/gitnotes/</guid>
       <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。

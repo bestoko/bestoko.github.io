@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Toko&#39;s blog</title>
-    <link>https://bestoko.github.io/post/</link>
+    <link>https://bestoko.cc/post/</link>
     <description>Recent content in Posts on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
-      <link>https://bestoko.github.io/p/snaps-mstodo/</link>
+      <link>https://bestoko.cc/p/snaps-mstodo/</link>
       <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
       
-      <guid>https://bestoko.github.io/p/snaps-mstodo/</guid>
+      <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
       <description>虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
 MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。
  Snaps安装与配置  snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。
@@ -25,10 +25,10 @@ Used by the majority of snaps. Strictly confined snaps run in complete isolation
     
     <item>
       <title>Arch Linux上修改Code-OSS扩展源</title>
-      <link>https://bestoko.github.io/p/code-oss-extensions/</link>
+      <link>https://bestoko.cc/p/code-oss-extensions/</link>
       <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/code-oss-extensions/</guid>
+      <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
       <description> 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
  我之前使用
 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。
@@ -40,10 +40,10 @@ yay -S code-marketplace </description>
     
     <item>
       <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-      <link>https://bestoko.github.io/p/surface-linux/</link>
+      <link>https://bestoko.cc/p/surface-linux/</link>
       <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
       
-      <guid>https://bestoko.github.io/p/surface-linux/</guid>
+      <guid>https://bestoko.cc/p/surface-linux/</guid>
       <description>写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
 安装驱动 导入密钥 首先我们需要导入用于签名软件包的密钥：
 $ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \  | sudo pacman-key --add - 检查完整性并本地签名 $ sudo pacman-key --finger 56C464BAAC421453 $ sudo pacman-key --lsign-key 56C464BAAC421453 添加存储库 我们需要在/etc/pacman.conf添加如下内容
@@ -53,10 +53,10 @@ $ sudo pacman -Syu $ sudo pacman -S linux-surface linux-surface-headers iptsd $ 
     
     <item>
       <title>Arch Linux安装备忘录（二）</title>
-      <link>https://bestoko.github.io/p/archinstallextra/</link>
+      <link>https://bestoko.cc/p/archinstallextra/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/archinstallextra/</guid>
+      <guid>https://bestoko.cc/p/archinstallextra/</guid>
       <description>写在前面 在安装了基本的ArchLinux后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。
 配置网络 我们使用
 nmtui 选择Edit a connection，
@@ -73,10 +73,10 @@ export EDITOR=vim alias grep=&amp;#39;grep ==color=auto&amp;#39; alias egrep=&am
     
     <item>
       <title>Arch Linux安装备忘录（一）</title>
-      <link>https://bestoko.github.io/p/archinstall/</link>
+      <link>https://bestoko.cc/p/archinstall/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/archinstall/</guid>
+      <guid>https://bestoko.cc/p/archinstall/</guid>
       <description>写在前面 安装Arch最好最全面的教程就是官方的 Installation guide。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备Linux知识的新手经常无从下手。
 笔者也是初学者，本篇文章仅作为自己在Surface Pro 2017从0开始安装配置Arch的记录。
 安装准备 磁盘准备 我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。
@@ -99,10 +99,10 @@ reflector --country China --age 24 --sort rate --portocol https --save /etc/pacm
     
     <item>
       <title>一加8的Android 11 折腾指南</title>
-      <link>https://bestoko.github.io/p/oneplus8/</link>
+      <link>https://bestoko.cc/p/oneplus8/</link>
       <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/oneplus8/</guid>
+      <guid>https://bestoko.cc/p/oneplus8/</guid>
       <description>准备工作   解锁Bootloader且打开USB调试的一加8
   氢OS Android11 Rom包
   Payload Dumber
@@ -121,10 +121,10 @@ reflector --country China --age 24 --sort rate --portocol https --save /etc/pacm
     
     <item>
       <title>寻找两个有序数组的中位数</title>
-      <link>https://bestoko.github.io/p/leetcode004/</link>
+      <link>https://bestoko.cc/p/leetcode004/</link>
       <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/leetcode004/</guid>
+      <guid>https://bestoko.cc/p/leetcode004/</guid>
       <description>​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
  题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
 题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
@@ -143,10 +143,10 @@ reflector --country China --age 24 --sort rate --portocol https --save /etc/pacm
     
     <item>
       <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-      <link>https://bestoko.github.io/p/gba2cia/</link>
+      <link>https://bestoko.cc/p/gba2cia/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/gba2cia/</guid>
+      <guid>https://bestoko.cc/p/gba2cia/</guid>
       <description>前情提要 为什么要水这么一篇文章
 在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.
 我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了可能是现今最好的解决方案。
@@ -173,10 +173,10 @@ reflector --country China --age 24 --sort rate --portocol https --save /etc/pacm
     
     <item>
       <title>Git学习笔记</title>
-      <link>https://bestoko.github.io/p/gitnotes/</link>
+      <link>https://bestoko.cc/p/gitnotes/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/gitnotes/</guid>
+      <guid>https://bestoko.cc/p/gitnotes/</guid>
       <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
@@ -186,10 +186,10 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
     
     <item>
       <title>Markdown学习笔记</title>
-      <link>https://bestoko.github.io/p/markdwonnotes/</link>
+      <link>https://bestoko.cc/p/markdwonnotes/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bestoko.github.io/p/markdwonnotes/</guid>
+      <guid>https://bestoko.cc/p/markdwonnotes/</guid>
       <description>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
  以下是Markdown的基础语法
 ~~删除线~~ *斜体* _斜体第二种方法_ **加粗** __加粗的第二种方法__ ___粗斜体___ 两个enter是换行，或者用&amp;lt;/br&amp;gt;标签表示换行 用一行的=或者-表示一级标题和二级标题。如： 一级标题 ======= 二级标题 -------- 也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如： # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  无序列表：在前面加上 * 或者 + 或者 - 然后加个空格： * ABC * DEF * GHI + JKL + MNO + PQR - STU - VWX - YZZ 有序列表：数字+英文句点+空格。如下： 1. 呵呵 2. 哈哈 3. 嘿嘿 4. 哼哼 &amp;amp;lt; // 会显示为”&amp;lt;“ &amp;amp;amp; // 会显示为”&amp;amp;“：在 href 属性里面，必须将 &amp;amp; 转变为 &amp;amp;amp; \.</description>
