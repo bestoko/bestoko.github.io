@@ -6,7 +6,24 @@
     <description>Recent content in Work on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/work/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Dec 2021 21:14:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux与Windows双系统时间不一致的解决方法</title>
+      <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
+      <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+      <description>给常用的电脑加了块固态装了Arch linux，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在Surface上单系统所没遇到的。
+为什么时间不一致  这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。
+中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。
+ 推荐的解决办法 Windows 其实也能处理 UTC，需要修改注册表。建议让 Windows 使用 UTC，而非让 Linux 使用地方时。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。
+Linux 可以使用NTP服务来在线同步硬件时钟。
+使用 regedit,新建如下 DWORD 值，并将其值设为十六进制的 1。
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal 也可以用管理员权限启动命令行来完成：
+reg add &amp;quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
+参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows</description>
+    </item>
+    
     <item>
       <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
       <link>https://bestoko.cc/p/snaps-mstodo/</link>
@@ -26,7 +43,7 @@ Used by the majority of snaps. Strictly confined snaps run in complete isolation
     <item>
       <title>Arch Linux上修改Code-OSS扩展源</title>
       <link>https://bestoko.cc/p/code-oss-extensions/</link>
-      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Dec 2021 09:00:01 +0800</pubDate>
       
       <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
       <description> 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
@@ -54,7 +71,7 @@ $ sudo pacman -Syu $ sudo pacman -S linux-surface linux-surface-headers iptsd $ 
     <item>
       <title>Arch Linux安装备忘录（二）</title>
       <link>https://bestoko.cc/p/archinstallextra/</link>
-      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
       
       <guid>https://bestoko.cc/p/archinstallextra/</guid>
       <description>写在前面 在安装了基本的ArchLinux后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。
@@ -74,7 +91,7 @@ export EDITOR=vim alias grep=&amp;#39;grep ==color=auto&amp;#39; alias egrep=&am
     <item>
       <title>Arch Linux安装备忘录（一）</title>
       <link>https://bestoko.cc/p/archinstall/</link>
-      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
       
       <guid>https://bestoko.cc/p/archinstall/</guid>
       <description>写在前面 安装Arch最好最全面的教程就是官方的 Installation guide。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备Linux知识的新手经常无从下手。
@@ -100,7 +117,7 @@ reflector --country China --age 24 --sort rate --portocol https --save /etc/pacm
     <item>
       <title>Git学习笔记</title>
       <link>https://bestoko.cc/p/gitnotes/</link>
-      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
       
       <guid>https://bestoko.cc/p/gitnotes/</guid>
       <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
@@ -113,7 +130,7 @@ Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分�
     <item>
       <title>Markdown学习笔记</title>
       <link>https://bestoko.cc/p/markdwonnotes/</link>
-      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
       
       <guid>https://bestoko.cc/p/markdwonnotes/</guid>
       <description>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。

@@ -6,7 +6,30 @@
         <description>Recent content on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Dec 2021 21:14:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux与Windows双系统时间不一致的解决方法</title>
+        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
+        <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+&lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
+&lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;推荐的解决办法&#34;&gt;推荐的解决办法&lt;/h2&gt;
+&lt;p&gt;Windows 其实也能处理 UTC，需要修改注册表。建议&lt;strong&gt;让 Windows 使用 UTC，而非让 Linux 使用地方时&lt;/strong&gt;。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。&lt;/p&gt;
+&lt;p&gt;Linux 可以使用&lt;strong&gt;NTP服务&lt;/strong&gt;来在线同步硬件时钟。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;regedit&lt;/code&gt;,新建如下 DWORD 值，并将其值设为十六进制的 &lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;也可以用管理员权限启动命令行来完成：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;reg add &amp;quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 &lt;code&gt;DWORD&lt;/code&gt; 修改为 &lt;code&gt;QWORD&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
         <link>https://bestoko.cc/p/snaps-mstodo/</link>
         <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
@@ -49,7 +72,7 @@
         <item>
         <title>Arch Linux上修改Code-OSS扩展源</title>
         <link>https://bestoko.cc/p/code-oss-extensions/</link>
-        <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 20 Dec 2021 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
         <description>&lt;img src="https://bestoko.cc/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux上修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
@@ -103,7 +126,7 @@ $ sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; iptsd
         <item>
         <title>Arch Linux安装备忘录（二）</title>
         <link>https://bestoko.cc/p/archinstallextra/</link>
-        <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/archinstallextra/</guid>
         <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
@@ -209,7 +232,7 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
         <item>
         <title>Arch Linux安装备忘录（一）</title>
         <link>https://bestoko.cc/p/archinstall/</link>
-        <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/archinstall/</guid>
         <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
@@ -315,7 +338,7 @@ umount /mnt
         <item>
         <title>一加8的Android 11 折腾指南</title>
         <link>https://bestoko.cc/p/oneplus8/</link>
-        <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/oneplus8/</guid>
         <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
@@ -476,7 +499,7 @@ umount /mnt
         <item>
         <title>寻找两个有序数组的中位数</title>
         <link>https://bestoko.cc/p/leetcode004/</link>
-        <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/leetcode004/</guid>
         <description>&lt;img src="https://bestoko.cc/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
@@ -697,7 +720,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <item>
         <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
         <link>https://bestoko.cc/p/gba2cia/</link>
-        <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/gba2cia/</guid>
         <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
@@ -870,7 +893,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <item>
         <title>Git学习笔记</title>
         <link>https://bestoko.cc/p/gitnotes/</link>
-        <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/gitnotes/</guid>
         <description>&lt;img src="https://bestoko.cc/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
@@ -994,7 +1017,7 @@ $ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#
         <item>
         <title>Markdown学习笔记</title>
         <link>https://bestoko.cc/p/markdwonnotes/</link>
-        <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/markdwonnotes/</guid>
         <description>&lt;img src="https://bestoko.cc/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;

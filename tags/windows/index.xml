@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Toko&#39;s blog</title>
+    <link>https://bestoko.cc/tags/windows/</link>
+    <description>Recent content in Windows on Toko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Dec 2021 21:14:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux与Windows双系统时间不一致的解决方法</title>
+      <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
+      <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+      <description>给常用的电脑加了块固态装了Arch linux，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在Surface上单系统所没遇到的。
+为什么时间不一致  这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。
+中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。
+ 推荐的解决办法 Windows 其实也能处理 UTC，需要修改注册表。建议让 Windows 使用 UTC，而非让 Linux 使用地方时。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。
+Linux 可以使用NTP服务来在线同步硬件时钟。
+使用 regedit,新建如下 DWORD 值，并将其值设为十六进制的 1。
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal 也可以用管理员权限启动命令行来完成：
+reg add &amp;quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
+参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows</description>
+    </item>
+    
+  </channel>
+</rss>
