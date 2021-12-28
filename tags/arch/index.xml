@@ -6,7 +6,21 @@
     <description>Recent content in Arch on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Dec 2021 21:14:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 11:21:20 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/arch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
+      <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
+      <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
+      <description>在 Arch Linux 上使用 Virtual Box 制作虚拟机，打开时却出了问题。
+报错信息  Kernel driver not installed (rc=-1908)
+  error 
+VirtualBox Linux 内核驱动程序未加载或未正确设置。
+解决办法 执行如下命令，重新安装vboxdrv模块
+sudo modprobe vboxdrv 如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。</description>
+    </item>
+    
     <item>
       <title>Linux与Windows双系统时间不一致的解决方法</title>
       <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
