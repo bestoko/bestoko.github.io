@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Toko&#39;s blog</title>
+    <link>https://bestoko.cc/tags/algorithm/</link>
+    <description>Recent content in Algorithm on Toko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Apr 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>寻找两个有序数组的中位数</title>
+      <link>https://bestoko.cc/p/leetcode004/</link>
+      <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/leetcode004/</guid>
+      <description>​	最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。
+ 题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/
+ 题目  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+你可以假设 nums1 和 nums2 不会同时为空。
+示例 1:
+ nums1 = [1, 3] nums2 = [2]
+ 则中位数是 2.0 示例 2:
+ nums1 = [1, 2] nums2 = [3, 4]
+ 则中位数是 (2 + 3)/2 = 2.5
+ 分析 首先要理解中位数  中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。
+  [2 3 5] 中位数是3
+[1 4 7 9] 中位数是(4+7)/2=5.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gurb2 Theme on Toko&#39;s blog</title>
+    <link>https://bestoko.cc/tags/gurb2-theme/</link>
+    <description>Recent content in Gurb2 Theme on Toko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Dec 2021 18:56:18 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/gurb2-theme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grub2主题美化踩坑记录</title>
+      <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
+      <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
+      <description>双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
+下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
+ 展示效果 
+修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
+#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+ 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的花，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。</description>
+    </item>
+    
+  </channel>
+</rss>
