@@ -6,7 +6,23 @@
     <description>Recent content in Posts on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Dec 2021 18:56:18 +0800</lastBuildDate><atom:link href="https://bestoko.cc/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Dec 2021 09:18:46 +0800</lastBuildDate><atom:link href="https://bestoko.cc/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gnome农历插件安装踩坑记录</title>
+      <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
+      <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
+      <description>在extensions.gnome.org上找到个农历扩展Lunar Calendar 农历，直接安装会因为缺少依赖报错，搜到的rpm包也无法正常安装，查了下需要手动编译安装lunar-date。
+Fedora35 编译安装lunar-date github页给的安装指南如下
+meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install  meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。
+ 所以首先
+sudo dnf install meson ninja-build 接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
+sudo dnf install vala gtk-doc 接着重新安装插件就可以正常启用了。
+额外可选设置 默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（真的很难看），解决办法如下：
+cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo  效果展示</description>
+    </item>
+    
     <item>
       <title>Grub2主题美化踩坑记录</title>
       <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
@@ -18,7 +34,7 @@
  展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
 #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
- 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的花，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
+ 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。</description>
     </item>
