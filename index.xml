@@ -6,7 +6,94 @@
         <description>Recent content on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 30 Dec 2021 09:18:46 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 05 Jan 2022 11:59:35 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>我的Linux科学上网方案</title>
+        <link>https://bestoko.cc/p/linux-clash-for-windows/</link>
+        <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-clash-for-windows/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-clash-for-windows/cfw.png" alt="Featured image of post 我的Linux科学上网方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本文不讨论科学上网的对错&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本文不教学代理服务器部署&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本文不推荐任何机场&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linux平台有很多成熟可靠的科学上网工具，本文仅列出我所推荐使用的，其余方案请自行搜索。&lt;/p&gt;
+&lt;h2 id=&#34;clash-for-windows&#34;&gt;Clash for windows&lt;/h2&gt;
+&lt;p&gt;Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clash for Windows&lt;/a&gt; (cfw)是一个&lt;code&gt;Windows/macOS/Linux&lt;/code&gt;下的clash图形化客户端。
+&lt;strong&gt;支持的协议：&lt;/strong&gt; &lt;code&gt;Vmess&lt;/code&gt;, &lt;code&gt;Shadowsocks&lt;/code&gt;, &lt;code&gt;Snell&lt;/code&gt; , &lt;code&gt;Sock5&lt;/code&gt; , &lt;code&gt;ShadowsocksR&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;p&gt;你可以直接从&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cfw的github页&lt;/a&gt;下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。&lt;/p&gt;
+&lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;code&gt;Arch Linux&lt;/code&gt;为例安装&lt;code&gt;Flatpak&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo pacman -S flatpak
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[注]如果只为了使用cfw的话，其实Arch Linux不必多次一举，&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/clash-for-windows-bin/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AUR&lt;/a&gt;上已经有人打包好了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yay -S clash-for-windows-bin 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;安装&lt;code&gt;cfw&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;flatpak install flathub io.github.Fndroid.clash_for_windows
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;p&gt;打开 Clash for Windows ，在左侧的标签页选择&lt;code&gt;Profiles&lt;/code&gt;， 在顶部输入 &lt;code&gt;Clash 订阅链接&lt;/code&gt; ，然后点击&lt;code&gt;Download&lt;/code&gt;按钮。&lt;/p&gt;
+&lt;p&gt;Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息&lt;code&gt;Success!&lt;/code&gt;，并且可以看到一个新增的配置文件。&lt;/p&gt;
+&lt;p&gt;点击新增的配置文件来切换到该配置，然后点击&lt;code&gt;Proxies &lt;/code&gt;标签页来切换接入点，将顶部的出站模式选择为&lt;code&gt;Rule&lt;/code&gt;。
+此模式下你的网络访问请求将通过 Clash for Windows 进行&lt;strong&gt;分流处理&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 137; 
+			flex-basis: 329px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34; data-size=&#34;1052x767&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34;
+			width=&#34;1052&#34;
+			height=&#34;767&#34;
+			srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu80a4b31ab0a62c53818da32d3541ff36_92847_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu80a4b31ab0a62c53818da32d3541ff36_92847_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;clash-proxies&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;clash-proxies&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;Proxy&lt;/code&gt;策略组中选择所想要使用的接入点。Proxy 策略组是用于访问国际网络的默认策略，在不进行其他修改的情况下，所有国际网络的访问都通过 Proxy 策略组中选择的接入点进行。&lt;/p&gt;
+&lt;p&gt;图中所示的其它策略组为本人出于自身实际需求自行配置的，请以自己的实际配置为准。&lt;/p&gt;
+&lt;p&gt;此外你还需要在系统设置里，配置好cfw的代理。默认端口为7890。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 258; 
+			flex-basis: 620px&#34;
+	&gt;
+	&lt;a href=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34; data-size=&#34;1582x612&#34;&gt;
+		&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34;
+			width=&#34;1582&#34;
+			height=&#34;612&#34;
+			srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_huff10fc32df514431708030955dfee9cd_133203_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_huff10fc32df514431708030955dfee9cd_133203_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;proxy-settings&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;proxy-settings&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;常用的科学上网设置到此结束。&lt;/p&gt;
+&lt;h2 id=&#34;补充设置&#34;&gt;补充设置&lt;/h2&gt;
+&lt;p&gt;有时执行wget或curl来下载国外的东西，需要临时在终端启用代理时，可以使用如下命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Gnome农历插件安装踩坑记录</title>
         <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
         <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>

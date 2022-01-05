@@ -6,7 +6,26 @@
     <description>Recent content in Linux on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Dec 2021 09:18:46 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jan 2022 11:59:35 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的Linux科学上网方案</title>
+      <link>https://bestoko.cc/p/linux-clash-for-windows/</link>
+      <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/linux-clash-for-windows/</guid>
+      <description>写在前面  本文不讨论科学上网的对错 本文不教学代理服务器部署 本文不推荐任何机场  Linux平台有很多成熟可靠的科学上网工具，本文仅列出我所推荐使用的，其余方案请自行搜索。
+Clash for windows Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。 Clash for Windows (cfw)是一个Windows/macOS/Linux下的clash图形化客户端。 支持的协议： Vmess, Shadowsocks, Snell , Sock5 , ShadowsocksR
+安装 你可以直接从cfw的github页下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。
+ Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。
+某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.
+ 以Arch Linux为例安装Flatpak。
+sudo pacman -S flatpak  [注]如果只为了使用cfw的话，其实Arch Linux不必多次一举，AUR上已经有人打包好了。
+yay -S clash-for-windows-bin  安装cfw
+flatpak install flathub io.github.Fndroid.clash_for_windows 配置 打开 Clash for Windows ，在左侧的标签页选择Profiles， 在顶部输入 Clash 订阅链接 ，然后点击Download按钮。
+Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息Success!，并且可以看到一个新增的配置文件。
+点击新增的配置文件来切换到该配置，然后点击Proxies 标签页来切换接入点，将顶部的出站模式选择为Rule。 此模式下你的网络访问请求将通过 Clash for Windows 进行分流处理。</description>
+    </item>
+    
     <item>
       <title>Gnome农历插件安装踩坑记录</title>
       <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
