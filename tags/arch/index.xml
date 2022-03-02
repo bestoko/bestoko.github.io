@@ -34,7 +34,7 @@ sudo modprobe vboxdrv 如果不起作用，检查下是否在BIOS/UEFI设置中�
 Linux 可以使用NTP服务来在线同步硬件时钟。
 使用 regedit,新建如下 DWORD 值，并将其值设为十六进制的 1。
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal 也可以用管理员权限启动命令行来完成：
-reg add &amp;quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
+reg add &amp;#34;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;#34; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
 参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows</description>
     </item>
     

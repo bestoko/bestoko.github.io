@@ -138,53 +138,53 @@ if (!doNotTrack) {
 <p>在安装了基本的<code>ArchLinux</code>后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。</p>
 <h2 id="配置网络">配置网络</h2>
 <p>我们使用</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">nmtui
-</code></pre></div><p>选择<code>Edit a connection</code>，</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nmtui
+</span></span></code></pre></div><p>选择<code>Edit a connection</code>，</p>
 <p>选择<code>Add</code>菜单，选择<code>WI-FI</code>，</p>
 <p><code>Device</code> 里输入 无线网卡的名字，<code>SSID</code>里输入<code>WI-FI</code>的名字，<code>Security</code>选择<code>WPA &amp;WPA2 Personal</code>，OK-BACK-Quit退出。</p>
 <p>注：使用以下命令查看无线网卡名称</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">ip link show
-</code></pre></div><h2 id="重命名主机">重命名主机</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/hostname
-</code></pre></div><p>保存想要的名字后退出。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ip link show
+</span></span></code></pre></div><h2 id="重命名主机">重命名主机</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/hostname
+</span></span></code></pre></div><p>保存想要的名字后退出。</p>
 <p>接下来把主机名、域名以及ip地址进行映射</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/hosts
-</code></pre></div><p>输入：(以下<code>archlinux</code>为上文所保存的主机名)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">127.0.0.1		localhost
-::1		localhost
-127.0.0.1 archlinux.localdomain	archlinux
-</code></pre></div><h2 id="设置系统时间">设置系统时间</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">timedatectl set-timezone Asia/shanghai
-timedatectl set-ntp <span class="nb">true</span>
-</code></pre></div><p>第二行设置为让本机时间与<code>ntp</code>同步。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/hosts
+</span></span></code></pre></div><p>输入：(以下<code>archlinux</code>为上文所保存的主机名)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">127.0.0.1		localhost
+</span></span><span class="line"><span class="cl">::1		localhost
+</span></span><span class="line"><span class="cl">127.0.0.1 archlinux.localdomain	archlinux
+</span></span></code></pre></div><h2 id="设置系统时间">设置系统时间</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">timedatectl set-timezone Asia/shanghai
+</span></span><span class="line"><span class="cl">timedatectl set-ntp <span class="nb">true</span>
+</span></span></code></pre></div><p>第二行设置为让本机时间与<code>ntp</code>同步。</p>
 <h2 id="配置环境变量">配置环境变量</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/skel/.bashrc
-</code></pre></div><p>添加以下内容</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span>vim
-
-<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep ==color=auto&#39;</span>
-<span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep ==color=auto&#39;</span>
-<span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep ==color=auto&#39;</span>
-
-<span class="o">[</span> ！ -e ~/.dircolors <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="k">$(</span>dircolors -p &gt; ~/.dircolors<span class="k">)</span>
-<span class="o">[</span> ！ -e /bin/dircolors <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="k">$(</span>dircolors -b &gt; ~/.dircolors<span class="k">)</span>
-</code></pre></div><p>将<code>bash shell</code> 默认的文本编辑器设置为<code>vim</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/skel/.bashrc
+</span></span></code></pre></div><p>添加以下内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span>vim
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep ==color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep ==color=auto&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep ==color=auto&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> ！ -e ~/.dircolors <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="k">$(</span>dircolors -p &gt; ~/.dircolors<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> ！ -e /bin/dircolors <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="k">$(</span>dircolors -b &gt; ~/.dircolors<span class="k">)</span>
+</span></span></code></pre></div><p>将<code>bash shell</code> 默认的文本编辑器设置为<code>vim</code></p>
 <p>为<code>grep</code>，<code>egrep</code>，<code>fgrep</code>搜索出的内容添加颜色</p>
 <p>为看到的文件以及文件夹添加颜色</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp -a . ~
-</code></pre></div><h2 id="新建标准用户">新建标准用户</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">useradd --create-home username
-passwd username
-usermod -aG wheel,users,storage,power,lp,adm,optical username
-</code></pre></div><p>其中<code>username</code>替换为你所使用的名字，在创建时同时在<code>/home</code>目录下会创建一个与用户名同名的文件夹。家目录有一个别名是<code>~</code>，你可以在任何地方使用<code>~</code>来代替家目录路径。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cp -a . ~
+</span></span></code></pre></div><h2 id="新建标准用户">新建标准用户</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">useradd --create-home username
+</span></span><span class="line"><span class="cl">passwd username
+</span></span><span class="line"><span class="cl">usermod -aG wheel,users,storage,power,lp,adm,optical username
+</span></span></code></pre></div><p>其中<code>username</code>替换为你所使用的名字，在创建时同时在<code>/home</code>目录下会创建一个与用户名同名的文件夹。家目录有一个别名是<code>~</code>，你可以在任何地方使用<code>~</code>来代替家目录路径。</p>
 <h2 id="配置sudo">配置sudo</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">visudo
-</code></pre></div><p>将<code># %wheel ALL=(ALL) ALL</code> 前的<code>#</code>号去除（去注释），保存退出。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">visudo
+</span></span></code></pre></div><p>将<code># %wheel ALL=(ALL) ALL</code> 前的<code>#</code>号去除（去注释），保存退出。</p>
 <h2 id="中英字体和图形界面的安装">中英字体和图形界面的安装</h2>
 <h3 id="安装xorg">安装Xorg</h3>
 <p><code>Xorg</code>是<code>Linux</code>下的一个著名的开源图形服务，我们的桌面环境需要<code>Xorg</code>的支持。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S xorg
-</code></pre></div><h3 id="显卡驱动的安装">显卡驱动的安装</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S xorg
+</span></span></code></pre></div><h3 id="显卡驱动的安装">显卡驱动的安装</h3>
 <p><figure 
 	
 		class="gallery-image" 
@@ -203,33 +203,33 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
 	
 </figure></p>
 <p>参照如上表格安装相应的包，以<code>Surface Pro</code> 为例，需要安装<code>intel</code>的集成显卡驱动</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S xf86-video-intel
-</code></pre></div><h3 id="安装字体">安装字体</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/locales.gen
-</code></pre></div><p>将<code>en_US.UTF-8 UTF8</code> <code>zh_CN.UTF-8 UTF8</code>前的#删除（去注释），保存退出。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/locale.conf
-</code></pre></div><p>输入</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">LANG=en_US.UTF-8
-</code></pre></div><p>如果想生成中文，就改成<code>LANG=zh_TW.UTF-8</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S xf86-video-intel
+</span></span></code></pre></div><h3 id="安装字体">安装字体</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/locales.gen
+</span></span></code></pre></div><p>将<code>en_US.UTF-8 UTF8</code> <code>zh_CN.UTF-8 UTF8</code>前的#删除（去注释），保存退出。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/locale.conf
+</span></span></code></pre></div><p>输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">LANG=en_US.UTF-8
+</span></span></code></pre></div><p>如果想生成中文，就改成<code>LANG=zh_TW.UTF-8</code></p>
 <p>接着生成字体</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">locale-gen
-</code></pre></div><p>接下来安装英文字体</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
-</code></pre></div><p>再然后是安装中文字体</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S ttf-hanom noto-fonts noto-fonts noto-fonts-extra not-fonts-emoji noto-fonts-cjk adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts wqy-zenhei wqy-microhei
-</code></pre></div><p>打开<code>freetype2</code>字体引擎</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/profile.d/freetype2.sh
-</code></pre></div><p>将最后一行去注释后保存退出。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">locale-gen
+</span></span></code></pre></div><p>接下来安装英文字体</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
+</span></span></code></pre></div><p>再然后是安装中文字体</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S ttf-hanom noto-fonts noto-fonts noto-fonts-extra not-fonts-emoji noto-fonts-cjk adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts wqy-zenhei wqy-microhei
+</span></span></code></pre></div><p>打开<code>freetype2</code>字体引擎</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/profile.d/freetype2.sh
+</span></span></code></pre></div><p>将最后一行去注释后保存退出。</p>
 <h3 id="安装桌面环境">安装桌面环境</h3>
 <p><code>Linux</code>下有很多桌面环境如<code>Xfce</code>、<code>KDE(Plasma)</code>、<code>Gnome</code>、<code>Unity</code>、<code>Deepin</code>等等，它们的外观、操作、设计理念等各方面都有所不同，这里我们选择<code>Gnome</code>为例，进行安装。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S gnome gnome-extra gdm
-</code></pre></div><p>安装好了桌面环境包以后，我们需要安装一个图形化的桌面管理器来帮助我们登录并且选择我们使用的桌面环境，这里我使用上面的<code>gdm</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">systemctl <span class="nb">enable</span> gdm.service
-</code></pre></div><h3 id="安装声音以及打印机系统">安装声音以及打印机系统</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
-</code></pre></div><h2 id="清楚安装缓存以及无用源">清楚安装缓存以及无用源</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pacman -Scc
-</code></pre></div><p>接着重启即可进入<code>Gnome</code>桌面</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S gnome gnome-extra gdm
+</span></span></code></pre></div><p>安装好了桌面环境包以后，我们需要安装一个图形化的桌面管理器来帮助我们登录并且选择我们使用的桌面环境，这里我使用上面的<code>gdm</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> gdm.service
+</span></span></code></pre></div><h3 id="安装声音以及打印机系统">安装声音以及打印机系统</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
+</span></span></code></pre></div><h2 id="清楚安装缓存以及无用源">清楚安装缓存以及无用源</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -Scc
+</span></span></code></pre></div><p>接着重启即可进入<code>Gnome</code>桌面</p>
 <h2 id="小结">小结</h2>
 <p>至此，<code>ArchLinux</code>基本安装与必要设置和图形界面都已经安装完毕。</p>
 

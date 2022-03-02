@@ -52,7 +52,7 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
  展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。</description>
@@ -85,7 +85,7 @@ sudo modprobe vboxdrv 如果不起作用，检查下是否在BIOS/UEFI设置中�
 Linux 可以使用NTP服务来在线同步硬件时钟。
 使用 regedit,新建如下 DWORD 值，并将其值设为十六进制的 1。
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal 也可以用管理员权限启动命令行来完成：
-reg add &amp;quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
+reg add &amp;#34;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;#34; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
 参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows</description>
     </item>
     

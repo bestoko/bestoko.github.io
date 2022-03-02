@@ -369,8 +369,8 @@ if (!doNotTrack) {
 <p>VirtualBox Linux 内核驱动程序未加载或未正确设置。</p>
 <h2 id="解决办法">解决办法</h2>
 <p>执行如下命令，重新安装vboxdrv模块</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo modprobe vboxdrv
-</code></pre></div><p>如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo modprobe vboxdrv
+</span></span></code></pre></div><p>如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。</p>
 
 </section>
 

@@ -365,22 +365,22 @@ if (!doNotTrack) {
     >lunar-date</a>。</p>
 <h2 id="fedora35-编译安装lunar-date">Fedora35 编译安装lunar-date</h2>
 <p>github页给的安装指南如下</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">meson build --prefix /usr -Ddocs<span class="o">=</span><span class="nb">true</span> -Dintrospection<span class="o">=</span><span class="nb">true</span> -Dvapi<span class="o">=</span><span class="nb">true</span> -Dtests<span class="o">=</span><span class="nb">true</span>
-ninja -C build/
-sudo ninja -C build install
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">meson build --prefix /usr -Ddocs<span class="o">=</span><span class="nb">true</span> -Dintrospection<span class="o">=</span><span class="nb">true</span> -Dvapi<span class="o">=</span><span class="nb">true</span> -Dtests<span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">ninja -C build/
+</span></span><span class="line"><span class="cl">sudo ninja -C build install
+</span></span></code></pre></div><blockquote>
 <p>meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。</p>
 </blockquote>
 <p>所以首先</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo dnf install meson ninja-build
-</code></pre></div><p>接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于<code>dnf install</code>,可以在<a class="link" href="https://command-not-found.com/"  target="_blank" rel="noopener"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dnf install meson ninja-build
+</span></span></code></pre></div><p>接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于<code>dnf install</code>,可以在<a class="link" href="https://command-not-found.com/"  target="_blank" rel="noopener"
     >command-not-found.com</a> 查询所需安装指令。以我为例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo dnf install vala gtk-doc
-</code></pre></div><p>接着重新安装插件就可以正常启用了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dnf install vala gtk-doc
+</span></span></code></pre></div><p>接着重新安装插件就可以正常启用了。</p>
 <h2 id="额外可选设置">额外可选设置</h2>
 <p>默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（<strong>真的很难看</strong>），解决办法如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
-</code></pre></div><p><figure 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
+</span></span></code></pre></div><p><figure 
 	
 		class="gallery-image" 
 		style="

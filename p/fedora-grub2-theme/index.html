@@ -5,7 +5,7 @@
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
  展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'><title>Grub2主题美化踩坑记录</title>
@@ -17,7 +17,7 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'><
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
  展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'>
@@ -30,7 +30,7 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'>
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
  展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。"><meta name="twitter:card" content="summary_large_image">
@@ -385,7 +385,7 @@ if (!doNotTrack) {
 <h2 id="修改etcdefaultgrub文件">修改/etc/default/grub文件</h2>
 <p>首先，注释掉<code>GRUB_TERMINAL_OUTPUT=”console”</code>,接着设置好你的GRUB主题路径。</p>
 <pre tabindex="0"><code>#GRUB_TERMINAL_OUTPUT=”console”
-GRUB_THEME=&quot;/boot/grub2/montery-grub-theme/theme.txt&quot;
+GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
 </code></pre><blockquote>
 <p>此外这个文件里还有几个常用的设置
 <code>GRUB_TIMEOUT=5</code>   可以设置超时时间，设置-1可以取消倒计时
@@ -393,10 +393,10 @@ GRUB_THEME=&quot;/boot/grub2/montery-grub-theme/theme.txt&quot;
 </blockquote>
 <h2 id="更新grub2配置">更新Grub2配置</h2>
 <p>如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是<code>/boot/efi/EFI/fedora/grub.cfg </code>，更新命令如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-</code></pre></div><p>而如果是启动方式是Legacy的话，启动时读取的文件是<code>/boot/grub2/grub.cfg</code>，更新命令如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-</code></pre></div><p>接着<code>reboot</code>即可看到效果。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+</span></span></code></pre></div><p>而如果是启动方式是Legacy的话，启动时读取的文件是<code>/boot/grub2/grub.cfg</code>，更新命令如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span></code></pre></div><p>接着<code>reboot</code>即可看到效果。</p>
 
 </section>
 

@@ -154,15 +154,15 @@ if (!doNotTrack) {
 <p>某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.</p>
 </blockquote>
 <p>以<code>Arch Linux</code>为例安装<code>Flatpak</code>。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo pacman -S flatpak
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo pacman -S flatpak
+</span></span></code></pre></div><blockquote>
 <p>[注]如果只为了使用cfw的话，其实Arch Linux不必多次一举，<a class="link" href="https://aur.archlinux.org/packages/clash-for-windows-bin/"  target="_blank" rel="noopener"
     >AUR</a>上已经有人打包好了。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">yay -S clash-for-windows-bin 
-</code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">yay -S clash-for-windows-bin 
+</span></span></code></pre></div></blockquote>
 <p>安装<code>cfw</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">flatpak install flathub io.github.Fndroid.clash_for_windows
-</code></pre></div><h3 id="配置">配置</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">flatpak install flathub io.github.Fndroid.clash_for_windows
+</span></span></code></pre></div><h3 id="配置">配置</h3>
 <p>打开 Clash for Windows ，在左侧的标签页选择<code>Profiles</code>， 在顶部输入 <code>Clash 订阅链接</code> ，然后点击<code>Download</code>按钮。</p>
 <p>Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息<code>Success!</code>，并且可以看到一个新增的配置文件。</p>
 <p>点击新增的配置文件来切换到该配置，然后点击<code>Proxies </code>标签页来切换接入点，将顶部的出站模式选择为<code>Rule</code>。
@@ -211,9 +211,9 @@ if (!doNotTrack) {
 <p>常用的科学上网设置到此结束。</p>
 <h2 id="补充设置">补充设置</h2>
 <p>有时执行wget或curl来下载国外的东西，需要临时在终端启用代理时，可以使用如下命令</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7890
-<span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:7890
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7890
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:7890
+</span></span></code></pre></div>
 </section>
 
 

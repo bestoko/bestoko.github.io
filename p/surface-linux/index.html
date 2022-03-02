@@ -148,21 +148,21 @@ if (!doNotTrack) {
 <h2 id="安装驱动">安装驱动</h2>
 <h3 id="导入密钥">导入密钥</h3>
 <p>首先我们需要导入用于签名软件包的密钥：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc <span class="se">\
-</span><span class="se"></span>    <span class="p">|</span> sudo pacman-key --add -
-</code></pre></div><h3 id="检查完整性并本地签名">检查完整性并本地签名</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ sudo pacman-key --finger 56C464BAAC421453
-$ sudo pacman-key --lsign-key 56C464BAAC421453
-</code></pre></div><h3 id="添加存储库">添加存储库</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="p">|</span> sudo pacman-key --add -
+</span></span></code></pre></div><h3 id="检查完整性并本地签名">检查完整性并本地签名</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo pacman-key --finger 56C464BAAC421453
+</span></span><span class="line"><span class="cl">$ sudo pacman-key --lsign-key 56C464BAAC421453
+</span></span></code></pre></div><h3 id="添加存储库">添加存储库</h3>
 <p>我们需要在<code>/etc/pacman.conf</code>添加如下内容</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>linux-surface<span class="o">]</span>
-<span class="nv">Server</span> <span class="o">=</span> https://pkg.surfacelinux.com/arch/
-</code></pre></div><h3 id="更新存储库数据安装内核启用服务">更新存储库数据，安装内核，启用服务</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>linux-surface<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://pkg.surfacelinux.com/arch/
+</span></span></code></pre></div><h3 id="更新存储库数据安装内核启用服务">更新存储库数据，安装内核，启用服务</h3>
 <p>我们需要更新存储库数据，以安装<code>linux-surface</code>内核及其依赖项，接着启用<code>iptsd</code>服务以使用触摸屏。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ sudo pacman -Syu
-$ sudo pacman -S linux-surface linux-surface-headers iptsd
-$ sudo systemctl <span class="nb">enable</span> iptsd
-</code></pre></div><p>重启以后就完工了，屏幕触摸也支持了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo pacman -Syu
+</span></span><span class="line"><span class="cl">$ sudo pacman -S linux-surface linux-surface-headers iptsd
+</span></span><span class="line"><span class="cl">$ sudo systemctl <span class="nb">enable</span> iptsd
+</span></span></code></pre></div><p>重启以后就完工了，屏幕触摸也支持了。</p>
 
 </section>
 

@@ -32,15 +32,15 @@
 &lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;以&lt;code&gt;Arch Linux&lt;/code&gt;为例安装&lt;code&gt;Flatpak&lt;/code&gt;。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo pacman -S flatpak
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S flatpak
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;[注]如果只为了使用cfw的话，其实Arch Linux不必多次一举，&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/clash-for-windows-bin/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;AUR&lt;/a&gt;上已经有人打包好了。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yay -S clash-for-windows-bin 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S clash-for-windows-bin 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;安装&lt;code&gt;cfw&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;flatpak install flathub io.github.Fndroid.clash_for_windows
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flatpak install flathub io.github.Fndroid.clash_for_windows
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
 &lt;p&gt;打开 Clash for Windows ，在左侧的标签页选择&lt;code&gt;Profiles&lt;/code&gt;， 在顶部输入 &lt;code&gt;Clash 订阅链接&lt;/code&gt; ，然后点击&lt;code&gt;Download&lt;/code&gt;按钮。&lt;/p&gt;
 &lt;p&gt;Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息&lt;code&gt;Success!&lt;/code&gt;，并且可以看到一个新增的配置文件。&lt;/p&gt;
 &lt;p&gt;点击新增的配置文件来切换到该配置，然后点击&lt;code&gt;Proxies &lt;/code&gt;标签页来切换接入点，将顶部的出站模式选择为&lt;code&gt;Rule&lt;/code&gt;。
@@ -89,9 +89,9 @@
 &lt;p&gt;常用的科学上网设置到此结束。&lt;/p&gt;
 &lt;h2 id=&#34;补充设置&#34;&gt;补充设置&lt;/h2&gt;
 &lt;p&gt;有时执行wget或curl来下载国外的东西，需要临时在终端启用代理时，可以使用如下命令&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
-&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
         <title>Gnome农历插件安装踩坑记录</title>
@@ -105,22 +105,22 @@
     &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;fedora35-编译安装lunar-date&#34;&gt;Fedora35 编译安装lunar-date&lt;/h2&gt;
 &lt;p&gt;github页给的安装指南如下&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;meson build --prefix /usr -Ddocs&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dintrospection&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dvapi&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dtests&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
-ninja -C build/
-sudo ninja -C build install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;meson build --prefix /usr -Ddocs&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dintrospection&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dvapi&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dtests&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ninja -C build/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ninja -C build install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;所以首先&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo dnf install meson ninja-build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于&lt;code&gt;dnf install&lt;/code&gt;,可以在&lt;a class=&#34;link&#34; href=&#34;https://command-not-found.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install meson ninja-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于&lt;code&gt;dnf install&lt;/code&gt;,可以在&lt;a class=&#34;link&#34; href=&#34;https://command-not-found.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;command-not-found.com&lt;/a&gt; 查询所需安装指令。以我为例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo dnf install vala gtk-doc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着重新安装插件就可以正常启用了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install vala gtk-doc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着重新安装插件就可以正常启用了。&lt;/p&gt;
 &lt;h2 id=&#34;额外可选设置&#34;&gt;额外可选设置&lt;/h2&gt;
 &lt;p&gt;默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（&lt;strong&gt;真的很难看&lt;/strong&gt;），解决办法如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
 		style=&#34;
@@ -173,7 +173,7 @@ sudo ninja -C build install
 &lt;h2 id=&#34;修改etcdefaultgrub文件&#34;&gt;修改/etc/default/grub文件&lt;/h2&gt;
 &lt;p&gt;首先，注释掉&lt;code&gt;GRUB_TERMINAL_OUTPUT=”console”&lt;/code&gt;,接着设置好你的GRUB主题路径。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#GRUB_TERMINAL_OUTPUT=”console”
-GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
+GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;此外这个文件里还有几个常用的设置
 &lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;   可以设置超时时间，设置-1可以取消倒计时
@@ -181,10 +181,10 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置&lt;/h2&gt;
 &lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;而如果是启动方式是Legacy的话，启动时读取的文件是&lt;code&gt;/boot/grub2/grub.cfg&lt;/code&gt;，更新命令如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着&lt;code&gt;reboot&lt;/code&gt;即可看到效果。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;而如果是启动方式是Legacy的话，启动时读取的文件是&lt;code&gt;/boot/grub2/grub.cfg&lt;/code&gt;，更新命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着&lt;code&gt;reboot&lt;/code&gt;即可看到效果。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -220,8 +220,8 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;p&gt;VirtualBox Linux 内核驱动程序未加载或未正确设置。&lt;/p&gt;
 &lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
 &lt;p&gt;执行如下命令，重新安装vboxdrv模块&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo modprobe vboxdrv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo modprobe vboxdrv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -242,7 +242,7 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;p&gt;使用 &lt;code&gt;regedit&lt;/code&gt;,新建如下 DWORD 值，并将其值设为十六进制的 &lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;也可以用管理员权限启动命令行来完成：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;reg add &amp;quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;reg add &amp;#34;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;#34; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 &lt;code&gt;DWORD&lt;/code&gt; 修改为 &lt;code&gt;QWORD&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows&lt;/p&gt;
 </description>
@@ -265,12 +265,12 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;h3 id=&#34;安装snap软件包&#34;&gt;安装Snap软件包&lt;/h3&gt;
 &lt;p&gt;首先，赞美&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/snapd/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;AUR&lt;/a&gt;，&lt;code&gt;snapd&lt;/code&gt;及其依赖包&lt;code&gt;snap-confine&lt;/code&gt;和&lt;code&gt;squashfs-tools&lt;/code&gt;都在仓库里了。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo pacman -S snapd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;启动守护进程&#34;&gt;启动守护进程&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --now snapd.socket
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;启用classic-snap-support&#34;&gt;启用classic snap support&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo ln -s /var/lib/snapd/snap /snap
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着&lt;code&gt;log out&lt;/code&gt;或者&lt;code&gt;reboot&lt;/code&gt;一下来确保&lt;code&gt;snap&lt;/code&gt;的路径正确更新。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S snapd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;启动守护进程&#34;&gt;启动守护进程&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --now snapd.socket
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;启用classic-snap-support&#34;&gt;启用classic snap support&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ln -s /var/lib/snapd/snap /snap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着&lt;code&gt;log out&lt;/code&gt;或者&lt;code&gt;reboot&lt;/code&gt;一下来确保&lt;code&gt;snap&lt;/code&gt;的路径正确更新。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Strict&lt;/p&gt;
 &lt;p&gt;Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).&lt;/p&gt;
@@ -280,12 +280,12 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;p&gt;以上是&lt;code&gt;Snap&lt;/code&gt;官方给出的定义，&lt;code&gt;classic&lt;/code&gt;是与&lt;code&gt;strict&lt;/code&gt;相对的。在默认情况下，&lt;code&gt;Snap&lt;/code&gt;使用的是&lt;code&gt;strict&lt;/code&gt;模式，对安全权限做了极高的要求与限制，而&lt;code&gt;classic&lt;/code&gt;就和传统的安装包一样对安全权限没有限制，其实这里的&lt;code&gt;classic&lt;/code&gt;就约等于确认已知不安全的风险的含义。&lt;/p&gt;
 &lt;h2 id=&#34;安装microsoft-to-dounofficial&#34;&gt;安装MicroSoft To-Do(unofficial)&lt;/h2&gt;
 &lt;p&gt;安装并配置好&lt;code&gt;snap&lt;/code&gt;后就很简单了：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo snap install micro-soft-todo-unofficial
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日后更新：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo snap refresh micro-soft-todo-unofficial
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果要卸载：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo snap remove micro-soft-todo-unofficial
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install micro-soft-todo-unofficial
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日后更新：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap refresh micro-soft-todo-unofficial
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果要卸载：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap remove micro-soft-todo-unofficial
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
         <title>Arch Linux上修改Code-OSS扩展源</title>
@@ -297,20 +297,20 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我之前使用&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所安装的正是Code-OSS ，默认不使用微软官方扩展市场。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S code
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所安装的正是Code-OSS ，默认不使用微软官方扩展市场。&lt;/p&gt;
 &lt;h2 id=&#34;方法一&#34;&gt;方法一&lt;/h2&gt;
 &lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;extensionsGallery&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;s2&#34;&gt;&amp;#34;serviceUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;&lt;/span&gt;,
-      &lt;span class=&#34;s2&#34;&gt;&amp;#34;cacheUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;&lt;/span&gt;,
-      &lt;span class=&#34;s2&#34;&gt;&amp;#34;itemUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/items&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新启动&lt;code&gt;Code-OSS&lt;/code&gt;就可以了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;extensionsGallery&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s2&#34;&gt;&amp;#34;serviceUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s2&#34;&gt;&amp;#34;cacheUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s2&#34;&gt;&amp;#34;itemUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/items&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重新启动&lt;code&gt;Code-OSS&lt;/code&gt;就可以了。&lt;/p&gt;
 &lt;h2 id=&#34;方法二&#34;&gt;方法二&lt;/h2&gt;
 &lt;p&gt;方法一正常使用一段时间后，在某次重启后出现打不开&lt;code&gt;Code-OSS&lt;/code&gt;的情况，所幸从&lt;code&gt;AUR&lt;/code&gt;上找到了另一个包解决了问题，记录在此。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yay -S code-marketplace
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S code-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
@@ -324,21 +324,21 @@ GRUB_THEME=&amp;quot;/boot/grub2/montery-grub-theme/theme.txt&amp;quot;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动&lt;/h2&gt;
 &lt;h3 id=&#34;导入密钥&#34;&gt;导入密钥&lt;/h3&gt;
 &lt;p&gt;首先我们需要导入用于签名软件包的密钥：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo pacman-key --add -
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;检查完整性并本地签名&#34;&gt;检查完整性并本地签名&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo pacman-key --finger 56C464BAAC421453
-$ sudo pacman-key --lsign-key 56C464BAAC421453
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加存储库&#34;&gt;添加存储库&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo pacman-key --add -
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;检查完整性并本地签名&#34;&gt;检查完整性并本地签名&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman-key --finger 56C464BAAC421453
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman-key --lsign-key 56C464BAAC421453
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;添加存储库&#34;&gt;添加存储库&lt;/h3&gt;
 &lt;p&gt;我们需要在&lt;code&gt;/etc/pacman.conf&lt;/code&gt;添加如下内容&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;linux-surface&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;Server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; https://pkg.surfacelinux.com/arch/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;更新存储库数据安装内核启用服务&#34;&gt;更新存储库数据，安装内核，启用服务&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;linux-surface&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; https://pkg.surfacelinux.com/arch/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;更新存储库数据安装内核启用服务&#34;&gt;更新存储库数据，安装内核，启用服务&lt;/h3&gt;
 &lt;p&gt;我们需要更新存储库数据，以安装&lt;code&gt;linux-surface&lt;/code&gt;内核及其依赖项，接着启用&lt;code&gt;iptsd&lt;/code&gt;服务以使用触摸屏。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo pacman -Syu
-$ sudo pacman -S linux-surface linux-surface-headers iptsd
-$ sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; iptsd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启以后就完工了，屏幕触摸也支持了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman -S linux-surface linux-surface-headers iptsd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; iptsd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启以后就完工了，屏幕触摸也支持了。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -351,53 +351,53 @@ $ sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; iptsd
 &lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
 &lt;h2 id=&#34;配置网络&#34;&gt;配置网络&lt;/h2&gt;
 &lt;p&gt;我们使用&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;nmtui
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;选择&lt;code&gt;Edit a connection&lt;/code&gt;，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nmtui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;选择&lt;code&gt;Edit a connection&lt;/code&gt;，&lt;/p&gt;
 &lt;p&gt;选择&lt;code&gt;Add&lt;/code&gt;菜单，选择&lt;code&gt;WI-FI&lt;/code&gt;，&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Device&lt;/code&gt; 里输入 无线网卡的名字，&lt;code&gt;SSID&lt;/code&gt;里输入&lt;code&gt;WI-FI&lt;/code&gt;的名字，&lt;code&gt;Security&lt;/code&gt;选择&lt;code&gt;WPA &amp;amp;WPA2 Personal&lt;/code&gt;，OK-BACK-Quit退出。&lt;/p&gt;
 &lt;p&gt;注：使用以下命令查看无线网卡名称&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;ip link show
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;重命名主机&#34;&gt;重命名主机&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/hostname
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存想要的名字后退出。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip link show
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;重命名主机&#34;&gt;重命名主机&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/hostname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存想要的名字后退出。&lt;/p&gt;
 &lt;p&gt;接下来把主机名、域名以及ip地址进行映射&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/hosts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入：(以下&lt;code&gt;archlinux&lt;/code&gt;为上文所保存的主机名)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;127.0.0.1		localhost
-::1		localhost
-127.0.0.1 archlinux.localdomain	archlinux
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置系统时间&#34;&gt;设置系统时间&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;timedatectl set-timezone Asia/shanghai
-timedatectl set-ntp &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第二行设置为让本机时间与&lt;code&gt;ntp&lt;/code&gt;同步。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/hosts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入：(以下&lt;code&gt;archlinux&lt;/code&gt;为上文所保存的主机名)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1		localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;::1		localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1 archlinux.localdomain	archlinux
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;设置系统时间&#34;&gt;设置系统时间&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timedatectl set-timezone Asia/shanghai
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timedatectl set-ntp &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第二行设置为让本机时间与&lt;code&gt;ntp&lt;/code&gt;同步。&lt;/p&gt;
 &lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/skel/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加以下内容&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;EDITOR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;vim
-
-&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;grep ==color=auto&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;egrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;egrep ==color=auto&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;fgrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fgrep ==color=auto&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e ~/.dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -p &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e /bin/dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -b &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;bash shell&lt;/code&gt; 默认的文本编辑器设置为&lt;code&gt;vim&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/skel/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加以下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;EDITOR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;vim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;grep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;egrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;egrep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;fgrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fgrep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e ~/.dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -p &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e /bin/dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -b &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;bash shell&lt;/code&gt; 默认的文本编辑器设置为&lt;code&gt;vim&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;为&lt;code&gt;grep&lt;/code&gt;，&lt;code&gt;egrep&lt;/code&gt;，&lt;code&gt;fgrep&lt;/code&gt;搜索出的内容添加颜色&lt;/p&gt;
 &lt;p&gt;为看到的文件以及文件夹添加颜色&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cp -a . ~
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建标准用户&#34;&gt;新建标准用户&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;useradd --create-home username
-passwd username
-usermod -aG wheel,users,storage,power,lp,adm,optical username
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;username&lt;/code&gt;替换为你所使用的名字，在创建时同时在&lt;code&gt;/home&lt;/code&gt;目录下会创建一个与用户名同名的文件夹。家目录有一个别名是&lt;code&gt;~&lt;/code&gt;，你可以在任何地方使用&lt;code&gt;~&lt;/code&gt;来代替家目录路径。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -a . ~
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;新建标准用户&#34;&gt;新建标准用户&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;useradd --create-home username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usermod -aG wheel,users,storage,power,lp,adm,optical username
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;username&lt;/code&gt;替换为你所使用的名字，在创建时同时在&lt;code&gt;/home&lt;/code&gt;目录下会创建一个与用户名同名的文件夹。家目录有一个别名是&lt;code&gt;~&lt;/code&gt;，你可以在任何地方使用&lt;code&gt;~&lt;/code&gt;来代替家目录路径。&lt;/p&gt;
 &lt;h2 id=&#34;配置sudo&#34;&gt;配置sudo&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;visudo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;# %wheel ALL=(ALL) ALL&lt;/code&gt; 前的&lt;code&gt;#&lt;/code&gt;号去除（去注释），保存退出。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;visudo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;# %wheel ALL=(ALL) ALL&lt;/code&gt; 前的&lt;code&gt;#&lt;/code&gt;号去除（去注释），保存退出。&lt;/p&gt;
 &lt;h2 id=&#34;中英字体和图形界面的安装&#34;&gt;中英字体和图形界面的安装&lt;/h2&gt;
 &lt;h3 id=&#34;安装xorg&#34;&gt;安装Xorg&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;Xorg&lt;/code&gt;是&lt;code&gt;Linux&lt;/code&gt;下的一个著名的开源图形服务，我们的桌面环境需要&lt;code&gt;Xorg&lt;/code&gt;的支持。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S xorg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S xorg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
@@ -416,33 +416,33 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;参照如上表格安装相应的包，以&lt;code&gt;Surface Pro&lt;/code&gt; 为例，需要安装&lt;code&gt;intel&lt;/code&gt;的集成显卡驱动&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S xf86-video-intel
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装字体&#34;&gt;安装字体&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/locales.gen
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;en_US.UTF-8 UTF8&lt;/code&gt; &lt;code&gt;zh_CN.UTF-8 UTF8&lt;/code&gt;前的#删除（去注释），保存退出。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/locale.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;LANG=en_US.UTF-8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想生成中文，就改成&lt;code&gt;LANG=zh_TW.UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S xf86-video-intel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装字体&#34;&gt;安装字体&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/locales.gen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;en_US.UTF-8 UTF8&lt;/code&gt; &lt;code&gt;zh_CN.UTF-8 UTF8&lt;/code&gt;前的#删除（去注释），保存退出。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/locale.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LANG=en_US.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想生成中文，就改成&lt;code&gt;LANG=zh_TW.UTF-8&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;接着生成字体&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;locale-gen
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来安装英文字体&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再然后是安装中文字体&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S ttf-hanom noto-fonts noto-fonts noto-fonts-extra not-fonts-emoji noto-fonts-cjk adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts wqy-zenhei wqy-microhei
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开&lt;code&gt;freetype2&lt;/code&gt;字体引擎&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/profile.d/freetype2.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将最后一行去注释后保存退出。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;locale-gen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来安装英文字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再然后是安装中文字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S ttf-hanom noto-fonts noto-fonts noto-fonts-extra not-fonts-emoji noto-fonts-cjk adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts wqy-zenhei wqy-microhei
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开&lt;code&gt;freetype2&lt;/code&gt;字体引擎&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/profile.d/freetype2.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将最后一行去注释后保存退出。&lt;/p&gt;
 &lt;h3 id=&#34;安装桌面环境&#34;&gt;安装桌面环境&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;下有很多桌面环境如&lt;code&gt;Xfce&lt;/code&gt;、&lt;code&gt;KDE(Plasma)&lt;/code&gt;、&lt;code&gt;Gnome&lt;/code&gt;、&lt;code&gt;Unity&lt;/code&gt;、&lt;code&gt;Deepin&lt;/code&gt;等等，它们的外观、操作、设计理念等各方面都有所不同，这里我们选择&lt;code&gt;Gnome&lt;/code&gt;为例，进行安装。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S gnome gnome-extra gdm
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装好了桌面环境包以后，我们需要安装一个图形化的桌面管理器来帮助我们登录并且选择我们使用的桌面环境，这里我使用上面的&lt;code&gt;gdm&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; gdm.service
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装声音以及打印机系统&#34;&gt;安装声音以及打印机系统&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;清楚安装缓存以及无用源&#34;&gt;清楚安装缓存以及无用源&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacman -Scc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着重启即可进入&lt;code&gt;Gnome&lt;/code&gt;桌面&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S gnome gnome-extra gdm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装好了桌面环境包以后，我们需要安装一个图形化的桌面管理器来帮助我们登录并且选择我们使用的桌面环境，这里我使用上面的&lt;code&gt;gdm&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; gdm.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装声音以及打印机系统&#34;&gt;安装声音以及打印机系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;清楚安装缓存以及无用源&#34;&gt;清楚安装缓存以及无用源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -Scc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着重启即可进入&lt;code&gt;Gnome&lt;/code&gt;桌面&lt;/p&gt;
 &lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
 &lt;p&gt;至此，&lt;code&gt;ArchLinux&lt;/code&gt;基本安装与必要设置和图形界面都已经安装完毕。&lt;/p&gt;
 </description>
@@ -472,59 +472,59 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
 &lt;h3 id=&#34;网络连接&#34;&gt;*网络连接&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;Arch&lt;/code&gt;的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。&lt;/p&gt;
 &lt;p&gt;输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;iwctl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;进入&lt;code&gt;iwd&lt;/code&gt;模式，输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;device list
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看你的网卡名字，这里假设是&lt;code&gt;wlan0&lt;/code&gt;，输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;station wlan0 scan
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;检查扫描网络，输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;station wlan0 get-networks
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看网络名字，假设名字叫&lt;code&gt;XXX&lt;/code&gt;，输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;station wlan0 connect XXX
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着输入密码（如果有密码的话），输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;退出iwd模式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iwctl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;进入&lt;code&gt;iwd&lt;/code&gt;模式，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;device list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看你的网卡名字，这里假设是&lt;code&gt;wlan0&lt;/code&gt;，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;station wlan0 scan
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;检查扫描网络，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;station wlan0 get-networks
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看网络名字，假设名字叫&lt;code&gt;XXX&lt;/code&gt;，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;station wlan0 connect XXX
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接着输入密码（如果有密码的话），输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;退出iwd模式&lt;/p&gt;
 &lt;p&gt;我们可以用&lt;code&gt;ping&lt;/code&gt;命令来检验下是否连接成功&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;ping -c &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; baidu.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;reflector --country China --age &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; --sort rate --portocol https --save /etc/pacman.d/mirrorlist
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping -c &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; baidu.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reflector --country China --age &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; --sort rate --portocol https --save /etc/pacman.d/mirrorlist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;country 限定国家&lt;/li&gt;
 &lt;li&gt;age 24 限定下更新时间为24小时内的源&lt;/li&gt;
 &lt;li&gt;portocol https 选择https协议更安全&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;执行完毕后，可以用vim查看&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/pacman.d/mirrorlist
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/pacman.d/mirrorlist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区&lt;/h3&gt;
 &lt;p&gt;检查磁盘&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;lsblk
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;用gdisk命令进行分区&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;gdisk  /dev/nvme0n1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中nvme01 为你之前准备的磁盘。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lsblk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;用gdisk命令进行分区&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gdisk  /dev/nvme0n1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中nvme01 为你之前准备的磁盘。&lt;/p&gt;
 &lt;p&gt;一路默认回车到Last sector 部分，因为我们准备用作启动分区，准备分配512M，所以输入+512M回车，接着输入分区编号ef00。这样第一个分区完成，接着第二个分区笔者分配了+235G，并使用默认的分区编号8300（Linux filesystem），最后剩下2G左右空间一路默认，分区编号输入8200（Linux swap）。确认无误后，w保存quit退出。&lt;/p&gt;
 &lt;p&gt;接着格式化我们的三个分区，将nvme01p1格式化为vfat&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mkfs.vfat /dev/nvme01p1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将nvme01p2格式化为ext4或者xfs（推荐）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mkfs.xfs /dev/nvme01p2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mkswap /dev/nvme01p3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;挂载分区&#34;&gt;挂载分区&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mount /dev/nvme01p2 /mnt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mkdir -p /mnt/boot/efi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mount /dev/nvme01p1 /mnt/boot/efi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;swapon /dev/nvme01p3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装基本包&#34;&gt;安装基本包&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;配置fstab&#34;&gt;配置Fstab&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cat /mnt/etc/fstab
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;确认下是否挂载无误&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfs.vfat /dev/nvme01p1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将nvme01p2格式化为ext4或者xfs（推荐）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfs.xfs /dev/nvme01p2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkswap /dev/nvme01p3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;挂载分区&#34;&gt;挂载分区&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/nvme01p2 /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p /mnt/boot/efi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/nvme01p1 /mnt/boot/efi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;swapon /dev/nvme01p3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装基本包&#34;&gt;安装基本包&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;配置fstab&#34;&gt;配置Fstab&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /mnt/etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;确认下是否挂载无误&lt;/p&gt;
 &lt;h4 id=&#34;chroot&#34;&gt;chroot&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;arch-chroot /mnt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装必须软件包&#34;&gt;安装必须软件包&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arch-chroot /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装必须软件包&#34;&gt;安装必须软件包&lt;/h4&gt;
 &lt;p&gt;现在我们已经&lt;code&gt;Chroot&lt;/code&gt;到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。&lt;code&gt;ArchLinux&lt;/code&gt;有非常强大的包管理工具&lt;code&gt;pacman&lt;/code&gt;，大部分情况下，一行命令就可以搞定包与依赖的问题。&lt;/p&gt;
 &lt;p&gt;安装包的命令格式为&lt;code&gt;pacman -S 包名&lt;/code&gt;，&lt;code&gt;pacman&lt;/code&gt;会自动检查这个包所需要的其他包（即为依赖）并一起装上。下面我们就通过&lt;code&gt;pacman&lt;/code&gt;来安装一些包，这些包在之后会用上，在这里先提前装好。&lt;/p&gt;
 &lt;p&gt;执行如下命令（注意大小写，大小写错误会导致包无法找到）：&lt;/p&gt;
@@ -534,22 +534,22 @@ usermod -aG wheel,users,storage,power,lp,adm,optical username
 &lt;p&gt;部署&lt;code&gt;grub&lt;/code&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;grub-install /dev/nvme01 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;修改配置&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vim /etc/default/grub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;改成&lt;code&gt;GRUB_TIMEOUT=2&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/default/grub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将&lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;改成&lt;code&gt;GRUB_TIMEOUT=2&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;将&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;loglevel=3 quiet&amp;quot;&lt;/code&gt; 的&lt;code&gt;quiet&lt;/code&gt;字段删除，这样登录的时候会有日志，如果出现错误可以查看日志文件。&lt;/p&gt;
 &lt;p&gt;接着将&lt;code&gt;GRUB_GFXMODE=auto&lt;/code&gt;修改为你的分辨率，以我的surface为例，改为&lt;code&gt;GRUB_GFXMODE=2736x1824&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;接着生成grub的配置文件&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;grub-mkconfig -o /boot/grub/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;设置networkmanager开机自动启动&#34;&gt;设置NetworkManager开机自动启动&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; NetworkManager
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;为root用户设置密码&#34;&gt;为root用户设置密码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;passwd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;卸载分区-拔除介质&#34;&gt;卸载分区 拔除介质&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;umount /mnt/boot/efi
-umount /mnt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;拔除介质重新启动&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;reboot
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;设置networkmanager开机自动启动&#34;&gt;设置NetworkManager开机自动启动&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; NetworkManager
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;为root用户设置密码&#34;&gt;为root用户设置密码&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;卸载分区-拔除介质&#34;&gt;卸载分区 拔除介质&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /mnt/boot/efi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;拔除介质重新启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reboot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
 &lt;p&gt;至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&amp;hellip;.以及一些实用软件包。&lt;/p&gt;
 </description>
         </item>
@@ -880,60 +880,59 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;C2 = 0 &lt;/code&gt;—— 数组2整体在右边了，所以都比中值大，中值在数组1中 ，简单的说就是数组2割后的左边是空了，所以我们可以假定&lt;code&gt;LMax2 = INT_MIN&lt;/code&gt;
 &lt;code&gt;C2 = 2m &lt;/code&gt;—— 数组2整体在左边了，所以都比中值小，中值在数组1中, 简单的说就是数组2割后的右边是空了，为了让&lt;code&gt;LMax1 &amp;lt; RMin2 &lt;/code&gt;恒成立，我们可以假定&lt;code&gt;RMin2 = INT_MAX&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-&lt;span class=&#34;cp&#34;&gt;#define max(a,b) (((a) &amp;gt; (b)) ? (a) : (b))
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#define min(a,b) (((a) &amp;lt; (b)) ? (a) : (b))
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-	&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findMedianSortedArrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-		&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-		&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-
-		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//保证数组1一定最短
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-			&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;findMedianSortedArrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-	
-		&lt;span class=&#34;c1&#34;&gt;// Ci 为第i个数组的割,比如C1为2时表示第1个数组只有2个元素。LMaxi为第i个数组割后的左元素。RMini为第i个数组割后的右元素。
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//我们目前是虚拟加了&amp;#39;#&amp;#39;所以数组1是2*n长度
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	
-		&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;//二分
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-			&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//c1是二分的结果
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;			&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-	
-			&lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MIN&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-			&lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MAX&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-			&lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MIN&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-			&lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MAX&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-	
-			&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-				&lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-			&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-				&lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-			&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-				&lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-
-
-&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-	&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
-	
-	&lt;span class=&#34;n&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-	&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findMedianSortedArrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#define max(a,b) (((a) &amp;gt; (b)) ? (a) : (b))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#define min(a,b) (((a) &amp;lt; (b)) ? (a) : (b))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findMedianSortedArrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//保证数组1一定最短
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;findMedianSortedArrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;c1&#34;&gt;// Ci 为第i个数组的割,比如C1为2时表示第1个数组只有2个元素。LMaxi为第i个数组割后的左元素。RMini为第i个数组割后的右元素。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//我们目前是虚拟加了&amp;#39;#&amp;#39;所以数组1是2*n长度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;//二分
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;//c1是二分的结果
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;			&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MIN&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MAX&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MIN&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;INT_MAX&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;n&#34;&gt;hi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;n&#34;&gt;lo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LMax1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LMax2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RMin1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RMin2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findMedianSortedArrays&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
         <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
@@ -1139,83 +1138,83 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id=&#34;常用指令&#34;&gt;常用指令&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git init  &lt;span class=&#34;c1&#34;&gt;# 在当前目录新建一个 Git 代码库&lt;/span&gt;
-$ git clone &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 下载一个项目和它的整个代码历史&lt;/span&gt;
-$ git config --list &lt;span class=&#34;c1&#34;&gt;# 显示当前的 Git 配置&lt;/span&gt;
-$ git config -e &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;--global&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 编辑 Git 配置文件&lt;/span&gt;
-$ git add  &lt;span class=&#34;c1&#34;&gt;# 添加指定文件到暂存区&lt;/span&gt;
-$ git rm   &lt;span class=&#34;c1&#34;&gt;# 删除工作区文件，并且将这次删除放入暂存区&lt;/span&gt;
-$ git commit -m &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;message&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 提交暂存区到仓库区&lt;/span&gt;
-$ git commit -a &lt;span class=&#34;c1&#34;&gt;# 提交工作区自上次 commit 之后的变化，直接到仓库区&lt;/span&gt;
-$ git commit --amend -m &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;message&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# 使用一次新的 commit，替代上一次提交 如果代码没有任何新变化，则用来改写上一次 commit 的提交信息&lt;/span&gt;
-$ git commit --amend &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; ...  &lt;span class=&#34;c1&#34;&gt;# 重做上一次 commit，并包括指定文件的新变化&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# 分支相关&lt;/span&gt;
-$ git branch  &lt;span class=&#34;c1&#34;&gt;# 列出所有本地分支&lt;/span&gt;
-$ git branch -r  &lt;span class=&#34;c1&#34;&gt;# 列出所有远程分支&lt;/span&gt;
-$ git branch &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，但依然停留在当前分支&lt;/span&gt;
-$ git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 切换到指定分支，并更新工作区&lt;/span&gt;
-$ git checkout -b &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，并切换到该分支&lt;/span&gt;
-$ git branch &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，指向指定 commit&lt;/span&gt;
-$ git checkout -b &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，指向某个 tag&lt;/span&gt;
-$ git branch --track &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，与指定的远程分支建立追踪关系&lt;/span&gt;
-$ git branch --set-upstream &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 建立追踪关系，在现有分支与指定的远程分支之间&lt;/span&gt;
-$ git merge &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 合并指定分支到当前分支&lt;/span&gt;
-$ git cherry-pick &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 选择一个 commit，合并进当前分支&lt;/span&gt;
-$ git branch -d &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 删除分支&lt;/span&gt;
-$ git push origin --delete &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 删除远程分支&lt;/span&gt;
-$ git branch -dr &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote/branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 删除远程分支&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# 标签&lt;/span&gt;
-$ git tag  &lt;span class=&#34;c1&#34;&gt;# 列出所有 tag&lt;/span&gt;
-$ git tag &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 tag 在当前 commit&lt;/span&gt;
-$ git tag &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 tag 在指定 commit&lt;/span&gt;
-$ git show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 查看 tag 信息&lt;/span&gt;
-$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 提交指定 tag&lt;/span&gt;
-$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --tags   &lt;span class=&#34;c1&#34;&gt;# 提交所有 tag&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# 查看&lt;/span&gt;
-$ git status &lt;span class=&#34;c1&#34;&gt;# 显示有变更的文件&lt;/span&gt;
-$ git log &lt;span class=&#34;c1&#34;&gt;# 显示当前分支的版本历史&lt;/span&gt;
-$ git log --stat &lt;span class=&#34;c1&#34;&gt;# 显示 commit 历史，以及每次 commit 发生变更的文件&lt;/span&gt;
-$ git log --follow &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某个文件的版本历史，包括文件改名&lt;/span&gt;
-$ git log -p &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示指定文件相关的每一次 diff&lt;/span&gt;
-$ git blame &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示指定文件是什么人在什么时间修改过&lt;/span&gt;
-$ git diff &lt;span class=&#34;c1&#34;&gt;# 显示暂存区和工作区的差异&lt;/span&gt;
-$ git diff --cached &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示暂存区和上一个 commit 的差异&lt;/span&gt;
-$ git diff HEAD &lt;span class=&#34;c1&#34;&gt;# 显示工作区与当前分支最新 commit 之间的差异&lt;/span&gt;
-$ git diff &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;first-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;...&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;second-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示两次提交之间的差异&lt;/span&gt;
-$ git show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某次提交的元数据和内容变化&lt;/span&gt;
-$ git show --name-only &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某次提交发生变化的文件&lt;/span&gt;
-$ git show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;filename&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某次提交时，某个文件的内容&lt;/span&gt;
-$ git reflog &lt;span class=&#34;c1&#34;&gt;# 显示当前分支的最近几次提交&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# 远程&lt;/span&gt;
-$ git fetch &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 下载远程仓库的所有变动&lt;/span&gt;
-$ git remote -v  &lt;span class=&#34;c1&#34;&gt;# 显示所有远程仓库&lt;/span&gt;
-$ git remote show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 显示某个远程仓库的信息&lt;/span&gt;
-$ git remote add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;shortname&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 增加一个新的远程仓库，并命名&lt;/span&gt;
-$ git pull &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 取回远程仓库的变化，并与本地分支合并&lt;/span&gt;
-$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 上传本地指定分支到远程仓库&lt;/span&gt;
-$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --force &lt;span class=&#34;c1&#34;&gt;# 强行推送当前分支到远程仓库，即使有冲突&lt;/span&gt;
-$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --all &lt;span class=&#34;c1&#34;&gt;# 推送所有分支到远程仓库&lt;/span&gt;
-
-
-&lt;span class=&#34;c1&#34;&gt;# 撤销&lt;/span&gt;
-$ git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 恢复暂存区的指定文件到工作区&lt;/span&gt;
-$ git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 恢复某个 commit 的指定文件到工作区&lt;/span&gt;
-$ git checkout . &lt;span class=&#34;c1&#34;&gt;# 恢复上一个 commit 的所有文件到工作区&lt;/span&gt;
-$ git reset &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置暂存区的指定文件，与上一次 commit 保持一致，但工作区不变&lt;/span&gt;
-$ git reset --hard &lt;span class=&#34;c1&#34;&gt;# 重置暂存区与工作区，与上一次 commit 保持一致&lt;/span&gt;
-$ git reset &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置当前分支的指针为指定 commit，同时重置暂存区，但工作区不变&lt;/span&gt;
-$ git reset --hard &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置当前分支的 HEAD 为指定 commit，同时重置暂存区和工作区，与指定 commit 一致&lt;/span&gt;
-$ git reset --keep &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置当前 HEAD 为指定 commit，但保持暂存区和工作区不变&lt;/span&gt;
-$ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 commit，用来撤销指定 commit，后者的所有变化都将被前者抵消，并且应用到当前分支&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;学习资源&#34;&gt;学习资源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git init  &lt;span class=&#34;c1&#34;&gt;# 在当前目录新建一个 Git 代码库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 下载一个项目和它的整个代码历史&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git config --list &lt;span class=&#34;c1&#34;&gt;# 显示当前的 Git 配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git config -e &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;--global&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 编辑 Git 配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add  &lt;span class=&#34;c1&#34;&gt;# 添加指定文件到暂存区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git rm   &lt;span class=&#34;c1&#34;&gt;# 删除工作区文件，并且将这次删除放入暂存区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;message&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 提交暂存区到仓库区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -a &lt;span class=&#34;c1&#34;&gt;# 提交工作区自上次 commit 之后的变化，直接到仓库区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit --amend -m &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;message&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# 使用一次新的 commit，替代上一次提交 如果代码没有任何新变化，则用来改写上一次 commit 的提交信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit --amend &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file1&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; ...  &lt;span class=&#34;c1&#34;&gt;# 重做上一次 commit，并包括指定文件的新变化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 分支相关&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch  &lt;span class=&#34;c1&#34;&gt;# 列出所有本地分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch -r  &lt;span class=&#34;c1&#34;&gt;# 列出所有远程分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，但依然停留在当前分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 切换到指定分支，并更新工作区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git checkout -b &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，并切换到该分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，指向指定 commit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git checkout -b &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，指向某个 tag&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch --track &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 新建一个分支，与指定的远程分支建立追踪关系&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch --set-upstream &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 建立追踪关系，在现有分支与指定的远程分支之间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git merge &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 合并指定分支到当前分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git cherry-pick &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 选择一个 commit，合并进当前分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch -d &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 删除分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push origin --delete &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch-name&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 删除远程分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch -dr &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote/branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 删除远程分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git tag  &lt;span class=&#34;c1&#34;&gt;# 列出所有 tag&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git tag &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 tag 在当前 commit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git tag &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 tag 在指定 commit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 查看 tag 信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;tag&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 提交指定 tag&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --tags   &lt;span class=&#34;c1&#34;&gt;# 提交所有 tag&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git status &lt;span class=&#34;c1&#34;&gt;# 显示有变更的文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git log &lt;span class=&#34;c1&#34;&gt;# 显示当前分支的版本历史&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git log --stat &lt;span class=&#34;c1&#34;&gt;# 显示 commit 历史，以及每次 commit 发生变更的文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git log --follow &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某个文件的版本历史，包括文件改名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git log -p &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示指定文件相关的每一次 diff&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git blame &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示指定文件是什么人在什么时间修改过&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git diff &lt;span class=&#34;c1&#34;&gt;# 显示暂存区和工作区的差异&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git diff --cached &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示暂存区和上一个 commit 的差异&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git diff HEAD &lt;span class=&#34;c1&#34;&gt;# 显示工作区与当前分支最新 commit 之间的差异&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git diff &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;first-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;...&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;second-branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示两次提交之间的差异&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某次提交的元数据和内容变化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git show --name-only &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某次提交发生变化的文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;filename&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 显示某次提交时，某个文件的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git reflog &lt;span class=&#34;c1&#34;&gt;# 显示当前分支的最近几次提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 远程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git fetch &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 下载远程仓库的所有变动&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git remote -v  &lt;span class=&#34;c1&#34;&gt;# 显示所有远程仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git remote show &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 显示某个远程仓库的信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git remote add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;shortname&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;url&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 增加一个新的远程仓库，并命名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git pull &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 取回远程仓库的变化，并与本地分支合并&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;branch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 上传本地指定分支到远程仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --force &lt;span class=&#34;c1&#34;&gt;# 强行推送当前分支到远程仓库，即使有冲突&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; --all &lt;span class=&#34;c1&#34;&gt;# 推送所有分支到远程仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 撤销&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 恢复暂存区的指定文件到工作区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 恢复某个 commit 的指定文件到工作区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git checkout . &lt;span class=&#34;c1&#34;&gt;# 恢复上一个 commit 的所有文件到工作区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git reset &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置暂存区的指定文件，与上一次 commit 保持一致，但工作区不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git reset --hard &lt;span class=&#34;c1&#34;&gt;# 重置暂存区与工作区，与上一次 commit 保持一致&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git reset &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置当前分支的指针为指定 commit，同时重置暂存区，但工作区不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git reset --hard &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置当前分支的 HEAD 为指定 commit，同时重置暂存区和工作区，与指定 commit 一致&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git reset --keep &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 重置当前 HEAD 为指定 commit，但保持暂存区和工作区不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 commit，用来撤销指定 commit，后者的所有变化都将被前者抵消，并且应用到当前分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;学习资源&#34;&gt;学习资源&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://rogerdudler.github.io/git-guide/index.zh.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;git - 简明指南&lt;/a&gt;&lt;/li&gt;
@@ -1242,92 +1241,91 @@ $ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#
 &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;~~删除线~~
-&lt;span class=&#34;ge&#34;&gt;*斜体*&lt;/span&gt;
-&lt;span class=&#34;ge&#34;&gt;_斜体第二种方法_&lt;/span&gt;
-
-&lt;span class=&#34;gs&#34;&gt;**加粗**&lt;/span&gt;
-&lt;span class=&#34;gs&#34;&gt;__加粗的第二种方法__&lt;/span&gt;
-
-
-&lt;span class=&#34;gs&#34;&gt;___粗斜体___&lt;/span&gt;
-
-
-两个enter是换行，或者用&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;标签表示换行
-
-
-用一行的=或者-表示一级标题和二级标题。如：
-一级标题
-=======
-二级标题
---------
-
-
-也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如：
-&lt;span class=&#34;gh&#34;&gt;# 一级标题
-&lt;/span&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;## 二级标题
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;### 三级标题
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;#### 四级标题
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;##### 五级标题
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;###### 六级标题
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
-
-无序列表：在前面加上 * 或者 + 或者 - 然后加个空格：
-&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; ABC
-&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; DEF
-&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; GHI
-
-+ JKL
-+ MNO
-+ PQR
-
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; STU
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; VWX
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; YZZ
-
-
-有序列表：数字+英文句点+空格。如下：
-&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 呵呵
-&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 哈哈
-&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 嘿嘿
-&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; 哼哼
-
-&lt;span class=&#34;ni&#34;&gt;&amp;amp;lt;&lt;/span&gt;   // 会显示为”&lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;“
-&lt;span class=&#34;ni&#34;&gt;&amp;amp;amp;&lt;/span&gt;  // 会显示为”&lt;span class=&#34;err&#34;&gt;&amp;amp;&lt;/span&gt;“：在 href 属性里面，必须将 &lt;span class=&#34;err&#34;&gt;&amp;amp;&lt;/span&gt; 转变为 &lt;span class=&#34;ni&#34;&gt;&amp;amp;amp;&lt;/span&gt;
-\.     // 为了防止产生&amp;#34;1.&amp;#34;变为有序列表，则可以写成&amp;#34;1\.&amp;#34;
-
- &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。
-
-
-&amp;gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：
-&amp;gt;&amp;gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。
-&amp;gt;&amp;gt;
-&amp;gt;&amp;gt;&amp;gt;这是一个三级引言。格式会显示为字体更小了。
-
-建立分割线的方法有：
-&lt;span class=&#34;ge&#34;&gt;* *&lt;/span&gt; *
-&lt;span class=&#34;ge&#34;&gt;**&lt;/span&gt;***
-&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; - -
--------------------
-
-
-超级链接：[超级链接显示的文字](超级链接的网址，可以是绝对路径、相对路径)
-也支持HTML格式的超级链接&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.baidu.com/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;百度&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-
-如果要标记一小段行内程序代码，可以用反引号把它包起来，像这样：
-Use the &lt;span class=&#34;sb&#34;&gt;`printf()`&lt;/span&gt; function.
-
-
-插入图片：![图片的替换文字](图片的地址或路径)
-![&lt;span class=&#34;nt&#34;&gt;风景区图片&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;/Snip20160202_227.png&lt;/span&gt;)
-
-Email邮件：
-&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;qq&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-
-锚点：(能够链接到某个一级标题)
-[&lt;span class=&#34;nt&#34;&gt;想要显示的名称&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#锚点的名称&lt;/span&gt;)
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~~删除线~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;*斜体*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;_斜体第二种方法_&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**加粗**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;__加粗的第二种方法__&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;___粗斜体___&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;两个enter是换行，或者用&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;标签表示换行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;用一行的=或者-表示一级标题和二级标题。如：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;一级标题
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;=======
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;二级标题
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# 一级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;## 二级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### 三级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;#### 四级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;##### 五级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;###### 六级标题
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;无序列表：在前面加上 * 或者 + 或者 - 然后加个空格：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; ABC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; DEF
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; GHI
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ JKL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ MNO
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ PQR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; STU
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; VWX
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; YZZ
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;有序列表：数字+英文句点+空格。如下：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 呵呵
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 哈哈
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 嘿嘿
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; 哼哼
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ni&#34;&gt;&amp;amp;lt;&lt;/span&gt;   // 会显示为”&lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;“
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ni&#34;&gt;&amp;amp;amp;&lt;/span&gt;  // 会显示为”&lt;span class=&#34;err&#34;&gt;&amp;amp;&lt;/span&gt;“：在 href 属性里面，必须将 &lt;span class=&#34;err&#34;&gt;&amp;amp;&lt;/span&gt; 转变为 &lt;span class=&#34;ni&#34;&gt;&amp;amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;\.     // 为了防止产生&amp;#34;1.&amp;#34;变为有序列表，则可以写成&amp;#34;1\.&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;&amp;gt;这是一个三级引言。格式会显示为字体更小了。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;建立分割线的方法有：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;* *&lt;/span&gt; *
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ge&#34;&gt;**&lt;/span&gt;***
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; - -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;超级链接：[超级链接显示的文字](超级链接的网址，可以是绝对路径、相对路径)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也支持HTML格式的超级链接&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.baidu.com/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;百度&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果要标记一小段行内程序代码，可以用反引号把它包起来，像这样：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use the &lt;span class=&#34;sb&#34;&gt;`printf()`&lt;/span&gt; function.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;插入图片：![图片的替换文字](图片的地址或路径)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;风景区图片&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;/Snip20160202_227.png&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Email邮件：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;qq&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;锚点：(能够链接到某个一级标题)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[&lt;span class=&#34;nt&#34;&gt;想要显示的名称&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#锚点的名称&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
     </channel>

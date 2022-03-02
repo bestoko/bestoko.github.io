@@ -354,7 +354,7 @@ if (!doNotTrack) {
 <p>使用 <code>regedit</code>,新建如下 DWORD 值，并将其值设为十六进制的 <code>1</code>。</p>
 <pre tabindex="0"><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
 </code></pre><p>也可以用管理员权限启动命令行来完成：</p>
-<pre tabindex="0"><code>reg add &quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&quot; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+<pre tabindex="0"><code>reg add &#34;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&#34; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 </code></pre><p>如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 <code>DWORD</code> 修改为 <code>QWORD</code>。</p>
 <p>参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows</p>
 
