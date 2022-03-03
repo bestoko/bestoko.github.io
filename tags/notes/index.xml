@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Toko&#39;s blog</title>
+    <link>https://bestoko.cc/tags/notes/</link>
+    <description>Recent content in Notes on Toko&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Mar 2022 20:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android平台架构学习笔记</title>
+      <link>https://bestoko.cc/p/android-framework/</link>
+      <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/android-framework/</guid>
+      <description>平台架构  
+https://developer.android.com/guide/platform?hl=zh-cn
+从下到上依次分为：
+ Linux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用  每一层都包含大量的子模块或子系统。
+Linux内核层 (Linux Kernel)  Android 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。
+使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。
+ Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。
+硬件抽象层 (Hardware Abstract Layer,HAL)  硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。
+ Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。
+也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。
+系统运行库层 这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。
+原生 C/C++ 库 (Native C/C++ Libraries)  许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。</description>
+    </item>
+    
+    <item>
+      <title>Git学习笔记</title>
+      <link>https://bestoko.cc/p/gitnotes/</link>
+      <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/gitnotes/</guid>
+      <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
+Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
+  learnGit 
+常用指令 $ git init # 在当前目录新建一个 Git 代码库 $ git clone [url] # 下载一个项目和它的整个代码历史 $ git config --list # 显示当前的 Git 配置 $ git config -e [--global] # 编辑 Git 配置文件 $ git add # 添加指定文件到暂存区 $ git rm # 删除工作区文件，并且将这次删除放入暂存区 $ git commit -m [message] # 提交暂存区到仓库区 $ git commit -a # 提交工作区自上次 commit 之后的变化，直接到仓库区 $ git commit --amend -m [message] # 使用一次新的 commit，替代上一次提交 如果代码没有任何新变化，则用来改写上一次 commit 的提交信息 $ git commit --amend [file1] [file2] .</description>
+    </item>
+    
+    <item>
+      <title>Markdown学习笔记</title>
+      <link>https://bestoko.cc/p/markdwonnotes/</link>
+      <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/markdwonnotes/</guid>
+      <description>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+ 以下是Markdown的基础语法
+~~删除线~~ *斜体* _斜体第二种方法_ **加粗** __加粗的第二种方法__ ___粗斜体___ 两个enter是换行，或者用&amp;lt;/br&amp;gt;标签表示换行 用一行的=或者-表示一级标题和二级标题。如： 一级标题 ======= 二级标题 -------- 也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如： # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  无序列表：在前面加上 * 或者 + 或者 - 然后加个空格： * ABC * DEF * GHI + JKL + MNO + PQR - STU - VWX - YZZ 有序列表：数字+英文句点+空格。如下： 1. 呵呵 2. 哈哈 3. 嘿嘿 4. 哼哼 &amp;amp;lt; // 会显示为”&amp;lt;“ &amp;amp;amp; // 会显示为”&amp;amp;“：在 href 属性里面，必须将 &amp;amp; 转变为 &amp;amp;amp; \.</description>
+    </item>
+    
+  </channel>
+</rss>
