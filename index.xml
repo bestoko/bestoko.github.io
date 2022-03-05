@@ -6,7 +6,28 @@
         <description>Recent content on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 03 Mar 2022 20:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Mar 2022 19:19:15 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Arch Linux与Win11双系统修复grub引导</title>
+        <link>https://bestoko.cc/p/grubfix/</link>
+        <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/grubfix/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+&lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S prober
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装 os-prober , 这个工具可以帮助自动发现包含windows的分区&lt;/p&gt;
+&lt;p&gt;(如果你的windows分区启用了bitlocker, 你可能还需要先使用&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/dislocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dislocker&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;接着:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你得到以下输出：&lt;code&gt;Warning: os-prober will not be executed to detect other bootable partitions&lt;/code&gt;，你需要编辑&lt;code&gt;/etc/default/grub&lt;/code&gt;并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GRUB_DISABLE_OS_PROBER=false
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Android平台架构学习笔记</title>
         <link>https://bestoko.cc/p/android-framework/</link>
         <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
