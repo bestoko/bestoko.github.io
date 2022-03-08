@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Zsh / oh-my-zsh / Powerlevel10k'><title>Ubuntu 20.04 终端插件配置与美化</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/zsh/'>
+
+<link rel="stylesheet" href="/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css"><meta property='og:title' content='Ubuntu 20.04 终端插件配置与美化'>
+<meta property='og:description' content='Zsh / oh-my-zsh / Powerlevel10k'>
+<meta property='og:url' content='https://bestoko.cc/p/zsh/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Zsh' /><meta property='article:tag' content='oh-my-zsh' /><meta property='article:tag' content='Powerlevel10k' /><meta property='article:published_time' content='2022-03-08T20:56:36&#43;08:00'/><meta property='article:modified_time' content='2022-03-08T20:56:36&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Ubuntu 20.04 终端插件配置与美化">
+<meta name="twitter:description" content="Zsh / oh-my-zsh / Powerlevel10k"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png' />
+    <link rel="shortcut icon" href="/img/bestoko.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-215304375-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/zsh/">
+                <img src="/p/zsh/prompt-styles-high-contrast_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_800x0_resize_box_3.png"
+                        srcset="/p/zsh/prompt-styles-high-contrast_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_800x0_resize_box_3.png 800w, /p/zsh/prompt-styles-high-contrast_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="540" 
+                        loading="lazy"
+                        alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/work/" style="background-color: #2a9d8f; color: #fff;">
+                Work
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/zsh/">Ubuntu 20.04 终端插件配置与美化</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        Zsh / oh-my-zsh / Powerlevel10k
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 08, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.</p>
+<h2 id="zsh">Zsh</h2>
+<p>安装 zsh</p>
+<pre tabindex="0"><code>sudo apt install zsh
+</code></pre><p>将 zsh 设置为默认 shell</p>
+<pre tabindex="0"><code>chsh -s /bin/zsh
+</code></pre><p>你可以用<code>echo $SHELL</code> 指令来查看当前的默认 shell 是否修改成功.</p>
+<h2 id="oh-my-zsh">oh-my-zsh</h2>
+<p>安装 oh-my-zsh</p>
+<pre tabindex="0"><code>sh -c &#34;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&#34;
+</code></pre><p>安装一些实用插件</p>
+<pre tabindex="0"><code>#自动补齐
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-autosuggestions
+
+#语法高亮
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-syntax-highlighting
+
+#自动跳转
+sudo apt-get install autojump
+</code></pre><p>配置插件</p>
+<pre tabindex="0"><code>vim ~/.zshrc
+
+#在 plugins 行添加插件名,如:
+plusgins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+#最后一行添加
+. /usr/share/autojump/autojump.sh
+
+#使配置生效
+source ~/.zshrc
+</code></pre><h2 id="powerlevel10k">Powerlevel10k</h2>
+<p>安装 Powerlevel10k</p>
+<pre tabindex="0"><code>git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+</code></pre><p>配置</p>
+<pre tabindex="0"><code>vim ~/.zshrc
+#修改 ZSH_THEME=&#34;powerlevel10k/powerlevel10k&#34;
+source ~/.zshrc
+</code></pre><p>安装字体 (便于显示各种特殊符号和图表)</p>
+<ul>
+<li>[MesloLGS NF Regular.ttf](<a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS"  target="_blank" rel="noopener"
+    >https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS</a> NF Regular.ttf)</li>
+<li>[MesloLGS NF Bold.ttf](<a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS"  target="_blank" rel="noopener"
+    >https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS</a> NF Bold.ttf)</li>
+<li>[MesloLGS NF Italic.ttf](<a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS"  target="_blank" rel="noopener"
+    >https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS</a> NF Italic.ttf)</li>
+<li>[MesloLGS NF Bold Italic.ttf](<a class="link" href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS"  target="_blank" rel="noopener"
+    >https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS</a> NF Bold Italic.ttf)</li>
+</ul>
+<p>最后启动终端跟着向导配置,或者 <code>p10k configure</code> 就可以完成配置了.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ubuntu/">Ubuntu</a>
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/zsh/">Zsh</a>
+        
+            <a href="/tags/oh-my-zsh/">oh-my-zsh</a>
+        
+            <a href="/tags/powerlevel10k/">Powerlevel10k</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/grubfix/">
+        
+        
+            <div class="article-image">
+                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu2affd397a92bbc63783314cc40d8173f_294660_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Arch Linux与Win11双系统修复grub引导"
+                        data-key="GrubFix" 
+                        data-hash="md5-vm0rFG/OoFsaXxWa8FP2Dw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Arch Linux与Win11双系统修复grub引导</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/linux-clash-for-windows/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-clash-for-windows/cfw.d8c33e368547ee9402611ac5b45e0d74_hu9db59739f206d08ecaf1f4b03c5d9443_57712_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 我的Linux科学上网方案"
+                        data-key="linux-clash-for-windows" 
+                        data-hash="md5-2MM&#43;NoVH7pQCYRrFtF4NdA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">我的Linux科学上网方案</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/gnome-lunar-calendar/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gnome-lunar-calendar/calendar.bae5ffc9e53149803a3f35349d3870ea_huc965ea0dc5f40a0bcc0496d3e43e9f6a_402882_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Gnome农历插件安装踩坑记录"
+                        data-key="gnome-Lunar-Calendar" 
+                        data-hash="md5-uuX/yeUxSYA6PzU0nThw6g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Gnome农历插件安装踩坑记录</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/fedora-grub2-theme/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fedora-grub2-theme/grub2.4ec3df2d34dcc247ae01d4e55c92ce60_hu594604db0bf5dc83cbe0fc3e9035594c_43340_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Grub2主题美化踩坑记录"
+                        data-key="fedora-grub2-theme" 
+                        data-hash="md5-TsPfLTTcwkeuAdTlXJLOYA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Grub2主题美化踩坑记录</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/linux-virtualbox-error/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu92c877dfd4fe632d733454f9d7c15e29_39250_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法"
+                        data-key="linux-virtualbox-error" 
+                        data-hash="md5-eMbwLABDr8jmrAi2CJrr&#43;w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#zsh">Zsh</a></li>
+    <li><a href="#oh-my-zsh">oh-my-zsh</a></li>
+    <li><a href="#powerlevel10k">Powerlevel10k</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

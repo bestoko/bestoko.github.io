@@ -6,7 +6,23 @@
     <description>Recent content in Linux on Toko&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Mar 2022 19:19:15 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu 20.04 终端插件配置与美化</title>
+      <link>https://bestoko.cc/p/zsh/</link>
+      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+      
+      <guid>https://bestoko.cc/p/zsh/</guid>
+      <description>​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.
+Zsh 安装 zsh
+sudo apt install zsh 将 zsh 设置为默认 shell
+chsh -s /bin/zsh 你可以用echo $SHELL 指令来查看当前的默认 shell 是否修改成功.
+oh-my-zsh 安装 oh-my-zsh
+sh -c &amp;#34;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&amp;#34; 安装一些实用插件
+#自动补齐 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-autosuggestions #语法高亮 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-syntax-highlighting #自动跳转 sudo apt-get install autojump 配置插件
+vim ~/.zshrc #在 plugins 行添加插件名,如: plusgins=(git zsh-autosuggestions zsh-syntax-highlighting) #最后一行添加 . /usr/share/autojump/autojump.</description>
+    </item>
+    
     <item>
       <title>Arch Linux与Win11双系统修复grub引导</title>
       <link>https://bestoko.cc/p/grubfix/</link>
