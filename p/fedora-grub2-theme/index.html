@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
- 展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+1 2  #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;    此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'><title>Grub2主题美化踩坑记录</title>
+1  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg   而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+1  sudo grub2-mkconfig -o /boot/grub2/grub.cfg   接着reboot即可看到效果。'><title>Grub2主题美化踩坑记录</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/fedora-grub2-theme/'>
 
-<link rel="stylesheet" href="/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css"><meta property='og:title' content='Grub2主题美化踩坑记录'>
+<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Grub2主题美化踩坑记录'>
 <meta property='og:description' content='双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
- 展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+1 2  #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;    此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'>
+1  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg   而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+1  sudo grub2-mkconfig -o /boot/grub2/grub.cfg   接着reboot即可看到效果。'>
 <meta property='og:url' content='https://bestoko.cc/p/fedora-grub2-theme/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Fedora' /><meta property='article:tag' content='Gurb2 Theme' /><meta property='article:published_time' content='2021-12-29T18:56:18&#43;08:00'/><meta property='article:modified_time' content='2021-12-29T18:56:18&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg' />
@@ -28,12 +26,11 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'>
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Grub2主题美化踩坑记录">
 <meta name="twitter:description" content="双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
- 展示效果 
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+1 2  #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;    此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
  更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。"><meta name="twitter:card" content="summary_large_image">
+1  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg   而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+1  sudo grub2-mkconfig -o /boot/grub2/grub.cfg   接着reboot即可看到效果。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -51,8 +48,8 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page 
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -75,33 +72,28 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        on-phone--column extended
-    
-">
-    
-        <aside class="sidebar left-sidebar sticky">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
             
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
                     
                         
-                        <img src="/img/avatar_hubc064892ed91f6e0ab6d7f33bbc11b4b_51957_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hubb7d04249aaf640d3f66feadcb30cad0_219321_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
                     <span class="emoji">🍥</span>
                 
@@ -109,69 +101,70 @@ if (!doNotTrack) {
             
         
         
-        <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
-        <h2 class="site-description">Keep Learning</h2><ol class="social-menu">
-                
-                    <li>
-                        <a 
-                            href='https://github.com/bestoko'
-                            target="_blank"
-                            title="GitHub"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Keep Learning</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a 
-                            href='https://t.me/bestoko'
-                            target="_blank"
-                            title="Telegram"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a 
-                            href='https://twitter.com/bestokoCC'
-                            target="_blank"
-                            title="Twitter"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-            </ol></header>
-
-    <ol class="menu" id="main-menu">
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
         
@@ -277,9 +270,11 @@ if (!doNotTrack) {
         </li>
         
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -287,7 +282,7 @@ if (!doNotTrack) {
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -295,13 +290,12 @@ if (!doNotTrack) {
 
 
 
-                <span>Dark Mode</span>
-            </li>
-        
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
     </ol>
 </aside>
-
-    
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
@@ -329,11 +323,13 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/fedora-grub2-theme/">Grub2主题美化踩坑记录</a>
-    </h2>
-
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/fedora-grub2-theme/">Grub2主题美化踩坑记录</a>
+        </h2>
     
+        
+    </div>
 
     
     <footer class="article-time">
@@ -355,48 +351,69 @@ if (!doNotTrack) {
         
     </footer>
     
+
+    
 </div>
 </header>
 
     <section class="article-content">
+    
+    
     <p>双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 <del>（虽然只有几秒）</del>,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了<code>Windows11</code>和<code>Fedora35</code>。</p>
 <h2 id="下载主题">下载主题</h2>
 <p>首先下载好你想要的主题文件，我选择的是这个MacOS风格的<a class="link" href="https://www.gnome-look.org/p/1577873"  target="_blank" rel="noopener"
     >MacOS Monterey inspired grub theme</a></p>
-<p><figure 
+<p><img src="/p/fedora-grub2-theme/grub-theme.png"
+	width="1920"
+	height="1080"
+	srcset="/p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_480x0_resize_box_3.png 480w, /p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="展示效果"
+	
 	
 		class="gallery-image" 
-		style="
-			flex-grow: 177; 
-			flex-basis: 426px"
-	>
-	<a href="/p/fedora-grub2-theme/grub-theme.png" data-size="1920x1080">
-		<img src="/p/fedora-grub2-theme/grub-theme.png"
-			width="1920"
-			height="1080"
-			srcset="/p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_480x0_resize_box_3.png 480w, /p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_1024x0_resize_box_3.png 1024w"
-			loading="lazy"
-			alt="展示效果">
-	</a>
+		data-flex-grow="177"
+		data-flex-basis="426px"
 	
-	<figcaption>展示效果</figcaption>
-	
-</figure></p>
+></p>
 <h2 id="修改etcdefaultgrub文件">修改/etc/default/grub文件</h2>
 <p>首先，注释掉<code>GRUB_TERMINAL_OUTPUT=”console”</code>,接着设置好你的GRUB主题路径。</p>
-<pre tabindex="0"><code>#GRUB_TERMINAL_OUTPUT=”console”
-GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
-</code></pre><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#GRUB_TERMINAL_OUTPUT=”console”
+</span></span><span class="line"><span class="cl">GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>此外这个文件里还有几个常用的设置
 <code>GRUB_TIMEOUT=5</code>   可以设置超时时间，设置-1可以取消倒计时
 <code>GRUB_DEFAULT=saved</code> saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数</p>
 </blockquote>
 <h2 id="更新grub2配置">更新Grub2配置</h2>
 <p>如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是<code>/boot/efi/EFI/fedora/grub.cfg </code>，更新命令如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-</span></span></code></pre></div><p>而如果是启动方式是Legacy的话，启动时读取的文件是<code>/boot/grub2/grub.cfg</code>，更新命令如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-</span></span></code></pre></div><p>接着<code>reboot</code>即可看到效果。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>而如果是启动方式是Legacy的话，启动时读取的文件是<code>/boot/grub2/grub.cfg</code>，更新命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着<code>reboot</code>即可看到效果。</p>
 
 </section>
 
@@ -434,14 +451,14 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
 
     
 
-    <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">Related contents</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/gnome-lunar-calendar/">
         
@@ -463,8 +480,8 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/zsh/">
         
@@ -486,8 +503,8 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/grubfix/">
         
@@ -509,8 +526,8 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/linux-clash-for-windows/">
         
@@ -532,8 +549,8 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/linux-virtualbox-error/">
         
@@ -555,10 +572,9 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
         </div>
     </a>
 </article>
-                
-            </div>
+            
         </div>
-    
+    </div>
 </aside>
 
      
@@ -617,7 +633,7 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.10.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -686,11 +702,11 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -706,7 +722,7 @@ GRUB_THEME=&#34;/boot/grub2/montery-grub-theme/theme.txt&#34;
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

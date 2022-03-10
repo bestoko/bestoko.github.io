@@ -1,33 +1,159 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>刷机 on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/</link>
-    <description>Recent content in 刷机 on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>一加8的Android 11 折腾指南</title>
-      <link>https://bestoko.cc/p/oneplus8/</link>
-      <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/oneplus8/</guid>
-      <description>准备工作   解锁Bootloader且打开USB调试的一加8
-  氢OS Android11 Rom包
-  Payload Dumber
-  platform-tools
-打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】
-  刷入Magisk 制作magisk_patched.img   将官方包内的payload.bin 解压并放入Payload Dumber 的payload_input目录
-  打开payload_dumper.exe（看到boot解压出来就可以关闭了）
-  打开payload_output目录，将解压出的boot.img复制到手机根目录
-  下载并安装Magisk最新版本 (https://github.com/topjohnwu/Magisk/releases)
-选择安装Magisk-选择并修补一个文件，选中放在根目录的boot.img ，等待修补完成
-  将手机download目录下的修补完成的magisk_patched.img复制到电脑
-  工具刷入mgisk_patched.img   将mgisk_patched.img放入 platform-tools 目录下
-  运行
-打开CMD命令行.bat  adb reboot bootloader fastboot flash boot_a magisk_patched.img fastboot flash boot_b magisk_patched.img fastboot reboot    刷入EdXposed  刷入Riru - Core模块 刷入Riru - EdXposed(YAHFA) 或Riru - EdXposed(SandHook)模块 安装最新的Edxposed Manager  总结与注意事项   制作mgisk_patched.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>刷机 on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/</link>
+        <description>Recent content in 刷机 on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 28 Oct 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>一加8的Android 11 折腾指南</title>
+        <link>https://bestoko.cc/p/oneplus8/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;氢OS Android11 Rom包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payload Dumber&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;platform-tools&lt;/p&gt;
+&lt;p&gt;打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk&lt;/h1&gt;
+&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将官方包内的&lt;code&gt;payload.bin&lt;/code&gt; 解压并放入Payload Dumber 的payload_input目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开&lt;code&gt;payload_dumper.exe&lt;/code&gt;（看到boot解压出来就可以关闭了）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开payload_output目录，将解压出的&lt;code&gt;boot.img&lt;/code&gt;复制到手机根目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载并安装Magisk最新版本 (&lt;a class=&#34;link&#34; href=&#34;https://github.com/topjohnwu/Magisk/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/topjohnwu/Magisk/releases&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;选择安装Magisk-选择并修补一个文件，选中放在根目录的&lt;code&gt;boot.img&lt;/code&gt; ，等待修补完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将手机download目录下的修补完成的&lt;code&gt;magisk_patched.img&lt;/code&gt;复制到电脑&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将&lt;code&gt;mgisk_patched.img&lt;/code&gt;放入 platform-tools 目录下&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;打开CMD命令行.bat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb reboot bootloader&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot_a magisk_patched.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot_b magisk_patched.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;刷入&lt;code&gt;Riru - Core&lt;/code&gt;模块&lt;/li&gt;
+&lt;li&gt;刷入&lt;code&gt;Riru - EdXposed(YAHFA)&lt;/code&gt; 或&lt;code&gt;Riru - EdXposed(SandHook)&lt;/code&gt;模块&lt;/li&gt;
+&lt;li&gt;安装最新的&lt;code&gt;Edxposed Manager&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;制作&lt;code&gt;mgisk_patched.img&lt;/code&gt;时要用最新的 v8.0.x版本，不能使用以往的v21.0版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;刷写&lt;code&gt;mgisk_patched.img&lt;/code&gt;时 a/b分区都要&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果因刷入不兼容的模块导致无法开机，可以尝试&lt;/p&gt;
+&lt;p&gt;卸载全部magisk模块&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb shell&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;magisk --remove-modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8info&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8magisk1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8magisk2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8edxposed&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

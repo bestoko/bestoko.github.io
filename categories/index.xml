@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/categories/</link>
-    <description>Recent content in Categories on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Work</title>
-      <link>https://bestoko.cc/categories/work/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/categories/work/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Study</title>
-      <link>https://bestoko.cc/categories/study/</link>
-      <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/categories/study/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Play</title>
-      <link>https://bestoko.cc/categories/play/</link>
-      <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/categories/play/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>https://bestoko.cc/categories/life/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bestoko.cc/categories/life/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Categories on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/categories/</link>
+        <description>Recent content in Categories on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Work</title>
+        <link>https://bestoko.cc/categories/work/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/work/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/work/work.jpg" alt="Featured image of post Work" /&gt;</description>
+        </item>
+        <item>
+        <title>Study</title>
+        <link>https://bestoko.cc/categories/study/</link>
+        <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/study/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/study/study.jpg" alt="Featured image of post Study" /&gt;</description>
+        </item>
+        <item>
+        <title>Play</title>
+        <link>https://bestoko.cc/categories/play/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/play/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/play/play.jpg" alt="Featured image of post Play" /&gt;</description>
+        </item>
+        <item>
+        <title>Life</title>
+        <link>https://bestoko.cc/categories/life/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://bestoko.cc/categories/life/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/life/life.jpg" alt="Featured image of post Life" /&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

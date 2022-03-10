@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在extensions.gnome.org上找到个农历扩展Lunar Calendar 农历，直接安装会因为缺少依赖报错，搜到的rpm包也无法正常安装，查了下需要手动编译安装lunar-date。
 Fedora35 编译安装lunar-date github页给的安装指南如下
-meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install  meson是用Python语言开发的构建工具，编译需要Ninja（用C&#43;&#43;实现）命令。
+1 2 3  meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install    meson是用Python语言开发的构建工具，编译需要Ninja（用C&#43;&#43;实现）命令。
  所以首先
-sudo dnf install meson ninja-build 接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
-sudo dnf install vala gtk-doc 接着重新安装插件就可以正常启用了。
+1  sudo dnf install meson ninja-build   接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
+1  sudo dnf install vala gtk-doc   接着重新安装插件就可以正常启用了。
 额外可选设置 默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（真的很难看），解决办法如下：
-cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo  效果展示'><title>Gnome农历插件安装踩坑记录</title>
+1  cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo   '><title>Gnome农历插件安装踩坑记录</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/gnome-lunar-calendar/'>
 
-<link rel="stylesheet" href="/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css"><meta property='og:title' content='Gnome农历插件安装踩坑记录'>
+<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Gnome农历插件安装踩坑记录'>
 <meta property='og:description' content='在extensions.gnome.org上找到个农历扩展Lunar Calendar 农历，直接安装会因为缺少依赖报错，搜到的rpm包也无法正常安装，查了下需要手动编译安装lunar-date。
 Fedora35 编译安装lunar-date github页给的安装指南如下
-meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install  meson是用Python语言开发的构建工具，编译需要Ninja（用C&#43;&#43;实现）命令。
+1 2 3  meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install    meson是用Python语言开发的构建工具，编译需要Ninja（用C&#43;&#43;实现）命令。
  所以首先
-sudo dnf install meson ninja-build 接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
-sudo dnf install vala gtk-doc 接着重新安装插件就可以正常启用了。
+1  sudo dnf install meson ninja-build   接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
+1  sudo dnf install vala gtk-doc   接着重新安装插件就可以正常启用了。
 额外可选设置 默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（真的很难看），解决办法如下：
-cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo  效果展示'>
+1  cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo   '>
 <meta property='og:url' content='https://bestoko.cc/p/gnome-lunar-calendar/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Fedora' /><meta property='article:tag' content='Gnome Shell' /><meta property='article:published_time' content='2021-12-30T09:18:46&#43;08:00'/><meta property='article:modified_time' content='2021-12-30T09:18:46&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/gnome-lunar-calendar/calendar.png' />
@@ -28,12 +28,12 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Gnome农历插件安装踩坑记录">
 <meta name="twitter:description" content="在extensions.gnome.org上找到个农历扩展Lunar Calendar 农历，直接安装会因为缺少依赖报错，搜到的rpm包也无法正常安装，查了下需要手动编译安装lunar-date。
 Fedora35 编译安装lunar-date github页给的安装指南如下
-meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install  meson是用Python语言开发的构建工具，编译需要Ninja（用C&#43;&#43;实现）命令。
+1 2 3  meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install    meson是用Python语言开发的构建工具，编译需要Ninja（用C&#43;&#43;实现）命令。
  所以首先
-sudo dnf install meson ninja-build 接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
-sudo dnf install vala gtk-doc 接着重新安装插件就可以正常启用了。
+1  sudo dnf install meson ninja-build   接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
+1  sudo dnf install vala gtk-doc   接着重新安装插件就可以正常启用了。
 额外可选设置 默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（真的很难看），解决办法如下：
-cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo  效果展示"><meta name="twitter:card" content="summary_large_image">
+1  cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo   "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/gnome-lunar-calendar/calendar.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -51,8 +51,8 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page 
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -75,33 +75,28 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        on-phone--column extended
-    
-">
-    
-        <aside class="sidebar left-sidebar sticky">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
             
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
                     
                         
-                        <img src="/img/avatar_hubc064892ed91f6e0ab6d7f33bbc11b4b_51957_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hubb7d04249aaf640d3f66feadcb30cad0_219321_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
                     <span class="emoji">🍥</span>
                 
@@ -109,69 +104,70 @@ if (!doNotTrack) {
             
         
         
-        <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
-        <h2 class="site-description">Keep Learning</h2><ol class="social-menu">
-                
-                    <li>
-                        <a 
-                            href='https://github.com/bestoko'
-                            target="_blank"
-                            title="GitHub"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Keep Learning</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a 
-                            href='https://t.me/bestoko'
-                            target="_blank"
-                            title="Telegram"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a 
-                            href='https://twitter.com/bestokoCC'
-                            target="_blank"
-                            title="Twitter"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-            </ol></header>
-
-    <ol class="menu" id="main-menu">
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
         
@@ -277,9 +273,11 @@ if (!doNotTrack) {
         </li>
         
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -287,7 +285,7 @@ if (!doNotTrack) {
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -295,13 +293,12 @@ if (!doNotTrack) {
 
 
 
-                <span>Dark Mode</span>
-            </li>
-        
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
     </ol>
 </aside>
-
-    
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
@@ -329,11 +326,13 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/gnome-lunar-calendar/">Gnome农历插件安装踩坑记录</a>
-    </h2>
-
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/gnome-lunar-calendar/">Gnome农历插件安装踩坑记录</a>
+        </h2>
     
+        
+    </div>
 
     
     <footer class="article-time">
@@ -355,50 +354,79 @@ if (!doNotTrack) {
         
     </footer>
     
+
+    
 </div>
 </header>
 
     <section class="article-content">
+    
+    
     <p>在<a class="link" href="" >extensions.gnome.org</a>上找到个农历扩展<a class="link" href="https://extensions.gnome.org/extension/675/lunar-calendar/"  target="_blank" rel="noopener"
     >Lunar Calendar 农历</a>，直接安装会因为缺少依赖报错，搜到的<a class="link" href="https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date"  target="_blank" rel="noopener"
     >rpm包</a>也无法正常安装，查了下需要手动编译安装<a class="link" href="https://github.com/yetist/lunar-date"  target="_blank" rel="noopener"
     >lunar-date</a>。</p>
 <h2 id="fedora35-编译安装lunar-date">Fedora35 编译安装lunar-date</h2>
 <p>github页给的安装指南如下</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">meson build --prefix /usr -Ddocs<span class="o">=</span><span class="nb">true</span> -Dintrospection<span class="o">=</span><span class="nb">true</span> -Dvapi<span class="o">=</span><span class="nb">true</span> -Dtests<span class="o">=</span><span class="nb">true</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">meson build --prefix /usr -Ddocs<span class="o">=</span><span class="nb">true</span> -Dintrospection<span class="o">=</span><span class="nb">true</span> -Dvapi<span class="o">=</span><span class="nb">true</span> -Dtests<span class="o">=</span><span class="nb">true</span>
 </span></span><span class="line"><span class="cl">ninja -C build/
 </span></span><span class="line"><span class="cl">sudo ninja -C build install
-</span></span></code></pre></div><blockquote>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。</p>
 </blockquote>
 <p>所以首先</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dnf install meson ninja-build
-</span></span></code></pre></div><p>接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于<code>dnf install</code>,可以在<a class="link" href="https://command-not-found.com/"  target="_blank" rel="noopener"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dnf install meson ninja-build
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于<code>dnf install</code>,可以在<a class="link" href="https://command-not-found.com/"  target="_blank" rel="noopener"
     >command-not-found.com</a> 查询所需安装指令。以我为例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dnf install vala gtk-doc
-</span></span></code></pre></div><p>接着重新安装插件就可以正常启用了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo dnf install vala gtk-doc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着重新安装插件就可以正常启用了。</p>
 <h2 id="额外可选设置">额外可选设置</h2>
 <p>默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（<strong>真的很难看</strong>），解决办法如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
-</span></span></code></pre></div><p><figure 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/gnome-lunar-calendar/lunar-date.png"
+	width="2736"
+	height="1824"
+	srcset="/p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_480x0_resize_box_3.png 480w, /p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="效果展示"
+	
 	
 		class="gallery-image" 
-		style="
-			flex-grow: 150; 
-			flex-basis: 360px"
-	>
-	<a href="/p/gnome-lunar-calendar/lunar-date.png" data-size="2736x1824">
-		<img src="/p/gnome-lunar-calendar/lunar-date.png"
-			width="2736"
-			height="1824"
-			srcset="/p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_480x0_resize_box_3.png 480w, /p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_1024x0_resize_box_3.png 1024w"
-			loading="lazy"
-			alt="效果展示">
-	</a>
+		data-flex-grow="150"
+		data-flex-basis="360px"
 	
-	<figcaption>效果展示</figcaption>
-	
-</figure></p>
+></p>
 
 </section>
 
@@ -436,14 +464,14 @@ if (!doNotTrack) {
 
     
 
-    <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">Related contents</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/fedora-grub2-theme/">
         
@@ -465,8 +493,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/zsh/">
         
@@ -488,8 +516,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/grubfix/">
         
@@ -511,8 +539,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/linux-clash-for-windows/">
         
@@ -534,8 +562,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/linux-virtualbox-error/">
         
@@ -557,10 +585,9 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
-                
-            </div>
+            
         </div>
-    
+    </div>
 </aside>
 
      
@@ -619,7 +646,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.10.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -688,11 +715,11 @@ if (!doNotTrack) {
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -708,7 +735,7 @@ if (!doNotTrack) {
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

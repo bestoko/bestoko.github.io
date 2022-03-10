@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Virtual Box on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/tags/virtual-box/</link>
-    <description>Recent content in Virtual Box on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 28 Dec 2021 11:21:20 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/virtual-box/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
-      <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
-      <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
-      <description>在 Arch Linux 上使用 Virtual Box 制作虚拟机，打开时却出了问题。
-报错信息  Kernel driver not installed (rc=-1908)
-  error 
-VirtualBox Linux 内核驱动程序未加载或未正确设置。
-解决办法 执行如下命令，重新安装vboxdrv模块
-sudo modprobe vboxdrv 如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Virtual Box on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/virtual-box/</link>
+        <description>Recent content in Virtual Box on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 28 Dec 2021 11:21:20 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/virtual-box/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
+        <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
+        <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
+&lt;h2 id=&#34;报错信息&#34;&gt;报错信息&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
+	width=&#34;630&#34;
+	height=&#34;497&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;error&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;304px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;VirtualBox Linux 内核驱动程序未加载或未正确设置。&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
+&lt;p&gt;执行如下命令，重新安装vboxdrv模块&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo modprobe vboxdrv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

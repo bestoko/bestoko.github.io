@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Windows 11 on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/tags/windows-11/</link>
-    <description>Recent content in Windows 11 on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 05 Mar 2022 19:19:15 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/windows-11/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Arch Linux与Win11双系统修复grub引导</title>
-      <link>https://bestoko.cc/p/grubfix/</link>
-      <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/grubfix/</guid>
-      <description>自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.
-下面给出一个简单的解决办法:
-sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
-(如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)
-接着:
-sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
- 如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：
-GRUB_DISABLE_OS_PROBER=false  </description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Windows 11 on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/windows-11/</link>
+        <description>Recent content in Windows 11 on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 05 Mar 2022 19:19:15 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/windows-11/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Arch Linux与Win11双系统修复grub引导</title>
+        <link>https://bestoko.cc/p/grubfix/</link>
+        <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/grubfix/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+&lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S prober
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装 os-prober , 这个工具可以帮助自动发现包含windows的分区&lt;/p&gt;
+&lt;p&gt;(如果你的windows分区启用了bitlocker, 你可能还需要先使用&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/dislocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dislocker&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;接着:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你得到以下输出：&lt;code&gt;Warning: os-prober will not be executed to detect other bootable partitions&lt;/code&gt;，你需要编辑&lt;code&gt;/etc/default/grub&lt;/code&gt;并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_DISABLE_OS_PROBER=false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

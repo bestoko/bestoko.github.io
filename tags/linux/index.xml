@@ -1,215 +1,1287 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/tags/linux/</link>
-    <description>Recent content in Linux on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ubuntu 20.04 终端插件配置与美化</title>
-      <link>https://bestoko.cc/p/zsh/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/zsh/</guid>
-      <description>​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.
-Zsh 安装 zsh
-sudo apt install zsh 将 zsh 设置为默认 shell
-chsh -s /bin/zsh 你可以用echo $SHELL 指令来查看当前的默认 shell 是否修改成功.
-oh-my-zsh 安装 oh-my-zsh
-sh -c &amp;#34;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&amp;#34; 安装一些实用插件
-#自动补齐 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-autosuggestions #语法高亮 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-syntax-highlighting #自动跳转 sudo apt-get install autojump 配置插件
-vim ~/.zshrc #在 plugins 行添加插件名,如: plusgins=(git zsh-autosuggestions zsh-syntax-highlighting) #最后一行添加 . /usr/share/autojump/autojump.</description>
-    </item>
-    
-    <item>
-      <title>Arch Linux与Win11双系统修复grub引导</title>
-      <link>https://bestoko.cc/p/grubfix/</link>
-      <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/grubfix/</guid>
-      <description>自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.
-下面给出一个简单的解决办法:
-sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
-(如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)
-接着:
-sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
- 如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：
-GRUB_DISABLE_OS_PROBER=false  </description>
-    </item>
-    
-    <item>
-      <title>我的Linux科学上网方案</title>
-      <link>https://bestoko.cc/p/linux-clash-for-windows/</link>
-      <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/linux-clash-for-windows/</guid>
-      <description>写在前面  本文不讨论科学上网的对错 本文不教学代理服务器部署 本文不推荐任何机场  Linux平台有很多成熟可靠的科学上网工具，本文仅列出我所推荐使用的，其余方案请自行搜索。
-Clash for windows Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。 Clash for Windows (cfw)是一个Windows/macOS/Linux下的clash图形化客户端。 支持的协议： Vmess, Shadowsocks, Snell , Sock5 , ShadowsocksR
-安装 你可以直接从cfw的github页下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。
- Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。
-某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.
- 以Arch Linux为例安装Flatpak。
-sudo pacman -S flatpak  [注]如果只为了使用cfw的话，其实Arch Linux不必多次一举，AUR上已经有人打包好了。
-yay -S clash-for-windows-bin  安装cfw
-flatpak install flathub io.github.Fndroid.clash_for_windows 配置 打开 Clash for Windows ，在左侧的标签页选择Profiles， 在顶部输入 Clash 订阅链接 ，然后点击Download按钮。
-Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息Success!，并且可以看到一个新增的配置文件。
-点击新增的配置文件来切换到该配置，然后点击Proxies 标签页来切换接入点，将顶部的出站模式选择为Rule。 此模式下你的网络访问请求将通过 Clash for Windows 进行分流处理。</description>
-    </item>
-    
-    <item>
-      <title>Gnome农历插件安装踩坑记录</title>
-      <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
-      <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
-      <description>在extensions.gnome.org上找到个农历扩展Lunar Calendar 农历，直接安装会因为缺少依赖报错，搜到的rpm包也无法正常安装，查了下需要手动编译安装lunar-date。
-Fedora35 编译安装lunar-date github页给的安装指南如下
-meson build --prefix /usr -Ddocs=true -Dintrospection=true -Dvapi=true -Dtests=true ninja -C build/ sudo ninja -C build install  meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。
- 所以首先
-sudo dnf install meson ninja-build 接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于dnf install,可以在command-not-found.com 查询所需安装指令。以我为例：
-sudo dnf install vala gtk-doc 接着重新安装插件就可以正常启用了。
-额外可选设置 默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（真的很难看），解决办法如下：
-cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo  效果展示</description>
-    </item>
-    
-    <item>
-      <title>Grub2主题美化踩坑记录</title>
-      <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
-      <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
-      <description>双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
-下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
- 展示效果 
-修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-#GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;  此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
- 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。</description>
-    </item>
-    
-    <item>
-      <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
-      <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
-      <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
-      <description>在 Arch Linux 上使用 Virtual Box 制作虚拟机，打开时却出了问题。
-报错信息  Kernel driver not installed (rc=-1908)
-  error 
-VirtualBox Linux 内核驱动程序未加载或未正确设置。
-解决办法 执行如下命令，重新安装vboxdrv模块
-sudo modprobe vboxdrv 如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。</description>
-    </item>
-    
-    <item>
-      <title>Linux与Windows双系统时间不一致的解决方法</title>
-      <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
-      <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
-      <description>给常用的电脑加了块固态装了Arch linux，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在Surface上单系统所没遇到的。
-为什么时间不一致  这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。
-中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。
- 推荐的解决办法 Windows 其实也能处理 UTC，需要修改注册表。建议让 Windows 使用 UTC，而非让 Linux 使用地方时。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。
-Linux 可以使用NTP服务来在线同步硬件时钟。
-使用 regedit,新建如下 DWORD 值，并将其值设为十六进制的 1。
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal 也可以用管理员权限启动命令行来完成：
-reg add &amp;#34;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;#34; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f 如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 DWORD 修改为 QWORD。
-参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows</description>
-    </item>
-    
-    <item>
-      <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
-      <link>https://bestoko.cc/p/snaps-mstodo/</link>
-      <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
-      <description>虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
-MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。
- Snaps安装与配置  snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。
- 也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。
-安装Snap软件包 首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。
-sudo pacman -S snapd 启动守护进程 sudo systemctl enable --now snapd.socket 启用classic snap support sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。
- Strict
-Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).</description>
-    </item>
-    
-    <item>
-      <title>Arch Linux上修改Code-OSS扩展源</title>
-      <link>https://bestoko.cc/p/code-oss-extensions/</link>
-      <pubDate>Mon, 20 Dec 2021 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
-      <description> 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。
- 我之前使用
-pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。
-方法一 我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：
-&amp;#34;extensionsGallery&amp;#34;: { &amp;#34;serviceUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;, &amp;#34;cacheUrl&amp;#34;: &amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;, &amp;#34;itemUrl&amp;#34;: &amp;#34;https://marketplace.visualstudio.com/items&amp;#34; } 重新启动Code-OSS就可以了。
-方法二 方法一正常使用一段时间后，在某次重启后出现打不开Code-OSS的情况，所幸从AUR上找到了另一个包解决了问题，记录在此。
-yay -S code-marketplace </description>
-    </item>
-    
-    <item>
-      <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-      <link>https://bestoko.cc/p/surface-linux/</link>
-      <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/surface-linux/</guid>
-      <description>写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
-安装驱动 导入密钥 首先我们需要导入用于签名软件包的密钥：
-$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \  | sudo pacman-key --add - 检查完整性并本地签名 $ sudo pacman-key --finger 56C464BAAC421453 $ sudo pacman-key --lsign-key 56C464BAAC421453 添加存储库 我们需要在/etc/pacman.conf添加如下内容
-[linux-surface] Server = https://pkg.surfacelinux.com/arch/ 更新存储库数据，安装内核，启用服务 我们需要更新存储库数据，以安装linux-surface内核及其依赖项，接着启用iptsd服务以使用触摸屏。
-$ sudo pacman -Syu $ sudo pacman -S linux-surface linux-surface-headers iptsd $ sudo systemctl enable iptsd 重启以后就完工了，屏幕触摸也支持了。</description>
-    </item>
-    
-    <item>
-      <title>Arch Linux安装备忘录（二）</title>
-      <link>https://bestoko.cc/p/archinstallextra/</link>
-      <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/archinstallextra/</guid>
-      <description>写在前面 在安装了基本的ArchLinux后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。
-配置网络 我们使用
-nmtui 选择Edit a connection，
-选择Add菜单，选择WI-FI，
-Device 里输入 无线网卡的名字，SSID里输入WI-FI的名字，Security选择WPA &amp;amp;WPA2 Personal，OK-BACK-Quit退出。
-注：使用以下命令查看无线网卡名称
-ip link show 重命名主机 vim /etc/hostname 保存想要的名字后退出。
-接下来把主机名、域名以及ip地址进行映射
-vim /etc/hosts 输入：(以下archlinux为上文所保存的主机名)
-127.0.0.1	localhost ::1	localhost 127.0.0.1 archlinux.localdomain	archlinux 设置系统时间 timedatectl set-timezone Asia/shanghai timedatectl set-ntp true 第二行设置为让本机时间与ntp同步。
-配置环境变量 vim /etc/skel/.bashrc 添加以下内容
-export EDITOR=vim alias grep=&amp;#39;grep ==color=auto&amp;#39; alias egrep=&amp;#39;egrep ==color=auto&amp;#39; alias fgrep=&amp;#39;fgrep ==color=auto&amp;#39; [ ！ -e ~/.dircolors ] &amp;amp;&amp;amp; eval $(dircolors -p &amp;gt; ~/.dircolors) [ ！ -e /bin/dircolors ] &amp;amp;&amp;amp; eval $(dircolors -b &amp;gt; ~/.</description>
-    </item>
-    
-    <item>
-      <title>Arch Linux安装备忘录（一）</title>
-      <link>https://bestoko.cc/p/archinstall/</link>
-      <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/archinstall/</guid>
-      <description>写在前面 安装Arch最好最全面的教程就是官方的 Installation guide。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备Linux知识的新手经常无从下手。
-笔者也是初学者，本篇文章仅作为自己在Surface Pro 2017从0开始安装配置Arch的记录。
-安装准备 磁盘准备 我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。
-安装介质 https://www.archlinux.org/download/ 建议从下面的中国镜像下载iso文件
-https://rufus.ie/ 我们用Rufus来制作引导盘，此步需要用到一个空闲U盘。需要注意的是写入方式选择DD，分区类型选择GPT而非默认的MBR。
-设置启动顺序 接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭security boot，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。
-安装过程 正确设置好启动顺序后，启动时会看到ArchLinux的界面，按Enter键选择 Boot Arch Linux ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲Arch安装到之前准备的磁盘上。
-*网络连接 Arch的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。
-输入
-iwctl 进入iwd模式，输入
-device list 查看你的网卡名字，这里假设是wlan0，输入
-station wlan0 scan 检查扫描网络，输入
-station wlan0 get-networks 查看网络名字，假设名字叫XXX，输入
-station wlan0 connect XXX 接着输入密码（如果有密码的话），输入
-exit 退出iwd模式
-我们可以用ping命令来检验下是否连接成功
-ping -c 4 baidu.com 接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。
-reflector --country China --age 24 --sort rate --portocol https --save /etc/pacman.d/mirrorlist  country 限定国家 age 24 限定下更新时间为24小时内的源 portocol https 选择https协议更安全  执行完毕后，可以用vim查看</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Linux on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/linux/</link>
+        <description>Recent content in Linux on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ubuntu 20.04 终端插件配置与美化</title>
+        <link>https://bestoko.cc/p/zsh/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/zsh/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
+&lt;h2 id=&#34;zsh&#34;&gt;Zsh&lt;/h2&gt;
+&lt;p&gt;安装 zsh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将 zsh 设置为默认 shell&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chsh -s /bin/zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;你可以用&lt;code&gt;echo $SHELL&lt;/code&gt; 指令来查看当前的默认 shell 是否修改成功.&lt;/p&gt;
+&lt;h2 id=&#34;oh-my-zsh&#34;&gt;oh-my-zsh&lt;/h2&gt;
+&lt;p&gt;安装 oh-my-zsh&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh -c &amp;#34;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装一些实用插件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#自动补齐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-autosuggestions
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#语法高亮
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zsh-syntax-highlighting
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#自动跳转
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install autojump
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置插件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#在 plugins 行添加插件名,如:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plusgins=(git zsh-autosuggestions zsh-syntax-highlighting)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#最后一行添加
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;. /usr/share/autojump/autojump.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#使配置生效
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;source ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;powerlevel10k&#34;&gt;Powerlevel10k&lt;/h2&gt;
+&lt;p&gt;安装 Powerlevel10k&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#修改 ZSH_THEME=&amp;#34;powerlevel10k/powerlevel10k&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;source ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装字体 (便于显示各种特殊符号和图表)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[MesloLGS NF Regular.ttf](&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&lt;/a&gt; NF Regular.ttf)&lt;/li&gt;
+&lt;li&gt;[MesloLGS NF Bold.ttf](&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&lt;/a&gt; NF Bold.ttf)&lt;/li&gt;
+&lt;li&gt;[MesloLGS NF Italic.ttf](&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&lt;/a&gt; NF Italic.ttf)&lt;/li&gt;
+&lt;li&gt;[MesloLGS NF Bold Italic.ttf](&lt;a class=&#34;link&#34; href=&#34;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS&lt;/a&gt; NF Bold Italic.ttf)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最后启动终端跟着向导配置,或者 &lt;code&gt;p10k configure&lt;/code&gt; 就可以完成配置了.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Arch Linux与Win11双系统修复grub引导</title>
+        <link>https://bestoko.cc/p/grubfix/</link>
+        <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/grubfix/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+&lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S prober
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装 os-prober , 这个工具可以帮助自动发现包含windows的分区&lt;/p&gt;
+&lt;p&gt;(如果你的windows分区启用了bitlocker, 你可能还需要先使用&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/dislocker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dislocker&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;接着:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你得到以下输出：&lt;code&gt;Warning: os-prober will not be executed to detect other bootable partitions&lt;/code&gt;，你需要编辑&lt;code&gt;/etc/default/grub&lt;/code&gt;并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_DISABLE_OS_PROBER=false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>我的Linux科学上网方案</title>
+        <link>https://bestoko.cc/p/linux-clash-for-windows/</link>
+        <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-clash-for-windows/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-clash-for-windows/cfw.png" alt="Featured image of post 我的Linux科学上网方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本文不讨论科学上网的对错&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本文不教学代理服务器部署&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本文不推荐任何机场&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linux平台有很多成熟可靠的科学上网工具，本文仅列出我所推荐使用的，其余方案请自行搜索。&lt;/p&gt;
+&lt;h2 id=&#34;clash-for-windows&#34;&gt;Clash for windows&lt;/h2&gt;
+&lt;p&gt;Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clash for Windows&lt;/a&gt; (cfw)是一个&lt;code&gt;Windows/macOS/Linux&lt;/code&gt;下的clash图形化客户端。
+&lt;strong&gt;支持的协议：&lt;/strong&gt; &lt;code&gt;Vmess&lt;/code&gt;, &lt;code&gt;Shadowsocks&lt;/code&gt;, &lt;code&gt;Snell&lt;/code&gt; , &lt;code&gt;Sock5&lt;/code&gt; , &lt;code&gt;ShadowsocksR&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;p&gt;你可以直接从&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cfw的github页&lt;/a&gt;下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。&lt;/p&gt;
+&lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;code&gt;Arch Linux&lt;/code&gt;为例安装&lt;code&gt;Flatpak&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S flatpak
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[注]如果只为了使用cfw的话，其实Arch Linux不必多次一举，&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/clash-for-windows-bin/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AUR&lt;/a&gt;上已经有人打包好了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S clash-for-windows-bin 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;安装&lt;code&gt;cfw&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flatpak install flathub io.github.Fndroid.clash_for_windows
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;p&gt;打开 Clash for Windows ，在左侧的标签页选择&lt;code&gt;Profiles&lt;/code&gt;， 在顶部输入 &lt;code&gt;Clash 订阅链接&lt;/code&gt; ，然后点击&lt;code&gt;Download&lt;/code&gt;按钮。&lt;/p&gt;
+&lt;p&gt;Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息&lt;code&gt;Success!&lt;/code&gt;，并且可以看到一个新增的配置文件。&lt;/p&gt;
+&lt;p&gt;点击新增的配置文件来切换到该配置，然后点击&lt;code&gt;Proxies &lt;/code&gt;标签页来切换接入点，将顶部的出站模式选择为&lt;code&gt;Rule&lt;/code&gt;。
+此模式下你的网络访问请求将通过 Clash for Windows 进行&lt;strong&gt;分流处理&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34;
+	width=&#34;1052&#34;
+	height=&#34;767&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu80a4b31ab0a62c53818da32d3541ff36_92847_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu80a4b31ab0a62c53818da32d3541ff36_92847_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;clash-proxies&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;329px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;Proxy&lt;/code&gt;策略组中选择所想要使用的接入点。Proxy 策略组是用于访问国际网络的默认策略，在不进行其他修改的情况下，所有国际网络的访问都通过 Proxy 策略组中选择的接入点进行。&lt;/p&gt;
+&lt;p&gt;图中所示的其它策略组为本人出于自身实际需求自行配置的，请以自己的实际配置为准。&lt;/p&gt;
+&lt;p&gt;此外你还需要在系统设置里，配置好cfw的代理。默认端口为7890。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34;
+	width=&#34;1582&#34;
+	height=&#34;612&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_huff10fc32df514431708030955dfee9cd_133203_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_huff10fc32df514431708030955dfee9cd_133203_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;proxy-settings&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;620px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;常用的科学上网设置到此结束。&lt;/p&gt;
+&lt;h2 id=&#34;补充设置&#34;&gt;补充设置&lt;/h2&gt;
+&lt;p&gt;有时执行wget或curl来下载国外的东西，需要临时在终端启用代理时，可以使用如下命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Gnome农历插件安装踩坑记录</title>
+        <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
+        <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lunar Calendar 农历&lt;/a&gt;，直接安装会因为缺少依赖报错，搜到的&lt;a class=&#34;link&#34; href=&#34;https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rpm包&lt;/a&gt;也无法正常安装，查了下需要手动编译安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/yetist/lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;fedora35-编译安装lunar-date&#34;&gt;Fedora35 编译安装lunar-date&lt;/h2&gt;
+&lt;p&gt;github页给的安装指南如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;meson build --prefix /usr -Ddocs&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dintrospection&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dvapi&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dtests&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ninja -C build/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ninja -C build install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以首先&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install meson ninja-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于&lt;code&gt;dnf install&lt;/code&gt;,可以在&lt;a class=&#34;link&#34; href=&#34;https://command-not-found.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;command-not-found.com&lt;/a&gt; 查询所需安装指令。以我为例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install vala gtk-doc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着重新安装插件就可以正常启用了。&lt;/p&gt;
+&lt;h2 id=&#34;额外可选设置&#34;&gt;额外可选设置&lt;/h2&gt;
+&lt;p&gt;默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（&lt;strong&gt;真的很难看&lt;/strong&gt;），解决办法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
+	width=&#34;2736&#34;
+	height=&#34;1824&#34;
+	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;效果展示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Grub2主题美化踩坑记录</title>
+        <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
+        <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;下载主题&#34;&gt;下载主题&lt;/h2&gt;
+&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MacOS Monterey inspired grub theme&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_480x0_resize_box_3.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;展示效果&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修改etcdefaultgrub文件&#34;&gt;修改/etc/default/grub文件&lt;/h2&gt;
+&lt;p&gt;首先，注释掉&lt;code&gt;GRUB_TERMINAL_OUTPUT=”console”&lt;/code&gt;,接着设置好你的GRUB主题路径。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#GRUB_TERMINAL_OUTPUT=”console”
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;此外这个文件里还有几个常用的设置
+&lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;   可以设置超时时间，设置-1可以取消倒计时
+&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置&lt;/h2&gt;
+&lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;而如果是启动方式是Legacy的话，启动时读取的文件是&lt;code&gt;/boot/grub2/grub.cfg&lt;/code&gt;，更新命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着&lt;code&gt;reboot&lt;/code&gt;即可看到效果。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
+        <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
+        <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
+&lt;h2 id=&#34;报错信息&#34;&gt;报错信息&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
+	width=&#34;630&#34;
+	height=&#34;497&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;error&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;304px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;VirtualBox Linux 内核驱动程序未加载或未正确设置。&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
+&lt;p&gt;执行如下命令，重新安装vboxdrv模块&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo modprobe vboxdrv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果不起作用，检查下是否在BIOS/UEFI设置中禁用安全启动（Secure Boot），因为安全启动会阻止加载未签名的模块。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux与Windows双系统时间不一致的解决方法</title>
+        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
+        <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+&lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
+&lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;推荐的解决办法&#34;&gt;推荐的解决办法&lt;/h2&gt;
+&lt;p&gt;Windows 其实也能处理 UTC，需要修改注册表。建议&lt;strong&gt;让 Windows 使用 UTC，而非让 Linux 使用地方时&lt;/strong&gt;。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。&lt;/p&gt;
+&lt;p&gt;Linux 可以使用&lt;strong&gt;NTP服务&lt;/strong&gt;来在线同步硬件时钟。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;regedit&lt;/code&gt;,新建如下 DWORD 值，并将其值设为十六进制的 &lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;也可以用管理员权限启动命令行来完成：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reg add &amp;#34;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&amp;#34; /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果以上操作不起作用，并且你使用的是 Windows 64位系统，将 &lt;code&gt;DWORD&lt;/code&gt; 修改为 &lt;code&gt;QWORD&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;参考：https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
+        <link>https://bestoko.cc/p/snaps-mstodo/</link>
+        <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
+&lt;p&gt;虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;snaps安装与配置&#34;&gt;Snaps安装与配置&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。&lt;/p&gt;
+&lt;h3 id=&#34;安装snap软件包&#34;&gt;安装Snap软件包&lt;/h3&gt;
+&lt;p&gt;首先，赞美&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/snapd/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AUR&lt;/a&gt;，&lt;code&gt;snapd&lt;/code&gt;及其依赖包&lt;code&gt;snap-confine&lt;/code&gt;和&lt;code&gt;squashfs-tools&lt;/code&gt;都在仓库里了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S snapd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;启动守护进程&#34;&gt;启动守护进程&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --now snapd.socket
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;启用classic-snap-support&#34;&gt;启用classic snap support&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ln -s /var/lib/snapd/snap /snap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着&lt;code&gt;log out&lt;/code&gt;或者&lt;code&gt;reboot&lt;/code&gt;一下来确保&lt;code&gt;snap&lt;/code&gt;的路径正确更新。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strict&lt;/p&gt;
+&lt;p&gt;Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).&lt;/p&gt;
+&lt;p&gt;Classic&lt;/p&gt;
+&lt;p&gt;Allows access to your system’s resources in much the same way traditional packages do. To safeguard against abuse, publishing a classic snap requires manual approval, and installation requires the &amp;ndash;classic command line argument.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以上是&lt;code&gt;Snap&lt;/code&gt;官方给出的定义，&lt;code&gt;classic&lt;/code&gt;是与&lt;code&gt;strict&lt;/code&gt;相对的。在默认情况下，&lt;code&gt;Snap&lt;/code&gt;使用的是&lt;code&gt;strict&lt;/code&gt;模式，对安全权限做了极高的要求与限制，而&lt;code&gt;classic&lt;/code&gt;就和传统的安装包一样对安全权限没有限制，其实这里的&lt;code&gt;classic&lt;/code&gt;就约等于确认已知不安全的风险的含义。&lt;/p&gt;
+&lt;h2 id=&#34;安装microsoft-to-dounofficial&#34;&gt;安装MicroSoft To-Do(unofficial)&lt;/h2&gt;
+&lt;p&gt;安装并配置好&lt;code&gt;snap&lt;/code&gt;后就很简单了：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install micro-soft-todo-unofficial
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;日后更新：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap refresh micro-soft-todo-unofficial
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果要卸载：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap remove micro-soft-todo-unofficial
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Arch Linux上修改Code-OSS扩展源</title>
+        <link>https://bestoko.cc/p/code-oss-extensions/</link>
+        <pubDate>Mon, 20 Dec 2021 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux上修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
+&lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我之前使用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S code
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;所安装的正是Code-OSS ，默认不使用微软官方扩展市场。&lt;/p&gt;
+&lt;h2 id=&#34;方法一&#34;&gt;方法一&lt;/h2&gt;
+&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;extensionsGallery&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s2&#34;&gt;&amp;#34;serviceUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/_apis/public/gallery&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s2&#34;&gt;&amp;#34;cacheUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://vscode.blob.core.windows.net/gallery/index&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;s2&#34;&gt;&amp;#34;itemUrl&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://marketplace.visualstudio.com/items&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重新启动&lt;code&gt;Code-OSS&lt;/code&gt;就可以了。&lt;/p&gt;
+&lt;h2 id=&#34;方法二&#34;&gt;方法二&lt;/h2&gt;
+&lt;p&gt;方法一正常使用一段时间后，在某次重启后出现打不开&lt;code&gt;Code-OSS&lt;/code&gt;的情况，所幸从&lt;code&gt;AUR&lt;/code&gt;上找到了另一个包解决了问题，记录在此。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S code-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
+        <link>https://bestoko.cc/p/surface-linux/</link>
+        <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/surface-linux/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;这里&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动&lt;/h2&gt;
+&lt;h3 id=&#34;导入密钥&#34;&gt;导入密钥&lt;/h3&gt;
+&lt;p&gt;首先我们需要导入用于签名软件包的密钥：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo pacman-key --add -
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;检查完整性并本地签名&#34;&gt;检查完整性并本地签名&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman-key --finger 56C464BAAC421453
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman-key --lsign-key 56C464BAAC421453
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;添加存储库&#34;&gt;添加存储库&lt;/h3&gt;
+&lt;p&gt;我们需要在&lt;code&gt;/etc/pacman.conf&lt;/code&gt;添加如下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;linux-surface&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; https://pkg.surfacelinux.com/arch/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;更新存储库数据安装内核启用服务&#34;&gt;更新存储库数据，安装内核，启用服务&lt;/h3&gt;
+&lt;p&gt;我们需要更新存储库数据，以安装&lt;code&gt;linux-surface&lt;/code&gt;内核及其依赖项，接着启用&lt;code&gt;iptsd&lt;/code&gt;服务以使用触摸屏。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman -S linux-surface linux-surface-headers iptsd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; iptsd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重启以后就完工了，屏幕触摸也支持了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Arch Linux安装备忘录（二）</title>
+        <link>https://bestoko.cc/p/archinstallextra/</link>
+        <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/archinstallextra/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
+&lt;h2 id=&#34;配置网络&#34;&gt;配置网络&lt;/h2&gt;
+&lt;p&gt;我们使用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nmtui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;选择&lt;code&gt;Edit a connection&lt;/code&gt;，&lt;/p&gt;
+&lt;p&gt;选择&lt;code&gt;Add&lt;/code&gt;菜单，选择&lt;code&gt;WI-FI&lt;/code&gt;，&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Device&lt;/code&gt; 里输入 无线网卡的名字，&lt;code&gt;SSID&lt;/code&gt;里输入&lt;code&gt;WI-FI&lt;/code&gt;的名字，&lt;code&gt;Security&lt;/code&gt;选择&lt;code&gt;WPA &amp;amp;WPA2 Personal&lt;/code&gt;，OK-BACK-Quit退出。&lt;/p&gt;
+&lt;p&gt;注：使用以下命令查看无线网卡名称&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip link show
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;重命名主机&#34;&gt;重命名主机&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/hostname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;保存想要的名字后退出。&lt;/p&gt;
+&lt;p&gt;接下来把主机名、域名以及ip地址进行映射&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/hosts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;输入：(以下&lt;code&gt;archlinux&lt;/code&gt;为上文所保存的主机名)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1		localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;::1		localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1 archlinux.localdomain	archlinux
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;设置系统时间&#34;&gt;设置系统时间&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timedatectl set-timezone Asia/shanghai
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timedatectl set-ntp &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;第二行设置为让本机时间与&lt;code&gt;ntp&lt;/code&gt;同步。&lt;/p&gt;
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/skel/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;添加以下内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;EDITOR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;vim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;grep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;egrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;egrep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;fgrep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fgrep ==color=auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e ~/.dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -p &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ！ -e /bin/dircolors &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dircolors -b &amp;gt; ~/.dircolors&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将&lt;code&gt;bash shell&lt;/code&gt; 默认的文本编辑器设置为&lt;code&gt;vim&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;为&lt;code&gt;grep&lt;/code&gt;，&lt;code&gt;egrep&lt;/code&gt;，&lt;code&gt;fgrep&lt;/code&gt;搜索出的内容添加颜色&lt;/p&gt;
+&lt;p&gt;为看到的文件以及文件夹添加颜色&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -a . ~
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;新建标准用户&#34;&gt;新建标准用户&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;useradd --create-home username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usermod -aG wheel,users,storage,power,lp,adm,optical username
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;username&lt;/code&gt;替换为你所使用的名字，在创建时同时在&lt;code&gt;/home&lt;/code&gt;目录下会创建一个与用户名同名的文件夹。家目录有一个别名是&lt;code&gt;~&lt;/code&gt;，你可以在任何地方使用&lt;code&gt;~&lt;/code&gt;来代替家目录路径。&lt;/p&gt;
+&lt;h2 id=&#34;配置sudo&#34;&gt;配置sudo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;visudo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将&lt;code&gt;# %wheel ALL=(ALL) ALL&lt;/code&gt; 前的&lt;code&gt;#&lt;/code&gt;号去除（去注释），保存退出。&lt;/p&gt;
+&lt;h2 id=&#34;中英字体和图形界面的安装&#34;&gt;中英字体和图形界面的安装&lt;/h2&gt;
+&lt;h3 id=&#34;安装xorg&#34;&gt;安装Xorg&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Xorg&lt;/code&gt;是&lt;code&gt;Linux&lt;/code&gt;下的一个著名的开源图形服务，我们的桌面环境需要&lt;code&gt;Xorg&lt;/code&gt;的支持。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S xorg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
+	width=&#34;955&#34;
+	height=&#34;350&#34;
+	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;272&#34;
+		data-flex-basis=&#34;654px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;参照如上表格安装相应的包，以&lt;code&gt;Surface Pro&lt;/code&gt; 为例，需要安装&lt;code&gt;intel&lt;/code&gt;的集成显卡驱动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S xf86-video-intel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装字体&#34;&gt;安装字体&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/locales.gen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将&lt;code&gt;en_US.UTF-8 UTF8&lt;/code&gt; &lt;code&gt;zh_CN.UTF-8 UTF8&lt;/code&gt;前的#删除（去注释），保存退出。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/locale.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LANG=en_US.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果想生成中文，就改成&lt;code&gt;LANG=zh_TW.UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接着生成字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;locale-gen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接下来安装英文字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S ttf-dejavu ttf-droid ttf-hack ttf-font-awesome otf-font-awesome ttf-lato ttf-liberation ttf-linux-libertine ttf-opensans ttf-roboto ttf-ubuntu-font-family
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;再然后是安装中文字体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S ttf-hanom noto-fonts noto-fonts noto-fonts-extra not-fonts-emoji noto-fonts-cjk adobe-source-code-pro-fonts adobe-source-sans-fonts adobe-source-serif-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts wqy-zenhei wqy-microhei
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;打开&lt;code&gt;freetype2&lt;/code&gt;字体引擎&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/profile.d/freetype2.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将最后一行去注释后保存退出。&lt;/p&gt;
+&lt;h3 id=&#34;安装桌面环境&#34;&gt;安装桌面环境&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;下有很多桌面环境如&lt;code&gt;Xfce&lt;/code&gt;、&lt;code&gt;KDE(Plasma)&lt;/code&gt;、&lt;code&gt;Gnome&lt;/code&gt;、&lt;code&gt;Unity&lt;/code&gt;、&lt;code&gt;Deepin&lt;/code&gt;等等，它们的外观、操作、设计理念等各方面都有所不同，这里我们选择&lt;code&gt;Gnome&lt;/code&gt;为例，进行安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S gnome gnome-extra gdm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装好了桌面环境包以后，我们需要安装一个图形化的桌面管理器来帮助我们登录并且选择我们使用的桌面环境，这里我使用上面的&lt;code&gt;gdm&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; gdm.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装声音以及打印机系统&#34;&gt;安装声音以及打印机系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;清楚安装缓存以及无用源&#34;&gt;清楚安装缓存以及无用源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -Scc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着重启即可进入&lt;code&gt;Gnome&lt;/code&gt;桌面&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;至此，&lt;code&gt;ArchLinux&lt;/code&gt;基本安装与必要设置和图形界面都已经安装完毕。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Arch Linux安装备忘录（一）</title>
+        <link>https://bestoko.cc/p/archinstall/</link>
+        <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/archinstall/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
+&lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;
+&lt;h2 id=&#34;安装准备&#34;&gt;安装准备&lt;/h2&gt;
+&lt;h3 id=&#34;磁盘准备&#34;&gt;磁盘准备&lt;/h3&gt;
+&lt;p&gt;我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。&lt;/p&gt;
+&lt;h3 id=&#34;安装介质&#34;&gt;安装介质&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.archlinux.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.archlinux.org/download/&lt;/a&gt; 建议从下面的中国镜像下载iso文件&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rufus.ie/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rufus.ie/&lt;/a&gt;  我们用Rufus来制作引导盘，&lt;strong&gt;此步需要用到一个空闲U盘&lt;/strong&gt;。需要注意的是写入方式选择DD，分区类型选择GPT而非默认的MBR。&lt;/p&gt;
+&lt;h3 id=&#34;设置启动顺序&#34;&gt;设置启动顺序&lt;/h3&gt;
+&lt;p&gt;接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭&lt;code&gt;security boot&lt;/code&gt;，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。&lt;/p&gt;
+&lt;h2 id=&#34;安装过程&#34;&gt;安装过程&lt;/h2&gt;
+&lt;p&gt;正确设置好启动顺序后，启动时会看到&lt;code&gt;ArchLinux&lt;/code&gt;的界面，按&lt;code&gt;Enter键&lt;/code&gt;选择 &lt;code&gt;Boot Arch Linux&lt;/code&gt; ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲&lt;code&gt;Arch&lt;/code&gt;安装到之前准备的磁盘上。&lt;/p&gt;
+&lt;h3 id=&#34;网络连接&#34;&gt;*网络连接&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Arch&lt;/code&gt;的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iwctl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;进入&lt;code&gt;iwd&lt;/code&gt;模式，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;device list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看你的网卡名字，这里假设是&lt;code&gt;wlan0&lt;/code&gt;，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;station wlan0 scan
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;检查扫描网络，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;station wlan0 get-networks
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看网络名字，假设名字叫&lt;code&gt;XXX&lt;/code&gt;，输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;station wlan0 connect XXX
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着输入密码（如果有密码的话），输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;退出iwd模式&lt;/p&gt;
+&lt;p&gt;我们可以用&lt;code&gt;ping&lt;/code&gt;命令来检验下是否连接成功&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping -c &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; baidu.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接下来我们需要让安装介质里的数据库保持与官方一致的最新版本，因此需要同步一下，在此之前，我们可以配置下最新的镜像来保证下载速度。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reflector --country China --age &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; --sort rate --portocol https --save /etc/pacman.d/mirrorlist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;country 限定国家&lt;/li&gt;
+&lt;li&gt;age 24 限定下更新时间为24小时内的源&lt;/li&gt;
+&lt;li&gt;portocol https 选择https协议更安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;执行完毕后，可以用vim查看&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/pacman.d/mirrorlist
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区&lt;/h3&gt;
+&lt;p&gt;检查磁盘&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lsblk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用gdisk命令进行分区&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gdisk  /dev/nvme0n1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其中nvme01 为你之前准备的磁盘。&lt;/p&gt;
+&lt;p&gt;一路默认回车到Last sector 部分，因为我们准备用作启动分区，准备分配512M，所以输入+512M回车，接着输入分区编号ef00。这样第一个分区完成，接着第二个分区笔者分配了+235G，并使用默认的分区编号8300（Linux filesystem），最后剩下2G左右空间一路默认，分区编号输入8200（Linux swap）。确认无误后，w保存quit退出。&lt;/p&gt;
+&lt;p&gt;接着格式化我们的三个分区，将nvme01p1格式化为vfat&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfs.vfat /dev/nvme01p1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将nvme01p2格式化为ext4或者xfs（推荐）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfs.xfs /dev/nvme01p2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最后&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkswap /dev/nvme01p3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;挂载分区&#34;&gt;挂载分区&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/nvme01p2 /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p /mnt/boot/efi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/nvme01p1 /mnt/boot/efi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;swapon /dev/nvme01p3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装基本包&#34;&gt;安装基本包&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置fstab&#34;&gt;配置Fstab&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /mnt/etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认下是否挂载无误&lt;/p&gt;
+&lt;h4 id=&#34;chroot&#34;&gt;chroot&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arch-chroot /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;安装必须软件包&#34;&gt;安装必须软件包&lt;/h4&gt;
+&lt;p&gt;现在我们已经&lt;code&gt;Chroot&lt;/code&gt;到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。&lt;code&gt;ArchLinux&lt;/code&gt;有非常强大的包管理工具&lt;code&gt;pacman&lt;/code&gt;，大部分情况下，一行命令就可以搞定包与依赖的问题。&lt;/p&gt;
+&lt;p&gt;安装包的命令格式为&lt;code&gt;pacman -S 包名&lt;/code&gt;，&lt;code&gt;pacman&lt;/code&gt;会自动检查这个包所需要的其他包（即为依赖）并一起装上。下面我们就通过&lt;code&gt;pacman&lt;/code&gt;来安装一些包，这些包在之后会用上，在这里先提前装好。&lt;/p&gt;
+&lt;p&gt;执行如下命令（注意大小写，大小写错误会导致包无法找到）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S grub efibootmgr efivar networkmanager intel-ucode
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;AMD用户请将&lt;code&gt;intel-ucode&lt;/code&gt;替换成&lt;code&gt;amd-ucode&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;安装bootloader&#34;&gt;安装Bootloader&lt;/h4&gt;
+&lt;p&gt;部署&lt;code&gt;grub&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grub-install /dev/nvme01 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;修改配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/default/grub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将&lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;改成&lt;code&gt;GRUB_TIMEOUT=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;loglevel=3 quiet&amp;quot;&lt;/code&gt; 的&lt;code&gt;quiet&lt;/code&gt;字段删除，这样登录的时候会有日志，如果出现错误可以查看日志文件。&lt;/p&gt;
+&lt;p&gt;接着将&lt;code&gt;GRUB_GFXMODE=auto&lt;/code&gt;修改为你的分辨率，以我的surface为例，改为&lt;code&gt;GRUB_GFXMODE=2736x1824&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接着生成grub的配置文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;设置networkmanager开机自动启动&#34;&gt;设置NetworkManager开机自动启动&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; NetworkManager
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;为root用户设置密码&#34;&gt;为root用户设置密码&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;卸载分区-拔除介质&#34;&gt;卸载分区 拔除介质&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /mnt/boot/efi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /mnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;拔除介质重新启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reboot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&amp;hellip;.以及一些实用软件包。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

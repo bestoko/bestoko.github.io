@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.
 下面给出一个简单的解决办法:
-sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
+1  sudo pacman -S prober   安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
 (如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)
 接着:
-sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
+1  sudo grub-mkconfig -o /boot/grub/grub.cfg   利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
  如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：
-GRUB_DISABLE_OS_PROBER=false  '><title>Arch Linux与Win11双系统修复grub引导</title>
+1  GRUB_DISABLE_OS_PROBER=false    '><title>Arch Linux与Win11双系统修复grub引导</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/grubfix/'>
 
-<link rel="stylesheet" href="/scss/style.min.775dbd4fd34fda61c5273b4bc3415f7c9666414fb6c40aab164a7ded4397da98.css"><meta property='og:title' content='Arch Linux与Win11双系统修复grub引导'>
+<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Arch Linux与Win11双系统修复grub引导'>
 <meta property='og:description' content='自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.
 下面给出一个简单的解决办法:
-sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
+1  sudo pacman -S prober   安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
 (如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)
 接着:
-sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
+1  sudo grub-mkconfig -o /boot/grub/grub.cfg   利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
  如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：
-GRUB_DISABLE_OS_PROBER=false  '>
+1  GRUB_DISABLE_OS_PROBER=false    '>
 <meta property='og:url' content='https://bestoko.cc/p/grubfix/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Windows 11' /><meta property='article:tag' content='Grub' /><meta property='article:published_time' content='2022-03-05T19:19:15&#43;08:00'/><meta property='article:modified_time' content='2022-03-05T19:19:15&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/grubfix/fix-grub.jpg' />
@@ -28,12 +28,12 @@ GRUB_DISABLE_OS_PROBER=false  '>
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Arch Linux与Win11双系统修复grub引导">
 <meta name="twitter:description" content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.
 下面给出一个简单的解决办法:
-sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
+1  sudo pacman -S prober   安装 os-prober , 这个工具可以帮助自动发现包含windows的分区
 (如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)
 接着:
-sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
+1  sudo grub-mkconfig -o /boot/grub/grub.cfg   利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.
  如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：
-GRUB_DISABLE_OS_PROBER=false  "><meta name="twitter:card" content="summary_large_image">
+1  GRUB_DISABLE_OS_PROBER=false    "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/grubfix/fix-grub.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -51,8 +51,8 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page 
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -75,33 +75,28 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        on-phone--column extended
-    
-">
-    
-        <aside class="sidebar left-sidebar sticky">
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
     </button>
 
-    <header class="site-info">
+    <header>
         
             
             <figure class="site-avatar">
+                <a href="/">
                 
                     
                     
                     
                         
-                        <img src="/img/avatar_hubc064892ed91f6e0ab6d7f33bbc11b4b_51957_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hubb7d04249aaf640d3f66feadcb30cad0_219321_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
-
+                </a>
                 
                     <span class="emoji">🍥</span>
                 
@@ -109,69 +104,70 @@ if (!doNotTrack) {
             
         
         
-        <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
-        <h2 class="site-description">Keep Learning</h2><ol class="social-menu">
-                
-                    <li>
-                        <a 
-                            href='https://github.com/bestoko'
-                            target="_blank"
-                            title="GitHub"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Keep Learning</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a 
-                            href='https://t.me/bestoko'
-                            target="_blank"
-                            title="Telegram"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a 
-                            href='https://twitter.com/bestokoCC'
-                            target="_blank"
-                            title="Twitter"
-                        >
-                            
-                            
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
 </svg>
 
 
 
-                            
-                        </a>
-                    </li>
-                
-            </ol></header>
-
-    <ol class="menu" id="main-menu">
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
         
         
         
@@ -277,9 +273,11 @@ if (!doNotTrack) {
         </li>
         
 
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -287,7 +285,7 @@ if (!doNotTrack) {
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -295,13 +293,12 @@ if (!doNotTrack) {
 
 
 
-                <span>Dark Mode</span>
-            </li>
-        
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
     </ol>
 </aside>
-
-    
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
@@ -329,11 +326,13 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/grubfix/">Arch Linux与Win11双系统修复grub引导</a>
-    </h2>
-
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/grubfix/">Arch Linux与Win11双系统修复grub引导</a>
+        </h2>
     
+        
+    </div>
 
     
     <footer class="article-time">
@@ -355,23 +354,48 @@ if (!doNotTrack) {
         
     </footer>
     
+
+    
 </div>
 </header>
 
     <section class="article-content">
+    
+    
     <p>自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.</p>
 <p>下面给出一个简单的解决办法:</p>
-<pre tabindex="0"><code>sudo pacman -S prober
-</code></pre><p>安装 os-prober , 这个工具可以帮助自动发现包含windows的分区</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo pacman -S prober
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装 os-prober , 这个工具可以帮助自动发现包含windows的分区</p>
 <p>(如果你的windows分区启用了bitlocker, 你可能还需要先使用<a class="link" href="https://aur.archlinux.org/packages/dislocker/"  target="_blank" rel="noopener"
     >dislocker</a>)</p>
 <p>接着:</p>
-<pre tabindex="0"><code>sudo grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre><p>利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.</p>
 <blockquote>
 <p>如果你得到以下输出：<code>Warning: os-prober will not be executed to detect other bootable partitions</code>，你需要编辑<code>/etc/default/grub</code>并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：</p>
-<pre tabindex="0"><code>GRUB_DISABLE_OS_PROBER=false
-</code></pre></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GRUB_DISABLE_OS_PROBER=false
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 
 </section>
 
@@ -411,14 +435,14 @@ if (!doNotTrack) {
 
     
 
-    <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">Related contents</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/linux-virtualbox-error/">
         
@@ -440,8 +464,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/linux-windows-time-conflict/">
         
@@ -463,8 +487,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/snaps-mstodo/">
         
@@ -486,8 +510,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/code-oss-extensions/">
         
@@ -509,8 +533,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/surface-linux/">
         
@@ -532,10 +556,9 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
-                
-            </div>
+            
         </div>
-    
+    </div>
 </aside>
 
      
@@ -594,7 +617,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.10.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -663,11 +686,11 @@ if (!doNotTrack) {
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
@@ -683,7 +706,7 @@ if (!doNotTrack) {
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

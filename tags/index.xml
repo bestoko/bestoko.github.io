@@ -1,299 +1,267 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/tags/</link>
-    <description>Recent content in Tags on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Linux</title>
-      <link>https://bestoko.cc/tags/linux/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>oh-my-zsh</title>
-      <link>https://bestoko.cc/tags/oh-my-zsh/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/oh-my-zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Powerlevel10k</title>
-      <link>https://bestoko.cc/tags/powerlevel10k/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/powerlevel10k/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://bestoko.cc/tags/ubuntu/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zsh</title>
-      <link>https://bestoko.cc/tags/zsh/</link>
-      <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arch</title>
-      <link>https://bestoko.cc/tags/arch/</link>
-      <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/arch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Grub</title>
-      <link>https://bestoko.cc/tags/grub/</link>
-      <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/grub/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows 11</title>
-      <link>https://bestoko.cc/tags/windows-11/</link>
-      <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/windows-11/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>https://bestoko.cc/tags/android/</link>
-      <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android Framework</title>
-      <link>https://bestoko.cc/tags/android-framework/</link>
-      <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/android-framework/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://bestoko.cc/tags/notes/</link>
-      <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Clash for windows</title>
-      <link>https://bestoko.cc/tags/clash-for-windows/</link>
-      <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/clash-for-windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>科学上网</title>
-      <link>https://bestoko.cc/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
-      <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fedora</title>
-      <link>https://bestoko.cc/tags/fedora/</link>
-      <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/fedora/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gnome Shell</title>
-      <link>https://bestoko.cc/tags/gnome-shell/</link>
-      <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/gnome-shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gurb2 Theme</title>
-      <link>https://bestoko.cc/tags/gurb2-theme/</link>
-      <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/gurb2-theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virtual Box</title>
-      <link>https://bestoko.cc/tags/virtual-box/</link>
-      <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/virtual-box/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://bestoko.cc/tags/windows/</link>
-      <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MicroSoft To-Do</title>
-      <link>https://bestoko.cc/tags/microsoft-to-do/</link>
-      <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/microsoft-to-do/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Snap</title>
-      <link>https://bestoko.cc/tags/snap/</link>
-      <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/snap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code-OSS</title>
-      <link>https://bestoko.cc/tags/code-oss/</link>
-      <pubDate>Mon, 20 Dec 2021 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/code-oss/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Surface</title>
-      <link>https://bestoko.cc/tags/surface/</link>
-      <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/surface/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Edxposed</title>
-      <link>https://bestoko.cc/tags/edxposed/</link>
-      <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/edxposed/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mgasik</title>
-      <link>https://bestoko.cc/tags/mgasik/</link>
-      <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/mgasik/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>刷机</title>
-      <link>https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/</link>
-      <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algorithm</title>
-      <link>https://bestoko.cc/tags/algorithm/</link>
-      <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Leetcode</title>
-      <link>https://bestoko.cc/tags/leetcode/</link>
-      <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>算法</title>
-      <link>https://bestoko.cc/tags/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/%E7%AE%97%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>3ds</title>
-      <link>https://bestoko.cc/tags/3ds/</link>
-      <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/3ds/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GBA</title>
-      <link>https://bestoko.cc/tags/gba/</link>
-      <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/gba/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://bestoko.cc/tags/git/</link>
-      <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Markdown</title>
-      <link>https://bestoko.cc/tags/markdown/</link>
-      <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Tags on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/</link>
+        <description>Recent content in Tags on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 08 Mar 2022 20:56:36 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux</title>
+        <link>https://bestoko.cc/tags/linux/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>oh-my-zsh</title>
+        <link>https://bestoko.cc/tags/oh-my-zsh/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/oh-my-zsh/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Powerlevel10k</title>
+        <link>https://bestoko.cc/tags/powerlevel10k/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/powerlevel10k/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ubuntu</title>
+        <link>https://bestoko.cc/tags/ubuntu/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Zsh</title>
+        <link>https://bestoko.cc/tags/zsh/</link>
+        <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/zsh/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Arch</title>
+        <link>https://bestoko.cc/tags/arch/</link>
+        <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/arch/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Grub</title>
+        <link>https://bestoko.cc/tags/grub/</link>
+        <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/grub/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows 11</title>
+        <link>https://bestoko.cc/tags/windows-11/</link>
+        <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/windows-11/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Android</title>
+        <link>https://bestoko.cc/tags/android/</link>
+        <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/android/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Android Framework</title>
+        <link>https://bestoko.cc/tags/android-framework/</link>
+        <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/android-framework/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Notes</title>
+        <link>https://bestoko.cc/tags/notes/</link>
+        <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/notes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Clash for windows</title>
+        <link>https://bestoko.cc/tags/clash-for-windows/</link>
+        <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/clash-for-windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>科学上网</title>
+        <link>https://bestoko.cc/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+        <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Fedora</title>
+        <link>https://bestoko.cc/tags/fedora/</link>
+        <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/fedora/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gnome Shell</title>
+        <link>https://bestoko.cc/tags/gnome-shell/</link>
+        <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/gnome-shell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gurb2 Theme</title>
+        <link>https://bestoko.cc/tags/gurb2-theme/</link>
+        <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/gurb2-theme/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Virtual Box</title>
+        <link>https://bestoko.cc/tags/virtual-box/</link>
+        <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/virtual-box/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://bestoko.cc/tags/windows/</link>
+        <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MicroSoft To-Do</title>
+        <link>https://bestoko.cc/tags/microsoft-to-do/</link>
+        <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/microsoft-to-do/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Snap</title>
+        <link>https://bestoko.cc/tags/snap/</link>
+        <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/snap/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Code-OSS</title>
+        <link>https://bestoko.cc/tags/code-oss/</link>
+        <pubDate>Mon, 20 Dec 2021 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/code-oss/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Surface</title>
+        <link>https://bestoko.cc/tags/surface/</link>
+        <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/surface/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Edxposed</title>
+        <link>https://bestoko.cc/tags/edxposed/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/edxposed/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Mgasik</title>
+        <link>https://bestoko.cc/tags/mgasik/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/mgasik/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>刷机</title>
+        <link>https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/%E5%88%B7%E6%9C%BA/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Algorithm</title>
+        <link>https://bestoko.cc/tags/algorithm/</link>
+        <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/algorithm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Leetcode</title>
+        <link>https://bestoko.cc/tags/leetcode/</link>
+        <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/leetcode/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>算法</title>
+        <link>https://bestoko.cc/tags/%E7%AE%97%E6%B3%95/</link>
+        <pubDate>Fri, 10 Apr 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/%E7%AE%97%E6%B3%95/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>3ds</title>
+        <link>https://bestoko.cc/tags/3ds/</link>
+        <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/3ds/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GBA</title>
+        <link>https://bestoko.cc/tags/gba/</link>
+        <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/gba/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>git</title>
+        <link>https://bestoko.cc/tags/git/</link>
+        <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Markdown</title>
+        <link>https://bestoko.cc/tags/markdown/</link>
+        <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/markdown/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

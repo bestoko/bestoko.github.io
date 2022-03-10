@@ -1,63 +1,302 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Play on Toko&#39;s blog</title>
-    <link>https://bestoko.cc/categories/play/</link>
-    <description>Recent content in Play on Toko&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/play/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>一加8的Android 11 折腾指南</title>
-      <link>https://bestoko.cc/p/oneplus8/</link>
-      <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/oneplus8/</guid>
-      <description>准备工作   解锁Bootloader且打开USB调试的一加8
-  氢OS Android11 Rom包
-  Payload Dumber
-  platform-tools
-打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】
-  刷入Magisk 制作magisk_patched.img   将官方包内的payload.bin 解压并放入Payload Dumber 的payload_input目录
-  打开payload_dumper.exe（看到boot解压出来就可以关闭了）
-  打开payload_output目录，将解压出的boot.img复制到手机根目录
-  下载并安装Magisk最新版本 (https://github.com/topjohnwu/Magisk/releases)
-选择安装Magisk-选择并修补一个文件，选中放在根目录的boot.img ，等待修补完成
-  将手机download目录下的修补完成的magisk_patched.img复制到电脑
-  工具刷入mgisk_patched.img   将mgisk_patched.img放入 platform-tools 目录下
-  运行
-打开CMD命令行.bat  adb reboot bootloader fastboot flash boot_a magisk_patched.img fastboot flash boot_b magisk_patched.img fastboot reboot    刷入EdXposed  刷入Riru - Core模块 刷入Riru - EdXposed(YAHFA) 或Riru - EdXposed(SandHook)模块 安装最新的Edxposed Manager  总结与注意事项   制作mgisk_patched.</description>
-    </item>
-    
-    <item>
-      <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-      <link>https://bestoko.cc/p/gba2cia/</link>
-      <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
-      
-      <guid>https://bestoko.cc/p/gba2cia/</guid>
-      <description>前情提要 为什么要水这么一篇文章
-在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.
-我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了可能是现今最好的解决方案。
-准备工作   一台BOOT9STARP(B9S)破解的3ds
-参考3ds破解手册或者一只火狐大佬整理的教程(推荐)
-嫌麻烦的同学可以交给热心摊主处理
-  Ultimate GBA VC Injector for 3DS
-  汉化版下载链接
-  你想要在3ds上运行的GBA游戏ROM文件
-这里以漆黑的魅影为例（很棒的GBA宝可梦改版，我一直想在实机上玩）
-  GBA 转CIA  打开软件并导入下载好的.gba文件，ROM大小和存档类型会自动确认(汉化版ROM往往是数据库未找到该游戏，请确保选择的正确无误以免影响存档)   gba2cia1 
- gba2cia2 
- 填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)
- gba2cia3 
- gba2cia4 
-  设置VC参数并导出CIA文件(注意当转换多个.cia文件时，确保每个文件的产品代码及项目ID都不一样)
- gba2cia5 
-  在3ds上安装转换好的.cia文件
-  关于如何B9S如何安装cia文件这里不再赘述(实在懒得截图了)
- gba2cia6 
-大功告成~
-备注事项  据说部分老款3ds对这种方式转换的.cia支持不好，会出现黑屏情况(我的美版老小三反正测试是没问题啦) 港版不支持港版不支持港版不支持 存档类型一定要设置正确  </description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Play on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/categories/play/</link>
+        <description>Recent content in Play on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 28 Oct 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/play/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>一加8的Android 11 折腾指南</title>
+        <link>https://bestoko.cc/p/oneplus8/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;氢OS Android11 Rom包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payload Dumber&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;platform-tools&lt;/p&gt;
+&lt;p&gt;打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk&lt;/h1&gt;
+&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将官方包内的&lt;code&gt;payload.bin&lt;/code&gt; 解压并放入Payload Dumber 的payload_input目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开&lt;code&gt;payload_dumper.exe&lt;/code&gt;（看到boot解压出来就可以关闭了）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开payload_output目录，将解压出的&lt;code&gt;boot.img&lt;/code&gt;复制到手机根目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载并安装Magisk最新版本 (&lt;a class=&#34;link&#34; href=&#34;https://github.com/topjohnwu/Magisk/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/topjohnwu/Magisk/releases&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;选择安装Magisk-选择并修补一个文件，选中放在根目录的&lt;code&gt;boot.img&lt;/code&gt; ，等待修补完成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将手机download目录下的修补完成的&lt;code&gt;magisk_patched.img&lt;/code&gt;复制到电脑&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将&lt;code&gt;mgisk_patched.img&lt;/code&gt;放入 platform-tools 目录下&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;打开CMD命令行.bat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb reboot bootloader&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot_a magisk_patched.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot_b magisk_patched.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;刷入&lt;code&gt;Riru - Core&lt;/code&gt;模块&lt;/li&gt;
+&lt;li&gt;刷入&lt;code&gt;Riru - EdXposed(YAHFA)&lt;/code&gt; 或&lt;code&gt;Riru - EdXposed(SandHook)&lt;/code&gt;模块&lt;/li&gt;
+&lt;li&gt;安装最新的&lt;code&gt;Edxposed Manager&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;制作&lt;code&gt;mgisk_patched.img&lt;/code&gt;时要用最新的 v8.0.x版本，不能使用以往的v21.0版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;刷写&lt;code&gt;mgisk_patched.img&lt;/code&gt;时 a/b分区都要&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果因刷入不兼容的模块导致无法开机，可以尝试&lt;/p&gt;
+&lt;p&gt;卸载全部magisk模块&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb shell&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;magisk --remove-modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8info&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8magisk1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8magisk2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8edxposed&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
+        <link>https://bestoko.cc/p/gba2cia/</link>
+        <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/gba2cia/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一台BOOT9STARP(B9S)破解的3ds&lt;/p&gt;
+&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://3ds.hacks.guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;3ds破解手册&lt;/a&gt;或者&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/3dshack-getstarted&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一只火狐大佬整理的教程&lt;/a&gt;(推荐)&lt;/p&gt;
+&lt;p&gt;嫌麻烦的同学可以&lt;del&gt;交给热心摊主处理&lt;/del&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gbatemp.net/threads/release-ultimate-gba-vc-injector-for-3ds.438057/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ultimate GBA VC Injector for 3DS&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;汉化版&lt;a class=&#34;link&#34; href=&#34;https://1drv.ms/u/s!AuzARhFyMrG9lD29u9s_vl-PE0CN?e=pyFypW&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载链接&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;你想要在3ds上运行的GBA游戏ROM文件&lt;/p&gt;
+&lt;p&gt;这里以&lt;strong&gt;漆黑的魅影&lt;/strong&gt;为例（很棒的GBA宝可梦改版，我一直想在实机上玩）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gba-转cia&#34;&gt;GBA 转CIA&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
+	width=&#34;1185&#34;
+	height=&#34;588&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gba2cia1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;483px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
+	width=&#34;824&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gba2cia2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
+	width=&#34;824&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gba2cia3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
+	width=&#34;824&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gba2cia4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置VC参数并导出CIA文件(注意当转换多个&lt;code&gt;.cia&lt;/code&gt;文件时，确保每个文件的&lt;em&gt;产品代码&lt;/em&gt;及&lt;em&gt;项目ID&lt;/em&gt;都不一样)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
+	width=&#34;824&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gba2cia5&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在3ds上安装转换好的&lt;code&gt;.cia&lt;/code&gt;文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;关于如何B9S&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/install-cia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;如何安装cia文件&lt;/strong&gt;&lt;/a&gt;这里不再赘述(实在懒得截图了)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
+	width=&#34;4608&#34;
+	height=&#34;3456&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gba2cia6&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;大功告成~&lt;/p&gt;
+&lt;h2 id=&#34;备注事项&#34;&gt;备注事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;据说部分老款3ds对这种方式转换的&lt;code&gt;.cia&lt;/code&gt;支持不好，会出现黑屏情况(我的美版老小三反正测试是没问题啦)&lt;/li&gt;
+&lt;li&gt;港版不支持港版不支持港版不支持&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存档类型&lt;/strong&gt;一定要设置正确&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
