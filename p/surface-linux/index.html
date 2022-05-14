@@ -9,7 +9,7 @@
 
 <link rel='canonical' href='https://bestoko.cc/p/surface-linux/'>
 
-<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Surface设备在Arch Linux下驱动问题的解决方案'>
+<link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='Surface设备在Arch Linux下驱动问题的解决方案'>
 <meta property='og:description' content='写在前面 之前我已经在Surface Pro 上安装了Arch Linux，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（之前买的surface pen也成了摆设），于是我在github上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看这里。
 安装驱动 导入密钥 首先我们需要导入用于签名软件包的密钥：
 1 2  $ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \  | sudo pacman-key --add -   检查完整性并本地签名 1 2  $ sudo pacman-key --finger 56C464BAAC421453 $ sudo pacman-key --lsign-key 56C464BAAC421453   添加存储库 我们需要在/etc/pacman.conf添加如下内容
@@ -626,7 +626,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.10.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
