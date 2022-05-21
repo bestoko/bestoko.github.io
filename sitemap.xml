@@ -3,33 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bestoko.cc/categories/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/fonts/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/linux/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/oh-my-zsh/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/post/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/study/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/ubuntu/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/linux-fonts-size/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/work/</loc>
+    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/oh-my-zsh/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/powerlevel10k/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/ubuntu/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/p/zsh/</loc>
-    <lastmod>2022-03-08T20:56:36+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/work/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/zsh/</loc>
@@ -57,9 +66,6 @@
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/notes/</loc>
-    <lastmod>2022-03-03T20:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/study/</loc>
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/clash-for-windows/</loc>
