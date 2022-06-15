@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bestoko.cc/tags/android/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/camera/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
     <loc>https://bestoko.cc/categories/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/mtk/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/mtkcamerahal3modules/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/post/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/work/</loc>
+    <lastmod>2022-06-15T20:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/fonts/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
@@ -11,25 +35,13 @@
     <loc>https://bestoko.cc/tags/linux/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/categories/study/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/ubuntu/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/linux-fonts-size/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/work/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/oh-my-zsh/</loc>
@@ -55,9 +67,6 @@
   </url><url>
     <loc>https://bestoko.cc/tags/windows-11/</loc>
     <lastmod>2022-03-05T19:19:15+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/android/</loc>
-    <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/android-framework/</loc>
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
@@ -127,9 +136,6 @@
   </url><url>
     <loc>https://bestoko.cc/p/archinstallextra/</loc>
     <lastmod>2021-12-15T09:00:01+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/p/archinstall/</loc>
-    <lastmod>2021-12-14T09:00:01+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/archinstall/</loc>
     <lastmod>2021-12-14T09:00:01+08:00</lastmod>

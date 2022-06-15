@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Camera on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/camera/</link>
+        <description>Recent content in Camera on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 15 Jun 2022 20:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/camera/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MTK 平台 Camera HAL3 相关模块的代码路径</title>
+        <link>https://bestoko.cc/p/mtkcamerahal3modules/</link>
+        <pubDate>Wed, 15 Jun 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/mtkcamerahal3modules/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png" alt="Featured image of post MTK 平台 Camera HAL3 相关模块的代码路径" /&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Camera 相关模块&lt;/th&gt;
+&lt;th&gt;代码路径&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CameraService&lt;/td&gt;
+&lt;td&gt;frameworks/av/services/camera/libcameraservice/CameraService.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CameraHALServer&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/service/service.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ICameraProvider&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ICameraDevice&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3Impl.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ICameraDeviceSession&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CameraDeviceManager&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AppStreamMgr&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/app/AppStreamMgr.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PipelineModel&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/model/PipelineModelImpl.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CameraSetting&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MetadataProvider&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/utils/metastore/metadataprovider/MetadataProvider.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;StreamBuffer&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/pipeline/utils/streambuf/StreamBuffers.cpp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hardware Node&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/hwnode/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FeaturePipe&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/feature/core/featurePipe/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pipe Driver&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/drv/src/isp/isp_6s/imageio/pipe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sensor Driver&lt;/td&gt;
+&lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EEPROM Driver&lt;/td&gt;
+&lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

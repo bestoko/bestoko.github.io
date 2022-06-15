@@ -1481,14 +1481,6 @@
 &lt;p&gt;至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&amp;hellip;.以及一些实用软件包。&lt;/p&gt;
 </description>
         </item>
-        <item>
-        <title>巴别塔的建立与崩塌</title>
-        <link>https://bestoko.cc/p/archinstall/</link>
-        <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/p/archinstall/</guid>
-        <description>&lt;img src="https://bestoko.cc/ArchLinux.jpg" alt="Featured image of post 巴别塔的建立与崩塌" /&gt;</description>
-        </item>
         
     </channel>
 </rss>
