@@ -6,10 +6,10 @@
         <description>Recent content in Kernel on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 23 Jun 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/kernel/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Jun 2022 23:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/kernel/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>为Android Kernel Log添加时间戳</title>
         <link>https://bestoko.cc/p/kernellogaddtime/</link>
-        <pubDate>Thu, 23 Jun 2022 00:00:00 +0800</pubDate>
+        <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/kernellogaddtime/</guid>
         <description>&lt;img src="https://bestoko.cc/p/kernellogaddtime/Linux-Kernel.jpg" alt="Featured image of post 为Android Kernel Log添加时间戳" /&gt;&lt;p&gt;将下面的代码保存为kernel.py, 加入可执行权限， 执行./kernel.py -i kernel_log -o kernel.txt , 打开kernel.txt 就可以看到（与android logcat -v time一样的）时间戳&lt;/p&gt;
