@@ -4,10 +4,10 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-1 2  #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;    此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
- 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-1  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg   而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-1  sudo grub2-mkconfig -o /boot/grub2/grub.cfg   接着reboot即可看到效果。'><title>Grub2主题美化踩坑记录</title>
+1 2 #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34; 此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
+1 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+1 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'><title>Grub2主题美化踩坑记录</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/fedora-grub2-theme/'>
 
@@ -15,10 +15,10 @@
 <meta property='og:description' content='双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-1 2  #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;    此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
- 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-1  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg   而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-1  sudo grub2-mkconfig -o /boot/grub2/grub.cfg   接着reboot即可看到效果。'>
+1 2 #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34; 此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
+1 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+1 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。'>
 <meta property='og:url' content='https://bestoko.cc/p/fedora-grub2-theme/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Fedora' /><meta property='article:tag' content='Gurb2 Theme' /><meta property='article:published_time' content='2021-12-29T18:56:18&#43;08:00'/><meta property='article:modified_time' content='2021-12-29T18:56:18&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg' />
@@ -27,10 +27,10 @@
 <meta name="twitter:description" content="双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 （虽然只有几秒）,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了Windows11和Fedora35。
 下载主题 首先下载好你想要的主题文件，我选择的是这个MacOS风格的MacOS Monterey inspired grub theme
 修改/etc/default/grub文件 首先，注释掉GRUB_TERMINAL_OUTPUT=”console”,接着设置好你的GRUB主题路径。
-1 2  #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34;    此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
- 更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
-1  sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg   而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
-1  sudo grub2-mkconfig -o /boot/grub2/grub.cfg   接着reboot即可看到效果。"><meta name="twitter:card" content="summary_large_image">
+1 2 #GRUB_TERMINAL_OUTPUT=”console” GRUB_THEME=&amp;#34;/boot/grub2/montery-grub-theme/theme.txt&amp;#34; 此外这个文件里还有几个常用的设置 GRUB_TIMEOUT=5 可以设置超时时间，设置-1可以取消倒计时 GRUB_DEFAULT=saved saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数
+更新Grub2配置 如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是/boot/efi/EFI/fedora/grub.cfg ，更新命令如下：
+1 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 而如果是启动方式是Legacy的话，启动时读取的文件是/boot/grub2/grub.cfg，更新命令如下：
+1 sudo grub2-mkconfig -o /boot/grub2/grub.cfg 接着reboot即可看到效果。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
