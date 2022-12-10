@@ -2,10 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bestoko.cc/tags/android/</loc>
-    <lastmod>2022-06-22T23:00:00+08:00</lastmod>
+    <loc>https://bestoko.cc/tags/blog/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/categories/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/hugo/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/linux/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/post/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/ubuntu/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/windows-11/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/hugo_wsl2/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/work/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/wsl2/</loc>
+    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/android/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/kernel/</loc>
@@ -14,19 +47,7 @@
     <loc>https://bestoko.cc/tags/log/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2022-06-22T23:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2022-06-22T23:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
-    <lastmod>2022-06-22T23:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/tags/tools/</loc>
-    <lastmod>2022-06-22T23:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/work/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/kernellogaddtime/</loc>
@@ -44,13 +65,7 @@
     <loc>https://bestoko.cc/tags/fonts/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/tags/linux/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/categories/study/</loc>
-    <lastmod>2022-05-21T10:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/ubuntu/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/linux-fonts-size/</loc>
@@ -75,9 +90,6 @@
     <lastmod>2022-03-05T19:19:15+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/grub/</loc>
-    <lastmod>2022-03-05T19:19:15+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/windows-11/</loc>
     <lastmod>2022-03-05T19:19:15+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/android-framework/</loc>

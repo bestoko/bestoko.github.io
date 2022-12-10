@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>hugo on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/hugo/</link>
+        <description>Recent content in hugo on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
+        <link>https://bestoko.cc/p/hugo_wsl2/</link>
+        <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
+	width=&#34;1958&#34;
+	height=&#34;958&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hue4d4a67839b35423a5189f5ea3b9d45c_267933_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hue4d4a67839b35423a5189f5ea3b9d45c_267933_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;490px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+&lt;p&gt;首先获取 WSL 2 Ubuntu host 的 ip 地址&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
+	width=&#34;1492&#34;
+	height=&#34;824&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu676e47cfed5467c1e411cc0e43c5bc81_99870_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu676e47cfed5467c1e411cc0e43c5bc81_99870_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;我这里获取到的是 &lt;code&gt;172.20.3.63&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后在 hugo 目录下执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
+	width=&#34;2482&#34;
+	height=&#34;843&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hub683420883f8b328f8262bbae53ae0cd_87963_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hub683420883f8b328f8262bbae53ae0cd_87963_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;294&#34;
+		data-flex-basis=&#34;706px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
+	width=&#34;2736&#34;
+	height=&#34;1730&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu9b46ba5de99ba7c91e950f35c42864ee_722976_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu9b46ba5de99ba7c91e950f35c42864ee_722976_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
