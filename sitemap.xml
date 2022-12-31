@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bestoko.cc/tags/blog/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/categories/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/covid19/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/life/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/omicron/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/post/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/covid19_omicron/</loc>
+    <lastmod>2022-12-31T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/blog/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/hugo/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/linux/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/ubuntu/</loc>
@@ -219,8 +234,6 @@
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/about/</loc>
-  </url><url>
-    <loc>https://bestoko.cc/categories/life/</loc>
   </url><url>
     <loc>https://bestoko.cc/links/</loc>
   </url><url>
