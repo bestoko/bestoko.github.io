@@ -6,7 +6,47 @@
         <description>Recent content in Tags on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 01 Mar 2023 21:30:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ChatGPT</title>
+        <link>https://bestoko.cc/tags/chatgpt/</link>
+        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/chatgpt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://bestoko.cc/tags/docker/</link>
+        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Koishi</title>
+        <link>https://bestoko.cc/tags/koishi/</link>
+        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/koishi/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>QQ bot</title>
+        <link>https://bestoko.cc/tags/qq-bot/</link>
+        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/qq-bot/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Unraid</title>
+        <link>https://bestoko.cc/tags/unraid/</link>
+        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/unraid/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>blog</title>
         <link>https://bestoko.cc/tags/blog/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>

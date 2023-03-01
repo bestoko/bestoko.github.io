@@ -6,7 +6,112 @@
         <description>Recent content on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 01 Mar 2023 21:30:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
+        <link>https://bestoko.cc/p/koishi-chatgpt/</link>
+        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
+&lt;h2 id=&#34;事前准备&#34;&gt;事前准备&lt;/h2&gt;
+&lt;p&gt;你需要准备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://koishi.chat/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;koishi&lt;/a&gt;  koishi是一个高性能的机器人服务，你可以在官网任选一个合适的方式部署（Windows/macOS/Linux/Android/容器）&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/account/api-keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chatGPT API key&lt;/a&gt; 你可以通过 &lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/account/api-keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://platform.openai.com/account/api-keys&lt;/a&gt; 获取 （注册openAI 账号的方法不在本文介绍 &lt;del&gt;事实上随便找个国外的接码平台就可以了&lt;/del&gt;）&lt;/li&gt;
+&lt;li&gt;一个 QQ 小号，等级尽可能高一点以免风控 （koishi 事实上支持包括 QQ/discord/telegram/kook/feishu等的部署）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
+&lt;h2 id=&#34;操作部署&#34;&gt;操作部署&lt;/h2&gt;
+&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
+	width=&#34;1180&#34;
+	height=&#34;1326&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;88&#34;
+		data-flex-basis=&#34;213px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;也可通过 unraid 的 docker 配置，具体如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
+	width=&#34;1657&#34;
+	height=&#34;893&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;445px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
+	width=&#34;1187&#34;
+	height=&#34;425&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+	width=&#34;2316&#34;
+	height=&#34;1310&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。&lt;/p&gt;
+&lt;p&gt;接着去插件市场安装 &lt;a class=&#34;link&#34; href=&#34;https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;koishi_chatGPT 插件&lt;/a&gt;根据提示加载 cache 服务并配置 apiKey ：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
+	width=&#34;594&#34;
+	height=&#34;303&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;470px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
+	width=&#34;1268&#34;
+	height=&#34;782&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;389px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;apikey 可以在 &lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/account/api-keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://platform.openai.com/account/api-keys&lt;/a&gt; 获取。&lt;/p&gt;
+&lt;p&gt;然后启用插件&lt;/p&gt;
+&lt;h2 id=&#34;enjoy-it&#34;&gt;Enjoy it&lt;/h2&gt;
+&lt;p&gt;接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
         <link>https://bestoko.cc/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>

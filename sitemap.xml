@@ -2,25 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bestoko.cc/tags/blog/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/categories/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/chatgpt/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/docker/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/koishi/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/play/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/post/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/qq-bot/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/unraid/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/koishi-chatgpt/</loc>
+    <lastmod>2023-03-01T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/blog/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/hugo/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/linux/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/ubuntu/</loc>
@@ -168,9 +189,6 @@
     <lastmod>2020-10-28T09:00:01+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/mgasik/</loc>
-    <lastmod>2020-10-28T09:00:01+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/play/</loc>
     <lastmod>2020-10-28T09:00:01+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/oneplus8/</loc>
