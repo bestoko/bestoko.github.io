@@ -6,21 +6,21 @@
         <description>Recent content in Categories on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 25 Mar 2023 23:31:05 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 07 Jun 2023 22:42:16 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Play</title>
+        <link>https://bestoko.cc/categories/play/</link>
+        <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/play/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/play/play.jpg" alt="Featured image of post Play" /&gt;</description>
+        </item>
+        <item>
         <title>Life</title>
         <link>https://bestoko.cc/categories/life/</link>
         <pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate>
         
         <guid>https://bestoko.cc/categories/life/</guid>
         <description>&lt;img src="https://bestoko.cc/categories/life/life.jpg" alt="Featured image of post Life" /&gt;</description>
-        </item>
-        <item>
-        <title>Play</title>
-        <link>https://bestoko.cc/categories/play/</link>
-        <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/categories/play/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/play/play.jpg" alt="Featured image of post Play" /&gt;</description>
         </item>
         <item>
         <title>Work</title>
