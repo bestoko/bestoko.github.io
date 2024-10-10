@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="问题\r\u200b\t最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）\n一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用\n解决方法\r首先获取 WSL 2 Ubuntu host 的 ip 地址\n1 ipconfig 我这里获取到的是 172.20.3.63\n然后在 hugo 目录下执行\n1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了\n">
 <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
 
-<link rel='canonical' href='http://localhost:1313/p/hugo_wsl2/'>
+<link rel='canonical' href='https://bestoko.cc/p/hugo_wsl2/'>
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Windows11 WSL2 下配置 hugo 环境踩坑 ">
 <meta property='og:description' content="问题\r\u200b\t最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）\n一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用\n解决方法\r首先获取 WSL 2 Ubuntu host 的 ip 地址\n1 ipconfig 我这里获取到的是 172.20.3.63\n然后在 hugo 目录下执行\n1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了\n">
-<meta property='og:url' content='http://localhost:1313/p/hugo_wsl2/'>
+<meta property='og:url' content='https://bestoko.cc/p/hugo_wsl2/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='blog' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Windows 11' /><meta property='article:tag' content='WSL2' /><meta property='article:published_time' content='2022-12-10T23:25:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-10T23:25:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/hugo_wsl2/WSL2.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='blog' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Windows 11' /><meta property='article:tag' content='WSL2' /><meta property='article:published_time' content='2022-12-10T23:25:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-10T23:25:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/hugo_wsl2/WSL2.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Windows11 WSL2 下配置 hugo 环境踩坑 ">
 <meta name="twitter:description" content="问题\r\u200b\t最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）\n一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用\n解决方法\r首先获取 WSL 2 Ubuntu host 的 ip 地址\n1 ipconfig 我这里获取到的是 172.20.3.63\n然后在 hugo 目录下执行\n1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/hugo_wsl2/WSL2.png' />
+    <meta name="twitter:image" content='https://bestoko.cc/p/hugo_wsl2/WSL2.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
     </head>
@@ -74,7 +74,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
-            <h2 class="site-description">feedId:66996134550026240&#43;userId:66750646631429120</h2>
+            <h2 class="site-description">Never Knows Best</h2>
         </div>
     </header><ol class="menu-social">
             

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MicroSoft To-Do on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/microsoft-to-do/</link>
+        <link>https://bestoko.cc/tags/microsoft-to-do/</link>
         <description>Recent content in MicroSoft To-Do on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/microsoft-to-do/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Dec 2021 01:15:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/microsoft-to-do/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
-        <link>http://localhost:1313/p/snaps-mstodo/</link>
+        <link>https://bestoko.cc/p/snaps-mstodo/</link>
         <pubDate>Wed, 22 Dec 2021 01:15:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/snaps-mstodo/</guid>
-        <description>&lt;img src="http://localhost:1313/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
 &lt;p&gt;虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;
 &lt;/blockquote&gt;

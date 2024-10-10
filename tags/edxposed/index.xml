@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Edxposed on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/edxposed/</link>
+        <link>https://bestoko.cc/tags/edxposed/</link>
         <description>Recent content in Edxposed on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Oct 2020 09:00:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/edxposed/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 28 Oct 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/edxposed/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>一加8的Android 11 折腾指南</title>
-        <link>http://localhost:1313/p/oneplus8/</link>
+        <link>https://bestoko.cc/p/oneplus8/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/oneplus8/</guid>
-        <description>&lt;img src="http://localhost:1313/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+        <guid>https://bestoko.cc/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -96,10 +96,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8info.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, http://localhost:1313/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -110,10 +110,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -124,10 +124,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -138,10 +138,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8edxposed.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, http://localhost:1313/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
