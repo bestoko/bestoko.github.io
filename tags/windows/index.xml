@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Windows on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/windows/</link>
+        <link>http://localhost:1313/tags/windows/</link>
         <description>Recent content in Windows on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 27 Dec 2021 21:14:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Dec 2021 21:14:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux与Windows双系统时间不一致的解决方法</title>
-        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
+        <link>http://localhost:1313/p/linux-windows-time-conflict/</link>
         <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+        <guid>http://localhost:1313/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;

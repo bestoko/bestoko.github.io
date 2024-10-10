@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Play on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/categories/play/</link>
+        <link>http://localhost:1313/categories/play/</link>
         <description>Recent content in Play on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 31 Aug 2023 10:10:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/play/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 31 Aug 2023 10:10:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/play/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>“Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title>
-        <link>https://bestoko.cc/p/oneplus_ace2_pro/</link>
+        <link>http://localhost:1313/p/oneplus_ace2_pro/</link>
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post “Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>http://localhost:1313/p/oneplus_ace2_pro/</guid>
+        <description>&lt;img src="http://localhost:1313/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post “Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu15784744685729144236.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu5402410126761479358.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share_hu15784744685729144236.png 480w, http://localhost:1313/p/oneplus_ace2_pro/op8share_hu5402410126761479358.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -56,10 +56,10 @@
 &lt;li&gt;
 &lt;p&gt;安装 KernelFlasher 并赋予 Root 权限&lt;/p&gt;
 &lt;p&gt;在已挂载槽位，点击刷入AK3压缩包，刷入对应的Anykernel3.zip即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu2170386241575178293.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6681112487101365740.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3_hu2170386241575178293.png 480w, http://localhost:1313/p/oneplus_ace2_pro/AK3_hu6681112487101365740.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -85,10 +85,10 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu9797282647728824358.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu8266887722309811162.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu9797282647728824358.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu8266887722309811162.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -99,10 +99,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu64685479218557013.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu15387969128228765233.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu64685479218557013.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu15387969128228765233.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -113,10 +113,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu13767883759163556219.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu1758458472517622844.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu13767883759163556219.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu1758458472517622844.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -127,10 +127,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu14844564629188411604.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu1734278580864475992.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu14844564629188411604.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu1734278580864475992.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -141,10 +141,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2505653572469837244.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2681129231978154320.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2505653572469837244.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2681129231978154320.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -155,10 +155,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu2712018314552893919.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu11596301558230775997.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu2712018314552893919.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu11596301558230775997.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -169,10 +169,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu13927585091527366980.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu11700466973732308762.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu13927585091527366980.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu11700466973732308762.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -192,15 +192,15 @@
         </item>
         <item>
         <title>qBittorrent 批量清理被PT站点删除的种子</title>
-        <link>https://bestoko.cc/p/qbittorrenttips/</link>
+        <link>http://localhost:1313/p/qbittorrenttips/</link>
         <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/qbittorrenttips/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
+        <guid>http://localhost:1313/p/qbittorrenttips/</guid>
+        <description>&lt;img src="http://localhost:1313/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu6288439628282152507.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu6039853929747431877.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/pt_hu6288439628282152507.png 480w, http://localhost:1313/p/qbittorrenttips/pt_hu6039853929747431877.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -212,10 +212,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我才注册了几个月就收到一大堆删种站内信，该说不说，管理也太尽职尽责了&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu2995968618968659914.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu15641132378444942884.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit1_hu2995968618968659914.png 480w, http://localhost:1313/p/qbittorrenttips/qbit1_hu15641132378444942884.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -228,10 +228,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;被站点删除的种子在 qBittorrent 里与正常种子不会有什么不同，只有点进去才能看到 &lt;code&gt;torrent not registered with this tracker&lt;/code&gt; 字样，Transmission 则会把所有红种、警告标记出来。我去查解决方法的时候甚至看到有说用 IYUU 转种到 Transmission 的建议&amp;hellip;只能说几千多个种子，转完再重新校验，实在有些“不够优雅”&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;其实，只需要在 qBittorrent 右键列标题，添加tracker 筛选框，并排序即可。被站点删除的种子 tracker 栏是空白，即可批量选中并移除。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu15451998649857356451.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu13594296493337293595.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit2_hu15451998649857356451.png 480w, http://localhost:1313/p/qbittorrenttips/qbit2_hu13594296493337293595.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -242,10 +242,10 @@
 		data-flex-basis=&#34;248px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu5226710101058022087.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu15548616639044870873.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit3_hu5226710101058022087.png 480w, http://localhost:1313/p/qbittorrenttips/qbit3_hu15548616639044870873.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;
@@ -260,11 +260,11 @@
         </item>
         <item>
         <title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
-        <link>https://bestoko.cc/p/koishi-chatgpt/</link>
+        <link>http://localhost:1313/p/koishi-chatgpt/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
+        <guid>http://localhost:1313/p/koishi-chatgpt/</guid>
+        <description>&lt;img src="http://localhost:1313/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
 &lt;h2 id=&#34;事前准备&#34;&gt;事前准备
 &lt;/h2&gt;&lt;p&gt;你需要准备：&lt;/p&gt;
 &lt;ol&gt;
@@ -278,10 +278,10 @@
 &lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
 &lt;h2 id=&#34;操作部署&#34;&gt;操作部署
 &lt;/h2&gt;&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu1330688395182990461.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5505363090823537123.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_hu1330688395182990461.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_hu5505363090823537123.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -291,10 +291,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;也可通过 unraid 的 docker 配置，具体如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu6967327548753512351.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu18038813504491149406.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu6967327548753512351.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu18038813504491149406.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -304,10 +304,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu8661665712310258903.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu11950212348460244614.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu8661665712310258903.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu11950212348460244614.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -317,10 +317,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu13099918487877242515.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu891732750637561159.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu13099918487877242515.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu891732750637561159.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -332,10 +332,10 @@
 &lt;p&gt;按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。&lt;/p&gt;
 &lt;p&gt;接着去插件市场安装 &lt;a class=&#34;link&#34; href=&#34;https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;koishi_chatGPT 插件&lt;/a&gt;根据提示加载 cache 服务并配置 apiKey ：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu8593079960691404097.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu4924297100520235754.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu8593079960691404097.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu4924297100520235754.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -344,10 +344,10 @@
 		data-flex-basis=&#34;470px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu8825968814062225513.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu17925683289958446452.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu8825968814062225513.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu17925683289958446452.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -367,11 +367,11 @@
         </item>
         <item>
         <title>一加8的Android 11 折腾指南</title>
-        <link>https://bestoko.cc/p/oneplus8/</link>
+        <link>http://localhost:1313/p/oneplus8/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/oneplus8/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+        <guid>http://localhost:1313/p/oneplus8/</guid>
+        <description>&lt;img src="http://localhost:1313/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -455,10 +455,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, http://localhost:1313/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -469,10 +469,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -483,10 +483,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -497,10 +497,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, http://localhost:1313/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
@@ -515,11 +515,11 @@
         </item>
         <item>
         <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-        <link>https://bestoko.cc/p/gba2cia/</link>
+        <link>http://localhost:1313/p/gba2cia/</link>
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/gba2cia/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
+        <guid>http://localhost:1313/p/gba2cia/</guid>
+        <description>&lt;img src="http://localhost:1313/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
 &lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
@@ -550,10 +550,10 @@
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu10870831498259699845.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu12406518874957529171.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia1_hu10870831498259699845.png 480w, http://localhost:1313/p/gba2cia/gba2cia1_hu12406518874957529171.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -564,10 +564,10 @@
 		data-flex-basis=&#34;483px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu2703508768858883773.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu1206932963345848948.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia2_hu2703508768858883773.png 480w, http://localhost:1313/p/gba2cia/gba2cia2_hu1206932963345848948.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -581,10 +581,10 @@
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu15786535881229955962.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu2920106178724780029.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia3_hu15786535881229955962.png 480w, http://localhost:1313/p/gba2cia/gba2cia3_hu2920106178724780029.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -595,10 +595,10 @@
 		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu15862548443368252133.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7163886712473613346.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia4_hu15862548443368252133.png 480w, http://localhost:1313/p/gba2cia/gba2cia4_hu7163886712473613346.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -612,10 +612,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;设置VC参数并导出CIA文件(注意当转换多个&lt;code&gt;.cia&lt;/code&gt;文件时，确保每个文件的&lt;em&gt;产品代码&lt;/em&gt;及&lt;em&gt;项目ID&lt;/em&gt;都不一样)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu4244822793430882731.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu5491374550477089424.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia5_hu4244822793430882731.png 480w, http://localhost:1313/p/gba2cia/gba2cia5_hu5491374550477089424.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -633,10 +633,10 @@
 &lt;/ol&gt;
 &lt;p&gt;关于如何B9S&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/install-cia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;如何安装cia文件&lt;/strong&gt;&lt;/a&gt;这里不再赘述(实在懒得截图了)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu11063517222999121877.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4118045727246458379.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia6_hu11063517222999121877.png 480w, http://localhost:1313/p/gba2cia/gba2cia6_hu4118045727246458379.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;

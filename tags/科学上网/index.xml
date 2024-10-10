@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>科学上网 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+        <link>http://localhost:1313/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
         <description>Recent content in 科学上网 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 05 Jan 2022 11:59:35 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 05 Jan 2022 11:59:35 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>我的Linux科学上网方案</title>
-        <link>https://bestoko.cc/p/linux-clash-for-windows/</link>
+        <link>http://localhost:1313/p/linux-clash-for-windows/</link>
         <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-clash-for-windows/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-clash-for-windows/cfw.png" alt="Featured image of post 我的Linux科学上网方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/linux-clash-for-windows/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-clash-for-windows/cfw.png" alt="Featured image of post 我的Linux科学上网方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;本文不讨论科学上网的对错&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;本文不教学代理服务器部署&lt;/strong&gt;&lt;/li&gt;
@@ -66,10 +66,10 @@
 &lt;p&gt;Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息&lt;code&gt;Success!&lt;/code&gt;，并且可以看到一个新增的配置文件。&lt;/p&gt;
 &lt;p&gt;点击新增的配置文件来切换到该配置，然后点击&lt;code&gt;Proxies &lt;/code&gt;标签页来切换接入点，将顶部的出站模式选择为&lt;code&gt;Rule&lt;/code&gt;。
 此模式下你的网络访问请求将通过 Clash for Windows 进行&lt;strong&gt;分流处理&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-clash-for-windows/clash-proxies.png&#34;
 	width=&#34;1052&#34;
 	height=&#34;767&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu13402915003426320604.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu1280761329518327631.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-clash-for-windows/clash-proxies_hu13402915003426320604.png 480w, http://localhost:1313/p/linux-clash-for-windows/clash-proxies_hu1280761329518327631.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;clash-proxies&#34;
@@ -83,10 +83,10 @@
 &lt;p&gt;在&lt;code&gt;Proxy&lt;/code&gt;策略组中选择所想要使用的接入点。Proxy 策略组是用于访问国际网络的默认策略，在不进行其他修改的情况下，所有国际网络的访问都通过 Proxy 策略组中选择的接入点进行。&lt;/p&gt;
 &lt;p&gt;图中所示的其它策略组为本人出于自身实际需求自行配置的，请以自己的实际配置为准。&lt;/p&gt;
 &lt;p&gt;此外你还需要在系统设置里，配置好cfw的代理。默认端口为7890。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-clash-for-windows/proxy-settings.png&#34;
 	width=&#34;1582&#34;
 	height=&#34;612&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu15926796141259012520.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu11884452035036126273.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-clash-for-windows/proxy-settings_hu15926796141259012520.png 480w, http://localhost:1313/p/linux-clash-for-windows/proxy-settings_hu11884452035036126273.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;proxy-settings&#34;

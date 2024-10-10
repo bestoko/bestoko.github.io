@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>业余无线电 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</link>
+        <link>http://localhost:1313/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</link>
         <description>Recent content in 业余无线电 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 25 Mar 2023 23:31:05 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Mar 2023 23:31:05 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>业余无线电拿证(A类)&amp;设台速通指北</title>
-        <link>https://bestoko.cc/p/amateurradio/</link>
+        <link>http://localhost:1313/p/amateurradio/</link>
         <pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/amateurradio/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/amateurradio/wuxiandian.jpg" alt="Featured image of post 业余无线电拿证(A类)&amp;设台速通指北" /&gt;&lt;p&gt;你也许在很多书籍影视或者游戏中早已接触过无线电，但是真正亲身在现实中拿起对讲机与别人通联，则另有一番乐趣。&lt;/p&gt;
+        <guid>http://localhost:1313/p/amateurradio/</guid>
+        <description>&lt;img src="http://localhost:1313/p/amateurradio/wuxiandian.jpg" alt="Featured image of post 业余无线电拿证(A类)&amp;设台速通指北" /&gt;&lt;p&gt;你也许在很多书籍影视或者游戏中早已接触过无线电，但是真正亲身在现实中拿起对讲机与别人通联，则另有一番乐趣。&lt;/p&gt;
 &lt;p&gt;我大概是在去年在某硬件群内了解到业余无线电以及考证相关的内容，而最近又被一个介绍《我们生活在南京》这本科幻小说的视频勾起了兴趣，赶上南京2023年度第一次业余无线电操作能力考试，3.18考完试，3月24日实体双证都拿到手了，也算是比较快的“速通”了，在此记录一下其中的坑点与技巧。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/certificate.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/certificate.jpg&#34;
 	width=&#34;3000&#34;
 	height=&#34;4000&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_hu1288073617422609327.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_hu1468848638951109267.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/amateurradio/certificate_hu1288073617422609327.jpg 480w, http://localhost:1313/p/amateurradio/certificate_hu1468848638951109267.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -46,10 +46,10 @@
 &lt;p&gt;（1）网页报名：登录CRAC官网www.crac.org.cn，页面底部右下方选择“能力验证”，选择“考生入口”，进入“业余无线电台操作技术能力验证考核报名及信息管理系统”进行注册报名。&lt;/p&gt;
 &lt;p&gt;（2）手机APP报名：应用市场下载“智谱”APP，从手机下方的“特别入口”进入，点击“考试报名”，选择相应的考试场次进行报名。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/signup1.jpg&#34;
 	width=&#34;1079&#34;
 	height=&#34;2295&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu13662075476929645577.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu8828531960940405493.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/amateurradio/signup1_hu13662075476929645577.jpg 480w, http://localhost:1313/p/amateurradio/signup1_hu8828531960940405493.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -58,10 +58,10 @@
 		data-flex-basis=&#34;112px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup2.jpg&#34;
+&lt;img src=&#34;http://localhost:1313/p/amateurradio/signup2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2299&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hu15658567494471417158.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hu17137786438621373990.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/amateurradio/signup2_hu15658567494471417158.jpg 480w, http://localhost:1313/p/amateurradio/signup2_hu17137786438621373990.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -73,10 +73,10 @@
 &lt;h2 id=&#34;考试&#34;&gt;考试
 &lt;/h2&gt;&lt;p&gt;试题范围为中国无线电协会业余无线电工作委员会（CRAC）公布的题库。&lt;/p&gt;
 &lt;p&gt;你可以选择按照官方的指南在“业余无线电台操作技术能力验证及信息管理系统”的“资料下载”模块，下载安装“模拟考试软件”或TXT格式题库包，或者在“智谱”APP的“业余无线电移动信息平台”，进行复习和模拟考试。当然也可以像我一样使用更方便的微信小程序刷题，这里我推荐的是&lt;strong&gt;业余无线电工具集&lt;/strong&gt; 或者 &lt;strong&gt;HAM模拟考试&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/ham1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2289&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu1849222510053926737.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu7695587198885027470.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/amateurradio/ham1_hu1849222510053926737.jpg 480w, http://localhost:1313/p/amateurradio/ham1_hu7695587198885027470.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -85,10 +85,10 @@
 		data-flex-basis=&#34;113px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham2.jpg&#34;
+&lt;img src=&#34;http://localhost:1313/p/amateurradio/ham2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2280&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu5623703817190342976.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu15615359992460686469.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/amateurradio/ham2_hu5623703817190342976.jpg 480w, http://localhost:1313/p/amateurradio/ham2_hu15615359992460686469.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -179,10 +179,10 @@
 &lt;h2 id=&#34;设台&#34;&gt;设台
 &lt;/h2&gt;&lt;p&gt;不同地区的规定不同，南京这边考试现场为考试合格考生提供25W以下业余无线电台验机服务，当然也可以选择改日单独送去验机，具体看当地规定。需要注意的是一定要从&lt;strong&gt;正规渠道&lt;/strong&gt;购买有&lt;strong&gt;核准码&lt;/strong&gt;的机型，群里见到有因为买到问题批次的机器没有通过验机的朋友，验机现场也有因为机身上没有核准码标签而差点被拒的朋友。&lt;/p&gt;
 &lt;p&gt;一切准备妥当后，到设台当地工信部提交好证明等待即可。首次设台时，管局会给分配一个全球唯一的呼号，这个呼号会伴随你的整个业余无线电生涯。（呼号一般不可自选，但据考试群友反馈某些地方线下办理允许自选一位，有想法的可以线下去问）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/RadioSet.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/RadioSet.png&#34;
 	width=&#34;1653&#34;
 	height=&#34;1120&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_hu8488297907965403895.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_hu4404372130860382941.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/amateurradio/RadioSet_hu8488297907965403895.png 480w, http://localhost:1313/p/amateurradio/RadioSet_hu4404372130860382941.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

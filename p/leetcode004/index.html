@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。\n定义LMax= Max(LeftPart) RMin = Min(RightPart) //由小到大的有序数组\n">
 <title>寻找两个有序数组的中位数</title>
 
-<link rel='canonical' href='https://bestoko.cc/p/leetcode004/'>
+<link rel='canonical' href='http://localhost:1313/p/leetcode004/'>
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="寻找两个有序数组的中位数">
 <meta property='og:description' content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。\n定义LMax= Max(LeftPart) RMin = Min(RightPart) //由小到大的有序数组\n">
-<meta property='og:url' content='https://bestoko.cc/p/leetcode004/'>
+<meta property='og:url' content='http://localhost:1313/p/leetcode004/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Algorithm' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2020-04-10T09:00:01&#43;08:00'/><meta property='article:modified_time' content='2020-04-10T09:00:01&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/leetcode004/leetcode.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Algorithm' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2020-04-10T09:00:01&#43;08:00'/><meta property='article:modified_time' content='2020-04-10T09:00:01&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/leetcode004/leetcode.jpg' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="寻找两个有序数组的中位数">
 <meta name="twitter:description" content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。\n定义LMax= Max(LeftPart) RMin = Min(RightPart) //由小到大的有序数组\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://bestoko.cc/p/leetcode004/leetcode.jpg' />
+    <meta name="twitter:image" content='http://localhost:1313/p/leetcode004/leetcode.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
     </head>
@@ -74,7 +74,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
-            <h2 class="site-description">Never Knows Best</h2>
+            <h2 class="site-description">feedId:66996134550026240&#43;userId:66750646631429120</h2>
         </div>
     </header><ol class="menu-social">
             

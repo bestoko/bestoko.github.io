@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>WSL2 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/wsl2/</link>
+        <link>http://localhost:1313/tags/wsl2/</link>
         <description>Recent content in WSL2 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/wsl2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/wsl2/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
-        <link>https://bestoko.cc/p/hugo_wsl2/</link>
+        <link>http://localhost:1313/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+        <guid>http://localhost:1313/p/hugo_wsl2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
 &lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu6071552873964337066.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu5205741495756033583.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu6071552873964337066.png 480w, http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu5205741495756033583.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -37,10 +37,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu8997291937449856939.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu9465595998132522094.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu8997291937449856939.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu9465595998132522094.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -59,10 +59,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu993058983808485527.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu11955354505684428377.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu993058983808485527.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu11955354505684428377.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -72,10 +72,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu18213436191883341928.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu3658939097102882946.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever_hu18213436191883341928.png 480w, http://localhost:1313/p/hugo_wsl2/HugoSever_hu3658939097102882946.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
