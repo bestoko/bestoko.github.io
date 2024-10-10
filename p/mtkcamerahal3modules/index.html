@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=' Camera 相关模块 代码路径 CameraService frameworks/av/services/camera/libcameraservice/CameraService.cpp CameraHALServer mtkcam3/main/hal/service/service.cpp ICameraProvider mtkcam/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp ICameraDevice mtkcam3/main/hal/device/3.x/device/CameraDevice3Impl.cpp ICameraDeviceSession mtkcam3/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp CameraDeviceManager mtkcam3/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp AppStreamMgr mtkcam3/main/hal/device/3.x/app/AppStreamMgr.cpp PipelineModel mtkcam3/pipeline/model/PipelineModelImpl.cpp CameraSetting mtkcam/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp MetadataProvider mtkcam/utils/metastore/metadataprovider/MetadataProvider.cpp StreamBuffer mtkcam/pipeline/utils/streambuf/StreamBuffers.cpp Hardware Node mtkcam3/pipeline/hwnode/ FeaturePipe mtkcam3/feature/core/featurePipe/ Pipe Driver mtkcam/drv/src/isp/isp_6s/imageio/pipe Sensor Driver &amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/ EEPROM Driver &amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c '>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Camera 相关模块 代码路径 CameraService frameworks/av/services/camera/libcameraservice/CameraService.cpp CameraHALServer mtkcam3/main/hal/service/service.cpp ICameraProvider mtkcam/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp ICameraDevice mtkcam3/main/hal/device/3.x/device/CameraDevice3Impl.cpp ICameraDeviceSession mtkcam3/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp CameraDeviceManager mtkcam3/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp AppStreamMgr mtkcam3/main/hal/device/3.x/app/AppStreamMgr.cpp PipelineModel mtkcam3/pipeline/model/PipelineModelImpl.cpp CameraSetting mtkcam/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp MetadataProvider mtkcam/utils/metastore/metadataprovider/MetadataProvider.cpp StreamBuffer mtkcam/pipeline/utils/streambuf/StreamBuffers.cpp Hardware Node mtkcam3/pipeline/hwnode/ FeaturePipe mtkcam3/feature/core/featurePipe/ Pipe Driver mtkcam/drv/src/isp/isp_6s/imageio/pipe Sensor Driver &lt;kernel-x.xx&gt;/drivers/misc/mediatek/imgsensor/src/ EEPROM Driver &lt;kernel-x.xx&gt;/drivers/misc/eeprom/eeprom.c ">
 <title>MTK 平台 Camera HAL3 相关模块的代码路径</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/mtkcamerahal3modules/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='MTK 平台 Camera HAL3 相关模块的代码路径'>
-<meta property='og:description' content=' Camera 相关模块 代码路径 CameraService frameworks/av/services/camera/libcameraservice/CameraService.cpp CameraHALServer mtkcam3/main/hal/service/service.cpp ICameraProvider mtkcam/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp ICameraDevice mtkcam3/main/hal/device/3.x/device/CameraDevice3Impl.cpp ICameraDeviceSession mtkcam3/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp CameraDeviceManager mtkcam3/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp AppStreamMgr mtkcam3/main/hal/device/3.x/app/AppStreamMgr.cpp PipelineModel mtkcam3/pipeline/model/PipelineModelImpl.cpp CameraSetting mtkcam/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp MetadataProvider mtkcam/utils/metastore/metadataprovider/MetadataProvider.cpp StreamBuffer mtkcam/pipeline/utils/streambuf/StreamBuffers.cpp Hardware Node mtkcam3/pipeline/hwnode/ FeaturePipe mtkcam3/feature/core/featurePipe/ Pipe Driver mtkcam/drv/src/isp/isp_6s/imageio/pipe Sensor Driver &amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/ EEPROM Driver &amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c '>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="MTK 平台 Camera HAL3 相关模块的代码路径">
+<meta property='og:description' content=" Camera 相关模块 代码路径 CameraService frameworks/av/services/camera/libcameraservice/CameraService.cpp CameraHALServer mtkcam3/main/hal/service/service.cpp ICameraProvider mtkcam/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp ICameraDevice mtkcam3/main/hal/device/3.x/device/CameraDevice3Impl.cpp ICameraDeviceSession mtkcam3/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp CameraDeviceManager mtkcam3/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp AppStreamMgr mtkcam3/main/hal/device/3.x/app/AppStreamMgr.cpp PipelineModel mtkcam3/pipeline/model/PipelineModelImpl.cpp CameraSetting mtkcam/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp MetadataProvider mtkcam/utils/metastore/metadataprovider/MetadataProvider.cpp StreamBuffer mtkcam/pipeline/utils/streambuf/StreamBuffers.cpp Hardware Node mtkcam3/pipeline/hwnode/ FeaturePipe mtkcam3/feature/core/featurePipe/ Pipe Driver mtkcam/drv/src/isp/isp_6s/imageio/pipe Sensor Driver &lt;kernel-x.xx&gt;/drivers/misc/mediatek/imgsensor/src/ EEPROM Driver &lt;kernel-x.xx&gt;/drivers/misc/eeprom/eeprom.c ">
 <meta property='og:url' content='https://bestoko.cc/p/mtkcamerahal3modules/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='MTK' /><meta property='article:tag' content='Camera' /><meta property='article:published_time' content='2022-06-15T20:00:00&#43;08:00'/><meta property='article:modified_time' content='2022-06-15T20:00:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="MTK 平台 Camera HAL3 相关模块的代码路径">
-<meta name="twitter:description" content=" Camera 相关模块 代码路径 CameraService frameworks/av/services/camera/libcameraservice/CameraService.cpp CameraHALServer mtkcam3/main/hal/service/service.cpp ICameraProvider mtkcam/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp ICameraDevice mtkcam3/main/hal/device/3.x/device/CameraDevice3Impl.cpp ICameraDeviceSession mtkcam3/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp CameraDeviceManager mtkcam3/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp AppStreamMgr mtkcam3/main/hal/device/3.x/app/AppStreamMgr.cpp PipelineModel mtkcam3/pipeline/model/PipelineModelImpl.cpp CameraSetting mtkcam/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp MetadataProvider mtkcam/utils/metastore/metadataprovider/MetadataProvider.cpp StreamBuffer mtkcam/pipeline/utils/streambuf/StreamBuffers.cpp Hardware Node mtkcam3/pipeline/hwnode/ FeaturePipe mtkcam3/feature/core/featurePipe/ Pipe Driver mtkcam/drv/src/isp/isp_6s/imageio/pipe Sensor Driver &amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/ EEPROM Driver &amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c "><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content=" Camera 相关模块 代码路径 CameraService frameworks/av/services/camera/libcameraservice/CameraService.cpp CameraHALServer mtkcam3/main/hal/service/service.cpp ICameraProvider mtkcam/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp ICameraDevice mtkcam3/main/hal/device/3.x/device/CameraDevice3Impl.cpp ICameraDeviceSession mtkcam3/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp CameraDeviceManager mtkcam3/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp AppStreamMgr mtkcam3/main/hal/device/3.x/app/AppStreamMgr.cpp PipelineModel mtkcam3/pipeline/model/PipelineModelImpl.cpp CameraSetting mtkcam/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp MetadataProvider mtkcam/utils/metastore/metadataprovider/MetadataProvider.cpp StreamBuffer mtkcam/pipeline/utils/streambuf/StreamBuffers.cpp Hardware Node mtkcam3/pipeline/hwnode/ FeaturePipe mtkcam3/feature/core/featurePipe/ Pipe Driver mtkcam/drv/src/isp/isp_6s/imageio/pipe Sensor Driver &lt;kernel-x.xx&gt;/drivers/misc/mediatek/imgsensor/src/ EEPROM Driver &lt;kernel-x.xx&gt;/drivers/misc/eeprom/eeprom.c "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -72,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -88,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -250,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -263,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -271,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -285,8 +274,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/mtkcamerahal3modules/">
-                <img src="/p/mtkcamerahal3modules/HAL3_hue5e7e530428368b457f54449a2a3928f_21495_800x0_resize_box_3.png"
-                        srcset="/p/mtkcamerahal3modules/HAL3_hue5e7e530428368b457f54449a2a3928f_21495_800x0_resize_box_3.png 800w, /p/mtkcamerahal3modules/HAL3_hue5e7e530428368b457f54449a2a3928f_21495_1600x0_resize_box_3.png 1600w"
+                <img src="/p/mtkcamerahal3modules/HAL3_hu14693028564474502366.png"
+                        srcset="/p/mtkcamerahal3modules/HAL3_hu14693028564474502366.png 800w, /p/mtkcamerahal3modules/HAL3_hu16699208456059763925.png 1600w"
                         width="800" 
                         height="414" 
                         loading="lazy"
@@ -348,78 +337,78 @@ if (!doNotTrack) {
     
     
     <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Camera 相关模块</th>
-<th>代码路径</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CameraService</td>
-<td>frameworks/av/services/camera/libcameraservice/CameraService.cpp</td>
-</tr>
-<tr>
-<td>CameraHALServer</td>
-<td><strong>mtkcam3</strong>/main/hal/service/service.cpp</td>
-</tr>
-<tr>
-<td><strong>ICameraProvider</strong></td>
-<td><strong>mtkcam</strong>/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp</td>
-</tr>
-<tr>
-<td><strong>ICameraDevice</strong></td>
-<td><strong>mtkcam3</strong>/main/hal/device/3.x/device/CameraDevice3Impl.cpp</td>
-</tr>
-<tr>
-<td><strong>ICameraDeviceSession</strong></td>
-<td><strong>mtkcam3</strong>/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp</td>
-</tr>
-<tr>
-<td>CameraDeviceManager</td>
-<td><strong>mtkcam3</strong>/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp</td>
-</tr>
-<tr>
-<td>AppStreamMgr</td>
-<td><strong>mtkcam3</strong>/main/hal/device/3.x/app/AppStreamMgr.cpp</td>
-</tr>
-<tr>
-<td>PipelineModel</td>
-<td><strong>mtkcam3</strong>/pipeline/model/PipelineModelImpl.cpp</td>
-</tr>
-<tr>
-<td>CameraSetting</td>
-<td><strong>mtkcam</strong>/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp</td>
-</tr>
-<tr>
-<td>MetadataProvider</td>
-<td><strong>mtkcam</strong>/utils/metastore/metadataprovider/MetadataProvider.cpp</td>
-</tr>
-<tr>
-<td>StreamBuffer</td>
-<td><strong>mtkcam</strong>/pipeline/utils/streambuf/StreamBuffers.cpp</td>
-</tr>
-<tr>
-<td>Hardware Node</td>
-<td><strong>mtkcam3</strong>/pipeline/hwnode/</td>
-</tr>
-<tr>
-<td>FeaturePipe</td>
-<td><strong>mtkcam3</strong>/feature/core/featurePipe/</td>
-</tr>
-<tr>
-<td>Pipe Driver</td>
-<td><strong>mtkcam</strong>/drv/src/isp/isp_6s/imageio/pipe</td>
-</tr>
-<tr>
-<td>Sensor Driver</td>
-<td>&lt;kernel-x.xx&gt;/drivers/misc/mediatek/imgsensor/src/</td>
-</tr>
-<tr>
-<td>EEPROM Driver</td>
-<td>&lt;kernel-x.xx&gt;/drivers/misc/eeprom/eeprom.c</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Camera 相关模块</th>
+          <th style="text-align: left">代码路径</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">CameraService</td>
+          <td style="text-align: left">frameworks/av/services/camera/libcameraservice/CameraService.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CameraHALServer</td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/main/hal/service/service.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ICameraProvider</strong></td>
+          <td style="text-align: left"><strong>mtkcam</strong>/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ICameraDevice</strong></td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/main/hal/device/3.x/device/CameraDevice3Impl.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ICameraDeviceSession</strong></td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CameraDeviceManager</td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AppStreamMgr</td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/main/hal/device/3.x/app/AppStreamMgr.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">PipelineModel</td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/pipeline/model/PipelineModelImpl.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CameraSetting</td>
+          <td style="text-align: left"><strong>mtkcam</strong>/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MetadataProvider</td>
+          <td style="text-align: left"><strong>mtkcam</strong>/utils/metastore/metadataprovider/MetadataProvider.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">StreamBuffer</td>
+          <td style="text-align: left"><strong>mtkcam</strong>/pipeline/utils/streambuf/StreamBuffers.cpp</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Hardware Node</td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/pipeline/hwnode/</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">FeaturePipe</td>
+          <td style="text-align: left"><strong>mtkcam3</strong>/feature/core/featurePipe/</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Pipe Driver</td>
+          <td style="text-align: left"><strong>mtkcam</strong>/drv/src/isp/isp_6s/imageio/pipe</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Sensor Driver</td>
+          <td style="text-align: left">&lt;kernel-x.xx&gt;/drivers/misc/mediatek/imgsensor/src/</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">EEPROM Driver</td>
+          <td style="text-align: left">&lt;kernel-x.xx&gt;/drivers/misc/eeprom/eeprom.c</td>
+      </tr>
+  </tbody>
 </table></div>
 
 </section>
@@ -471,7 +460,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/kernellogaddtime/Linux-Kernel.3e5bbdb98ac0fe15f08031c91ffeaecf_hu21c158f85a972cfaee160413dea99c65_31915_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/kernellogaddtime/Linux-Kernel.3e5bbdb98ac0fe15f08031c91ffeaecf_hu5889797332106781175.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -495,7 +484,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/android-framework/android-logo.6aec2be37d63168d39cacbceea4d4740_hu0d2a9d549e5b2563e0cd181449ce1b0a_79982_250x150_fill_box_smart1_3.png" 
+                <img src="/p/android-framework/android-logo.6aec2be37d63168d39cacbceea4d4740_hu3801621007116167303.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -519,7 +508,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/hugo_wsl2/WSL2.e6b1315231bb8a9feda103d7d9e62e6b_hu32b6a15140d8ae5f7ebc669008341df4_780416_250x150_fill_box_smart1_3.png" 
+                <img src="/p/hugo_wsl2/WSL2.e6b1315231bb8a9feda103d7d9e62e6b_hu1201420198941076686.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -543,7 +532,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu7abe99b24ad4c82a84734007a65ae91a_10499_250x150_fill_box_smart1_3.png" 
+                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu2667634823824225546.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -567,7 +556,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/zsh/_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_3851250cba8ddfe217e77e3dd25a074e.png" 
+                <img src="/p/zsh/prompt-styles-high-contrast.a89d91128a823549087b164e2073d624_hu14421665128678837346.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -646,12 +635,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

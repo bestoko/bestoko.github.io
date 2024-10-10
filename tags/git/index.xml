@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>git on Toko&#39;s blog</title>
+        <title>Git on Toko&#39;s blog</title>
         <link>https://bestoko.cc/tags/git/</link>
-        <description>Recent content in git on Toko&#39;s blog</description>
+        <description>Recent content in Git on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 23 Mar 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -20,7 +20,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;471&#34;
-	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu3506867837254622348.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu2250237437850863967.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;learnGit&#34;
@@ -31,8 +31,8 @@
 		data-flex-basis=&#34;713px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;常用指令&#34;&gt;常用指令&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;常用指令&#34;&gt;常用指令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -190,8 +190,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 commit，用来撤销指定 commit，后者的所有变化都将被前者抵消，并且应用到当前分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;学习资源&#34;&gt;学习资源&lt;/h2&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;学习资源&#34;&gt;学习资源
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://rogerdudler.github.io/git-guide/index.zh.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;git - 简明指南&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://git-scm.com/book/zh/v1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

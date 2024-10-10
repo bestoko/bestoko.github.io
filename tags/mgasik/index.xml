@@ -12,8 +12,8 @@
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/oneplus8/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
-&lt;ul&gt;
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
 &lt;/li&gt;
@@ -28,9 +28,9 @@
 &lt;p&gt;打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk&lt;/h1&gt;
-&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk
+&lt;/h1&gt;&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将官方包内的&lt;code&gt;payload.bin&lt;/code&gt; 解压并放入Payload Dumber 的payload_input目录&lt;/p&gt;
 &lt;/li&gt;
@@ -49,8 +49,8 @@
 &lt;p&gt;将手机download目录下的修补完成的&lt;code&gt;magisk_patched.img&lt;/code&gt;复制到电脑&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将&lt;code&gt;mgisk_patched.img&lt;/code&gt;放入 platform-tools 目录下&lt;/p&gt;
 &lt;/li&gt;
@@ -72,14 +72,14 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed&lt;/h1&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;刷入&lt;code&gt;Riru - Core&lt;/code&gt;模块&lt;/li&gt;
 &lt;li&gt;刷入&lt;code&gt;Riru - EdXposed(YAHFA)&lt;/code&gt; 或&lt;code&gt;Riru - EdXposed(SandHook)&lt;/code&gt;模块&lt;/li&gt;
 &lt;li&gt;安装最新的&lt;code&gt;Edxposed Manager&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项&lt;/h1&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;制作&lt;code&gt;mgisk_patched.img&lt;/code&gt;时要用最新的 v8.0.x版本，不能使用以往的v21.0版本&lt;/p&gt;
 &lt;/li&gt;
@@ -99,7 +99,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -113,7 +113,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -127,7 +127,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -141,7 +141,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;

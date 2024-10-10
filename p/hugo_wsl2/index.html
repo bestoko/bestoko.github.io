@@ -1,49 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='问题 ​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）
-一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用
-解决方法 首先获取 WSL 2 Ubuntu host 的 ip 地址
-1 ipconfig 我这里获取到的是 172.20.3.63
-然后在 hugo 目录下执行
-1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="问题\r\u200b\t最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）\n一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用\n解决方法\r首先获取 WSL 2 Ubuntu host 的 ip 地址\n1 ipconfig 我这里获取到的是 172.20.3.63\n然后在 hugo 目录下执行\n1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了\n">
 <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
 
 <link rel='canonical' href='https://bestoko.cc/p/hugo_wsl2/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Windows11 WSL2 下配置 hugo 环境踩坑 '>
-<meta property='og:description' content='问题 ​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）
-一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用
-解决方法 首先获取 WSL 2 Ubuntu host 的 ip 地址
-1 ipconfig 我这里获取到的是 172.20.3.63
-然后在 hugo 目录下执行
-1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Windows11 WSL2 下配置 hugo 环境踩坑 ">
+<meta property='og:description' content="问题\r\u200b\t最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）\n一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用\n解决方法\r首先获取 WSL 2 Ubuntu host 的 ip 地址\n1 ipconfig 我这里获取到的是 172.20.3.63\n然后在 hugo 目录下执行\n1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了\n">
 <meta property='og:url' content='https://bestoko.cc/p/hugo_wsl2/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='blog' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Windows 11' /><meta property='article:tag' content='WSL2' /><meta property='article:published_time' content='2022-12-10T23:25:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-10T23:25:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/hugo_wsl2/WSL2.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Windows11 WSL2 下配置 hugo 环境踩坑 ">
-<meta name="twitter:description" content="问题 ​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）
-一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用
-解决方法 首先获取 WSL 2 Ubuntu host 的 ip 地址
-1 ipconfig 我这里获取到的是 172.20.3.63
-然后在 hugo 目录下执行
-1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="问题\r\u200b\t最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 hugo server后并不能在主机的 localhost:1313 成功预览（尽管微软的文档里说的是可以:sweat:）\n一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用\n解决方法\r首先获取 WSL 2 Ubuntu host 的 ip 地址\n1 ipconfig 我这里获取到的是 172.20.3.63\n然后在 hugo 目录下执行\n1 hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63 接着 Windows 主机的浏览器就可以通过访问 172.20.3.63:1313 成功预览了\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/hugo_wsl2/WSL2.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -87,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -103,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -265,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -278,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -286,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -332,8 +306,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/hugo_wsl2/">
-                <img src="/p/hugo_wsl2/WSL2_hu32b6a15140d8ae5f7ebc669008341df4_780416_800x0_resize_box_3.png"
-                        srcset="/p/hugo_wsl2/WSL2_hu32b6a15140d8ae5f7ebc669008341df4_780416_800x0_resize_box_3.png 800w, /p/hugo_wsl2/WSL2_hu32b6a15140d8ae5f7ebc669008341df4_780416_1600x0_resize_box_3.png 1600w"
+                <img src="/p/hugo_wsl2/WSL2_hu14276372572424188588.png"
+                        srcset="/p/hugo_wsl2/WSL2_hu14276372572424188588.png 800w, /p/hugo_wsl2/WSL2_hu4633682071608249679.png 1600w"
                         width="800" 
                         height="533" 
                         loading="lazy"
@@ -394,12 +368,12 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h2 id="问题">问题</h2>
-<p>​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 <code>hugo server</code>后并不能在主机的<code> localhost:1313</code> 成功预览（尽管微软的文档里说的是可以:sweat:）</p>
+    <h2 id="问题">问题
+</h2><p>​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 <code>hugo server</code>后并不能在主机的<code> localhost:1313</code> 成功预览（尽管微软的文档里说的是可以:sweat:）</p>
 <p><img src="/p/hugo_wsl2/MS_WSL2.png"
 	width="1958"
 	height="958"
-	srcset="/p/hugo_wsl2/MS_WSL2_hue4d4a67839b35423a5189f5ea3b9d45c_267933_480x0_resize_box_3.png 480w, /p/hugo_wsl2/MS_WSL2_hue4d4a67839b35423a5189f5ea3b9d45c_267933_1024x0_resize_box_3.png 1024w"
+	srcset="/p/hugo_wsl2/MS_WSL2_hu6071552873964337066.png 480w, /p/hugo_wsl2/MS_WSL2_hu5205741495756033583.png 1024w"
 	loading="lazy"
 	
 	
@@ -409,8 +383,8 @@ if (!doNotTrack) {
 	
 ></p>
 <p>一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用</p>
-<h2 id="解决方法">解决方法</h2>
-<p>首先获取 WSL 2 Ubuntu host 的 ip 地址</p>
+<h2 id="解决方法">解决方法
+</h2><p>首先获取 WSL 2 Ubuntu host 的 ip 地址</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -422,7 +396,7 @@ if (!doNotTrack) {
 </div><p><img src="/p/hugo_wsl2/Ubuntu1.png"
 	width="1492"
 	height="824"
-	srcset="/p/hugo_wsl2/Ubuntu1_hu676e47cfed5467c1e411cc0e43c5bc81_99870_480x0_resize_box_3.png 480w, /p/hugo_wsl2/Ubuntu1_hu676e47cfed5467c1e411cc0e43c5bc81_99870_1024x0_resize_box_3.png 1024w"
+	srcset="/p/hugo_wsl2/Ubuntu1_hu8997291937449856939.png 480w, /p/hugo_wsl2/Ubuntu1_hu9465595998132522094.png 1024w"
 	loading="lazy"
 	
 	
@@ -444,7 +418,7 @@ if (!doNotTrack) {
 </div><p><img src="/p/hugo_wsl2/Ubuntu2.png"
 	width="2482"
 	height="843"
-	srcset="/p/hugo_wsl2/Ubuntu2_hub683420883f8b328f8262bbae53ae0cd_87963_480x0_resize_box_3.png 480w, /p/hugo_wsl2/Ubuntu2_hub683420883f8b328f8262bbae53ae0cd_87963_1024x0_resize_box_3.png 1024w"
+	srcset="/p/hugo_wsl2/Ubuntu2_hu993058983808485527.png 480w, /p/hugo_wsl2/Ubuntu2_hu11955354505684428377.png 1024w"
 	loading="lazy"
 	
 	
@@ -457,7 +431,7 @@ if (!doNotTrack) {
 <p><img src="/p/hugo_wsl2/HugoSever.png"
 	width="2736"
 	height="1730"
-	srcset="/p/hugo_wsl2/HugoSever_hu9b46ba5de99ba7c91e950f35c42864ee_722976_480x0_resize_box_3.png 480w, /p/hugo_wsl2/HugoSever_hu9b46ba5de99ba7c91e950f35c42864ee_722976_1024x0_resize_box_3.png 1024w"
+	srcset="/p/hugo_wsl2/HugoSever_hu18213436191883341928.png 480w, /p/hugo_wsl2/HugoSever_hu3658939097102882946.png 1024w"
 	loading="lazy"
 	
 	
@@ -474,9 +448,9 @@ if (!doNotTrack) {
     
     <section class="article-tags">
         
-            <a href="/tags/hugo/">hugo</a>
+            <a href="/tags/hugo/">Hugo</a>
         
-            <a href="/tags/blog/">blog</a>
+            <a href="/tags/blog/">Blog</a>
         
             <a href="/tags/ubuntu/">Ubuntu</a>
         
@@ -522,7 +496,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu7abe99b24ad4c82a84734007a65ae91a_10499_250x150_fill_box_smart1_3.png" 
+                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu2667634823824225546.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -546,7 +520,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/zsh/_hu84459e5b4ae7a52bf5b67b42f57bdcae_62099_3851250cba8ddfe217e77e3dd25a074e.png" 
+                <img src="/p/zsh/prompt-styles-high-contrast.a89d91128a823549087b164e2073d624_hu14421665128678837346.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -570,7 +544,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu2affd397a92bbc63783314cc40d8173f_294660_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu141758269469665038.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -594,7 +568,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-clash-for-windows/cfw.d8c33e368547ee9402611ac5b45e0d74_hu9db59739f206d08ecaf1f4b03c5d9443_57712_250x150_fill_box_smart1_3.png" 
+                <img src="/p/linux-clash-for-windows/cfw.d8c33e368547ee9402611ac5b45e0d74_hu701856847647497751.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -618,7 +592,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/gnome-lunar-calendar/calendar.bae5ffc9e53149803a3f35349d3870ea_huc965ea0dc5f40a0bcc0496d3e43e9f6a_402882_250x150_fill_box_smart1_3.png" 
+                <img src="/p/gnome-lunar-calendar/calendar.bae5ffc9e53149803a3f35349d3870ea_hu3928415528280867216.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -697,12 +671,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

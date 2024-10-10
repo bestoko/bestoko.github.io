@@ -17,7 +17,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/certificate.jpg&#34;
 	width=&#34;3000&#34;
 	height=&#34;4000&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_huf7631bf3ace626bb1c92f74250ef74c1_5469409_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_huf7631bf3ace626bb1c92f74250ef74c1_5469409_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_hu1288073617422609327.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_hu1468848638951109267.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -26,8 +26,8 @@
 		data-flex-basis=&#34;180px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;概览&#34;&gt;概览&lt;/h2&gt;
-&lt;p&gt;首先要知道的是，想要合法通联，你需要准备的东西有&lt;/p&gt;
+&lt;h2 id=&#34;概览&#34;&gt;概览
+&lt;/h2&gt;&lt;p&gt;首先要知道的是，想要合法通联，你需要准备的东西有&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;业余无线电操作证&lt;/li&gt;
 &lt;li&gt;符合国家技术标准的无线电发射设备&lt;/li&gt;
@@ -35,8 +35,8 @@
 &lt;/ol&gt;
 &lt;p&gt;其中，3可以在准备好1和2的情况下，填写 《业余无线电台技术资料申报表》与 《业余无线电台设置(变更)申请表》向当地工信部申请获得，而2的话，一般只需注意买的设备要有&lt;strong&gt;核准码&lt;/strong&gt;即可（可在智谱app查询），因此重点在于通过考试拿到业余无线电操作证。&lt;/p&gt;
 &lt;p&gt;而业余无线电操作证分为ABC三个等级，A级最低，C级最高，等级高低影响操作员获准使用的频段和最大功率。操作证只能按A，B，C顺序依次取得。我这次取得的就是A级，购买的设备是泉盛的 UV-K5（性价比很高，推荐入门使用）&lt;/p&gt;
-&lt;h2 id=&#34;报名&#34;&gt;报名&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;报名&#34;&gt;报名
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;如果你只对收讯感兴趣，对通联并不感冒，你可以考虑玩软件无线电或者面向无线电爱好者的收音机（例如德生）,并不需要报名考试。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;报名方式分为两种, 这里我选择的是手机APP的方式
@@ -49,7 +49,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup1.jpg&#34;
 	width=&#34;1079&#34;
 	height=&#34;2295&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu23864d4f936de2193dcc9020bf75c6a9_255733_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu23864d4f936de2193dcc9020bf75c6a9_255733_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu13662075476929645577.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu8828531960940405493.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -61,7 +61,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2299&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hue03a615d862c6ca461ad9e7be1896fea_405742_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hue03a615d862c6ca461ad9e7be1896fea_405742_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hu15658567494471417158.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hu17137786438621373990.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -70,13 +70,13 @@
 		data-flex-basis=&#34;112px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;考试&#34;&gt;考试&lt;/h2&gt;
-&lt;p&gt;试题范围为中国无线电协会业余无线电工作委员会（CRAC）公布的题库。&lt;/p&gt;
+&lt;h2 id=&#34;考试&#34;&gt;考试
+&lt;/h2&gt;&lt;p&gt;试题范围为中国无线电协会业余无线电工作委员会（CRAC）公布的题库。&lt;/p&gt;
 &lt;p&gt;你可以选择按照官方的指南在“业余无线电台操作技术能力验证及信息管理系统”的“资料下载”模块，下载安装“模拟考试软件”或TXT格式题库包，或者在“智谱”APP的“业余无线电移动信息平台”，进行复习和模拟考试。当然也可以像我一样使用更方便的微信小程序刷题，这里我推荐的是&lt;strong&gt;业余无线电工具集&lt;/strong&gt; 或者 &lt;strong&gt;HAM模拟考试&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2289&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu55fc9b5b25dc7d9aa1c1b8a4ca25e727_272986_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu55fc9b5b25dc7d9aa1c1b8a4ca25e727_272986_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu1849222510053926737.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu7695587198885027470.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -88,7 +88,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2280&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu353a2c7f2774261ea8ac6f2375d95d55_324299_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu353a2c7f2774261ea8ac6f2375d95d55_324299_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu5623703817190342976.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu15615359992460686469.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -176,13 +176,13 @@
     &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;设台&#34;&gt;设台&lt;/h2&gt;
-&lt;p&gt;不同地区的规定不同，南京这边考试现场为考试合格考生提供25W以下业余无线电台验机服务，当然也可以选择改日单独送去验机，具体看当地规定。需要注意的是一定要从&lt;strong&gt;正规渠道&lt;/strong&gt;购买有&lt;strong&gt;核准码&lt;/strong&gt;的机型，群里见到有因为买到问题批次的机器没有通过验机的朋友，验机现场也有因为机身上没有核准码标签而差点被拒的朋友。&lt;/p&gt;
+&lt;h2 id=&#34;设台&#34;&gt;设台
+&lt;/h2&gt;&lt;p&gt;不同地区的规定不同，南京这边考试现场为考试合格考生提供25W以下业余无线电台验机服务，当然也可以选择改日单独送去验机，具体看当地规定。需要注意的是一定要从&lt;strong&gt;正规渠道&lt;/strong&gt;购买有&lt;strong&gt;核准码&lt;/strong&gt;的机型，群里见到有因为买到问题批次的机器没有通过验机的朋友，验机现场也有因为机身上没有核准码标签而差点被拒的朋友。&lt;/p&gt;
 &lt;p&gt;一切准备妥当后，到设台当地工信部提交好证明等待即可。首次设台时，管局会给分配一个全球唯一的呼号，这个呼号会伴随你的整个业余无线电生涯。（呼号一般不可自选，但据考试群友反馈某些地方线下办理允许自选一位，有想法的可以线下去问）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/RadioSet.png&#34;
 	width=&#34;1653&#34;
 	height=&#34;1120&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_huc27c7ff472a2c831fa915d0cc8ea7435_90626_480x0_resize_box_3.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_huc27c7ff472a2c831fa915d0cc8ea7435_90626_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_hu8488297907965403895.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_hu4404372130860382941.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -191,8 +191,8 @@
 		data-flex-basis=&#34;354px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
-&lt;p&gt;希望你能够玩得开心，这里是BD4UTT 期待与您空中相遇 73&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后
+&lt;/h2&gt;&lt;p&gt;希望你能够玩得开心，这里是BD4UTT 期待与您空中相遇 73&lt;/p&gt;
 </description>
         </item>
         

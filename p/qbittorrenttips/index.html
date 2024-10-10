@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='如果你也受不了过多的 “torrent not registered with this tracker” 提醒'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="如果你也受不了过多的 “torrent not registered with this tracker” 提醒">
 <title>qBittorrent 批量清理被PT站点删除的种子</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/qbittorrenttips/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='qBittorrent 批量清理被PT站点删除的种子'>
-<meta property='og:description' content='如果你也受不了过多的 “torrent not registered with this tracker” 提醒'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="qBittorrent 批量清理被PT站点删除的种子">
+<meta property='og:description' content="如果你也受不了过多的 “torrent not registered with this tracker” 提醒">
 <meta property='og:url' content='https://bestoko.cc/p/qbittorrenttips/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='NAS' /><meta property='article:tag' content='PT' /><meta property='article:tag' content='qBittorrent' /><meta property='article:published_time' content='2023-06-07T22:42:16&#43;08:00'/><meta property='article:modified_time' content='2023-06-07T22:42:16&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/qbittorrenttips/qBittorrent.jpg' />
@@ -17,18 +17,6 @@
     <meta name="twitter:image" content='https://bestoko.cc/p/qbittorrenttips/qBittorrent.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -72,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -88,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -250,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -263,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -271,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -285,8 +274,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/qbittorrenttips/">
-                <img src="/p/qbittorrenttips/qBittorrent_hud720426d5ab420bac2b8363e64a8a529_8987_800x0_resize_q75_box.jpg"
-                        srcset="/p/qbittorrenttips/qBittorrent_hud720426d5ab420bac2b8363e64a8a529_8987_800x0_resize_q75_box.jpg 800w, /p/qbittorrenttips/qBittorrent_hud720426d5ab420bac2b8363e64a8a529_8987_1600x0_resize_q75_box.jpg 1600w"
+                <img src="/p/qbittorrenttips/qBittorrent_hu11359819871231320329.jpg"
+                        srcset="/p/qbittorrenttips/qBittorrent_hu11359819871231320329.jpg 800w, /p/qbittorrenttips/qBittorrent_hu11283942102871535582.jpg 1600w"
                         width="800" 
                         height="375" 
                         loading="lazy"
@@ -355,7 +344,7 @@ if (!doNotTrack) {
 <p><img src="/p/qbittorrenttips/pt.png"
 	width="1288"
 	height="1162"
-	srcset="/p/qbittorrenttips/pt_hu2e8aa2c4bd6a1c22907a98fe3072e86d_141818_480x0_resize_box_3.png 480w, /p/qbittorrenttips/pt_hu2e8aa2c4bd6a1c22907a98fe3072e86d_141818_1024x0_resize_box_3.png 1024w"
+	srcset="/p/qbittorrenttips/pt_hu6288439628282152507.png 480w, /p/qbittorrenttips/pt_hu6039853929747431877.png 1024w"
 	loading="lazy"
 	
 		alt="PT站删种提醒"
@@ -370,7 +359,7 @@ if (!doNotTrack) {
 <p><img src="/p/qbittorrenttips/qbit1.png"
 	width="2197"
 	height="456"
-	srcset="/p/qbittorrenttips/qbit1_hu4c43e47f5702b9cfc79d2938b6b2d802_92986_480x0_resize_box_3.png 480w, /p/qbittorrenttips/qbit1_hu4c43e47f5702b9cfc79d2938b6b2d802_92986_1024x0_resize_box_3.png 1024w"
+	srcset="/p/qbittorrenttips/qbit1_hu2995968618968659914.png 480w, /p/qbittorrenttips/qbit1_hu15641132378444942884.png 1024w"
 	loading="lazy"
 	
 		alt="种子被删除"
@@ -386,7 +375,7 @@ if (!doNotTrack) {
 <p><img src="/p/qbittorrenttips/qbit2.png"
 	width="713"
 	height="688"
-	srcset="/p/qbittorrenttips/qbit2_hu5cdc4883788fff1cbad3f2f7a769e2d7_94157_480x0_resize_box_3.png 480w, /p/qbittorrenttips/qbit2_hu5cdc4883788fff1cbad3f2f7a769e2d7_94157_1024x0_resize_box_3.png 1024w"
+	srcset="/p/qbittorrenttips/qbit2_hu15451998649857356451.png 480w, /p/qbittorrenttips/qbit2_hu13594296493337293595.png 1024w"
 	loading="lazy"
 	
 		alt="添加tracker筛选"
@@ -400,7 +389,7 @@ if (!doNotTrack) {
 <p><img src="/p/qbittorrenttips/qbit3.png"
 	width="2459"
 	height="1059"
-	srcset="/p/qbittorrenttips/qbit3_hucfc1ba2b44507d2e09ba52604a68dd1e_357543_480x0_resize_box_3.png 480w, /p/qbittorrenttips/qbit3_hucfc1ba2b44507d2e09ba52604a68dd1e_357543_1024x0_resize_box_3.png 1024w"
+	srcset="/p/qbittorrenttips/qbit3_hu5226710101058022087.png 480w, /p/qbittorrenttips/qbit3_hu15548616639044870873.png 1024w"
 	loading="lazy"
 	
 		alt="按tracker排序"
@@ -423,7 +412,7 @@ if (!doNotTrack) {
         
             <a href="/tags/pt/">PT</a>
         
-            <a href="/tags/qbittorrent/">qBittorrent</a>
+            <a href="/tags/qbittorrent/">QBittorrent</a>
         
     </section>
 
@@ -461,7 +450,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/oneplus_ace2_pro/_hu8d3a245acf632aa8753c9a850aa87583_156949_8e43698479d856bcb7eeceae5c69fdc6.jpg" 
+                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu3901644920187346259.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -485,7 +474,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/koishi-chatgpt/KoishiJS.37024b52cfc1fc5461d5ed39a0111c24_hu908b63fc8e23b9e0aa4a716540e4f558_46845_250x150_fill_box_smart1_3.png" 
+                <img src="/p/koishi-chatgpt/KoishiJS.37024b52cfc1fc5461d5ed39a0111c24_hu4310993082040681325.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -509,7 +498,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/oneplus8/onepluslogo.bb321463ce9d345c693db81e591a9a13_hu7b2083ec43cbfc8c8606b4db91f24e67_30881_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/oneplus8/onepluslogo.bb321463ce9d345c693db81e591a9a13_hu3150500408509278020.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -533,7 +522,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/gba2cia/3ds.6d9000d29f461b186573124aca567612_hu4bf660668473ef4591016bcd087f3f0c_132271_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/gba2cia/3ds.6d9000d29f461b186573124aca567612_hu18408012454401256207.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -612,12 +601,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

@@ -1,55 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
-MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。
-Snaps安装与配置 snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。
-也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。
-安装Snap软件包 首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。
-1 sudo pacman -S snapd 启动守护进程 1 sudo systemctl enable --now snapd.socket 启用classic snap support 1 sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。
-Strict
-Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。\nMicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。\nSnaps安装与配置\rsnap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。\n也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。\n安装Snap软件包\r首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。\n1 sudo pacman -S snapd 启动守护进程\r1 sudo systemctl enable --now snapd.socket 启用classic snap support\r1 sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。\nStrict\nUsed by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).\n">
 <title>Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/snaps-mstodo/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)'>
-<meta property='og:description' content='虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
-MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。
-Snaps安装与配置 snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。
-也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。
-安装Snap软件包 首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。
-1 sudo pacman -S snapd 启动守护进程 1 sudo systemctl enable --now snapd.socket 启用classic snap support 1 sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。
-Strict
-Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)">
+<meta property='og:description' content=" 虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。\nMicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。\nSnaps安装与配置\rsnap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。\n也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。\n安装Snap软件包\r首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。\n1 sudo pacman -S snapd 启动守护进程\r1 sudo systemctl enable --now snapd.socket 启用classic snap support\r1 sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。\nStrict\nUsed by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).\n">
 <meta property='og:url' content='https://bestoko.cc/p/snaps-mstodo/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Snap' /><meta property='article:tag' content='MicroSoft To-Do' /><meta property='article:published_time' content='2021-12-22T01:15:01&#43;08:00'/><meta property='article:modified_time' content='2021-12-22T01:15:01&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/snaps-mstodo/snap.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)">
-<meta name="twitter:description" content="虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。
-MicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。
-Snaps安装与配置 snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。
-也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。
-安装Snap软件包 首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。
-1 sudo pacman -S snapd 启动守护进程 1 sudo systemctl enable --now snapd.socket 启用classic snap support 1 sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。
-Strict
-Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below)."><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content=" 虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。\nMicroSoft To-Do作为代办清单app来说，简洁实用，同步方便，而最近在适应Arch Linux的我，实在用不惯gnome桌面自带的ToDo，必须想办法换回去。\nSnaps安装与配置\rsnap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。\n也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。\n安装Snap软件包\r首先，赞美AUR，snapd及其依赖包snap-confine和squashfs-tools都在仓库里了。\n1 sudo pacman -S snapd 启动守护进程\r1 sudo systemctl enable --now snapd.socket 启用classic snap support\r1 sudo ln -s /var/lib/snapd/snap /snap 接着log out或者reboot一下来确保snap的路径正确更新。\nStrict\nUsed by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/snaps-mstodo/snap.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -93,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -109,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -271,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -284,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -292,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -344,8 +312,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/snaps-mstodo/">
-                <img src="/p/snaps-mstodo/snap_hu403091d3742fd6d7492182b7a71661e5_43013_800x0_resize_box_3.png"
-                        srcset="/p/snaps-mstodo/snap_hu403091d3742fd6d7492182b7a71661e5_43013_800x0_resize_box_3.png 800w, /p/snaps-mstodo/snap_hu403091d3742fd6d7492182b7a71661e5_43013_1600x0_resize_box_3.png 1600w"
+                <img src="/p/snaps-mstodo/snap_hu10160366663434334237.png"
+                        srcset="/p/snaps-mstodo/snap_hu10160366663434334237.png 800w, /p/snaps-mstodo/snap_hu12434429166129367511.png 1600w"
                         width="800" 
                         height="450" 
                         loading="lazy"
@@ -410,13 +378,13 @@ if (!doNotTrack) {
 <p>虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。</p>
 <p><code>MicroSoft To-Do</code>作为代办清单app来说，简洁实用，同步方便，而最近在适应<code>Arch Linux</code>的我，实在用不惯<code>gnome</code>桌面自带的<code>ToDo</code>，必须想办法换回去。</p>
 </blockquote>
-<h2 id="snaps安装与配置">Snaps安装与配置</h2>
-<blockquote>
+<h2 id="snaps安装与配置">Snaps安装与配置
+</h2><blockquote>
 <p>snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。</p>
 </blockquote>
 <p>也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。</p>
-<h3 id="安装snap软件包">安装Snap软件包</h3>
-<p>首先，赞美<a class="link" href="https://aur.archlinux.org/packages/snapd/"  target="_blank" rel="noopener"
+<h3 id="安装snap软件包">安装Snap软件包
+</h3><p>首先，赞美<a class="link" href="https://aur.archlinux.org/packages/snapd/"  target="_blank" rel="noopener"
     >AUR</a>，<code>snapd</code>及其依赖包<code>snap-confine</code>和<code>squashfs-tools</code>都在仓库里了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -426,8 +394,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo pacman -S snapd
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="启动守护进程">启动守护进程</h3>
-<div class="highlight"><div class="chroma">
+</div><h3 id="启动守护进程">启动守护进程
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -435,8 +403,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now snapd.socket
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="启用classic-snap-support">启用classic snap support</h3>
-<div class="highlight"><div class="chroma">
+</div><h3 id="启用classic-snap-support">启用classic snap support
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -452,8 +420,8 @@ if (!doNotTrack) {
 <p>Allows access to your system’s resources in much the same way traditional packages do. To safeguard against abuse, publishing a classic snap requires manual approval, and installation requires the &ndash;classic command line argument.</p>
 </blockquote>
 <p>以上是<code>Snap</code>官方给出的定义，<code>classic</code>是与<code>strict</code>相对的。在默认情况下，<code>Snap</code>使用的是<code>strict</code>模式，对安全权限做了极高的要求与限制，而<code>classic</code>就和传统的安装包一样对安全权限没有限制，其实这里的<code>classic</code>就约等于确认已知不安全的风险的含义。</p>
-<h2 id="安装microsoft-to-dounofficial">安装MicroSoft To-Do(unofficial)</h2>
-<p>安装并配置好<code>snap</code>后就很简单了：</p>
+<h2 id="安装microsoft-to-dounofficial">安装MicroSoft To-Do(unofficial)
+</h2><p>安装并配置好<code>snap</code>后就很简单了：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -532,7 +500,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu2affd397a92bbc63783314cc40d8173f_294660_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu141758269469665038.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -556,7 +524,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu92c877dfd4fe632d733454f9d7c15e29_39250_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu13214282107794864767.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -580,7 +548,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-windows-time-conflict/_hu55b4f0060a402cf399162415184cf7cf_158865_160e3bdd4e2e5d7dc9b8c56fbb95d66f.png" 
+                <img src="/p/linux-windows-time-conflict/linux-windows-time-conflict.bdc29c10ced55feb0d4f4f0e748005ea_hu10545218912513843427.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -604,7 +572,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu8b3034d3b76254d70eabeb74d0dd9f1e_41316_250x150_fill_box_smart1_3.png" 
+                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu16621237708429184013.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -628,7 +596,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/surface-linux/surface.cc5db2564991c4ddddec6a38088e7f89_hu4dfd7a842b0b08077966cbe869e7c3b7_55232_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/surface-linux/surface.cc5db2564991c4ddddec6a38088e7f89_hu13911923471499263466.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -707,12 +675,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

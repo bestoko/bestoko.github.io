@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='让 Windows使用UTC标准'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="让 Windows使用UTC标准">
 <title>Linux与Windows双系统时间不一致的解决方法</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/linux-windows-time-conflict/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Linux与Windows双系统时间不一致的解决方法'>
-<meta property='og:description' content='让 Windows使用UTC标准'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Linux与Windows双系统时间不一致的解决方法">
+<meta property='og:description' content="让 Windows使用UTC标准">
 <meta property='og:url' content='https://bestoko.cc/p/linux-windows-time-conflict/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2021-12-27T21:14:01&#43;08:00'/><meta property='article:modified_time' content='2021-12-27T21:14:01&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png' />
@@ -17,18 +17,6 @@
     <meta name="twitter:image" content='https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -72,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -88,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -250,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -263,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -271,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -285,8 +274,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/linux-windows-time-conflict/">
-                <img src="/p/linux-windows-time-conflict/linux-windows-time-conflict_hu55b4f0060a402cf399162415184cf7cf_158865_800x0_resize_box_3.png"
-                        srcset="/p/linux-windows-time-conflict/linux-windows-time-conflict_hu55b4f0060a402cf399162415184cf7cf_158865_800x0_resize_box_3.png 800w, /p/linux-windows-time-conflict/linux-windows-time-conflict_hu55b4f0060a402cf399162415184cf7cf_158865_1600x0_resize_box_3.png 1600w"
+                <img src="/p/linux-windows-time-conflict/linux-windows-time-conflict_hu9333694020991024955.png"
+                        srcset="/p/linux-windows-time-conflict/linux-windows-time-conflict_hu9333694020991024955.png 800w, /p/linux-windows-time-conflict/linux-windows-time-conflict_hu8912838899019139747.png 1600w"
                         width="800" 
                         height="414" 
                         loading="lazy"
@@ -352,13 +341,13 @@ if (!doNotTrack) {
     
     
     <p>给常用的电脑加了块固态装了<code>Arch linux</code>，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在<code>Surface</code>上单系统所没遇到的。</p>
-<h2 id="为什么时间不一致">为什么时间不一致</h2>
-<blockquote>
+<h2 id="为什么时间不一致">为什么时间不一致
+</h2><blockquote>
 <p>这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。</p>
 <p>中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。</p>
 </blockquote>
-<h2 id="推荐的解决办法">推荐的解决办法</h2>
-<p>Windows 其实也能处理 UTC，需要修改注册表。建议<strong>让 Windows 使用 UTC，而非让 Linux 使用地方时</strong>。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。</p>
+<h2 id="推荐的解决办法">推荐的解决办法
+</h2><p>Windows 其实也能处理 UTC，需要修改注册表。建议<strong>让 Windows 使用 UTC，而非让 Linux 使用地方时</strong>。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。</p>
 <p>Linux 可以使用<strong>NTP服务</strong>来在线同步硬件时钟。</p>
 <p>使用 <code>regedit</code>,新建如下 DWORD 值，并将其值设为十六进制的 <code>1</code>。</p>
 <div class="highlight"><div class="chroma">
@@ -430,7 +419,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu2affd397a92bbc63783314cc40d8173f_294660_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu141758269469665038.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -454,7 +443,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu92c877dfd4fe632d733454f9d7c15e29_39250_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu13214282107794864767.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -478,7 +467,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/snaps-mstodo/snap.8cf15ee28479d69ba32358a67c33bb4d_hu403091d3742fd6d7492182b7a71661e5_43013_250x150_fill_box_smart1_3.png" 
+                <img src="/p/snaps-mstodo/snap.8cf15ee28479d69ba32358a67c33bb4d_hu3964601404241834759.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -502,7 +491,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu8b3034d3b76254d70eabeb74d0dd9f1e_41316_250x150_fill_box_smart1_3.png" 
+                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu16621237708429184013.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -526,7 +515,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/surface-linux/surface.cc5db2564991c4ddddec6a38088e7f89_hu4dfd7a842b0b08077966cbe869e7c3b7_55232_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/surface-linux/surface.cc5db2564991c4ddddec6a38088e7f89_hu13911923471499263466.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -605,12 +594,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

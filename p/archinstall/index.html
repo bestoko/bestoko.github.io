@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='安装过程与基本配置'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="安装过程与基本配置">
 <title>Arch Linux安装备忘录（一）</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/archinstall/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Arch Linux安装备忘录（一）'>
-<meta property='og:description' content='安装过程与基本配置'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Arch Linux安装备忘录（一）">
+<meta property='og:description' content="安装过程与基本配置">
 <meta property='og:url' content='https://bestoko.cc/p/archinstall/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:published_time' content='2021-12-14T09:00:01&#43;08:00'/><meta property='article:modified_time' content='2021-12-14T09:00:01&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/archinstall/ArchLinux.jpg' />
@@ -17,18 +17,6 @@
     <meta name="twitter:image" content='https://bestoko.cc/p/archinstall/ArchLinux.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -72,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -88,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -250,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -263,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -271,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -342,8 +331,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/archinstall/">
-                <img src="/p/archinstall/ArchLinux_hu13d81b556f6c7780a085a162084854bc_14536_800x0_resize_q75_box.jpg"
-                        srcset="/p/archinstall/ArchLinux_hu13d81b556f6c7780a085a162084854bc_14536_800x0_resize_q75_box.jpg 800w, /p/archinstall/ArchLinux_hu13d81b556f6c7780a085a162084854bc_14536_1600x0_resize_q75_box.jpg 1600w"
+                <img src="/p/archinstall/ArchLinux_hu12703827567986066774.jpg"
+                        srcset="/p/archinstall/ArchLinux_hu12703827567986066774.jpg 800w, /p/archinstall/ArchLinux_hu10217201921412040477.jpg 1600w"
                         width="800" 
                         height="501" 
                         loading="lazy"
@@ -408,24 +397,24 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h2 id="写在前面">写在前面</h2>
-<p>安装<code>Arch</code>最好最全面的教程就是官方的 <a class="link" href="https://wiki.archlinux.org/title/installation_guide"  target="_blank" rel="noopener"
+    <h2 id="写在前面">写在前面
+</h2><p>安装<code>Arch</code>最好最全面的教程就是官方的 <a class="link" href="https://wiki.archlinux.org/title/installation_guide"  target="_blank" rel="noopener"
     >Installation guide</a>。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备<code>Linux</code>知识的新手经常无从下手。</p>
 <p>笔者也是初学者，本篇文章仅作为自己在<code>Surface Pro 2017</code>从0开始安装配置<code>Arch</code>的记录。</p>
-<h2 id="安装准备">安装准备</h2>
-<h3 id="磁盘准备">磁盘准备</h3>
-<p>我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。</p>
-<h3 id="安装介质">安装介质</h3>
-<p><a class="link" href="https://www.archlinux.org/download/"  target="_blank" rel="noopener"
+<h2 id="安装准备">安装准备
+</h2><h3 id="磁盘准备">磁盘准备
+</h3><p>我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。</p>
+<h3 id="安装介质">安装介质
+</h3><p><a class="link" href="https://www.archlinux.org/download/"  target="_blank" rel="noopener"
     >https://www.archlinux.org/download/</a> 建议从下面的中国镜像下载iso文件</p>
 <p><a class="link" href="https://rufus.ie/"  target="_blank" rel="noopener"
     >https://rufus.ie/</a>  我们用Rufus来制作引导盘，<strong>此步需要用到一个空闲U盘</strong>。需要注意的是写入方式选择DD，分区类型选择GPT而非默认的MBR。</p>
-<h3 id="设置启动顺序">设置启动顺序</h3>
-<p>接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭<code>security boot</code>，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。</p>
-<h2 id="安装过程">安装过程</h2>
-<p>正确设置好启动顺序后，启动时会看到<code>ArchLinux</code>的界面，按<code>Enter键</code>选择 <code>Boot Arch Linux</code> ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲<code>Arch</code>安装到之前准备的磁盘上。</p>
-<h3 id="网络连接">*网络连接</h3>
-<p><code>Arch</code>的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。</p>
+<h3 id="设置启动顺序">设置启动顺序
+</h3><p>接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭<code>security boot</code>，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。</p>
+<h2 id="安装过程">安装过程
+</h2><p>正确设置好启动顺序后，启动时会看到<code>ArchLinux</code>的界面，按<code>Enter键</code>选择 <code>Boot Arch Linux</code> ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲<code>Arch</code>安装到之前准备的磁盘上。</p>
+<h3 id="网络连接">*网络连接
+</h3><p><code>Arch</code>的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。</p>
 <p>输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -513,8 +502,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/pacman.d/mirrorlist
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="磁盘分区">磁盘分区</h3>
-<p>检查磁盘</p>
+</div><h3 id="磁盘分区">磁盘分区
+</h3><p>检查磁盘</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -561,8 +550,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkswap /dev/nvme01p3
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="挂载分区">挂载分区</h3>
-<div class="highlight"><div class="chroma">
+</div><h3 id="挂载分区">挂载分区
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -594,8 +583,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">swapon /dev/nvme01p3
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="安装基本包">安装基本包</h3>
-<div class="highlight"><div class="chroma">
+</div><h3 id="安装基本包">安装基本包
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -603,8 +592,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="配置fstab">配置Fstab</h4>
-<div class="highlight"><div class="chroma">
+</div><h4 id="配置fstab">配置Fstab
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -621,8 +610,8 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>确认下是否挂载无误</p>
-<h4 id="chroot">chroot</h4>
-<blockquote>
+<h4 id="chroot">chroot
+</h4><blockquote>
 <p><code>Chroot</code>意为<code>Change root</code>，相当于把操纵权交给我们新安装（或已经存在）的<code>Linux</code>系统，<strong>执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行</strong>。</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
@@ -633,8 +622,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">arch-chroot /mnt
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="安装必须软件包">安装必须软件包</h4>
-<p>现在我们已经<code>Chroot</code>到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。<code>ArchLinux</code>有非常强大的包管理工具<code>pacman</code>，大部分情况下，一行命令就可以搞定包与依赖的问题。</p>
+</div><h4 id="安装必须软件包">安装必须软件包
+</h4><p>现在我们已经<code>Chroot</code>到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。<code>ArchLinux</code>有非常强大的包管理工具<code>pacman</code>，大部分情况下，一行命令就可以搞定包与依赖的问题。</p>
 <p>安装包的命令格式为<code>pacman -S 包名</code>，<code>pacman</code>会自动检查这个包所需要的其他包（即为依赖）并一起装上。下面我们就通过<code>pacman</code>来安装一些包，这些包在之后会用上，在这里先提前装好。</p>
 <p>执行如下命令（注意大小写，大小写错误会导致包无法找到）：</p>
 <div class="highlight"><div class="chroma">
@@ -642,12 +631,12 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pacman -S grub efibootmgr efivar networkmanager intel-ucode
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">pacman</span> <span class="o">-</span><span class="n">S</span> <span class="n">grub</span> <span class="n">efibootmgr</span> <span class="n">efivar</span> <span class="n">networkmanager</span> <span class="n">intel</span><span class="o">-</span><span class="n">ucode</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>AMD用户请将<code>intel-ucode</code>替换成<code>amd-ucode</code></strong></p>
-<h4 id="安装bootloader">安装Bootloader</h4>
-<p>部署<code>grub</code></p>
+<h4 id="安装bootloader">安装Bootloader
+</h4><p>部署<code>grub</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -677,8 +666,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="设置networkmanager开机自动启动">设置NetworkManager开机自动启动</h4>
-<div class="highlight"><div class="chroma">
+</div><h4 id="设置networkmanager开机自动启动">设置NetworkManager开机自动启动
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -686,8 +675,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> NetworkManager
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="为root用户设置密码">为root用户设置密码</h4>
-<div class="highlight"><div class="chroma">
+</div><h4 id="为root用户设置密码">为root用户设置密码
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -695,8 +684,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">passwd
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="卸载分区-拔除介质">卸载分区 拔除介质</h4>
-<div class="highlight"><div class="chroma">
+</div><h4 id="卸载分区-拔除介质">卸载分区 拔除介质
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -715,8 +704,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">reboot
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="小结">小结</h2>
-<p>至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&hellip;.以及一些实用软件包。</p>
+</div><h2 id="小结">小结
+</h2><p>至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&hellip;.以及一些实用软件包。</p>
 
 </section>
 
@@ -765,7 +754,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu2affd397a92bbc63783314cc40d8173f_294660_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu141758269469665038.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -789,7 +778,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu92c877dfd4fe632d733454f9d7c15e29_39250_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/linux-virtualbox-error/virtualbox-oracle.78c6f02c0043afc8e6ac08b6089aebfb_hu13214282107794864767.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -813,7 +802,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-windows-time-conflict/_hu55b4f0060a402cf399162415184cf7cf_158865_160e3bdd4e2e5d7dc9b8c56fbb95d66f.png" 
+                <img src="/p/linux-windows-time-conflict/linux-windows-time-conflict.bdc29c10ced55feb0d4f4f0e748005ea_hu10545218912513843427.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -837,7 +826,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/snaps-mstodo/snap.8cf15ee28479d69ba32358a67c33bb4d_hu403091d3742fd6d7492182b7a71661e5_43013_250x150_fill_box_smart1_3.png" 
+                <img src="/p/snaps-mstodo/snap.8cf15ee28479d69ba32358a67c33bb4d_hu3964601404241834759.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -861,7 +850,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu8b3034d3b76254d70eabeb74d0dd9f1e_41316_250x150_fill_box_smart1_3.png" 
+                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu16621237708429184013.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -940,12 +929,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

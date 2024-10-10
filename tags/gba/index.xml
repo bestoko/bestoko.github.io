@@ -12,13 +12,13 @@
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/gba2cia/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
-&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
+        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
+&lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;一台BOOT9STARP(B9S)破解的3ds&lt;/p&gt;
 &lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://3ds.hacks.guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -39,14 +39,14 @@
 &lt;p&gt;这里以&lt;strong&gt;漆黑的魅影&lt;/strong&gt;为例（很棒的GBA宝可梦改版，我一直想在实机上玩）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;gba-转cia&#34;&gt;GBA 转CIA&lt;/h2&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;gba-转cia&#34;&gt;GBA 转CIA
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu10870831498259699845.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu12406518874957529171.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -60,7 +60,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu2703508768858883773.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu1206932963345848948.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -77,7 +77,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu15786535881229955962.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu2920106178724780029.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -91,7 +91,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu15862548443368252133.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7163886712473613346.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -108,7 +108,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu4244822793430882731.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu5491374550477089424.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -129,7 +129,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu11063517222999121877.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4118045727246458379.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;
@@ -141,8 +141,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;大功告成~&lt;/p&gt;
-&lt;h2 id=&#34;备注事项&#34;&gt;备注事项&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;备注事项&#34;&gt;备注事项
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;据说部分老款3ds对这种方式转换的&lt;code&gt;.cia&lt;/code&gt;支持不好，会出现黑屏情况(我的美版老小三反正测试是没问题啦)&lt;/li&gt;
 &lt;li&gt;港版不支持港版不支持港版不支持&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;存档类型&lt;/strong&gt;一定要设置正确&lt;/li&gt;

@@ -13,8 +13,8 @@
         
         <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
         <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
-&lt;h2 id=&#34;事前准备&#34;&gt;事前准备&lt;/h2&gt;
-&lt;p&gt;你需要准备：&lt;/p&gt;
+&lt;h2 id=&#34;事前准备&#34;&gt;事前准备
+&lt;/h2&gt;&lt;p&gt;你需要准备：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://koishi.chat/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;koishi&lt;/a&gt;  koishi是一个高性能的机器人服务，你可以在官网任选一个合适的方式部署（Windows/macOS/Linux/Android/容器）&lt;/li&gt;
@@ -24,12 +24,12 @@
 &lt;li&gt;一个 QQ 小号，等级尽可能高一点以免风控 （koishi 事实上支持包括 QQ/discord/telegram/kook/feishu等的部署）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
-&lt;h2 id=&#34;操作部署&#34;&gt;操作部署&lt;/h2&gt;
-&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
+&lt;h2 id=&#34;操作部署&#34;&gt;操作部署
+&lt;/h2&gt;&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu1330688395182990461.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5505363090823537123.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -42,7 +42,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu6967327548753512351.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu18038813504491149406.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -55,7 +55,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu8661665712310258903.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu11950212348460244614.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -64,11 +64,11 @@
 		data-flex-basis=&#34;670px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+&lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu13099918487877242515.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu891732750637561159.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -83,7 +83,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu8593079960691404097.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu4924297100520235754.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -95,7 +95,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu8825968814062225513.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu17925683289958446452.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -107,8 +107,8 @@
 &lt;p&gt;apikey 可以在 &lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/account/api-keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://platform.openai.com/account/api-keys&lt;/a&gt; 获取。&lt;/p&gt;
 &lt;p&gt;然后启用插件&lt;/p&gt;
-&lt;h2 id=&#34;enjoy-it&#34;&gt;Enjoy it&lt;/h2&gt;
-&lt;p&gt;接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD&lt;/p&gt;
+&lt;h2 id=&#34;enjoy-it&#34;&gt;Enjoy it
+&lt;/h2&gt;&lt;p&gt;接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD&lt;/p&gt;
 &lt;p&gt;20220305补充：&lt;/p&gt;
 &lt;p&gt;请尽可能的在&lt;strong&gt;可信任&lt;/strong&gt;的朋友的群里使用，我的群友们疑似因为提问了太多不能碰的滑梯，两天用完了免费的 18$ 余额，第三天群也炸了 &amp;hellip;&lt;/p&gt;
 </description>

@@ -25,8 +25,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;所安装的正是Code-OSS ，默认不使用微软官方扩展市场。&lt;/p&gt;
-&lt;h2 id=&#34;方法一&#34;&gt;方法一&lt;/h2&gt;
-&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
+&lt;h2 id=&#34;方法一&#34;&gt;方法一
+&lt;/h2&gt;&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -44,8 +44,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;重新启动&lt;code&gt;Code-OSS&lt;/code&gt;就可以了。&lt;/p&gt;
-&lt;h2 id=&#34;方法二&#34;&gt;方法二&lt;/h2&gt;
-&lt;p&gt;方法一正常使用一段时间后，在某次重启后出现打不开&lt;code&gt;Code-OSS&lt;/code&gt;的情况，所幸从&lt;code&gt;AUR&lt;/code&gt;上找到了另一个包解决了问题，记录在此。&lt;/p&gt;
+&lt;h2 id=&#34;方法二&#34;&gt;方法二
+&lt;/h2&gt;&lt;p&gt;方法一正常使用一段时间后，在某次重启后出现打不开&lt;code&gt;Code-OSS&lt;/code&gt;的情况，所幸从&lt;code&gt;AUR&lt;/code&gt;上找到了另一个包解决了问题，记录在此。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

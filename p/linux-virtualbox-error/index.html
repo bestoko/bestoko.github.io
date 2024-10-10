@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Kernel driver not installed (rc=-1908)'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Kernel driver not installed (rc=-1908)">
 <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/linux-virtualbox-error/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法'>
-<meta property='og:description' content='Kernel driver not installed (rc=-1908)'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法">
+<meta property='og:description' content="Kernel driver not installed (rc=-1908)">
 <meta property='og:url' content='https://bestoko.cc/p/linux-virtualbox-error/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Virtual Box' /><meta property='article:published_time' content='2021-12-28T11:21:20&#43;08:00'/><meta property='article:modified_time' content='2021-12-28T11:21:20&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg' />
@@ -17,18 +17,6 @@
     <meta name="twitter:image" content='https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -72,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -88,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -250,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -263,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -271,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -285,8 +274,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/linux-virtualbox-error/">
-                <img src="/p/linux-virtualbox-error/virtualbox-oracle_hu92c877dfd4fe632d733454f9d7c15e29_39250_800x0_resize_q75_box.jpg"
-                        srcset="/p/linux-virtualbox-error/virtualbox-oracle_hu92c877dfd4fe632d733454f9d7c15e29_39250_800x0_resize_q75_box.jpg 800w, /p/linux-virtualbox-error/virtualbox-oracle_hu92c877dfd4fe632d733454f9d7c15e29_39250_1600x0_resize_q75_box.jpg 1600w"
+                <img src="/p/linux-virtualbox-error/virtualbox-oracle_hu305318848051770718.jpg"
+                        srcset="/p/linux-virtualbox-error/virtualbox-oracle_hu305318848051770718.jpg 800w, /p/linux-virtualbox-error/virtualbox-oracle_hu8827862545632362498.jpg 1600w"
                         width="800" 
                         height="450" 
                         loading="lazy"
@@ -352,14 +341,14 @@ if (!doNotTrack) {
     
     
     <p>在 <code>Arch Linux</code> 上使用 <code>Virtual Box</code> 制作虚拟机，打开时却出了问题。</p>
-<h2 id="报错信息">报错信息</h2>
-<blockquote>
+<h2 id="报错信息">报错信息
+</h2><blockquote>
 <p>Kernel driver not installed (rc=-1908)</p>
 </blockquote>
 <p><img src="/p/linux-virtualbox-error/virtualbox-error.png"
 	width="630"
 	height="497"
-	srcset="/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_480x0_resize_box_3.png 480w, /p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_1024x0_resize_box_3.png 1024w"
+	srcset="/p/linux-virtualbox-error/virtualbox-error_hu14528650379033580044.png 480w, /p/linux-virtualbox-error/virtualbox-error_hu17664705506683901406.png 1024w"
 	loading="lazy"
 	
 		alt="error"
@@ -371,8 +360,8 @@ if (!doNotTrack) {
 	
 ></p>
 <p>VirtualBox Linux 内核驱动程序未加载或未正确设置。</p>
-<h2 id="解决办法">解决办法</h2>
-<p>执行如下命令，重新安装vboxdrv模块</p>
+<h2 id="解决办法">解决办法
+</h2><p>执行如下命令，重新安装vboxdrv模块</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -432,7 +421,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu2affd397a92bbc63783314cc40d8173f_294660_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/grubfix/fix-grub.be6d2b146fcea05b1a5f159af053f60f_hu141758269469665038.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -456,7 +445,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-windows-time-conflict/_hu55b4f0060a402cf399162415184cf7cf_158865_160e3bdd4e2e5d7dc9b8c56fbb95d66f.png" 
+                <img src="/p/linux-windows-time-conflict/linux-windows-time-conflict.bdc29c10ced55feb0d4f4f0e748005ea_hu10545218912513843427.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -480,7 +469,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/snaps-mstodo/snap.8cf15ee28479d69ba32358a67c33bb4d_hu403091d3742fd6d7492182b7a71661e5_43013_250x150_fill_box_smart1_3.png" 
+                <img src="/p/snaps-mstodo/snap.8cf15ee28479d69ba32358a67c33bb4d_hu3964601404241834759.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -504,7 +493,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu8b3034d3b76254d70eabeb74d0dd9f1e_41316_250x150_fill_box_smart1_3.png" 
+                <img src="/p/code-oss-extensions/code-oss.f69600b2703c0159d3c025461ca718d9_hu16621237708429184013.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -528,7 +517,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/surface-linux/surface.cc5db2564991c4ddddec6a38088e7f89_hu4dfd7a842b0b08077966cbe869e7c3b7_55232_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/surface-linux/surface.cc5db2564991c4ddddec6a38088e7f89_hu13911923471499263466.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -607,12 +596,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

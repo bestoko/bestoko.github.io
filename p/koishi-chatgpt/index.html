@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在 unraid 上通过 docker 部署 koishi ，接入chatGPT'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT">
 <title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/koishi-chatgpt/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='从零开始拥有一个属于自己的 ChatGPT QQ机器人'>
-<meta property='og:description' content='在 unraid 上通过 docker 部署 koishi ，接入chatGPT'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="从零开始拥有一个属于自己的 ChatGPT QQ机器人">
+<meta property='og:description' content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT">
 <meta property='og:url' content='https://bestoko.cc/p/koishi-chatgpt/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ChatGPT' /><meta property='article:tag' content='Koishi' /><meta property='article:tag' content='QQ bot' /><meta property='article:tag' content='Unraid' /><meta property='article:tag' content='Docker' /><meta property='article:published_time' content='2023-03-01T21:30:00&#43;08:00'/><meta property='article:modified_time' content='2023-03-01T21:30:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png' />
@@ -17,18 +17,6 @@
     <meta name="twitter:image" content='https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -72,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -88,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -250,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -263,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -271,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -323,8 +312,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/koishi-chatgpt/">
-                <img src="/p/koishi-chatgpt/KoishiJS_hu908b63fc8e23b9e0aa4a716540e4f558_46845_800x0_resize_box_3.png"
-                        srcset="/p/koishi-chatgpt/KoishiJS_hu908b63fc8e23b9e0aa4a716540e4f558_46845_800x0_resize_box_3.png 800w, /p/koishi-chatgpt/KoishiJS_hu908b63fc8e23b9e0aa4a716540e4f558_46845_1600x0_resize_box_3.png 1600w"
+                <img src="/p/koishi-chatgpt/KoishiJS_hu1568953300960717337.png"
+                        srcset="/p/koishi-chatgpt/KoishiJS_hu1568953300960717337.png 800w, /p/koishi-chatgpt/KoishiJS_hu6466606604907690799.png 1600w"
                         width="800" 
                         height="400" 
                         loading="lazy"
@@ -390,8 +379,8 @@ if (!doNotTrack) {
     
     
     <p>OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。</p>
-<h2 id="事前准备">事前准备</h2>
-<p>你需要准备：</p>
+<h2 id="事前准备">事前准备
+</h2><p>你需要准备：</p>
 <ol>
 <li><a class="link" href="https://koishi.chat/"  target="_blank" rel="noopener"
     >koishi</a>  koishi是一个高性能的机器人服务，你可以在官网任选一个合适的方式部署（Windows/macOS/Linux/Android/容器）</li>
@@ -401,12 +390,12 @@ if (!doNotTrack) {
 <li>一个 QQ 小号，等级尽可能高一点以免风控 （koishi 事实上支持包括 QQ/discord/telegram/kook/feishu等的部署）</li>
 </ol>
 <p>下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）</p>
-<h2 id="操作部署">操作部署</h2>
-<h3 id="unraid-docker-部署-koishi">unraid docker 部署 koishi</h3>
-<p><img src="/p/koishi-chatgpt/koishi.png"
+<h2 id="操作部署">操作部署
+</h2><h3 id="unraid-docker-部署-koishi">unraid docker 部署 koishi
+</h3><p><img src="/p/koishi-chatgpt/koishi.png"
 	width="1180"
 	height="1326"
-	srcset="/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_480x0_resize_box_3.png 480w, /p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_1024x0_resize_box_3.png 1024w"
+	srcset="/p/koishi-chatgpt/koishi_hu1330688395182990461.png 480w, /p/koishi-chatgpt/koishi_hu5505363090823537123.png 1024w"
 	loading="lazy"
 	
 	
@@ -419,7 +408,7 @@ if (!doNotTrack) {
 <p><img src="/p/koishi-chatgpt/unraid_koishi_docker.png"
 	width="1657"
 	height="893"
-	srcset="/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_480x0_resize_box_3.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_1024x0_resize_box_3.png 1024w"
+	srcset="/p/koishi-chatgpt/unraid_koishi_docker_hu6967327548753512351.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_hu18038813504491149406.png 1024w"
 	loading="lazy"
 	
 	
@@ -432,7 +421,7 @@ if (!doNotTrack) {
 <p><img src="/p/koishi-chatgpt/unraid_koishi_docker_logo.png"
 	width="1187"
 	height="425"
-	srcset="/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_480x0_resize_box_3.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_1024x0_resize_box_3.png 1024w"
+	srcset="/p/koishi-chatgpt/unraid_koishi_docker_logo_hu8661665712310258903.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_logo_hu11950212348460244614.png 1024w"
 	loading="lazy"
 	
 	
@@ -441,11 +430,11 @@ if (!doNotTrack) {
 		data-flex-basis="670px"
 	
 ></p>
-<h3 id="koishi-以及-chatgpt-插件的配置">koishi 以及 chatGPT 插件的配置</h3>
-<p><img src="/p/koishi-chatgpt/koishi_adapter-onebot.png"
+<h3 id="koishi-以及-chatgpt-插件的配置">koishi 以及 chatGPT 插件的配置
+</h3><p><img src="/p/koishi-chatgpt/koishi_adapter-onebot.png"
 	width="2316"
 	height="1310"
-	srcset="/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_480x0_resize_box_3.png 480w, /p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_1024x0_resize_box_3.png 1024w"
+	srcset="/p/koishi-chatgpt/koishi_adapter-onebot_hu13099918487877242515.png 480w, /p/koishi-chatgpt/koishi_adapter-onebot_hu891732750637561159.png 1024w"
 	loading="lazy"
 	
 	
@@ -460,7 +449,7 @@ if (!doNotTrack) {
 <p><img src="/p/koishi-chatgpt/koishi_chatgpt.png"
 	width="594"
 	height="303"
-	srcset="/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_480x0_resize_box_3.png 480w, /p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_1024x0_resize_box_3.png 1024w"
+	srcset="/p/koishi-chatgpt/koishi_chatgpt_hu8593079960691404097.png 480w, /p/koishi-chatgpt/koishi_chatgpt_hu4924297100520235754.png 1024w"
 	loading="lazy"
 	
 	
@@ -472,7 +461,7 @@ if (!doNotTrack) {
 <p><img src="/p/koishi-chatgpt/koishi_chatgpt2.png"
 	width="1268"
 	height="782"
-	srcset="/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_480x0_resize_box_3.png 480w, /p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_1024x0_resize_box_3.png 1024w"
+	srcset="/p/koishi-chatgpt/koishi_chatgpt2_hu8825968814062225513.png 480w, /p/koishi-chatgpt/koishi_chatgpt2_hu17925683289958446452.png 1024w"
 	loading="lazy"
 	
 	
@@ -484,8 +473,8 @@ if (!doNotTrack) {
 <p>apikey 可以在 <a class="link" href="https://platform.openai.com/account/api-keys"  target="_blank" rel="noopener"
     >https://platform.openai.com/account/api-keys</a> 获取。</p>
 <p>然后启用插件</p>
-<h2 id="enjoy-it">Enjoy it</h2>
-<p>接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD</p>
+<h2 id="enjoy-it">Enjoy it
+</h2><p>接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD</p>
 <p>20220305补充：</p>
 <p>请尽可能的在<strong>可信任</strong>的朋友的群里使用，我的群友们疑似因为提问了太多不能碰的滑梯，两天用完了免费的 18$ 余额，第三天群也炸了 &hellip;</p>
 
@@ -500,7 +489,7 @@ if (!doNotTrack) {
         
             <a href="/tags/koishi/">Koishi</a>
         
-            <a href="/tags/qq-bot/">QQ bot</a>
+            <a href="/tags/qq-bot/">QQ Bot</a>
         
             <a href="/tags/unraid/">Unraid</a>
         
@@ -542,7 +531,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/oneplus_ace2_pro/_hu8d3a245acf632aa8753c9a850aa87583_156949_8e43698479d856bcb7eeceae5c69fdc6.jpg" 
+                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu3901644920187346259.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -566,7 +555,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/qbittorrenttips/qBittorrent.d1959837a0d734c37da4ad0b534455ed_hud720426d5ab420bac2b8363e64a8a529_8987_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/qbittorrenttips/qBittorrent.d1959837a0d734c37da4ad0b534455ed_hu12378772904922015051.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -590,7 +579,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/oneplus8/onepluslogo.bb321463ce9d345c693db81e591a9a13_hu7b2083ec43cbfc8c8606b4db91f24e67_30881_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/oneplus8/onepluslogo.bb321463ce9d345c693db81e591a9a13_hu3150500408509278020.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -614,7 +603,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/gba2cia/3ds.6d9000d29f461b186573124aca567612_hu4bf660668473ef4591016bcd087f3f0c_132271_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/gba2cia/3ds.6d9000d29f461b186573124aca567612_hu18408012454401256207.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -693,12 +682,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

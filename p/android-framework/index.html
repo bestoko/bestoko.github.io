@@ -1,64 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='平台架构 https://developer.android.com/guide/platform?hl=zh-cn
-从下到上依次分为：
-Linux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。
-Linux内核层 (Linux Kernel) Android 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。
-使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。
-Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。
-硬件抽象层 (Hardware Abstract Layer,HAL) 硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。
-Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。
-也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。
-系统运行库层 这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C&#43;&#43;实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。
-原生 C/C&#43;&#43; 库 (Native C/C&#43;&#43; Libraries) 许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C&#43;&#43; 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。\nAndroid平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。\n硬件抽象层 (Hardware Abstract Layer,HAL)\r硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。\nLinux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。\n也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。\n系统运行库层\r这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。\n原生 C/C++ 库 (Native C/C++ Libraries)\r许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。\n">
 <title>Android平台架构学习笔记</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/android-framework/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='Android平台架构学习笔记'>
-<meta property='og:description' content='平台架构 https://developer.android.com/guide/platform?hl=zh-cn
-从下到上依次分为：
-Linux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。
-Linux内核层 (Linux Kernel) Android 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。
-使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。
-Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。
-硬件抽象层 (Hardware Abstract Layer,HAL) 硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。
-Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。
-也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。
-系统运行库层 这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C&#43;&#43;实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。
-原生 C/C&#43;&#43; 库 (Native C/C&#43;&#43; Libraries) 许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C&#43;&#43; 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Android平台架构学习笔记">
+<meta property='og:description' content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。\nAndroid平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。\n硬件抽象层 (Hardware Abstract Layer,HAL)\r硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。\nLinux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。\n也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。\n系统运行库层\r这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。\n原生 C/C++ 库 (Native C/C++ Libraries)\r许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。\n">
 <meta property='og:url' content='https://bestoko.cc/p/android-framework/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='Android Framework' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2022-03-03T20:00:00&#43;08:00'/><meta property='article:modified_time' content='2022-03-03T20:00:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/android-framework/android-logo.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Android平台架构学习笔记">
-<meta name="twitter:description" content="平台架构 https://developer.android.com/guide/platform?hl=zh-cn
-从下到上依次分为：
-Linux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。
-Linux内核层 (Linux Kernel) Android 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。
-使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。
-Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。
-硬件抽象层 (Hardware Abstract Layer,HAL) 硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。
-Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。
-也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。
-系统运行库层 这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C&#43;&#43;实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。
-原生 C/C&#43;&#43; 库 (Native C/C&#43;&#43; Libraries) 许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C&#43;&#43; 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。\nAndroid平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。\n硬件抽象层 (Hardware Abstract Layer,HAL)\r硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。\nLinux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。\n也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。\n系统运行库层\r这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。\n原生 C/C++ 库 (Native C/C++ Libraries)\r许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 Java OpenGL API 访问 OpenGL ES，以支持在应用中绘制和操作 2D 和 3D 图形。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/android-framework/android-logo.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-215304375-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </head>
     <body class="
     article-page
@@ -102,7 +60,7 @@ if (!doNotTrack) {
                     
                     
                         
-                        <img src="/img/avatar_hucc0bb532b031dda5897cc19d6e8ba597_344591_300x0_resize_box_3.png" width="300"
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -118,7 +76,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
             <h2 class="site-description">Never Knows Best</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -280,12 +238,12 @@ if (!doNotTrack) {
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -293,7 +251,7 @@ if (!doNotTrack) {
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -301,10 +259,11 @@ if (!doNotTrack) {
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -356,8 +315,8 @@ if (!doNotTrack) {
     <header class="article-header">
         <div class="article-image">
             <a href="/p/android-framework/">
-                <img src="/p/android-framework/android-logo_hu0d2a9d549e5b2563e0cd181449ce1b0a_79982_800x0_resize_box_3.png"
-                        srcset="/p/android-framework/android-logo_hu0d2a9d549e5b2563e0cd181449ce1b0a_79982_800x0_resize_box_3.png 800w, /p/android-framework/android-logo_hu0d2a9d549e5b2563e0cd181449ce1b0a_79982_1600x0_resize_box_3.png 1600w"
+                <img src="/p/android-framework/android-logo_hu13443899863018728031.png"
+                        srcset="/p/android-framework/android-logo_hu13443899863018728031.png 800w, /p/android-framework/android-logo_hu3889252501744457473.png 1600w"
                         width="800" 
                         height="449" 
                         loading="lazy"
@@ -422,11 +381,11 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h2 id="平台架构">平台架构</h2>
-<p><img src="/p/android-framework/android-stack_2x.png"
+    <h2 id="平台架构">平台架构
+</h2><p><img src="/p/android-framework/android-stack_2x.png"
 	width="1384"
 	height="2038"
-	srcset="/p/android-framework/android-stack_2x_huac466ffcfe902f478184f94c521211df_101554_480x0_resize_box_3.png 480w, /p/android-framework/android-stack_2x_huac466ffcfe902f478184f94c521211df_101554_1024x0_resize_box_3.png 1024w"
+	srcset="/p/android-framework/android-stack_2x_hu15472696071722192886.png 480w, /p/android-framework/android-stack_2x_hu12077851722269610328.png 1024w"
 	loading="lazy"
 	
 	
@@ -446,16 +405,16 @@ if (!doNotTrack) {
 <li>系统应用</li>
 </ul>
 <p>每一层都包含大量的子模块或子系统。</p>
-<h2 id="linux内核层-linux-kernel">Linux内核层 (Linux Kernel)</h2>
-<blockquote>
+<h2 id="linux内核层-linux-kernel">Linux内核层 (Linux Kernel)
+</h2><blockquote>
 <p>Android 平台的基础是 Linux 内核。例如，<a class="link" href="https://developer.android.com/guide/platform?hl=zh-cn#art"  target="_blank" rel="noopener"
     >Android Runtime (ART)</a> 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。</p>
 <p>使用 Linux 内核可让 Android 利用<a class="link" href="https://source.android.com/security/overview/kernel-security.html?hl=zh-cn"  target="_blank" rel="noopener"
     >主要安全功能</a>，并且允许设备制造商为著名的内核开发硬件驱动程序。</p>
 </blockquote>
 <p>Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。</p>
-<h2 id="硬件抽象层-hardware-abstract-layerhal">硬件抽象层 (Hardware Abstract Layer,HAL)</h2>
-<blockquote>
+<h2 id="硬件抽象层-hardware-abstract-layerhal">硬件抽象层 (Hardware Abstract Layer,HAL)
+</h2><blockquote>
 <p><a class="link" href="https://source.android.com/devices/architecture/hal-types?hl=zh-cn"  target="_blank" rel="noopener"
     >硬件抽象层 (HAL)</a> 提供标准界面，向更高级别的 <a class="link" href="https://developer.android.com/guide/platform?hl=zh-cn#api-framework"  target="_blank" rel="noopener"
     >Java API 框架</a>显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如<a class="link" href="https://source.android.com/devices/camera/index.html?hl=zh-cn"  target="_blank" rel="noopener"
@@ -464,10 +423,10 @@ if (!doNotTrack) {
 </blockquote>
 <p>Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。</p>
 <p>也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。</p>
-<h2 id="系统运行库层">系统运行库层</h2>
-<p>这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。</p>
-<h3 id="原生-cc-库-native-cc-libraries">原生 C/C++ 库 (Native C/C++ Libraries)</h3>
-<blockquote>
+<h2 id="系统运行库层">系统运行库层
+</h2><p>这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。</p>
+<h3 id="原生-cc-库-native-cc-libraries">原生 C/C++ 库 (Native C/C++ Libraries)
+</h3><blockquote>
 <p>许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 <a class="link" href="https://developer.android.com/reference/android/opengl/package-summary?hl=zh-cn"  target="_blank" rel="noopener"
     >Java OpenGL API</a> 访问 <a class="link" href="https://developer.android.com/guide/topics/graphics/opengl?hl=zh-cn"  target="_blank" rel="noopener"
     >OpenGL ES</a>，以支持在应用中绘制和操作 2D 和 3D 图形。</p>
@@ -476,37 +435,37 @@ if (!doNotTrack) {
     >原生平台库</a>。</p>
 </blockquote>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>简介</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Webkit</td>
-<td>一个开源的Web浏览器引擎</td>
-</tr>
-<tr>
-<td>OpenMAX AL</td>
-<td>一个不需要授权、跨平台的软件抽象层，以C语言实现的软件接口，用来处理多媒体。</td>
-</tr>
-<tr>
-<td>Libc</td>
-<td>Linux下的ANSI C的函数库</td>
-</tr>
-<tr>
-<td>Media Framework</td>
-<td>基于PacketVideo的OpenCORE的多媒体库，支持多种常见音视频格式的录制和播放</td>
-</tr>
-<tr>
-<td>OpenGL ES</td>
-<td>免授权费的，跨平台的，功能完善的2D和3D图形应用程序接口API，主要针对多种嵌入式系统专门设计</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">名称</th>
+          <th style="text-align: left">简介</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Webkit</td>
+          <td style="text-align: left">一个开源的Web浏览器引擎</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">OpenMAX AL</td>
+          <td style="text-align: left">一个不需要授权、跨平台的软件抽象层，以C语言实现的软件接口，用来处理多媒体。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Libc</td>
+          <td style="text-align: left">Linux下的ANSI C的函数库</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Media Framework</td>
+          <td style="text-align: left">基于PacketVideo的OpenCORE的多媒体库，支持多种常见音视频格式的录制和播放</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">OpenGL ES</td>
+          <td style="text-align: left">免授权费的，跨平台的，功能完善的2D和3D图形应用程序接口API，主要针对多种嵌入式系统专门设计</td>
+      </tr>
+  </tbody>
 </table></div>
-<h3 id="android运行时-android-runtime">Android运行时 (Android Runtime)</h3>
-<blockquote>
+<h3 id="android运行时-android-runtime">Android运行时 (Android Runtime)
+</h3><blockquote>
 <p>对于运行 Android 5.0(API 级别 21)或更高版本的设备，每个应用都在其自己的进程中运行，并且有其自己的 <a class="link" href="https://source.android.com/devices/tech/dalvik/index.html?hl=zh-cn"  target="_blank" rel="noopener"
     >Android Runtime (ART)</a> 实例。ART 编写为通过执行 DEX 文件在低内存设备上运行多个虚拟机，DEX 文件是一种专为 Android 设计的字节码格式，经过优化，使用的内存很少。编译工具链(例如 <a class="link" href="https://source.android.com/source/jack.html?hl=zh-cn"  target="_blank" rel="noopener"
     >Jack</a>)将 Java 源代码编译为 DEX 字节码，使其可在 Android 平台上运行。</p>
@@ -531,8 +490,8 @@ if (!doNotTrack) {
 </li>
 </ul>
 </blockquote>
-<h2 id="java-api-框架-java-api--framework">Java API 框架 (Java API  Framework)</h2>
-<blockquote>
+<h2 id="java-api-框架-java-api--framework">Java API 框架 (Java API  Framework)
+</h2><blockquote>
 <p>您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：</p>
 <ul>
 <li>丰富、可扩展的<a class="link" href="https://developer.android.com/guide/topics/ui/overview?hl=zh-cn"  target="_blank" rel="noopener"
@@ -551,8 +510,8 @@ if (!doNotTrack) {
     >框架 API</a>。</p>
 </blockquote>
 <p>与&quot;C库层&quot;对应，这一层往往被称作“Java库层”。一方面为上层应用层提供API接口，另一方面也是不少系统级服务进程的实现，是与Android应用开发者关系最直接的一层。提供了开发Android应用程序所需的一系列类库，高度封装直接调用。应用框架层的主要实现代码在frameworks/base和frameworks/av目录下。</p>
-<h2 id="系统应用-system-apps">系统应用 (System Apps)</h2>
-<blockquote>
+<h2 id="系统应用-system-apps">系统应用 (System Apps)
+</h2><blockquote>
 <p>Android  随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。</p>
 <p>系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。</p>
 </blockquote>
@@ -616,7 +575,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/gitnotes/git_logo.2a767389db86969893e17922d767fb6a_hu0871f2e332734283fcd708b643f05707_22105_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/gitnotes/git_logo.2a767389db86969893e17922d767fb6a_hu12408921962548640584.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -640,7 +599,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/markdwonnotes/markdown.64999547e3c3252959c7a8be6d4919f3_hu593b1bacfa1a4c5df7b3aa16ecfb0c28_37213_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/markdwonnotes/markdown.64999547e3c3252959c7a8be6d4919f3_hu4108274833600129455.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -664,7 +623,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu7abe99b24ad4c82a84734007a65ae91a_10499_250x150_fill_box_smart1_3.png" 
+                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu2667634823824225546.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -688,7 +647,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/kernellogaddtime/Linux-Kernel.3e5bbdb98ac0fe15f08031c91ffeaecf_hu21c158f85a972cfaee160413dea99c65_31915_250x150_fill_q75_box_smart1.jpg" 
+                <img src="/p/kernellogaddtime/Linux-Kernel.3e5bbdb98ac0fe15f08031c91ffeaecf_hu5889797332106781175.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -712,7 +671,7 @@ if (!doNotTrack) {
         
         
             <div class="article-image">
-                <img src="/p/mtkcamerahal3modules/HAL3.78b5c530e99bf7b9c060f33a33e2bce4_hue5e7e530428368b457f54449a2a3928f_21495_250x150_fill_box_smart1_3.png" 
+                <img src="/p/mtkcamerahal3modules/HAL3.78b5c530e99bf7b9c060f33a33e2bce4_hu6982446481830839346.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -791,12 +750,12 @@ if (!doNotTrack) {
         
             2020 - 
         
-        2023 Toko&#39;s blog
+        2024 Toko&#39;s blog
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

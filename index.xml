@@ -12,14 +12,14 @@
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post “Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
+        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post “Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hub2e7f510a2ff586c9662fadca3910483_22728_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hub2e7f510a2ff586c9662fadca3910483_22728_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu15784744685729144236.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu5402410126761479358.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -31,8 +31,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;时过境迁，三年时间过去了，玩机的方式也在不断变换，过去的教程已经不具备多少意义。恰逢一加发布了新的Ace2 Pro，参数方面我非常满意，立刻首发购入开刷。并将此间折腾稍作记录，希望也能对看到这篇文章的你有帮助。&lt;/p&gt;
-&lt;h2 id=&#34;方向与工具的选择&#34;&gt;方向与工具的选择&lt;/h2&gt;
-&lt;p&gt;我们玩机大部分时间说的指的是使用各种 xposed 模块对不同应用和系统进行修改，达到自己想要的目的。&lt;/p&gt;
+&lt;h2 id=&#34;方向与工具的选择&#34;&gt;方向与工具的选择
+&lt;/h2&gt;&lt;p&gt;我们玩机大部分时间说的指的是使用各种 xposed 模块对不同应用和系统进行修改，达到自己想要的目的。&lt;/p&gt;
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
 &lt;blockquote&gt;
@@ -41,8 +41,8 @@
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
-&lt;h2 id=&#34;kernelsu启动&#34;&gt;KernelSU，启动！&lt;/h2&gt;
-&lt;p&gt;KernelSU的刷入方式也有很多种，这里我就使用相对不容易出错的一种，方便新手参考。&lt;del&gt;（虽然有点曲线救国）&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id=&#34;kernelsu启动&#34;&gt;KernelSU，启动！
+&lt;/h2&gt;&lt;p&gt;KernelSU的刷入方式也有很多种，这里我就使用相对不容易出错的一种，方便新手参考。&lt;del&gt;（虽然有点曲线救国）&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大概流程是通过 Magisk 获取 Root 权限后使用内核刷写器刷入 KernelSU 的 AnyKernel 包。&lt;/strong&gt; 最后再卸载magisk即可&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;首先是解锁 bootloader，刷入 magisk&lt;/li&gt;
@@ -59,7 +59,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6f9355d389f8985a0d99c0c4b1f83335_84088_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6f9355d389f8985a0d99c0c4b1f83335_84088_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu2170386241575178293.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6681112487101365740.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -84,11 +84,11 @@
 &lt;p&gt;enjoy it&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
+&lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu2897d6718397771f6fe78aba329449cb_205882_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu2897d6718397771f6fe78aba329449cb_205882_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu9797282647728824358.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu8266887722309811162.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -102,7 +102,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_huf1f0d3be77b85ee81423984246b48180_245250_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_huf1f0d3be77b85ee81423984246b48180_245250_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu64685479218557013.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu15387969128228765233.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -116,7 +116,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu587a30d73b88b163eb0df0cfb60fee30_192735_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu587a30d73b88b163eb0df0cfb60fee30_192735_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu13767883759163556219.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu1758458472517622844.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -130,7 +130,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu587a30d73b88b163eb0df0cfb60fee30_207155_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu587a30d73b88b163eb0df0cfb60fee30_207155_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu14844564629188411604.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu1734278580864475992.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -144,7 +144,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu85481eb0c80d88fe90b14877c9ffb079_236008_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu85481eb0c80d88fe90b14877c9ffb079_236008_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2505653572469837244.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2681129231978154320.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -158,7 +158,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu27aab10161e72aa5cbf6f9e5766b1a30_182716_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu27aab10161e72aa5cbf6f9e5766b1a30_182716_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu2712018314552893919.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu11596301558230775997.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -172,7 +172,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu76db0258be09c2697f0dd8ff9ab35132_265018_480x0_resize_box_3.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu76db0258be09c2697f0dd8ff9ab35132_265018_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu13927585091527366980.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu11700466973732308762.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -183,8 +183,8 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;文中提及资源分享含9008已授权工具及救砖包&#34;&gt;文中提及资源分享（含9008已授权工具及救砖包）&lt;/h2&gt;
-&lt;p&gt;链接：https://pan.baidu.com/s/1w1irNJf6ZsCVuSqR3YR6Lg?pwd=toko
+&lt;h2 id=&#34;文中提及资源分享含9008已授权工具及救砖包&#34;&gt;文中提及资源分享（含9008已授权工具及救砖包）
+&lt;/h2&gt;&lt;p&gt;链接：https://pan.baidu.com/s/1w1irNJf6ZsCVuSqR3YR6Lg?pwd=toko
 提取码：toko&lt;/p&gt;
 &lt;p&gt;9008工具来自酷安@秋水105  【理论上一加11 、一加Ace2 Pro 、oppo find x6 pro、realme GT5 通用】&lt;/p&gt;
 &lt;p&gt;救砖包来自@大侠阿木&lt;/p&gt;
@@ -200,7 +200,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu2e8aa2c4bd6a1c22907a98fe3072e86d_141818_480x0_resize_box_3.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu2e8aa2c4bd6a1c22907a98fe3072e86d_141818_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu6288439628282152507.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu6039853929747431877.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -215,7 +215,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu4c43e47f5702b9cfc79d2938b6b2d802_92986_480x0_resize_box_3.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu4c43e47f5702b9cfc79d2938b6b2d802_92986_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu2995968618968659914.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu15641132378444942884.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -231,7 +231,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu5cdc4883788fff1cbad3f2f7a769e2d7_94157_480x0_resize_box_3.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu5cdc4883788fff1cbad3f2f7a769e2d7_94157_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu15451998649857356451.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu13594296493337293595.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -245,7 +245,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hucfc1ba2b44507d2e09ba52604a68dd1e_357543_480x0_resize_box_3.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hucfc1ba2b44507d2e09ba52604a68dd1e_357543_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu5226710101058022087.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu15548616639044870873.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;
@@ -269,7 +269,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/certificate.jpg&#34;
 	width=&#34;3000&#34;
 	height=&#34;4000&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_huf7631bf3ace626bb1c92f74250ef74c1_5469409_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_huf7631bf3ace626bb1c92f74250ef74c1_5469409_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_hu1288073617422609327.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_hu1468848638951109267.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -278,8 +278,8 @@
 		data-flex-basis=&#34;180px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;概览&#34;&gt;概览&lt;/h2&gt;
-&lt;p&gt;首先要知道的是，想要合法通联，你需要准备的东西有&lt;/p&gt;
+&lt;h2 id=&#34;概览&#34;&gt;概览
+&lt;/h2&gt;&lt;p&gt;首先要知道的是，想要合法通联，你需要准备的东西有&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;业余无线电操作证&lt;/li&gt;
 &lt;li&gt;符合国家技术标准的无线电发射设备&lt;/li&gt;
@@ -287,8 +287,8 @@
 &lt;/ol&gt;
 &lt;p&gt;其中，3可以在准备好1和2的情况下，填写 《业余无线电台技术资料申报表》与 《业余无线电台设置(变更)申请表》向当地工信部申请获得，而2的话，一般只需注意买的设备要有&lt;strong&gt;核准码&lt;/strong&gt;即可（可在智谱app查询），因此重点在于通过考试拿到业余无线电操作证。&lt;/p&gt;
 &lt;p&gt;而业余无线电操作证分为ABC三个等级，A级最低，C级最高，等级高低影响操作员获准使用的频段和最大功率。操作证只能按A，B，C顺序依次取得。我这次取得的就是A级，购买的设备是泉盛的 UV-K5（性价比很高，推荐入门使用）&lt;/p&gt;
-&lt;h2 id=&#34;报名&#34;&gt;报名&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;报名&#34;&gt;报名
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;如果你只对收讯感兴趣，对通联并不感冒，你可以考虑玩软件无线电或者面向无线电爱好者的收音机（例如德生）,并不需要报名考试。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;报名方式分为两种, 这里我选择的是手机APP的方式
@@ -301,7 +301,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup1.jpg&#34;
 	width=&#34;1079&#34;
 	height=&#34;2295&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu23864d4f936de2193dcc9020bf75c6a9_255733_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu23864d4f936de2193dcc9020bf75c6a9_255733_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu13662075476929645577.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu8828531960940405493.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -313,7 +313,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2299&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hue03a615d862c6ca461ad9e7be1896fea_405742_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hue03a615d862c6ca461ad9e7be1896fea_405742_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hu15658567494471417158.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hu17137786438621373990.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -322,13 +322,13 @@
 		data-flex-basis=&#34;112px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;考试&#34;&gt;考试&lt;/h2&gt;
-&lt;p&gt;试题范围为中国无线电协会业余无线电工作委员会（CRAC）公布的题库。&lt;/p&gt;
+&lt;h2 id=&#34;考试&#34;&gt;考试
+&lt;/h2&gt;&lt;p&gt;试题范围为中国无线电协会业余无线电工作委员会（CRAC）公布的题库。&lt;/p&gt;
 &lt;p&gt;你可以选择按照官方的指南在“业余无线电台操作技术能力验证及信息管理系统”的“资料下载”模块，下载安装“模拟考试软件”或TXT格式题库包，或者在“智谱”APP的“业余无线电移动信息平台”，进行复习和模拟考试。当然也可以像我一样使用更方便的微信小程序刷题，这里我推荐的是&lt;strong&gt;业余无线电工具集&lt;/strong&gt; 或者 &lt;strong&gt;HAM模拟考试&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2289&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu55fc9b5b25dc7d9aa1c1b8a4ca25e727_272986_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu55fc9b5b25dc7d9aa1c1b8a4ca25e727_272986_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu1849222510053926737.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu7695587198885027470.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -340,7 +340,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2280&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu353a2c7f2774261ea8ac6f2375d95d55_324299_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu353a2c7f2774261ea8ac6f2375d95d55_324299_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu5623703817190342976.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu15615359992460686469.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -428,13 +428,13 @@
     &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;设台&#34;&gt;设台&lt;/h2&gt;
-&lt;p&gt;不同地区的规定不同，南京这边考试现场为考试合格考生提供25W以下业余无线电台验机服务，当然也可以选择改日单独送去验机，具体看当地规定。需要注意的是一定要从&lt;strong&gt;正规渠道&lt;/strong&gt;购买有&lt;strong&gt;核准码&lt;/strong&gt;的机型，群里见到有因为买到问题批次的机器没有通过验机的朋友，验机现场也有因为机身上没有核准码标签而差点被拒的朋友。&lt;/p&gt;
+&lt;h2 id=&#34;设台&#34;&gt;设台
+&lt;/h2&gt;&lt;p&gt;不同地区的规定不同，南京这边考试现场为考试合格考生提供25W以下业余无线电台验机服务，当然也可以选择改日单独送去验机，具体看当地规定。需要注意的是一定要从&lt;strong&gt;正规渠道&lt;/strong&gt;购买有&lt;strong&gt;核准码&lt;/strong&gt;的机型，群里见到有因为买到问题批次的机器没有通过验机的朋友，验机现场也有因为机身上没有核准码标签而差点被拒的朋友。&lt;/p&gt;
 &lt;p&gt;一切准备妥当后，到设台当地工信部提交好证明等待即可。首次设台时，管局会给分配一个全球唯一的呼号，这个呼号会伴随你的整个业余无线电生涯。（呼号一般不可自选，但据考试群友反馈某些地方线下办理允许自选一位，有想法的可以线下去问）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/RadioSet.png&#34;
 	width=&#34;1653&#34;
 	height=&#34;1120&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_huc27c7ff472a2c831fa915d0cc8ea7435_90626_480x0_resize_box_3.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_huc27c7ff472a2c831fa915d0cc8ea7435_90626_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_hu8488297907965403895.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_hu4404372130860382941.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -443,8 +443,8 @@
 		data-flex-basis=&#34;354px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
-&lt;p&gt;希望你能够玩得开心，这里是BD4UTT 期待与您空中相遇 73&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后
+&lt;/h2&gt;&lt;p&gt;希望你能够玩得开心，这里是BD4UTT 期待与您空中相遇 73&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -454,8 +454,8 @@
         
         <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
         <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
-&lt;h2 id=&#34;事前准备&#34;&gt;事前准备&lt;/h2&gt;
-&lt;p&gt;你需要准备：&lt;/p&gt;
+&lt;h2 id=&#34;事前准备&#34;&gt;事前准备
+&lt;/h2&gt;&lt;p&gt;你需要准备：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://koishi.chat/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;koishi&lt;/a&gt;  koishi是一个高性能的机器人服务，你可以在官网任选一个合适的方式部署（Windows/macOS/Linux/Android/容器）&lt;/li&gt;
@@ -465,12 +465,12 @@
 &lt;li&gt;一个 QQ 小号，等级尽可能高一点以免风控 （koishi 事实上支持包括 QQ/discord/telegram/kook/feishu等的部署）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
-&lt;h2 id=&#34;操作部署&#34;&gt;操作部署&lt;/h2&gt;
-&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
+&lt;h2 id=&#34;操作部署&#34;&gt;操作部署
+&lt;/h2&gt;&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5275337fbace4ac8350027f86c827d2a_226693_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu1330688395182990461.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5505363090823537123.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -483,7 +483,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu0f5553450b41678516870b537424ee50_65539_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu6967327548753512351.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu18038813504491149406.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -496,7 +496,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu23c4cb2ba350ac437b85b5d9d8d9ceec_122589_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu8661665712310258903.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu11950212348460244614.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -505,11 +505,11 @@
 		data-flex-basis=&#34;670px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+&lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu5f4900d30954d39005515c391b43d368_224829_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu13099918487877242515.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu891732750637561159.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -524,7 +524,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hua6d486752a95d95ea6ad28be5c7fc95c_18610_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu8593079960691404097.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu4924297100520235754.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -536,7 +536,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_480x0_resize_box_3.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu27793a776f7b46732d05c02eece1151b_53168_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu8825968814062225513.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu17925683289958446452.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -548,8 +548,8 @@
 &lt;p&gt;apikey 可以在 &lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/account/api-keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://platform.openai.com/account/api-keys&lt;/a&gt; 获取。&lt;/p&gt;
 &lt;p&gt;然后启用插件&lt;/p&gt;
-&lt;h2 id=&#34;enjoy-it&#34;&gt;Enjoy it&lt;/h2&gt;
-&lt;p&gt;接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD&lt;/p&gt;
+&lt;h2 id=&#34;enjoy-it&#34;&gt;Enjoy it
+&lt;/h2&gt;&lt;p&gt;接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD&lt;/p&gt;
 &lt;p&gt;20220305补充：&lt;/p&gt;
 &lt;p&gt;请尽可能的在&lt;strong&gt;可信任&lt;/strong&gt;的朋友的群里使用，我的群友们疑似因为提问了太多不能碰的滑梯，两天用完了免费的 18$ 余额，第三天群也炸了 &amp;hellip;&lt;/p&gt;
 </description>
@@ -560,12 +560,12 @@
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
-&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
+        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+&lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hue4d4a67839b35423a5189f5ea3b9d45c_267933_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hue4d4a67839b35423a5189f5ea3b9d45c_267933_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu6071552873964337066.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu5205741495756033583.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -575,8 +575,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一番折腾后找到了解决方法，在 WSL2 别的 Linux 发行版应该也适用&lt;/p&gt;
-&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
-&lt;p&gt;首先获取 WSL 2 Ubuntu host 的 ip 地址&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法
+&lt;/h2&gt;&lt;p&gt;首先获取 WSL 2 Ubuntu host 的 ip 地址&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -588,7 +588,7 @@
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu676e47cfed5467c1e411cc0e43c5bc81_99870_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu676e47cfed5467c1e411cc0e43c5bc81_99870_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu8997291937449856939.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu9465595998132522094.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -610,7 +610,7 @@
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hub683420883f8b328f8262bbae53ae0cd_87963_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hub683420883f8b328f8262bbae53ae0cd_87963_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu993058983808485527.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu11955354505684428377.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -623,7 +623,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu9b46ba5de99ba7c91e950f35c42864ee_722976_480x0_resize_box_3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu9b46ba5de99ba7c91e950f35c42864ee_722976_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu18213436191883341928.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu3658939097102882946.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -866,78 +866,78 @@
         
         <guid>https://bestoko.cc/p/mtkcamerahal3modules/</guid>
         <description>&lt;img src="https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png" alt="Featured image of post MTK 平台 Camera HAL3 相关模块的代码路径" /&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Camera 相关模块&lt;/th&gt;
-&lt;th&gt;代码路径&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraService&lt;/td&gt;
-&lt;td&gt;frameworks/av/services/camera/libcameraservice/CameraService.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraHALServer&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/service/service.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;ICameraProvider&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;ICameraDevice&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3Impl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;ICameraDeviceSession&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraDeviceManager&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AppStreamMgr&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/app/AppStreamMgr.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PipelineModel&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/model/PipelineModelImpl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraSetting&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;MetadataProvider&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/utils/metastore/metadataprovider/MetadataProvider.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;StreamBuffer&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/pipeline/utils/streambuf/StreamBuffers.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Hardware Node&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/hwnode/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;FeaturePipe&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/feature/core/featurePipe/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Pipe Driver&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/drv/src/isp/isp_6s/imageio/pipe&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Sensor Driver&lt;/td&gt;
-&lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;EEPROM Driver&lt;/td&gt;
-&lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Camera 相关模块&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;代码路径&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;CameraService&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;frameworks/av/services/camera/libcameraservice/CameraService.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;CameraHALServer&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/service/service.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;ICameraProvider&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;ICameraDevice&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3Impl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;ICameraDeviceSession&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;CameraDeviceManager&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AppStreamMgr&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/app/AppStreamMgr.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;PipelineModel&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/model/PipelineModelImpl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;CameraSetting&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;MetadataProvider&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/utils/metastore/metadataprovider/MetadataProvider.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;StreamBuffer&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/pipeline/utils/streambuf/StreamBuffers.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Hardware Node&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/hwnode/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;FeaturePipe&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/feature/core/featurePipe/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Pipe Driver&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/drv/src/isp/isp_6s/imageio/pipe&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Sensor Driver&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;EEPROM Driver&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
         </item>
@@ -951,7 +951,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hude939b7ef054a01232bf48a0a7275528_3219_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hude939b7ef054a01232bf48a0a7275528_3219_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu16550990948227147913.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu9476046032450178813.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1129,7 +1129,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu47b7970a1b3ec1ef61b649399e61f089_3284_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu47b7970a1b3ec1ef61b649399e61f089_3284_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu16604705481618910733.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu16507856203016511800.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1147,8 +1147,8 @@
         
         <guid>https://bestoko.cc/p/zsh/</guid>
         <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
-&lt;h2 id=&#34;zsh&#34;&gt;Zsh&lt;/h2&gt;
-&lt;p&gt;安装 zsh&lt;/p&gt;
+&lt;h2 id=&#34;zsh&#34;&gt;Zsh
+&lt;/h2&gt;&lt;p&gt;安装 zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1167,8 +1167,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;你可以用&lt;code&gt;echo $SHELL&lt;/code&gt; 指令来查看当前的默认 shell 是否修改成功.&lt;/p&gt;
-&lt;h2 id=&#34;oh-my-zsh&#34;&gt;oh-my-zsh&lt;/h2&gt;
-&lt;p&gt;安装 oh-my-zsh&lt;/p&gt;
+&lt;h2 id=&#34;oh-my-zsh&#34;&gt;oh-my-zsh
+&lt;/h2&gt;&lt;p&gt;安装 oh-my-zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1227,8 +1227,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;source ~/.zshrc
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;powerlevel10k&#34;&gt;Powerlevel10k&lt;/h2&gt;
-&lt;p&gt;安装 Powerlevel10k&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;powerlevel10k&#34;&gt;Powerlevel10k
+&lt;/h2&gt;&lt;p&gt;安装 Powerlevel10k&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1312,11 +1312,11 @@
         <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/android-framework/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/android-framework/android-logo.png" alt="Featured image of post Android平台架构学习笔记" /&gt;&lt;h2 id=&#34;平台架构&#34;&gt;平台架构&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
+        <description>&lt;img src="https://bestoko.cc/p/android-framework/android-logo.png" alt="Featured image of post Android平台架构学习笔记" /&gt;&lt;h2 id=&#34;平台架构&#34;&gt;平台架构
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
 	width=&#34;1384&#34;
 	height=&#34;2038&#34;
-	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_huac466ffcfe902f478184f94c521211df_101554_480x0_resize_box_3.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_huac466ffcfe902f478184f94c521211df_101554_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu15472696071722192886.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu12077851722269610328.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1336,16 +1336,16 @@
 &lt;li&gt;系统应用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;每一层都包含大量的子模块或子系统。&lt;/p&gt;
-&lt;h2 id=&#34;linux内核层-linux-kernel&#34;&gt;Linux内核层 (Linux Kernel)&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;linux内核层-linux-kernel&#34;&gt;Linux内核层 (Linux Kernel)
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Android 平台的基础是 Linux 内核。例如，&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#art&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android Runtime (ART)&lt;/a&gt; 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。&lt;/p&gt;
 &lt;p&gt;使用 Linux 内核可让 Android 利用&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/security/overview/kernel-security.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。&lt;/p&gt;
-&lt;h2 id=&#34;硬件抽象层-hardware-abstract-layerhal&#34;&gt;硬件抽象层 (Hardware Abstract Layer,HAL)&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;硬件抽象层-hardware-abstract-layerhal&#34;&gt;硬件抽象层 (Hardware Abstract Layer,HAL)
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/architecture/hal-types?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;硬件抽象层 (HAL)&lt;/a&gt; 提供标准界面，向更高级别的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#api-framework&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java API 框架&lt;/a&gt;显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/camera/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1354,10 +1354,10 @@
 &lt;/blockquote&gt;
 &lt;p&gt;Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。&lt;/p&gt;
 &lt;p&gt;也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。&lt;/p&gt;
-&lt;h2 id=&#34;系统运行库层&#34;&gt;系统运行库层&lt;/h2&gt;
-&lt;p&gt;这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。&lt;/p&gt;
-&lt;h3 id=&#34;原生-cc-库-native-cc-libraries&#34;&gt;原生 C/C++ 库 (Native C/C++ Libraries)&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;系统运行库层&#34;&gt;系统运行库层
+&lt;/h2&gt;&lt;p&gt;这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。&lt;/p&gt;
+&lt;h3 id=&#34;原生-cc-库-native-cc-libraries&#34;&gt;原生 C/C++ 库 (Native C/C++ Libraries)
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/reference/android/opengl/package-summary?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java OpenGL API&lt;/a&gt; 访问 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/graphics/opengl?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;OpenGL ES&lt;/a&gt;，以支持在应用中绘制和操作 2D 和 3D 图形。&lt;/p&gt;
@@ -1366,37 +1366,37 @@
     &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;简介&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Webkit&lt;/td&gt;
-&lt;td&gt;一个开源的Web浏览器引擎&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OpenMAX AL&lt;/td&gt;
-&lt;td&gt;一个不需要授权、跨平台的软件抽象层，以C语言实现的软件接口，用来处理多媒体。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Libc&lt;/td&gt;
-&lt;td&gt;Linux下的ANSI C的函数库&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Media Framework&lt;/td&gt;
-&lt;td&gt;基于PacketVideo的OpenCORE的多媒体库，支持多种常见音视频格式的录制和播放&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OpenGL ES&lt;/td&gt;
-&lt;td&gt;免授权费的，跨平台的，功能完善的2D和3D图形应用程序接口API，主要针对多种嵌入式系统专门设计&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;名称&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;简介&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Webkit&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;一个开源的Web浏览器引擎&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;OpenMAX AL&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;一个不需要授权、跨平台的软件抽象层，以C语言实现的软件接口，用来处理多媒体。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Libc&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Linux下的ANSI C的函数库&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Media Framework&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;基于PacketVideo的OpenCORE的多媒体库，支持多种常见音视频格式的录制和播放&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;OpenGL ES&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;免授权费的，跨平台的，功能完善的2D和3D图形应用程序接口API，主要针对多种嵌入式系统专门设计&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;android运行时-android-runtime&#34;&gt;Android运行时 (Android Runtime)&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;h3 id=&#34;android运行时-android-runtime&#34;&gt;Android运行时 (Android Runtime)
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;对于运行 Android 5.0(API 级别 21)或更高版本的设备，每个应用都在其自己的进程中运行，并且有其自己的 &lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/tech/dalvik/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android Runtime (ART)&lt;/a&gt; 实例。ART 编写为通过执行 DEX 文件在低内存设备上运行多个虚拟机，DEX 文件是一种专为 Android 设计的字节码格式，经过优化，使用的内存很少。编译工具链(例如 &lt;a class=&#34;link&#34; href=&#34;https://source.android.com/source/jack.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Jack&lt;/a&gt;)将 Java 源代码编译为 DEX 字节码，使其可在 Android 平台上运行。&lt;/p&gt;
@@ -1421,8 +1421,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;java-api-框架-java-api--framework&#34;&gt;Java API 框架 (Java API  Framework)&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;java-api-框架-java-api--framework&#34;&gt;Java API 框架 (Java API  Framework)
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;丰富、可扩展的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/ui/overview?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1441,8 +1441,8 @@
     &gt;框架 API&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;与&amp;quot;C库层&amp;quot;对应，这一层往往被称作“Java库层”。一方面为上层应用层提供API接口，另一方面也是不少系统级服务进程的实现，是与Android应用开发者关系最直接的一层。提供了开发Android应用程序所需的一系列类库，高度封装直接调用。应用框架层的主要实现代码在frameworks/base和frameworks/av目录下。&lt;/p&gt;
-&lt;h2 id=&#34;系统应用-system-apps&#34;&gt;系统应用 (System Apps)&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;系统应用-system-apps&#34;&gt;系统应用 (System Apps)
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Android  随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。&lt;/p&gt;
 &lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1464,20 +1464,20 @@
         <pubDate>Wed, 05 Jan 2022 11:59:35 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/linux-clash-for-windows/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-clash-for-windows/cfw.png" alt="Featured image of post 我的Linux科学上网方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
-&lt;ol&gt;
+        <description>&lt;img src="https://bestoko.cc/p/linux-clash-for-windows/cfw.png" alt="Featured image of post 我的Linux科学上网方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;本文不讨论科学上网的对错&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;本文不教学代理服务器部署&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;本文不推荐任何机场&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Linux平台有很多成熟可靠的科学上网工具，本文仅列出我所推荐使用的，其余方案请自行搜索。&lt;/p&gt;
-&lt;h2 id=&#34;clash-for-windows&#34;&gt;Clash for windows&lt;/h2&gt;
-&lt;p&gt;Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。
+&lt;h2 id=&#34;clash-for-windows&#34;&gt;Clash for windows
+&lt;/h2&gt;&lt;p&gt;Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。
 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Clash for Windows&lt;/a&gt; (cfw)是一个&lt;code&gt;Windows/macOS/Linux&lt;/code&gt;下的clash图形化客户端。
 &lt;strong&gt;支持的协议：&lt;/strong&gt; &lt;code&gt;Vmess&lt;/code&gt;, &lt;code&gt;Shadowsocks&lt;/code&gt;, &lt;code&gt;Snell&lt;/code&gt; , &lt;code&gt;Sock5&lt;/code&gt; , &lt;code&gt;ShadowsocksR&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
-&lt;p&gt;你可以直接从&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;安装&#34;&gt;安装
+&lt;/h3&gt;&lt;p&gt;你可以直接从&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;cfw的github页&lt;/a&gt;下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。&lt;/p&gt;
@@ -1513,15 +1513,15 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flatpak install flathub io.github.Fndroid.clash_for_windows
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
-&lt;p&gt;打开 Clash for Windows ，在左侧的标签页选择&lt;code&gt;Profiles&lt;/code&gt;， 在顶部输入 &lt;code&gt;Clash 订阅链接&lt;/code&gt; ，然后点击&lt;code&gt;Download&lt;/code&gt;按钮。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;配置&#34;&gt;配置
+&lt;/h3&gt;&lt;p&gt;打开 Clash for Windows ，在左侧的标签页选择&lt;code&gt;Profiles&lt;/code&gt;， 在顶部输入 &lt;code&gt;Clash 订阅链接&lt;/code&gt; ，然后点击&lt;code&gt;Download&lt;/code&gt;按钮。&lt;/p&gt;
 &lt;p&gt;Clash for Windows 会自动拉取配置文件进行更新，如果一切顺利，你应当可以看到绿色提示信息&lt;code&gt;Success!&lt;/code&gt;，并且可以看到一个新增的配置文件。&lt;/p&gt;
 &lt;p&gt;点击新增的配置文件来切换到该配置，然后点击&lt;code&gt;Proxies &lt;/code&gt;标签页来切换接入点，将顶部的出站模式选择为&lt;code&gt;Rule&lt;/code&gt;。
 此模式下你的网络访问请求将通过 Clash for Windows 进行&lt;strong&gt;分流处理&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34;
 	width=&#34;1052&#34;
 	height=&#34;767&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu80a4b31ab0a62c53818da32d3541ff36_92847_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu80a4b31ab0a62c53818da32d3541ff36_92847_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu13402915003426320604.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu1280761329518327631.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;clash-proxies&#34;
@@ -1538,7 +1538,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34;
 	width=&#34;1582&#34;
 	height=&#34;612&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_huff10fc32df514431708030955dfee9cd_133203_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_huff10fc32df514431708030955dfee9cd_133203_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu15926796141259012520.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu11884452035036126273.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;proxy-settings&#34;
@@ -1550,8 +1550,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;常用的科学上网设置到此结束。&lt;/p&gt;
-&lt;h2 id=&#34;补充设置&#34;&gt;补充设置&lt;/h2&gt;
-&lt;p&gt;有时执行wget或curl来下载国外的东西，需要临时在终端启用代理时，可以使用如下命令&lt;/p&gt;
+&lt;h2 id=&#34;补充设置&#34;&gt;补充设置
+&lt;/h2&gt;&lt;p&gt;有时执行wget或curl来下载国外的东西，需要临时在终端启用代理时，可以使用如下命令&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1574,8 +1574,8 @@
     &gt;Lunar Calendar 农历&lt;/a&gt;，直接安装会因为缺少依赖报错，搜到的&lt;a class=&#34;link&#34; href=&#34;https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;rpm包&lt;/a&gt;也无法正常安装，查了下需要手动编译安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/yetist/lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;fedora35-编译安装lunar-date&#34;&gt;Fedora35 编译安装lunar-date&lt;/h2&gt;
-&lt;p&gt;github页给的安装指南如下&lt;/p&gt;
+&lt;h2 id=&#34;fedora35-编译安装lunar-date&#34;&gt;Fedora35 编译安装lunar-date
+&lt;/h2&gt;&lt;p&gt;github页给的安装指南如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1611,8 +1611,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;接着重新安装插件就可以正常启用了。&lt;/p&gt;
-&lt;h2 id=&#34;额外可选设置&#34;&gt;额外可选设置&lt;/h2&gt;
-&lt;p&gt;默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（&lt;strong&gt;真的很难看&lt;/strong&gt;），解决办法如下：&lt;/p&gt;
+&lt;h2 id=&#34;额外可选设置&#34;&gt;额外可选设置
+&lt;/h2&gt;&lt;p&gt;默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（&lt;strong&gt;真的很难看&lt;/strong&gt;），解决办法如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1624,7 +1624,7 @@
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1824&#34;
-	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hue68084e2c723bfd6f54edd3486b8d676_644955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu1124253079804403719.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu6778264682147923375.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;效果展示&#34;
@@ -1644,13 +1644,13 @@
         
         <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
         <description>&lt;img src="https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;下载主题&#34;&gt;下载主题&lt;/h2&gt;
-&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;下载主题&#34;&gt;下载主题
+&lt;/h2&gt;&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MacOS Monterey inspired grub theme&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_480x0_resize_box_3.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu20507af941b7be8de8d6d5d8fa214d96_1119376_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu18299745746810103930.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu2570418272470478848.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -1661,8 +1661,8 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;修改etcdefaultgrub文件&#34;&gt;修改/etc/default/grub文件&lt;/h2&gt;
-&lt;p&gt;首先，注释掉&lt;code&gt;GRUB_TERMINAL_OUTPUT=”console”&lt;/code&gt;,接着设置好你的GRUB主题路径。&lt;/p&gt;
+&lt;h2 id=&#34;修改etcdefaultgrub文件&#34;&gt;修改/etc/default/grub文件
+&lt;/h2&gt;&lt;p&gt;首先，注释掉&lt;code&gt;GRUB_TERMINAL_OUTPUT=”console”&lt;/code&gt;,接着设置好你的GRUB主题路径。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1678,8 +1678,8 @@
 &lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;   可以设置超时时间，设置-1可以取消倒计时
 &lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置&lt;/h2&gt;
-&lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
+&lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置
+&lt;/h2&gt;&lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1707,14 +1707,14 @@
         
         <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
         <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
-&lt;h2 id=&#34;报错信息&#34;&gt;报错信息&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;报错信息&#34;&gt;报错信息
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_480x0_resize_box_3.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hue01fbfa8b4bf461feb2552493471e9d4_73157_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu14528650379033580044.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu17664705506683901406.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;
@@ -1726,8 +1726,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;VirtualBox Linux 内核驱动程序未加载或未正确设置。&lt;/p&gt;
-&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
-&lt;p&gt;执行如下命令，重新安装vboxdrv模块&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法
+&lt;/h2&gt;&lt;p&gt;执行如下命令，重新安装vboxdrv模块&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1746,13 +1746,13 @@
         
         <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
         <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
-&lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
 &lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;推荐的解决办法&#34;&gt;推荐的解决办法&lt;/h2&gt;
-&lt;p&gt;Windows 其实也能处理 UTC，需要修改注册表。建议&lt;strong&gt;让 Windows 使用 UTC，而非让 Linux 使用地方时&lt;/strong&gt;。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。&lt;/p&gt;
+&lt;h2 id=&#34;推荐的解决办法&#34;&gt;推荐的解决办法
+&lt;/h2&gt;&lt;p&gt;Windows 其实也能处理 UTC，需要修改注册表。建议&lt;strong&gt;让 Windows 使用 UTC，而非让 Linux 使用地方时&lt;/strong&gt;。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。&lt;/p&gt;
 &lt;p&gt;Linux 可以使用&lt;strong&gt;NTP服务&lt;/strong&gt;来在线同步硬件时钟。&lt;/p&gt;
 &lt;p&gt;使用 &lt;code&gt;regedit&lt;/code&gt;,新建如下 DWORD 值，并将其值设为十六进制的 &lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1786,13 +1786,13 @@
 &lt;p&gt;虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;snaps安装与配置&#34;&gt;Snaps安装与配置&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;snaps安装与配置&#34;&gt;Snaps安装与配置
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。&lt;/p&gt;
-&lt;h3 id=&#34;安装snap软件包&#34;&gt;安装Snap软件包&lt;/h3&gt;
-&lt;p&gt;首先，赞美&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/snapd/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;安装snap软件包&#34;&gt;安装Snap软件包
+&lt;/h3&gt;&lt;p&gt;首先，赞美&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/snapd/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;AUR&lt;/a&gt;，&lt;code&gt;snapd&lt;/code&gt;及其依赖包&lt;code&gt;snap-confine&lt;/code&gt;和&lt;code&gt;squashfs-tools&lt;/code&gt;都在仓库里了。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1802,8 +1802,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S snapd
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;启动守护进程&#34;&gt;启动守护进程&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;启动守护进程&#34;&gt;启动守护进程
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1811,8 +1811,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --now snapd.socket
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;启用classic-snap-support&#34;&gt;启用classic snap support&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;启用classic-snap-support&#34;&gt;启用classic snap support
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1828,8 +1828,8 @@
 &lt;p&gt;Allows access to your system’s resources in much the same way traditional packages do. To safeguard against abuse, publishing a classic snap requires manual approval, and installation requires the &amp;ndash;classic command line argument.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;以上是&lt;code&gt;Snap&lt;/code&gt;官方给出的定义，&lt;code&gt;classic&lt;/code&gt;是与&lt;code&gt;strict&lt;/code&gt;相对的。在默认情况下，&lt;code&gt;Snap&lt;/code&gt;使用的是&lt;code&gt;strict&lt;/code&gt;模式，对安全权限做了极高的要求与限制，而&lt;code&gt;classic&lt;/code&gt;就和传统的安装包一样对安全权限没有限制，其实这里的&lt;code&gt;classic&lt;/code&gt;就约等于确认已知不安全的风险的含义。&lt;/p&gt;
-&lt;h2 id=&#34;安装microsoft-to-dounofficial&#34;&gt;安装MicroSoft To-Do(unofficial)&lt;/h2&gt;
-&lt;p&gt;安装并配置好&lt;code&gt;snap&lt;/code&gt;后就很简单了：&lt;/p&gt;
+&lt;h2 id=&#34;安装microsoft-to-dounofficial&#34;&gt;安装MicroSoft To-Do(unofficial)
+&lt;/h2&gt;&lt;p&gt;安装并配置好&lt;code&gt;snap&lt;/code&gt;后就很简单了：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1877,8 +1877,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;所安装的正是Code-OSS ，默认不使用微软官方扩展市场。&lt;/p&gt;
-&lt;h2 id=&#34;方法一&#34;&gt;方法一&lt;/h2&gt;
-&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
+&lt;h2 id=&#34;方法一&#34;&gt;方法一
+&lt;/h2&gt;&lt;p&gt;我们可以通过修改&lt;code&gt;/usr/lib/code/product.json&lt;/code&gt;解决这个问题，添加如下内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1896,8 +1896,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;重新启动&lt;code&gt;Code-OSS&lt;/code&gt;就可以了。&lt;/p&gt;
-&lt;h2 id=&#34;方法二&#34;&gt;方法二&lt;/h2&gt;
-&lt;p&gt;方法一正常使用一段时间后，在某次重启后出现打不开&lt;code&gt;Code-OSS&lt;/code&gt;的情况，所幸从&lt;code&gt;AUR&lt;/code&gt;上找到了另一个包解决了问题，记录在此。&lt;/p&gt;
+&lt;h2 id=&#34;方法二&#34;&gt;方法二
+&lt;/h2&gt;&lt;p&gt;方法一正常使用一段时间后，在某次重启后出现打不开&lt;code&gt;Code-OSS&lt;/code&gt;的情况，所幸从&lt;code&gt;AUR&lt;/code&gt;上找到了另一个包解决了问题，记录在此。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1914,12 +1914,12 @@
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/surface-linux/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
-&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+&lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动&lt;/h2&gt;
-&lt;h3 id=&#34;导入密钥&#34;&gt;导入密钥&lt;/h3&gt;
-&lt;p&gt;首先我们需要导入用于签名软件包的密钥：&lt;/p&gt;
+&lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动
+&lt;/h2&gt;&lt;h3 id=&#34;导入密钥&#34;&gt;导入密钥
+&lt;/h3&gt;&lt;p&gt;首先我们需要导入用于签名软件包的密钥：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1930,8 +1930,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo pacman-key --add -
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;检查完整性并本地签名&#34;&gt;检查完整性并本地签名&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;检查完整性并本地签名&#34;&gt;检查完整性并本地签名
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1941,8 +1941,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo pacman-key --lsign-key 56C464BAAC421453
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;添加存储库&#34;&gt;添加存储库&lt;/h3&gt;
-&lt;p&gt;我们需要在&lt;code&gt;/etc/pacman.conf&lt;/code&gt;添加如下内容&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;添加存储库&#34;&gt;添加存储库
+&lt;/h3&gt;&lt;p&gt;我们需要在&lt;code&gt;/etc/pacman.conf&lt;/code&gt;添加如下内容&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1953,8 +1953,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; https://pkg.surfacelinux.com/arch/
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;更新存储库数据安装内核启用服务&#34;&gt;更新存储库数据，安装内核，启用服务&lt;/h3&gt;
-&lt;p&gt;我们需要更新存储库数据，以安装&lt;code&gt;linux-surface&lt;/code&gt;内核及其依赖项，接着启用&lt;code&gt;iptsd&lt;/code&gt;服务以使用触摸屏。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;更新存储库数据安装内核启用服务&#34;&gt;更新存储库数据，安装内核，启用服务
+&lt;/h3&gt;&lt;p&gt;我们需要更新存储库数据，以安装&lt;code&gt;linux-surface&lt;/code&gt;内核及其依赖项，接着启用&lt;code&gt;iptsd&lt;/code&gt;服务以使用触摸屏。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1976,10 +1976,10 @@
         <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/archinstallextra/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
-&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
-&lt;h2 id=&#34;配置网络&#34;&gt;配置网络&lt;/h2&gt;
-&lt;p&gt;我们使用&lt;/p&gt;
+        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+&lt;/h2&gt;&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
+&lt;h2 id=&#34;配置网络&#34;&gt;配置网络
+&lt;/h2&gt;&lt;p&gt;我们使用&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2000,8 +2000,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip link show
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;重命名主机&#34;&gt;重命名主机&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;重命名主机&#34;&gt;重命名主机
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2032,8 +2032,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1 archlinux.localdomain	archlinux
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;设置系统时间&#34;&gt;设置系统时间&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;设置系统时间&#34;&gt;设置系统时间
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -2044,8 +2044,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;第二行设置为让本机时间与&lt;code&gt;ntp&lt;/code&gt;同步。&lt;/p&gt;
-&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2087,8 +2087,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -a . ~
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;新建标准用户&#34;&gt;新建标准用户&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;新建标准用户&#34;&gt;新建标准用户
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -2101,8 +2101,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中&lt;code&gt;username&lt;/code&gt;替换为你所使用的名字，在创建时同时在&lt;code&gt;/home&lt;/code&gt;目录下会创建一个与用户名同名的文件夹。家目录有一个别名是&lt;code&gt;~&lt;/code&gt;，你可以在任何地方使用&lt;code&gt;~&lt;/code&gt;来代替家目录路径。&lt;/p&gt;
-&lt;h2 id=&#34;配置sudo&#34;&gt;配置sudo&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;配置sudo&#34;&gt;配置sudo
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2111,9 +2111,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;将&lt;code&gt;# %wheel ALL=(ALL) ALL&lt;/code&gt; 前的&lt;code&gt;#&lt;/code&gt;号去除（去注释），保存退出。&lt;/p&gt;
-&lt;h2 id=&#34;中英字体和图形界面的安装&#34;&gt;中英字体和图形界面的安装&lt;/h2&gt;
-&lt;h3 id=&#34;安装xorg&#34;&gt;安装Xorg&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Xorg&lt;/code&gt;是&lt;code&gt;Linux&lt;/code&gt;下的一个著名的开源图形服务，我们的桌面环境需要&lt;code&gt;Xorg&lt;/code&gt;的支持。&lt;/p&gt;
+&lt;h2 id=&#34;中英字体和图形界面的安装&#34;&gt;中英字体和图形界面的安装
+&lt;/h2&gt;&lt;h3 id=&#34;安装xorg&#34;&gt;安装Xorg
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Xorg&lt;/code&gt;是&lt;code&gt;Linux&lt;/code&gt;下的一个著名的开源图形服务，我们的桌面环境需要&lt;code&gt;Xorg&lt;/code&gt;的支持。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2122,11 +2122,11 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S xorg
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
+&lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
 	width=&#34;955&#34;
 	height=&#34;350&#34;
-	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu7808987a0f7382ace596d04ac19e420a_73112_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu6374381984125918150.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu1509271765501448647.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2144,8 +2144,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S xf86-video-intel
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;安装字体&#34;&gt;安装字体&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装字体&#34;&gt;安装字体
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2209,8 +2209,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;将最后一行去注释后保存退出。&lt;/p&gt;
-&lt;h3 id=&#34;安装桌面环境&#34;&gt;安装桌面环境&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;下有很多桌面环境如&lt;code&gt;Xfce&lt;/code&gt;、&lt;code&gt;KDE(Plasma)&lt;/code&gt;、&lt;code&gt;Gnome&lt;/code&gt;、&lt;code&gt;Unity&lt;/code&gt;、&lt;code&gt;Deepin&lt;/code&gt;等等，它们的外观、操作、设计理念等各方面都有所不同，这里我们选择&lt;code&gt;Gnome&lt;/code&gt;为例，进行安装。&lt;/p&gt;
+&lt;h3 id=&#34;安装桌面环境&#34;&gt;安装桌面环境
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;下有很多桌面环境如&lt;code&gt;Xfce&lt;/code&gt;、&lt;code&gt;KDE(Plasma)&lt;/code&gt;、&lt;code&gt;Gnome&lt;/code&gt;、&lt;code&gt;Unity&lt;/code&gt;、&lt;code&gt;Deepin&lt;/code&gt;等等，它们的外观、操作、设计理念等各方面都有所不同，这里我们选择&lt;code&gt;Gnome&lt;/code&gt;为例，进行安装。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2228,8 +2228,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; gdm.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;安装声音以及打印机系统&#34;&gt;安装声音以及打印机系统&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装声音以及打印机系统&#34;&gt;安装声音以及打印机系统
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2237,8 +2237,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S alsa-utils pulseaudio pulseaudio-bluetooth cups
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;清楚安装缓存以及无用源&#34;&gt;清楚安装缓存以及无用源&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;清楚安装缓存以及无用源&#34;&gt;清楚安装缓存以及无用源
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2247,8 +2247,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;接着重启即可进入&lt;code&gt;Gnome&lt;/code&gt;桌面&lt;/p&gt;
-&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
-&lt;p&gt;至此，&lt;code&gt;ArchLinux&lt;/code&gt;基本安装与必要设置和图形界面都已经安装完毕。&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结
+&lt;/h2&gt;&lt;p&gt;至此，&lt;code&gt;ArchLinux&lt;/code&gt;基本安装与必要设置和图形界面都已经安装完毕。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -2257,24 +2257,24 @@
         <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/archinstall/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面&lt;/h2&gt;
-&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+&lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
 &lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;
-&lt;h2 id=&#34;安装准备&#34;&gt;安装准备&lt;/h2&gt;
-&lt;h3 id=&#34;磁盘准备&#34;&gt;磁盘准备&lt;/h3&gt;
-&lt;p&gt;我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。&lt;/p&gt;
-&lt;h3 id=&#34;安装介质&#34;&gt;安装介质&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.archlinux.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;安装准备&#34;&gt;安装准备
+&lt;/h2&gt;&lt;h3 id=&#34;磁盘准备&#34;&gt;磁盘准备
+&lt;/h3&gt;&lt;p&gt;我们需要准备一块有空闲区域（没有被分区）的磁盘留给系统的安装。笔者只准备安装Arch单系统，因此在PE里用磁盘管理工具把Surface的磁盘0各个分区全部删除。你也可以在Windows下找到磁盘管理，自行划分一个区域留给安装使用。&lt;/p&gt;
+&lt;h3 id=&#34;安装介质&#34;&gt;安装介质
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.archlinux.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.archlinux.org/download/&lt;/a&gt; 建议从下面的中国镜像下载iso文件&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rufus.ie/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://rufus.ie/&lt;/a&gt;  我们用Rufus来制作引导盘，&lt;strong&gt;此步需要用到一个空闲U盘&lt;/strong&gt;。需要注意的是写入方式选择DD，分区类型选择GPT而非默认的MBR。&lt;/p&gt;
-&lt;h3 id=&#34;设置启动顺序&#34;&gt;设置启动顺序&lt;/h3&gt;
-&lt;p&gt;接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭&lt;code&gt;security boot&lt;/code&gt;，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。&lt;/p&gt;
-&lt;h2 id=&#34;安装过程&#34;&gt;安装过程&lt;/h2&gt;
-&lt;p&gt;正确设置好启动顺序后，启动时会看到&lt;code&gt;ArchLinux&lt;/code&gt;的界面，按&lt;code&gt;Enter键&lt;/code&gt;选择 &lt;code&gt;Boot Arch Linux&lt;/code&gt; ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲&lt;code&gt;Arch&lt;/code&gt;安装到之前准备的磁盘上。&lt;/p&gt;
-&lt;h3 id=&#34;网络连接&#34;&gt;*网络连接&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Arch&lt;/code&gt;的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。&lt;/p&gt;
+&lt;h3 id=&#34;设置启动顺序&#34;&gt;设置启动顺序
+&lt;/h3&gt;&lt;p&gt;接下来需要进入个人电脑的BIOS里把制作的U盘启动设置为第一位，笔者的Surface额外需要先关闭&lt;code&gt;security boot&lt;/code&gt;，不同电脑进入BIOS的按键略有不同，Surface是开机键和音量+键，其他型号电脑请查阅搜索引擎。&lt;/p&gt;
+&lt;h2 id=&#34;安装过程&#34;&gt;安装过程
+&lt;/h2&gt;&lt;p&gt;正确设置好启动顺序后，启动时会看到&lt;code&gt;ArchLinux&lt;/code&gt;的界面，按&lt;code&gt;Enter键&lt;/code&gt;选择 &lt;code&gt;Boot Arch Linux&lt;/code&gt; ，等待加载完成后会进入一个有命令提示符的界面。我们接下来将在这个界面执行一系列命令来讲&lt;code&gt;Arch&lt;/code&gt;安装到之前准备的磁盘上。&lt;/p&gt;
+&lt;h3 id=&#34;网络连接&#34;&gt;*网络连接
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Arch&lt;/code&gt;的安装需要联网，如果你使用的是有线连接，可以跳过此部分，笔者这里使用无线连接继续安装。&lt;/p&gt;
 &lt;p&gt;输入&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2362,8 +2362,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim /etc/pacman.d/mirrorlist
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区&lt;/h3&gt;
-&lt;p&gt;检查磁盘&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;磁盘分区&#34;&gt;磁盘分区
+&lt;/h3&gt;&lt;p&gt;检查磁盘&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2410,8 +2410,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkswap /dev/nvme01p3
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;挂载分区&#34;&gt;挂载分区&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;挂载分区&#34;&gt;挂载分区
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2443,8 +2443,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;swapon /dev/nvme01p3
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;安装基本包&#34;&gt;安装基本包&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;安装基本包&#34;&gt;安装基本包
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2452,8 +2452,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacstrap /mnt base base-devel linux linux-firmware linux-headers vim bash-completion
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;配置fstab&#34;&gt;配置Fstab&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置fstab&#34;&gt;配置Fstab
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2470,8 +2470,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;确认下是否挂载无误&lt;/p&gt;
-&lt;h4 id=&#34;chroot&#34;&gt;chroot&lt;/h4&gt;
-&lt;blockquote&gt;
+&lt;h4 id=&#34;chroot&#34;&gt;chroot
+&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2482,8 +2482,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arch-chroot /mnt
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;安装必须软件包&#34;&gt;安装必须软件包&lt;/h4&gt;
-&lt;p&gt;现在我们已经&lt;code&gt;Chroot&lt;/code&gt;到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。&lt;code&gt;ArchLinux&lt;/code&gt;有非常强大的包管理工具&lt;code&gt;pacman&lt;/code&gt;，大部分情况下，一行命令就可以搞定包与依赖的问题。&lt;/p&gt;
+&lt;/div&gt;&lt;h4 id=&#34;安装必须软件包&#34;&gt;安装必须软件包
+&lt;/h4&gt;&lt;p&gt;现在我们已经&lt;code&gt;Chroot&lt;/code&gt;到了新的系统中，只有一些最基本的包（组件），这时候我们就需要自己安装新的包。&lt;code&gt;ArchLinux&lt;/code&gt;有非常强大的包管理工具&lt;code&gt;pacman&lt;/code&gt;，大部分情况下，一行命令就可以搞定包与依赖的问题。&lt;/p&gt;
 &lt;p&gt;安装包的命令格式为&lt;code&gt;pacman -S 包名&lt;/code&gt;，&lt;code&gt;pacman&lt;/code&gt;会自动检查这个包所需要的其他包（即为依赖）并一起装上。下面我们就通过&lt;code&gt;pacman&lt;/code&gt;来安装一些包，这些包在之后会用上，在这里先提前装好。&lt;/p&gt;
 &lt;p&gt;执行如下命令（注意大小写，大小写错误会导致包无法找到）：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2491,12 +2491,12 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S grub efibootmgr efivar networkmanager intel-ucode
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pacman&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;grub&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;efibootmgr&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;efivar&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;networkmanager&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ucode&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;strong&gt;AMD用户请将&lt;code&gt;intel-ucode&lt;/code&gt;替换成&lt;code&gt;amd-ucode&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;安装bootloader&#34;&gt;安装Bootloader&lt;/h4&gt;
-&lt;p&gt;部署&lt;code&gt;grub&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;安装bootloader&#34;&gt;安装Bootloader
+&lt;/h4&gt;&lt;p&gt;部署&lt;code&gt;grub&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2526,8 +2526,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grub-mkconfig -o /boot/grub/grub.cfg
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;设置networkmanager开机自动启动&#34;&gt;设置NetworkManager开机自动启动&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;设置networkmanager开机自动启动&#34;&gt;设置NetworkManager开机自动启动
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2535,8 +2535,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; NetworkManager
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;为root用户设置密码&#34;&gt;为root用户设置密码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;为root用户设置密码&#34;&gt;为root用户设置密码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -2544,8 +2544,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;卸载分区-拔除介质&#34;&gt;卸载分区 拔除介质&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;卸载分区-拔除介质&#34;&gt;卸载分区 拔除介质
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -2564,8 +2564,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reboot
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
-&lt;p&gt;至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&amp;hellip;.以及一些实用软件包。&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;小结&#34;&gt;小结
+&lt;/h2&gt;&lt;p&gt;至此，我们成功安装了ArchLinux，然而此时系统处于非常精简的状态，距离日常使用还需要一些配置，安装一些需要的组件，下一部分我们将安装图形界面、配置显卡驱动、安装桌面环境&amp;hellip;.以及一些实用软件包。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -2574,8 +2574,8 @@
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/oneplus8/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作&lt;/h1&gt;
-&lt;ul&gt;
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
 &lt;/li&gt;
@@ -2590,9 +2590,9 @@
 &lt;p&gt;打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk&lt;/h1&gt;
-&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk
+&lt;/h1&gt;&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将官方包内的&lt;code&gt;payload.bin&lt;/code&gt; 解压并放入Payload Dumber 的payload_input目录&lt;/p&gt;
 &lt;/li&gt;
@@ -2611,8 +2611,8 @@
 &lt;p&gt;将手机download目录下的修补完成的&lt;code&gt;magisk_patched.img&lt;/code&gt;复制到电脑&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将&lt;code&gt;mgisk_patched.img&lt;/code&gt;放入 platform-tools 目录下&lt;/p&gt;
 &lt;/li&gt;
@@ -2634,14 +2634,14 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed&lt;/h1&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;刷入&lt;code&gt;Riru - Core&lt;/code&gt;模块&lt;/li&gt;
 &lt;li&gt;刷入&lt;code&gt;Riru - EdXposed(YAHFA)&lt;/code&gt; 或&lt;code&gt;Riru - EdXposed(SandHook)&lt;/code&gt;模块&lt;/li&gt;
 &lt;li&gt;安装最新的&lt;code&gt;Edxposed Manager&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项&lt;/h1&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;制作&lt;code&gt;mgisk_patched.img&lt;/code&gt;时要用最新的 v8.0.x版本，不能使用以往的v21.0版本&lt;/p&gt;
 &lt;/li&gt;
@@ -2661,7 +2661,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu1c01ae072c94a0d32ccc62cece000b2e_282491_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -2675,7 +2675,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_huf96fa585d120f8fcc00ce09fafa081cb_290591_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -2689,7 +2689,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu1695acc54332592cfae6f846dc4612e5_360981_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -2703,7 +2703,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_480x0_resize_q75_box.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu4f177afd7fcb75c68f6ef56574580fc4_353521_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
@@ -2727,8 +2727,8 @@
 &lt;p&gt;题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/&lt;/p&gt;
 &lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;题目&#34;&gt;题目
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;给定两个大小为 m 和 n 的有序数组 &lt;code&gt;nums1&lt;/code&gt; 和 &lt;code&gt;nums2&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 &lt;code&gt;O(log(m + n))&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;你可以假设 &lt;code&gt;nums1&lt;/code&gt; 和 &lt;code&gt;nums2&lt;/code&gt; 不会同时为空。&lt;/p&gt;
@@ -2745,17 +2745,17 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;分析&#34;&gt;分析&lt;/h2&gt;
-&lt;h3 id=&#34;首先要理解中位数&#34;&gt;首先要理解中位数&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;分析&#34;&gt;分析
+&lt;/h2&gt;&lt;h3 id=&#34;首先要理解中位数&#34;&gt;首先要理解中位数
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;[2 3 5]&lt;/code&gt; 中位数是&lt;code&gt;3&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;割cut的概念&#34;&gt;割(Cut)的概念&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;割cut的概念&#34;&gt;割(Cut)的概念
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。&lt;/p&gt;
 &lt;/li&gt;
@@ -2775,11 +2775,11 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;偶数组: &lt;code&gt;[1 4 7 9]&lt;/code&gt; 对应的中位数为 &lt;code&gt;(4 + 7) /2 = 5.5&lt;/code&gt;,假定割(Cut)在4和7之间： &lt;code&gt;[1 （4/7）9]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;割和第k个元素&#34;&gt;割和第&lt;code&gt;k&lt;/code&gt;个元素&lt;/h3&gt;
-&lt;h4 id=&#34;一个数组&#34;&gt;一个数组&lt;/h4&gt;
-&lt;p&gt;对于有序数组A，如果在k的位置割一下，容易得出&lt;code&gt;LMax = RMin = A[k]&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;两个数组&#34;&gt;两个数组&lt;/h4&gt;
-&lt;p&gt;将两个数组合成一个有序数组时，第k位的元素&lt;/p&gt;
+&lt;h3 id=&#34;割和第k个元素&#34;&gt;割和第&lt;code&gt;k&lt;/code&gt;个元素
+&lt;/h3&gt;&lt;h4 id=&#34;一个数组&#34;&gt;一个数组
+&lt;/h4&gt;&lt;p&gt;对于有序数组A，如果在k的位置割一下，容易得出&lt;code&gt;LMax = RMin = A[k]&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;两个数组&#34;&gt;两个数组
+&lt;/h4&gt;&lt;p&gt;将两个数组合成一个有序数组时，第k位的元素&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我们设:
 &lt;code&gt;Ci&lt;/code&gt;为第&lt;code&gt; i&lt;/code&gt;个数组的割&lt;/p&gt;
@@ -2787,32 +2787,32 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Leftpart&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Ci&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Rightpart&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;a&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;,a&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,a&lt;!-- raw HTML omitted --&gt;i&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;a&lt;!-- raw HTML omitted --&gt;i+1&lt;!-- raw HTML omitted --&gt;,a&lt;!-- raw HTML omitted --&gt;i+2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,a&lt;!-- raw HTML omitted --&gt;m&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;b&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;,b&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,b&lt;!-- raw HTML omitted --&gt;j&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;b&lt;!-- raw HTML omitted --&gt;j+1&lt;!-- raw HTML omitted --&gt;,b&lt;!-- raw HTML omitted --&gt;j+2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,b&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Leftpart&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Ci&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Rightpart&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;a&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;,a&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,a&lt;!-- raw HTML omitted --&gt;i&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;/&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;a&lt;!-- raw HTML omitted --&gt;i+1&lt;!-- raw HTML omitted --&gt;,a&lt;!-- raw HTML omitted --&gt;i+2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,a&lt;!-- raw HTML omitted --&gt;m&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;b&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;,b&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,b&lt;!-- raw HTML omitted --&gt;j&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;/&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;b&lt;!-- raw HTML omitted --&gt;j+1&lt;!-- raw HTML omitted --&gt;,b&lt;!-- raw HTML omitted --&gt;j+2&lt;!-- raw HTML omitted --&gt;,&amp;hellip;,b&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;首先，因为数组是有序的，所以&lt;code&gt;LMax1 &amp;lt;= RMin1&lt;/code&gt;，&lt;code&gt;LMax2 &amp;lt;= RMin2&lt;/code&gt; //割在某个数上时左右相等&lt;/p&gt;
 &lt;p&gt;其次，如果让&lt;code&gt;LMax1 &amp;lt;= RMin2&lt;/code&gt;，&lt;code&gt;LMax2 &amp;lt;= RMin1&lt;/code&gt; 呢？&lt;/p&gt;
 &lt;p&gt;这表示左半边全部小于右半边。如果让左边的元素个数相加刚好为&lt;code&gt;k&lt;/code&gt;，那第&lt;code&gt;k&lt;/code&gt;个元素就是&lt;code&gt;max(LMax1, Lmax2)&lt;/code&gt;，也就是合并后有序数组左边&lt;code&gt;k&lt;/code&gt;个元素的最大值。&lt;/p&gt;
 &lt;p&gt;那么如果&lt;code&gt;LMax1 &amp;gt; RMin2&lt;/code&gt;，说明数组1的左边元素太多，我们把&lt;code&gt;C1&lt;/code&gt;减小，&lt;code&gt;C2 = k - C1&lt;/code&gt;相应地增大。&lt;code&gt;LMax2 &amp;gt; RMin1&lt;/code&gt;同理，把&lt;code&gt;C2&lt;/code&gt;减小，&lt;code&gt;C1 = k - C2&lt;/code&gt;也就相应地增大。&lt;/p&gt;
-&lt;h5 id=&#34;举例设k--3&#34;&gt;举例（设k = 3）&lt;/h5&gt;
-&lt;blockquote&gt;
+&lt;h5 id=&#34;举例设k--3&#34;&gt;举例（设k = 3）
+&lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;[2 3 5]
 [1 4 7 9]&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2824,35 +2824,35 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;此时，&lt;code&gt;LMax1 = 3&lt;/code&gt;, &lt;code&gt;RMin1 = 5&lt;/code&gt;, &lt;code&gt;LMax2 = 1&lt;/code&gt;, &lt;code&gt;RMin2 = 4&lt;/code&gt;,&lt;/p&gt;
 &lt;p&gt;满足 &lt;code&gt;LMax1 &amp;lt; RMin2&lt;/code&gt; 且 &lt;code&gt;LMax2 &amp;lt; RMin1 &lt;/code&gt;，&lt;/p&gt;
 &lt;p&gt;所以第&lt;code&gt;3&lt;/code&gt;个元素为&lt;code&gt;max(LMax1, LMax2) = 3&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;两个数组合并后的长度问题-本篇题解巧妙所在&#34;&gt;&lt;strong&gt;两个数组合并后的长度问题&lt;/strong&gt; （本篇题解巧妙所在）&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;h3 id=&#34;两个数组合并后的长度问题-本篇题解巧妙所在&#34;&gt;&lt;strong&gt;两个数组合并后的长度问题&lt;/strong&gt; （本篇题解巧妙所在）
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;两个数组的最大问题是，它们合并后，m+n总数可能为奇, 也可能为偶，所以我们得想法让m+n总是为偶数&lt;/p&gt;
 &lt;p&gt;通过虚拟加入‘#’，我们让m转换成2m+1 ，n转换成2n+1, 两数之和就变成了2m+2n+2，恒为偶数。&lt;/p&gt;
 &lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;before&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;len&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;after&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;len&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;[1 4 7 9]&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;[# 1 # 4 # 7 # 9]&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;[2 3 5]&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;[# 2 # 3 # 5 ]&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;before&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;len&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;after&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;len&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;[1 4 7 9]&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;[# 1 # 4 # 7 # 9]&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;[2 3 5]&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;[# 2 # 3 # 5 ]&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;这么虚拟加后，&lt;strong&gt;每个位置可以通过/2得到原来元素的位置&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;比如 2，原来在&lt;code&gt;0&lt;/code&gt;位，现在是1位，&lt;code&gt;1/2=0&lt;/code&gt;&lt;/p&gt;
@@ -2871,18 +2871,18 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;左边：&lt;code&gt;A[m+n+1] = Max(LMax1,LMax2)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;右边：&lt;code&gt;A[m+n+2] = Min(RMin1,RMin2)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;==&amp;gt;&lt;code&gt;Mid = (A[m+n+1]+A[m+n+2])/2 = (Max(LMax1,LMax2) + Min(RMin1,RMin2) )/2&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;最快的割cut是使用二分法有2个数组我们对哪个做二分呢&#34;&gt;最快的割(&lt;code&gt;Cut&lt;/code&gt;)是使用二分法，有2个数组，我们对哪个做二分呢？&lt;/h3&gt;
-&lt;p&gt;根据之前的分析，我们知道了，只要C1或C2确定，另外一个也就确定了。这里，为了效率，我们肯定是选&lt;code&gt;长度较短&lt;/code&gt;的做二分，假设为&lt;code&gt;C1&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;最快的割cut是使用二分法有2个数组我们对哪个做二分呢&#34;&gt;最快的割(&lt;code&gt;Cut&lt;/code&gt;)是使用二分法，有2个数组，我们对哪个做二分呢？
+&lt;/h3&gt;&lt;p&gt;根据之前的分析，我们知道了，只要C1或C2确定，另外一个也就确定了。这里，为了效率，我们肯定是选&lt;code&gt;长度较短&lt;/code&gt;的做二分，假设为&lt;code&gt;C1&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LMax1&amp;gt;RMin2&lt;/code&gt;，把&lt;code&gt;C1&lt;/code&gt;减小，&lt;code&gt;C2&lt;/code&gt;增大。—&amp;gt; &lt;code&gt;C1&lt;/code&gt;向左二分&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LMax2&amp;gt;RMin1&lt;/code&gt;，把&lt;code&gt;C1&lt;/code&gt;增大，&lt;code&gt;C2&lt;/code&gt;减小。—&amp;gt; &lt;code&gt;C1&lt;/code&gt;向右二分&lt;/p&gt;
-&lt;h3 id=&#34;如果c1或c2已经到头了怎么办&#34;&gt;如果&lt;code&gt;C1&lt;/code&gt;或&lt;code&gt;C2&lt;/code&gt;已经到头了怎么办？&lt;/h3&gt;
-&lt;p&gt;这种情况出现在：&lt;code&gt;如果有个数组完全小于或大于中值&lt;/code&gt;。假定n&amp;lt;m, 可能有4种情况：&lt;/p&gt;
+&lt;h3 id=&#34;如果c1或c2已经到头了怎么办&#34;&gt;如果&lt;code&gt;C1&lt;/code&gt;或&lt;code&gt;C2&lt;/code&gt;已经到头了怎么办？
+&lt;/h3&gt;&lt;p&gt;这种情况出现在：&lt;code&gt;如果有个数组完全小于或大于中值&lt;/code&gt;。假定n&amp;lt;m, 可能有4种情况：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;C1 = 0&lt;/code&gt; —— 数组1整体都在右边了，所以都比中值大，中值在数组2中，简单的说就是数组1割后的左边是空了，所以我们可以假定&lt;code&gt;LMax1 = INT_MIN&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;C1 =2n&lt;/code&gt; —— 数组1整体都在左边了，所以都比中值小，中值在数组2中 ，简单的说就是数组1割后的右边是空了，所以我们可以假定&lt;code&gt;RMin1= INT_MAX&lt;/code&gt;，来保证&lt;code&gt;LMax2 &amp;lt; RMin1&lt;/code&gt;恒成立&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;C2 = 0 &lt;/code&gt;—— 数组2整体在右边了，所以都比中值大，中值在数组1中 ，简单的说就是数组2割后的左边是空了，所以我们可以假定&lt;code&gt;LMax2 = INT_MIN&lt;/code&gt;
 &lt;code&gt;C2 = 2m &lt;/code&gt;—— 数组2整体在左边了，所以都比中值小，中值在数组1中, 简单的说就是数组2割后的右边是空了，为了让&lt;code&gt;LMax1 &amp;lt; RMin2 &lt;/code&gt;恒成立，我们可以假定&lt;code&gt;RMin2 = INT_MAX&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -3000,13 +3000,13 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
         <guid>https://bestoko.cc/p/gba2cia/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要&lt;/h2&gt;
-&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
+        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
+&lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;一台BOOT9STARP(B9S)破解的3ds&lt;/p&gt;
 &lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://3ds.hacks.guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -3027,14 +3027,14 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;这里以&lt;strong&gt;漆黑的魅影&lt;/strong&gt;为例（很棒的GBA宝可梦改版，我一直想在实机上玩）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;gba-转cia&#34;&gt;GBA 转CIA&lt;/h2&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;gba-转cia&#34;&gt;GBA 转CIA
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu5614188b182b9fb468f104e91324a5f3_101095_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu10870831498259699845.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu12406518874957529171.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -3048,7 +3048,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_huc377d2b05e16456aa8ccecdd51023b1c_98502_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu2703508768858883773.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu1206932963345848948.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -3065,7 +3065,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hud42ce9c6261d9ac0dd27d48e1680c9cd_154143_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu15786535881229955962.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu2920106178724780029.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -3079,7 +3079,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7027c39df039b751098fdffd4627263c_140007_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu15862548443368252133.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7163886712473613346.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -3096,7 +3096,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hufab2e8288898ca1b4d27c21427f3c389_143016_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu4244822793430882731.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu5491374550477089424.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -3117,7 +3117,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4cb3b5259b7551644a7156ad5f6a4c56_716178_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu11063517222999121877.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4118045727246458379.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;
@@ -3129,8 +3129,8 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;大功告成~&lt;/p&gt;
-&lt;h2 id=&#34;备注事项&#34;&gt;备注事项&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;备注事项&#34;&gt;备注事项
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;据说部分老款3ds对这种方式转换的&lt;code&gt;.cia&lt;/code&gt;支持不好，会出现黑屏情况(我的美版老小三反正测试是没问题啦)&lt;/li&gt;
 &lt;li&gt;港版不支持港版不支持港版不支持&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;存档类型&lt;/strong&gt;一定要设置正确&lt;/li&gt;
@@ -3151,7 +3151,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;471&#34;
-	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_480x0_resize_box_3.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu6c00e95ffa94d0d773fe80624b67f967_105681_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu3506867837254622348.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu2250237437850863967.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;learnGit&#34;
@@ -3162,8 +3162,8 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 		data-flex-basis=&#34;713px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;常用指令&#34;&gt;常用指令&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;常用指令&#34;&gt;常用指令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -3321,8 +3321,8 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git revert &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;commit&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 新建一个 commit，用来撤销指定 commit，后者的所有变化都将被前者抵消，并且应用到当前分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;学习资源&#34;&gt;学习资源&lt;/h2&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;学习资源&#34;&gt;学习资源
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://rogerdudler.github.io/git-guide/index.zh.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;git - 简明指南&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://git-scm.com/book/zh/v1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -3541,9 +3541,9 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <description>&lt;blockquote&gt;
 &lt;p&gt;以下内容最后更新于2023/6/22，部分信息可能因时间推移有所变动。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;关于-我&#34;&gt;关于 我&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;男/24yo.&lt;/li&gt;
+&lt;h1 id=&#34;关于-我&#34;&gt;关于 我
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;男/25yo.&lt;/li&gt;
 &lt;li&gt;常用网名 &lt;code&gt;Toko&lt;/code&gt;/&lt;code&gt;bestoko&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Toko&lt;/code&gt; 这个ID来源于 Windows10 娘&lt;code&gt;窓辺とうこ&lt;/code&gt;（Madobe Toko）
 &lt;ul&gt;
@@ -3560,17 +3560,17 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
     &gt;Toko的剪贴板&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Discord：bestoko#0075&lt;/li&gt;
 &lt;li&gt;Steam：&lt;a class=&#34;link&#34; href=&#34;https://steamcommunity.com/id/7oko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Toko&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;Battlenet： JiaXinTang#3425 (Asia Server)  国服寄了 亚服启动&lt;/del&gt; 阿根廷区充值涨了七倍 不玩了&lt;/li&gt;
+    &gt;Toko&lt;/a&gt;  游戏杂食选手&lt;/li&gt;
+&lt;li&gt;Battlenet： 龙井虾仁芹菜#5467 (China Server)  基本只玩炉石了&lt;/li&gt;
 &lt;li&gt;Nintendo Switch：SW-5559-4447-5393&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;关于-博客&#34;&gt;关于 博客&lt;/h1&gt;
-&lt;ul&gt;
+&lt;h1 id=&#34;关于-博客&#34;&gt;关于 博客
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;Hugo 搭建 - Github 托管 - Aliyun 域名解析&lt;/li&gt;
 &lt;li&gt;今后将以此为据点专注分享折腾经验、个人成长、读书学习相关的内容。&lt;/li&gt;
-&lt;li&gt;计划是用输出博文的方式推动自己的学习，也希望能给看到博客的人以帮助。&lt;/li&gt;
+&lt;li&gt;相信的心就是你的魔法&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -3580,8 +3580,8 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://bestoko.cc/links/</guid>
-        <description>&lt;h2 id=&#34;友链&#34;&gt;友链：&lt;/h2&gt;
-&lt;blockquote&gt;
+        <description>&lt;h2 id=&#34;友链&#34;&gt;友链：
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;想要添加友情链接的朋友可以在评论区留言，格式如下。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
