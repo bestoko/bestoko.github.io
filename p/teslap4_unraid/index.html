@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="视频转码、AI画图 我全都要">
+<title>Tesla P4 Unraid 下折腾小记</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/teslap4_unraid/'>
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Tesla P4 Unraid 下折腾小记">
+<meta property='og:description' content="视频转码、AI画图 我全都要">
+<meta property='og:url' content='https://bestoko.cc/p/teslap4_unraid/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='All in one' /><meta property='article:tag' content='NAS' /><meta property='article:tag' content='Tesla P4' /><meta property='article:tag' content='Unraid' /><meta property='article:published_time' content='2024-10-27T14:40:00&#43;08:00'/><meta property='article:modified_time' content='2024-10-27T14:40:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/teslap4_unraid/TeslaP4.jpg' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Tesla P4 Unraid 下折腾小记">
+<meta name="twitter:description" content="视频转码、AI画图 我全都要"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/teslap4_unraid/TeslaP4.jpg' />
+    <link rel="shortcut icon" href="/img/bestoko.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😺</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#简单介绍">简单介绍</a></li>
+    <li><a href="#unraid-上安装驱动并配置">UNraid 上安装驱动并配置</a></li>
+    <li><a href="#视频转码配置-jellyfin-为例">视频转码配置（ jellyfin 为例）</a></li>
+    <li><a href="#ai-画图">AI 画图</a></li>
+    <li><a href="#其他设置">其他设置</a>
+      <ol>
+        <li><a href="#静音调整">静音调整</a></li>
+        <li><a href="#省电调整">省电调整</a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/teslap4_unraid/">
+                <img src="/p/teslap4_unraid/TeslaP4_hu1288952856776092475.jpg"
+                        srcset="/p/teslap4_unraid/TeslaP4_hu1288952856776092475.jpg 800w, /p/teslap4_unraid/TeslaP4_hu3002624512558772904.jpg 1600w"
+                        width="800" 
+                        height="542" 
+                        loading="lazy"
+                        alt="Featured image of post Tesla P4 Unraid 下折腾小记" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/play/" style="background-color: #2a9d8f; color: #fff;">
+                Play
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/teslap4_unraid/">Tesla P4 Unraid 下折腾小记</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            视频转码、AI画图 我全都要
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 27, 2024</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>最近在黄鱼捡垃圾时，发现一张散热改装深得我心的 Tesla P4 显卡，虽然已经溢价到598块（年前不带散热改装的还300不到来着T_T），还是拿下了，塞到自己小小的AIO主机里开始折腾，简单记录下在 unraid 上使用这张卡的记录</p>
+<h2 id="简单介绍">简单介绍
+</h2><p>Tesla P4 这种卡设计之初都是放到服务器用的，因此都没有设计主动散热，毕竟服务器暴力扇力大砖飞，轻轻松松带走发热。而我们垃圾佬拿来家用时就不得不权衡一下噪音与散热了，因此简单的改装是很有必要的。常见的改装方案是在原装散热器后方3D打印出一个涡轮风扇，显卡长度增加了一截不说，也实在说不上优雅。</p>
+<p><img src="/p/teslap4_unraid/TeslaP4_4.png"
+	width="730"
+	height="321"
+	srcset="/p/teslap4_unraid/TeslaP4_4_hu16345920743622847491.png 480w, /p/teslap4_unraid/TeslaP4_4_hu15667879396933264524.png 1024w"
+	loading="lazy"
+	
+		alt="后置涡扇"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="227"
+		data-flex-basis="545px"
+	
+></p>
+<p>此外我最喜欢的方案是 B站 <a class="link" href="https://space.bilibili.com/2838092/"  target="_blank" rel="noopener"
+    >鸦无量</a> 的替换3D打印盖板，增加3组风扇的散热改装套件了，详细的可以参考视频 BV1oZ421q7qn</p>
+<p><img src="/p/teslap4_unraid/TeslaP4_5.png"
+	width="1395"
+	height="1395"
+	srcset="/p/teslap4_unraid/TeslaP4_5_hu17615454936641691507.png 480w, /p/teslap4_unraid/TeslaP4_5_hu1365459544519919085.png 1024w"
+	loading="lazy"
+	
+		alt="鸦无量 散热改装套件"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+></p>
+<p>而我这次购入的则是卖家定制不锈钢外壳，纯铜底板铜板散热器，3组风扇的版本，拿在手里沉甸甸的，很有质感，因为已经装进NAS里了，拆装比较麻烦，这里就直接使用卖家的图展示了。</p>
+<p><img src="/p/teslap4_unraid/TeslaP4_1.jpg"
+	width="1920"
+	height="1080"
+	srcset="/p/teslap4_unraid/TeslaP4_1_hu16363392602513754861.jpg 480w, /p/teslap4_unraid/TeslaP4_1_hu18124268746433971953.jpg 1024w"
+	loading="lazy"
+	
+		alt="闲鱼改造散热1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p><img src="/p/teslap4_unraid/TeslaP4_2.jpg"
+	width="1920"
+	height="1080"
+	srcset="/p/teslap4_unraid/TeslaP4_2_hu13672667767264248153.jpg 480w, /p/teslap4_unraid/TeslaP4_2_hu5107455048652148524.jpg 1024w"
+	loading="lazy"
+	
+		alt="闲鱼改造散热2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p><img src="/p/teslap4_unraid/TeslaP4_3.jpg"
+	width="1920"
+	height="1080"
+	srcset="/p/teslap4_unraid/TeslaP4_3_hu14330871460440395364.jpg 480w, /p/teslap4_unraid/TeslaP4_3_hu15347668208354929286.jpg 1024w"
+	loading="lazy"
+	
+		alt="闲鱼改造散热3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="unraid-上安装驱动并配置">UNraid 上安装驱动并配置
+</h2><p>首先需要安装 <strong>Nvidia-Driver</strong> 插件，可以自动检测当前设备上的 Nvidia 显卡并自动下载相应的驱动</p>
+<p><img src="/p/teslap4_unraid/unraid_nvidia_driver.png"
+	width="678"
+	height="690"
+	srcset="/p/teslap4_unraid/unraid_nvidia_driver_hu12097764315959693738.png 480w, /p/teslap4_unraid/unraid_nvidia_driver_hu1592798522817058309.png 1024w"
+	loading="lazy"
+	
+		alt="nvidia_driver"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="98"
+		data-flex-basis="235px"
+	
+></p>
+<blockquote>
+<p>&hellip;.</p>
+<p>Please make sure to disable and enable Docker if you installed the Nvidia driver for the first time! Settings -&gt;Docker -&gt; Enable Docker &lsquo;No&rsquo; -&gt; Apply -&gt; Enable Docker &lsquo;Yes&rsquo; -&gt; Apply
+plugin: nvidia-driver.plg installed</p>
+</blockquote>
+<p>参照安装成功的提示去设置里先停用docker ，再启用docker。</p>
+<p>然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的<strong>GPU-4220501a-f1b0-d74e-ec65-b17844258a75</strong>； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下<strong>无法启动</strong>。<img src="/p/teslap4_unraid/unraid_nvidia_driver_setting.png"
+	width="786"
+	height="1005"
+	srcset="/p/teslap4_unraid/unraid_nvidia_driver_setting_hu2390447559315476754.png 480w, /p/teslap4_unraid/unraid_nvidia_driver_setting_hu13354145944074746936.png 1024w"
+	loading="lazy"
+	
+		alt="Nvidia Driver"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="78"
+		data-flex-basis="187px"
+	
+></p>
+<h2 id="视频转码配置-jellyfin-为例">视频转码配置（ jellyfin 为例）
+</h2><p>我们在 jellyfin docker配置额外参数（<code>Extra Parameters</code>）加上 <code>--runtime=nvidia</code></p>
+<p>并添加两个变量 <code>NVIDIA_VISIBLE_DEVICES</code> 和 <code>NVIDIA_DRIVER_CAPABILITIES</code> , 值分别为上面配置时拿到的 <code>GPU-XXXYYYZZZ</code> 编号和 <code>all</code></p>
+<p><img src="/p/teslap4_unraid/jellyfin_setting1.png"
+	width="1197"
+	height="346"
+	srcset="/p/teslap4_unraid/jellyfin_setting1_hu4633028366630829435.png 480w, /p/teslap4_unraid/jellyfin_setting1_hu11633077696940969963.png 1024w"
+	loading="lazy"
+	
+		alt="jellyfin"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="345"
+		data-flex-basis="830px"
+	
+></p>
+<p>jellyfin - playback - transcoding 选择 Nvidia NVENC 保存并重新启动 docker，选择一个电影测试一下即可。</p>
+<p><img src="/p/teslap4_unraid/jellyfin_setting2.png"
+	width="1733"
+	height="715"
+	srcset="/p/teslap4_unraid/jellyfin_setting2_hu17909902699271256087.png 480w, /p/teslap4_unraid/jellyfin_setting2_hu18352481563379438784.png 1024w"
+	loading="lazy"
+	
+		alt="jellyfin_setting2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="242"
+		data-flex-basis="581px"
+	
+></p>
+<p>这里我以 奥本海默 为例，可以看的已经成功转码播放，unraid 仪表盘也可以看到 P4 的使用情况（需安装 GPU Statistics 插件），以及在使用的APP jellyfin</p>
+<p><img src="/p/teslap4_unraid/jellyfin_setting3.png"
+	width="2520"
+	height="1207"
+	srcset="/p/teslap4_unraid/jellyfin_setting3_hu3532907608524424026.png 480w, /p/teslap4_unraid/jellyfin_setting3_hu1081091415171922486.png 1024w"
+	loading="lazy"
+	
+		alt="jellyfin_setting3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="208"
+		data-flex-basis="501px"
+	
+></p>
+<p><img src="/p/teslap4_unraid/jellyfin_setting4.png"
+	width="804"
+	height="467"
+	srcset="/p/teslap4_unraid/jellyfin_setting4_hu12604382907352546814.png 480w, /p/teslap4_unraid/jellyfin_setting4_hu15958251840723127144.png 1024w"
+	loading="lazy"
+	
+		alt="jellyfin_setting4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="413px"
+	
+></p>
+<h2 id="ai-画图">AI 画图
+</h2><p>选 P4 的一大原因自然是因为它 8 GB的显存，2560 个 CUDA 核心，不拿来狠狠地 AI 画图也是可惜了: )</p>
+<p>unraid 应用商店搜索 stable diffusion，<code>goolashe/automatic1111-sd-webui</code>  这个整合镜像简单设置下就可以开画了！</p>
+<p><img src="/p/teslap4_unraid/unraid_stable-diffusion.png"
+	width="986"
+	height="685"
+	srcset="/p/teslap4_unraid/unraid_stable-diffusion_hu8949459573212303417.png 480w, /p/teslap4_unraid/unraid_stable-diffusion_hu14933319960304614242.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="143"
+		data-flex-basis="345px"
+	
+></p>
+<p><img src="/p/teslap4_unraid/unraid_stable-diffusion-setting.png"
+	width="1271"
+	height="112"
+	srcset="/p/teslap4_unraid/unraid_stable-diffusion-setting_hu17815400620794459226.png 480w, /p/teslap4_unraid/unraid_stable-diffusion-setting_hu17195840258679215490.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1134"
+		data-flex-basis="2723px"
+	
+></p>
+<p>我们将 Nvidia Visible Devices 参数的值填上之前获取的 GPU 编号启动即可</p>
+<p>默认第一次启动时会在 <code>/data/models</code> 目录下载一些配置所需的模型文件，小文件还好，Stable-diffusion 目录下的 <code>Stable-diffusionv1-5-pruned-emaonly.safetensors</code> 可能很难下得动。这时候你可以在docker 的log 里找到 <a class="link" href="https://huggingface.co/"  target="_blank" rel="noopener"
+    >https://huggingface.co/</a> 开头的模型下载链接，在下载器里将其替换成 <a class="link" href="https://hf-mirror.com/"  target="_blank" rel="noopener"
+    >https://hf-mirror.com/</a> （一个国内镜像，速度还是很快的），下载完手动转移到 <code>/data/models/Stable-diffusion</code> 即可，后期你也可以找些别的模型放到这里，webui刷新一下即可调用。</p>
+<p><img src="/p/teslap4_unraid/hfdownload.png"
+	width="813"
+	height="449"
+	srcset="/p/teslap4_unraid/hfdownload_hu15881785639412663342.png 480w, /p/teslap4_unraid/hfdownload_hu814542225511005208.png 1024w"
+	loading="lazy"
+	
+		alt="FDM"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="434px"
+	
+></p>
+<p>万事俱备，我们来简单画张猫娘，这里我使用的模型是以前下载的 <code>nordrin_v20</code></p>
+<p>正向提示词随便写几个 <code>cat_ears,2_girls, cute, young, flowers</code></p>
+<p>反向提示词 <code>bad hands </code> （对 AI 画的手梁木了 XD）</p>
+<p>Sampling method: DPM++2M，Schedule type: Karras ，其余默认，大概花了 17s 生成出来。生成的文件可以在 <code>/output/txt2img</code>里找到。</p>
+<p><img src="/p/teslap4_unraid/unraid_stable-diffusion_webui.png"
+	width="2532"
+	height="1269"
+	srcset="/p/teslap4_unraid/unraid_stable-diffusion_webui_hu4100198013577015860.png 480w, /p/teslap4_unraid/unraid_stable-diffusion_webui_hu9480517385649330139.png 1024w"
+	loading="lazy"
+	
+		alt="SD WEBUI"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="199"
+		data-flex-basis="478px"
+	
+></p>
+<p>此时在仪表盘也可以看到，P4的显存被吃满了。</p>
+<p><img src="/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png"
+	width="792"
+	height="436"
+	srcset="/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu2842224539544082929.png 480w, /p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu16829846112809887494.png 1024w"
+	loading="lazy"
+	
+		alt="画图时的显卡占用"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<h2 id="其他设置">其他设置
+</h2><h3 id="静音调整">静音调整
+</h3><p>说实话，卖家这散热改装效果确实不错，就是声音有点太大了，三风扇满速时还是蛮吵的。于是我从PDD买了个小玩意，手动降速到满意的程度了，基本跟氦气盘读写时的声音差不多，也不怎么影响温度。旋钮在PCI挡板的位置，还是挺方便的</p>
+<p><img src="/p/teslap4_unraid/pdd.png"
+	width="1238"
+	height="750"
+	srcset="/p/teslap4_unraid/pdd_hu1358991674354238266.png 480w, /p/teslap4_unraid/pdd_hu16419804189500891822.png 1024w"
+	loading="lazy"
+	
+		alt="风扇集中调速"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="165"
+		data-flex-basis="396px"
+	
+></p>
+<h3 id="省电调整">省电调整
+</h3><p>当我们没有在使用这卡的时候，还是希望尽可能让它的待机功耗小一些的。这里提供一个网上找到的适用于 N卡的脚本，可以使用 user scirpt 插件，设置每小时启动一次。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># check for driver</span>
+</span></span><span class="line"><span class="cl"><span class="nb">command</span> -v nvidia-smi <span class="p">&amp;</span>&gt; /dev/null <span class="o">||</span> <span class="o">{</span> <span class="nb">echo</span> &gt;<span class="p">&amp;</span><span class="m">2</span> <span class="s2">&#34;nvidia driver is not installed you will need to install this from community applications ... exiting.&#34;</span><span class="p">;</span> <span class="nb">exit</span> 1<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Nvidia drivers are installed&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;I can see these Nvidia gpus in your server&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">nvidia-smi --list-gpus
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-------------------------------------------------------------&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># set persistence mode for gpus ( When persistence mode is enabled the NVIDIA driver remains loaded even when no active processes,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># stops modules being unloaded therefore stops settings changing when modules are reloaded</span>
+</span></span><span class="line"><span class="cl">nvidia-smi --persistence-mode<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#query power state</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gpu_pstate</span><span class="o">=</span><span class="k">$(</span>nvidia-smi --query-gpu<span class="o">=</span><span class="s2">&#34;pstate&#34;</span> --format<span class="o">=</span>csv,noheader<span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#query running processes by pid using gpu</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gpupid</span><span class="o">=</span><span class="k">$(</span>nvidia-smi --query-compute-apps<span class="o">=</span><span class="s2">&#34;pid&#34;</span> --format<span class="o">=</span>csv,noheader<span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#check if pstate is zero and no processes are running by checking if any pid is in string</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$gpu_pstate</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;P0&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$gpupid</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;No pid in string so no processes are running&#34;</span>
+</span></span><span class="line"><span class="cl">fuser -kv /dev/nvidia*
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Power state is&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$gpu_pstate</span><span class="s2">&#34;</span> <span class="c1"># show what power state is</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Power state is&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$gpu_pstate</span><span class="s2">&#34;</span> <span class="c1"># show what power state is</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-------------------------------------------------------------&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Power draw is now&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Check current power draw of GPU</span>
+</span></span><span class="line"><span class="cl">nvidia-smi --query-gpu<span class="o">=</span>power.draw --format<span class="o">=</span>csv
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/teslap4_unraid/Nvidia_scirpt.png"
+	width="1471"
+	height="405"
+	srcset="/p/teslap4_unraid/Nvidia_scirpt_hu831508093739597911.png 480w, /p/teslap4_unraid/Nvidia_scirpt_hu11288931599419502840.png 1024w"
+	loading="lazy"
+	
+		alt="User Scripts"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="363"
+		data-flex-basis="871px"
+	
+></p>
+<h2 id="总结">总结
+</h2><p>Tesla P4 虽然溢价不少，但是得益于免额外供电的设计，N卡的 cuda 生态，在 NAS 上的可玩性还是比较高的。</p>
+<p>后续我可能再折腾下 MTPhotos cuda 版本的人脸识别分类等应用，让这张老计算卡继续发光发热~</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/all-in-one/">All in One</a>
+        
+            <a href="/tags/nas/">NAS</a>
+        
+            <a href="/tags/tesla-p4/">Tesla P4</a>
+        
+            <a href="/tags/unraid/">Unraid</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/qbittorrenttips/">
+        
+        
+            <div class="article-image">
+                <img src="/p/qbittorrenttips/qBittorrent.d1959837a0d734c37da4ad0b534455ed_hu12378772904922015051.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子"
+                        data-key="qBittorrentTips" 
+                        data-hash="md5-0ZWYN6DXNMN9pK0LU0RV7Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">qBittorrent 批量清理被PT站点删除的种子</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/koishi-chatgpt/">
+        
+        
+            <div class="article-image">
+                <img src="/p/koishi-chatgpt/KoishiJS.37024b52cfc1fc5461d5ed39a0111c24_hu4310993082040681325.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人"
+                        data-key="Koishi-ChatGPT" 
+                        data-hash="md5-NwJLUs/B/FRh1e05oBEcJA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">从零开始拥有一个属于自己的 ChatGPT QQ机器人</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/oneplus_ace2_pro/">
+        
+        
+            <div class="article-image">
+                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu3901644920187346259.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post “Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)"
+                        data-key="oneplus_ace2_pro" 
+                        data-hash="md5-gNpxvWOdfE1hrOFnwmbsHw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">“Root” 文化并没有消亡 —— 2023年该如何愉快的玩机 (一加Ace2 Pro为例)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/oneplus8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/oneplus8/onepluslogo.bb321463ce9d345c693db81e591a9a13_hu3150500408509278020.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 一加8的Android 11 折腾指南"
+                        data-key="oneplus8" 
+                        data-hash="md5-uzIUY86dNFxpPbgeWRqaEw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">一加8的Android 11 折腾指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/gba2cia/">
+        
+        
+            <div class="article-image">
+                <img src="/p/gba2cia/3ds.6d9000d29f461b186573124aca567612_hu18408012454401256207.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案"
+                        data-key="gba2cia" 
+                        data-hash="md5-bZAA0p9GGxhlcxJKylZ2Eg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

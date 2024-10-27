@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tesla P4 on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/tesla-p4/</link>
+        <description>Recent content in Tesla P4 on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 27 Oct 2024 14:40:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/tesla-p4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Tesla P4 Unraid 下折腾小记</title>
+        <link>https://bestoko.cc/p/teslap4_unraid/</link>
+        <pubDate>Sun, 27 Oct 2024 14:40:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/teslap4_unraid/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/teslap4_unraid/TeslaP4.jpg" alt="Featured image of post Tesla P4 Unraid 下折腾小记" /&gt;&lt;p&gt;最近在黄鱼捡垃圾时，发现一张散热改装深得我心的 Tesla P4 显卡，虽然已经溢价到598块（年前不带散热改装的还300不到来着T_T），还是拿下了，塞到自己小小的AIO主机里开始折腾，简单记录下在 unraid 上使用这张卡的记录&lt;/p&gt;
+&lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍
+&lt;/h2&gt;&lt;p&gt;Tesla P4 这种卡设计之初都是放到服务器用的，因此都没有设计主动散热，毕竟服务器暴力扇力大砖飞，轻轻松松带走发热。而我们垃圾佬拿来家用时就不得不权衡一下噪音与散热了，因此简单的改装是很有必要的。常见的改装方案是在原装散热器后方3D打印出一个涡轮风扇，显卡长度增加了一截不说，也实在说不上优雅。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4.png&#34;
+	width=&#34;730&#34;
+	height=&#34;321&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu16345920743622847491.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu15667879396933264524.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;后置涡扇&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;227&#34;
+		data-flex-basis=&#34;545px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此外我最喜欢的方案是 B站 &lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/2838092/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;鸦无量&lt;/a&gt; 的替换3D打印盖板，增加3组风扇的散热改装套件了，详细的可以参考视频 BV1oZ421q7qn&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5.png&#34;
+	width=&#34;1395&#34;
+	height=&#34;1395&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu17615454936641691507.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu1365459544519919085.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;鸦无量 散热改装套件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;而我这次购入的则是卖家定制不锈钢外壳，纯铜底板铜板散热器，3组风扇的版本，拿在手里沉甸甸的，很有质感，因为已经装进NAS里了，拆装比较麻烦，这里就直接使用卖家的图展示了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu16363392602513754861.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu18124268746433971953.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;闲鱼改造散热1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu13672667767264248153.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu5107455048652148524.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;闲鱼改造散热2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu14330871460440395364.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu15347668208354929286.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;闲鱼改造散热3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;unraid-上安装驱动并配置&#34;&gt;UNraid 上安装驱动并配置
+&lt;/h2&gt;&lt;p&gt;首先需要安装 &lt;strong&gt;Nvidia-Driver&lt;/strong&gt; 插件，可以自动检测当前设备上的 Nvidia 显卡并自动下载相应的驱动&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
+	width=&#34;678&#34;
+	height=&#34;690&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu12097764315959693738.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu1592798522817058309.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nvidia_driver&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;98&#34;
+		data-flex-basis=&#34;235px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;Please make sure to disable and enable Docker if you installed the Nvidia driver for the first time! Settings -&amp;gt;Docker -&amp;gt; Enable Docker &amp;lsquo;No&amp;rsquo; -&amp;gt; Apply -&amp;gt; Enable Docker &amp;lsquo;Yes&amp;rsquo; -&amp;gt; Apply
+plugin: nvidia-driver.plg installed&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参照安装成功的提示去设置里先停用docker ，再启用docker。&lt;/p&gt;
+&lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
+	width=&#34;786&#34;
+	height=&#34;1005&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu2390447559315476754.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu13354145944074746936.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Nvidia Driver&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;78&#34;
+		data-flex-basis=&#34;187px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;视频转码配置-jellyfin-为例&#34;&gt;视频转码配置（ jellyfin 为例）
+&lt;/h2&gt;&lt;p&gt;我们在 jellyfin docker配置额外参数（&lt;code&gt;Extra Parameters&lt;/code&gt;）加上 &lt;code&gt;--runtime=nvidia&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;并添加两个变量 &lt;code&gt;NVIDIA_VISIBLE_DEVICES&lt;/code&gt; 和 &lt;code&gt;NVIDIA_DRIVER_CAPABILITIES&lt;/code&gt; , 值分别为上面配置时拿到的 &lt;code&gt;GPU-XXXYYYZZZ&lt;/code&gt; 编号和 &lt;code&gt;all&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1.png&#34;
+	width=&#34;1197&#34;
+	height=&#34;346&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu4633028366630829435.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu11633077696940969963.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;jellyfin&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;345&#34;
+		data-flex-basis=&#34;830px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;jellyfin - playback - transcoding 选择 Nvidia NVENC 保存并重新启动 docker，选择一个电影测试一下即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2.png&#34;
+	width=&#34;1733&#34;
+	height=&#34;715&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu17909902699271256087.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu18352481563379438784.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;jellyfin_setting2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;242&#34;
+		data-flex-basis=&#34;581px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这里我以 奥本海默 为例，可以看的已经成功转码播放，unraid 仪表盘也可以看到 P4 的使用情况（需安装 GPU Statistics 插件），以及在使用的APP jellyfin&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3.png&#34;
+	width=&#34;2520&#34;
+	height=&#34;1207&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu3532907608524424026.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu1081091415171922486.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;jellyfin_setting3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;208&#34;
+		data-flex-basis=&#34;501px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4.png&#34;
+	width=&#34;804&#34;
+	height=&#34;467&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu12604382907352546814.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu15958251840723127144.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;jellyfin_setting4&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;413px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ai-画图&#34;&gt;AI 画图
+&lt;/h2&gt;&lt;p&gt;选 P4 的一大原因自然是因为它 8 GB的显存，2560 个 CUDA 核心，不拿来狠狠地 AI 画图也是可惜了: )&lt;/p&gt;
+&lt;p&gt;unraid 应用商店搜索 stable diffusion，&lt;code&gt;goolashe/automatic1111-sd-webui&lt;/code&gt;  这个整合镜像简单设置下就可以开画了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
+	width=&#34;986&#34;
+	height=&#34;685&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu8949459573212303417.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu14933319960304614242.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;345px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
+	width=&#34;1271&#34;
+	height=&#34;112&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu17815400620794459226.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu17195840258679215490.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1134&#34;
+		data-flex-basis=&#34;2723px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;我们将 Nvidia Visible Devices 参数的值填上之前获取的 GPU 编号启动即可&lt;/p&gt;
+&lt;p&gt;默认第一次启动时会在 &lt;code&gt;/data/models&lt;/code&gt; 目录下载一些配置所需的模型文件，小文件还好，Stable-diffusion 目录下的 &lt;code&gt;Stable-diffusionv1-5-pruned-emaonly.safetensors&lt;/code&gt; 可能很难下得动。这时候你可以在docker 的log 里找到 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/&lt;/a&gt; 开头的模型下载链接，在下载器里将其替换成 &lt;a class=&#34;link&#34; href=&#34;https://hf-mirror.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hf-mirror.com/&lt;/a&gt; （一个国内镜像，速度还是很快的），下载完手动转移到 &lt;code&gt;/data/models/Stable-diffusion&lt;/code&gt; 即可，后期你也可以找些别的模型放到这里，webui刷新一下即可调用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload.png&#34;
+	width=&#34;813&#34;
+	height=&#34;449&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu15881785639412663342.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu814542225511005208.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;FDM&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;万事俱备，我们来简单画张猫娘，这里我使用的模型是以前下载的 &lt;code&gt;nordrin_v20&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;正向提示词随便写几个 &lt;code&gt;cat_ears,2_girls, cute, young, flowers&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;反向提示词 &lt;code&gt;bad hands &lt;/code&gt; （对 AI 画的手梁木了 XD）&lt;/p&gt;
+&lt;p&gt;Sampling method: DPM++2M，Schedule type: Karras ，其余默认，大概花了 17s 生成出来。生成的文件可以在 &lt;code&gt;/output/txt2img&lt;/code&gt;里找到。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
+	width=&#34;2532&#34;
+	height=&#34;1269&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu4100198013577015860.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu9480517385649330139.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SD WEBUI&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此时在仪表盘也可以看到，P4的显存被吃满了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
+	width=&#34;792&#34;
+	height=&#34;436&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu2842224539544082929.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu16829846112809887494.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;画图时的显卡占用&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;其他设置&#34;&gt;其他设置
+&lt;/h2&gt;&lt;h3 id=&#34;静音调整&#34;&gt;静音调整
+&lt;/h3&gt;&lt;p&gt;说实话，卖家这散热改装效果确实不错，就是声音有点太大了，三风扇满速时还是蛮吵的。于是我从PDD买了个小玩意，手动降速到满意的程度了，基本跟氦气盘读写时的声音差不多，也不怎么影响温度。旋钮在PCI挡板的位置，还是挺方便的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/pdd.png&#34;
+	width=&#34;1238&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu1358991674354238266.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu16419804189500891822.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;风扇集中调速&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;396px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;省电调整&#34;&gt;省电调整
+&lt;/h3&gt;&lt;p&gt;当我们没有在使用这卡的时候，还是希望尽可能让它的待机功耗小一些的。这里提供一个网上找到的适用于 N卡的脚本，可以使用 user scirpt 插件，设置每小时启动一次。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# check for driver&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; -v nvidia-smi &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&amp;gt; /dev/null &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;nvidia driver is not installed you will need to install this from community applications ... exiting.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nvidia drivers are installed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;I can see these Nvidia gpus in your server&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvidia-smi --list-gpus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;-------------------------------------------------------------&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# set persistence mode for gpus ( When persistence mode is enabled the NVIDIA driver remains loaded even when no active processes,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# stops modules being unloaded therefore stops settings changing when modules are reloaded&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvidia-smi --persistence-mode&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#query power state&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;gpu_pstate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;nvidia-smi --query-gpu&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pstate&amp;#34;&lt;/span&gt; --format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;csv,noheader&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#query running processes by pid using gpu&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;gpupid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;nvidia-smi --query-compute-apps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pid&amp;#34;&lt;/span&gt; --format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;csv,noheader&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#check if pstate is zero and no processes are running by checking if any pid is in string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$gpu_pstate&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;P0&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -z &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$gpupid&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;No pid in string so no processes are running&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fuser -kv /dev/nvidia*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Power state is&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$gpu_pstate&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# show what power state is&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Power state is&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$gpu_pstate&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# show what power state is&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;-------------------------------------------------------------&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Power draw is now&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Check current power draw of GPU&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvidia-smi --query-gpu&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;power.draw --format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt.png&#34;
+	width=&#34;1471&#34;
+	height=&#34;405&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu831508093739597911.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu11288931599419502840.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;User Scripts&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;363&#34;
+		data-flex-basis=&#34;871px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;Tesla P4 虽然溢价不少，但是得益于免额外供电的设计，N卡的 cuda 生态，在 NAS 上的可玩性还是比较高的。&lt;/p&gt;
+&lt;p&gt;后续我可能再折腾下 MTPhotos cuda 版本的人脸识别分类等应用，让这张老计算卡继续发光发热~&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
