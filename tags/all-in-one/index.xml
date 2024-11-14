@@ -6,7 +6,263 @@
         <description>Recent content in All in One on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 27 Oct 2024 14:40:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/all-in-one/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Nov 2024 21:40:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/all-in-one/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Unraid 上部署飞牛OS虚拟机小记</title>
+        <link>https://bestoko.cc/p/fnos_unraid/</link>
+        <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/fnos_unraid/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png" alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记" /&gt;&lt;h2 id=&#34;飞牛私有云&#34;&gt;飞牛私有云
+&lt;/h2&gt;&lt;p&gt;最近 DIY NAS 圈飞牛私有云的热度很高（不排除很多是商单广告）。我大概看了看，虽然还只是 beta 版本，但基本功能的完成度已经很高了。文件存储、docker、影视、相册、应用中心都已经开箱即用了，另外还有比较方便的外网访问（据说后期会额外收费，或者免费版本限速）。最让我眼馋的还是飞牛的影视功能，我之前辛苦折腾的挂削组件，相互配合之间还老出点小毛病。不过主力NAS unraid 已经使用很久了，数据迁移实在麻烦，决定在上面用虚拟机的方式部署使用。&lt;/p&gt;
+&lt;h2 id=&#34;unraid-fnos-vm-部署&#34;&gt;UNraid FNOS VM 部署
+&lt;/h2&gt;&lt;p&gt;首先去官网下载最新的镜像文件 iso  &lt;a class=&#34;link&#34; href=&#34;https://www.fnnas.com/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.fnnas.com/download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;通过 smb 复制到unraid 的isos 共享文件夹&lt;/p&gt;
+&lt;p&gt;接着新建一个 Linux 虚拟机，设置好所分配的 CPU 核心、内存、虚拟硬盘大小，OS INSTALL ISO 选择我们刚上传的系统镜像即可。&lt;/p&gt;
+&lt;p&gt;这里我的闲置空间比较多，分配了100G 给 fnos，官方建议是64G 以上，可以根据自己硬件条件来设置。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting.png&#34;
+	width=&#34;1162&#34;
+	height=&#34;1242&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu8945063158835296527.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu4823018455244029704.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;93&#34;
+		data-flex-basis=&#34;224px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;972&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu18190693768482533953.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu6582063913079247030.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;972&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu13490725652646053152.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu11259701870284108373.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;972&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu6795159109413312356.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu5611298570445135050.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;972&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu7938392156977383692.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu6962604619803662643.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5.png&#34;
+	width=&#34;1294&#34;
+	height=&#34;972&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu6308458402942834410.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu1011470912767912655.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1271&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu5745721599546196154.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu8918722179702381222.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;483px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1271&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu10065059171000321659.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu14354990129724188421.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;483px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修改飞牛ip-挂载媒体库并配置影视应用&#34;&gt;修改飞牛IP 挂载媒体库并配置影视应用
+&lt;/h2&gt;&lt;p&gt;一路按需设置即可，需要注意的是进系统设置的第一个账号默认为有 SSH 权限的且不可删除的管理员账号，DHCP 获取的 IP 地址不满意，可以进系统后手动指定。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network.png&#34;
+	width=&#34;1136&#34;
+	height=&#34;879&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu13567982701539643744.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu16295547348543371314.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;129&#34;
+		data-flex-basis=&#34;310px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接着简单安装下影视应用，将unraid 里的影音库目录 挂载到飞牛OS，并共享给影视应用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1.png&#34;
+	width=&#34;1369&#34;
+	height=&#34;813&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu5577973044138788698.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu44648315354753972.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;smb挂载&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;404px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2.png&#34;
+	width=&#34;1389&#34;
+	height=&#34;836&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu15084278667977238920.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu10742289814637826616.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;共享影视目录&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;398px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入影视，设置下自己目录对应的媒体分类，稍等片刻，即可挂削完毕&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1266&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu18356782449049451582.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu2853401513079070760.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1266&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu5286346616787514278.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu5417824319816279150.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;可以看到飞牛的播放器完成度还是比较高的，个人感觉比 emby 和 jellyfin 的网页版易用点&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3.png&#34;
+	width=&#34;2560&#34;
+	height=&#34;1266&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu16099940065099503007.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu8666435615339935183.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;核显直通转码&#34;&gt;核显直通转码
+&lt;/h2&gt;&lt;p&gt;unraid 下直通核显比较简单，首先去Tools - System Devices 找到并勾选核显，Bind selected to VFIO at Boot，并重启。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
+	width=&#34;1786&#34;
+	height=&#34;117&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu11853431053267391786.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu12289158062322472431.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1526&#34;
+		data-flex-basis=&#34;3663px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接着将暂停飞牛虚拟机，将设置的显卡从 VNC 改成 你的核显重启虚拟机即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
+	width=&#34;822&#34;
+	height=&#34;434&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu12791471831138194479.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu1219566255436275172.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;454px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最后，在飞牛影视里 勾选启用 GPU 加速转码即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
+	width=&#34;1656&#34;
+	height=&#34;1173&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu10804049120438401418.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu15999752771162434753.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;338px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
+	width=&#34;793&#34;
+	height=&#34;223&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu15333521277207735597.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu7542936336615370317.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;355&#34;
+		data-flex-basis=&#34;853px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;我们把手机上切成流量，模拟在外面访问家里的nas，需要转码的情况，可以看到已经成功驱动。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
+	width=&#34;1334&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu1830548547169416047.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu9498983582931129829.PNG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;简单总结&#34;&gt;简单总结
+&lt;/h2&gt;&lt;p&gt;飞牛OS 目前专业性功能还比不上老牌NAS系统如群晖等，但也已经有相对出色的影音体验，足以应对家用非专业用户的使用。安装简单不挑硬件，正版免费也是最大的优势，也许有一天能让黑群晖成为过去式，变成国产DIY NAS 首先推荐的系统。如果有一天我要拆开 unraid，进行存算分离，我可能会考虑买成品NAS或者实体机安装飞牛使用。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Tesla P4 Unraid 下折腾小记</title>
         <link>https://bestoko.cc/p/teslap4_unraid/</link>
         <pubDate>Sun, 27 Oct 2024 14:40:00 +0800</pubDate>
