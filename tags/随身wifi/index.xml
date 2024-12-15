@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>随身WiFi on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/</link>
+        <description>Recent content in 随身WiFi on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 15 Dec 2024 23:55:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>三星 SCR01 入手简单折腾 </title>
+        <link>https://bestoko.cc/p/scr01/</link>
+        <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/scr01/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
+&lt;h2 id=&#34;外观与配置&#34;&gt;外观与配置
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu9644349825343441975.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu18028669623884654127.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu298499983252222565.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu7939123902256501301.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;(家附近联通基站信号不好，因此图上是4G，在公司5G使用顺畅)&lt;/p&gt;
+&lt;p&gt;接着过一遍完整参数与支持的频段&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MediaTek Dimensity 720 (MT6853)&lt;/p&gt;
+&lt;p&gt;Android 11 with OneUI 3.0 (w/o Google Play Services)&lt;/p&gt;
+&lt;p&gt;2.5GB RAM&lt;/p&gt;
+&lt;p&gt;32GB Internal Storage&lt;/p&gt;
+&lt;p&gt;WiFi 5&lt;/p&gt;
+&lt;p&gt;5000mAH Battery&lt;/p&gt;
+&lt;p&gt;5.3&amp;quot; (1480x720) LCD Display&lt;/p&gt;
+&lt;p&gt;Network bands:&lt;/p&gt;
+&lt;p&gt;5G: n28 / n41 / n77 / n78&lt;/p&gt;
+&lt;p&gt;4G: LTE FDD: B1 / B3 / B17 / B18 TDD: B41&lt;/p&gt;
+&lt;p&gt;Disabled Bands that can be enabled:&lt;/p&gt;
+&lt;p&gt;4G: B7 / B38&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实相较于国内很多随身WiFi的配置，这个性价比并不高，但耐不住颜值戳中我，放着当个日历摆件也好看，黄鱼入手。&lt;/p&gt;
+&lt;h2 id=&#34;解除sim-锁-开启5g频段&#34;&gt;解除SIM 锁 开启5G频段
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;点击 &lt;code&gt;关于 &amp;gt;&amp;gt; 状态 &amp;gt;&amp;gt; 手机号码&lt;/code&gt;，快速点击10次&lt;/li&gt;
+&lt;li&gt;点击 10 次，进入 DRParser Mode，此时依次输入 &lt;code&gt;*#0011#&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进入到 service mode，再次点击右上角，点击一次 back，再次点击 key input&lt;/li&gt;
+&lt;li&gt;这时输入 &lt;code&gt;Q&lt;/code&gt; 并确认，在此界面等待大概一分钟后，会进入到主菜单界面&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
+&lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu5129266001612271815.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu11682864763417721268.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu14505496812966769289.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu10924780045115309019.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu10829407531984153217.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu4014994179825039200.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu17501869656317015718.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu4952562789279421603.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu7305209044995165401.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu1079126945852162261.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu4773766746805243419.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu9440349229476720282.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allow list off&lt;/code&gt; 即运营商锁，关掉之后我们才可以使用默认日本运营商之外的卡&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sa/nsa enable&lt;/code&gt; 默认disable，开启后则可以使用5G&lt;/p&gt;
+&lt;h2 id=&#34;设置apn&#34;&gt;设置APN
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
+	width=&#34;587&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu14743331719272201234.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu5864655007300311974.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;通信设置 &amp;gt;&amp;gt; APN&lt;/code&gt; 里 如图设置即可使用国内移动联通的卡上网。&lt;/p&gt;
+&lt;p&gt;电信则需要安装第三方桌面，在安卓原生设置里设置更多APN 参数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;名称：ctlte&lt;/li&gt;
+&lt;li&gt;apn：ctlte&lt;/li&gt;
+&lt;li&gt;用户名：ctwap@mycdma.cn&lt;/li&gt;
+&lt;li&gt;密码：vnet.mobi&lt;/li&gt;
+&lt;li&gt;MCC：460&lt;/li&gt;
+&lt;li&gt;MNC：03&lt;/li&gt;
+&lt;li&gt;apn类型：*&lt;/li&gt;
+&lt;li&gt;apn协议：IPV4&amp;amp;IPV6&lt;/li&gt;
+&lt;li&gt;apn漫游协议：IPV4&amp;amp;IPV6&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用感想&#34;&gt;使用感想
+&lt;/h2&gt;&lt;p&gt;耐用，耐用，还是tm的耐用！&lt;/p&gt;
+&lt;p&gt;在阉割了很多不必要的硬件情况下（扬声器等），5000毫安时的电池真是太耐用了，我从上班到下班，一直连着2~3个设备的情况下，还能剩下30+%的电量，确实很舒服。&lt;/p&gt;
+&lt;p&gt;看smzdm上的折腾里，能强解BL，但修补boot不能获取root权限，有点遗憾。原来还有想法搞个小猫咪上去，用root 后的VPN热点给一些设备爬墙来着。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;（等网络好了之后再出掉吧）&lt;/del&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
