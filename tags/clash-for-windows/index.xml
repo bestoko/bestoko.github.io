@@ -29,8 +29,7 @@
     &gt;cfw的github页&lt;/a&gt;下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。&lt;/p&gt;
-&lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以&lt;code&gt;Arch Linux&lt;/code&gt;为例安装&lt;code&gt;Flatpak&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -69,7 +68,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34;
 	width=&#34;1052&#34;
 	height=&#34;767&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu13402915003426320604.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu1280761329518327631.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu_4037343ba30f43fb.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu_ac3845b5fce264ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;clash-proxies&#34;
@@ -86,7 +85,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34;
 	width=&#34;1582&#34;
 	height=&#34;612&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu15926796141259012520.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu11884452035036126273.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu_6a3ce96e7d60b19a.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu_d530a54304c0ff24.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;proxy-settings&#34;

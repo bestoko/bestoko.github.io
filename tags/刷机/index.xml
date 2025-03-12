@@ -19,7 +19,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu15784744685729144236.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu5402410126761479358.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -36,8 +36,7 @@
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
@@ -59,7 +58,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu2170386241575178293.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6681112487101365740.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -88,7 +87,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu9797282647728824358.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu8266887722309811162.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -102,7 +101,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu64685479218557013.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu15387969128228765233.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -116,7 +115,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu13767883759163556219.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu1758458472517622844.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -130,7 +129,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu14844564629188411604.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu1734278580864475992.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -144,7 +143,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2505653572469837244.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2681129231978154320.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -158,7 +157,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu2712018314552893919.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu11596301558230775997.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -172,7 +171,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu13927585091527366980.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu11700466973732308762.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -283,7 +282,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -297,7 +296,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -311,7 +310,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -325,7 +324,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;

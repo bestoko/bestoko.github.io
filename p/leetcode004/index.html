@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。\n定义LMax= Max(LeftPart) RMin = Min(RightPart) //由小到大的有序数组\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n">
 <title>寻找两个有序数组的中位数</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/leetcode004/'>
 
 <link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="寻找两个有序数组的中位数">
-<meta property='og:description' content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。\n定义LMax= Max(LeftPart) RMin = Min(RightPart) //由小到大的有序数组\n">
+<meta property='og:description' content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n">
 <meta property='og:url' content='https://bestoko.cc/p/leetcode004/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Leetcode' /><meta property='article:tag' content='Algorithm' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2020-04-10T09:00:01&#43;08:00'/><meta property='article:modified_time' content='2020-04-10T09:00:01&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/leetcode004/leetcode.jpg' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="寻找两个有序数组的中位数">
-<meta name="twitter:description" content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n割(Cut)的左右会有两个元素，分别是左边最大值和右边最小值。\n定义LMax= Max(LeftPart) RMin = Min(RightPart) //由小到大的有序数组\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="\u200b\t最近刚开始刷Leetcode，第一道Hard题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。\n题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/\n题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/\n题目\r给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。\n请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。\n你可以假设 nums1 和 nums2 不会同时为空。\n示例 1:\nnums1 = [1, 3] nums2 = [2]\n则中位数是 2.0 示例 2:\nnums1 = [1, 2] nums2 = [3, 4]\n则中位数是 (2 + 3)/2 = 2.5\n分析\r首先要理解中位数\r中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。\n[2 3 5] 中位数是3\n[1 4 7 9] 中位数是(4+7)/2=5.5\n割(Cut)的概念\r通过切一刀，可以把有序数组分成左右两个部分，切的那一刀就被称为割(Cut)。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/leetcode004/leetcode.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu17164462801135551763.png" width="300"
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
                             height="294" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -299,8 +299,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/p/leetcode004/">
-                <img src="/p/leetcode004/leetcode_hu8617999874000775108.jpg"
-                        srcset="/p/leetcode004/leetcode_hu8617999874000775108.jpg 800w, /p/leetcode004/leetcode_hu13799788795436531389.jpg 1600w"
+                <img src="/p/leetcode004/leetcode_hu_4cc6067b5590a4a4.jpg"
+                        srcset="/p/leetcode004/leetcode_hu_4cc6067b5590a4a4.jpg 800w, /p/leetcode004/leetcode_hu_ed6a88a4d880c92d.jpg 1600w"
                         width="800" 
                         height="341" 
                         loading="lazy"
@@ -364,8 +364,7 @@
     <p>​	最近刚开始刷Leetcode，第一道<code>Hard</code>题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。</p>
 <blockquote>
 <p>题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/</p>
-<p>题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/</p>
-</blockquote>
+<p>题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/</p></blockquote>
 <h2 id="题目">题目
 </h2><blockquote>
 <p>给定两个大小为 m 和 n 的有序数组 <code>nums1</code> 和 <code>nums2</code>。</p>
@@ -374,25 +373,20 @@
 <p>示例 1:</p>
 <blockquote>
 <p>nums1 = [1, 3]
-nums2 = [2]</p>
-</blockquote>
+nums2 = [2]</p></blockquote>
 <p>则中位数是 <code>2.0</code>
 示例 2:</p>
 <blockquote>
 <p>nums1 = [1, 2]
-nums2 = [3, 4]</p>
-</blockquote>
-<p>则中位数是 <code>(2 + 3)/2 = 2.5</code></p>
-</blockquote>
+nums2 = [3, 4]</p></blockquote>
+<p>则中位数是 <code>(2 + 3)/2 = 2.5</code></p></blockquote>
 <h2 id="分析">分析
 </h2><h3 id="首先要理解中位数">首先要理解中位数
 </h3><blockquote>
-<p>中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。</p>
-</blockquote>
+<p>中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。</p></blockquote>
 <blockquote>
 <p><code>[2 3 5]</code> 中位数是<code>3</code></p>
-<p><code>[1 4 7 9]</code> 中位数是<code>(4+7)/2=5.5</code></p>
-</blockquote>
+<p><code>[1 4 7 9]</code> 中位数是<code>(4+7)/2=5.5</code></p></blockquote>
 <h3 id="割cut的概念">割(Cut)的概念
 </h3><ul>
 <li>
@@ -412,8 +406,7 @@ nums2 = [3, 4]</p>
 <p>奇数组:<code> [2 3 5]</code> 对应的中位数为<code>3</code>，假定割(Cut)在3上，我们可以把3分为2个： <code>[2（3/3） 5]</code></p>
 <p>因此<code>LMax=3</code>, <code>RMin=3</code></p>
 <p>偶数组: <code>[1 4 7 9]</code> 对应的中位数为 <code>(4 + 7) /2 = 5.5</code>,假定割(Cut)在4和7之间： <code>[1 （4/7）9]</code></p>
-<p>因此<code>LMax=4</code>,<code> RMin=7</code></p>
-</blockquote>
+<p>因此<code>LMax=4</code>,<code> RMin=7</code></p></blockquote>
 <h3 id="割和第k个元素">割和第<code>k</code>个元素
 </h3><h4 id="一个数组">一个数组
 </h4><p>对于有序数组A，如果在k的位置割一下，容易得出<code>LMax = RMin = A[k]</code></p>
@@ -423,8 +416,7 @@ nums2 = [3, 4]</p>
 <p>我们设:
 <code>Ci</code>为第<code> i</code>个数组的割</p>
 <p><code>LMaxi</code>为第<code>i</code>个数组割后的左元素i</p>
-<p><code>RMini</code>为第<code>i</code>个数组割后的右元素</p>
-</blockquote>
+<p><code>RMini</code>为第<code>i</code>个数组割后的右元素</p></blockquote>
 <div class="table-wrapper"><table>
   <thead>
       <tr>
@@ -453,13 +445,11 @@ nums2 = [3, 4]</p>
 <h5 id="举例设k--3">举例（设k = 3）
 </h5><blockquote>
 <p>[2 3 5]
-[1 4 7 9]</p>
-</blockquote>
+[1 4 7 9]</p></blockquote>
 <p>设<code>C1 = 1</code>，则 <code>C2 = k - C1 = 2</code> 割后：</p>
 <blockquote>
 <p>[2 3 / 5]
-[1 / 4 7 9]</p>
-</blockquote>
+[1 / 4 7 9]</p></blockquote>
 <p>此时，<code>LMax1 = 3</code>, <code>RMin1 = 5</code>, <code>LMax2 = 1</code>, <code>RMin2 = 4</code>,</p>
 <p>满足 <code>LMax1 &lt; RMin2</code> 且 <code>LMax2 &lt; RMin1 </code>，</p>
 <p>所以第<code>3</code>个元素为<code>max(LMax1, LMax2) = 3</code></p>
@@ -467,8 +457,7 @@ nums2 = [3, 4]</p>
 </h3><blockquote>
 <p>两个数组的最大问题是，它们合并后，m+n总数可能为奇, 也可能为偶，所以我们得想法让m+n总是为偶数</p>
 <p>通过虚拟加入‘#’，我们让m转换成2m+1 ，n转换成2n+1, 两数之和就变成了2m+2n+2，恒为偶数。</p>
-<p>注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应</p>
-</blockquote>
+<p>注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应</p></blockquote>
 <div class="table-wrapper"><table>
   <thead>
       <tr>
@@ -501,8 +490,7 @@ nums2 = [3, 4]</p>
 <p>而对于割(<code>Cut</code>)，如果割在<code>‘#’</code>上等于割在2个元素之间，割在数字上等于把数字划到2个部分，总是有以下成立：</p>
 <blockquote>
 <p>LMaxi = (Ci-1)/2 位置上的元素
-RMini = Ci/2 位置上的元素</p>
-</blockquote>
+RMini = Ci/2 位置上的元素</p></blockquote>
 <p>例如：</p>
 <p>割在<code>3</code>上，<code>C = 3</code>，<code>LMax=a[(3-1)/2]=A[1]，RMin=a[3/2] =A[1]</code>，刚好都是3的位置！</p>
 <p>割在4/7之间‘#’，<code>C = 4</code>，<code>LMax=A[(4-1)/2]=A[1]=4 ，RMin=A[4/2]=A[2]=7</code></p>
@@ -681,7 +669,7 @@ RMini = Ci/2 位置上的元素</p>
         
         
             <div class="article-image">
-                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu2667634823824225546.png" 
+                <img src="/p/linux-fonts-size/ubuntu-logo.94938a7cff091f8ca7db12d6a8c35aa7_hu_dac805b7dc612249.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -705,7 +693,7 @@ RMini = Ci/2 位置上的元素</p>
         
         
             <div class="article-image">
-                <img src="/p/android-framework/android-logo.6aec2be37d63168d39cacbceea4d4740_hu3801621007116167303.png" 
+                <img src="/p/android-framework/android-logo.6aec2be37d63168d39cacbceea4d4740_hu_fcde0573561db76f.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -729,7 +717,7 @@ RMini = Ci/2 位置上的元素</p>
         
         
             <div class="article-image">
-                <img src="/p/gitnotes/git_logo.2a767389db86969893e17922d767fb6a_hu12408921962548640584.jpg" 
+                <img src="/p/gitnotes/git_logo.2a767389db86969893e17922d767fb6a_hu_7495dc4f54d42da5.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -753,7 +741,7 @@ RMini = Ci/2 位置上的元素</p>
         
         
             <div class="article-image">
-                <img src="/p/markdwonnotes/markdown.64999547e3c3252959c7a8be6d4919f3_hu4108274833600129455.jpg" 
+                <img src="/p/markdwonnotes/markdown.64999547e3c3252959c7a8be6d4919f3_hu_2f72b98b7f216c7e.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -832,7 +820,7 @@ RMini = Ci/2 位置上的元素</p>
         
             2020 - 
         
-        2024 Toko&#39;s blog
+        2025 Toko&#39;s blog
     </section>
     
     <section class="powerby">

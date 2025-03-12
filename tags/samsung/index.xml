@@ -17,7 +17,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu9644349825343441975.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu18028669623884654127.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -29,7 +29,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu298499983252222565.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu7939123902256501301.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -52,8 +52,7 @@
 &lt;p&gt;5G: n28 / n41 / n77 / n78&lt;/p&gt;
 &lt;p&gt;4G: LTE FDD: B1 / B3 / B17 / B18 TDD: B41&lt;/p&gt;
 &lt;p&gt;Disabled Bands that can be enabled:&lt;/p&gt;
-&lt;p&gt;4G: B7 / B38&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;4G: B7 / B38&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;其实相较于国内很多随身WiFi的配置，这个性价比并不高，但耐不住颜值戳中我，放着当个日历摆件也好看，黄鱼入手。&lt;/p&gt;
 &lt;h2 id=&#34;解除sim-锁-开启5g频段&#34;&gt;解除SIM 锁 开启5G频段
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -64,12 +63,11 @@
 &lt;li&gt;这时输入 &lt;code&gt;Q&lt;/code&gt; 并确认，在此界面等待大概一分钟后，会进入到主菜单界面&lt;/li&gt;
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu5129266001612271815.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu11682864763417721268.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -81,7 +79,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu14505496812966769289.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu10924780045115309019.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -93,7 +91,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu10829407531984153217.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu4014994179825039200.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -105,7 +103,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu17501869656317015718.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu4952562789279421603.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -117,7 +115,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu7305209044995165401.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu1079126945852162261.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -129,7 +127,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu4773766746805243419.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu9440349229476720282.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -144,7 +142,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu14743331719272201234.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu5864655007300311974.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -166,8 +164,7 @@
 &lt;li&gt;apn类型：*&lt;/li&gt;
 &lt;li&gt;apn协议：IPV4&amp;amp;IPV6&lt;/li&gt;
 &lt;li&gt;apn漫游协议：IPV4&amp;amp;IPV6&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;使用感想&#34;&gt;使用感想
 &lt;/h2&gt;&lt;p&gt;耐用，耐用，还是tm的耐用！&lt;/p&gt;
 &lt;p&gt;在阉割了很多不必要的硬件情况下（扬声器等），5000毫安时的电池真是太耐用了，我从上班到下班，一直连着2~3个设备的情况下，还能剩下30+%的电量，确实很舒服。&lt;/p&gt;

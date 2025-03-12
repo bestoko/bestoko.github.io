@@ -16,7 +16,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu16550990948227147913.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu9476046032450178813.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -194,7 +194,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu16604705481618910733.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu16507856203016511800.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -215,7 +215,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
 	width=&#34;1384&#34;
 	height=&#34;2038&#34;
-	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu15472696071722192886.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu12077851722269610328.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu_4d905be02dde0684.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu_61ae610697c3f1f0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -240,8 +240,7 @@
 &lt;p&gt;Android 平台的基础是 Linux 内核。例如，&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#art&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android Runtime (ART)&lt;/a&gt; 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。&lt;/p&gt;
 &lt;p&gt;使用 Linux 内核可让 Android 利用&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/security/overview/kernel-security.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。&lt;/p&gt;
 &lt;h2 id=&#34;硬件抽象层-hardware-abstract-layerhal&#34;&gt;硬件抽象层 (Hardware Abstract Layer,HAL)
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -249,8 +248,7 @@
     &gt;硬件抽象层 (HAL)&lt;/a&gt; 提供标准界面，向更高级别的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#api-framework&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java API 框架&lt;/a&gt;显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/camera/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;相机&lt;/a&gt;或&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/bluetooth.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。&lt;/p&gt;
 &lt;p&gt;也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。&lt;/p&gt;
 &lt;h2 id=&#34;系统运行库层&#34;&gt;系统运行库层
@@ -262,8 +260,7 @@
     &gt;OpenGL ES&lt;/a&gt;，以支持在应用中绘制和操作 2D 和 3D 图形。&lt;/p&gt;
 &lt;p&gt;如果开发的是需要 C 或 C++ 代码的应用，可以使用 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android NDK&lt;/a&gt; 直接从原生代码访问某些&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk/guides/stable_apis?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -318,8 +315,7 @@
 &lt;p&gt;Android 还包含一套核心运行时库，可提供 Java API 框架所使用的 Java 编程语言中的大部分功能，包括一些 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform/j8-jack?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java 8 语言功能&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;java-api-框架-java-api--framework&#34;&gt;Java API 框架 (Java API  Framework)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：&lt;/p&gt;
@@ -337,14 +333,12 @@
     &gt;内容提供程序&lt;/a&gt;，可让应用访问其他应用(例如“联系人”应用)中的数据或者共享其自己的数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;开发者可以完全访问 Android 系统应用使用的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/reference/packages?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;与&amp;quot;C库层&amp;quot;对应，这一层往往被称作“Java库层”。一方面为上层应用层提供API接口，另一方面也是不少系统级服务进程的实现，是与Android应用开发者关系最直接的一层。提供了开发Android应用程序所需的一系列类库，高度封装直接调用。应用框架层的主要实现代码在frameworks/base和frameworks/av目录下。&lt;/p&gt;
 &lt;h2 id=&#34;系统应用-system-apps&#34;&gt;系统应用 (System Apps)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Android  随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。&lt;/p&gt;
-&lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;源码根目录中的packages目录对应着系统应用，其中：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;apps 核心应用程序&lt;/li&gt;
@@ -366,8 +360,7 @@
         <description>&lt;img src="https://bestoko.cc/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/&lt;/p&gt;
-&lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;题目&#34;&gt;题目
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;给定两个大小为 m 和 n 的有序数组 &lt;code&gt;nums1&lt;/code&gt; 和 &lt;code&gt;nums2&lt;/code&gt;。&lt;/p&gt;
@@ -376,25 +369,20 @@
 &lt;p&gt;示例 1:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nums1 = [1, 3]
-nums2 = [2]&lt;/p&gt;
-&lt;/blockquote&gt;
+nums2 = [2]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;则中位数是 &lt;code&gt;2.0&lt;/code&gt;
 示例 2:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nums1 = [1, 2]
-nums2 = [3, 4]&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+nums2 = [3, 4]&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;分析&#34;&gt;分析
 &lt;/h2&gt;&lt;h3 id=&#34;首先要理解中位数&#34;&gt;首先要理解中位数
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;[2 3 5]&lt;/code&gt; 中位数是&lt;code&gt;3&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;割cut的概念&#34;&gt;割(Cut)的概念
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -414,8 +402,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;奇数组:&lt;code&gt; [2 3 5]&lt;/code&gt; 对应的中位数为&lt;code&gt;3&lt;/code&gt;，假定割(Cut)在3上，我们可以把3分为2个： &lt;code&gt;[2（3/3） 5]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;因此&lt;code&gt;LMax=3&lt;/code&gt;, &lt;code&gt;RMin=3&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;偶数组: &lt;code&gt;[1 4 7 9]&lt;/code&gt; 对应的中位数为 &lt;code&gt;(4 + 7) /2 = 5.5&lt;/code&gt;,假定割(Cut)在4和7之间： &lt;code&gt;[1 （4/7）9]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;割和第k个元素&#34;&gt;割和第&lt;code&gt;k&lt;/code&gt;个元素
 &lt;/h3&gt;&lt;h4 id=&#34;一个数组&#34;&gt;一个数组
 &lt;/h4&gt;&lt;p&gt;对于有序数组A，如果在k的位置割一下，容易得出&lt;code&gt;LMax = RMin = A[k]&lt;/code&gt;&lt;/p&gt;
@@ -425,8 +412,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;我们设:
 &lt;code&gt;Ci&lt;/code&gt;为第&lt;code&gt; i&lt;/code&gt;个数组的割&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LMaxi&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的左元素i&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -455,13 +441,11 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;h5 id=&#34;举例设k--3&#34;&gt;举例（设k = 3）
 &lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;[2 3 5]
-[1 4 7 9]&lt;/p&gt;
-&lt;/blockquote&gt;
+[1 4 7 9]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;设&lt;code&gt;C1 = 1&lt;/code&gt;，则 &lt;code&gt;C2 = k - C1 = 2&lt;/code&gt; 割后：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[2 3 / 5]
-[1 / 4 7 9]&lt;/p&gt;
-&lt;/blockquote&gt;
+[1 / 4 7 9]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;此时，&lt;code&gt;LMax1 = 3&lt;/code&gt;, &lt;code&gt;RMin1 = 5&lt;/code&gt;, &lt;code&gt;LMax2 = 1&lt;/code&gt;, &lt;code&gt;RMin2 = 4&lt;/code&gt;,&lt;/p&gt;
 &lt;p&gt;满足 &lt;code&gt;LMax1 &amp;lt; RMin2&lt;/code&gt; 且 &lt;code&gt;LMax2 &amp;lt; RMin1 &lt;/code&gt;，&lt;/p&gt;
 &lt;p&gt;所以第&lt;code&gt;3&lt;/code&gt;个元素为&lt;code&gt;max(LMax1, LMax2) = 3&lt;/code&gt;&lt;/p&gt;
@@ -469,8 +453,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;两个数组的最大问题是，它们合并后，m+n总数可能为奇, 也可能为偶，所以我们得想法让m+n总是为偶数&lt;/p&gt;
 &lt;p&gt;通过虚拟加入‘#’，我们让m转换成2m+1 ，n转换成2n+1, 两数之和就变成了2m+2n+2，恒为偶数。&lt;/p&gt;
-&lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -503,8 +486,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;而对于割(&lt;code&gt;Cut&lt;/code&gt;)，如果割在&lt;code&gt;‘#’&lt;/code&gt;上等于割在2个元素之间，割在数字上等于把数字划到2个部分，总是有以下成立：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;LMaxi = (Ci-1)/2 位置上的元素
-RMini = Ci/2 位置上的元素&lt;/p&gt;
-&lt;/blockquote&gt;
+RMini = Ci/2 位置上的元素&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;割在&lt;code&gt;3&lt;/code&gt;上，&lt;code&gt;C = 3&lt;/code&gt;，&lt;code&gt;LMax=a[(3-1)/2]=A[1]，RMin=a[3/2] =A[1]&lt;/code&gt;，刚好都是3的位置！&lt;/p&gt;
 &lt;p&gt;割在4/7之间‘#’，&lt;code&gt;C = 4&lt;/code&gt;，&lt;code&gt;LMax=A[(4-1)/2]=A[1]=4 ，RMin=A[4/2]=A[2]=7&lt;/code&gt;&lt;/p&gt;
@@ -644,12 +626,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <description>&lt;img src="https://bestoko.cc/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
 &lt;p&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
-&lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;471&#34;
-	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu3506867837254622348.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu2250237437850863967.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu_3730a2b0972bbdb.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu_ba6bbb76ce6bb5f6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;learnGit&#34;
@@ -843,8 +824,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         
         <guid>https://bestoko.cc/p/markdwonnotes/</guid>
         <description>&lt;img src="https://bestoko.cc/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
-&lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -955,7 +935,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也可以在前面加上一到六个&lt;span class=&#34;ni&#34;&gt;#表示标题的1级到6级&lt;/span&gt;，标题前加一个空格。如：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# 一级标题
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;## 二级标题
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### 三级标题
@@ -1003,18 +983,18 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------------
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;超级链接：[超级链接显示的文字](超级链接的网址，可以是绝对路径、相对路径)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;超级链接：[&lt;span class=&#34;nt&#34;&gt;超级链接显示的文字&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;超级链接的网址，可以是绝对路径、相对路径&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也支持HTML格式的超级链接&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.baidu.com/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;百度&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果要标记一小段行内程序代码，可以用反引号把它包起来，像这样：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use the &lt;span class=&#34;sb&#34;&gt;`printf()`&lt;/span&gt; function.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;插入图片：![图片的替换文字](图片的地址或路径)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;插入图片：![&lt;span class=&#34;nt&#34;&gt;图片的替换文字&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;图片的地址或路径&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;风景区图片&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;/Snip20160202_227.png&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Email邮件：
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;qq&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;ni&#34;&gt;@qq&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;.com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;锚点：(能够链接到某个一级标题)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[&lt;span class=&#34;nt&#34;&gt;想要显示的名称&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#锚点的名称&lt;/span&gt;)

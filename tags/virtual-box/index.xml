@@ -15,12 +15,11 @@
         <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu14528650379033580044.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu17664705506683901406.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;

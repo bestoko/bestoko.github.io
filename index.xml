@@ -17,7 +17,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu9644349825343441975.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu18028669623884654127.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -29,7 +29,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu298499983252222565.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu7939123902256501301.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -52,8 +52,7 @@
 &lt;p&gt;5G: n28 / n41 / n77 / n78&lt;/p&gt;
 &lt;p&gt;4G: LTE FDD: B1 / B3 / B17 / B18 TDD: B41&lt;/p&gt;
 &lt;p&gt;Disabled Bands that can be enabled:&lt;/p&gt;
-&lt;p&gt;4G: B7 / B38&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;4G: B7 / B38&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;其实相较于国内很多随身WiFi的配置，这个性价比并不高，但耐不住颜值戳中我，放着当个日历摆件也好看，黄鱼入手。&lt;/p&gt;
 &lt;h2 id=&#34;解除sim-锁-开启5g频段&#34;&gt;解除SIM 锁 开启5G频段
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -64,12 +63,11 @@
 &lt;li&gt;这时输入 &lt;code&gt;Q&lt;/code&gt; 并确认，在此界面等待大概一分钟后，会进入到主菜单界面&lt;/li&gt;
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu5129266001612271815.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu11682864763417721268.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -81,7 +79,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu14505496812966769289.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu10924780045115309019.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -93,7 +91,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu10829407531984153217.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu4014994179825039200.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -105,7 +103,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu17501869656317015718.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu4952562789279421603.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -117,7 +115,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu7305209044995165401.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu1079126945852162261.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -129,7 +127,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu4773766746805243419.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu9440349229476720282.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -144,7 +142,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu14743331719272201234.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu5864655007300311974.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -166,8 +164,7 @@
 &lt;li&gt;apn类型：*&lt;/li&gt;
 &lt;li&gt;apn协议：IPV4&amp;amp;IPV6&lt;/li&gt;
 &lt;li&gt;apn漫游协议：IPV4&amp;amp;IPV6&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;使用感想&#34;&gt;使用感想
 &lt;/h2&gt;&lt;p&gt;耐用，耐用，还是tm的耐用！&lt;/p&gt;
 &lt;p&gt;在阉割了很多不必要的硬件情况下（扬声器等），5000毫安时的电池真是太耐用了，我从上班到下班，一直连着2~3个设备的情况下，还能剩下30+%的电量，确实很舒服。&lt;/p&gt;
@@ -192,7 +189,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting.png&#34;
 	width=&#34;1162&#34;
 	height=&#34;1242&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu8945063158835296527.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu4823018455244029704.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_21d391fbbdc3bdb3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_63db62a10899822b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -204,7 +201,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu18190693768482533953.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu6582063913079247030.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_dbcf97ca08afde04.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_4c1504786a945834.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -215,7 +212,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu13490725652646053152.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu11259701870284108373.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_18a309f848625abe.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_7ec974132f1f2b32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -226,7 +223,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu6795159109413312356.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu5611298570445135050.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_df3c75e1a32fa0f0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_d2b0998ef5f81bad.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -237,7 +234,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu7938392156977383692.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu6962604619803662643.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_8b49fd3e26729502.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_fffc3139ec046df3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -248,7 +245,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu6308458402942834410.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu1011470912767912655.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_681d2eb95c50a5e0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_816415ece116611c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -260,7 +257,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu5745721599546196154.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu8918722179702381222.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_86528a76a592bdb6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_71b685c4690fcaa1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -272,7 +269,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu10065059171000321659.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu14354990129724188421.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_14ac0402d538e868.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_71d8719e5331025a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -286,7 +283,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network.png&#34;
 	width=&#34;1136&#34;
 	height=&#34;879&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu13567982701539643744.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu16295547348543371314.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_a132d07544586e06.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_5d7eac1e9f7cbc03.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -299,7 +296,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1.png&#34;
 	width=&#34;1369&#34;
 	height=&#34;813&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu5577973044138788698.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu44648315354753972.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_e98fddd2b5c506e7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_77be56faf5521f47.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;smb挂载&#34;
@@ -313,7 +310,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2.png&#34;
 	width=&#34;1389&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu15084278667977238920.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu10742289814637826616.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_708cc30bd84ae1a7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_bc34056ca66c548a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;共享影视目录&#34;
@@ -328,7 +325,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu18356782449049451582.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu2853401513079070760.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_f3ea14d0a1d8193.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_cd6feecc7d467231.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -340,7 +337,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu5286346616787514278.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu5417824319816279150.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_79621c8ab0f5aede.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_82e7214c6d4da4d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -353,7 +350,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu16099940065099503007.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu8666435615339935183.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_fbab5cb83623a292.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_64810204f76ee010.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -367,7 +364,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
 	width=&#34;1786&#34;
 	height=&#34;117&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu11853431053267391786.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu12289158062322472431.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_2d195fa474af6346.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_ef0ad94e451953e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -380,7 +377,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
 	width=&#34;822&#34;
 	height=&#34;434&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu12791471831138194479.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu1219566255436275172.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_ea98cd3afa7ff087.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_e71027daa38a20fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -393,7 +390,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
 	width=&#34;1656&#34;
 	height=&#34;1173&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu10804049120438401418.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu15999752771162434753.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_9f03cf0e30db824e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_fba7cb6b8d4a4e34.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -405,7 +402,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
 	width=&#34;793&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu15333521277207735597.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu7542936336615370317.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_c6c8bc17715815c5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_1cffe7ee25945b8d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -418,7 +415,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
 	width=&#34;1334&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu1830548547169416047.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu9498983582931129829.PNG 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_327c8af997d7b03.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_4c6b67e5b6b7adab.PNG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -443,7 +440,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4.png&#34;
 	width=&#34;730&#34;
 	height=&#34;321&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu16345920743622847491.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu15667879396933264524.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_f0f055ce1c509ce9.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_d7624ffeb2271bc2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;后置涡扇&#34;
@@ -459,7 +456,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5.png&#34;
 	width=&#34;1395&#34;
 	height=&#34;1395&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu17615454936641691507.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu1365459544519919085.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_ab9212a184ec715d.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_396d31ac101ed9a4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;鸦无量 散热改装套件&#34;
@@ -474,7 +471,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu16363392602513754861.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu18124268746433971953.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_438ad8f993c22b5d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_56e3b45ddda60e89.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热1&#34;
@@ -488,7 +485,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu13672667767264248153.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu5107455048652148524.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_62eba18a0518268d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_a5c59b5c5b492c68.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热2&#34;
@@ -502,7 +499,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu14330871460440395364.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu15347668208354929286.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_1e526a145c6faa0d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_80e79166bf351ab0.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热3&#34;
@@ -518,7 +515,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
 	width=&#34;678&#34;
 	height=&#34;690&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu12097764315959693738.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu1592798522817058309.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_2ff8746e3dd47be6.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_48f9d9b721409c4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;nvidia_driver&#34;
@@ -532,13 +529,12 @@
 &lt;blockquote&gt;
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;Please make sure to disable and enable Docker if you installed the Nvidia driver for the first time! Settings -&amp;gt;Docker -&amp;gt; Enable Docker &amp;lsquo;No&amp;rsquo; -&amp;gt; Apply -&amp;gt; Enable Docker &amp;lsquo;Yes&amp;rsquo; -&amp;gt; Apply
-plugin: nvidia-driver.plg installed&lt;/p&gt;
-&lt;/blockquote&gt;
+plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;参照安装成功的提示去设置里先停用docker ，再启用docker。&lt;/p&gt;
 &lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
 	width=&#34;786&#34;
 	height=&#34;1005&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu2390447559315476754.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu13354145944074746936.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_db9784affa97d460.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_bffc864e026eb249.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nvidia Driver&#34;
@@ -555,7 +551,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1.png&#34;
 	width=&#34;1197&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu4633028366630829435.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu11633077696940969963.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_36c7ebf367d83fda.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_623b83e371945ab1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin&#34;
@@ -570,7 +566,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2.png&#34;
 	width=&#34;1733&#34;
 	height=&#34;715&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu17909902699271256087.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu18352481563379438784.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_6464edabaa5823aa.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_8e7167f5018907c4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting2&#34;
@@ -585,7 +581,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3.png&#34;
 	width=&#34;2520&#34;
 	height=&#34;1207&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu3532907608524424026.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu1081091415171922486.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_b7bde3f7b228b3cd.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_cfdc703ce2f607da.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting3&#34;
@@ -599,7 +595,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4.png&#34;
 	width=&#34;804&#34;
 	height=&#34;467&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu12604382907352546814.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu15958251840723127144.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_e15f20edaed7798c.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_e676d888d0de9bdc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting4&#34;
@@ -616,7 +612,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
 	width=&#34;986&#34;
 	height=&#34;685&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu8949459573212303417.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu14933319960304614242.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_279ad37bb36053c.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_1ee7541770b651b3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -628,7 +624,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;112&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu17815400620794459226.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu17195840258679215490.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_18d2192e68c287e.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_783af90ae4c6a83b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -644,7 +640,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload.png&#34;
 	width=&#34;813&#34;
 	height=&#34;449&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu15881785639412663342.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu814542225511005208.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_fcb6409855d9a2.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_7c2d6f8d7f12691e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;FDM&#34;
@@ -662,7 +658,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
 	width=&#34;2532&#34;
 	height=&#34;1269&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu4100198013577015860.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu9480517385649330139.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_69bf336316cd6b1b.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_ad1e155e62e1c4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;SD WEBUI&#34;
@@ -677,7 +673,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
 	width=&#34;792&#34;
 	height=&#34;436&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu2842224539544082929.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu16829846112809887494.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3edf8cc10edc1b31.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3da2af7e78e0c67b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;画图时的显卡占用&#34;
@@ -694,7 +690,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/pdd.png&#34;
 	width=&#34;1238&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu1358991674354238266.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu16419804189500891822.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu_e51f7d0a5eaecdde.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu_258316aa89fd15bf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;风扇集中调速&#34;
@@ -784,7 +780,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt.png&#34;
 	width=&#34;1471&#34;
 	height=&#34;405&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu831508093739597911.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu11288931599419502840.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_2f57ac0f0b98e8ea.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_581f38b87a890524.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;User Scripts&#34;
@@ -813,7 +809,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu15784744685729144236.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu5402410126761479358.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -830,8 +826,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
@@ -853,7 +848,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu2170386241575178293.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6681112487101365740.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -882,7 +877,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu9797282647728824358.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu8266887722309811162.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -896,7 +891,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu64685479218557013.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu15387969128228765233.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -910,7 +905,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu13767883759163556219.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu1758458472517622844.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -924,7 +919,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu14844564629188411604.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu1734278580864475992.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -938,7 +933,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2505653572469837244.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2681129231978154320.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -952,7 +947,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu2712018314552893919.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu11596301558230775997.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -966,7 +961,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu13927585091527366980.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu11700466973732308762.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -994,7 +989,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu6288439628282152507.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu6039853929747431877.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu_48ab7c8f780cefa8.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu_bdd5477c6cd08e2c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -1009,7 +1004,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu2995968618968659914.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu15641132378444942884.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu_d4abb886dda80519.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu_bda6b3725cf8f92f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -1025,7 +1020,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu15451998649857356451.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu13594296493337293595.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu_509e275034a7fd2b.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu_b41d52562529f274.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -1039,7 +1034,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu5226710101058022087.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu15548616639044870873.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu_51c9ee0a4a6c8394.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu_759327956f71a33f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;
@@ -1067,7 +1062,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/certificate.jpg&#34;
 	width=&#34;3000&#34;
 	height=&#34;4000&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_hu1288073617422609327.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_hu1468848638951109267.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_hu_5ef91ba84c013219.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_hu_5650377371f5800e.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1087,19 +1082,17 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;而业余无线电操作证分为ABC三个等级，A级最低，C级最高，等级高低影响操作员获准使用的频段和最大功率。操作证只能按A，B，C顺序依次取得。我这次取得的就是A级，购买的设备是泉盛的 UV-K5（性价比很高，推荐入门使用）&lt;/p&gt;
 &lt;h2 id=&#34;报名&#34;&gt;报名
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;如果你只对收讯感兴趣，对通联并不感冒，你可以考虑玩软件无线电或者面向无线电爱好者的收音机（例如德生）,并不需要报名考试。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;如果你只对收讯感兴趣，对通联并不感冒，你可以考虑玩软件无线电或者面向无线电爱好者的收音机（例如德生）,并不需要报名考试。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;报名方式分为两种, 这里我选择的是手机APP的方式
 &lt;strong&gt;小技巧：如果近期没有你所在城市的场次，你可以随便选择一场考试报名，将信息全部填写完成，所需照片和证件上传完成点击保存。这样当你需要报名的生活就可以省去重复填写资料的时间。&lt;/strong&gt;
 &lt;strong&gt;！！某种意义上说，A类考试最难的就是抢到报名资格XD&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;（1）网页报名：登录CRAC官网www.crac.org.cn，页面底部右下方选择“能力验证”，选择“考生入口”，进入“业余无线电台操作技术能力验证考核报名及信息管理系统”进行注册报名。&lt;/p&gt;
-&lt;p&gt;（2）手机APP报名：应用市场下载“智谱”APP，从手机下方的“特别入口”进入，点击“考试报名”，选择相应的考试场次进行报名。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;（2）手机APP报名：应用市场下载“智谱”APP，从手机下方的“特别入口”进入，点击“考试报名”，选择相应的考试场次进行报名。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup1.jpg&#34;
 	width=&#34;1079&#34;
 	height=&#34;2295&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu13662075476929645577.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu8828531960940405493.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu_b6f3bfea454d50c6.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu_33d80801dace09e4.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1111,7 +1104,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2299&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hu15658567494471417158.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hu17137786438621373990.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hu_46ef596e8c4743e4.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hu_ad26c67f36bf9ea6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1126,7 +1119,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2289&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu1849222510053926737.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu7695587198885027470.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu_150bb1aac741f8ce.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu_b445e369e8186379.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1138,7 +1131,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2280&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu5623703817190342976.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu15615359992460686469.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu_932d147458a058a3.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu_f5b4a816599e401.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1232,7 +1225,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/RadioSet.png&#34;
 	width=&#34;1653&#34;
 	height=&#34;1120&#34;
-	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_hu8488297907965403895.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_hu4404372130860382941.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_hu_2a44d44ba0a75780.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_hu_a4cbc5b07cfeebde.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1268,7 +1261,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu1330688395182990461.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu5505363090823537123.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu_3e6dc9232ea39a41.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu_9c408d0238609ff7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1281,7 +1274,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu6967327548753512351.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu18038813504491149406.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_ced83dad467a25b4.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_114c5123e6fc9fa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1294,7 +1287,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu8661665712310258903.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu11950212348460244614.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_cafe5d84a1cb02c0.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_5b1241c20f6cbf6c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1307,7 +1300,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu13099918487877242515.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu891732750637561159.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_f239d494338c029c.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_66a9bbe8319667d2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1322,7 +1315,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu8593079960691404097.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu4924297100520235754.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_18c7f062a2620dd5.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_d7dfc3f8932528e2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1334,7 +1327,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu8825968814062225513.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu17925683289958446452.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_19a9a977b35af2ce.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_55b43feeae2018a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1363,7 +1356,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu6071552873964337066.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu5205741495756033583.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1386,7 +1379,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu8997291937449856939.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu9465595998132522094.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1408,7 +1401,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu993058983808485527.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu11955354505684428377.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1421,7 +1414,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu18213436191883341928.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu3658939097102882946.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1749,7 +1742,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu16550990948227147913.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu9476046032450178813.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1927,7 +1920,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu16604705481618910733.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu16507856203016511800.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2114,7 +2107,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
 	width=&#34;1384&#34;
 	height=&#34;2038&#34;
-	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu15472696071722192886.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu12077851722269610328.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu_4d905be02dde0684.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu_61ae610697c3f1f0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2139,8 +2132,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;Android 平台的基础是 Linux 内核。例如，&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#art&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android Runtime (ART)&lt;/a&gt; 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。&lt;/p&gt;
 &lt;p&gt;使用 Linux 内核可让 Android 利用&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/security/overview/kernel-security.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。&lt;/p&gt;
 &lt;h2 id=&#34;硬件抽象层-hardware-abstract-layerhal&#34;&gt;硬件抽象层 (Hardware Abstract Layer,HAL)
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -2148,8 +2140,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
     &gt;硬件抽象层 (HAL)&lt;/a&gt; 提供标准界面，向更高级别的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#api-framework&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java API 框架&lt;/a&gt;显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/camera/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;相机&lt;/a&gt;或&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/bluetooth.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。&lt;/p&gt;
 &lt;p&gt;也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。&lt;/p&gt;
 &lt;h2 id=&#34;系统运行库层&#34;&gt;系统运行库层
@@ -2161,8 +2152,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
     &gt;OpenGL ES&lt;/a&gt;，以支持在应用中绘制和操作 2D 和 3D 图形。&lt;/p&gt;
 &lt;p&gt;如果开发的是需要 C 或 C++ 代码的应用，可以使用 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android NDK&lt;/a&gt; 直接从原生代码访问某些&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk/guides/stable_apis?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -2217,8 +2207,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;Android 还包含一套核心运行时库，可提供 Java API 框架所使用的 Java 编程语言中的大部分功能，包括一些 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform/j8-jack?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java 8 语言功能&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;java-api-框架-java-api--framework&#34;&gt;Java API 框架 (Java API  Framework)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：&lt;/p&gt;
@@ -2236,14 +2225,12 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
     &gt;内容提供程序&lt;/a&gt;，可让应用访问其他应用(例如“联系人”应用)中的数据或者共享其自己的数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;开发者可以完全访问 Android 系统应用使用的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/reference/packages?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;与&amp;quot;C库层&amp;quot;对应，这一层往往被称作“Java库层”。一方面为上层应用层提供API接口，另一方面也是不少系统级服务进程的实现，是与Android应用开发者关系最直接的一层。提供了开发Android应用程序所需的一系列类库，高度封装直接调用。应用框架层的主要实现代码在frameworks/base和frameworks/av目录下。&lt;/p&gt;
 &lt;h2 id=&#34;系统应用-system-apps&#34;&gt;系统应用 (System Apps)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Android  随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。&lt;/p&gt;
-&lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;源码根目录中的packages目录对应着系统应用，其中：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;apps 核心应用程序&lt;/li&gt;
@@ -2279,8 +2266,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
     &gt;cfw的github页&lt;/a&gt;下载解压使用，也可以通过flatpak来安装在你所需要的任何Linux系统上。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Flatpak是一个类似snap的程序包管理程序，要使用Flatpak软件包，你的Linux发行版必须具有Flatpak支持。&lt;/p&gt;
-&lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;某些发行版（如Fedora Solus）默认情况下都具有Flatpak支持.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以&lt;code&gt;Arch Linux&lt;/code&gt;为例安装&lt;code&gt;Flatpak&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2319,7 +2305,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies.png&#34;
 	width=&#34;1052&#34;
 	height=&#34;767&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu13402915003426320604.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu1280761329518327631.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu_4037343ba30f43fb.png 480w, https://bestoko.cc/p/linux-clash-for-windows/clash-proxies_hu_ac3845b5fce264ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;clash-proxies&#34;
@@ -2336,7 +2322,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings.png&#34;
 	width=&#34;1582&#34;
 	height=&#34;612&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu15926796141259012520.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu11884452035036126273.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu_6a3ce96e7d60b19a.png 480w, https://bestoko.cc/p/linux-clash-for-windows/proxy-settings_hu_d530a54304c0ff24.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;proxy-settings&#34;
@@ -2387,8 +2373,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;所以首先&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2422,7 +2407,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1824&#34;
-	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu1124253079804403719.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu6778264682147923375.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;效果展示&#34;
@@ -2448,7 +2433,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu18299745746810103930.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu2570418272470478848.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -2474,8 +2459,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;此外这个文件里还有几个常用的设置
 &lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;   可以设置超时时间，设置-1可以取消倒计时
-&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置
 &lt;/h2&gt;&lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2507,12 +2491,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
         <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu14528650379033580044.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu17664705506683901406.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;
@@ -2547,8 +2530,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
-&lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;推荐的解决办法&#34;&gt;推荐的解决办法
 &lt;/h2&gt;&lt;p&gt;Windows 其实也能处理 UTC，需要修改注册表。建议&lt;strong&gt;让 Windows 使用 UTC，而非让 Linux 使用地方时&lt;/strong&gt;。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。&lt;/p&gt;
 &lt;p&gt;Linux 可以使用&lt;strong&gt;NTP服务&lt;/strong&gt;来在线同步硬件时钟。&lt;/p&gt;
@@ -2582,12 +2564,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
         <guid>https://bestoko.cc/p/snaps-mstodo/</guid>
         <description>&lt;img src="https://bestoko.cc/p/snaps-mstodo/snap.png" alt="Featured image of post Arch Linux上借助Snaps安装MicroSoft To-Do(unofficial)" /&gt;&lt;blockquote&gt;
 &lt;p&gt;虽然我一直不觉得自己是软粉，但是不知不觉中M$家的产品越用越顺手了。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;MicroSoft To-Do&lt;/code&gt;作为代办清单app来说，简洁实用，同步方便，而最近在适应&lt;code&gt;Arch Linux&lt;/code&gt;的我，实在用不惯&lt;code&gt;gnome&lt;/code&gt;桌面自带的&lt;code&gt;ToDo&lt;/code&gt;，必须想办法换回去。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;snaps安装与配置&#34;&gt;Snaps安装与配置
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;snap是Canonical公司发布的全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立。所以使用snap包的好处就是它解决了应用程序之间的依赖问题，使应用程序之间更容易管理。但是由此带来的问题就是它占用更多的磁盘空间。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;也就是说，对于生态系统碎片化严重的Linux来说，Snaps像是它们的中间地带，不管运行哪种Linux分支，都能轻易通过Snaps获取想要的应用程序包。&lt;/p&gt;
 &lt;h3 id=&#34;安装snap软件包&#34;&gt;安装Snap软件包
 &lt;/h3&gt;&lt;p&gt;首先，赞美&lt;a class=&#34;link&#34; href=&#34;https://aur.archlinux.org/packages/snapd/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2623,8 +2603,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;Strict&lt;/p&gt;
 &lt;p&gt;Used by the majority of snaps. Strictly confined snaps run in complete isolation, up to a minimal access level that’s deemed always safe. Consequently, strictly confined snaps can not access your files, network, processes or any other system resource without requesting specific access via an interface (see below).&lt;/p&gt;
 &lt;p&gt;Classic&lt;/p&gt;
-&lt;p&gt;Allows access to your system’s resources in much the same way traditional packages do. To safeguard against abuse, publishing a classic snap requires manual approval, and installation requires the &amp;ndash;classic command line argument.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Allows access to your system’s resources in much the same way traditional packages do. To safeguard against abuse, publishing a classic snap requires manual approval, and installation requires the &amp;ndash;classic command line argument.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以上是&lt;code&gt;Snap&lt;/code&gt;官方给出的定义，&lt;code&gt;classic&lt;/code&gt;是与&lt;code&gt;strict&lt;/code&gt;相对的。在默认情况下，&lt;code&gt;Snap&lt;/code&gt;使用的是&lt;code&gt;strict&lt;/code&gt;模式，对安全权限做了极高的要求与限制，而&lt;code&gt;classic&lt;/code&gt;就和传统的安装包一样对安全权限没有限制，其实这里的&lt;code&gt;classic&lt;/code&gt;就约等于确认已知不安全的风险的含义。&lt;/p&gt;
 &lt;h2 id=&#34;安装microsoft-to-dounofficial&#34;&gt;安装MicroSoft To-Do(unofficial)
 &lt;/h2&gt;&lt;p&gt;安装并配置好&lt;code&gt;snap&lt;/code&gt;后就很简单了：&lt;/p&gt;
@@ -2663,8 +2642,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
         
         <guid>https://bestoko.cc/p/code-oss-extensions/</guid>
         <description>&lt;img src="https://bestoko.cc/p/code-oss-extensions/code-oss.png" alt="Featured image of post Arch Linux上修改Code-OSS扩展源" /&gt;&lt;blockquote&gt;
-&lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;我之前使用&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2924,7 +2902,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
 	width=&#34;955&#34;
 	height=&#34;350&#34;
-	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu6374381984125918150.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu1509271765501448647.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3270,8 +3248,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;确认下是否挂载无误&lt;/p&gt;
 &lt;h4 id=&#34;chroot&#34;&gt;chroot
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -3459,7 +3436,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -3473,7 +3450,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -3487,7 +3464,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -3501,7 +3478,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
@@ -3523,8 +3500,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
         <description>&lt;img src="https://bestoko.cc/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/&lt;/p&gt;
-&lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;题目&#34;&gt;题目
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;给定两个大小为 m 和 n 的有序数组 &lt;code&gt;nums1&lt;/code&gt; 和 &lt;code&gt;nums2&lt;/code&gt;。&lt;/p&gt;
@@ -3533,25 +3509,20 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;示例 1:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nums1 = [1, 3]
-nums2 = [2]&lt;/p&gt;
-&lt;/blockquote&gt;
+nums2 = [2]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;则中位数是 &lt;code&gt;2.0&lt;/code&gt;
 示例 2:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nums1 = [1, 2]
-nums2 = [3, 4]&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+nums2 = [3, 4]&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;分析&#34;&gt;分析
 &lt;/h2&gt;&lt;h3 id=&#34;首先要理解中位数&#34;&gt;首先要理解中位数
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;[2 3 5]&lt;/code&gt; 中位数是&lt;code&gt;3&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;割cut的概念&#34;&gt;割(Cut)的概念
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -3571,8 +3542,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;奇数组:&lt;code&gt; [2 3 5]&lt;/code&gt; 对应的中位数为&lt;code&gt;3&lt;/code&gt;，假定割(Cut)在3上，我们可以把3分为2个： &lt;code&gt;[2（3/3） 5]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;因此&lt;code&gt;LMax=3&lt;/code&gt;, &lt;code&gt;RMin=3&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;偶数组: &lt;code&gt;[1 4 7 9]&lt;/code&gt; 对应的中位数为 &lt;code&gt;(4 + 7) /2 = 5.5&lt;/code&gt;,假定割(Cut)在4和7之间： &lt;code&gt;[1 （4/7）9]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;割和第k个元素&#34;&gt;割和第&lt;code&gt;k&lt;/code&gt;个元素
 &lt;/h3&gt;&lt;h4 id=&#34;一个数组&#34;&gt;一个数组
 &lt;/h4&gt;&lt;p&gt;对于有序数组A，如果在k的位置割一下，容易得出&lt;code&gt;LMax = RMin = A[k]&lt;/code&gt;&lt;/p&gt;
@@ -3582,8 +3552,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;我们设:
 &lt;code&gt;Ci&lt;/code&gt;为第&lt;code&gt; i&lt;/code&gt;个数组的割&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LMaxi&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的左元素i&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -3612,13 +3581,11 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;h5 id=&#34;举例设k--3&#34;&gt;举例（设k = 3）
 &lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;[2 3 5]
-[1 4 7 9]&lt;/p&gt;
-&lt;/blockquote&gt;
+[1 4 7 9]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;设&lt;code&gt;C1 = 1&lt;/code&gt;，则 &lt;code&gt;C2 = k - C1 = 2&lt;/code&gt; 割后：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[2 3 / 5]
-[1 / 4 7 9]&lt;/p&gt;
-&lt;/blockquote&gt;
+[1 / 4 7 9]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;此时，&lt;code&gt;LMax1 = 3&lt;/code&gt;, &lt;code&gt;RMin1 = 5&lt;/code&gt;, &lt;code&gt;LMax2 = 1&lt;/code&gt;, &lt;code&gt;RMin2 = 4&lt;/code&gt;,&lt;/p&gt;
 &lt;p&gt;满足 &lt;code&gt;LMax1 &amp;lt; RMin2&lt;/code&gt; 且 &lt;code&gt;LMax2 &amp;lt; RMin1 &lt;/code&gt;，&lt;/p&gt;
 &lt;p&gt;所以第&lt;code&gt;3&lt;/code&gt;个元素为&lt;code&gt;max(LMax1, LMax2) = 3&lt;/code&gt;&lt;/p&gt;
@@ -3626,8 +3593,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;两个数组的最大问题是，它们合并后，m+n总数可能为奇, 也可能为偶，所以我们得想法让m+n总是为偶数&lt;/p&gt;
 &lt;p&gt;通过虚拟加入‘#’，我们让m转换成2m+1 ，n转换成2n+1, 两数之和就变成了2m+2n+2，恒为偶数。&lt;/p&gt;
-&lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -3660,8 +3626,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;而对于割(&lt;code&gt;Cut&lt;/code&gt;)，如果割在&lt;code&gt;‘#’&lt;/code&gt;上等于割在2个元素之间，割在数字上等于把数字划到2个部分，总是有以下成立：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;LMaxi = (Ci-1)/2 位置上的元素
-RMini = Ci/2 位置上的元素&lt;/p&gt;
-&lt;/blockquote&gt;
+RMini = Ci/2 位置上的元素&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;割在&lt;code&gt;3&lt;/code&gt;上，&lt;code&gt;C = 3&lt;/code&gt;，&lt;code&gt;LMax=a[(3-1)/2]=A[1]，RMin=a[3/2] =A[1]&lt;/code&gt;，刚好都是3的位置！&lt;/p&gt;
 &lt;p&gt;割在4/7之间‘#’，&lt;code&gt;C = 4&lt;/code&gt;，&lt;code&gt;LMax=A[(4-1)/2]=A[1]=4 ，RMin=A[4/2]=A[2]=7&lt;/code&gt;&lt;/p&gt;
@@ -3802,7 +3767,6 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -3832,7 +3796,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu10870831498259699845.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu12406518874957529171.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu_518bf3262008e33a.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu_af93733b1c00f456.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -3846,7 +3810,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu2703508768858883773.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu1206932963345848948.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu_70aaa8735bc63cba.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu_8b6b14b5cbbfd402.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -3863,7 +3827,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu15786535881229955962.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu2920106178724780029.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu_efdabd3a0d22d85.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu_979edc3f62f72dc0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -3877,7 +3841,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu15862548443368252133.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu7163886712473613346.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu_40ad098673508531.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu_f6bcd466a88ad792.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -3894,7 +3858,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu4244822793430882731.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu5491374550477089424.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu_75d774794fec32ac.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu_d4070b253097fc4d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -3915,7 +3879,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu11063517222999121877.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu4118045727246458379.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu_2a00cfcd42d1fb7a.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu_b91c6c12bbe88d9e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;
@@ -3944,12 +3908,11 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <description>&lt;img src="https://bestoko.cc/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
 &lt;p&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
-&lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;471&#34;
-	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu3506867837254622348.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu2250237437850863967.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu_3730a2b0972bbdb.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu_ba6bbb76ce6bb5f6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;learnGit&#34;
@@ -4143,8 +4106,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         
         <guid>https://bestoko.cc/p/markdwonnotes/</guid>
         <description>&lt;img src="https://bestoko.cc/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
-&lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4255,7 +4217,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也可以在前面加上一到六个#表示标题的1级到6级，标题前加一个空格。如：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也可以在前面加上一到六个&lt;span class=&#34;ni&#34;&gt;#表示标题的1级到6级&lt;/span&gt;，标题前加一个空格。如：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# 一级标题
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;## 二级标题
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### 三级标题
@@ -4303,18 +4265,18 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------------
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;超级链接：[超级链接显示的文字](超级链接的网址，可以是绝对路径、相对路径)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;超级链接：[&lt;span class=&#34;nt&#34;&gt;超级链接显示的文字&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;超级链接的网址，可以是绝对路径、相对路径&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也支持HTML格式的超级链接&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.baidu.com/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;百度&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果要标记一小段行内程序代码，可以用反引号把它包起来，像这样：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use the &lt;span class=&#34;sb&#34;&gt;`printf()`&lt;/span&gt; function.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;插入图片：![图片的替换文字](图片的地址或路径)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;插入图片：![&lt;span class=&#34;nt&#34;&gt;图片的替换文字&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;图片的地址或路径&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;风景区图片&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;/Snip20160202_227.png&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Email邮件：
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;qq&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;ni&#34;&gt;@qq&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;.com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;锚点：(能够链接到某个一级标题)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[&lt;span class=&#34;nt&#34;&gt;想要显示的名称&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#锚点的名称&lt;/span&gt;)
@@ -4337,11 +4299,10 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         
         <guid>https://bestoko.cc/about/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;以下内容最后更新于2024/11/06，部分信息可能因时间推移有所变动。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;以下内容最后更新于2025/03/12，部分信息可能因时间推移有所变动。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h1 id=&#34;关于-我&#34;&gt;关于 我
 &lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;男/25yo.&lt;/li&gt;
+&lt;li&gt;男/26yo.&lt;/li&gt;
 &lt;li&gt;常用网名 &lt;code&gt;Toko&lt;/code&gt;/&lt;code&gt;bestoko&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Toko&lt;/code&gt; 这个ID来源于 Windows10 娘&lt;code&gt;窓辺とうこ&lt;/code&gt;（Madobe Toko）
 &lt;ul&gt;
@@ -4384,8 +4345,7 @@ RMini = Ci/2 位置上的元素&lt;/p&gt;
         <guid>https://bestoko.cc/links/</guid>
         <description>&lt;h2 id=&#34;友链&#34;&gt;友链：
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;想要添加友情链接的朋友可以在评论区留言，格式如下。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;想要添加友情链接的朋友可以在评论区留言，格式如下。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

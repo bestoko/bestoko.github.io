@@ -15,8 +15,7 @@
         <description>&lt;img src="https://bestoko.cc/p/leetcode004/leetcode.jpg" alt="Featured image of post 寻找两个有序数组的中位数" /&gt;&lt;p&gt;​	最近刚开始刷Leetcode，第一道&lt;code&gt;Hard&lt;/code&gt;题就难倒了我。题解里有位大神的算法很巧妙，我很容易就理解了，在此做个记录。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;题目链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/&lt;/p&gt;
-&lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;题解链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/4-xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-shu/&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;题目&#34;&gt;题目
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;给定两个大小为 m 和 n 的有序数组 &lt;code&gt;nums1&lt;/code&gt; 和 &lt;code&gt;nums2&lt;/code&gt;。&lt;/p&gt;
@@ -25,25 +24,20 @@
 &lt;p&gt;示例 1:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nums1 = [1, 3]
-nums2 = [2]&lt;/p&gt;
-&lt;/blockquote&gt;
+nums2 = [2]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;则中位数是 &lt;code&gt;2.0&lt;/code&gt;
 示例 2:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nums1 = [1, 2]
-nums2 = [3, 4]&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+nums2 = [3, 4]&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;则中位数是 &lt;code&gt;(2 + 3)/2 = 2.5&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;分析&#34;&gt;分析
 &lt;/h2&gt;&lt;h3 id=&#34;首先要理解中位数&#34;&gt;首先要理解中位数
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;中位数（Median）又称中值，统计学中的专有名词，是按顺序排列的一组数据中居于中间位置的数，代表一个样本、种群或概率分布中的一个数值，其可将数值集合划分为相等的上下两部分。对于有限的数集，可以通过把所有观察值高低排序后找出正中间的一个作为中位数。如果观察值有偶数个，通常取最中间的两个数值的平均数作为中位数。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;[2 3 5]&lt;/code&gt; 中位数是&lt;code&gt;3&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;[1 4 7 9]&lt;/code&gt; 中位数是&lt;code&gt;(4+7)/2=5.5&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;割cut的概念&#34;&gt;割(Cut)的概念
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -63,8 +57,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;奇数组:&lt;code&gt; [2 3 5]&lt;/code&gt; 对应的中位数为&lt;code&gt;3&lt;/code&gt;，假定割(Cut)在3上，我们可以把3分为2个： &lt;code&gt;[2（3/3） 5]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;因此&lt;code&gt;LMax=3&lt;/code&gt;, &lt;code&gt;RMin=3&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;偶数组: &lt;code&gt;[1 4 7 9]&lt;/code&gt; 对应的中位数为 &lt;code&gt;(4 + 7) /2 = 5.5&lt;/code&gt;,假定割(Cut)在4和7之间： &lt;code&gt;[1 （4/7）9]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;因此&lt;code&gt;LMax=4&lt;/code&gt;,&lt;code&gt; RMin=7&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;割和第k个元素&#34;&gt;割和第&lt;code&gt;k&lt;/code&gt;个元素
 &lt;/h3&gt;&lt;h4 id=&#34;一个数组&#34;&gt;一个数组
 &lt;/h4&gt;&lt;p&gt;对于有序数组A，如果在k的位置割一下，容易得出&lt;code&gt;LMax = RMin = A[k]&lt;/code&gt;&lt;/p&gt;
@@ -74,8 +67,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;我们设:
 &lt;code&gt;Ci&lt;/code&gt;为第&lt;code&gt; i&lt;/code&gt;个数组的割&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;LMaxi&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的左元素i&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;RMini&lt;/code&gt;为第&lt;code&gt;i&lt;/code&gt;个数组割后的右元素&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -104,13 +96,11 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;h5 id=&#34;举例设k--3&#34;&gt;举例（设k = 3）
 &lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;[2 3 5]
-[1 4 7 9]&lt;/p&gt;
-&lt;/blockquote&gt;
+[1 4 7 9]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;设&lt;code&gt;C1 = 1&lt;/code&gt;，则 &lt;code&gt;C2 = k - C1 = 2&lt;/code&gt; 割后：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[2 3 / 5]
-[1 / 4 7 9]&lt;/p&gt;
-&lt;/blockquote&gt;
+[1 / 4 7 9]&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;此时，&lt;code&gt;LMax1 = 3&lt;/code&gt;, &lt;code&gt;RMin1 = 5&lt;/code&gt;, &lt;code&gt;LMax2 = 1&lt;/code&gt;, &lt;code&gt;RMin2 = 4&lt;/code&gt;,&lt;/p&gt;
 &lt;p&gt;满足 &lt;code&gt;LMax1 &amp;lt; RMin2&lt;/code&gt; 且 &lt;code&gt;LMax2 &amp;lt; RMin1 &lt;/code&gt;，&lt;/p&gt;
 &lt;p&gt;所以第&lt;code&gt;3&lt;/code&gt;个元素为&lt;code&gt;max(LMax1, LMax2) = 3&lt;/code&gt;&lt;/p&gt;
@@ -118,8 +108,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;两个数组的最大问题是，它们合并后，m+n总数可能为奇, 也可能为偶，所以我们得想法让m+n总是为偶数&lt;/p&gt;
 &lt;p&gt;通过虚拟加入‘#’，我们让m转换成2m+1 ，n转换成2n+1, 两数之和就变成了2m+2n+2，恒为偶数。&lt;/p&gt;
-&lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;注意是虚拟加，其实根本没这一步，通过下面的转换，我们可以保证虚拟加后每个元素跟原来的元素一一对应&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -152,8 +141,7 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;p&gt;而对于割(&lt;code&gt;Cut&lt;/code&gt;)，如果割在&lt;code&gt;‘#’&lt;/code&gt;上等于割在2个元素之间，割在数字上等于把数字划到2个部分，总是有以下成立：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;LMaxi = (Ci-1)/2 位置上的元素
-RMini = Ci/2 位置上的元素&lt;/p&gt;
-&lt;/blockquote&gt;
+RMini = Ci/2 位置上的元素&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;割在&lt;code&gt;3&lt;/code&gt;上，&lt;code&gt;C = 3&lt;/code&gt;，&lt;code&gt;LMax=a[(3-1)/2]=A[1]，RMin=a[3/2] =A[1]&lt;/code&gt;，刚好都是3的位置！&lt;/p&gt;
 &lt;p&gt;割在4/7之间‘#’，&lt;code&gt;C = 4&lt;/code&gt;，&lt;code&gt;LMax=A[(4-1)/2]=A[1]=4 ，RMin=A[4/2]=A[2]=7&lt;/code&gt;&lt;/p&gt;

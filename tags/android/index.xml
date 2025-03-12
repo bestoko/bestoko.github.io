@@ -19,7 +19,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu15784744685729144236.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu5402410126761479358.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -36,8 +36,7 @@
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
@@ -59,7 +58,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu2170386241575178293.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu6681112487101365740.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -88,7 +87,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu9797282647728824358.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu8266887722309811162.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -102,7 +101,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu64685479218557013.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu15387969128228765233.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -116,7 +115,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu13767883759163556219.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu1758458472517622844.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -130,7 +129,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu14844564629188411604.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu1734278580864475992.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -144,7 +143,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2505653572469837244.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu2681129231978154320.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -158,7 +157,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu2712018314552893919.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu11596301558230775997.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -172,7 +171,7 @@
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu13927585091527366980.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu11700466973732308762.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -507,7 +506,7 @@
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
 	width=&#34;1384&#34;
 	height=&#34;2038&#34;
-	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu15472696071722192886.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu12077851722269610328.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu_4d905be02dde0684.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu_61ae610697c3f1f0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -532,8 +531,7 @@
 &lt;p&gt;Android 平台的基础是 Linux 内核。例如，&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#art&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android Runtime (ART)&lt;/a&gt; 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。&lt;/p&gt;
 &lt;p&gt;使用 Linux 内核可让 Android 利用&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/security/overview/kernel-security.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。&lt;/p&gt;
 &lt;h2 id=&#34;硬件抽象层-hardware-abstract-layerhal&#34;&gt;硬件抽象层 (Hardware Abstract Layer,HAL)
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -541,8 +539,7 @@
     &gt;硬件抽象层 (HAL)&lt;/a&gt; 提供标准界面，向更高级别的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#api-framework&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java API 框架&lt;/a&gt;显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/camera/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;相机&lt;/a&gt;或&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/bluetooth.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。&lt;/p&gt;
 &lt;p&gt;也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。&lt;/p&gt;
 &lt;h2 id=&#34;系统运行库层&#34;&gt;系统运行库层
@@ -554,8 +551,7 @@
     &gt;OpenGL ES&lt;/a&gt;，以支持在应用中绘制和操作 2D 和 3D 图形。&lt;/p&gt;
 &lt;p&gt;如果开发的是需要 C 或 C++ 代码的应用，可以使用 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Android NDK&lt;/a&gt; 直接从原生代码访问某些&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk/guides/stable_apis?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -610,8 +606,7 @@
 &lt;p&gt;Android 还包含一套核心运行时库，可提供 Java API 框架所使用的 Java 编程语言中的大部分功能，包括一些 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform/j8-jack?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java 8 语言功能&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;java-api-框架-java-api--framework&#34;&gt;Java API 框架 (Java API  Framework)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：&lt;/p&gt;
@@ -629,14 +624,12 @@
     &gt;内容提供程序&lt;/a&gt;，可让应用访问其他应用(例如“联系人”应用)中的数据或者共享其自己的数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;开发者可以完全访问 Android 系统应用使用的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/reference/packages?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
+    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;与&amp;quot;C库层&amp;quot;对应，这一层往往被称作“Java库层”。一方面为上层应用层提供API接口，另一方面也是不少系统级服务进程的实现，是与Android应用开发者关系最直接的一层。提供了开发Android应用程序所需的一系列类库，高度封装直接调用。应用框架层的主要实现代码在frameworks/base和frameworks/av目录下。&lt;/p&gt;
 &lt;h2 id=&#34;系统应用-system-apps&#34;&gt;系统应用 (System Apps)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Android  随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。&lt;/p&gt;
-&lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;源码根目录中的packages目录对应着系统应用，其中：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;apps 核心应用程序&lt;/li&gt;
@@ -742,7 +735,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu11920297842741521065.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu8503454745894847205.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -756,7 +749,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu8163895421055510122.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu3017635429353342793.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -770,7 +763,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu10069813548330827048.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu8814859504403944317.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -784,7 +777,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu13897275705057185963.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu6290528879219303800.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
