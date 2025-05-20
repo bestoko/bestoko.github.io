@@ -6,7 +6,23 @@
         <description>Recent content in Tags on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 01 May 2025 23:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 20 May 2025 23:23:06 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux</title>
+        <link>https://bestoko.cc/tags/linux/</link>
+        <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Notes</title>
+        <link>https://bestoko.cc/tags/notes/</link>
+        <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/notes/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Android</title>
         <link>https://bestoko.cc/tags/android/</link>
         <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
@@ -191,14 +207,6 @@
         <description></description>
         </item>
         <item>
-        <title>Linux</title>
-        <link>https://bestoko.cc/tags/linux/</link>
-        <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/tags/linux/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Ubuntu</title>
         <link>https://bestoko.cc/tags/ubuntu/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
@@ -316,14 +324,6 @@
         <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
         
         <guid>https://bestoko.cc/tags/android-framework/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Notes</title>
-        <link>https://bestoko.cc/tags/notes/</link>
-        <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/tags/notes/</guid>
         <description></description>
         </item>
         <item>

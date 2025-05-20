@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Linux on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/categories/linux/</link>
+        <description>Recent content in Linux on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 20 May 2025 23:23:06 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux基础（一）</title>
+        <link>https://bestoko.cc/p/linux-basics-1/</link>
+        <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/linux-basics-1/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）" /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
+&lt;/h2&gt;&lt;h3 id=&#34;从功能维度划分&#34;&gt;从功能维度划分
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;系统调用接口：为上层应用程序准备好的一系列可调用的接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核：负责具体控制硬件的运行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应用程序本身是无法操作硬件的，但凡想操作硬件都要给系统发请求&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;操作系统的两种工作状态：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用户态: 运行的系统接口代码在与应用程序打交道&lt;/li&gt;
+&lt;li&gt;内核态：运行的是系统的内核代码在与硬件打交道&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;从文件维度划分&#34;&gt;从文件维度划分
+&lt;/h3&gt;&lt;p&gt;操作系统源自 iso 镜像文件，镜像文件本质就是一个压缩包，压缩里放着一系列的系统的文件
+这些文件分为两大类：bootfs+rootfs&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Bootfs（系统启动前）
+包含启动文件（bootloader 程序，不是以文件的形式存在，是直接写入硬盘的第一个扇区/mbr）、内核文件 (/boot/vm&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;Rootfs（系统启动后）
+本质就是一堆文件夹/文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;linux-系统的启动顺序&#34;&gt;Linux 系统的启动顺序
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;程序与进程
+程序：就是一个或者一系列代码文件&amp;mdash;》静态
+进程：就是一个程序的运行过程&amp;mdash;&amp;mdash;&amp;ndash;》动态&lt;/p&gt;
+&lt;p&gt;进程代表的是程序的运行过程，而负责运行整个过程是操作系统，所以进程是操作系统的最核心的概念没有之一&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;加电，先启动 bios&lt;/li&gt;
+&lt;li&gt;Bios 负责找到启动盘&lt;/li&gt;
+&lt;li&gt;Bios 读取启动盘第一块扇区 mbr 主引导记录（放着的是 bootloder 程序）放入内存，让 cpu 来执行，bootloader 成功启动&lt;/li&gt;
+&lt;li&gt;Bootloader 启动之后，负责从硬盘中找到内核文件读入内存，并启动，此时操作系统就启动起来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;操作系统启动起来负责管理一系列进程，这些进程可以分为两大类
+内核先启动一个老祖宗程序，pid 为 0&lt;/p&gt;
+&lt;p&gt;0号进程负责运行两个顶级程序，产生两个顶级的进程
+运行 init 程序，pid 号为 1：是所有用户态进程的祖宗
+运行 kthreadd 程序，pid 2：是所有内核态进程的祖宗&lt;/p&gt;
+&lt;p&gt;Linux 系统启动级别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0: 关机 poweroff. target&lt;/li&gt;
+&lt;li&gt;1:单用户模式 rescue.target&lt;/li&gt;
+&lt;li&gt;2:多用户模式(没有文件系统，没有网络) multi-user.target&lt;/li&gt;
+&lt;li&gt;3:多用户模式(命令行) multi-user.target&lt;/li&gt;
+&lt;li&gt;4:没有被使用 multi-user.target&lt;/li&gt;
+&lt;li&gt;5:图形化界面 graphical.target&lt;/li&gt;
+&lt;li&gt;6:重启 reboot.target
+init 0 关机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shell-解释器介绍&#34;&gt;Shell 解释器介绍
+&lt;/h2&gt;&lt;p&gt;在默认启动级别为3的情况下，linux系统启动之后默认会启动一个
+命令解释器铺满全屏幕给你去（称之为字符终端），只能在里面敲命令&lt;/p&gt;
+&lt;p&gt;Linux系统中的命令解释器称之为shell，翻译为壳，表达了对系统接口封装的思想&lt;/p&gt;
+&lt;p&gt;具体来说shell解释器分为很多种类，默认用的bash这种&lt;/p&gt;
+&lt;h2 id=&#34;shell-交互式环境&#34;&gt;Shell 交互式环境
+&lt;/h2&gt;&lt;p&gt;[ ]内各个部分的意思：
+第一部分: 登录的用户名
+第二部分@： 分割符
+第三部分：主机名字
+第四部分：当前所在的文件夹
+~： 代表当前用户的个人文件夹/家目录
+root用户的家目录/root
+普通用户的家目录/home/用户名&lt;/p&gt;
+&lt;p&gt;[ ]括号外：
+$ : 当前登录的用户身份是一个普通用户
+# : 当前登录的用户身份是一个超级管理员&lt;/p&gt;
+&lt;p&gt;补充：
+useradd 用户名
+passwd 用户名 # 交互式
+echo &amp;ldquo;123&amp;rdquo; | passwd &amp;ndash;stdin egon # 非交互式&lt;/p&gt;
+&lt;h2 id=&#34;shell-脚本&#34;&gt;Shell 脚本
+&lt;/h2&gt;&lt;p&gt;脚本就是一个简单的程序（整个程序就是一个文件）
+把你执行某个任务需要的 10 条命令扔到一个文件里，该文件就是一个 shell 脚本&lt;/p&gt;
+&lt;h2 id=&#34;shell-命令基本语法&#34;&gt;Shell 命令基本语法
+&lt;/h2&gt;&lt;p&gt;ls -l /boot
+三大组成部分：
+ls 命令，代表要做什么事
+-l 选项，控制命令具体怎么做（可选）
+/boot 参数，命令具体操作的目标（可选）&lt;/p&gt;
+&lt;h2 id=&#34;bash-解释器交互式环境的一些特性快捷方式&#34;&gt;bash 解释器交互式环境的一些特性/快捷方式
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ctrl+c: 强制终止当前命令的执行
+ctrl+l：清屏，等同于clear命令&lt;/p&gt;
+&lt;p&gt;ctrl+a 光标移到命令行的最前端
+ctrl+e 光标移到命令行的后端&lt;/p&gt;
+&lt;p&gt;history 查出命令的编号，然后!编号
+history -c # 清空历史记录
+上下箭头 查出历史命令&lt;/p&gt;
+&lt;p&gt;!$ # 取上一条命令的参数
+tab 键补全&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;shell-命令的种类和优先级&#34;&gt;Shell 命令的种类和优先级
+&lt;/h2&gt;&lt;p&gt;Shell 解析命令的顺序：&lt;/p&gt;
+&lt;p&gt;带路径 &amp;gt; 别名 &amp;gt; 复合命令 &amp;gt; 函数 &amp;gt; 内置命令 &amp;gt; Hash 缓存 &amp;gt; PATH 查找&lt;/p&gt;
+&lt;h3 id=&#34;带路径的命令&#34;&gt;带路径的命令
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;绝对路径: 从根目录开始，例如 /bin/ls&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相对路径: 相对于当前目录，例如 ./ls 或 b/c/1.txt&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;. 表示当前目录，例如 ./b/c/1.txt 等同于 b/c/1.txt&lt;/li&gt;
+&lt;li&gt;.. 表示上一级目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;别名-alias&#34;&gt;别名 alias
+&lt;/h3&gt;&lt;p&gt;通过 alias 命令定义的快捷命令，优先级高于后续类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义: alias xxx=&amp;ldquo;ls /etc/sysconfig/network-scripts;echo 123;echo 456&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;取消: unalias xxx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;复合命令-compound-commands&#34;&gt;复合命令 Compound Commands
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;包含循环或条件语句的结构化命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for((i=0;i&amp;lt;3;i++)); do echo 66666; done&lt;/li&gt;
+&lt;li&gt;if 语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;函数-function&#34;&gt;函数 Function
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; f&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;111&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;222&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;333&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;f  &lt;span class=&#34;c1&#34;&gt;#调用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;内置命令-built-in-commands&#34;&gt;内置命令 Built-in Commands
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Shell 解释器内置的命令，例如 cd、pwd&lt;/li&gt;
+&lt;li&gt;查看类型: type cd（返回 cd is a shell builtin）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hash-缓存&#34;&gt;hash 缓存
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Shell 会缓存最近使用的命令路径到内存，提升下次执行效率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看: hash&lt;/li&gt;
+&lt;li&gt;清空: hash -r&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;环境变量-path&#34;&gt;环境变量 PATH
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;环境变量：在系统任意位置都能访问到，是全局有效的变量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当命令不带路径时，Shell 在 PATH 中的目录依次查找 （负责兜底）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PATH 是一组用冒号分隔的目录，例如 /usr/bin:/bin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看: echo $PATH&lt;/li&gt;
+&lt;li&gt;定义全局变量: export name=&amp;ldquo;egon&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;想要不加前缀去调用自定义脚本 xxx 的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法一：把该脚本移动到 PATH 的某个文件夹下面&lt;/li&gt;
+&lt;li&gt;方法二：把该脚本所在的文件夹添加到PATH里&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一些简单的常用命令&#34;&gt;一些简单的常用命令
+&lt;/h3&gt;&lt;p&gt;设置主机名&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hostnamectl set-hostname aliyun &lt;span class=&#34;c1&#34;&gt;#//  退出重新进入即可看到&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;设置默认启动级别&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl set-default graphical.target  &lt;span class=&#34;c1&#34;&gt;# 图形界面&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl set-default multi-user.target &lt;span class=&#34;c1&#34;&gt;# 字符终端&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看ip地址（设置ip地址会在网络配置章节里详细介绍）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig  &lt;span class=&#34;c1&#34;&gt;# rockylinux、ubunt都需要安装net-tools才能用ifconfi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig eth0 &lt;span class=&#34;c1&#34;&gt;# 也可以执行ip a show eth0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用date命令操作时间&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date --helpdate &lt;span class=&#34;s2&#34;&gt;&amp;#34;+%Y_%m_%d  %H-%M-%S&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 查看时间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;2018-05-17 09:51:50&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 设置时间 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;两种时间
+1、系统时间：我们刚刚用 date -s 设置的是系统时间
+2、硬件时间：存在 CMOS 中，开机时会读入内存作为系统的初始时间
+如果刚 &lt;code&gt;date -s&lt;/code&gt; 设置完时系统立即崩溃，系统还没来得及将刚改的时间写入 CMOS 中，则本次设置无效为了解决了改问题，可以在 &lt;code&gt;date -s&lt;/code&gt; 之后理解执行 &lt;code&gt;hwclock –w&lt;/code&gt; 这个命令强制把系统时间写入 CMOS。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

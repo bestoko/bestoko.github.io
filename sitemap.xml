@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bestoko.cc/tags/android/</loc>
-    <lastmod>2025-05-01T23:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/categories/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/linux/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/linux/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/linux-basics-1/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/notes/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/post/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2025-05-20T23:23:06+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/android/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/ios/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/categories/play/</loc>
-    <lastmod>2025-05-01T23:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2025-05-01T23:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2025-05-01T23:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/androidios/</loc>
@@ -113,9 +125,6 @@
     <loc>https://bestoko.cc/tags/hugo/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/tags/linux/</loc>
-    <lastmod>2022-12-10T23:25:00+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/tags/ubuntu/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
@@ -186,9 +195,6 @@
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/android-framework/</loc>
-    <lastmod>2022-03-03T20:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/notes/</loc>
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/clash-for-windows/</loc>
