@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="两种路径、目录结构、文件种类、基本操作">
+<title>Linux基础（二）：文件系统管理基础</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/linux-basics-2/'>
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Linux基础（二）：文件系统管理基础">
+<meta property='og:description' content="两种路径、目录结构、文件种类、基本操作">
+<meta property='og:url' content='https://bestoko.cc/p/linux-basics-2/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2025-05-21T23:30:33&#43;08:00'/><meta property='article:modified_time' content='2025-05-21T23:30:33&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-basics-2/linux.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Linux基础（二）：文件系统管理基础">
+<meta name="twitter:description" content="两种路径、目录结构、文件种类、基本操作"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/linux-basics-2/linux.png' />
+    <link rel="shortcut icon" href="/img/bestoko.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😺</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.social/@bestoko'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/7oko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#linux-的目录结构">Linux 的目录结构</a></li>
+    <li><a href="#绝对路径相对路径">绝对路径、相对路径</a></li>
+    <li><a href="#文件的种类">文件的种类</a></li>
+    <li><a href="#linux-各个目录的作用">Linux 各个目录的作用（⭐）</a></li>
+    <li><a href="#远程连接工具">远程连接工具</a></li>
+    <li><a href="#文件管理相关命令">文件管理相关命令</a>
+      <ol>
+        <li><a href="#基础命令">基础命令</a></li>
+        <li><a href="#文件的三种时间mtimeatimectime">文件的三种时间（mtime、atime、ctime）</a></li>
+        <li><a href="#文件管理命令">文件管理命令</a>
+          <ol>
+            <li><a href="#1-普通文件目录文件">1 、普通文件、目录文件</a></li>
+            <li><a href="#2文件内容如何操作文本文件">2、文件内容如何操作（文本文件）</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux-basics-2/">
+                <img src="/p/linux-basics-2/linux_hu_d1c003d07bd4f873.png"
+                        srcset="/p/linux-basics-2/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-2/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（二）：文件系统管理基础" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" style="background-color: #2a9d8f; color: #fff;">
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-basics-2/">Linux基础（二）：文件系统管理基础</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            两种路径、目录结构、文件种类、基本操作
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 21, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="linux-的目录结构">Linux 的目录结构
+</h2><p>整个系统目录结构是一个树形结构
+树根：/</p>
+<p>一切皆文件的设计思想
+文件夹是用来组织文件
+linux中的文件夹 &mdash;-》目录文件</p>
+<h2 id="绝对路径相对路径">绝对路径、相对路径
+</h2><p>绝对路径：
+以/开头的路径
+特点：当前无论你在哪个文件夹下面，用绝对路径肯定能找到目标文件
+/a/b/c/d/1.txt
+相对路径：
+不是以/开头的路径
+特点：基于当前文件夹往后进行查找
+cd /a/b/c/
+d/1.txt</p>
+<p>特殊符号：
+.：代表当前目录，例如：./b/c/1.txt
+..： 代表上一级目录
+../../../a.txt</p>
+<pre><code>~: 代表的是当前登录用户的家目录
+	root----》/root
+	普通----》/home/用户名
+</code></pre>
+<blockquote>
+<p>[!NOTE] 补充：
+windows的文件夹不区分大小写
+linux的文件夹区分大小写</p></blockquote>
+<h2 id="文件的种类">文件的种类
+</h2><p>对比windows系统，区分文件，用后缀名区分
+a.txt  # 文本文件
+a.mp4  # 视频文件
+a.jpg  # 图片文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l 
+</span></span><span class="line"><span class="cl">-: 代表的是普通文件，包含文本文件、图片、视频
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">d：代表的是目录文件，本质就是文件夹
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">b: 代表的是block块设备文件，例如：ls -l /dev/sda
+</span></span><span class="line"><span class="cl">	站在硬盘的角度最小读写单位是一个扇区
+</span></span><span class="line"><span class="cl">	站在操作系统的角度最小的读写单位一个block块（默认是由8个扇区）
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">l：代表的是软连接，就相当于windows系统中快捷方式
+</span></span><span class="line"><span class="cl">c   设备文件（字符设备）打印机，例如：终端/dev/tty1
+</span></span><span class="line"><span class="cl">s   套接字文件，例如：/run/chrony/chronyd.sock
+</span></span><span class="line"><span class="cl">p   管道文件，例如：/run/systemd/initctl/fifo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">file /etc/grub.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="linux-各个目录的作用">Linux 各个目录的作用（⭐）
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@aliyun ~<span class="o">]</span><span class="c1"># ls -l /  # /是所有linux操作系统的顶点目录,不像windows,每个分区都有一个顶点目录</span>
+</span></span><span class="line"><span class="cl">total <span class="m">64</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#1、命令相关目录</span>
+</span></span><span class="line"><span class="cl">lrwxrwxrwx.  <span class="m">1</span> root root     <span class="m">7</span> Jul <span class="m">11</span>  <span class="m">2019</span> bin -&gt; usr/bin <span class="c1"># 普通用户使用的命令如ls、date</span>
+</span></span><span class="line"><span class="cl">lrwxrwxrwx.  <span class="m">1</span> root root     <span class="m">8</span> Jul <span class="m">11</span>  <span class="m">2019</span> sbin -&gt; usr/sbin <span class="c1"># 管理员使用的命令</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#2、启动目录</span>
+</span></span><span class="line"><span class="cl">dr-xr-xr-x.  <span class="m">5</span> root root  <span class="m">4096</span> Feb <span class="m">11</span> 19:06 boot <span class="c1"># 存放的启动相关的文件，例如kernel,grub(引导装载程序)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#3、系统文件目录</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x. <span class="m">13</span> root root  <span class="m">4096</span> Jul <span class="m">11</span>  <span class="m">2019</span> usr <span class="c1"># 系统文件，相当于C:\Windows</span>
+</span></span><span class="line"><span class="cl">lrwxrwxrwx.  <span class="m">1</span> root root     <span class="m">7</span> Jul <span class="m">11</span>  <span class="m">2019</span> lib -&gt; usr/lib <span class="c1"># 库文件Glibc</span>
+</span></span><span class="line"><span class="cl">lrwxrwxrwx.  <span class="m">1</span> root root     <span class="m">9</span> Jul <span class="m">11</span>  <span class="m">2019</span> lib64 -&gt; usr/lib64 <span class="c1"># 库文件Glibc</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#4、用户家目录</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">5</span> root root  <span class="m">4096</span> Feb <span class="m">24</span> 16:42 home <span class="c1"># 普通用户家目录</span>
+</span></span><span class="line"><span class="cl">dr-xr-x---. <span class="m">11</span> root root  <span class="m">4096</span> Jul  <span class="m">8</span> 17:03 root <span class="c1"># root用户的HOME</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#5、配置文件目录</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x. <span class="m">79</span> root root  <span class="m">4096</span> Jul  <span class="m">8</span> 17:04 etc <span class="c1"># 配置文件，很重要，系统级服务配置文件都在这里</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">/etc/sysconfig/network-script/，网络配置文件目录，具体的网卡配置文件rockylinux有变动
+</span></span></span><span class="line"><span class="cl"><span class="s2"> 
+</span></span></span><span class="line"><span class="cl"><span class="s2">/etc/hostname，系统主机名配置文件
+</span></span></span><span class="line"><span class="cl"><span class="s2">/etc/resolv.conf，dns客户端配置文件
+</span></span></span><span class="line"><span class="cl"><span class="s2">/etc/hosts，本地域名解析配置文件
+</span></span></span><span class="line"><span class="cl"><span class="s2">/etc/fstab    系统挂载目录 开机自启动挂载列表
+</span></span></span><span class="line"><span class="cl"><span class="s2">/etc/passwd  系统用户文件
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#6、设备目录文件</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">19</span> root root  <span class="m">2960</span> Feb <span class="m">15</span> 17:22 dev <span class="c1"># 设备文件，/dev/sda /dev/sr0</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/cdrom 和/dev/sr0，系统光盘镜像设备
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/null，黑洞设备，只进不出。类似于垃圾回收站
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/random，生成随机数的设备
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/zero，能源源不断地产生数据，类似于取款机，随时随地取钱
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/pts/0，虚拟的Bash Shell终端,提供给远程用户使用 0代表第一个终端 1代表第2个终端
+</span></span></span><span class="line"><span class="cl"><span class="s2">以此类推
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/stderr，错误输出    
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/stdin，标准输入
+</span></span></span><span class="line"><span class="cl"><span class="s2">/dev/stdout，标准输出
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#7、虚拟文件系统：类似于小汽车的仪表板，能够看到汽车是否有故障，或者是否缺油了。</span>
+</span></span><span class="line"><span class="cl">dr-xr-xr-x  <span class="m">89</span> root root     <span class="m">0</span> Feb <span class="m">15</span> 17:22 proc <span class="c1"># 虚拟的文件系统，反映出来的是内核，进程信息或实时状态 </span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">反映系统当前进程的实时状态
+</span></span></span><span class="line"><span class="cl"><span class="s2">/proc/meminfo：内存信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">/proc/cpuinfo：cpu信息
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#8、可变的目录与临时目录</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x. <span class="m">19</span> root root  <span class="m">4096</span> Jul <span class="m">11</span>  <span class="m">2019</span> var  <span class="c1">#存放的是一些变化文件，比如数据库，日志，邮件.... </span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">/tmp，系统临时目录(类似于公共厕所)，系统会定时删除该目录下长时间没有访问的文件。
+</span></span></span><span class="line"><span class="cl"><span class="s2">/var，存放一些变化文件，如下
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    mysql:          /var/lib/mysql
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    vsftpd:         /var/ftp
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    mail:           /var/spool/mail
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    cron:           /var/spool/cron
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    log:            /var/log 系统日志文件存放目录
+</span></span></span><span class="line"><span class="cl"><span class="s2">                                    /var/log/messages系统日志
+</span></span></span><span class="line"><span class="cl"><span class="s2">                                    /var/log/secure系统登录日志
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    /var/tmp        临时文件(主要是程序产生的临时文件)
+</span></span></span><span class="line"><span class="cl"><span class="s2"> 
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#9、设备（主要指存储设备）挂载目录</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">2</span> root root  <span class="m">4096</span> Apr <span class="m">11</span>  <span class="m">2018</span> media <span class="c1"># 移动设备默认的挂载点</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">2</span> root root  <span class="m">4096</span> Apr <span class="m">11</span>  <span class="m">2018</span> mnt <span class="c1"># 手工挂载设备的挂载点</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">2</span> root root  <span class="m">4096</span> Apr <span class="m">11</span>  <span class="m">2018</span> opt <span class="c1"># 早期第三方厂商的软件存放的目录.</span>
+</span></span><span class="line"><span class="cl">drwxrwxrwt. <span class="m">10</span> root root  <span class="m">4096</span> Jul  <span class="m">9</span> 15:16 tmp <span class="c1"># 临时存放文件，类似于回收站，超过十天自动删除</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#10、了解（centos7中）</span>
+</span></span><span class="line"><span class="cl">drwx------.  <span class="m">2</span> root root <span class="m">16384</span> Jul <span class="m">11</span>  <span class="m">2019</span> lost+found <span class="c1"># 孤儿文件，rocklinux中没有</span>
+</span></span><span class="line"><span class="cl">这个目录是使用标准的ext2/ext3档案系统格式才会产生的一个目录，目的在于当档案系统发生错误时， 将一些遗失的片段放置到这个目录下。这个目录通常会在分割槽的最顶层存在， 例如你加装一颗硬盘于/disk中，那在这个系统下就会自动产生一个这样的目录『/disk/lost+found
+</span></span><span class="line"><span class="cl">lost+found这个目录一般情况下是空的，当系统非法关机后,如果你丢失了一些文件，在这里能找回来用来存放fsck过程中部分修复的文件的
+</span></span><span class="line"><span class="cl">lost+found：几乎每个被格式化过的Linux分区都会有，意外后找回的文件一般在这里面。
+</span></span><span class="line"><span class="cl">这个目录是储存发生意外后丢失的文件的。只有root用户才能打开
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">drwxrwxr-x   <span class="m">6</span> root root  <span class="m">4096</span> Feb <span class="m">23</span> 19:24 application
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">25</span> root root   <span class="m">660</span> Jul  <span class="m">8</span> 17:00 run <span class="c1">#  存放程序运行后所产生的pid文件</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">2</span> root root  <span class="m">4096</span> Apr <span class="m">11</span>  <span class="m">2018</span> srv <span class="c1"># 物理设备产生的一些文件</span>
+</span></span><span class="line"><span class="cl">dr-xr-xr-x  <span class="m">13</span> root root     <span class="m">0</span> Feb <span class="m">16</span> 01:22 sys <span class="c1"># 硬件设备的驱动程序信息</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="远程连接工具">远程连接工具
+</h2><p>服务器上安装服务端程序：openssh-server
+systemctl status sshd # 配置文件/etc/ssh/sshd_config
+syst emctl restart sshd # 重启会重新加载配置文件</p>
+<p>在个人电脑要按照一个ssh的客户端程序
+ssh的客户端种类：</p>
+<ul>
+<li>windows：
+1、xshell
+2、secureCRT
+3、putty</li>
+<li>macOS：
+本身就自带ssh客户端
+xterm</li>
+</ul>
+<h2 id="文件管理相关命令">文件管理相关命令
+</h2><h3 id="基础命令">基础命令
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">（1）查看当前所在的文件夹
+</span></span><span class="line"><span class="cl">		<span class="nb">pwd</span> 
+</span></span><span class="line"><span class="cl">（2）切换目录
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /etc/sysconfig
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /etc
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> sysconfig
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> .
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="c1"># 等同于 cd ~</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> - <span class="c1"># 切换到上一次所在的文件夹</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">（3）查看目录层级结构
+</span></span><span class="line"><span class="cl">yum install tree -y
+</span></span><span class="line"><span class="cl">tree
+</span></span><span class="line"><span class="cl">tree -F <span class="c1"># 针对目录会在结尾加/来表示</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tree -a <span class="c1"># 隐藏文件也会展示</span>
+</span></span><span class="line"><span class="cl">tree -d <span class="c1"># 只展示目录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tree -F -a -L <span class="m">1</span> /tmp/  <span class="c1"># 指定查看的层级</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">（4）ls 浏览命令
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls -l <span class="c1"># 查看的是文件的元数据</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls -lh <span class="c1"># 文件大小带着单位</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls -a <span class="c1"># 可以查看到点开头的文件这种隐藏文件</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls -dl /tmp <span class="c1"># 查看某个目录本身的元数据</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ll <span class="c1"># 等同于 ls -l --color=auto</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> ls -l 查看出的各部分元数据的含义
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@www ~<span class="o">]</span><span class="c1"># ll /tmp/a.txt </span>
+</span></span><span class="line"><span class="cl">-rwxr-xr--. <span class="m">1</span> root group <span class="m">1</span> <span class="m">31457280</span> <span class="m">4</span> 月  <span class="m">16</span> 14:21 /tmp/a.txt 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-：文件的类型
+</span></span><span class="line"><span class="cl">rw-r--r--：权限
+</span></span><span class="line"><span class="cl">.: 代表该文件是在开启selinux的情况下创建
+</span></span><span class="line"><span class="cl">	setenforce <span class="m">0</span> <span class="c1"># 临时关闭selinux</span>
+</span></span><span class="line"><span class="cl">	vi /etc/sysconfig/selinux  <span class="c1"># 永久关闭</span>
+</span></span><span class="line"><span class="cl">		修改：
+</span></span><span class="line"><span class="cl">		<span class="nv">SELINUX</span><span class="o">=</span>disabled
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">getenforce
+</span></span><span class="line"><span class="cl">1: 硬链接数	
+</span></span><span class="line"><span class="cl">root: 属主
+</span></span><span class="line"><span class="cl">group1：属组		
+</span></span><span class="line"><span class="cl">31457280： 文件的大小	
+</span></span><span class="line"><span class="cl"><span class="m">4</span> 月  <span class="m">16</span> 14:21：文件的内容修改时间 modify time--》mtime
+</span></span><span class="line"><span class="cl">/tmp/a.txt: 文件名
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="文件的三种时间mtimeatimectime">文件的三种时间（mtime、atime、ctime）
+</h3><blockquote>
+<p>修改时间（mtime, Modification Time）
+访问时间（atime, Access Time）
+变更时间（ctime, Change Time）</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">stat /tmp/111. txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">atime: 查看一次文件内容，atime就会变一次
+</span></span><span class="line"><span class="cl">mtime：文件内容改动，该时间才会变
+</span></span><span class="line"><span class="cl">ctime：文件元数据（权限、属主、属组变化）的变量、文件内容的变化，该时间都会变
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="文件管理命令">文件管理命令
+</h3><h4 id="1-普通文件目录文件">1 、普通文件、目录文件
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">- 创建
+</span></span><span class="line"><span class="cl">  （1）创建普通文件
+</span></span><span class="line"><span class="cl">  注意：touch 创建的都是普通文件（包含、图片、视频、文本文件）
+</span></span><span class="line"><span class="cl">  touch /tmp/222. txt 
+</span></span><span class="line"><span class="cl">  touch /tmp/1. jpg
+</span></span><span class="line"><span class="cl">  touch /tmp/1. mp <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  touch /tmp/<span class="o">{</span>1..10<span class="o">}</span>.txt
+</span></span><span class="line"><span class="cl">  touch /tmp/<span class="o">{</span>a..c<span class="o">}</span>.txt
+</span></span><span class="line"><span class="cl">  touch /tmp/Ego<span class="o">{</span>n,N<span class="o">}</span>.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  （2）创建目录
+</span></span><span class="line"><span class="cl">  mkdir -p /tmp/a/b/c/d/e
+</span></span><span class="line"><span class="cl">  mkdir /tmp/mmm<span class="o">{</span>1..3<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 复制
+</span></span><span class="line"><span class="cl">  （1）复制普通文件
+</span></span><span class="line"><span class="cl">  	cp /etc/hosts /tmp/ 目标/tmp/hosts
+</span></span><span class="line"><span class="cl">  	cp /etc/hosts /tmp/1.txt 目标/tmp/1.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  （2）复制目录
+</span></span><span class="line"><span class="cl">  cp -r /etc /tmp
+</span></span><span class="line"><span class="cl">  cp -r /etc /tmp/xxx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 移动（剪切）
+</span></span><span class="line"><span class="cl">  <span class="o">(</span>1<span class="o">)</span> 移动普通文件
+</span></span><span class="line"><span class="cl">  	mv /a/b/c.txt /tmp/
+</span></span><span class="line"><span class="cl">  	mv /a/b/c.txt /tmp/b.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  （2）移动目录
+</span></span><span class="line"><span class="cl">  	同上（不需要加-r）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  （3）改名字
+</span></span><span class="line"><span class="cl">  在同一个文件夹下面
+</span></span><span class="line"><span class="cl">  mv a.txt b.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 删除
+</span></span><span class="line"><span class="cl">  rm -rf /tmp/*  删除/tmp下所有的内容
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2文件内容如何操作文本文件">2、文件内容如何操作（文本文件）
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/hosts <span class="c1"># 查看所有内容</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">less <span class="c1"># 上下键翻页，输入 q 退出</span>
+</span></span><span class="line"><span class="cl">more  <span class="c1"># 百分比 回车翻页</span>
+</span></span><span class="line"><span class="cl">head -3 /etc/passwd <span class="c1"># 查看头几行</span>
+</span></span><span class="line"><span class="cl">tail -3 /etc/passwd <span class="c1"># 查看末尾几行</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps aux <span class="p">|</span> head -3
+</span></span><span class="line"><span class="cl">ps aux <span class="p">|</span> tail -3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tail -f /var/log/messages <span class="c1"># -f 可以动态查看文件新增的内容</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">111</span> &gt; /tmp/a.txt <span class="c1"># 覆盖写</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">111</span> &gt;&gt; /tmp/a.txt <span class="c1"># 追加写</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/notes/">Notes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-1/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（一）：初识 Linux "
+                        data-key="Linux-basics-1" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（一）：初识 Linux </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
