@@ -72,73 +72,117 @@ init 0 关机&lt;/li&gt;
 &lt;p&gt;Linux系统中的命令解释器称之为shell，翻译为壳，表达了对系统接口封装的思想&lt;/p&gt;
 &lt;p&gt;具体来说shell解释器分为很多种类，默认用的bash这种&lt;/p&gt;
 &lt;h2 id=&#34;shell-交互式环境&#34;&gt;Shell 交互式环境
-&lt;/h2&gt;&lt;p&gt;[ ]内各个部分的意思：
-第一部分: 登录的用户名
-第二部分@： 分割符
-第三部分：主机名字
-第四部分：当前所在的文件夹
-~： 代表当前用户的个人文件夹/家目录
-root用户的家目录/root
-普通用户的家目录/home/用户名&lt;/p&gt;
-&lt;p&gt;[ ]括号外：
-$ : 当前登录的用户身份是一个普通用户
-# : 当前登录的用户身份是一个超级管理员&lt;/p&gt;
-&lt;p&gt;补充：
-useradd 用户名
-passwd 用户名 # 交互式
-echo &amp;ldquo;123&amp;rdquo; | passwd &amp;ndash;stdin egon # 非交互式&lt;/p&gt;
-&lt;h2 id=&#34;shell-脚本&#34;&gt;Shell 脚本
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;内各个部分的意思：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;第一部分: 登录的用户名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;第二部分@： 分割符
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;第三部分：主机名字
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;第四部分：当前所在的文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~： 代表当前用户的个人文件夹/家目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root用户的家目录/root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;普通用户的家目录/home/用户名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;括号外：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ : 当前登录的用户身份是一个普通用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;\#&lt;/span&gt; : 当前登录的用户身份是一个超级管理员
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;补充：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;useradd 用户名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd 用户名 &lt;span class=&#34;c1&#34;&gt;# 交互式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; passwd --stdin egon &lt;span class=&#34;c1&#34;&gt;# 非交互式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;shell-脚本&#34;&gt;Shell 脚本
 &lt;/h2&gt;&lt;p&gt;脚本就是一个简单的程序（整个程序就是一个文件）
 把你执行某个任务需要的 10 条命令扔到一个文件里，该文件就是一个 shell 脚本&lt;/p&gt;
 &lt;h2 id=&#34;shell-命令基本语法&#34;&gt;Shell 命令基本语法
-&lt;/h2&gt;&lt;p&gt;ls -l /boot
-三大组成部分：
-ls 命令，代表要做什么事
--l 选项，控制命令具体怎么做（可选）
-/boot 参数，命令具体操作的目标（可选）&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;ls -l /boot&lt;/code&gt;
+三大组成部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ls 命令，代表要做什么事&lt;/li&gt;
+&lt;li&gt;-l 选项，控制命令具体怎么做（可选）&lt;/li&gt;
+&lt;li&gt;/boot 参数，命令具体操作的目标（可选）&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;bash-解释器交互式环境的一些特性快捷方式&#34;&gt;bash 解释器交互式环境的一些特性/快捷方式
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;ctrl+c: 强制终止当前命令的执行
-ctrl+l：清屏，等同于clear命令&lt;/p&gt;
-&lt;p&gt;ctrl+a 光标移到命令行的最前端
-ctrl+e 光标移到命令行的后端&lt;/p&gt;
-&lt;p&gt;history 查出命令的编号，然后!编号
-history -c # 清空历史记录
-上下箭头 查出历史命令&lt;/p&gt;
-&lt;p&gt;!$ # 取上一条命令的参数
-tab 键补全&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;shell-命令的种类和优先级&#34;&gt;Shell 命令的种类和优先级
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctrl+c: 强制终止当前命令的执行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctrl+l：清屏，等同于clear命令
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctrl+a 光标移到命令行的最前端
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ctrl+e 光标移到命令行的后端
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; 查出命令的编号，然后!编号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; -c &lt;span class=&#34;c1&#34;&gt;# 清空历史记录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;上下箭头 查出历史命令
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!$ &lt;span class=&#34;c1&#34;&gt;# 取上一条命令的参数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tab 键补全
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;shell-命令的种类和优先级&#34;&gt;Shell 命令的种类和优先级
 &lt;/h2&gt;&lt;p&gt;Shell 解析命令的顺序：&lt;/p&gt;
 &lt;p&gt;带路径 &amp;gt; 别名 &amp;gt; 复合命令 &amp;gt; 函数 &amp;gt; 内置命令 &amp;gt; Hash 缓存 &amp;gt; PATH 查找&lt;/p&gt;
 &lt;h3 id=&#34;带路径的命令&#34;&gt;带路径的命令
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;绝对路径: 从根目录开始，例如 /bin/ls&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;相对路径: 相对于当前目录，例如 ./ls 或 b/c/1.txt&lt;/p&gt;
+&lt;li&gt;绝对路径: 从根目录开始，例如 /bin/ls&lt;/li&gt;
+&lt;li&gt;相对路径: 相对于当前目录，例如 ./ls 或 b/c/1.txt
 &lt;ul&gt;
 &lt;li&gt;. 表示当前目录，例如 ./b/c/1.txt 等同于 b/c/1.txt&lt;/li&gt;
 &lt;li&gt;.. 表示上一级目录&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;别名-alias&#34;&gt;别名 alias
 &lt;/h3&gt;&lt;p&gt;通过 alias 命令定义的快捷命令，优先级高于后续类型&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;定义: alias xxx=&amp;ldquo;ls /etc/sysconfig/network-scripts;echo 123;echo 456&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;取消: unalias xxx&lt;/li&gt;
+&lt;li&gt;定义: &lt;code&gt;alias xxx=&amp;quot;ls /etc/sysconfig/network-scripts;echo 123;echo 456&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;取消: &lt;code&gt;unalias xxx&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;复合命令-compound-commands&#34;&gt;复合命令 Compound Commands
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;包含循环或条件语句的结构化命令。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;示例:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;for((i=0;i&amp;lt;3;i++)); do echo 66666; done&lt;/li&gt;
 &lt;li&gt;if 语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;函数-function&#34;&gt;函数 Function
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -170,13 +214,12 @@ tab 键补全&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Shell 会缓存最近使用的命令路径到内存，提升下次执行效率。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;示例:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;查看: hash&lt;/li&gt;
 &lt;li&gt;清空: hash -r&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;环境变量-path&#34;&gt;环境变量 PATH
 &lt;/h3&gt;&lt;ul&gt;
@@ -188,13 +231,12 @@ tab 键补全&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;PATH 是一组用冒号分隔的目录，例如 /usr/bin:/bin&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;示例:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;查看: echo $PATH&lt;/li&gt;
 &lt;li&gt;定义全局变量: export name=&amp;ldquo;egon&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;想要不加前缀去调用自定义脚本 xxx 的方法&lt;/p&gt;
 &lt;ul&gt;

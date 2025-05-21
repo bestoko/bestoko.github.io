@@ -460,73 +460,117 @@ init 0 关机</li>
 <p>Linux系统中的命令解释器称之为shell，翻译为壳，表达了对系统接口封装的思想</p>
 <p>具体来说shell解释器分为很多种类，默认用的bash这种</p>
 <h2 id="shell-交互式环境">Shell 交互式环境
-</h2><p>[ ]内各个部分的意思：
-第一部分: 登录的用户名
-第二部分@： 分割符
-第三部分：主机名字
-第四部分：当前所在的文件夹
-~： 代表当前用户的个人文件夹/家目录
-root用户的家目录/root
-普通用户的家目录/home/用户名</p>
-<p>[ ]括号外：
-$ : 当前登录的用户身份是一个普通用户
-# : 当前登录的用户身份是一个超级管理员</p>
-<p>补充：
-useradd 用户名
-passwd 用户名 # 交互式
-echo &ldquo;123&rdquo; | passwd &ndash;stdin egon # 非交互式</p>
-<h2 id="shell-脚本">Shell 脚本
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span> <span class="o">]</span>内各个部分的意思：
+</span></span><span class="line"><span class="cl">第一部分: 登录的用户名
+</span></span><span class="line"><span class="cl">第二部分@： 分割符
+</span></span><span class="line"><span class="cl">第三部分：主机名字
+</span></span><span class="line"><span class="cl">第四部分：当前所在的文件夹
+</span></span><span class="line"><span class="cl">~： 代表当前用户的个人文件夹/家目录
+</span></span><span class="line"><span class="cl">root用户的家目录/root
+</span></span><span class="line"><span class="cl">普通用户的家目录/home/用户名
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="o">]</span>括号外：
+</span></span><span class="line"><span class="cl">$ : 当前登录的用户身份是一个普通用户
+</span></span><span class="line"><span class="cl"><span class="se">\#</span> : 当前登录的用户身份是一个超级管理员
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">补充：
+</span></span><span class="line"><span class="cl">useradd 用户名
+</span></span><span class="line"><span class="cl">passwd 用户名 <span class="c1"># 交互式</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;123&#34;</span> <span class="p">|</span> passwd --stdin egon <span class="c1"># 非交互式</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="shell-脚本">Shell 脚本
 </h2><p>脚本就是一个简单的程序（整个程序就是一个文件）
 把你执行某个任务需要的 10 条命令扔到一个文件里，该文件就是一个 shell 脚本</p>
 <h2 id="shell-命令基本语法">Shell 命令基本语法
-</h2><p>ls -l /boot
-三大组成部分：
-ls 命令，代表要做什么事
--l 选项，控制命令具体怎么做（可选）
-/boot 参数，命令具体操作的目标（可选）</p>
+</h2><p><code>ls -l /boot</code>
+三大组成部分：</p>
+<ul>
+<li>ls 命令，代表要做什么事</li>
+<li>-l 选项，控制命令具体怎么做（可选）</li>
+<li>/boot 参数，命令具体操作的目标（可选）</li>
+</ul>
 <h2 id="bash-解释器交互式环境的一些特性快捷方式">bash 解释器交互式环境的一些特性/快捷方式
-</h2><blockquote>
-<p>ctrl+c: 强制终止当前命令的执行
-ctrl+l：清屏，等同于clear命令</p>
-<p>ctrl+a 光标移到命令行的最前端
-ctrl+e 光标移到命令行的后端</p>
-<p>history 查出命令的编号，然后!编号
-history -c # 清空历史记录
-上下箭头 查出历史命令</p>
-<p>!$ # 取上一条命令的参数
-tab 键补全</p></blockquote>
-<h2 id="shell-命令的种类和优先级">Shell 命令的种类和优先级
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ctrl+c: 强制终止当前命令的执行
+</span></span><span class="line"><span class="cl">ctrl+l：清屏，等同于clear命令
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ctrl+a 光标移到命令行的最前端
+</span></span><span class="line"><span class="cl">ctrl+e 光标移到命令行的后端
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">history</span> 查出命令的编号，然后!编号
+</span></span><span class="line"><span class="cl"><span class="nb">history</span> -c <span class="c1"># 清空历史记录</span>
+</span></span><span class="line"><span class="cl">上下箭头 查出历史命令
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">!$ <span class="c1"># 取上一条命令的参数</span>
+</span></span><span class="line"><span class="cl">tab 键补全
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="shell-命令的种类和优先级">Shell 命令的种类和优先级
 </h2><p>Shell 解析命令的顺序：</p>
 <p>带路径 &gt; 别名 &gt; 复合命令 &gt; 函数 &gt; 内置命令 &gt; Hash 缓存 &gt; PATH 查找</p>
 <h3 id="带路径的命令">带路径的命令
 </h3><ul>
-<li>
-<p>绝对路径: 从根目录开始，例如 /bin/ls</p>
-</li>
-<li></li>
-</ul>
-<p>相对路径: 相对于当前目录，例如 ./ls 或 b/c/1.txt</p>
+<li>绝对路径: 从根目录开始，例如 /bin/ls</li>
+<li>相对路径: 相对于当前目录，例如 ./ls 或 b/c/1.txt
 <ul>
 <li>. 表示当前目录，例如 ./b/c/1.txt 等同于 b/c/1.txt</li>
 <li>.. 表示上一级目录</li>
 </ul>
+</li>
+</ul>
 <h3 id="别名-alias">别名 alias
 </h3><p>通过 alias 命令定义的快捷命令，优先级高于后续类型</p>
 <ul>
-<li>定义: alias xxx=&ldquo;ls /etc/sysconfig/network-scripts;echo 123;echo 456&rdquo;</li>
-<li>取消: unalias xxx</li>
+<li>定义: <code>alias xxx=&quot;ls /etc/sysconfig/network-scripts;echo 123;echo 456&quot;</code></li>
+<li>取消: <code>unalias xxx</code></li>
 </ul>
 <h3 id="复合命令-compound-commands">复合命令 Compound Commands
 </h3><ul>
 <li>
 <p>包含循环或条件语句的结构化命令。</p>
-</li>
-<li></li>
-</ul>
 <p>示例:</p>
 <ul>
 <li>for((i=0;i&lt;3;i++)); do echo 66666; done</li>
 <li>if 语句</li>
+</ul>
+</li>
 </ul>
 <h3 id="函数-function">函数 Function
 </h3><div class="highlight"><div class="chroma">
@@ -558,13 +602,12 @@ tab 键补全</p></blockquote>
 </h3><ul>
 <li>
 <p>Shell 会缓存最近使用的命令路径到内存，提升下次执行效率。</p>
-</li>
-<li></li>
-</ul>
 <p>示例:</p>
 <ul>
 <li>查看: hash</li>
 <li>清空: hash -r</li>
+</ul>
+</li>
 </ul>
 <h3 id="环境变量-path">环境变量 PATH
 </h3><ul>
@@ -576,13 +619,12 @@ tab 键补全</p></blockquote>
 </li>
 <li>
 <p>PATH 是一组用冒号分隔的目录，例如 /usr/bin:/bin</p>
-</li>
-<li></li>
-</ul>
 <p>示例:</p>
 <ul>
 <li>查看: echo $PATH</li>
 <li>定义全局变量: export name=&ldquo;egon&rdquo;</li>
+</ul>
+</li>
 </ul>
 <p>想要不加前缀去调用自定义脚本 xxx 的方法</p>
 <ul>

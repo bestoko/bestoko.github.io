@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Follow on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/follow/</link>
+        <link>http://localhost:1313/tags/follow/</link>
         <description>Recent content in Follow on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 10 Oct 2024 22:31:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/follow/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Oct 2024 22:31:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/follow/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>follow.is 认证用 </title>
-        <link>https://bestoko.cc/p/follow/</link>
+        <link>http://localhost:1313/p/follow/</link>
         <pubDate>Thu, 10 Oct 2024 22:31:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/follow/</guid>
+        <guid>http://localhost:1313/p/follow/</guid>
         <description>&lt;p&gt;This message is used to verify that this feed (feedId:66996134550026240) belongs to me (userId:66750646631429120). Join me in enjoying the next generation information browser &lt;a class=&#34;link&#34; href=&#34;https://follow.is&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://follow.is&lt;/a&gt;.&lt;/p&gt;
 </description>
