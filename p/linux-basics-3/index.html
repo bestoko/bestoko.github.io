@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="VIM、sed、awk、grep">
+<title>Linux基础（三）：文件系统管理高级</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/linux-basics-3/'>
+
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Linux基础（三）：文件系统管理高级">
+<meta property='og:description' content="VIM、sed、awk、grep">
+<meta property='og:url' content='https://bestoko.cc/p/linux-basics-3/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2025-05-22T23:16:27&#43;08:00'/><meta property='article:modified_time' content='2025-05-22T23:16:27&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-basics-3/linux.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Linux基础（三）：文件系统管理高级">
+<meta name="twitter:description" content="VIM、sed、awk、grep"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/linux-basics-3/linux.png' />
+    <link rel="shortcut icon" href="/img/bestoko.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😺</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.social/@bestoko'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/7oko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#命令行文本编辑器-vivim">命令行文本编辑器 VI、VIM</a></li>
+    <li><a href="#文本处理三剑客-sedawkgrep">文本处理三剑客 sed、awk、grep</a>
+      <ol>
+        <li><a href="#sed">sed</a></li>
+        <li><a href="#awk">awk</a></li>
+        <li><a href="#grep">grep</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux-basics-3/">
+                <img src="/p/linux-basics-3/linux_hu_d1c003d07bd4f873.png"
+                        srcset="/p/linux-basics-3/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-3/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（三）：文件系统管理高级" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" style="background-color: #2a9d8f; color: #fff;">
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-basics-3/">Linux基础（三）：文件系统管理高级</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            VIM、sed、awk、grep
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 22, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="命令行文本编辑器-vivim">命令行文本编辑器 VI、VIM
+</h2><p><img src="/p/linux-basics-3/vim.png"
+	width="787"
+	height="531"
+	srcset="/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, /p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>常用命令：
+0 或功能键[Home]	这是数字『 0 』：移动到这一行的最前面字符处 (常用)
+$ 或功能键[End]	移动到这一行的最后面字符处 (常用)
+G	移动到这个档案的最后一行 (常用)</p>
+<p>/word	向光标之下寻找一个名称为 word 的字符串。
+n 向下查找，N 向上查找
+u 撤销上一个动作
+ctrl + r 重做上一个动作
+:set nu 设定行号</p>
+<p>查找替换
+定位s@@@g
+:%s @/a/b/c/1.txt@/mmm/ 111.txt@g</p>
+<p>行定位：
+%：定位到所有行
+1,5： 1 到 5 行
+, 8 : 首先光标要移动到某一行，以这一行为起始一直到第 8 行
+2,$ : 从第二行到最后一样</p>
+<p>比对两个文件
+diff -u aaa.txt bbb.txt
+以aaa.txt的内容作为参照，看一下bbb.txt有何变动
+diff -u bbb.txt aaa.txt</p>
+<h2 id="文本处理三剑客-sedawkgrep">文本处理三剑客 sed、awk、grep
+</h2><h3 id="sed">sed
+</h3><p>stream editor 流式编辑器
+不会一下子把文件内容全部读入内容
+而是读一行到内存处理一行，然后再读下一行
+非交互式编辑修改文本文件内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 用法</span>
+</span></span><span class="line"><span class="cl">sed 选项 <span class="s1">&#39;定位+命令&#39;</span> 文件路径
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项</span>
+</span></span><span class="line"><span class="cl">-n 取消默认输出
+</span></span><span class="line"><span class="cl">-r 支持扩展正则元字符<span class="o">(</span>由于尚未学习正则，所以此处暂作了解，正则表达式将会在shell编程第九章第一节介绍<span class="o">)</span>
+</span></span><span class="line"><span class="cl">-i 立即编辑文件
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 定位</span>
+</span></span><span class="line"><span class="cl">行定位：
+</span></span><span class="line"><span class="cl">    1定位到第一行
+</span></span><span class="line"><span class="cl">    1,3代表从第1行到第3行
+</span></span><span class="line"><span class="cl">    不写定位代表定位所有行
+</span></span><span class="line"><span class="cl">正则表达式定位：
+</span></span><span class="line"><span class="cl">    /egon/ 包含egon的行
+</span></span><span class="line"><span class="cl">    /^egon/ 以egon开头的行 
+</span></span><span class="line"><span class="cl">    /egon$/以egon结尾的行
+</span></span><span class="line"><span class="cl">数字+正则表达式定位
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;1,8p&#34;</span>代表打印1到8行，
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;1,/egon/p&#34;</span>则代表取从第1行到首次匹配到/egon/的行
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 命令</span>
+</span></span><span class="line"><span class="cl">d
+</span></span><span class="line"><span class="cl">p
+</span></span><span class="line"><span class="cl">s///g
+</span></span><span class="line"><span class="cl">命令可以用<span class="p">;</span>号连接多多条，如1d<span class="p">;</span>3d<span class="p">;</span>5d代表删除1，3，5行
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># =========================》用法示例：p与d</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">egon1111
+</span></span><span class="line"><span class="cl">22222egon
+</span></span><span class="line"><span class="cl">3333egon33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed -n &#39;&#39; a.txt </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed -n &#39;1,/xxx/p&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">egon1111
+</span></span><span class="line"><span class="cl">22222egon
+</span></span><span class="line"><span class="cl">3333egon33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;1,/xxx/d&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;1d;3d;5d&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">22222egon
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># =========================》用法示例: s///g</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat a.txt </span>
+</span></span><span class="line"><span class="cl">egon1111
+</span></span><span class="line"><span class="cl">22222egon
+</span></span><span class="line"><span class="cl">3333egon33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;s/egon/BIGEGON/g&#39; a.txt  # 把所有行的所有的egon都换成BIGEGON</span>
+</span></span><span class="line"><span class="cl">BIGEGON1111
+</span></span><span class="line"><span class="cl">22222BIGEGON
+</span></span><span class="line"><span class="cl">3333BIGEGON33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666BIGEGON6666BIGEGON666BIGEGON
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;/^egon/s/egon/GAGAGA/g&#39; a.txt  # 以egon开头的行中的egon换成GAGAGA</span>
+</span></span><span class="line"><span class="cl">GAGAGA1111
+</span></span><span class="line"><span class="cl">22222egon
+</span></span><span class="line"><span class="cl">3333egon33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;6s/egon/BIGEGON/&#39; a.txt  # 只把第6行的egon换成BIGEGON，加上g代表？？？</span>
+</span></span><span class="line"><span class="cl">egon1111
+</span></span><span class="line"><span class="cl">22222egon
+</span></span><span class="line"><span class="cl">3333egon33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666BIGEGON6666egon666egon
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sed &#39;1,3s/egon/BIGEGON/g&#39; a.txt # 把1到3行的egon换成BIGEGON</span>
+</span></span><span class="line"><span class="cl">BIGEGON1111
+</span></span><span class="line"><span class="cl">22222BIGEGON
+</span></span><span class="line"><span class="cl">3333BIGEGON33333
+</span></span><span class="line"><span class="cl">4444xxx44444
+</span></span><span class="line"><span class="cl">5555xxx55555xxxx555xxx
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat a.txt | sed &#39;1,5d&#39;  # sed也支持管道</span>
+</span></span><span class="line"><span class="cl">6666egon6666egon666egon
+</span></span><span class="line"><span class="cl"><span class="c1"># 加上-i选项，直接修改文件，通常会在调试完毕确保没有问题后再加-i选项</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="awk">awk
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 用法</span>
+</span></span><span class="line"><span class="cl">awk 选项 <span class="s1">&#39;pattern{action}&#39;</span> 文件路径
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项</span>
+</span></span><span class="line"><span class="cl">-F 指定行分隔符
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 工作流程</span>
+</span></span><span class="line"><span class="cl">awk -F: <span class="s1">&#39;{print $1,$3}&#39;</span> /etc/passwd
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">1、awk会读取文件的一行内容然后赋值给<span class="nv">$0</span>
+</span></span><span class="line"><span class="cl">2、然后awk会以-F指定的分隔符将该行切分成n段，最多可以达到100段，第一段给<span class="nv">$1</span>,第二段给<span class="nv">$2</span>,依次次类推
+</span></span><span class="line"><span class="cl">3、print输出该行的第一段和第三段，逗号代表输出分隔符，默认与-F保持一致
+</span></span><span class="line"><span class="cl">4、重复步骤1,2,3直到文件内容读完
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 内置变量</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$0</span> 一整行内容
+</span></span><span class="line"><span class="cl">NR 记录号，等同于行号
+</span></span><span class="line"><span class="cl">NF 以-F分隔符分隔的段数
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># pattern可以是</span>
+</span></span><span class="line"><span class="cl">/正则/
+</span></span><span class="line"><span class="cl">    /正则/       <span class="c1"># 该行内容匹配成功正则</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$1</span> ~ /正则/  <span class="c1"># 第一段内容匹配成功正则</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$1</span> !~ /正则/  <span class="c1"># 第一段内容没有匹配成功正则</span>
+</span></span><span class="line"><span class="cl">比较运算：
+</span></span><span class="line"><span class="cl">    NR &gt;<span class="o">=</span> <span class="m">3</span> <span class="o">&amp;&amp;</span> NR &lt;<span class="o">=</span><span class="m">5</span>  <span class="c1"># 3到5行</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$1</span> <span class="o">==</span> <span class="s2">&#34;root&#34;</span>      <span class="c1"># 第一段内容等于root</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># action可以是</span>
+</span></span><span class="line"><span class="cl">print <span class="nv">$1</span>,<span class="nv">$3</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 用法示例</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat a.txt </span>
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl">bin:x:1:1:bin:/bin:/sbin/nologin
+</span></span><span class="line"><span class="cl">daemon:x:2:2:daemon:/sbin:/sbin/nologin
+</span></span><span class="line"><span class="cl">adm:x:3:4:adm:/var/adm:/sbin/nologin
+</span></span><span class="line"><span class="cl">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># awk -F: &#39;/^root/{print $1,$3}&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">root <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># awk -F: &#39;$1 ~ /^d/{print $1,$3}&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">daemon <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># awk -F: &#39;$1 !~ /^d/{print $1,$3}&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">root <span class="m">0</span>
+</span></span><span class="line"><span class="cl">bin <span class="m">1</span>
+</span></span><span class="line"><span class="cl">adm <span class="m">3</span>
+</span></span><span class="line"><span class="cl">lp <span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># awk -F: &#39;NR&gt;3{print $1}&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">adm
+</span></span><span class="line"><span class="cl">lp
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># awk -F: &#39;$1 == &#34;lp&#34;{print $0}&#39; a.txt </span>
+</span></span><span class="line"><span class="cl">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat a.txt | awk -F: &#39;{print $1}&#39; # awk也支持管道</span>
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">bin
+</span></span><span class="line"><span class="cl">daemon
+</span></span><span class="line"><span class="cl">adm
+</span></span><span class="line"><span class="cl">lp
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="grep">grep
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 用法</span>
+</span></span><span class="line"><span class="cl">grep 选项 <span class="s1">&#39;正则&#39;</span> 文件路径
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项</span>
+</span></span><span class="line"><span class="cl">-n, --line-number           在过滤出的每一行前面加上它在文件中的相对行号
+</span></span><span class="line"><span class="cl">-i, --ignore-case           忽略大小写
+</span></span><span class="line"><span class="cl">--color                     颜色
+</span></span><span class="line"><span class="cl">-l, --files-with-matches    如果匹配成功，则只将文件名打印出来，失败则不打印
+</span></span><span class="line"><span class="cl">                            通常-rl一起用，grep -rl <span class="s1">&#39;root&#39;</span> /etc 
+</span></span><span class="line"><span class="cl">-R, -r, --recursive         递归
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 示例</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># grep &#39;^root&#39; /etc/passwd</span>
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># grep -n &#39;bash$&#39; /etc/passwd</span>
+</span></span><span class="line"><span class="cl">1:root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl">44:egon:x:1000:1000:egon:/home/egon:/bin/bash
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># grep -rl &#39;root&#39; /etc    </span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># grep也支持管道，我们可以发现三剑客命令都支持管道</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ps aux |grep ssh</span>
+</span></span><span class="line"><span class="cl">root        <span class="m">968</span>  0.0  0.2 <span class="m">112908</span>  <span class="m">4312</span> ?        Ss   14:05   0:00 /usr/sbin/sshd -D
+</span></span><span class="line"><span class="cl">root       <span class="m">1305</span>  0.0  0.3 <span class="m">163604</span>  <span class="m">6096</span> ?        Ss   14:05   0:00 sshd: root@pts/0
+</span></span><span class="line"><span class="cl">root       <span class="m">1406</span>  0.0  0.3 <span class="m">163600</span>  <span class="m">6240</span> ?        Ss   14:05   0:00 sshd: root@pts/1
+</span></span><span class="line"><span class="cl">root       <span class="m">2308</span>  0.0  0.0 <span class="m">112724</span>   <span class="m">984</span> pts/1    R+   15:30   0:00 grep --color<span class="o">=</span>auto ssh
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ps aux |grep [s]sh</span>
+</span></span><span class="line"><span class="cl">root        <span class="m">968</span>  0.0  0.2 <span class="m">112908</span>  <span class="m">4312</span> ?        Ss   14:05   0:00 /usr/sbin/sshd -D
+</span></span><span class="line"><span class="cl">root       <span class="m">1305</span>  0.0  0.3 <span class="m">163604</span>  <span class="m">6096</span> ?        Ss   14:05   0:00 sshd: root@pts/0
+</span></span><span class="line"><span class="cl">root       <span class="m">1406</span>  0.0  0.3 <span class="m">163600</span>  <span class="m">6240</span> ?        Ss   14:05   0:00 sshd: root@pts/1
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/notes/">Notes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-2/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-2/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（二）：文件系统管理基础"
+                        data-key="Linux-basics-2" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（二）：文件系统管理基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-1/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（一）：初识 Linux "
+                        data-key="Linux-basics-1" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（一）：初识 Linux </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
