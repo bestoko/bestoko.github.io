@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。\nAndroid平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。\n硬件抽象层 (Hardware Abstract Layer,HAL)\r硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。\nLinux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。\n也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。\n系统运行库层\r这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n">
 <title>Android平台架构学习笔记</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/android-framework/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Android平台架构学习笔记">
-<meta property='og:description' content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。\nAndroid平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。\n硬件抽象层 (Hardware Abstract Layer,HAL)\r硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。\nLinux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。\n也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。\n系统运行库层\r这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。\n">
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Android平台架构学习笔记">
+<meta property='og:description' content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n">
 <meta property='og:url' content='https://bestoko.cc/p/android-framework/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='Android Framework' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2022-03-03T20:00:00&#43;08:00'/><meta property='article:modified_time' content='2022-03-03T20:00:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/android-framework/android-logo.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Android平台架构学习笔记">
-<meta name="twitter:description" content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n使用 Linux 内核可让 Android 利用主要安全功能，并且允许设备制造商为著名的内核开发硬件驱动程序。\nAndroid平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。\n硬件抽象层 (Hardware Abstract Layer,HAL)\r硬件抽象层 (HAL) 提供标准界面，向更高级别的 Java API 框架显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。\nLinux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。\n也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。\n系统运行库层\r这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="平台架构\rhttps://developer.android.com/guide/platform?hl=zh-cn\n从下到上依次分为：\nLinux内核层 硬件抽象层 HAL 系统运行库层 Java API 框架 系统应用 每一层都包含大量的子模块或子系统。\nLinux内核层 (Linux Kernel)\rAndroid 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/android-framework/android-logo.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -42,7 +42,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -290,7 +290,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -565,7 +565,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -754,8 +754,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

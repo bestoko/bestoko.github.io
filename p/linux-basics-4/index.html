@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="查找管理、字符处理、打包压缩">
+<title>Linux基础（四）：文件系统管理高级</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/linux-basics-4/'>
+
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Linux基础（四）：文件系统管理高级">
+<meta property='og:description' content="查找管理、字符处理、打包压缩">
+<meta property='og:url' content='https://bestoko.cc/p/linux-basics-4/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2025-05-23T17:16:25&#43;08:00'/><meta property='article:modified_time' content='2025-05-23T17:16:25&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-basics-4/linux.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Linux基础（四）：文件系统管理高级">
+<meta name="twitter:description" content="查找管理、字符处理、打包压缩"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/linux-basics-4/linux.png' />
+    <link rel="shortcut icon" href="/img/bestoko.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😺</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.social/@bestoko'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/7oko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#文件查找">文件查找</a>
+      <ol>
+        <li><a href="#查看命令所属文件">查看命令所属文件</a></li>
+        <li><a href="#查找文件">查找文件</a></li>
+        <li><a href="#找到后的处理动作">找到后的处理动作</a>
+          <ol>
+            <li><a href="#find-配合-xargs">find 配合 xargs</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#文件管理之上传下载">文件管理之上传下载</a>
+      <ol>
+        <li><a href="#wget">wget</a></li>
+        <li><a href="#curl">curl</a></li>
+        <li><a href="#szrz">sz、rz</a></li>
+      </ol>
+    </li>
+    <li><a href="#文件管理之输出与重定向">文件管理之输出与重定向</a>
+      <ol>
+        <li><a href="#输出重定向-">输出重定向 ：</a></li>
+        <li><a href="#输入重定向">输入重定向：</a></li>
+      </ol>
+    </li>
+    <li><a href="#文件管理之字符处理命令">文件管理之字符处理命令</a>
+      <ol>
+        <li><a href="#sort">sort</a></li>
+        <li><a href="#uniq">uniq</a></li>
+        <li><a href="#cut">cut</a></li>
+        <li><a href="#tr">tr</a></li>
+        <li><a href="#wc">wc</a></li>
+      </ol>
+    </li>
+    <li><a href="#文件管理之打包压缩大文件切分">文件管理之打包压缩/大文件切分</a>
+      <ol>
+        <li><a href="#打包压缩">打包压缩</a></li>
+        <li><a href="#拓展时间命令-date">拓展时间命令 date</a></li>
+        <li><a href="#大文件切分">大文件切分</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux-basics-4/">
+                <img src="/p/linux-basics-4/linux_hu_d1c003d07bd4f873.png"
+                        srcset="/p/linux-basics-4/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-4/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（四）：文件系统管理高级" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" style="background-color: #2a9d8f; color: #fff;">
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-basics-4/">Linux基础（四）：文件系统管理高级</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            查找管理、字符处理、打包压缩
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 23, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="文件查找">文件查找
+</h2><h3 id="查看命令所属文件">查看命令所属文件
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@ubuntuserver:~# which ip
+</span></span><span class="line"><span class="cl">/usr/sbin/ip
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查找文件">查找文件
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">按文件名 
+</span></span><span class="line"><span class="cl">find <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>path...<span class="o">]</span> <span class="o">[</span>expression<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg-eth0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -iname &#34;ifcfg-eth0&#34;     # -i忽略大小写</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -iname &#34;ifcfg-eth*&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">按文件大小
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -size +3M                 # 大于3M</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -size 3M</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -size -3M</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -size +3M -ls             # -ls找到的处理动作</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">指定查找的目录深度：
+</span></span><span class="line"><span class="cl">-maxdepth levels
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find / -maxdepth 5 -a  -name &#34;ifcfg-eth0&#34;  # -a并且，-o或者，不加-a，默认就是-a</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">按时间找<span class="o">(</span>atime,mtime,ctime<span class="o">)</span>：
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -mtime +3                 # 修改时间超过3天</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -mtime 3                  # 修改时间等于3天</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -mtime -3                 # 修改时间3天以内</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">按文件属主、属组找：
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -user egon               # 属主是egon的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -group it                # 属组是it组的文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -user egon -group it</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -user egon -a -group it  # 同上意思一样</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -user egon -o -group it</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -nouser  # 用户还存在，在/etc/passwd中删除了记录</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -nogroup  # 用户还存在，在/etc/group中删除了记录</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /home -nouser -o -nogroup </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">按文件类型
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type f                       # f普通</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type d                       # d目录</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type l                       # l链接</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type b                       # b块设备</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type c                       # c字符设备</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type s                       # s套接字</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /dev -type p                       # p管道文件</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">根据inode号查找：-inum n
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find / -inum 1811</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">按文件权限：
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find . -perm 644 -ls</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find . -perm -644 -ls</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find . -perm -600 -ls</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /sbin -perm -4000 -ls      # 包含set uid</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /sbin -perm -2000 -ls      # 包含set gid</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /sbin -perm -1000 -ls      # 包含sticky</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="找到后的处理动作">找到后的处理动作
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-print
+</span></span><span class="line"><span class="cl">-ls
+</span></span><span class="line"><span class="cl">-delete
+</span></span><span class="line"><span class="cl">-exec
+</span></span><span class="line"><span class="cl">-ok
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg*&#34; -print  # 必须加引号</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg*&#34; -ls</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg*&#34; -exec cp -rvf {} /tmp \;  # 非交互</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg*&#34; -ok cp -rvf {} /tmp \;  # 交互</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg*&#34; -exec rm -rf {} \;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg*&#34; -delete  # 同上</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="find-配合-xargs">find 配合 xargs
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find . -name &#34;egon*.txt&#34; |xargs rm -rf</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /etc -name &#34;ifcfg-eth0&#34; |xargs -I {} cp -rf {} /var/tmp</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /test -name &#34;ifcfg-ens33&#34; |xargs -I {} mv {} /ttt</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># find /ttt/ -name &#34;ifcfg*&#34; |xargs -I {} chmod 666 {}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="文件管理之上传下载">文件管理之上传下载
+</h2><h3 id="wget">wget
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -O 本地路径 远程包链接地址  <span class="c1"># 将远程包下载到本地，-O指定下载到哪里，可以生路-O 本地路径</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># ps：如果wget下载提示无法建立SSL连接，则加上选项--no-check-certificate</span>
+</span></span><span class="line"><span class="cl">wget --no-check-certificate -O 本地路径 远程包链接地址 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="curl">curl
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#curl命令是一个利用URL规则在命令行下工作的文件传输工具。它支持文件的上传和下载，所以是综合传输工具，但按传统，习惯称curl为下载工具。作为一款强力工具，curl支持包括HTTP、HTTPS、[ftp]等众多协议，还支持POST、cookies、认证、从指定偏移处下载部分文件、用户代理字符串、限速、文件大小、进度条等特征。做网页处理流程和数据检索自动化，curl可以祝一臂之力。</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># curl -o 123.png https://www.xxx.com/img/hello.png</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># ps: 如果遇到下载提示无法简历SSL链接，使用-k选项或者--insecure</span>
+</span></span><span class="line"><span class="cl">curl -k -o 123.png https://www.xxx.com/img/hello.png
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载远程脚本并直接在本地执行</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 你可以在远程在test.sh所在的文件夹下执行python3 -m http.server 8899启动一个服务，Python2则用python2 -m SimpleHTTPServer 8899</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 然后在本地执行（注意关闭防火墙与selinux）</span>
+</span></span><span class="line"><span class="cl">curl -s http://192.168.71.206:8899/test.sh <span class="p">|</span> bash  <span class="c1"># -s代表静默模式，会屏蔽掉curl命令本身的输出</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="szrz">sz、rz
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 系统默认没有该命令，需要下载：yum install lrzsz -y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">将服务器上选定的文件下载/发送到本机
+</span></span><span class="line"><span class="cl">sz bak.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">弹出一个文件选择窗口，从本地选择文件上传到服务器
+</span></span><span class="line"><span class="cl">rz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rz -E <span class="c1"># -E如果目标文件名已经存在，则重命名传入文件。新文件名将添加一个点和一个数字(0..999）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="文件管理之输出与重定向">文件管理之输出与重定向
+</h2><p>输出即把相关对象通过输出设备（显示器等）显示出来，输出又分正确输出和错误输出<br>
+一般情况下标准输出设备为显示器，标准输入设备为键盘。
+linux中用文件标识符</p>
+<ul>
+<li>0代表标准输入</li>
+<li>1代表标准正确输出</li>
+<li>2代表标准错误输出
+<img src="/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png"
+	width="1024"
+	height="313"
+	srcset="/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, /p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w"
+	loading="lazy"
+	
+		alt="重定向"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="327"
+		data-flex-basis="785px"
+	
+></li>
+</ul>
+<h3 id="输出重定向-">输出重定向 ：
+</h3><p>正常输出是把内容输出到显示器上，而输出重定向是把内容输出到文件中，&gt;代表覆盖，&raquo;代表追加
+Ps：标准输出的1可以省略</p>
+<p>例如：ifconfig &gt; test.log 即把ifconfig执行显示的正确内容写入test.log.当前页面不再显示执行结果。
+注意：错误输出重定向&gt;与&raquo;后边不要加空格</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">1、下述两个命令作用相同
+</span></span><span class="line"><span class="cl">命令 &gt;&gt;file.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> 
+</span></span><span class="line"><span class="cl">命令 <span class="p">&amp;</span>&gt;&gt;file.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、正确日志和错误日志分开保存
+</span></span><span class="line"><span class="cl">命令 &gt;&gt;file1.log 2&gt;&gt;file2.log 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、系统有个常见用法 ls <span class="p">&amp;</span>&gt;/dev/null 正确输出或错误输出结果都不要。（null可以理解为黑洞或垃圾站）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="输入重定向">输入重定向：
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#没有改变输入的方向，默认键盘，此时等待输入</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@egon ~<span class="o">]</span><span class="c1"># tr &#39;N&#39; &#39;n&#39;</span>
+</span></span><span class="line"><span class="cl">No
+</span></span><span class="line"><span class="cl">no
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@egon ~<span class="o">]</span><span class="c1"># tr &#39;N&#39; &#39;n&#39; &lt; file.txt</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#没有改变输入的方向，默认键盘，此时等待输入</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@egon ~<span class="o">]</span><span class="c1"># grep &#39;root&#39;</span>
+</span></span><span class="line"><span class="cl">oldboy
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@egon ~<span class="o">]</span><span class="c1"># grep &#39;root&#39; &lt; /etc/passwd</span>
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 读写块设备</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@egon ~<span class="o">]</span><span class="c1"># dd if=/dev/zero of=/file1.txt bs=1M count=20</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@egon ~<span class="o">]</span><span class="c1"># dd &lt;/dev/zero &gt;/file2.txt bs=1M count=20</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># mysql如何恢复备份，了解即可，不用关注。</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qls ~<span class="o">]</span><span class="c1"># mysql -uroot -p123 &lt; bbs.sql</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="文件管理之字符处理命令">文件管理之字符处理命令
+</h2><h3 id="sort">sort
+</h3><p>用于将文件内容加以排序</p>
+<ul>
+<li>-n # 依照数值的大小排序</li>
+<li>-r # 以相反的顺序来排序</li>
+<li>-k # 以某列进行排序</li>
+<li>-t # 指定分割符，默认是以空格为分隔符</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sort -t &#34;:&#34; -n -r -k2 file.txt </span>
+</span></span><span class="line"><span class="cl">f:11
+</span></span><span class="line"><span class="cl">e:5
+</span></span><span class="line"><span class="cl">a:4
+</span></span><span class="line"><span class="cl">b:3
+</span></span><span class="line"><span class="cl">c:2
+</span></span><span class="line"><span class="cl">d:1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="uniq">uniq
+</h3><p>用于检查及删除文本文件中重复出现的行列，一般与 sort 命令结合使用</p>
+<ul>
+<li>-c # 在每列旁边显示该行重复出现的次数。</li>
+<li>-d # 仅显示重复出现的行列。</li>
+<li>-u # 仅显示出一次的行列。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># sort file.txt | uniq -d  </span>
+</span></span><span class="line"><span class="cl"><span class="m">123</span>
+</span></span><span class="line"><span class="cl">hello
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="cut">cut
+</h3><p>cut命令用来显示行中的指定部分，删除文件中指定字段</p>
+<ul>
+<li>-d # 指定字段的分隔符，默认的字段分隔符为&quot;TAB&quot;；</li>
+<li>-f # 显示指定字段的内容；</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># head -1 /etc/passwd </span>
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># head -1 /etc/passwd | cut -d &#34;:&#34; -f1,3,4,6</span>
+</span></span><span class="line"><span class="cl">root:0:0:/root
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="tr">tr
+</h3><p>替换或删除命令</p>
+<ul>
+<li>-d # 删除字符</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># head -1 /etc/passwd |tr &#34;root&#34; &#34;ROOT&#34;</span>
+</span></span><span class="line"><span class="cl">ROOT:x:0:0:ROOT:/ROOT:/bin/bash
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># head -1 /etc/passwd |tr -d &#34;root&#34;</span>
+</span></span><span class="line"><span class="cl">:x:0:0::/:/bin/bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="wc">wc
+</h3><p>统计，计算数字</p>
+<ul>
+<li>-c # 统计文件的Bytes数；</li>
+<li>-l # 统计文件的行数；</li>
+<li>-w # 统计文件中单词的个数，默认以空白字符做为分隔符</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># grep &#34;hello&#34; file.txt \|wc -l|</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="文件管理之打包压缩大文件切分">文件管理之打包压缩/大文件切分
+</h2><h3 id="打包压缩">打包压缩
+</h3><p><strong>1. 什么是打包压缩</strong>
+打包指的是将多个文件和目录合并为一个特殊文件
+然后将该特殊文件进行压缩
+最终得到一个压缩包
+<strong>2. 为什么使用压缩包</strong><br>
+1.减少占用的体积
+2.加快网络的传输
+<strong>3. Windows的压缩和Linux的有什么不同</strong><br>
+windows: zip rar(linux不支持)
+linux: zip tar.gz tar.bz2 .gz
+如果希望windows的软件能被linux解压,或者linux的软件包被windows能识别,选择zip.
+PS: 压缩包的后缀不重要,但一定要携带.
+<strong>4. Linux下常见的压缩包类型</strong></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>格式</th>
+          <th>压缩工具</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>.zip</strong></td>
+          <td><strong>zip压缩工具</strong></td>
+      </tr>
+      <tr>
+          <td><strong>.gz</strong></td>
+          <td><strong>gzip压缩工具，只能压缩文件，会删除源文件（通常配合tar使用）</strong></td>
+      </tr>
+      <tr>
+          <td><strong>.bz2</strong></td>
+          <td><strong>bzip2压缩工具，只能压缩文件，会删除源文件（通常配合tar使用）</strong></td>
+      </tr>
+      <tr>
+          <td><strong>.tar.gz</strong></td>
+          <td><strong>先使用tar命令归档打包，然后使用gzip压缩</strong></td>
+      </tr>
+      <tr>
+          <td><strong>.tar.bz2</strong></td>
+          <td><strong>先使用tar命令归档打包，然后使用bzip压缩</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<p>ps：windows下支持.rar，linux不支持.rar</p>
+<p>打包压缩与解压缩方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 1、打包</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost test<span class="o">]</span><span class="c1"># tar cvf etc_bak.tar /etc/  # c创建 v详细 f打包后文件路径</span>
+</span></span><span class="line"><span class="cl">ps: 
+</span></span><span class="line"><span class="cl">    打包的目标路径如果是绝对路径，会提示：tar: 从成员名中删除开头的“/”，不影响打包，
+</span></span><span class="line"><span class="cl">    添加-P选项便不再提示：tar cvPf ...
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    可以cd 到 /etc下然后tar cvf etc_bak.tar *打包，这样去掉了一层文件夹
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 2、压缩</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost test<span class="o">]</span><span class="c1"># gzip etc_bak.tar   # 文件体积变小，并且加上后缀.gz</span>
+</span></span><span class="line"><span class="cl">ps:
+</span></span><span class="line"><span class="cl">    gzip -&gt; gunzip
+</span></span><span class="line"><span class="cl">    bzip2-&gt; bunzip2
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#3、上述两步可以合二为一</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost test<span class="o">]</span><span class="c1"># tar czvf etc1_bak.tar.gz /etc/  # 选项z代表gzip压缩算法</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost test<span class="o">]</span><span class="c1"># tar cjvf etc1_bak.tar.bz2 /etc/  # 选项j代表bzip2压缩算法</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#zip压缩</span>
+</span></span><span class="line"><span class="cl">选项：
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    -r      <span class="c1">#递归压缩  压缩目录 </span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    -q      <span class="c1">#静默输出 </span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 示例1、</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># zip /test/bak.zip a.txt b.txt c.txt  # zip后的第一个参数是压缩包路径，其余为被压缩的文件</span>
+</span></span><span class="line"><span class="cl">  adding: a.txt <span class="o">(</span>stored 0%<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  adding: b.txt <span class="o">(</span>stored 0%<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  adding: c.txt <span class="o">(</span>stored 0%<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ls /test/</span>
+</span></span><span class="line"><span class="cl">bak.zip
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 示例1、</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># zip  -rq  etc.zip  /etc  # 加上-q后压缩过程不再提示</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#1、针对xxx.tar.gz 或者 xxx.tar.bz2，统一使用</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost test<span class="o">]</span><span class="c1"># tar xvf 压缩包 -C 解压到的目录  # 无需指定解压算法，tar会自动判断</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#2、针对xxx.zip，用unzip</span>
+</span></span><span class="line"><span class="cl">选项：
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    -l      <span class="c1">#显示压缩包的列表信息</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    -q      <span class="c1">#静默输出 </span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    -d      <span class="c1">#解压到指定的目录  </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost test<span class="o">]</span><span class="c1"># unzip -q xxx.zip -d /opt</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="拓展时间命令-date">拓展时间命令 date
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#选项</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">-d         <span class="c1">#根据你的描述显示日期</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">-s     <span class="c1">#修改日期</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%H         <span class="c1">#小时，24小时制（00~23）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%M         <span class="c1">#分钟（00~59）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%s         <span class="c1">#从1970年1月1日00:00:00到目前经历的秒数</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%S         <span class="c1">#显示秒（00~59）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%T         <span class="c1">#显示时间，24小时制（hh:mm:ss）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%d         <span class="c1">#一个月的第几天（01~31）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%j         <span class="c1">#一年的第几天（001~366）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%m         <span class="c1">#月份（01~12）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%w         <span class="c1">#一个星期的第几天（0代表星期天）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%W         <span class="c1">#一年的第几个星期（00~53，星期一为第一天）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%y         <span class="c1">#年的最后两个数字（1999则是99）</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%Y         <span class="c1">#年，实际</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">%F         <span class="c1">#显示日期（%Y-%m-%d）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[root@localhost ~]# date
+</span></span><span class="line"><span class="cl">2020年 08月 12日 星期三 20:55:48 CST
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%F
+</span></span><span class="line"><span class="cl">2020-08-12
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%Y-%m-%d
+</span></span><span class="line"><span class="cl">2020-08-12
+</span></span><span class="line"><span class="cl">[root@localhost ~]# 
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%y-%m-%d
+</span></span><span class="line"><span class="cl">20-08-12
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%T
+</span></span><span class="line"><span class="cl">00:01:03
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%H:%M:%S
+</span></span><span class="line"><span class="cl">00:01:11
+</span></span><span class="line"><span class="cl">[root@localhost ~]# 
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%w
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%s
+</span></span><span class="line"><span class="cl">1597236988
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%d
+</span></span><span class="line"><span class="cl">12
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%W
+</span></span><span class="line"><span class="cl">32
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%j
+</span></span><span class="line"><span class="cl">225
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -d &#34;-1 day&#34; +%F
+</span></span><span class="line"><span class="cl">2020-08-11
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -d &#34;1 day&#34; +%F
+</span></span><span class="line"><span class="cl">2020-08-13
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -d &#34;+1 day&#34; +%F
+</span></span><span class="line"><span class="cl">2020-08-13
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -d &#34;3 years&#34; +%F
+</span></span><span class="line"><span class="cl">2023-08-12
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -d &#34;+3 years&#34; +%F
+</span></span><span class="line"><span class="cl">2023-08-12
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -d &#34;+3 hours&#34; +%F_%H:%M:%S
+</span></span><span class="line"><span class="cl">2020-08-12_23:58:06
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -s 20201111
+</span></span><span class="line"><span class="cl">2020年 11月 11日 星期三 00:00:00 CST
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -s 11:11:11
+</span></span><span class="line"><span class="cl">2020年 11月 11日 星期三 11:11:11 CST
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date -s &#34;20201111 11:11:11&#34;
+</span></span><span class="line"><span class="cl">2020年 11月 11日 星期三 11:11:11 CST
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%F
+</span></span><span class="line"><span class="cl">2020-11-11
+</span></span><span class="line"><span class="cl">[root@localhost ~]# date +%T
+</span></span><span class="line"><span class="cl">11:11:29
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">备份使用
+</span></span><span class="line"><span class="cl">[root@localhost ~]# tar czvf `date +%F`_bak.tar.gz /etc
+</span></span><span class="line"><span class="cl">[root@localhost ~]# tar czvf `date +%F_%H_%M_%S`_bak.tar.gz /etc  # 如果带有时分秒，不要用冒号分隔，因为文件名的命名里不能带有冒号
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="大文件切分">大文件切分
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 生产环境中，一些文件比较大，动则几个G，有的安装包和镜像可达到十几G，但是有些平台显示传输文 件大小，所以一些比较大的文件会被切割上传再合并。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里介绍了个比较常用简单的切割方式split</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># split -b 1024m vgpu-0.3.6.tgz</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ls</span>
+</span></span><span class="line"><span class="cl">vgpu-0.3.6.tgz  xaa     xab     xac
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ls -lh</span>
+</span></span><span class="line"><span class="cl">total <span class="m">16206432</span>
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> linhaifeng01  staff   2.6G  <span class="m">8</span>  <span class="m">7</span> 13:03 b.tar
+</span></span><span class="line"><span class="cl">-rw-r--r--@ <span class="m">1</span> linhaifeng01  staff   2.6G  <span class="m">8</span>  <span class="m">5</span> 16:22 vgpu-0.3.6.tgz
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> linhaifeng01  staff   1.0G  <span class="m">8</span>  <span class="m">7</span> 13:03 xaa
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> linhaifeng01  staff   1.0G  <span class="m">8</span>  <span class="m">7</span> 13:03 xab
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> linhaifeng01  staff   582M  <span class="m">8</span>  <span class="m">7</span> 13:03 xac
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新合并比对md5值是一致的</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># md5 vgpu-0.3.6.tgz </span>
+</span></span><span class="line"><span class="cl">MD5 <span class="o">(</span>vgpu-0.3.6.tgz<span class="o">)</span> <span class="o">=</span> 94583a6e02508d142594701234a080ff
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat x* &gt; b.tar</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># md5 b.tar </span>
+</span></span><span class="line"><span class="cl">MD5 <span class="o">(</span>b.tar<span class="o">)</span> <span class="o">=</span> 94583a6e02508d142594701234a080ff
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/notes/">Notes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-3/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-3/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（三）：文件系统管理高级"
+                        data-key="Linux-basics-3" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（三）：文件系统管理高级</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-2/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-2/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（二）：文件系统管理基础"
+                        data-key="Linux-basics-2" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（二）：文件系统管理基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-1/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（一）：初识 Linux "
+                        data-key="Linux-basics-1" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（一）：初识 Linux </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

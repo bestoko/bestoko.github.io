@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.\n下面给出一个简单的解决办法:\n1 sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区\n(如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)\n接着:\n1 sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.\n如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：\n1 GRUB_DISABLE_OS_PROBER=false ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.\n">
 <title>Arch Linux与Win11双系统修复grub引导</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/grubfix/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Arch Linux与Win11双系统修复grub引导">
-<meta property='og:description' content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.\n下面给出一个简单的解决办法:\n1 sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区\n(如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)\n接着:\n1 sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.\n如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：\n1 GRUB_DISABLE_OS_PROBER=false ">
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Arch Linux与Win11双系统修复grub引导">
+<meta property='og:description' content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.\n">
 <meta property='og:url' content='https://bestoko.cc/p/grubfix/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Windows 11' /><meta property='article:tag' content='Grub' /><meta property='article:published_time' content='2022-03-05T19:19:15&#43;08:00'/><meta property='article:modified_time' content='2022-03-05T19:19:15&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/grubfix/fix-grub.jpg' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Arch Linux与Win11双系统修复grub引导">
-<meta name="twitter:description" content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.\n下面给出一个简单的解决办法:\n1 sudo pacman -S prober 安装 os-prober , 这个工具可以帮助自动发现包含windows的分区\n(如果你的windows分区启用了bitlocker, 你可能还需要先使用dislocker)\n接着:\n1 sudo grub-mkconfig -o /boot/grub/grub.cfg 利用 grub-mkconfig 探测其他已经安装的系统并自动把他们添加到启动菜单.\n如果你得到以下输出：Warning: os-prober will not be executed to detect other bootable partitions，你需要编辑/etc/default/grub并取消下面这一行的注释，如果没有相应注释的话就在文件末尾添加上：\n1 GRUB_DISABLE_OS_PROBER=false "><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/grubfix/fix-grub.jpg' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -42,7 +42,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -418,7 +418,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -607,8 +607,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

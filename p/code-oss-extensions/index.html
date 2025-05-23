@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。\n我之前使用\n1 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。\n方法一\r我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：\n1 2 3 4 5 &#34;extensionsGallery&#34;: { &#34;serviceUrl&#34;: &#34;https://marketplace.visualstudio.com/_apis/public/gallery&#34;, &#34;cacheUrl&#34;: &#34;https://vscode.blob.core.windows.net/gallery/index&#34;, &#34;itemUrl&#34;: &#34;https://marketplace.visualstudio.com/items&#34; } 重新启动Code-OSS就可以了。\n方法二\r方法一正常使用一段时间后，在某次重启后出现打不开Code-OSS的情况，所幸从AUR上找到了另一个包解决了问题，记录在此。\n1 yay -S code-marketplace ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。\n">
 <title>Arch Linux上修改Code-OSS扩展源</title>
 
 <link rel='canonical' href='https://bestoko.cc/p/code-oss-extensions/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Arch Linux上修改Code-OSS扩展源">
-<meta property='og:description' content=" 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。\n我之前使用\n1 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。\n方法一\r我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：\n1 2 3 4 5 &#34;extensionsGallery&#34;: { &#34;serviceUrl&#34;: &#34;https://marketplace.visualstudio.com/_apis/public/gallery&#34;, &#34;cacheUrl&#34;: &#34;https://vscode.blob.core.windows.net/gallery/index&#34;, &#34;itemUrl&#34;: &#34;https://marketplace.visualstudio.com/items&#34; } 重新启动Code-OSS就可以了。\n方法二\r方法一正常使用一段时间后，在某次重启后出现打不开Code-OSS的情况，所幸从AUR上找到了另一个包解决了问题，记录在此。\n1 yay -S code-marketplace ">
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Arch Linux上修改Code-OSS扩展源">
+<meta property='og:description' content=" 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。\n">
 <meta property='og:url' content='https://bestoko.cc/p/code-oss-extensions/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Arch' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Code-OSS' /><meta property='article:published_time' content='2021-12-20T09:00:01&#43;08:00'/><meta property='article:modified_time' content='2021-12-20T09:00:01&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/code-oss-extensions/code-oss.png' />
 <meta name="twitter:site" content="@bestokoCC">
     <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Arch Linux上修改Code-OSS扩展源">
-<meta name="twitter:description" content=" 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。\n我之前使用\n1 pacman -S code 所安装的正是Code-OSS ，默认不使用微软官方扩展市场。\n方法一\r我们可以通过修改/usr/lib/code/product.json解决这个问题，添加如下内容：\n1 2 3 4 5 &#34;extensionsGallery&#34;: { &#34;serviceUrl&#34;: &#34;https://marketplace.visualstudio.com/_apis/public/gallery&#34;, &#34;cacheUrl&#34;: &#34;https://vscode.blob.core.windows.net/gallery/index&#34;, &#34;itemUrl&#34;: &#34;https://marketplace.visualstudio.com/items&#34; } 重新启动Code-OSS就可以了。\n方法二\r方法一正常使用一段时间后，在某次重启后出现打不开Code-OSS的情况，所幸从AUR上找到了另一个包解决了问题，记录在此。\n1 yay -S code-marketplace "><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content=" 类比于Chrome 浏览器和其开源的“上游”项目 Chromium。VS Code 确实是基于开源代码库构建的。而微软官方发布的版本带有一些与微软相关的功能，包括一项商标、一个插件库、一个 C# 调试器以及遥测。但如果你克隆仓库然后自行编译，这些东西都不会被加入，所以你会得到一个名为 Code - OSS 的“干净”版本（OSS，Open-source software ）。\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bestoko.cc/p/code-oss-extensions/code-oss.png' />
     <link rel="shortcut icon" href="/img/bestoko.ico" />
 
@@ -42,7 +42,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -290,7 +290,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -455,7 +455,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -644,8 +644,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
