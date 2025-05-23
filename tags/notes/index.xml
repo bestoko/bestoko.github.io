@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Notes on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/notes/</link>
+        <link>http://localhost:1313/tags/notes/</link>
         <description>Recent content in Notes on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/notes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/notes/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux基础（四）：文件系统管理高级</title>
-        <link>https://bestoko.cc/p/linux-basics-4/</link>
+        <link>http://localhost:1313/p/linux-basics-4/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-4/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
+        <guid>http://localhost:1313/p/linux-basics-4/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
 &lt;/h2&gt;&lt;h3 id=&#34;查看命令所属文件&#34;&gt;查看命令所属文件
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -265,10 +265,10 @@ linux中用文件标识符&lt;/p&gt;
 &lt;li&gt;0代表标准输入&lt;/li&gt;
 &lt;li&gt;1代表标准正确输出&lt;/li&gt;
 &lt;li&gt;2代表标准错误输出
-&lt;img src=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;313&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;重定向&#34;
@@ -872,15 +872,15 @@ PS: 压缩包的后缀不重要,但一定要携带.
         </item>
         <item>
         <title>Linux基础（三）：文件系统管理高级</title>
-        <link>https://bestoko.cc/p/linux-basics-3/</link>
+        <link>http://localhost:1313/p/linux-basics-3/</link>
         <pubDate>Thu, 22 May 2025 23:16:27 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-3/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-3/vim.png&#34;
+        <guid>http://localhost:1313/p/linux-basics-3/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-3/vim.png&#34;
 	width=&#34;787&#34;
 	height=&#34;531&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, https://bestoko.cc/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, http://localhost:1313/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1308,11 +1308,11 @@ diff -u bbb.txt aaa.txt&lt;/p&gt;
         </item>
         <item>
         <title>Linux基础（二）：文件系统管理基础</title>
-        <link>https://bestoko.cc/p/linux-basics-2/</link>
+        <link>http://localhost:1313/p/linux-basics-2/</link>
         <pubDate>Wed, 21 May 2025 23:30:33 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
+        <guid>http://localhost:1313/p/linux-basics-2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
 &lt;/h2&gt;&lt;p&gt;整个系统目录结构是一个树形结构
 树根：/&lt;/p&gt;
 &lt;p&gt;一切皆文件的设计思想
@@ -1855,11 +1855,11 @@ xterm&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（一）：初识 Linux </title>
-        <link>https://bestoko.cc/p/linux-basics-1/</link>
+        <link>http://localhost:1313/p/linux-basics-1/</link>
         <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-1/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
+        <guid>http://localhost:1313/p/linux-basics-1/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
 &lt;/h2&gt;&lt;h3 id=&#34;从功能维度划分&#34;&gt;从功能维度划分
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;

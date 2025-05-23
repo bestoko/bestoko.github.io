@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Recent content in Categories on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux</title>
-        <link>https://bestoko.cc/categories/linux/</link>
+        <link>http://localhost:1313/categories/linux/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>https://bestoko.cc/categories/linux/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/linux/%E9%95%BF%E5%B4%8E%E7%88%BD%E4%B8%96.png" alt="Featured image of post Linux" /&gt;</description>
+        <guid>http://localhost:1313/categories/linux/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/linux/%E9%95%BF%E5%B4%8E%E7%88%BD%E4%B8%96.png" alt="Featured image of post Linux" /&gt;</description>
         </item>
         <item>
         <title>生活</title>
-        <link>https://bestoko.cc/categories/life/</link>
+        <link>http://localhost:1313/categories/life/</link>
         <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/categories/life/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/life/%E9%AB%98%E6%9D%BE%E7%81%AF.png" alt="Featured image of post 生活" /&gt;</description>
+        <guid>http://localhost:1313/categories/life/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/life/%E9%AB%98%E6%9D%BE%E7%81%AF.png" alt="Featured image of post 生活" /&gt;</description>
         </item>
         <item>
         <title>玩机</title>
-        <link>https://bestoko.cc/categories/android-modding/</link>
+        <link>http://localhost:1313/categories/android-modding/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/categories/android-modding/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/android-modding/Amoris.png" alt="Featured image of post 玩机" /&gt;</description>
+        <guid>http://localhost:1313/categories/android-modding/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/android-modding/Amoris.png" alt="Featured image of post 玩机" /&gt;</description>
         </item>
         <item>
         <title>HomeLab</title>
-        <link>https://bestoko.cc/categories/homelab/</link>
+        <link>http://localhost:1313/categories/homelab/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/categories/homelab/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/homelab/Doloris.png" alt="Featured image of post HomeLab" /&gt;</description>
-        </item>
-        <item>
-        <title>工作</title>
-        <link>https://bestoko.cc/categories/work/</link>
-        <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/categories/work/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/work/%E6%A4%8E%E5%90%8D%E7%AB%8B%E5%B8%8C.png" alt="Featured image of post 工作" /&gt;</description>
+        <guid>http://localhost:1313/categories/homelab/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/homelab/Doloris.png" alt="Featured image of post HomeLab" /&gt;</description>
         </item>
         <item>
         <title>娱乐</title>
-        <link>https://bestoko.cc/categories/play/</link>
-        <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
+        <link>http://localhost:1313/categories/play/</link>
+        <pubDate>Thu, 10 Oct 2024 22:31:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/categories/play/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/play/%E8%A6%81%E4%B9%90%E5%A5%88.png" alt="Featured image of post 娱乐" /&gt;</description>
+        <guid>http://localhost:1313/categories/play/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/play/%E8%A6%81%E4%B9%90%E5%A5%88.png" alt="Featured image of post 娱乐" /&gt;</description>
+        </item>
+        <item>
+        <title>工作</title>
+        <link>http://localhost:1313/categories/work/</link>
+        <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/work/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/work/%E6%A4%8E%E5%90%8D%E7%AB%8B%E5%B8%8C.png" alt="Featured image of post 工作" /&gt;</description>
         </item>
         <item>
         <title>学习</title>
-        <link>https://bestoko.cc/categories/study/</link>
+        <link>http://localhost:1313/categories/study/</link>
         <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/categories/study/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/study/%E5%8D%83%E6%97%A9%E7%88%B1%E9%9F%B3.png" alt="Featured image of post 学习" /&gt;</description>
+        <guid>http://localhost:1313/categories/study/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/study/%E5%8D%83%E6%97%A9%E7%88%B1%E9%9F%B3.png" alt="Featured image of post 学习" /&gt;</description>
         </item>
         
     </channel>
