@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gnome on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/gnome/</link>
+        <description>Recent content in Gnome on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 30 Dec 2021 09:18:46 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/gnome/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Gnome农历插件安装踩坑记录</title>
+        <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
+        <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lunar Calendar 农历&lt;/a&gt;，直接安装会因为缺少依赖报错，搜到的&lt;a class=&#34;link&#34; href=&#34;https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rpm包&lt;/a&gt;也无法正常安装，查了下需要手动编译安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/yetist/lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;fedora35-编译安装lunar-date&#34;&gt;Fedora35 编译安装lunar-date
+&lt;/h2&gt;&lt;p&gt;github页给的安装指南如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;meson build --prefix /usr -Ddocs&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dintrospection&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dvapi&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -Dtests&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ninja -C build/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ninja -C build install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;所以首先&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install meson ninja-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着运行指南上第一条指令，如果有依赖缺失会报错，但是提示的依赖名称不能直接用于&lt;code&gt;dnf install&lt;/code&gt;,可以在&lt;a class=&#34;link&#34; href=&#34;https://command-not-found.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;command-not-found.com&lt;/a&gt; 查询所需安装指令。以我为例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install vala gtk-doc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着重新安装插件就可以正常启用了。&lt;/p&gt;
+&lt;h2 id=&#34;额外可选设置&#34;&gt;额外可选设置
+&lt;/h2&gt;&lt;p&gt;默认情况下当系统语言为中文时扩展可以正常工作，但是像我一样习惯系统语言用英文的话，农历会以拼音形式标注出来（&lt;strong&gt;真的很难看&lt;/strong&gt;），解决办法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
+	width=&#34;2736&#34;
+	height=&#34;1824&#34;
+	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;效果展示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

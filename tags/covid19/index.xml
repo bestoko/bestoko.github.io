@@ -5,46 +5,6 @@
         <link>http://localhost:1313/tags/covid19/</link>
         <description>Recent content in COVID19 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Sat, 31 Dec 2022 21:30:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/covid19/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>阳性、康复与胡思乱想</title>
-        <link>http://localhost:1313/p/covid19_omicron/</link>
-        <pubDate>Sat, 31 Dec 2022 21:30:00 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/covid19_omicron/</guid>
-        <description>&lt;img src="http://localhost:1313/p/covid19_omicron/Covid-19.jpg" alt="Featured image of post 阳性、康复与胡思乱想" /&gt;&lt;p&gt;很不幸的，在2022的最后半个月里，我也染上了新冠病毒，时至今日已经恢复得差不多了，以此博文记录一下养病过程与其间的一些胡思乱想。&lt;/p&gt;
-&lt;h2 id=&#34;中招与康复过程&#34;&gt;中招与康复过程
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/covid19_omicron/positive.jpg&#34;
-	width=&#34;540&#34;
-	height=&#34;1200&#34;
-	srcset=&#34;http://localhost:1313/p/covid19_omicron/positive_hu_ff9c2bc3ac9db40.jpg 480w, http://localhost:1313/p/covid19_omicron/positive_hu_fba10d5258808e70.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;45&#34;
-		data-flex-basis=&#34;108px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;12月19日睡醒，我便感觉浑身发热，脑袋转一下很晕，吃了一片布洛芬开始睡大觉。晚上时合租舍友借了一个抗原给我，果然是中招了。（前一天我只下楼扔过垃圾以及去驿站取了快递，怀疑是在驿站被传染上了。）&lt;/p&gt;
-&lt;p&gt;12月20日，身体已经退烧，但是浑身发软，很饿但毫无胃口，喝了点水直接吐了出来，吃平常的零食感觉咸味特别突出，晚上喉咙开始隐隐作痛，鼻塞也开始加重。&lt;/p&gt;
-&lt;p&gt;12月21日，食欲大涨，煮了份番茄锅荞麦面，开始恢复精神，吃完饭喉咙像吞刀片一样越来越痛，晚上听父母的坐地铁回了家（父母也已经中招几天）。&lt;/p&gt;
-&lt;p&gt;后面几天的症状基本上只剩下鼻塞，越来越重的咽痛以及偶尔咳嗽，四天以后咽痛消失了，咳嗽仍然持续至今。&lt;/p&gt;
-&lt;p&gt;期间也有些小插曲，比如当时我在犹豫坐地铁回家是否有点不道德时（毕竟几周前明知自己阳性仍使用公共交通可以算作违法行为），没想到上了地铁一路都有此起彼伏的咳嗽声音&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;胡思乱想&#34;&gt;胡思乱想
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;“治大国如烙大饼”&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;都知道随着病毒变异，防控疫情带来的效果越来越差，消耗的经济代价越来越高时，放开是迟早的事情。可谁也没想到会来一个180度大转弯，以至于各地爆发疫情的第一时间，甚至不能做到保证布洛芬之类退烧药的供应。三年时间，我们的核酸检测点可以开到雪原上，却做不到感冒药与退烧药的供应链保证，放开前也没有做针对性的调整。我是有备着药，发烧的第一时间吃了药，可是还有很多人一连发烧几天全靠硬挺，因为买不到退烧药。我们的媒体吹嘘的举国体制，又一次露出了草台班子的一面&amp;hellip;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不患寡而患不均&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;放开管控之前，辉瑞的新冠特效药 paxlovid 被简中互联网各路大v抨击的一无是处，而当北京将其纳入医保，并安排社区医院供应给重症患者后，我看到的是这个药一药难求，甚至看到很多加价倒卖。与此同时连花清瘟却被大批量支援云南&amp;hellip;只能说咱们社会主义国家人人平等，有些人比别人更平等&amp;hellip;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;每个人是自己健康的第一负责人&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;这句话我是赞同的，在切身经历过感染后更是深有体会。我有个同事的奶奶没有挺过去，他在南京已经感染并康复核酸检验复阴几天后的情况下，回甘肃老家办事硬是再次感染上新冠，迅速开始第二重阳性考验&amp;hellip;我与家里人这波疫情感染已经基本过去，但可预见的未来，春运会加速东南西北各地毒株的交汇，大大增加变异的可能，而作为普通人，在做好日常防护的同时，我只能提前做好准备，针对性地购买一些药物以备不时之需。&lt;/p&gt;
-&lt;h2 id=&#34;最后的最后&#34;&gt;最后的最后
-&lt;/h2&gt;&lt;p&gt;生活还是要继续，虽然不可能回到2019年，但是明年一定会更好，要把被疫情偷走的时间努力追回来。&lt;/p&gt;
-</description>
-        </item>
-        
+        <language>en-us</language><atom:link href="http://localhost:1313/tags/covid19/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

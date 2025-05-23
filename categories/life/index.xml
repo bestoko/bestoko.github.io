@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Life on Toko&#39;s blog</title>
+        <title>生活 on Toko&#39;s blog</title>
         <link>https://bestoko.cc/categories/life/</link>
-        <description>Recent content in Life on Toko&#39;s blog</description>
+        <description>Recent content in 生活 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 25 Mar 2023 23:31:05 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/life/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 01 May 2025 23:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/life/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>主力机换到iOS的这半年</title>
+        <link>https://bestoko.cc/p/androidios/</link>
+        <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/androidios/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/androidios/Android2iOS.jpg" alt="Featured image of post 主力机换到iOS的这半年" /&gt;&lt;h2 id=&#34;契机&#34;&gt;契机
+&lt;/h2&gt;&lt;p&gt;首先我得承认去年的 wwdc 上 Apple Intelligence（Apple AI）画的大饼确实吸引了我，一直用一加玩机的我也不觉得在各家手机厂商都在积极拥抱ai的情况下，日后折腾的体验会比厂商调教的更顺手。虽然中文苹果智能真正落地兑现还是今年4月的事情，黑五有了优惠后就咬咬牙入了日版的16PM（当然是256G丐版 我可接受不了苹果比金子还贵的存储定价）。至今用了也差不多半年时间，也差不多不带偏见可以写写自己从 Android 换到 iOS 的感受了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/androidios/jd.PNG&#34;
+	width=&#34;1320&#34;
+	height=&#34;2698&#34;
+	srcset=&#34;https://bestoko.cc/p/androidios/jd_hu_900e2ba01a76dd0b.PNG 480w, https://bestoko.cc/p/androidios/jd_hu_ecaf22196ceec021.PNG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;117px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;android&#34;&gt;Android
+&lt;/h2&gt;&lt;p&gt;先来谈谈Android吧。&lt;/p&gt;
+&lt;p&gt;我的玩机历史大概要从高一时买的乐视 1手机才算开始。~~（贾老板下周回国吗？）~~应该是国内厂商中最早用type-c接口的了，可惜现在的舆论上被华为摘了桃子，意难平XD。乐视1的硬件在当时确实很好，可惜那个系统真的是难用，还有无法隐藏的自家视频入口。我就折腾起了刷机，后来在XDA上搜到了某人移植的魔趣 mokee rom。接触到魔趣这个差不多算国内 lineageOS 的项目，自然不可避免地去了解哪些手机容易解锁、包比较多。接着就是一加人一加魂，一加5-一加8-一加Ace2Pro，刷过MIUI、flyme各种官改移植，也玩过很多类原生毛坯房。也有大半夜救砖的黑历史。总的来说还是乐趣大于折腾的麻烦。&lt;/p&gt;
+&lt;p&gt;这大概就是Android最大的优点了，开放性高，桌面、主题、文件管理等等都有非常多的可选项与调整的可能。再不济可以掀桌子（解锁）刷入别的系统，把手机一点点打造成自己最顺手最喜欢的样子。当然这个过程中最痛苦的是跟各种金融app斗智斗勇了（安全上不可调和的矛盾了属于是）。&lt;/p&gt;
+&lt;p&gt;与此同时，在这么多年的过程中我也发现了自认为Android最大的缺点，那就是系统更新的维护性并不积极，甚至可以说是管生不管养。之前爆出的拼多多利用漏洞提权获取Android用户隐私的事，厂商的安全补丁推送却很慢，甚至小厂根本就没有。站在厂商的角度很好理解，东西已经卖出去了，为什么要花那么大力气去维护几年前的老机型，给个两三个大版本的更新推送你就该谢天谢地了。时至今日，某些厂商甚至还有云控恶意降低老机型流畅度来迫使用户换手机的做法，实在是无法接受。&lt;/p&gt;
+&lt;h2 id=&#34;ios&#34;&gt;iOS
+&lt;/h2&gt;&lt;p&gt;主力机换到 iOS 后，第一感觉是精致感。当然我说的不是硬件上的（PM这玩意板砖似的实在称不上有什么好的握持体验）。而是系统上的诸如解锁、打断动画、毛玻璃之类的小细节。尤其是图标，可能是安卓厂商很难去强迫应用去做到一个统一规范，用第三方图标包又难免有遗漏不全的地方，iOS的图标就明显顺眼很多。第二大惊喜的就是续航。本来最担心的是没有快充该怎么适应，结果实际用下来，WiFi 场景下省电情况超乎我的想象。在公司大部分时间都是WiFi的情况下，4800毫安时的苹果甚至可以做到一天一充，跟现在动辄六七千毫安时的国产安卓手机对比也不落下风了。接着就是老生常谈的AppStore了，切换外区商店，购买下载等等都一气呵成，还是很容易有个不错的下载体验的。&lt;/p&gt;
+&lt;p&gt;当然我不是变成了luv letter那样的果吹。还是有些地方让我用起来觉得很不方便，或者说能理解为什么这么设计但还是不爽的地方。&lt;/p&gt;
+&lt;p&gt;首先是完全不理解的，能做好但不去做的功能。没有一个统一的全局返回手势，Android 上全面屏手势已经基本统一，无论是左滑还是右滑，都可以很轻松的返回上一级菜单。而iOS让我无力吐槽，一部分app可以右滑返回，一部分只能点击左上角返回。右滑返回的体验也不好，如 bilibili 连续点了很多视频下去的话，右滑返回会直接回到首页而非上一个视频。左上角返回更是无力吐槽，那么大的板砖单手握持已经很不舒服了，给到小指很大压力，大拇指再费力去够到左上角实在是糟糕透了。本地化的缺失也是我狂喷的另一个点，再没有换过来之前，我很难想象iOS用户甚至没有官方的法定节假日闹钟。最后也是经典的信号问题，没想到我每天下楼时拿着手机会连不上网，同样的位置同样的手机卡，Android手机从来没有出现过这样的事。&lt;/p&gt;
+&lt;p&gt;还有一些可能是因为隐私考虑而导致的不方便。我可以理解，也在尝试自适应。比如通话录音时的提醒音。又比如连续复制时，中途如果没有切换到输入法，是不会记录下来中间的复制文本的，只保留最后一次的结果。 还有通知栏与负一屏小组件状态同步不及时的小毛病。钱包也不能自由录入NFC卡片。没有长截屏等等。&lt;/p&gt;
+&lt;p&gt;最后是这个半成品的apple ai，我该夸还是骂呢。有时候通知栏总结还是挺方便的，图片消除也凑合（是的凑合，可能是因为仅本地模型处理的原因）文本的概括也还行，写作我没有尝试，但大部分场景下也就那样吧，与画的智能Siri、多app联动的大饼差远了&amp;hellip;希望真的是未来可期吧: )&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;总的来说体验不能算后悔，但也谈不上有符合预期。好的设计是趋同的，我还是希望iOS能多搬点好用的Android已经成熟的功能过来的。也让我意识到双持才是最好滴。PM已经这么大了，还是再收一台可以解锁的小屏安卓搭配着玩吧。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>业余无线电拿证(A类)&amp;设台速通指北</title>
         <link>https://bestoko.cc/p/amateurradio/</link>
         <pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate>
