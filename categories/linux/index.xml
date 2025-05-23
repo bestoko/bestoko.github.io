@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linux on Toko&#39;s blog</title>
-        <link>http://localhost:1313/categories/linux/</link>
+        <link>https://bestoko.cc/categories/linux/</link>
         <description>Recent content in Linux on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux基础（四）：文件系统管理高级</title>
-        <link>http://localhost:1313/p/linux-basics-4/</link>
+        <link>https://bestoko.cc/p/linux-basics-4/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-4/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
+        <guid>https://bestoko.cc/p/linux-basics-4/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
 &lt;/h2&gt;&lt;h3 id=&#34;查看命令所属文件&#34;&gt;查看命令所属文件
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -265,10 +265,10 @@ linux中用文件标识符&lt;/p&gt;
 &lt;li&gt;0代表标准输入&lt;/li&gt;
 &lt;li&gt;1代表标准正确输出&lt;/li&gt;
 &lt;li&gt;2代表标准错误输出
-&lt;img src=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;313&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;重定向&#34;
@@ -872,15 +872,15 @@ PS: 压缩包的后缀不重要,但一定要携带.
         </item>
         <item>
         <title>Linux基础（三）：文件系统管理高级</title>
-        <link>http://localhost:1313/p/linux-basics-3/</link>
+        <link>https://bestoko.cc/p/linux-basics-3/</link>
         <pubDate>Thu, 22 May 2025 23:16:27 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-3/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-3/vim.png&#34;
+        <guid>https://bestoko.cc/p/linux-basics-3/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-3/vim.png&#34;
 	width=&#34;787&#34;
 	height=&#34;531&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, http://localhost:1313/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, https://bestoko.cc/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1308,11 +1308,11 @@ diff -u bbb.txt aaa.txt&lt;/p&gt;
         </item>
         <item>
         <title>Linux基础（二）：文件系统管理基础</title>
-        <link>http://localhost:1313/p/linux-basics-2/</link>
+        <link>https://bestoko.cc/p/linux-basics-2/</link>
         <pubDate>Wed, 21 May 2025 23:30:33 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-2/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
+        <guid>https://bestoko.cc/p/linux-basics-2/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
 &lt;/h2&gt;&lt;p&gt;整个系统目录结构是一个树形结构
 树根：/&lt;/p&gt;
 &lt;p&gt;一切皆文件的设计思想
@@ -1855,11 +1855,11 @@ xterm&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（一）：初识 Linux </title>
-        <link>http://localhost:1313/p/linux-basics-1/</link>
+        <link>https://bestoko.cc/p/linux-basics-1/</link>
         <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-1/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
+        <guid>https://bestoko.cc/p/linux-basics-1/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
 &lt;/h2&gt;&lt;h3 id=&#34;从功能维度划分&#34;&gt;从功能维度划分
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
@@ -2143,16 +2143,16 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
-        <link>http://localhost:1313/p/hugo_wsl2/</link>
+        <link>https://bestoko.cc/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/hugo_wsl2/</guid>
-        <description>&lt;img src="http://localhost:1313/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
 &lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2172,10 +2172,10 @@ init 0 关机&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2194,10 +2194,10 @@ init 0 关机&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2207,10 +2207,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, http://localhost:1313/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2223,15 +2223,15 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Ubuntu 20.04 英文环境部分中文字体异形解决方案</title>
-        <link>http://localhost:1313/p/linux-fonts-size/</link>
+        <link>https://bestoko.cc/p/linux-fonts-size/</link>
         <pubDate>Sat, 21 May 2022 10:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-fonts-size/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors.png&#34;
+        <guid>https://bestoko.cc/p/linux-fonts-size/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2406,10 +2406,10 @@ init 0 关机&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;效果：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2422,11 +2422,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Ubuntu 20.04 终端插件配置与美化</title>
-        <link>http://localhost:1313/p/zsh/</link>
+        <link>https://bestoko.cc/p/zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/zsh/</guid>
-        <description>&lt;img src="http://localhost:1313/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
+        <guid>https://bestoko.cc/p/zsh/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
 &lt;h2 id=&#34;zsh&#34;&gt;Zsh
 &lt;/h2&gt;&lt;p&gt;安装 zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2546,11 +2546,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Arch Linux与Win11双系统修复grub引导</title>
-        <link>http://localhost:1313/p/grubfix/</link>
+        <link>https://bestoko.cc/p/grubfix/</link>
         <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/grubfix/</guid>
-        <description>&lt;img src="http://localhost:1313/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+        <guid>https://bestoko.cc/p/grubfix/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
 &lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2588,11 +2588,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Gnome农历插件安装踩坑记录</title>
-        <link>http://localhost:1313/p/gnome-lunar-calendar/</link>
+        <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
         <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gnome-lunar-calendar/</guid>
-        <description>&lt;img src="http://localhost:1313/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Lunar Calendar 农历&lt;/a&gt;，直接安装会因为缺少依赖报错，搜到的&lt;a class=&#34;link&#34; href=&#34;https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;rpm包&lt;/a&gt;也无法正常安装，查了下需要手动编译安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/yetist/lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
@@ -2642,10 +2642,10 @@ init 0 关机&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gnome-lunar-calendar/lunar-date.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1824&#34;
-	srcset=&#34;http://localhost:1313/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, http://localhost:1313/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;效果展示&#34;
@@ -2660,18 +2660,18 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Grub2主题美化踩坑记录</title>
-        <link>http://localhost:1313/p/fedora-grub2-theme/</link>
+        <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
         <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/fedora-grub2-theme/</guid>
-        <description>&lt;img src="http://localhost:1313/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;下载主题&#34;&gt;下载主题
 &lt;/h2&gt;&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MacOS Monterey inspired grub theme&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -2722,18 +2722,18 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
-        <link>http://localhost:1313/p/linux-virtualbox-error/</link>
+        <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
         <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-virtualbox-error/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;
@@ -2760,11 +2760,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Linux与Windows双系统时间不一致的解决方法</title>
-        <link>http://localhost:1313/p/linux-windows-time-conflict/</link>
+        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
         <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-windows-time-conflict/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
@@ -2796,11 +2796,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>http://localhost:1313/p/surface-linux/</link>
+        <link>https://bestoko.cc/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/surface-linux/</guid>
-        <description>&lt;img src="http://localhost:1313/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/surface-linux/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动
@@ -2858,11 +2858,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Arch Linux安装备忘录（二）</title>
-        <link>http://localhost:1313/p/archinstallextra/</link>
+        <link>https://bestoko.cc/p/archinstallextra/</link>
         <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/archinstallextra/</guid>
-        <description>&lt;img src="http://localhost:1313/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/archinstallextra/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
 &lt;h2 id=&#34;配置网络&#34;&gt;配置网络
 &lt;/h2&gt;&lt;p&gt;我们使用&lt;/p&gt;
@@ -3009,10 +3009,10 @@ init 0 关机&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/archinstallextra/GPUdirver.jpg&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
 	width=&#34;955&#34;
 	height=&#34;350&#34;
-	srcset=&#34;http://localhost:1313/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, http://localhost:1313/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3139,11 +3139,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Arch Linux安装备忘录（一）</title>
-        <link>http://localhost:1313/p/archinstall/</link>
+        <link>https://bestoko.cc/p/archinstall/</link>
         <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/archinstall/</guid>
-        <description>&lt;img src="http://localhost:1313/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/archinstall/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
 &lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;

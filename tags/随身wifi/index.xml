@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>随身WiFi on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/%E9%9A%8F%E8%BA%ABwifi/</link>
+        <link>https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/</link>
         <description>Recent content in 随身WiFi on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 15 Dec 2024 23:55:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%9A%8F%E8%BA%ABwifi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Dec 2024 23:55:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>三星 SCR01 入手简单折腾 </title>
-        <link>http://localhost:1313/p/scr01/</link>
+        <link>https://bestoko.cc/p/scr01/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/scr01/</guid>
-        <description>&lt;img src="http://localhost:1313/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/scr01/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
 &lt;h2 id=&#34;外观与配置&#34;&gt;外观与配置
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01A.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, http://localhost:1313/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -26,10 +26,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01B.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, http://localhost:1313/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -64,10 +64,10 @@
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
 &lt;/ul&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, http://localhost:1313/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -76,10 +76,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, http://localhost:1313/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -88,10 +88,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, http://localhost:1313/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -100,10 +100,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, http://localhost:1313/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -112,10 +112,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, http://localhost:1313/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -124,10 +124,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, http://localhost:1313/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -139,10 +139,10 @@
 &lt;p&gt;&lt;code&gt;allow list off&lt;/code&gt; 即运营商锁，关掉之后我们才可以使用默认日本运营商之外的卡&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sa/nsa enable&lt;/code&gt; 默认disable，开启后则可以使用5G&lt;/p&gt;
 &lt;h2 id=&#34;设置apn&#34;&gt;设置APN
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_APN.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, http://localhost:1313/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Toko&#39;s blog</title>
-        <link>http://localhost:1313/post/</link>
+        <link>https://bestoko.cc/post/</link>
         <description>Recent content in Posts on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="https://bestoko.cc/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux基础（四）：文件系统管理高级</title>
-        <link>http://localhost:1313/p/linux-basics-4/</link>
+        <link>https://bestoko.cc/p/linux-basics-4/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-4/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
+        <guid>https://bestoko.cc/p/linux-basics-4/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
 &lt;/h2&gt;&lt;h3 id=&#34;查看命令所属文件&#34;&gt;查看命令所属文件
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -265,10 +265,10 @@ linux中用文件标识符&lt;/p&gt;
 &lt;li&gt;0代表标准输入&lt;/li&gt;
 &lt;li&gt;1代表标准正确输出&lt;/li&gt;
 &lt;li&gt;2代表标准错误输出
-&lt;img src=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;313&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;重定向&#34;
@@ -872,15 +872,15 @@ PS: 压缩包的后缀不重要,但一定要携带.
         </item>
         <item>
         <title>Linux基础（三）：文件系统管理高级</title>
-        <link>http://localhost:1313/p/linux-basics-3/</link>
+        <link>https://bestoko.cc/p/linux-basics-3/</link>
         <pubDate>Thu, 22 May 2025 23:16:27 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-3/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-3/vim.png&#34;
+        <guid>https://bestoko.cc/p/linux-basics-3/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-3/vim.png&#34;
 	width=&#34;787&#34;
 	height=&#34;531&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, http://localhost:1313/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, https://bestoko.cc/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1308,11 +1308,11 @@ diff -u bbb.txt aaa.txt&lt;/p&gt;
         </item>
         <item>
         <title>Linux基础（二）：文件系统管理基础</title>
-        <link>http://localhost:1313/p/linux-basics-2/</link>
+        <link>https://bestoko.cc/p/linux-basics-2/</link>
         <pubDate>Wed, 21 May 2025 23:30:33 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-2/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
+        <guid>https://bestoko.cc/p/linux-basics-2/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
 &lt;/h2&gt;&lt;p&gt;整个系统目录结构是一个树形结构
 树根：/&lt;/p&gt;
 &lt;p&gt;一切皆文件的设计思想
@@ -1855,11 +1855,11 @@ xterm&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（一）：初识 Linux </title>
-        <link>http://localhost:1313/p/linux-basics-1/</link>
+        <link>https://bestoko.cc/p/linux-basics-1/</link>
         <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-1/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
+        <guid>https://bestoko.cc/p/linux-basics-1/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
 &lt;/h2&gt;&lt;h3 id=&#34;从功能维度划分&#34;&gt;从功能维度划分
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
@@ -2143,16 +2143,16 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>主力机换到iOS的这半年</title>
-        <link>http://localhost:1313/p/androidios/</link>
+        <link>https://bestoko.cc/p/androidios/</link>
         <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/androidios/</guid>
-        <description>&lt;img src="http://localhost:1313/p/androidios/Android2iOS.jpg" alt="Featured image of post 主力机换到iOS的这半年" /&gt;&lt;h2 id=&#34;契机&#34;&gt;契机
+        <guid>https://bestoko.cc/p/androidios/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/androidios/Android2iOS.jpg" alt="Featured image of post 主力机换到iOS的这半年" /&gt;&lt;h2 id=&#34;契机&#34;&gt;契机
 &lt;/h2&gt;&lt;p&gt;首先我得承认去年的 wwdc 上 Apple Intelligence（Apple AI）画的大饼确实吸引了我，一直用一加玩机的我也不觉得在各家手机厂商都在积极拥抱ai的情况下，日后折腾的体验会比厂商调教的更顺手。虽然中文苹果智能真正落地兑现还是今年4月的事情，黑五有了优惠后就咬咬牙入了日版的16PM（当然是256G丐版 我可接受不了苹果比金子还贵的存储定价）。至今用了也差不多半年时间，也差不多不带偏见可以写写自己从 Android 换到 iOS 的感受了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/androidios/jd.PNG&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/androidios/jd.PNG&#34;
 	width=&#34;1320&#34;
 	height=&#34;2698&#34;
-	srcset=&#34;http://localhost:1313/p/androidios/jd_hu_900e2ba01a76dd0b.PNG 480w, http://localhost:1313/p/androidios/jd_hu_ecaf22196ceec021.PNG 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/androidios/jd_hu_900e2ba01a76dd0b.PNG 480w, https://bestoko.cc/p/androidios/jd_hu_ecaf22196ceec021.PNG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2178,16 +2178,16 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>三星 SCR01 入手简单折腾 </title>
-        <link>http://localhost:1313/p/scr01/</link>
+        <link>https://bestoko.cc/p/scr01/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/scr01/</guid>
-        <description>&lt;img src="http://localhost:1313/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/scr01/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
 &lt;h2 id=&#34;外观与配置&#34;&gt;外观与配置
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01A.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, http://localhost:1313/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2196,10 +2196,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01B.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, http://localhost:1313/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2234,10 +2234,10 @@ init 0 关机&lt;/li&gt;
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
 &lt;/ul&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, http://localhost:1313/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2246,10 +2246,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, http://localhost:1313/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2258,10 +2258,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, http://localhost:1313/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2270,10 +2270,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, http://localhost:1313/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2282,10 +2282,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, http://localhost:1313/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2294,10 +2294,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, http://localhost:1313/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2309,10 +2309,10 @@ init 0 关机&lt;/li&gt;
 &lt;p&gt;&lt;code&gt;allow list off&lt;/code&gt; 即运营商锁，关掉之后我们才可以使用默认日本运营商之外的卡&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sa/nsa enable&lt;/code&gt; 默认disable，开启后则可以使用5G&lt;/p&gt;
 &lt;h2 id=&#34;设置apn&#34;&gt;设置APN
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_APN.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;http://localhost:1313/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, http://localhost:1313/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2344,11 +2344,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Unraid 上部署飞牛OS虚拟机小记</title>
-        <link>http://localhost:1313/p/fnos_unraid/</link>
+        <link>https://bestoko.cc/p/fnos_unraid/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/fnos_unraid/</guid>
-        <description>&lt;img src="http://localhost:1313/p/fnos_unraid/FNOS_VM_install6.png" alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记" /&gt;&lt;h2 id=&#34;飞牛私有云&#34;&gt;飞牛私有云
+        <guid>https://bestoko.cc/p/fnos_unraid/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png" alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记" /&gt;&lt;h2 id=&#34;飞牛私有云&#34;&gt;飞牛私有云
 &lt;/h2&gt;&lt;p&gt;最近 DIY NAS 圈飞牛私有云的热度很高（不排除很多是商单广告）。我大概看了看，虽然还只是 beta 版本，但基本功能的完成度已经很高了。文件存储、docker、影视、相册、应用中心都已经开箱即用了，另外还有比较方便的外网访问（据说后期会额外收费，或者免费版本限速）。最让我眼馋的还是飞牛的影视功能，我之前辛苦折腾的挂削组件，相互配合之间还老出点小毛病。不过主力NAS unraid 已经使用很久了，数据迁移实在麻烦，决定在上面用虚拟机的方式部署使用。&lt;/p&gt;
 &lt;h2 id=&#34;unraid-fnos-vm-部署&#34;&gt;UNraid FNOS VM 部署
 &lt;/h2&gt;&lt;p&gt;首先去官网下载最新的镜像文件 iso  &lt;a class=&#34;link&#34; href=&#34;https://www.fnnas.com/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2356,10 +2356,10 @@ init 0 关机&lt;/li&gt;
 &lt;p&gt;通过 smb 复制到unraid 的isos 共享文件夹&lt;/p&gt;
 &lt;p&gt;接着新建一个 Linux 虚拟机，设置好所分配的 CPU 核心、内存、虚拟硬盘大小，OS INSTALL ISO 选择我们刚上传的系统镜像即可。&lt;/p&gt;
 &lt;p&gt;这里我的闲置空间比较多，分配了100G 给 fnos，官方建议是64G 以上，可以根据自己硬件条件来设置。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_setting.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting.png&#34;
 	width=&#34;1162&#34;
 	height=&#34;1242&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_setting_hu_21d391fbbdc3bdb3.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_setting_hu_63db62a10899822b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_21d391fbbdc3bdb3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_63db62a10899822b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2368,10 +2368,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;224px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install1_hu_dbcf97ca08afde04.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install1_hu_4c1504786a945834.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_dbcf97ca08afde04.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_4c1504786a945834.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2379,10 +2379,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install2.png&#34;
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install2_hu_18a309f848625abe.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install2_hu_7ec974132f1f2b32.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_18a309f848625abe.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_7ec974132f1f2b32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2390,10 +2390,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install3.png&#34;
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install3_hu_df3c75e1a32fa0f0.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install3_hu_d2b0998ef5f81bad.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_df3c75e1a32fa0f0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_d2b0998ef5f81bad.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2401,10 +2401,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install4.png&#34;
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install4_hu_8b49fd3e26729502.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install4_hu_fffc3139ec046df3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_8b49fd3e26729502.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_fffc3139ec046df3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2412,10 +2412,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install5.png&#34;
+&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install5_hu_681d2eb95c50a5e0.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install5_hu_816415ece116611c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_681d2eb95c50a5e0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_816415ece116611c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2424,10 +2424,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;319px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install6_hu_86528a76a592bdb6.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install6_hu_71b685c4690fcaa1.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_86528a76a592bdb6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_71b685c4690fcaa1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2436,10 +2436,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;483px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install7_hu_14ac0402d538e868.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install7_hu_71d8719e5331025a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_14ac0402d538e868.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_71d8719e5331025a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2450,10 +2450,10 @@ init 0 关机&lt;/li&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;修改飞牛ip-挂载媒体库并配置影视应用&#34;&gt;修改飞牛IP 挂载媒体库并配置影视应用
 &lt;/h2&gt;&lt;p&gt;一路按需设置即可，需要注意的是进系统设置的第一个账号默认为有 SSH 权限的且不可删除的管理员账号，DHCP 获取的 IP 地址不满意，可以进系统后手动指定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_network.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network.png&#34;
 	width=&#34;1136&#34;
 	height=&#34;879&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_network_hu_a132d07544586e06.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_network_hu_5d7eac1e9f7cbc03.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_a132d07544586e06.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_5d7eac1e9f7cbc03.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2463,10 +2463,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着简单安装下影视应用，将unraid 里的影音库目录 挂载到飞牛OS，并共享给影视应用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1.png&#34;
 	width=&#34;1369&#34;
 	height=&#34;813&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb1_hu_e98fddd2b5c506e7.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_smb1_hu_77be56faf5521f47.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_e98fddd2b5c506e7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_77be56faf5521f47.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;smb挂载&#34;
@@ -2477,10 +2477,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;404px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2.png&#34;
 	width=&#34;1389&#34;
 	height=&#34;836&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb2_hu_708cc30bd84ae1a7.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_smb2_hu_bc34056ca66c548a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_708cc30bd84ae1a7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_bc34056ca66c548a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;共享影视目录&#34;
@@ -2492,10 +2492,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;进入影视，设置下自己目录对应的媒体分类，稍等片刻，即可挂削完毕&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video1_hu_f3ea14d0a1d8193.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_video1_hu_cd6feecc7d467231.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_f3ea14d0a1d8193.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_cd6feecc7d467231.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2504,10 +2504,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;485px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video2_hu_79621c8ab0f5aede.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_video2_hu_82e7214c6d4da4d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_79621c8ab0f5aede.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_82e7214c6d4da4d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2517,10 +2517,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;可以看到飞牛的播放器完成度还是比较高的，个人感觉比 emby 和 jellyfin 的网页版易用点&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video3_hu_fbab5cb83623a292.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_video3_hu_64810204f76ee010.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_fbab5cb83623a292.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_64810204f76ee010.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2531,10 +2531,10 @@ init 0 关机&lt;/li&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;核显直通转码&#34;&gt;核显直通转码
 &lt;/h2&gt;&lt;p&gt;unraid 下直通核显比较简单，首先去Tools - System Devices 找到并勾选核显，Bind selected to VFIO at Boot，并重启。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
 	width=&#34;1786&#34;
 	height=&#34;117&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode1_hu_2d195fa474af6346.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode1_hu_ef0ad94e451953e0.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_2d195fa474af6346.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_ef0ad94e451953e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2544,10 +2544,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着将暂停飞牛虚拟机，将设置的显卡从 VNC 改成 你的核显重启虚拟机即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
 	width=&#34;822&#34;
 	height=&#34;434&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode2_hu_ea98cd3afa7ff087.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode2_hu_e71027daa38a20fb.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_ea98cd3afa7ff087.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_e71027daa38a20fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2557,10 +2557,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;最后，在飞牛影视里 勾选启用 GPU 加速转码即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
 	width=&#34;1656&#34;
 	height=&#34;1173&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode3_hu_9f03cf0e30db824e.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode3_hu_fba7cb6b8d4a4e34.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_9f03cf0e30db824e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_fba7cb6b8d4a4e34.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2569,10 +2569,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;338px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
 	width=&#34;793&#34;
 	height=&#34;223&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode4_hu_c6c8bc17715815c5.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode4_hu_1cffe7ee25945b8d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_c6c8bc17715815c5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_1cffe7ee25945b8d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2582,10 +2582,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我们把手机上切成流量，模拟在外面访问家里的nas，需要转码的情况，可以看到已经成功驱动。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
 	width=&#34;1334&#34;
 	height=&#34;750&#34;
-	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode5_hu_327c8af997d7b03.PNG 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode5_hu_4c6b67e5b6b7adab.PNG 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_327c8af997d7b03.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_4c6b67e5b6b7adab.PNG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2600,17 +2600,17 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Tesla P4 Unraid 下折腾小记</title>
-        <link>http://localhost:1313/p/teslap4_unraid/</link>
+        <link>https://bestoko.cc/p/teslap4_unraid/</link>
         <pubDate>Sun, 27 Oct 2024 14:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/teslap4_unraid/</guid>
-        <description>&lt;img src="http://localhost:1313/p/teslap4_unraid/TeslaP4.jpg" alt="Featured image of post Tesla P4 Unraid 下折腾小记" /&gt;&lt;p&gt;最近在黄鱼捡垃圾时，发现一张散热改装深得我心的 Tesla P4 显卡，虽然已经溢价到598块（年前不带散热改装的还300不到来着T_T），还是拿下了，塞到自己小小的AIO主机里开始折腾，简单记录下在 unraid 上使用这张卡的记录&lt;/p&gt;
+        <guid>https://bestoko.cc/p/teslap4_unraid/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/teslap4_unraid/TeslaP4.jpg" alt="Featured image of post Tesla P4 Unraid 下折腾小记" /&gt;&lt;p&gt;最近在黄鱼捡垃圾时，发现一张散热改装深得我心的 Tesla P4 显卡，虽然已经溢价到598块（年前不带散热改装的还300不到来着T_T），还是拿下了，塞到自己小小的AIO主机里开始折腾，简单记录下在 unraid 上使用这张卡的记录&lt;/p&gt;
 &lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍
 &lt;/h2&gt;&lt;p&gt;Tesla P4 这种卡设计之初都是放到服务器用的，因此都没有设计主动散热，毕竟服务器暴力扇力大砖飞，轻轻松松带走发热。而我们垃圾佬拿来家用时就不得不权衡一下噪音与散热了，因此简单的改装是很有必要的。常见的改装方案是在原装散热器后方3D打印出一个涡轮风扇，显卡长度增加了一截不说，也实在说不上优雅。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4.png&#34;
 	width=&#34;730&#34;
 	height=&#34;321&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_4_hu_f0f055ce1c509ce9.png 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_4_hu_d7624ffeb2271bc2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_f0f055ce1c509ce9.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_d7624ffeb2271bc2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;后置涡扇&#34;
@@ -2623,10 +2623,10 @@ init 0 关机&lt;/li&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;此外我最喜欢的方案是 B站 &lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/2838092/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;鸦无量&lt;/a&gt; 的替换3D打印盖板，增加3组风扇的散热改装套件了，详细的可以参考视频 BV1oZ421q7qn&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5.png&#34;
 	width=&#34;1395&#34;
 	height=&#34;1395&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_5_hu_ab9212a184ec715d.png 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_5_hu_396d31ac101ed9a4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_ab9212a184ec715d.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_396d31ac101ed9a4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;鸦无量 散热改装套件&#34;
@@ -2638,10 +2638,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;而我这次购入的则是卖家定制不锈钢外壳，纯铜底板铜板散热器，3组风扇的版本，拿在手里沉甸甸的，很有质感，因为已经装进NAS里了，拆装比较麻烦，这里就直接使用卖家的图展示了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_1_hu_438ad8f993c22b5d.jpg 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_1_hu_56e3b45ddda60e89.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_438ad8f993c22b5d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_56e3b45ddda60e89.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热1&#34;
@@ -2652,10 +2652,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_2_hu_62eba18a0518268d.jpg 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_2_hu_a5c59b5c5b492c68.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_62eba18a0518268d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_a5c59b5c5b492c68.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热2&#34;
@@ -2666,10 +2666,10 @@ init 0 关机&lt;/li&gt;
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_3.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_3_hu_1e526a145c6faa0d.jpg 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_3_hu_80e79166bf351ab0.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_1e526a145c6faa0d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_80e79166bf351ab0.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热3&#34;
@@ -2682,10 +2682,10 @@ init 0 关机&lt;/li&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;unraid-上安装驱动并配置&#34;&gt;UNraid 上安装驱动并配置
 &lt;/h2&gt;&lt;p&gt;首先需要安装 &lt;strong&gt;Nvidia-Driver&lt;/strong&gt; 插件，可以自动检测当前设备上的 Nvidia 显卡并自动下载相应的驱动&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
 	width=&#34;678&#34;
 	height=&#34;690&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_hu_2ff8746e3dd47be6.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_hu_48f9d9b721409c4e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_2ff8746e3dd47be6.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_48f9d9b721409c4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;nvidia_driver&#34;
@@ -2701,10 +2701,10 @@ init 0 关机&lt;/li&gt;
 &lt;p&gt;Please make sure to disable and enable Docker if you installed the Nvidia driver for the first time! Settings -&amp;gt;Docker -&amp;gt; Enable Docker &amp;lsquo;No&amp;rsquo; -&amp;gt; Apply -&amp;gt; Enable Docker &amp;lsquo;Yes&amp;rsquo; -&amp;gt; Apply
 plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;参照安装成功的提示去设置里先停用docker ，再启用docker。&lt;/p&gt;
-&lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
+&lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
 	width=&#34;786&#34;
 	height=&#34;1005&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_db9784affa97d460.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_bffc864e026eb249.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_db9784affa97d460.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_bffc864e026eb249.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nvidia Driver&#34;
@@ -2718,10 +2718,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;视频转码配置-jellyfin-为例&#34;&gt;视频转码配置（ jellyfin 为例）
 &lt;/h2&gt;&lt;p&gt;我们在 jellyfin docker配置额外参数（&lt;code&gt;Extra Parameters&lt;/code&gt;）加上 &lt;code&gt;--runtime=nvidia&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;并添加两个变量 &lt;code&gt;NVIDIA_VISIBLE_DEVICES&lt;/code&gt; 和 &lt;code&gt;NVIDIA_DRIVER_CAPABILITIES&lt;/code&gt; , 值分别为上面配置时拿到的 &lt;code&gt;GPU-XXXYYYZZZ&lt;/code&gt; 编号和 &lt;code&gt;all&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1.png&#34;
 	width=&#34;1197&#34;
 	height=&#34;346&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting1_hu_36c7ebf367d83fda.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting1_hu_623b83e371945ab1.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_36c7ebf367d83fda.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_623b83e371945ab1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin&#34;
@@ -2733,10 +2733,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;jellyfin - playback - transcoding 选择 Nvidia NVENC 保存并重新启动 docker，选择一个电影测试一下即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2.png&#34;
 	width=&#34;1733&#34;
 	height=&#34;715&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting2_hu_6464edabaa5823aa.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting2_hu_8e7167f5018907c4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_6464edabaa5823aa.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_8e7167f5018907c4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting2&#34;
@@ -2748,10 +2748,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这里我以 奥本海默 为例，可以看的已经成功转码播放，unraid 仪表盘也可以看到 P4 的使用情况（需安装 GPU Statistics 插件），以及在使用的APP jellyfin&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3.png&#34;
 	width=&#34;2520&#34;
 	height=&#34;1207&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting3_hu_b7bde3f7b228b3cd.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting3_hu_cfdc703ce2f607da.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_b7bde3f7b228b3cd.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_cfdc703ce2f607da.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting3&#34;
@@ -2762,10 +2762,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;501px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4.png&#34;
 	width=&#34;804&#34;
 	height=&#34;467&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting4_hu_e15f20edaed7798c.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting4_hu_e676d888d0de9bdc.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_e15f20edaed7798c.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_e676d888d0de9bdc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting4&#34;
@@ -2779,10 +2779,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;ai-画图&#34;&gt;AI 画图
 &lt;/h2&gt;&lt;p&gt;选 P4 的一大原因自然是因为它 8 GB的显存，2560 个 CUDA 核心，不拿来狠狠地 AI 画图也是可惜了: )&lt;/p&gt;
 &lt;p&gt;unraid 应用商店搜索 stable diffusion，&lt;code&gt;goolashe/automatic1111-sd-webui&lt;/code&gt;  这个整合镜像简单设置下就可以开画了！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
 	width=&#34;986&#34;
 	height=&#34;685&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_hu_279ad37bb36053c.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_hu_1ee7541770b651b3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_279ad37bb36053c.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_1ee7541770b651b3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2791,10 +2791,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;345px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;112&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_18d2192e68c287e.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_783af90ae4c6a83b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_18d2192e68c287e.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_783af90ae4c6a83b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2807,10 +2807,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;默认第一次启动时会在 &lt;code&gt;/data/models&lt;/code&gt; 目录下载一些配置所需的模型文件，小文件还好，Stable-diffusion 目录下的 &lt;code&gt;Stable-diffusionv1-5-pruned-emaonly.safetensors&lt;/code&gt; 可能很难下得动。这时候你可以在docker 的log 里找到 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://huggingface.co/&lt;/a&gt; 开头的模型下载链接，在下载器里将其替换成 &lt;a class=&#34;link&#34; href=&#34;https://hf-mirror.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://hf-mirror.com/&lt;/a&gt; （一个国内镜像，速度还是很快的），下载完手动转移到 &lt;code&gt;/data/models/Stable-diffusion&lt;/code&gt; 即可，后期你也可以找些别的模型放到这里，webui刷新一下即可调用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/hfdownload.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload.png&#34;
 	width=&#34;813&#34;
 	height=&#34;449&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/hfdownload_hu_fcb6409855d9a2.png 480w, http://localhost:1313/p/teslap4_unraid/hfdownload_hu_7c2d6f8d7f12691e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_fcb6409855d9a2.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_7c2d6f8d7f12691e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;FDM&#34;
@@ -2825,10 +2825,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;正向提示词随便写几个 &lt;code&gt;cat_ears,2_girls, cute, young, flowers&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;反向提示词 &lt;code&gt;bad hands &lt;/code&gt; （对 AI 画的手梁木了 XD）&lt;/p&gt;
 &lt;p&gt;Sampling method: DPM++2M，Schedule type: Karras ，其余默认，大概花了 17s 生成出来。生成的文件可以在 &lt;code&gt;/output/txt2img&lt;/code&gt;里找到。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
 	width=&#34;2532&#34;
 	height=&#34;1269&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_69bf336316cd6b1b.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_ad1e155e62e1c4a7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_69bf336316cd6b1b.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_ad1e155e62e1c4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;SD WEBUI&#34;
@@ -2840,10 +2840,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;此时在仪表盘也可以看到，P4的显存被吃满了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
 	width=&#34;792&#34;
 	height=&#34;436&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3edf8cc10edc1b31.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3da2af7e78e0c67b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3edf8cc10edc1b31.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3da2af7e78e0c67b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;画图时的显卡占用&#34;
@@ -2857,10 +2857,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;其他设置&#34;&gt;其他设置
 &lt;/h2&gt;&lt;h3 id=&#34;静音调整&#34;&gt;静音调整
 &lt;/h3&gt;&lt;p&gt;说实话，卖家这散热改装效果确实不错，就是声音有点太大了，三风扇满速时还是蛮吵的。于是我从PDD买了个小玩意，手动降速到满意的程度了，基本跟氦气盘读写时的声音差不多，也不怎么影响温度。旋钮在PCI挡板的位置，还是挺方便的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/pdd.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/pdd.png&#34;
 	width=&#34;1238&#34;
 	height=&#34;750&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/pdd_hu_e51f7d0a5eaecdde.png 480w, http://localhost:1313/p/teslap4_unraid/pdd_hu_258316aa89fd15bf.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu_e51f7d0a5eaecdde.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu_258316aa89fd15bf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;风扇集中调速&#34;
@@ -2947,10 +2947,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/Nvidia_scirpt.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt.png&#34;
 	width=&#34;1471&#34;
 	height=&#34;405&#34;
-	srcset=&#34;http://localhost:1313/p/teslap4_unraid/Nvidia_scirpt_hu_2f57ac0f0b98e8ea.png 480w, http://localhost:1313/p/teslap4_unraid/Nvidia_scirpt_hu_581f38b87a890524.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_2f57ac0f0b98e8ea.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_581f38b87a890524.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;User Scripts&#34;
@@ -2967,29 +2967,19 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
-        <title>follow.is 认证用 </title>
-        <link>http://localhost:1313/p/follow/</link>
-        <pubDate>Thu, 10 Oct 2024 22:31:01 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/follow/</guid>
-        <description>&lt;p&gt;This message is used to verify that this feed (feedId:66996134550026240) belongs to me (userId:66750646631429120). Join me in enjoying the next generation information browser &lt;a class=&#34;link&#34; href=&#34;https://follow.is&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://follow.is&lt;/a&gt;.&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title>
-        <link>http://localhost:1313/p/oneplus_ace2_pro/</link>
+        <link>https://bestoko.cc/p/oneplus_ace2_pro/</link>
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/oneplus_ace2_pro/</guid>
-        <description>&lt;img src="http://localhost:1313/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -3025,10 +3015,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;li&gt;
 &lt;p&gt;安装 KernelFlasher 并赋予 Root 权限&lt;/p&gt;
 &lt;p&gt;在已挂载槽位，点击刷入AK3压缩包，刷入对应的Anykernel3.zip即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -3054,10 +3044,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -3068,10 +3058,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -3082,10 +3072,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -3096,10 +3086,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -3110,10 +3100,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -3124,10 +3114,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -3138,10 +3128,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -3160,24 +3150,16 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
-        <title>我的 All in one 折腾记录（零） </title>
-        <link>http://localhost:1313/p/myaio_00/</link>
-        <pubDate>Sat, 24 Jun 2023 01:53:01 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/myaio_00/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>qBittorrent 批量清理被PT站点删除的种子</title>
-        <link>http://localhost:1313/p/qbittorrenttips/</link>
+        <link>https://bestoko.cc/p/qbittorrenttips/</link>
         <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/qbittorrenttips/</guid>
-        <description>&lt;img src="http://localhost:1313/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/pt.png&#34;
+        <guid>https://bestoko.cc/p/qbittorrenttips/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;http://localhost:1313/p/qbittorrenttips/pt_hu_48ab7c8f780cefa8.png 480w, http://localhost:1313/p/qbittorrenttips/pt_hu_bdd5477c6cd08e2c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu_48ab7c8f780cefa8.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu_bdd5477c6cd08e2c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -3189,10 +3171,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我才注册了几个月就收到一大堆删种站内信，该说不说，管理也太尽职尽责了&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit1_hu_d4abb886dda80519.png 480w, http://localhost:1313/p/qbittorrenttips/qbit1_hu_bda6b3725cf8f92f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu_d4abb886dda80519.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu_bda6b3725cf8f92f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -3205,10 +3187,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;被站点删除的种子在 qBittorrent 里与正常种子不会有什么不同，只有点进去才能看到 &lt;code&gt;torrent not registered with this tracker&lt;/code&gt; 字样，Transmission 则会把所有红种、警告标记出来。我去查解决方法的时候甚至看到有说用 IYUU 转种到 Transmission 的建议&amp;hellip;只能说几千多个种子，转完再重新校验，实在有些“不够优雅”&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;其实，只需要在 qBittorrent 右键列标题，添加tracker 筛选框，并排序即可。被站点删除的种子 tracker 栏是空白，即可批量选中并移除。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit2_hu_509e275034a7fd2b.png 480w, http://localhost:1313/p/qbittorrenttips/qbit2_hu_b41d52562529f274.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu_509e275034a7fd2b.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu_b41d52562529f274.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -3219,10 +3201,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;248px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit3_hu_51c9ee0a4a6c8394.png 480w, http://localhost:1313/p/qbittorrenttips/qbit3_hu_759327956f71a33f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu_51c9ee0a4a6c8394.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu_759327956f71a33f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;
@@ -3241,16 +3223,16 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>业余无线电拿证(A类)&amp;设台速通指北</title>
-        <link>http://localhost:1313/p/amateurradio/</link>
+        <link>https://bestoko.cc/p/amateurradio/</link>
         <pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/amateurradio/</guid>
-        <description>&lt;img src="http://localhost:1313/p/amateurradio/wuxiandian.jpg" alt="Featured image of post 业余无线电拿证(A类)&amp;设台速通指北" /&gt;&lt;p&gt;你也许在很多书籍影视或者游戏中早已接触过无线电，但是真正亲身在现实中拿起对讲机与别人通联，则另有一番乐趣。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/amateurradio/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/amateurradio/wuxiandian.jpg" alt="Featured image of post 业余无线电拿证(A类)&amp;设台速通指北" /&gt;&lt;p&gt;你也许在很多书籍影视或者游戏中早已接触过无线电，但是真正亲身在现实中拿起对讲机与别人通联，则另有一番乐趣。&lt;/p&gt;
 &lt;p&gt;我大概是在去年在某硬件群内了解到业余无线电以及考证相关的内容，而最近又被一个介绍《我们生活在南京》这本科幻小说的视频勾起了兴趣，赶上南京2023年度第一次业余无线电操作能力考试，3.18考完试，3月24日实体双证都拿到手了，也算是比较快的“速通”了，在此记录一下其中的坑点与技巧。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/certificate.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/certificate.jpg&#34;
 	width=&#34;3000&#34;
 	height=&#34;4000&#34;
-	srcset=&#34;http://localhost:1313/p/amateurradio/certificate_hu_5ef91ba84c013219.jpg 480w, http://localhost:1313/p/amateurradio/certificate_hu_5650377371f5800e.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/certificate_hu_5ef91ba84c013219.jpg 480w, https://bestoko.cc/p/amateurradio/certificate_hu_5650377371f5800e.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3277,10 +3259,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;（1）网页报名：登录CRAC官网www.crac.org.cn，页面底部右下方选择“能力验证”，选择“考生入口”，进入“业余无线电台操作技术能力验证考核报名及信息管理系统”进行注册报名。&lt;/p&gt;
 &lt;p&gt;（2）手机APP报名：应用市场下载“智谱”APP，从手机下方的“特别入口”进入，点击“考试报名”，选择相应的考试场次进行报名。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/signup1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup1.jpg&#34;
 	width=&#34;1079&#34;
 	height=&#34;2295&#34;
-	srcset=&#34;http://localhost:1313/p/amateurradio/signup1_hu_b6f3bfea454d50c6.jpg 480w, http://localhost:1313/p/amateurradio/signup1_hu_33d80801dace09e4.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup1_hu_b6f3bfea454d50c6.jpg 480w, https://bestoko.cc/p/amateurradio/signup1_hu_33d80801dace09e4.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3289,10 +3271,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;112px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/amateurradio/signup2.jpg&#34;
+&lt;img src=&#34;https://bestoko.cc/p/amateurradio/signup2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2299&#34;
-	srcset=&#34;http://localhost:1313/p/amateurradio/signup2_hu_46ef596e8c4743e4.jpg 480w, http://localhost:1313/p/amateurradio/signup2_hu_ad26c67f36bf9ea6.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/signup2_hu_46ef596e8c4743e4.jpg 480w, https://bestoko.cc/p/amateurradio/signup2_hu_ad26c67f36bf9ea6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3304,10 +3286,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;考试&#34;&gt;考试
 &lt;/h2&gt;&lt;p&gt;试题范围为中国无线电协会业余无线电工作委员会（CRAC）公布的题库。&lt;/p&gt;
 &lt;p&gt;你可以选择按照官方的指南在“业余无线电台操作技术能力验证及信息管理系统”的“资料下载”模块，下载安装“模拟考试软件”或TXT格式题库包，或者在“智谱”APP的“业余无线电移动信息平台”，进行复习和模拟考试。当然也可以像我一样使用更方便的微信小程序刷题，这里我推荐的是&lt;strong&gt;业余无线电工具集&lt;/strong&gt; 或者 &lt;strong&gt;HAM模拟考试&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/ham1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2289&#34;
-	srcset=&#34;http://localhost:1313/p/amateurradio/ham1_hu_150bb1aac741f8ce.jpg 480w, http://localhost:1313/p/amateurradio/ham1_hu_b445e369e8186379.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham1_hu_150bb1aac741f8ce.jpg 480w, https://bestoko.cc/p/amateurradio/ham1_hu_b445e369e8186379.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3316,10 +3298,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;113px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/amateurradio/ham2.jpg&#34;
+&lt;img src=&#34;https://bestoko.cc/p/amateurradio/ham2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2280&#34;
-	srcset=&#34;http://localhost:1313/p/amateurradio/ham2_hu_932d147458a058a3.jpg 480w, http://localhost:1313/p/amateurradio/ham2_hu_f5b4a816599e401.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/ham2_hu_932d147458a058a3.jpg 480w, https://bestoko.cc/p/amateurradio/ham2_hu_f5b4a816599e401.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3410,10 +3392,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;设台&#34;&gt;设台
 &lt;/h2&gt;&lt;p&gt;不同地区的规定不同，南京这边考试现场为考试合格考生提供25W以下业余无线电台验机服务，当然也可以选择改日单独送去验机，具体看当地规定。需要注意的是一定要从&lt;strong&gt;正规渠道&lt;/strong&gt;购买有&lt;strong&gt;核准码&lt;/strong&gt;的机型，群里见到有因为买到问题批次的机器没有通过验机的朋友，验机现场也有因为机身上没有核准码标签而差点被拒的朋友。&lt;/p&gt;
 &lt;p&gt;一切准备妥当后，到设台当地工信部提交好证明等待即可。首次设台时，管局会给分配一个全球唯一的呼号，这个呼号会伴随你的整个业余无线电生涯。（呼号一般不可自选，但据考试群友反馈某些地方线下办理允许自选一位，有想法的可以线下去问）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/amateurradio/RadioSet.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/amateurradio/RadioSet.png&#34;
 	width=&#34;1653&#34;
 	height=&#34;1120&#34;
-	srcset=&#34;http://localhost:1313/p/amateurradio/RadioSet_hu_2a44d44ba0a75780.png 480w, http://localhost:1313/p/amateurradio/RadioSet_hu_a4cbc5b07cfeebde.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/amateurradio/RadioSet_hu_2a44d44ba0a75780.png 480w, https://bestoko.cc/p/amateurradio/RadioSet_hu_a4cbc5b07cfeebde.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3428,11 +3410,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
-        <link>http://localhost:1313/p/koishi-chatgpt/</link>
+        <link>https://bestoko.cc/p/koishi-chatgpt/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/koishi-chatgpt/</guid>
-        <description>&lt;img src="http://localhost:1313/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
 &lt;h2 id=&#34;事前准备&#34;&gt;事前准备
 &lt;/h2&gt;&lt;p&gt;你需要准备：&lt;/p&gt;
 &lt;ol&gt;
@@ -3446,10 +3428,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
 &lt;h2 id=&#34;操作部署&#34;&gt;操作部署
 &lt;/h2&gt;&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_hu_3e6dc9232ea39a41.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_hu_9c408d0238609ff7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu_3e6dc9232ea39a41.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu_9c408d0238609ff7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3459,10 +3441,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;也可通过 unraid 的 docker 配置，具体如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu_ced83dad467a25b4.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu_114c5123e6fc9fa6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_ced83dad467a25b4.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_114c5123e6fc9fa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3472,10 +3454,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_cafe5d84a1cb02c0.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_5b1241c20f6cbf6c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_cafe5d84a1cb02c0.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_5b1241c20f6cbf6c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3485,10 +3467,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu_f239d494338c029c.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu_66a9bbe8319667d2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_f239d494338c029c.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_66a9bbe8319667d2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3500,10 +3482,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。&lt;/p&gt;
 &lt;p&gt;接着去插件市场安装 &lt;a class=&#34;link&#34; href=&#34;https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;koishi_chatGPT 插件&lt;/a&gt;根据提示加载 cache 服务并配置 apiKey ：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu_18c7f062a2620dd5.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu_d7dfc3f8932528e2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_18c7f062a2620dd5.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_d7dfc3f8932528e2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3512,10 +3494,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;470px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu_19a9a977b35af2ce.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu_55b43feeae2018a8.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_19a9a977b35af2ce.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_55b43feeae2018a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3535,16 +3517,16 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
-        <link>http://localhost:1313/p/hugo_wsl2/</link>
+        <link>https://bestoko.cc/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/hugo_wsl2/</guid>
-        <description>&lt;img src="http://localhost:1313/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
 &lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3564,10 +3546,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3586,10 +3568,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3599,10 +3581,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, http://localhost:1313/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3615,11 +3597,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>为Android Kernel Log添加时间戳</title>
-        <link>http://localhost:1313/p/kernellogaddtime/</link>
+        <link>https://bestoko.cc/p/kernellogaddtime/</link>
         <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/kernellogaddtime/</guid>
-        <description>&lt;img src="http://localhost:1313/p/kernellogaddtime/Linux-Kernel.jpg" alt="Featured image of post 为Android Kernel Log添加时间戳" /&gt;&lt;p&gt;将下面的代码保存为kernel.py, 加入可执行权限， 执行./kernel.py -i kernel_log -o kernel.txt , 打开kernel.txt 就可以看到（与android logcat -v time一样的）时间戳&lt;/p&gt;
+        <guid>https://bestoko.cc/p/kernellogaddtime/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/kernellogaddtime/Linux-Kernel.jpg" alt="Featured image of post 为Android Kernel Log添加时间戳" /&gt;&lt;p&gt;将下面的代码保存为kernel.py, 加入可执行权限， 执行./kernel.py -i kernel_log -o kernel.txt , 打开kernel.txt 就可以看到（与android logcat -v time一样的）时间戳&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -3840,11 +3822,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>MTK 平台 Camera HAL3 相关模块的代码路径</title>
-        <link>http://localhost:1313/p/mtkcamerahal3modules/</link>
+        <link>https://bestoko.cc/p/mtkcamerahal3modules/</link>
         <pubDate>Wed, 15 Jun 2022 20:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/mtkcamerahal3modules/</guid>
-        <description>&lt;img src="http://localhost:1313/p/mtkcamerahal3modules/HAL3.png" alt="Featured image of post MTK 平台 Camera HAL3 相关模块的代码路径" /&gt;&lt;table&gt;
+        <guid>https://bestoko.cc/p/mtkcamerahal3modules/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png" alt="Featured image of post MTK 平台 Camera HAL3 相关模块的代码路径" /&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;Camera 相关模块&lt;/th&gt;
@@ -3922,15 +3904,15 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Ubuntu 20.04 英文环境部分中文字体异形解决方案</title>
-        <link>http://localhost:1313/p/linux-fonts-size/</link>
+        <link>https://bestoko.cc/p/linux-fonts-size/</link>
         <pubDate>Sat, 21 May 2022 10:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-fonts-size/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors.png&#34;
+        <guid>https://bestoko.cc/p/linux-fonts-size/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4105,10 +4087,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;效果：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4121,11 +4103,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Ubuntu 20.04 终端插件配置与美化</title>
-        <link>http://localhost:1313/p/zsh/</link>
+        <link>https://bestoko.cc/p/zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/zsh/</guid>
-        <description>&lt;img src="http://localhost:1313/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
+        <guid>https://bestoko.cc/p/zsh/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
 &lt;h2 id=&#34;zsh&#34;&gt;Zsh
 &lt;/h2&gt;&lt;p&gt;安装 zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -4245,11 +4227,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Arch Linux与Win11双系统修复grub引导</title>
-        <link>http://localhost:1313/p/grubfix/</link>
+        <link>https://bestoko.cc/p/grubfix/</link>
         <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/grubfix/</guid>
-        <description>&lt;img src="http://localhost:1313/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+        <guid>https://bestoko.cc/p/grubfix/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
 &lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4287,15 +4269,15 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Android平台架构学习笔记</title>
-        <link>http://localhost:1313/p/android-framework/</link>
+        <link>https://bestoko.cc/p/android-framework/</link>
         <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/android-framework/</guid>
-        <description>&lt;img src="http://localhost:1313/p/android-framework/android-logo.png" alt="Featured image of post Android平台架构学习笔记" /&gt;&lt;h2 id=&#34;平台架构&#34;&gt;平台架构
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/android-framework/android-stack_2x.png&#34;
+        <guid>https://bestoko.cc/p/android-framework/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/android-framework/android-logo.png" alt="Featured image of post Android平台架构学习笔记" /&gt;&lt;h2 id=&#34;平台架构&#34;&gt;平台架构
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
 	width=&#34;1384&#34;
 	height=&#34;2038&#34;
-	srcset=&#34;http://localhost:1313/p/android-framework/android-stack_2x_hu_4d905be02dde0684.png 480w, http://localhost:1313/p/android-framework/android-stack_2x_hu_61ae610697c3f1f0.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu_4d905be02dde0684.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu_61ae610697c3f1f0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4433,11 +4415,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Gnome农历插件安装踩坑记录</title>
-        <link>http://localhost:1313/p/gnome-lunar-calendar/</link>
+        <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
         <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gnome-lunar-calendar/</guid>
-        <description>&lt;img src="http://localhost:1313/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Lunar Calendar 农历&lt;/a&gt;，直接安装会因为缺少依赖报错，搜到的&lt;a class=&#34;link&#34; href=&#34;https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;rpm包&lt;/a&gt;也无法正常安装，查了下需要手动编译安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/yetist/lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
@@ -4487,10 +4469,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gnome-lunar-calendar/lunar-date.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1824&#34;
-	srcset=&#34;http://localhost:1313/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, http://localhost:1313/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;效果展示&#34;
@@ -4505,18 +4487,18 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Grub2主题美化踩坑记录</title>
-        <link>http://localhost:1313/p/fedora-grub2-theme/</link>
+        <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
         <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/fedora-grub2-theme/</guid>
-        <description>&lt;img src="http://localhost:1313/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;下载主题&#34;&gt;下载主题
 &lt;/h2&gt;&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MacOS Monterey inspired grub theme&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -4567,18 +4549,18 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
-        <link>http://localhost:1313/p/linux-virtualbox-error/</link>
+        <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
         <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-virtualbox-error/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;
@@ -4605,11 +4587,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Linux与Windows双系统时间不一致的解决方法</title>
-        <link>http://localhost:1313/p/linux-windows-time-conflict/</link>
+        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
         <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-windows-time-conflict/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
@@ -4641,11 +4623,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>http://localhost:1313/p/surface-linux/</link>
+        <link>https://bestoko.cc/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/surface-linux/</guid>
-        <description>&lt;img src="http://localhost:1313/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/surface-linux/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动
@@ -4703,11 +4685,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Arch Linux安装备忘录（二）</title>
-        <link>http://localhost:1313/p/archinstallextra/</link>
+        <link>https://bestoko.cc/p/archinstallextra/</link>
         <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/archinstallextra/</guid>
-        <description>&lt;img src="http://localhost:1313/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/archinstallextra/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
 &lt;h2 id=&#34;配置网络&#34;&gt;配置网络
 &lt;/h2&gt;&lt;p&gt;我们使用&lt;/p&gt;
@@ -4854,10 +4836,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/archinstallextra/GPUdirver.jpg&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
 	width=&#34;955&#34;
 	height=&#34;350&#34;
-	srcset=&#34;http://localhost:1313/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, http://localhost:1313/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4984,11 +4966,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Arch Linux安装备忘录（一）</title>
-        <link>http://localhost:1313/p/archinstall/</link>
+        <link>https://bestoko.cc/p/archinstall/</link>
         <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/archinstall/</guid>
-        <description>&lt;img src="http://localhost:1313/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/archinstall/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
 &lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;
@@ -5300,11 +5282,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>一加8的Android 11 折腾指南</title>
-        <link>http://localhost:1313/p/oneplus8/</link>
+        <link>https://bestoko.cc/p/oneplus8/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/oneplus8/</guid>
-        <description>&lt;img src="http://localhost:1313/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+        <guid>https://bestoko.cc/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -5388,10 +5370,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8info.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, http://localhost:1313/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -5402,10 +5384,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -5416,10 +5398,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -5430,10 +5412,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8edxposed.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, http://localhost:1313/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
@@ -5448,11 +5430,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-        <link>http://localhost:1313/p/gba2cia/</link>
+        <link>https://bestoko.cc/p/gba2cia/</link>
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gba2cia/</guid>
-        <description>&lt;img src="http://localhost:1313/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
+        <guid>https://bestoko.cc/p/gba2cia/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
 &lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
@@ -5482,10 +5464,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia1_hu_518bf3262008e33a.png 480w, http://localhost:1313/p/gba2cia/gba2cia1_hu_af93733b1c00f456.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu_518bf3262008e33a.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu_af93733b1c00f456.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -5496,10 +5478,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;483px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia2_hu_70aaa8735bc63cba.png 480w, http://localhost:1313/p/gba2cia/gba2cia2_hu_8b6b14b5cbbfd402.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu_70aaa8735bc63cba.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu_8b6b14b5cbbfd402.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -5513,10 +5495,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia3_hu_efdabd3a0d22d85.png 480w, http://localhost:1313/p/gba2cia/gba2cia3_hu_979edc3f62f72dc0.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu_efdabd3a0d22d85.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu_979edc3f62f72dc0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -5527,10 +5509,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia4_hu_40ad098673508531.png 480w, http://localhost:1313/p/gba2cia/gba2cia4_hu_f6bcd466a88ad792.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu_40ad098673508531.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu_f6bcd466a88ad792.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -5544,10 +5526,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;设置VC参数并导出CIA文件(注意当转换多个&lt;code&gt;.cia&lt;/code&gt;文件时，确保每个文件的&lt;em&gt;产品代码&lt;/em&gt;及&lt;em&gt;项目ID&lt;/em&gt;都不一样)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia5_hu_75d774794fec32ac.png 480w, http://localhost:1313/p/gba2cia/gba2cia5_hu_d4070b253097fc4d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu_75d774794fec32ac.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu_d4070b253097fc4d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -5565,10 +5547,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/ol&gt;
 &lt;p&gt;关于如何B9S&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/install-cia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;如何安装cia文件&lt;/strong&gt;&lt;/a&gt;这里不再赘述(实在懒得截图了)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia6_hu_2a00cfcd42d1fb7a.png 480w, http://localhost:1313/p/gba2cia/gba2cia6_hu_b91c6c12bbe88d9e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu_2a00cfcd42d1fb7a.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu_b91c6c12bbe88d9e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;
@@ -5590,18 +5572,18 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Git学习笔记</title>
-        <link>http://localhost:1313/p/gitnotes/</link>
+        <link>https://bestoko.cc/p/gitnotes/</link>
         <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gitnotes/</guid>
-        <description>&lt;img src="http://localhost:1313/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/gitnotes/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
 &lt;p&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
 &lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gitnotes/learnGit.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;471&#34;
-	srcset=&#34;http://localhost:1313/p/gitnotes/learnGit_hu_3730a2b0972bbdb.png 480w, http://localhost:1313/p/gitnotes/learnGit_hu_ba6bbb76ce6bb5f6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu_3730a2b0972bbdb.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu_ba6bbb76ce6bb5f6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;learnGit&#34;
@@ -5790,11 +5772,11 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>Markdown学习笔记</title>
-        <link>http://localhost:1313/p/markdwonnotes/</link>
+        <link>https://bestoko.cc/p/markdwonnotes/</link>
         <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/markdwonnotes/</guid>
-        <description>&lt;img src="http://localhost:1313/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/markdwonnotes/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

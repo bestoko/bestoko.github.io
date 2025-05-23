@@ -2,416 +2,400 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/</link>
+        <link>https://bestoko.cc/tags/</link>
         <description>Recent content in Tags on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux</title>
-        <link>http://localhost:1313/tags/linux/</link>
+        <link>https://bestoko.cc/tags/linux/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/linux/</guid>
+        <guid>https://bestoko.cc/tags/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>Notes</title>
-        <link>http://localhost:1313/tags/notes/</link>
+        <link>https://bestoko.cc/tags/notes/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/notes/</guid>
+        <guid>https://bestoko.cc/tags/notes/</guid>
         <description></description>
         </item>
         <item>
         <title>Android</title>
-        <link>http://localhost:1313/tags/android/</link>
+        <link>https://bestoko.cc/tags/android/</link>
         <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/android/</guid>
+        <guid>https://bestoko.cc/tags/android/</guid>
         <description></description>
         </item>
         <item>
         <title>IOS</title>
-        <link>http://localhost:1313/tags/ios/</link>
+        <link>https://bestoko.cc/tags/ios/</link>
         <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/ios/</guid>
+        <guid>https://bestoko.cc/tags/ios/</guid>
         <description></description>
         </item>
         <item>
         <title>Samsung</title>
-        <link>http://localhost:1313/tags/samsung/</link>
+        <link>https://bestoko.cc/tags/samsung/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/samsung/</guid>
+        <guid>https://bestoko.cc/tags/samsung/</guid>
         <description></description>
         </item>
         <item>
         <title>SCR01</title>
-        <link>http://localhost:1313/tags/scr01/</link>
+        <link>https://bestoko.cc/tags/scr01/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/scr01/</guid>
+        <guid>https://bestoko.cc/tags/scr01/</guid>
         <description></description>
         </item>
         <item>
         <title>随身WiFi</title>
-        <link>http://localhost:1313/tags/%E9%9A%8F%E8%BA%ABwifi/</link>
+        <link>https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/%E9%9A%8F%E8%BA%ABwifi/</guid>
+        <guid>https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/</guid>
         <description></description>
         </item>
         <item>
         <title>FNOS</title>
-        <link>http://localhost:1313/tags/fnos/</link>
+        <link>https://bestoko.cc/tags/fnos/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/fnos/</guid>
+        <guid>https://bestoko.cc/tags/fnos/</guid>
         <description></description>
         </item>
         <item>
         <title>NAS</title>
-        <link>http://localhost:1313/tags/nas/</link>
+        <link>https://bestoko.cc/tags/nas/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/nas/</guid>
+        <guid>https://bestoko.cc/tags/nas/</guid>
         <description></description>
         </item>
         <item>
         <title>Unraid</title>
-        <link>http://localhost:1313/tags/unraid/</link>
+        <link>https://bestoko.cc/tags/unraid/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/unraid/</guid>
+        <guid>https://bestoko.cc/tags/unraid/</guid>
         <description></description>
         </item>
         <item>
         <title>飞牛OS</title>
-        <link>http://localhost:1313/tags/%E9%A3%9E%E7%89%9Bos/</link>
+        <link>https://bestoko.cc/tags/%E9%A3%9E%E7%89%9Bos/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/%E9%A3%9E%E7%89%9Bos/</guid>
+        <guid>https://bestoko.cc/tags/%E9%A3%9E%E7%89%9Bos/</guid>
         <description></description>
         </item>
         <item>
         <title>Tesla P4</title>
-        <link>http://localhost:1313/tags/tesla-p4/</link>
+        <link>https://bestoko.cc/tags/tesla-p4/</link>
         <pubDate>Sun, 27 Oct 2024 14:40:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/tesla-p4/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Follow</title>
-        <link>http://localhost:1313/tags/follow/</link>
-        <pubDate>Thu, 10 Oct 2024 22:31:01 +0800</pubDate>
-        
-        <guid>http://localhost:1313/tags/follow/</guid>
+        <guid>https://bestoko.cc/tags/tesla-p4/</guid>
         <description></description>
         </item>
         <item>
         <title>KernelSU</title>
-        <link>http://localhost:1313/tags/kernelsu/</link>
+        <link>https://bestoko.cc/tags/kernelsu/</link>
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/kernelsu/</guid>
+        <guid>https://bestoko.cc/tags/kernelsu/</guid>
         <description></description>
         </item>
         <item>
         <title>Lsposed</title>
-        <link>http://localhost:1313/tags/lsposed/</link>
+        <link>https://bestoko.cc/tags/lsposed/</link>
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/lsposed/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>All in One</title>
-        <link>http://localhost:1313/tags/all-in-one/</link>
-        <pubDate>Sat, 24 Jun 2023 01:53:01 +0800</pubDate>
-        
-        <guid>http://localhost:1313/tags/all-in-one/</guid>
+        <guid>https://bestoko.cc/tags/lsposed/</guid>
         <description></description>
         </item>
         <item>
         <title>PT</title>
-        <link>http://localhost:1313/tags/pt/</link>
+        <link>https://bestoko.cc/tags/pt/</link>
         <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/pt/</guid>
+        <guid>https://bestoko.cc/tags/pt/</guid>
         <description></description>
         </item>
         <item>
         <title>QBittorrent</title>
-        <link>http://localhost:1313/tags/qbittorrent/</link>
+        <link>https://bestoko.cc/tags/qbittorrent/</link>
         <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/qbittorrent/</guid>
+        <guid>https://bestoko.cc/tags/qbittorrent/</guid>
         <description></description>
         </item>
         <item>
         <title>业余无线电</title>
-        <link>http://localhost:1313/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</link>
+        <link>https://bestoko.cc/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</link>
         <pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</guid>
+        <guid>https://bestoko.cc/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</guid>
         <description></description>
         </item>
         <item>
         <title>ChatGPT</title>
-        <link>http://localhost:1313/tags/chatgpt/</link>
+        <link>https://bestoko.cc/tags/chatgpt/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/chatgpt/</guid>
+        <guid>https://bestoko.cc/tags/chatgpt/</guid>
         <description></description>
         </item>
         <item>
         <title>Docker</title>
-        <link>http://localhost:1313/tags/docker/</link>
+        <link>https://bestoko.cc/tags/docker/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/docker/</guid>
+        <guid>https://bestoko.cc/tags/docker/</guid>
         <description></description>
         </item>
         <item>
         <title>Koishi</title>
-        <link>http://localhost:1313/tags/koishi/</link>
+        <link>https://bestoko.cc/tags/koishi/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/koishi/</guid>
+        <guid>https://bestoko.cc/tags/koishi/</guid>
         <description></description>
         </item>
         <item>
         <title>QQ Bot</title>
-        <link>http://localhost:1313/tags/qq-bot/</link>
+        <link>https://bestoko.cc/tags/qq-bot/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/qq-bot/</guid>
+        <guid>https://bestoko.cc/tags/qq-bot/</guid>
         <description></description>
         </item>
         <item>
         <title>Blog</title>
-        <link>http://localhost:1313/tags/blog/</link>
+        <link>https://bestoko.cc/tags/blog/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/blog/</guid>
+        <guid>https://bestoko.cc/tags/blog/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>http://localhost:1313/tags/hugo/</link>
+        <link>https://bestoko.cc/tags/hugo/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/hugo/</guid>
+        <guid>https://bestoko.cc/tags/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Ubuntu</title>
-        <link>http://localhost:1313/tags/ubuntu/</link>
+        <link>https://bestoko.cc/tags/ubuntu/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/ubuntu/</guid>
+        <guid>https://bestoko.cc/tags/ubuntu/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows 11</title>
-        <link>http://localhost:1313/tags/windows-11/</link>
+        <link>https://bestoko.cc/tags/windows-11/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/windows-11/</guid>
+        <guid>https://bestoko.cc/tags/windows-11/</guid>
         <description></description>
         </item>
         <item>
         <title>WSL2</title>
-        <link>http://localhost:1313/tags/wsl2/</link>
+        <link>https://bestoko.cc/tags/wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/wsl2/</guid>
+        <guid>https://bestoko.cc/tags/wsl2/</guid>
         <description></description>
         </item>
         <item>
         <title>Kernel</title>
-        <link>http://localhost:1313/tags/kernel/</link>
+        <link>https://bestoko.cc/tags/kernel/</link>
         <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/kernel/</guid>
+        <guid>https://bestoko.cc/tags/kernel/</guid>
         <description></description>
         </item>
         <item>
         <title>Log</title>
-        <link>http://localhost:1313/tags/log/</link>
+        <link>https://bestoko.cc/tags/log/</link>
         <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/log/</guid>
+        <guid>https://bestoko.cc/tags/log/</guid>
         <description></description>
         </item>
         <item>
         <title>Camera</title>
-        <link>http://localhost:1313/tags/camera/</link>
+        <link>https://bestoko.cc/tags/camera/</link>
         <pubDate>Wed, 15 Jun 2022 20:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/camera/</guid>
+        <guid>https://bestoko.cc/tags/camera/</guid>
         <description></description>
         </item>
         <item>
         <title>MTK</title>
-        <link>http://localhost:1313/tags/mtk/</link>
+        <link>https://bestoko.cc/tags/mtk/</link>
         <pubDate>Wed, 15 Jun 2022 20:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/mtk/</guid>
+        <guid>https://bestoko.cc/tags/mtk/</guid>
         <description></description>
         </item>
         <item>
         <title>Fonts</title>
-        <link>http://localhost:1313/tags/fonts/</link>
+        <link>https://bestoko.cc/tags/fonts/</link>
         <pubDate>Sat, 21 May 2022 10:30:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/fonts/</guid>
+        <guid>https://bestoko.cc/tags/fonts/</guid>
         <description></description>
         </item>
         <item>
         <title>Oh-My-Zsh</title>
-        <link>http://localhost:1313/tags/oh-my-zsh/</link>
+        <link>https://bestoko.cc/tags/oh-my-zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/oh-my-zsh/</guid>
+        <guid>https://bestoko.cc/tags/oh-my-zsh/</guid>
         <description></description>
         </item>
         <item>
         <title>Powerlevel10k</title>
-        <link>http://localhost:1313/tags/powerlevel10k/</link>
+        <link>https://bestoko.cc/tags/powerlevel10k/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/powerlevel10k/</guid>
+        <guid>https://bestoko.cc/tags/powerlevel10k/</guid>
         <description></description>
         </item>
         <item>
         <title>Zsh</title>
-        <link>http://localhost:1313/tags/zsh/</link>
+        <link>https://bestoko.cc/tags/zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/zsh/</guid>
+        <guid>https://bestoko.cc/tags/zsh/</guid>
         <description></description>
         </item>
         <item>
         <title>Arch</title>
-        <link>http://localhost:1313/tags/arch/</link>
+        <link>https://bestoko.cc/tags/arch/</link>
         <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/arch/</guid>
+        <guid>https://bestoko.cc/tags/arch/</guid>
         <description></description>
         </item>
         <item>
         <title>Grub</title>
-        <link>http://localhost:1313/tags/grub/</link>
+        <link>https://bestoko.cc/tags/grub/</link>
         <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/grub/</guid>
+        <guid>https://bestoko.cc/tags/grub/</guid>
         <description></description>
         </item>
         <item>
         <title>Android Framework</title>
-        <link>http://localhost:1313/tags/android-framework/</link>
+        <link>https://bestoko.cc/tags/android-framework/</link>
         <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/android-framework/</guid>
+        <guid>https://bestoko.cc/tags/android-framework/</guid>
         <description></description>
         </item>
         <item>
         <title>Fedora</title>
-        <link>http://localhost:1313/tags/fedora/</link>
+        <link>https://bestoko.cc/tags/fedora/</link>
         <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/fedora/</guid>
+        <guid>https://bestoko.cc/tags/fedora/</guid>
         <description></description>
         </item>
         <item>
         <title>Gnome</title>
-        <link>http://localhost:1313/tags/gnome/</link>
+        <link>https://bestoko.cc/tags/gnome/</link>
         <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/gnome/</guid>
+        <guid>https://bestoko.cc/tags/gnome/</guid>
         <description></description>
         </item>
         <item>
         <title>Gurb2 Theme</title>
-        <link>http://localhost:1313/tags/gurb2-theme/</link>
+        <link>https://bestoko.cc/tags/gurb2-theme/</link>
         <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/gurb2-theme/</guid>
+        <guid>https://bestoko.cc/tags/gurb2-theme/</guid>
         <description></description>
         </item>
         <item>
         <title>Virtual Box</title>
-        <link>http://localhost:1313/tags/virtual-box/</link>
+        <link>https://bestoko.cc/tags/virtual-box/</link>
         <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/virtual-box/</guid>
+        <guid>https://bestoko.cc/tags/virtual-box/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows</title>
-        <link>http://localhost:1313/tags/windows/</link>
+        <link>https://bestoko.cc/tags/windows/</link>
         <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/windows/</guid>
+        <guid>https://bestoko.cc/tags/windows/</guid>
         <description></description>
         </item>
         <item>
         <title>Surface</title>
-        <link>http://localhost:1313/tags/surface/</link>
+        <link>https://bestoko.cc/tags/surface/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/surface/</guid>
+        <guid>https://bestoko.cc/tags/surface/</guid>
         <description></description>
         </item>
         <item>
         <title>Edxposed</title>
-        <link>http://localhost:1313/tags/edxposed/</link>
+        <link>https://bestoko.cc/tags/edxposed/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/edxposed/</guid>
+        <guid>https://bestoko.cc/tags/edxposed/</guid>
         <description></description>
         </item>
         <item>
         <title>Mgasik</title>
-        <link>http://localhost:1313/tags/mgasik/</link>
+        <link>https://bestoko.cc/tags/mgasik/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/mgasik/</guid>
+        <guid>https://bestoko.cc/tags/mgasik/</guid>
         <description></description>
         </item>
         <item>
         <title>3ds</title>
-        <link>http://localhost:1313/tags/3ds/</link>
+        <link>https://bestoko.cc/tags/3ds/</link>
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/3ds/</guid>
+        <guid>https://bestoko.cc/tags/3ds/</guid>
         <description></description>
         </item>
         <item>
         <title>GBA</title>
-        <link>http://localhost:1313/tags/gba/</link>
+        <link>https://bestoko.cc/tags/gba/</link>
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/gba/</guid>
+        <guid>https://bestoko.cc/tags/gba/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>http://localhost:1313/tags/git/</link>
+        <link>https://bestoko.cc/tags/git/</link>
         <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/git/</guid>
+        <guid>https://bestoko.cc/tags/git/</guid>
         <description></description>
         </item>
         <item>
         <title>Markdown</title>
-        <link>http://localhost:1313/tags/markdown/</link>
+        <link>https://bestoko.cc/tags/markdown/</link>
         <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/tags/markdown/</guid>
+        <guid>https://bestoko.cc/tags/markdown/</guid>
         <description></description>
         </item>
         

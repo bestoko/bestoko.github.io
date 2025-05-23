@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Arch on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/arch/</link>
+        <link>https://bestoko.cc/tags/arch/</link>
         <description>Recent content in Arch on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 05 Mar 2022 19:19:15 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/arch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Mar 2022 19:19:15 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/arch/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Arch Linux与Win11双系统修复grub引导</title>
-        <link>http://localhost:1313/p/grubfix/</link>
+        <link>https://bestoko.cc/p/grubfix/</link>
         <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/grubfix/</guid>
-        <description>&lt;img src="http://localhost:1313/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+        <guid>https://bestoko.cc/p/grubfix/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
 &lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -50,18 +50,18 @@
         </item>
         <item>
         <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
-        <link>http://localhost:1313/p/linux-virtualbox-error/</link>
+        <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
         <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-virtualbox-error/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;
@@ -88,11 +88,11 @@
         </item>
         <item>
         <title>Linux与Windows双系统时间不一致的解决方法</title>
-        <link>http://localhost:1313/p/linux-windows-time-conflict/</link>
+        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
         <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-windows-time-conflict/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
@@ -124,11 +124,11 @@
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>http://localhost:1313/p/surface-linux/</link>
+        <link>https://bestoko.cc/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/surface-linux/</guid>
-        <description>&lt;img src="http://localhost:1313/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/surface-linux/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动
@@ -186,11 +186,11 @@
         </item>
         <item>
         <title>Arch Linux安装备忘录（二）</title>
-        <link>http://localhost:1313/p/archinstallextra/</link>
+        <link>https://bestoko.cc/p/archinstallextra/</link>
         <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/archinstallextra/</guid>
-        <description>&lt;img src="http://localhost:1313/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>https://bestoko.cc/p/archinstallextra/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
 &lt;h2 id=&#34;配置网络&#34;&gt;配置网络
 &lt;/h2&gt;&lt;p&gt;我们使用&lt;/p&gt;
@@ -337,10 +337,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/archinstallextra/GPUdirver.jpg&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
 	width=&#34;955&#34;
 	height=&#34;350&#34;
-	srcset=&#34;http://localhost:1313/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, http://localhost:1313/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
