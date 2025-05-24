@@ -2,304 +2,292 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://bestoko.cc/categories/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/linux/</loc>
+    <loc>https://bestoko.cc/categories/linux/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://bestoko.cc/tags/linux/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-basics-6/</loc>
+    <loc>https://bestoko.cc/p/linux-basics-6/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/notes/</loc>
+    <loc>https://bestoko.cc/tags/notes/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://bestoko.cc/post/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://bestoko.cc/tags/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://bestoko.cc/</loc>
     <lastmod>2025-05-24T23:13:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-basics-5/</loc>
+    <loc>https://bestoko.cc/p/linux-basics-5/</loc>
     <lastmod>2025-05-24T23:08:30+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-basics-4/</loc>
+    <loc>https://bestoko.cc/p/linux-basics-4/</loc>
     <lastmod>2025-05-23T17:16:25+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-basics-3/</loc>
+    <loc>https://bestoko.cc/p/linux-basics-3/</loc>
     <lastmod>2025-05-22T23:16:27+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-basics-2/</loc>
+    <loc>https://bestoko.cc/p/linux-basics-2/</loc>
     <lastmod>2025-05-21T23:30:33+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-basics-1/</loc>
+    <loc>https://bestoko.cc/p/linux-basics-1/</loc>
     <lastmod>2025-05-20T23:23:06+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/android/</loc>
+    <loc>https://bestoko.cc/tags/android/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ios/</loc>
+    <loc>https://bestoko.cc/tags/ios/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/life/</loc>
+    <loc>https://bestoko.cc/categories/life/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/androidios/</loc>
+    <loc>https://bestoko.cc/p/androidios/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/samsung/</loc>
+    <loc>https://bestoko.cc/tags/samsung/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/scr01/</loc>
+    <loc>https://bestoko.cc/tags/scr01/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/scr01/</loc>
+    <loc>https://bestoko.cc/p/scr01/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E9%9A%8F%E8%BA%ABwifi/</loc>
+    <loc>https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/android-modding/</loc>
+    <loc>https://bestoko.cc/categories/android-modding/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fnos/</loc>
+    <loc>https://bestoko.cc/tags/fnos/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/homelab/</loc>
+    <loc>https://bestoko.cc/categories/homelab/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nas/</loc>
+    <loc>https://bestoko.cc/tags/nas/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/unraid/</loc>
+    <loc>https://bestoko.cc/tags/unraid/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/fnos_unraid/</loc>
+    <loc>https://bestoko.cc/p/fnos_unraid/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E9%A3%9E%E7%89%9Bos/</loc>
+    <loc>https://bestoko.cc/tags/%E9%A3%9E%E7%89%9Bos/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tesla-p4/</loc>
+    <loc>https://bestoko.cc/tags/tesla-p4/</loc>
     <lastmod>2024-10-27T14:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/teslap4_unraid/</loc>
+    <loc>https://bestoko.cc/p/teslap4_unraid/</loc>
     <lastmod>2024-10-27T14:40:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/follow/</loc>
-    <lastmod>2024-10-10T22:31:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/follow/</loc>
-    <lastmod>2024-10-10T22:31:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/play/</loc>
-    <lastmod>2024-10-10T22:31:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/oneplus_ace2_pro/</loc>
+    <loc>https://bestoko.cc/p/oneplus_ace2_pro/</loc>
     <lastmod>2023-08-31T10:10:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kernelsu/</loc>
+    <loc>https://bestoko.cc/tags/kernelsu/</loc>
     <lastmod>2023-08-31T10:10:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lsposed/</loc>
+    <loc>https://bestoko.cc/tags/lsposed/</loc>
     <lastmod>2023-08-31T10:10:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/all-in-one/</loc>
-    <lastmod>2023-06-24T01:53:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/myaio_00/</loc>
-    <lastmod>2023-06-24T01:53:01+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pt/</loc>
+    <loc>https://bestoko.cc/tags/pt/</loc>
     <lastmod>2023-06-07T22:42:16+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/qbittorrent/</loc>
+    <loc>https://bestoko.cc/tags/qbittorrent/</loc>
     <lastmod>2023-06-07T22:42:16+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/qbittorrenttips/</loc>
+    <loc>https://bestoko.cc/p/qbittorrenttips/</loc>
     <lastmod>2023-06-07T22:42:16+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</loc>
+    <loc>https://bestoko.cc/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</loc>
     <lastmod>2023-03-25T23:31:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/amateurradio/</loc>
+    <loc>https://bestoko.cc/p/amateurradio/</loc>
     <lastmod>2023-03-25T23:31:05+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/chatgpt/</loc>
+    <loc>https://bestoko.cc/tags/chatgpt/</loc>
     <lastmod>2023-03-01T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://bestoko.cc/tags/docker/</loc>
     <lastmod>2023-03-01T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/koishi/</loc>
+    <loc>https://bestoko.cc/tags/koishi/</loc>
     <lastmod>2023-03-01T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/qq-bot/</loc>
+    <loc>https://bestoko.cc/tags/qq-bot/</loc>
     <lastmod>2023-03-01T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/koishi-chatgpt/</loc>
+    <loc>https://bestoko.cc/p/koishi-chatgpt/</loc>
     <lastmod>2023-03-01T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://bestoko.cc/tags/blog/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://bestoko.cc/tags/hugo/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
+    <loc>https://bestoko.cc/tags/ubuntu/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows-11/</loc>
+    <loc>https://bestoko.cc/tags/windows-11/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/hugo_wsl2/</loc>
+    <loc>https://bestoko.cc/p/hugo_wsl2/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wsl2/</loc>
+    <loc>https://bestoko.cc/tags/wsl2/</loc>
     <lastmod>2022-12-10T23:25:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/kernel/</loc>
+    <loc>https://bestoko.cc/tags/kernel/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/log/</loc>
+    <loc>https://bestoko.cc/tags/log/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/work/</loc>
+    <loc>https://bestoko.cc/categories/work/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/kernellogaddtime/</loc>
+    <loc>https://bestoko.cc/p/kernellogaddtime/</loc>
     <lastmod>2022-06-22T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/camera/</loc>
+    <loc>https://bestoko.cc/tags/camera/</loc>
     <lastmod>2022-06-15T20:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mtk/</loc>
+    <loc>https://bestoko.cc/tags/mtk/</loc>
     <lastmod>2022-06-15T20:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/mtkcamerahal3modules/</loc>
+    <loc>https://bestoko.cc/p/mtkcamerahal3modules/</loc>
     <lastmod>2022-06-15T20:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fonts/</loc>
+    <loc>https://bestoko.cc/tags/fonts/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-fonts-size/</loc>
+    <loc>https://bestoko.cc/p/linux-fonts-size/</loc>
     <lastmod>2022-05-21T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/oh-my-zsh/</loc>
+    <loc>https://bestoko.cc/tags/oh-my-zsh/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/powerlevel10k/</loc>
+    <loc>https://bestoko.cc/tags/powerlevel10k/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/zsh/</loc>
+    <loc>https://bestoko.cc/p/zsh/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/zsh/</loc>
+    <loc>https://bestoko.cc/tags/zsh/</loc>
     <lastmod>2022-03-08T20:56:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/arch/</loc>
+    <loc>https://bestoko.cc/tags/arch/</loc>
     <lastmod>2022-03-05T19:19:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/grubfix/</loc>
+    <loc>https://bestoko.cc/p/grubfix/</loc>
     <lastmod>2022-03-05T19:19:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/grub/</loc>
+    <loc>https://bestoko.cc/tags/grub/</loc>
     <lastmod>2022-03-05T19:19:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/android-framework/</loc>
+    <loc>https://bestoko.cc/tags/android-framework/</loc>
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/android-framework/</loc>
+    <loc>https://bestoko.cc/p/android-framework/</loc>
     <lastmod>2022-03-03T20:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fedora/</loc>
+    <loc>https://bestoko.cc/tags/fedora/</loc>
     <lastmod>2021-12-30T09:18:46+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gnome/</loc>
+    <loc>https://bestoko.cc/tags/gnome/</loc>
     <lastmod>2021-12-30T09:18:46+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/gnome-lunar-calendar/</loc>
+    <loc>https://bestoko.cc/p/gnome-lunar-calendar/</loc>
     <lastmod>2021-12-30T09:18:46+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/fedora-grub2-theme/</loc>
+    <loc>https://bestoko.cc/p/fedora-grub2-theme/</loc>
     <lastmod>2021-12-29T18:56:18+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gurb2-theme/</loc>
+    <loc>https://bestoko.cc/tags/gurb2-theme/</loc>
     <lastmod>2021-12-29T18:56:18+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-virtualbox-error/</loc>
+    <loc>https://bestoko.cc/p/linux-virtualbox-error/</loc>
     <lastmod>2021-12-28T11:21:20+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/virtual-box/</loc>
+    <loc>https://bestoko.cc/tags/virtual-box/</loc>
     <lastmod>2021-12-28T11:21:20+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/linux-windows-time-conflict/</loc>
+    <loc>https://bestoko.cc/p/linux-windows-time-conflict/</loc>
     <lastmod>2021-12-27T21:14:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows/</loc>
+    <loc>https://bestoko.cc/tags/windows/</loc>
     <lastmod>2021-12-27T21:14:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/surface/</loc>
+    <loc>https://bestoko.cc/tags/surface/</loc>
     <lastmod>2021-12-16T01:48:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/surface-linux/</loc>
+    <loc>https://bestoko.cc/p/surface-linux/</loc>
     <lastmod>2021-12-16T01:48:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/archinstallextra/</loc>
+    <loc>https://bestoko.cc/p/archinstallextra/</loc>
     <lastmod>2021-12-15T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/archinstall/</loc>
+    <loc>https://bestoko.cc/p/archinstall/</loc>
     <lastmod>2021-12-14T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/edxposed/</loc>
+    <loc>https://bestoko.cc/tags/edxposed/</loc>
     <lastmod>2020-10-28T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mgasik/</loc>
+    <loc>https://bestoko.cc/tags/mgasik/</loc>
     <lastmod>2020-10-28T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/oneplus8/</loc>
+    <loc>https://bestoko.cc/p/oneplus8/</loc>
     <lastmod>2020-10-28T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/3ds/</loc>
+    <loc>https://bestoko.cc/tags/3ds/</loc>
     <lastmod>2020-03-30T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gba/</loc>
+    <loc>https://bestoko.cc/tags/gba/</loc>
     <lastmod>2020-03-30T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/gba2cia/</loc>
+    <loc>https://bestoko.cc/p/gba2cia/</loc>
     <lastmod>2020-03-30T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
+    <loc>https://bestoko.cc/categories/play/</loc>
+    <lastmod>2020-03-30T09:00:01+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/git/</loc>
     <lastmod>2020-03-23T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/gitnotes/</loc>
+    <loc>https://bestoko.cc/p/gitnotes/</loc>
     <lastmod>2020-03-23T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/study/</loc>
+    <loc>https://bestoko.cc/categories/study/</loc>
     <lastmod>2020-03-23T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
+    <loc>https://bestoko.cc/tags/markdown/</loc>
     <lastmod>2020-03-12T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/markdwonnotes/</loc>
+    <loc>https://bestoko.cc/p/markdwonnotes/</loc>
     <lastmod>2020-03-12T09:00:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://bestoko.cc/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/page/</loc>
+    <loc>https://bestoko.cc/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://bestoko.cc/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/links/</loc>
+    <loc>https://bestoko.cc/links/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://bestoko.cc/search/</loc>
   </url>
 </urlset>

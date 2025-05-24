@@ -2,41 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Toko&#39;s blog</title>
-        <link>http://localhost:1313/page/</link>
+        <link>https://bestoko.cc/page/</link>
         <description>Recent content in Pages on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://bestoko.cc/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>https://bestoko.cc/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>https://bestoko.cc/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>About</title>
-        <link>http://localhost:1313/about/</link>
+        <link>https://bestoko.cc/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/about/</guid>
+        <guid>https://bestoko.cc/about/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;以下内容最后更新于2025/03/12，部分信息可能因时间推移有所变动。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;以下内容最后更新于2025/05/24，部分信息可能因时间推移有所变动。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h1 id=&#34;关于-我&#34;&gt;关于 我
 &lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;男/26yo.&lt;/li&gt;
-&lt;li&gt;常用网名 &lt;code&gt;Toko&lt;/code&gt;/&lt;code&gt;bestoko&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Toko&lt;/code&gt; 这个ID来源于 Windows10 娘&lt;code&gt;窓辺とうこ&lt;/code&gt;（Madobe Toko）
+&lt;li&gt;
+&lt;p&gt;男/26yo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用网名 &lt;code&gt;Toko&lt;/code&gt;/&lt;code&gt;bestoko&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Toko&lt;/code&gt; 这个ID来源于 Windows10 娘&lt;code&gt;窓辺とうこ&lt;/code&gt;（Madobe Toko）&lt;/li&gt;
 &lt;li&gt;因为经常会被占用所以开始使用&lt;code&gt;bestoko&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;喜欢一切 ACGN 相关，&lt;del&gt;现在是个管人痴&lt;/del&gt; 已经管人毕业&lt;/li&gt;
-&lt;li&gt;你可以在以下地方找到我，欢迎加好友一起玩。
+&lt;li&gt;
+&lt;p&gt;喜欢一切 ACGN 相关，&lt;del&gt;是个管人痴&lt;/del&gt; 已经管人毕业&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;也喜欢硬件捡垃圾，折腾软路由、homeserver 相关&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你可以在以下地方找到我，有共同兴趣欢迎加好友一起玩。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Telegram ：&lt;a class=&#34;link&#34; href=&#34;https://t.me/bestoko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;@bestoko&lt;/a&gt; 【需要帮助的话提问请先阅读&lt;a class=&#34;link&#34; href=&#34;https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt; 提问的智慧 &lt;/a&gt;, 避免浪费双方过多无意义时间】&lt;/li&gt;
+    &gt;@bestoko&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Twitter：&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/bestokoCC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Toko的剪贴板&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Discord：bestoko#0075&lt;/li&gt;
@@ -49,10 +57,18 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;关于-博客&#34;&gt;关于 博客
 &lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Hugo 搭建 - Github 托管 - Aliyun 域名解析&lt;/li&gt;
+&lt;li&gt;Hugo 搭建 - Github 托管 - Cloudflare 域名解析及CDN&lt;/li&gt;
 &lt;li&gt;今后将以此为据点专注分享折腾经验、个人成长、读书学习相关的内容。&lt;/li&gt;
-&lt;li&gt;相信的心就是你的魔法 ~&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/steins_gate.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;如果你喜欢我的博客，欢迎使用 &lt;a class=&#34;link&#34; href=&#34;https://app.follow.is/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Follow&lt;/a&gt; 订阅:&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://app.follow.is/share/feeds/66996134550026240&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -61,10 +77,10 @@
         </item>
         <item>
         <title>Links</title>
-        <link>http://localhost:1313/links/</link>
+        <link>https://bestoko.cc/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/links/</guid>
+        <guid>https://bestoko.cc/links/</guid>
         <description>&lt;h2 id=&#34;友链&#34;&gt;友链：
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;想要添加友情链接的朋友可以在评论区留言，格式如下。&lt;/p&gt;&lt;/blockquote&gt;
@@ -86,10 +102,10 @@
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>https://bestoko.cc/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>https://bestoko.cc/search/</guid>
         <description></description>
         </item>
         
