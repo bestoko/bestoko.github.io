@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Surface on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/surface/</link>
+        <link>http://localhost:1313/tags/surface/</link>
         <description>Recent content in Surface on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 16 Dec 2021 01:48:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/surface/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 16 Dec 2021 01:48:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/surface/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>https://bestoko.cc/p/surface-linux/</link>
+        <link>http://localhost:1313/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/surface-linux/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/surface-linux/</guid>
+        <description>&lt;img src="http://localhost:1313/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动

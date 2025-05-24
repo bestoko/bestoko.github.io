@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>QQ Bot on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/qq-bot/</link>
+        <link>http://localhost:1313/tags/qq-bot/</link>
         <description>Recent content in QQ Bot on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 01 Mar 2023 21:30:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/qq-bot/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 01 Mar 2023 21:30:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/qq-bot/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
-        <link>https://bestoko.cc/p/koishi-chatgpt/</link>
+        <link>http://localhost:1313/p/koishi-chatgpt/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
+        <guid>http://localhost:1313/p/koishi-chatgpt/</guid>
+        <description>&lt;img src="http://localhost:1313/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
 &lt;h2 id=&#34;事前准备&#34;&gt;事前准备
 &lt;/h2&gt;&lt;p&gt;你需要准备：&lt;/p&gt;
 &lt;ol&gt;
@@ -26,10 +26,10 @@
 &lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
 &lt;h2 id=&#34;操作部署&#34;&gt;操作部署
 &lt;/h2&gt;&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu_3e6dc9232ea39a41.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu_9c408d0238609ff7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_hu_3e6dc9232ea39a41.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_hu_9c408d0238609ff7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -39,10 +39,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;也可通过 unraid 的 docker 配置，具体如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_ced83dad467a25b4.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_114c5123e6fc9fa6.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu_ced83dad467a25b4.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu_114c5123e6fc9fa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -52,10 +52,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_cafe5d84a1cb02c0.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_5b1241c20f6cbf6c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_cafe5d84a1cb02c0.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_5b1241c20f6cbf6c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -65,10 +65,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_f239d494338c029c.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_66a9bbe8319667d2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu_f239d494338c029c.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu_66a9bbe8319667d2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -80,10 +80,10 @@
 &lt;p&gt;按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。&lt;/p&gt;
 &lt;p&gt;接着去插件市场安装 &lt;a class=&#34;link&#34; href=&#34;https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;koishi_chatGPT 插件&lt;/a&gt;根据提示加载 cache 服务并配置 apiKey ：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_18c7f062a2620dd5.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_d7dfc3f8932528e2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu_18c7f062a2620dd5.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu_d7dfc3f8932528e2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -92,10 +92,10 @@
 		data-flex-basis=&#34;470px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_19a9a977b35af2ce.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_55b43feeae2018a8.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu_19a9a977b35af2ce.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu_55b43feeae2018a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

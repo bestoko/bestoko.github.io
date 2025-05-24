@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>QBittorrent on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/qbittorrent/</link>
+        <link>http://localhost:1313/tags/qbittorrent/</link>
         <description>Recent content in QBittorrent on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 07 Jun 2023 22:42:16 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/qbittorrent/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 07 Jun 2023 22:42:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/qbittorrent/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>qBittorrent 批量清理被PT站点删除的种子</title>
-        <link>https://bestoko.cc/p/qbittorrenttips/</link>
+        <link>http://localhost:1313/p/qbittorrenttips/</link>
         <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/qbittorrenttips/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
+        <guid>http://localhost:1313/p/qbittorrenttips/</guid>
+        <description>&lt;img src="http://localhost:1313/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu_48ab7c8f780cefa8.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu_bdd5477c6cd08e2c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/pt_hu_48ab7c8f780cefa8.png 480w, http://localhost:1313/p/qbittorrenttips/pt_hu_bdd5477c6cd08e2c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -28,10 +28,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我才注册了几个月就收到一大堆删种站内信，该说不说，管理也太尽职尽责了&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu_d4abb886dda80519.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu_bda6b3725cf8f92f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit1_hu_d4abb886dda80519.png 480w, http://localhost:1313/p/qbittorrenttips/qbit1_hu_bda6b3725cf8f92f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -44,10 +44,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;被站点删除的种子在 qBittorrent 里与正常种子不会有什么不同，只有点进去才能看到 &lt;code&gt;torrent not registered with this tracker&lt;/code&gt; 字样，Transmission 则会把所有红种、警告标记出来。我去查解决方法的时候甚至看到有说用 IYUU 转种到 Transmission 的建议&amp;hellip;只能说几千多个种子，转完再重新校验，实在有些“不够优雅”&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;其实，只需要在 qBittorrent 右键列标题，添加tracker 筛选框，并排序即可。被站点删除的种子 tracker 栏是空白，即可批量选中并移除。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu_509e275034a7fd2b.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu_b41d52562529f274.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit2_hu_509e275034a7fd2b.png 480w, http://localhost:1313/p/qbittorrenttips/qbit2_hu_b41d52562529f274.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -58,10 +58,10 @@
 		data-flex-basis=&#34;248px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu_51c9ee0a4a6c8394.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu_759327956f71a33f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit3_hu_51c9ee0a4a6c8394.png 480w, http://localhost:1313/p/qbittorrenttips/qbit3_hu_759327956f71a33f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;

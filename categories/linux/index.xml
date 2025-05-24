@@ -2,17 +2,513 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linux on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/categories/linux/</link>
+        <link>http://localhost:1313/categories/linux/</link>
         <description>Recent content in Linux on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 17:16:25 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 May 2025 23:13:40 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux基础（六）：系统权限管理进阶</title>
+        <link>http://localhost:1313/p/linux-basics-6/</link>
+        <pubDate>Sat, 24 May 2025 23:13:40 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/linux-basics-6/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-6/linux.png" alt="Featured image of post Linux基础（六）：系统权限管理进阶" /&gt;&lt;h2 id=&#34;文件权限&#34;&gt;文件权限（⭐）
+&lt;/h2&gt;&lt;h3 id=&#34;基本权限&#34;&gt;基本权限
+&lt;/h3&gt;&lt;p&gt;文件权限的种类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;r：可读=》4&lt;/li&gt;
+&lt;li&gt;w：可写=》2&lt;/li&gt;
+&lt;li&gt;x：可执行=》1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;权限的归属：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;属主：u&lt;/li&gt;
+&lt;li&gt;属组：g&lt;/li&gt;
+&lt;li&gt;其他人：o&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;谁来用文件的权限&amp;mdash;》进程&lt;/p&gt;
+&lt;p&gt;进程来用文件的时候，如何匹配权限的呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程启动（必须赋予某种身份）
+进程启动时的身份是怎么来的？
+（1）默认为当前登录用户
+（2）在配置文件里修改指定进程启动的身份&lt;/li&gt;
+&lt;li&gt;拿着进程的用户身份，去匹配目标文件的权限
+进程的用户身份会依次配文件的
+u&amp;mdash;&amp;gt; 9 段权限的前三段
+g&amp;mdash;&amp;gt; 9 段权限的中三段
+o&amp;mdash;&amp;gt; 9 段权限的后三段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;特殊权限&#34;&gt;特殊权限
+&lt;/h3&gt;&lt;h4 id=&#34;suid&#34;&gt;suid
+&lt;/h4&gt;&lt;p&gt;给命令文件加的权限
+chmod u+s /usr/bin/passwd&lt;/p&gt;
+&lt;p&gt;效果：
+passwd # &amp;mdash;-》/etc/shadow&lt;/p&gt;
+&lt;p&gt;加了suid权限的命令在启动时的用户身份会用自己的命令文件的属主身份&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SUID 权限仅对二进制可执行文件有效&lt;/li&gt;
+&lt;li&gt;如果执行者对于该二进制可执行文件具有 x 的权限，执行者将具有该文件的所有者的权限&lt;/li&gt;
+&lt;li&gt;本权限仅在执行该二进制可执行文件的过程中有效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sgid&#34;&gt;sgid
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当SGID 作用于普通文件时，和 SUID 类似，在执行该文件时，用户将获得该文件所属组的权限。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当 SGID 作用于目录时，意义就非常重大了：
+当一个用户对某一目录有写和执行权限时，该用户就可以在该目录下建立文件&lt;/p&gt;
+&lt;p&gt;如果该目录同时用 SGID 修饰，则该用户在这个目录下建立的文件都是属于这个目录所属的组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以给文件夹加
+chmod g+s /aaa # 后续在/aaa 文件夹下创建的文件、文件夹的属组都会继承自/aaa 文件夹的属组&lt;/p&gt;
+&lt;h4 id=&#34;sticky--sbit&#34;&gt;sticky / sbit
+&lt;/h4&gt;&lt;p&gt;SBIT 目前只对目录有效，用来阻止非文件的所有者删除文件。
+权限信息中最后一位 t 表明该目录被设置了 SBIT 权限。SBIT 对目录的作用是：当用户在该目录下创建新文件或目录时，仅有自己和 root 才有权力删除，主要作用于一个共享的文件夹。&lt;/p&gt;
+&lt;p&gt;chmod o+t /share
+在/share 文件下的文件只能被 root 用户及属主自己操作&lt;/p&gt;
+&lt;p&gt;特殊权限的数字代号
+suid&amp;mdash;-》4
+sgid&amp;mdash;-》2
+sticky&amp;mdash;-》1&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;0755&lt;/span&gt; a.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;7755&lt;/span&gt; a.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;4755&lt;/span&gt; a.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;umask-值&#34;&gt;umask 值
+&lt;/h2&gt;&lt;p&gt;umask值可以控制创建文件、文件夹时的默认权限
+在 root 用户下默认创建
+文件的权限：644
+文件夹的权限：755&lt;/p&gt;
+&lt;p&gt;为何默认是上述权限：
+系统默认权限
+文件的权限&amp;ndash;》666
+文件夹的权限&amp;ndash;》777&lt;/p&gt;
+&lt;p&gt;文件及文件夹的默认创建权限是：系统默认权限+umask值计算出来一个结果&lt;/p&gt;
+&lt;p&gt;linux中文件默认权限为666、目录权限默认为777，在umask的影响下&lt;/p&gt;
+&lt;h3 id=&#34;文件权限计算方法-偶数位直接相减奇数位相减后加1&#34;&gt;文件权限计算方法 ：偶数位直接相减，奇数位相减后加1
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;文件的起始权限值&lt;/th&gt;
+          &lt;th&gt;umask值&lt;/th&gt;
+          &lt;th&gt;操作&lt;/th&gt;
+          &lt;th&gt;计算后文件权限&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;666&lt;/td&gt;
+          &lt;td&gt;022 (每位如果都是偶数)&lt;/td&gt;
+          &lt;td&gt;直接相减即可&lt;/td&gt;
+          &lt;td&gt;644&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;666&lt;/td&gt;
+          &lt;td&gt;033 (每位如果有奇数或偶数)&lt;/td&gt;
+          &lt;td&gt;相减（奇数位相减后在其原奇数位加1）&lt;/td&gt;
+          &lt;td&gt;644&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;666&lt;/td&gt;
+          &lt;td&gt;325(每位如果有奇数或偶数)&lt;/td&gt;
+          &lt;td&gt;相减（奇数位相减后在其原奇数位加1）&lt;/td&gt;
+          &lt;td&gt;442&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;目录权限计算方法-直接相减即可&#34;&gt;目录权限计算方法 ：直接相减即可
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;文件的起始权限值&lt;/th&gt;
+          &lt;th&gt;umask值&lt;/th&gt;
+          &lt;th&gt;操作&lt;/th&gt;
+          &lt;th&gt;计算后文件权限&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;777&lt;/td&gt;
+          &lt;td&gt;022&lt;/td&gt;
+          &lt;td&gt;相减&lt;/td&gt;
+          &lt;td&gt;755&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;777&lt;/td&gt;
+          &lt;td&gt;033&lt;/td&gt;
+          &lt;td&gt;相减&lt;/td&gt;
+          &lt;td&gt;744&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;777&lt;/td&gt;
+          &lt;td&gt;325&lt;/td&gt;
+          &lt;td&gt;相减&lt;/td&gt;
+          &lt;td&gt;452&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;umask设置的越小，权限越大，慎用&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 临时设置umask&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@localhost ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# umask 000       //设置umask权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 永久设置umask&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@localhost tmp&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# vim /etc/profile  # 或者/etc/bashrc内容一样&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$UID&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;199&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`id -gn`&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`id -un`&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;nb&#34;&gt;umask&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;002&lt;/span&gt;    //表示uid大于等于199的默认umask值，表示普通用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;nb&#34;&gt;umask&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;022&lt;/span&gt;    //表示uid小于199的默认umask值，表示root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;su-切换用户&#34;&gt;SU 切换用户（⭐）
+&lt;/h2&gt;&lt;p&gt;按照进入shell环境方式的不同，分为两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录shell：登录账号密码，su - egon&lt;/li&gt;
+&lt;li&gt;非登录shell：在shell环境中直接输入命令进入的shell环境，su egon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;二者的区别的就是加载的配置文件不同：&lt;/p&gt;
+&lt;p&gt;登录shell：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;​	/etc/profile&lt;/li&gt;
+&lt;li&gt;​	/etc/profile.d/脚本&lt;/li&gt;
+&lt;li&gt;​	&amp;mdash;&amp;mdash;&amp;mdash;》centos9.3会多执行1次/etc/bashrc&lt;/li&gt;
+&lt;li&gt;​	~/.bash_profile&lt;/li&gt;
+&lt;li&gt;​	~/.bashrc&lt;/li&gt;
+&lt;li&gt;​	/etc/bashrc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非登录shell：
+~/.bashrc&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;​	/etc/bashrc&lt;/li&gt;
+&lt;li&gt;​	/etc/profile.d/脚本
+​
+PATH=$PATH:/usr/local/nginx/sbin
+export PATH
+​
+切换用户过程中加载的配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sudo&#34;&gt;sudo（⭐）
+&lt;/h2&gt;&lt;p&gt;让普通用户只用自己的账号密码进行认证，操作时可以临时获取管理的某种权限&lt;/p&gt;
+&lt;p&gt;修改sudo配置文件的两种方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;visudo # 专门编辑文件/etc/sudoers
+visudo -c # 检查文件语法&lt;/li&gt;
+&lt;li&gt;vi /etc/sudoers&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux基础（五）：系统权限管理基础</title>
+        <link>http://localhost:1313/p/linux-basics-5/</link>
+        <pubDate>Sat, 24 May 2025 23:08:30 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/linux-basics-5/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-5/linux.png" alt="Featured image of post Linux基础（五）：系统权限管理基础" /&gt;&lt;h2 id=&#34;文件系统&#34;&gt;文件系统
+&lt;/h2&gt;&lt;p&gt;文件系统filesystem是操作系统内核中负责组织管理磁盘的程序。
+linux常见文件系统有xfs、ext4 和 btrfs 文件系统，它们都是&lt;strong&gt;日志文件系统&lt;/strong&gt;（其特点是文件系统将没提交的数据变化保存到日志文件，以便在系统崩溃或者掉电时恢复数据）
+每个硬盘分区都要有一个文件系统：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;硬盘分区&amp;mdash;-》打隔断，分割出一个个小空间&lt;/li&gt;
+&lt;li&gt;文件系统&amp;mdash;-》对一个个小空间做装修，负责把空间的数据组织好
+文件系统组织好了之后带来的方便之处&lt;/li&gt;
+&lt;li&gt;使用者&amp;mdash;&amp;ndash;》	block 块（文件系统）&amp;mdash;&amp;ndash;》n 个扇区（硬盘的读写单位）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个文件系统包含的三大类块：
+文件有两部分数据构成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元数据：ls -l 的结果如权限、属主、数组&amp;mdash;&amp;mdash;-》inode block 块&lt;/li&gt;
+&lt;li&gt;内容数据：cat 看到的结果，真正的内容  &amp;mdash;&amp;mdash;-》data block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;superblock 超级块：记录此 filesystem 的整体信息，包括 inode/block 的总量、使用量、剩余量，以及文件系统的格式与相关信息等；&lt;/p&gt;
+&lt;p&gt;其中：
+superblock 一个文件系统整体就一个
+对一个文件来说：
+inode block 就 1 个
+data block 可能有多个&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png&#34;
+	width=&#34;820&#34;
+	height=&#34;607&#34;
+	srcset=&#34;http://localhost:1313/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_1ba27ddfe6e792ff.png 480w, http://localhost:1313/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_aedb2354b44a0b7e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;查看文件类型&#34;&gt;查看文件类型
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df -T &lt;span class=&#34;c1&#34;&gt;# 查看文件系统类型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df -h &lt;span class=&#34;c1&#34;&gt;# 空间使用量带单位&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df -i &lt;span class=&#34;c1&#34;&gt;# inode号的使用量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;硬盘满了，分两种情况：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	假设硬盘空间10个G
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	1、inode号耗尽：存1000 0000个空文件，耗尽inode号
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		测试命令：for&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;i&amp;lt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;300000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;i++&lt;span class=&#34;o&#34;&gt;)){&lt;/span&gt; touch &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;.txt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	2、磁盘空间耗尽：只存一个文件，但是这个文件有12G
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		测试命令：dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/zero &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;目标路径/1.txt &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;10G &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;补充：动态检测某个命令的结果
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;watch -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;df -i |grep sda1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;查看一个文件内容底层流程&#34;&gt;查看一个文件内容底层流程
+&lt;/h3&gt;&lt;p&gt;文件夹也是文件：
+元数据：权限、属主、属组、、、&amp;mdash;&amp;mdash;》inode block块
+内容数据：存的该文件夹包含的&amp;mdash;&amp;mdash;&amp;ndash;》data block块
+子文件名&amp;mdash;&amp;ndash;》inode块的编号
+子文件夹名&amp;mdash;&amp;ndash;》inode块的编号&lt;/p&gt;
+&lt;p&gt;普通文件：
+元数据：权限、属主、属组、、、&amp;mdash;&amp;mdash;&amp;ndash;》inode block块
+内容数据：你写的文件中的数据&amp;mdash;&amp;mdash;&amp;ndash;》data block块&lt;/p&gt;
+&lt;p&gt;cat /etc/passwd&lt;/p&gt;
+&lt;h3 id=&#34;硬链接软链接&#34;&gt;硬链接、软链接
+&lt;/h3&gt;&lt;h4 id=&#34;硬链接目标文件与源文件指向同一个-inode-号&#34;&gt;硬链接：目标文件与源文件指向同一个 inode 号
+&lt;/h4&gt;&lt;p&gt;ln /1. txt /2. txt
+特点：
+1、改动一个文件元数据或内容，另外一个也跟着变
+2、删除源文件，仅仅只是解除了源文件名与 inode 号的关联关系
+所以不会影响目标文件
+3、硬链接无法跨分区
+[ root@localhost ~]# ln  /1. txt /boot/3. txt
+ln: 无法创建硬链接&amp;quot;/boot/3. txt&amp;quot; =&amp;gt; &amp;ldquo;/1. txt&amp;rdquo;: 无效的跨设备连接
+4、不能对目录做硬链接&lt;/p&gt;
+&lt;h4 id=&#34;软连接目标文件指向的是源文件的文件名&#34;&gt;软连接：目标文件指向的是源文件的文件名
+&lt;/h4&gt;&lt;p&gt;ln -s /1. txt /4. txt
+特点：
+1、改动一个文件内容，另外一个也跟着变
+改元数据的话，彼此之间不会互相影响
+2、删除源文件/1.txt，目标文件不可用
+3、软连接可以跨分区，因为是指向文件名
+ln -s /1.txt /boot/5.txt
+4、可以对目录做软链接&lt;/p&gt;
+&lt;h2 id=&#34;用户组管理&#34;&gt;用户、组管理（⭐）
+&lt;/h2&gt;&lt;h3 id=&#34;什么是用户-组&#34;&gt;什么是用户 ？组？
+&lt;/h3&gt;&lt;p&gt;如果把整个系统当成一个公司
+用户 指的就是一个个员工
+超级管理员 就是所有员工里的老板
+组 指的就是部门&lt;/p&gt;
+&lt;h3 id=&#34;为何要有用户组&#34;&gt;为何要有用户？组？
+&lt;/h3&gt;&lt;p&gt;为了划分权限
+具体来说分成三大类：
+u：文件归属的主人，简称属主
+g：文件归属的组，简称属组
+o：不是u也不是g里的成员，统称为其他人o&lt;/p&gt;
+&lt;p&gt;每个进程都是以某个用户 xxx 身份启动
+ps aux # 第一列就是当前进程的用户身份
+当该要操作某个文件时，进程会以xxx用户去依次匹配
+1、xxx用户是否是目标文件的属主，若是，则直接对应属主的权限，否则继续往下对应
+2、xxx用户是否是目标的文件的属组内的成员，若是，则直接对应属组的权限，否则继续往下对应
+3、xxx用户归属其他人
+敲命令也是在启动进程，该进程的什么是谁？
+1、如果没做过任何配置，默认用户身份是你当前登录的用户
+2、可以对程序进行配置，指定其以什么用户身份启动&lt;/p&gt;
+&lt;h3 id=&#34;如何管理用户组&#34;&gt;如何管理用户？组？
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;用户的增删除改查
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	useradd egon
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	groupadd group1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	usermod -a -G group1 egon
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	id egon
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		uid: 用户的身份证号（系统是uid号来识别用户）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			 0-》超级管理的uid，通常只有一个
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			 1-999-》系统用户所使用的uid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			 &amp;gt;1000-&amp;gt; 后续创建的用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		gid：用户的主组gid号（创建用户会默认会创建一个与用户名同名的组，作为该用户的主组）	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		groups: &lt;span class=&#34;nv&#34;&gt;该用户所在所有的组&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;主组+附加组
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;与用户相关的一系列文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/etc/passwd : 存放的是用户详细信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/etc/shadow : 存放的是用户的密码（了解）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/etc/group : 存放的是组信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/etc/gshadow: 存放组密码（了解）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;c1&#34;&gt;# 了解：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/etc/skel &lt;span class=&#34;c1&#34;&gt;# 家目录里的隐藏的源模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/home/egon: 家目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				/var/spool/mail/egon &lt;span class=&#34;c1&#34;&gt;# 邮箱文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			查看用户（补充）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				who
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				whoami
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				pkill -KILL -u egon &lt;span class=&#34;c1&#34;&gt;# 强制某个用户下线&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			删除用户：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				userdel -r tom
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			创建用户详细（了解）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				useradd lili -s /sbin/nologin -u &lt;span class=&#34;m&#34;&gt;2000&lt;/span&gt; -g it -G salve -d /abc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			修改用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				usermod -g group1 lili
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				usermod -a -G group2 lili &lt;span class=&#34;c1&#34;&gt;# 在原有的基础上增加附加组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		组的增删改查
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			groupadd group1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;						
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			groupmod -n sale salve
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			groupdel -r group1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			组成员管理：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				groupadd it
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				useradd user01
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				useradd user02
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				useradd user03
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				gpasswd -a user01 it
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				gpasswd -M user02,user03 it
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;							
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				gpasswd -d user01 it &lt;span class=&#34;c1&#34;&gt;# 从it组里删掉成员user01&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Linux基础（四）：文件系统管理高级</title>
-        <link>https://bestoko.cc/p/linux-basics-4/</link>
+        <link>http://localhost:1313/p/linux-basics-4/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-4/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
+        <guid>http://localhost:1313/p/linux-basics-4/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
 &lt;/h2&gt;&lt;h3 id=&#34;查看命令所属文件&#34;&gt;查看命令所属文件
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -265,10 +761,10 @@ linux中用文件标识符&lt;/p&gt;
 &lt;li&gt;0代表标准输入&lt;/li&gt;
 &lt;li&gt;1代表标准正确输出&lt;/li&gt;
 &lt;li&gt;2代表标准错误输出
-&lt;img src=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;313&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;重定向&#34;
@@ -872,15 +1368,15 @@ PS: 压缩包的后缀不重要,但一定要携带.
         </item>
         <item>
         <title>Linux基础（三）：文件系统管理高级</title>
-        <link>https://bestoko.cc/p/linux-basics-3/</link>
+        <link>http://localhost:1313/p/linux-basics-3/</link>
         <pubDate>Thu, 22 May 2025 23:16:27 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-3/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-3/vim.png&#34;
+        <guid>http://localhost:1313/p/linux-basics-3/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-3/vim.png&#34;
 	width=&#34;787&#34;
 	height=&#34;531&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, https://bestoko.cc/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, http://localhost:1313/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1308,11 +1804,11 @@ diff -u bbb.txt aaa.txt&lt;/p&gt;
         </item>
         <item>
         <title>Linux基础（二）：文件系统管理基础</title>
-        <link>https://bestoko.cc/p/linux-basics-2/</link>
+        <link>http://localhost:1313/p/linux-basics-2/</link>
         <pubDate>Wed, 21 May 2025 23:30:33 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
+        <guid>http://localhost:1313/p/linux-basics-2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
 &lt;/h2&gt;&lt;p&gt;整个系统目录结构是一个树形结构
 树根：/&lt;/p&gt;
 &lt;p&gt;一切皆文件的设计思想
@@ -1855,11 +2351,11 @@ xterm&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（一）：初识 Linux </title>
-        <link>https://bestoko.cc/p/linux-basics-1/</link>
+        <link>http://localhost:1313/p/linux-basics-1/</link>
         <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-basics-1/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
+        <guid>http://localhost:1313/p/linux-basics-1/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
 &lt;/h2&gt;&lt;h3 id=&#34;从功能维度划分&#34;&gt;从功能维度划分
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
@@ -2143,16 +2639,16 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
-        <link>https://bestoko.cc/p/hugo_wsl2/</link>
+        <link>http://localhost:1313/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+        <guid>http://localhost:1313/p/hugo_wsl2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
 &lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2172,10 +2668,10 @@ init 0 关机&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2194,10 +2690,10 @@ init 0 关机&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2207,10 +2703,10 @@ init 0 关机&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, http://localhost:1313/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2223,15 +2719,15 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Ubuntu 20.04 英文环境部分中文字体异形解决方案</title>
-        <link>https://bestoko.cc/p/linux-fonts-size/</link>
+        <link>http://localhost:1313/p/linux-fonts-size/</link>
         <pubDate>Sat, 21 May 2022 10:30:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-fonts-size/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
+        <guid>http://localhost:1313/p/linux-fonts-size/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2406,10 +2902,10 @@ init 0 关机&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;效果：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2422,11 +2918,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Ubuntu 20.04 终端插件配置与美化</title>
-        <link>https://bestoko.cc/p/zsh/</link>
+        <link>http://localhost:1313/p/zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/zsh/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
+        <guid>http://localhost:1313/p/zsh/</guid>
+        <description>&lt;img src="http://localhost:1313/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
 &lt;h2 id=&#34;zsh&#34;&gt;Zsh
 &lt;/h2&gt;&lt;p&gt;安装 zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2546,11 +3042,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Arch Linux与Win11双系统修复grub引导</title>
-        <link>https://bestoko.cc/p/grubfix/</link>
+        <link>http://localhost:1313/p/grubfix/</link>
         <pubDate>Sat, 05 Mar 2022 19:19:15 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/grubfix/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
+        <guid>http://localhost:1313/p/grubfix/</guid>
+        <description>&lt;img src="http://localhost:1313/p/grubfix/fix-grub.jpg" alt="Featured image of post Arch Linux与Win11双系统修复grub引导" /&gt;&lt;p&gt;自用的电脑是Arch Linux和windows10双系统, 今天想着把win10抹掉装win11, 装完后从grub引导界面无法进入windows, 才想起来忘记考虑引导的事情了.&lt;/p&gt;
 &lt;p&gt;下面给出一个简单的解决办法:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2588,11 +3084,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Gnome农历插件安装踩坑记录</title>
-        <link>https://bestoko.cc/p/gnome-lunar-calendar/</link>
+        <link>http://localhost:1313/p/gnome-lunar-calendar/</link>
         <pubDate>Thu, 30 Dec 2021 09:18:46 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/gnome-lunar-calendar/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/gnome-lunar-calendar/</guid>
+        <description>&lt;img src="http://localhost:1313/p/gnome-lunar-calendar/calendar.png" alt="Featured image of post Gnome农历插件安装踩坑记录" /&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;extensions.gnome.org&lt;/a&gt;上找到个农历扩展&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/675/lunar-calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Lunar Calendar 农历&lt;/a&gt;，直接安装会因为缺少依赖报错，搜到的&lt;a class=&#34;link&#34; href=&#34;https://www.rpmfind.net/linux/rpm2html/search.php?query=lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;rpm包&lt;/a&gt;也无法正常安装，查了下需要手动编译安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/yetist/lunar-date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;lunar-date&lt;/a&gt;。&lt;/p&gt;
@@ -2642,10 +3138,10 @@ init 0 关机&lt;/li&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /usr/share/locale/zh_CN/LC_MESSAGES/lunar-date.mo /usr/share/locale/en_US/LC_MESSAGES/lunar-date.mo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gnome-lunar-calendar/lunar-date.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1824&#34;
-	srcset=&#34;https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, https://bestoko.cc/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gnome-lunar-calendar/lunar-date_hu_cffe45735a06ed9a.png 480w, http://localhost:1313/p/gnome-lunar-calendar/lunar-date_hu_f89447af54385292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;效果展示&#34;
@@ -2660,18 +3156,18 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Grub2主题美化踩坑记录</title>
-        <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
+        <link>http://localhost:1313/p/fedora-grub2-theme/</link>
         <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
+        <guid>http://localhost:1313/p/fedora-grub2-theme/</guid>
+        <description>&lt;img src="http://localhost:1313/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;下载主题&#34;&gt;下载主题
 &lt;/h2&gt;&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MacOS Monterey inspired grub theme&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -2722,18 +3218,18 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法</title>
-        <link>https://bestoko.cc/p/linux-virtualbox-error/</link>
+        <link>http://localhost:1313/p/linux-virtualbox-error/</link>
         <pubDate>Tue, 28 Dec 2021 11:21:20 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-virtualbox-error/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
+        <guid>http://localhost:1313/p/linux-virtualbox-error/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_31e10e5008bc858a.png 480w, http://localhost:1313/p/linux-virtualbox-error/virtualbox-error_hu_16abe25dd776758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;error&#34;
@@ -2760,11 +3256,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Linux与Windows双系统时间不一致的解决方法</title>
-        <link>https://bestoko.cc/p/linux-windows-time-conflict/</link>
+        <link>http://localhost:1313/p/linux-windows-time-conflict/</link>
         <pubDate>Mon, 27 Dec 2021 21:14:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-windows-time-conflict/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
+        <guid>http://localhost:1313/p/linux-windows-time-conflict/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-windows-time-conflict/linux-windows-time-conflict.png" alt="Featured image of post Linux与Windows双系统时间不一致的解决方法" /&gt;&lt;p&gt;给常用的电脑加了块固态装了&lt;code&gt;Arch linux&lt;/code&gt;，结果在切换双系统时出现两个系统时间不一致的现象，是我之前在&lt;code&gt;Surface&lt;/code&gt;上单系统所没遇到的。&lt;/p&gt;
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
@@ -2796,11 +3292,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>https://bestoko.cc/p/surface-linux/</link>
+        <link>http://localhost:1313/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/surface-linux/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/surface-linux/</guid>
+        <description>&lt;img src="http://localhost:1313/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动
@@ -2858,11 +3354,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Arch Linux安装备忘录（二）</title>
-        <link>https://bestoko.cc/p/archinstallextra/</link>
+        <link>http://localhost:1313/p/archinstallextra/</link>
         <pubDate>Wed, 15 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/archinstallextra/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/archinstallextra/</guid>
+        <description>&lt;img src="http://localhost:1313/p/archinstallextra/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（二）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;在安装了基本的&lt;code&gt;ArchLinux&lt;/code&gt;后，我们还需要一些配置、安装一些组件，来扩展系统功能，使其更符合我们日常使用习惯。&lt;/p&gt;
 &lt;h2 id=&#34;配置网络&#34;&gt;配置网络
 &lt;/h2&gt;&lt;p&gt;我们使用&lt;/p&gt;
@@ -3009,10 +3505,10 @@ init 0 关机&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;显卡驱动的安装&#34;&gt;显卡驱动的安装
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver.jpg&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/archinstallextra/GPUdirver.jpg&#34;
 	width=&#34;955&#34;
 	height=&#34;350&#34;
-	srcset=&#34;https://bestoko.cc/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, https://bestoko.cc/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/archinstallextra/GPUdirver_hu_db18c6f2956110e9.jpg 480w, http://localhost:1313/p/archinstallextra/GPUdirver_hu_ddcf8950a0eff22c.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3139,11 +3635,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Arch Linux安装备忘录（一）</title>
-        <link>https://bestoko.cc/p/archinstall/</link>
+        <link>http://localhost:1313/p/archinstall/</link>
         <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/archinstall/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/archinstall/</guid>
+        <description>&lt;img src="http://localhost:1313/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
 &lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;

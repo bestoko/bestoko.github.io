@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>玩机 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/categories/android-modding/</link>
+        <link>http://localhost:1313/categories/android-modding/</link>
         <description>Recent content in 玩机 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 15 Dec 2024 23:55:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/android-modding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Dec 2024 23:55:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/android-modding/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>三星 SCR01 入手简单折腾 </title>
-        <link>https://bestoko.cc/p/scr01/</link>
+        <link>http://localhost:1313/p/scr01/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/scr01/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
+        <guid>http://localhost:1313/p/scr01/</guid>
+        <description>&lt;img src="http://localhost:1313/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
 &lt;h2 id=&#34;外观与配置&#34;&gt;外观与配置
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, http://localhost:1313/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -26,10 +26,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, http://localhost:1313/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -64,10 +64,10 @@
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
 &lt;/ul&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, http://localhost:1313/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -76,10 +76,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, http://localhost:1313/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -88,10 +88,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, http://localhost:1313/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -100,10 +100,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, http://localhost:1313/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -112,10 +112,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, http://localhost:1313/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -124,10 +124,10 @@
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, http://localhost:1313/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -139,10 +139,10 @@
 &lt;p&gt;&lt;code&gt;allow list off&lt;/code&gt; 即运营商锁，关掉之后我们才可以使用默认日本运营商之外的卡&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sa/nsa enable&lt;/code&gt; 默认disable，开启后则可以使用5G&lt;/p&gt;
 &lt;h2 id=&#34;设置apn&#34;&gt;设置APN
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, http://localhost:1313/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -174,18 +174,18 @@
         </item>
         <item>
         <title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title>
-        <link>https://bestoko.cc/p/oneplus_ace2_pro/</link>
+        <link>http://localhost:1313/p/oneplus_ace2_pro/</link>
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>http://localhost:1313/p/oneplus_ace2_pro/</guid>
+        <description>&lt;img src="http://localhost:1313/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -221,10 +221,10 @@
 &lt;li&gt;
 &lt;p&gt;安装 KernelFlasher 并赋予 Root 权限&lt;/p&gt;
 &lt;p&gt;在已挂载槽位，点击刷入AK3压缩包，刷入对应的Anykernel3.zip即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -250,10 +250,10 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -264,10 +264,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -278,10 +278,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -292,10 +292,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -306,10 +306,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -320,10 +320,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -334,10 +334,10 @@
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -357,11 +357,11 @@
         </item>
         <item>
         <title>一加8的Android 11 折腾指南</title>
-        <link>https://bestoko.cc/p/oneplus8/</link>
+        <link>http://localhost:1313/p/oneplus8/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/oneplus8/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+        <guid>http://localhost:1313/p/oneplus8/</guid>
+        <description>&lt;img src="http://localhost:1313/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -445,10 +445,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, http://localhost:1313/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -459,10 +459,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -473,10 +473,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -487,10 +487,10 @@
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, http://localhost:1313/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;

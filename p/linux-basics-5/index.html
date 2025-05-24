@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="文件系统、用户、组管理">
+<title>Linux基础（五）：系统权限管理基础</title>
+
+<link rel='canonical' href='http://localhost:1313/p/linux-basics-5/'>
+
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Linux基础（五）：系统权限管理基础">
+<meta property='og:description' content="文件系统、用户、组管理">
+<meta property='og:url' content='http://localhost:1313/p/linux-basics-5/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2025-05-24T23:08:30&#43;08:00'/><meta property='article:modified_time' content='2025-05-24T23:08:30&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/linux-basics-5/linux.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Linux基础（五）：系统权限管理基础">
+<meta name="twitter:description" content="文件系统、用户、组管理"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/linux-basics-5/linux.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😺</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.social/@bestoko'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/7oko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#文件系统">文件系统</a>
+      <ol>
+        <li><a href="#查看文件类型">查看文件类型</a></li>
+        <li><a href="#查看一个文件内容底层流程">查看一个文件内容底层流程</a></li>
+        <li><a href="#硬链接软链接">硬链接、软链接</a>
+          <ol>
+            <li><a href="#硬链接目标文件与源文件指向同一个-inode-号">硬链接：目标文件与源文件指向同一个 inode 号</a></li>
+            <li><a href="#软连接目标文件指向的是源文件的文件名">软连接：目标文件指向的是源文件的文件名</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#用户组管理">用户、组管理（⭐）</a>
+      <ol>
+        <li><a href="#什么是用户-组">什么是用户 ？组？</a></li>
+        <li><a href="#为何要有用户组">为何要有用户？组？</a></li>
+        <li><a href="#如何管理用户组">如何管理用户？组？</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux-basics-5/">
+                <img src="/p/linux-basics-5/linux_hu_d1c003d07bd4f873.png"
+                        srcset="/p/linux-basics-5/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-5/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（五）：系统权限管理基础" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" style="background-color: #2a9d8f; color: #fff;">
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-basics-5/">Linux基础（五）：系统权限管理基础</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            文件系统、用户、组管理
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 24, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="文件系统">文件系统
+</h2><p>文件系统filesystem是操作系统内核中负责组织管理磁盘的程序。
+linux常见文件系统有xfs、ext4 和 btrfs 文件系统，它们都是<strong>日志文件系统</strong>（其特点是文件系统将没提交的数据变化保存到日志文件，以便在系统崩溃或者掉电时恢复数据）
+每个硬盘分区都要有一个文件系统：</p>
+<ul>
+<li>硬盘分区&mdash;-》打隔断，分割出一个个小空间</li>
+<li>文件系统&mdash;-》对一个个小空间做装修，负责把空间的数据组织好
+文件系统组织好了之后带来的方便之处</li>
+<li>使用者&mdash;&ndash;》	block 块（文件系统）&mdash;&ndash;》n 个扇区（硬盘的读写单位）</li>
+</ul>
+<p>一个文件系统包含的三大类块：
+文件有两部分数据构成：</p>
+<ul>
+<li>元数据：ls -l 的结果如权限、属主、数组&mdash;&mdash;-》inode block 块</li>
+<li>内容数据：cat 看到的结果，真正的内容  &mdash;&mdash;-》data block</li>
+</ul>
+<p>superblock 超级块：记录此 filesystem 的整体信息，包括 inode/block 的总量、使用量、剩余量，以及文件系统的格式与相关信息等；</p>
+<p>其中：
+superblock 一个文件系统整体就一个
+对一个文件来说：
+inode block 就 1 个
+data block 可能有多个</p>
+<p><img src="/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png"
+	width="820"
+	height="607"
+	srcset="/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_1ba27ddfe6e792ff.png 480w, /p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_aedb2354b44a0b7e.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="324px"
+	
+></p>
+<h3 id="查看文件类型">查看文件类型
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -T <span class="c1"># 查看文件系统类型</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">df -h <span class="c1"># 空间使用量带单位</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">df -i <span class="c1"># inode号的使用量</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">硬盘满了，分两种情况：
+</span></span><span class="line"><span class="cl">	假设硬盘空间10个G
+</span></span><span class="line"><span class="cl">	1、inode号耗尽：存1000 0000个空文件，耗尽inode号
+</span></span><span class="line"><span class="cl">		测试命令：for<span class="o">((</span><span class="nv">i</span><span class="o">=</span>1<span class="p">;</span>i&lt;<span class="o">=</span>300000<span class="p">;</span>i++<span class="o">)){</span> touch <span class="nv">$i</span>.txt<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	2、磁盘空间耗尽：只存一个文件，但是这个文件有12G
+</span></span><span class="line"><span class="cl">		测试命令：dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>目标路径/1.txt <span class="nv">bs</span><span class="o">=</span>10G <span class="nv">count</span><span class="o">=</span><span class="m">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">补充：动态检测某个命令的结果
+</span></span><span class="line"><span class="cl">watch -n <span class="m">1</span> <span class="s2">&#34;df -i |grep sda1&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查看一个文件内容底层流程">查看一个文件内容底层流程
+</h3><p>文件夹也是文件：
+元数据：权限、属主、属组、、、&mdash;&mdash;》inode block块
+内容数据：存的该文件夹包含的&mdash;&mdash;&ndash;》data block块
+子文件名&mdash;&ndash;》inode块的编号
+子文件夹名&mdash;&ndash;》inode块的编号</p>
+<p>普通文件：
+元数据：权限、属主、属组、、、&mdash;&mdash;&ndash;》inode block块
+内容数据：你写的文件中的数据&mdash;&mdash;&ndash;》data block块</p>
+<p>cat /etc/passwd</p>
+<h3 id="硬链接软链接">硬链接、软链接
+</h3><h4 id="硬链接目标文件与源文件指向同一个-inode-号">硬链接：目标文件与源文件指向同一个 inode 号
+</h4><p>ln /1. txt /2. txt
+特点：
+1、改动一个文件元数据或内容，另外一个也跟着变
+2、删除源文件，仅仅只是解除了源文件名与 inode 号的关联关系
+所以不会影响目标文件
+3、硬链接无法跨分区
+[ root@localhost ~]# ln  /1. txt /boot/3. txt
+ln: 无法创建硬链接&quot;/boot/3. txt&quot; =&gt; &ldquo;/1. txt&rdquo;: 无效的跨设备连接
+4、不能对目录做硬链接</p>
+<h4 id="软连接目标文件指向的是源文件的文件名">软连接：目标文件指向的是源文件的文件名
+</h4><p>ln -s /1. txt /4. txt
+特点：
+1、改动一个文件内容，另外一个也跟着变
+改元数据的话，彼此之间不会互相影响
+2、删除源文件/1.txt，目标文件不可用
+3、软连接可以跨分区，因为是指向文件名
+ln -s /1.txt /boot/5.txt
+4、可以对目录做软链接</p>
+<h2 id="用户组管理">用户、组管理（⭐）
+</h2><h3 id="什么是用户-组">什么是用户 ？组？
+</h3><p>如果把整个系统当成一个公司
+用户 指的就是一个个员工
+超级管理员 就是所有员工里的老板
+组 指的就是部门</p>
+<h3 id="为何要有用户组">为何要有用户？组？
+</h3><p>为了划分权限
+具体来说分成三大类：
+u：文件归属的主人，简称属主
+g：文件归属的组，简称属组
+o：不是u也不是g里的成员，统称为其他人o</p>
+<p>每个进程都是以某个用户 xxx 身份启动
+ps aux # 第一列就是当前进程的用户身份
+当该要操作某个文件时，进程会以xxx用户去依次匹配
+1、xxx用户是否是目标文件的属主，若是，则直接对应属主的权限，否则继续往下对应
+2、xxx用户是否是目标的文件的属组内的成员，若是，则直接对应属组的权限，否则继续往下对应
+3、xxx用户归属其他人
+敲命令也是在启动进程，该进程的什么是谁？
+1、如果没做过任何配置，默认用户身份是你当前登录的用户
+2、可以对程序进行配置，指定其以什么用户身份启动</p>
+<h3 id="如何管理用户组">如何管理用户？组？
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">用户的增删除改查
+</span></span><span class="line"><span class="cl">	useradd egon
+</span></span><span class="line"><span class="cl">	groupadd group1
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	usermod -a -G group1 egon
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	id egon
+</span></span><span class="line"><span class="cl">		uid: 用户的身份证号（系统是uid号来识别用户）
+</span></span><span class="line"><span class="cl">			 0-》超级管理的uid，通常只有一个
+</span></span><span class="line"><span class="cl">			 1-999-》系统用户所使用的uid
+</span></span><span class="line"><span class="cl">			 &gt;1000-&gt; 后续创建的用户
+</span></span><span class="line"><span class="cl">			 
+</span></span><span class="line"><span class="cl">		gid：用户的主组gid号（创建用户会默认会创建一个与用户名同名的组，作为该用户的主组）	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		groups: <span class="nv">该用户所在所有的组</span><span class="o">=</span>主组+附加组
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">与用户相关的一系列文件
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">				/etc/passwd : 存放的是用户详细信息
+</span></span><span class="line"><span class="cl">				
+</span></span><span class="line"><span class="cl">				/etc/shadow : 存放的是用户的密码（了解）
+</span></span><span class="line"><span class="cl">				
+</span></span><span class="line"><span class="cl">				/etc/group : 存放的是组信息
+</span></span><span class="line"><span class="cl">				/etc/gshadow: 存放组密码（了解）
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">				<span class="c1"># 了解：</span>
+</span></span><span class="line"><span class="cl">				/etc/skel <span class="c1"># 家目录里的隐藏的源模板</span>
+</span></span><span class="line"><span class="cl">				/home/egon: 家目录
+</span></span><span class="line"><span class="cl">				/var/spool/mail/egon <span class="c1"># 邮箱文件</span>
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			查看用户（补充）
+</span></span><span class="line"><span class="cl">				who
+</span></span><span class="line"><span class="cl">				whoami
+</span></span><span class="line"><span class="cl">				pkill -KILL -u egon <span class="c1"># 强制某个用户下线</span>
+</span></span><span class="line"><span class="cl">				
+</span></span><span class="line"><span class="cl">				
+</span></span><span class="line"><span class="cl">			删除用户：
+</span></span><span class="line"><span class="cl">				userdel -r tom
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">			创建用户详细（了解）
+</span></span><span class="line"><span class="cl">				useradd lili -s /sbin/nologin -u <span class="m">2000</span> -g it -G salve -d /abc
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">			修改用户
+</span></span><span class="line"><span class="cl">				usermod -g group1 lili
+</span></span><span class="line"><span class="cl">				usermod -a -G group2 lili <span class="c1"># 在原有的基础上增加附加组</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		组的增删改查
+</span></span><span class="line"><span class="cl">			groupadd group1
+</span></span><span class="line"><span class="cl">						
+</span></span><span class="line"><span class="cl">			groupmod -n sale salve
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">			groupdel -r group1
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			组成员管理：
+</span></span><span class="line"><span class="cl">				groupadd it
+</span></span><span class="line"><span class="cl">				useradd user01
+</span></span><span class="line"><span class="cl">				useradd user02
+</span></span><span class="line"><span class="cl">				useradd user03
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">				gpasswd -a user01 it
+</span></span><span class="line"><span class="cl">				gpasswd -M user02,user03 it
+</span></span><span class="line"><span class="cl">							
+</span></span><span class="line"><span class="cl">				gpasswd -d user01 it <span class="c1"># 从it组里删掉成员user01</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/notes/">Notes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（六）：系统权限管理进阶"
+                        data-key="Linux-basics-6" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（六）：系统权限管理进阶</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-4/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-4/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（四）：文件系统管理高级"
+                        data-key="Linux-basics-4" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（四）：文件系统管理高级</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-3/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-3/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（三）：文件系统管理高级"
+                        data-key="Linux-basics-3" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（三）：文件系统管理高级</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-2/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-2/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（二）：文件系统管理基础"
+                        data-key="Linux-basics-2" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（二）：文件系统管理基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-1/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-1/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（一）：初识 Linux "
+                        data-key="Linux-basics-1" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（一）：初识 Linux </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
