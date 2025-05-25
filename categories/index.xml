@@ -15,6 +15,14 @@
         <description>&lt;img src="https://bestoko.cc/categories/linux/%E9%95%BF%E5%B4%8E%E7%88%BD%E4%B8%96.png" alt="Featured image of post Linux" /&gt;</description>
         </item>
         <item>
+        <title>学习</title>
+        <link>https://bestoko.cc/categories/study/</link>
+        <pubDate>Sat, 24 May 2025 23:13:40 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/study/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/study/%E5%8D%83%E6%97%A9%E7%88%B1%E9%9F%B3.png" alt="Featured image of post 学习" /&gt;</description>
+        </item>
+        <item>
         <title>生活</title>
         <link>https://bestoko.cc/categories/life/</link>
         <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
@@ -53,14 +61,6 @@
         
         <guid>https://bestoko.cc/categories/play/</guid>
         <description>&lt;img src="https://bestoko.cc/categories/play/%E8%A6%81%E4%B9%90%E5%A5%88.png" alt="Featured image of post 娱乐" /&gt;</description>
-        </item>
-        <item>
-        <title>学习</title>
-        <link>https://bestoko.cc/categories/study/</link>
-        <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/categories/study/</guid>
-        <description>&lt;img src="https://bestoko.cc/categories/study/%E5%8D%83%E6%97%A9%E7%88%B1%E9%9F%B3.png" alt="Featured image of post 学习" /&gt;</description>
         </item>
         
     </channel>
