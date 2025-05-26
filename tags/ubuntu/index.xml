@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ubuntu on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/ubuntu/</link>
+        <link>http://localhost:1313/tags/ubuntu/</link>
         <description>Recent content in Ubuntu on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Dec 2022 23:25:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
-        <link>https://bestoko.cc/p/hugo_wsl2/</link>
+        <link>http://localhost:1313/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+        <guid>http://localhost:1313/p/hugo_wsl2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
 &lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -37,10 +37,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -59,10 +59,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -72,10 +72,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, http://localhost:1313/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -88,15 +88,15 @@
         </item>
         <item>
         <title>Ubuntu 20.04 英文环境部分中文字体异形解决方案</title>
-        <link>https://bestoko.cc/p/linux-fonts-size/</link>
+        <link>http://localhost:1313/p/linux-fonts-size/</link>
         <pubDate>Sat, 21 May 2022 10:30:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/linux-fonts-size/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors.png&#34;
+        <guid>http://localhost:1313/p/linux-fonts-size/</guid>
+        <description>&lt;img src="http://localhost:1313/p/linux-fonts-size/ubuntu-logo.png" alt="Featured image of post Ubuntu 20.04 英文环境部分中文字体异形解决方案" /&gt;&lt;p&gt;Ubuntu 20.04如果安装时默认选择英文，使用时会发现在浏览器或者 gedit 等界面上出现部分汉字显示不正常，比如“关”和“复”显示偏小，“门”字中间有一点，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors.png&#34;
 	width=&#34;182&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_f32c647b845e3e92.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors_hu_4c84eb809ea2dc83.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -271,10 +271,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;效果：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2.png&#34;
 	width=&#34;148&#34;
 	height=&#34;93&#34;
-	srcset=&#34;https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, https://bestoko.cc/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_6b20c15ddf82fefe.png 480w, http://localhost:1313/p/linux-fonts-size/Fonts_errors2_hu_84ddcdae8c19635a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -287,11 +287,11 @@
         </item>
         <item>
         <title>Ubuntu 20.04 终端插件配置与美化</title>
-        <link>https://bestoko.cc/p/zsh/</link>
+        <link>http://localhost:1313/p/zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/zsh/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
+        <guid>http://localhost:1313/p/zsh/</guid>
+        <description>&lt;img src="http://localhost:1313/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
 &lt;h2 id=&#34;zsh&#34;&gt;Zsh
 &lt;/h2&gt;&lt;p&gt;安装 zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
