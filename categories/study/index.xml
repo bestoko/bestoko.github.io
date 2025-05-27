@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>学习 on Toko&#39;s blog</title>
-        <link>http://localhost:1313/categories/study/</link>
+        <link>https://bestoko.cc/categories/study/</link>
         <description>Recent content in 学习 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 25 May 2025 23:19:42 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/study/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 25 May 2025 23:19:42 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/study/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux基础（七）：存储管理</title>
-        <link>http://localhost:1313/p/linux-basics-7/</link>
+        <link>https://bestoko.cc/p/linux-basics-7/</link>
         <pubDate>Sun, 25 May 2025 23:19:42 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-7/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-7/linux.png" alt="Featured image of post Linux基础（七）：存储管理" /&gt;&lt;h2 id=&#34;磁盘在系统中的命名&#34;&gt;磁盘在系统中的命名
+        <guid>https://bestoko.cc/p/linux-basics-7/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-7/linux.png" alt="Featured image of post Linux基础（七）：存储管理" /&gt;&lt;h2 id=&#34;磁盘在系统中的命名&#34;&gt;磁盘在系统中的命名
 &lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -64,10 +64,10 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 &lt;blockquote&gt;
 &lt;p&gt;1、逻辑分区属于扩展分区，扩展分区属于主分区
 2、主分区又叫做引导分区，是可以安装系统的分区&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-1.png&#34;
 	width=&#34;560&#34;
 	height=&#34;378&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-1_hu_668aa29386cee98e.png 480w, http://localhost:1313/p/linux-basics-7/Linux-basics-7-1_hu_9ff7f0a8dc8dec76.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-1_hu_668aa29386cee98e.png 480w, https://bestoko.cc/p/linux-basics-7/Linux-basics-7-1_hu_9ff7f0a8dc8dec76.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -768,10 +768,10 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 上述问题可以通过 LVM 来解决。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;逻辑卷管理LVM是硬盘的一个系统工具。无论在Linux或者其他类似的系统，都是非常的好用。传统分区使用固定大小分区，重新调整大小十分麻烦。但是，LVM可以创建和管理“逻辑”卷，而不是直接使用物理硬盘。可以让管理员弹性的管理逻辑卷的扩大缩小，操作简单，而不损坏已存储的数据。可以随意将新的硬盘添加到LVM，以直接扩展已经存在的逻辑卷。LVM并不需要重启就可以让内核知道分区的存在。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-2.png&#34;
 	width=&#34;302&#34;
 	height=&#34;342&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-2_hu_a4e501003c28f8f2.png 480w, http://localhost:1313/p/linux-basics-7/Linux-basics-7-2_hu_2fba906c23f34a58.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-2_hu_a4e501003c28f8f2.png 480w, https://bestoko.cc/p/linux-basics-7/Linux-basics-7-2_hu_2fba906c23f34a58.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -780,10 +780,10 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 		data-flex-basis=&#34;211px&#34;
 	
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-3.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-3.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;469&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-3_hu_cafc921203094f20.png 480w, http://localhost:1313/p/linux-basics-7/Linux-basics-7-3_hu_4a00a8366042d315.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-3_hu_cafc921203094f20.png 480w, https://bestoko.cc/p/linux-basics-7/Linux-basics-7-3_hu_4a00a8366042d315.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -812,10 +812,10 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 方案：底层用 RAID + 上层 LVM = 既有冗余又有动态扩展
 3、在从卷组中移除一个磁盘的时候必须使用 reducevg 命令（该命令要求 root 权限, 并且不允许在快照卷组中使用）&lt;/p&gt;
 &lt;h3 id=&#34;lvm-的基本使用&#34;&gt;LVM 的基本使用
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-4.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-4.png&#34;
 	width=&#34;1033&#34;
 	height=&#34;698&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-4_hu_8a6002a9a9863b43.png 480w, http://localhost:1313/p/linux-basics-7/Linux-basics-7-4_hu_153beb6eda58e411.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-4_hu_8a6002a9a9863b43.png 480w, https://bestoko.cc/p/linux-basics-7/Linux-basics-7-4_hu_153beb6eda58e411.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1090,10 +1090,10 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 &lt;/h3&gt;&lt;p&gt;LVM 机制还提供了对 LV 做快照的功能，也就是说可以&lt;strong&gt;给文件系统做一个备份&lt;/strong&gt;，这也是设计 LVM 快照的主要目的。LVM 的快照功能采用写时复制技术(Copy-On-Write，COW)，这比传统的备份技术的效率要高很多。创建快照时不用停止服务，就可以对数据进行备份。说明：LVM 还支持 thin 类型的快照，但是本文中的快照都是指 COW 类型的快照。&lt;/p&gt;
 &lt;p&gt;LVM 采用的写时复制，是指当 LVM 快照创建的时候，仅创建到实际数据的 inode 的硬链接(hark-link)而已。只要实际的数据没有改变，快照就只包含指向数据的 inode 的指针，而非数据本身。快照会跟踪原始卷中块的改变，一旦你更改了快照对应的文件或目录，这个时候原始卷上将要改变的数据会在改变之前拷贝到快照预留的空间。&lt;/p&gt;
 &lt;p&gt;lvm快照的原理：
-&lt;img src=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-5.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-5.png&#34;
 	width=&#34;605&#34;
 	height=&#34;262&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-7/Linux-basics-7-5_hu_723783a1ad7ffa0d.png 480w, http://localhost:1313/p/linux-basics-7/Linux-basics-7-5_hu_89181f0dd0b78926.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-5_hu_723783a1ad7ffa0d.png 480w, https://bestoko.cc/p/linux-basics-7/Linux-basics-7-5_hu_89181f0dd0b78926.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1269,11 +1269,11 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（六）：系统权限管理进阶</title>
-        <link>http://localhost:1313/p/linux-basics-6/</link>
+        <link>https://bestoko.cc/p/linux-basics-6/</link>
         <pubDate>Sat, 24 May 2025 23:13:40 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-6/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-6/linux.png" alt="Featured image of post Linux基础（六）：系统权限管理进阶" /&gt;&lt;h2 id=&#34;文件权限&#34;&gt;文件权限（⭐）
+        <guid>https://bestoko.cc/p/linux-basics-6/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-6/linux.png" alt="Featured image of post Linux基础（六）：系统权限管理进阶" /&gt;&lt;h2 id=&#34;文件权限&#34;&gt;文件权限（⭐）
 &lt;/h2&gt;&lt;h3 id=&#34;基本权限&#34;&gt;基本权限
 &lt;/h3&gt;&lt;p&gt;文件权限的种类：&lt;/p&gt;
 &lt;ul&gt;
@@ -1494,11 +1494,11 @@ visudo -c # 检查文件语法&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（五）：系统权限管理基础</title>
-        <link>http://localhost:1313/p/linux-basics-5/</link>
+        <link>https://bestoko.cc/p/linux-basics-5/</link>
         <pubDate>Sat, 24 May 2025 23:08:30 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-5/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-5/linux.png" alt="Featured image of post Linux基础（五）：系统权限管理基础" /&gt;&lt;h2 id=&#34;文件系统&#34;&gt;文件系统
+        <guid>https://bestoko.cc/p/linux-basics-5/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-5/linux.png" alt="Featured image of post Linux基础（五）：系统权限管理基础" /&gt;&lt;h2 id=&#34;文件系统&#34;&gt;文件系统
 &lt;/h2&gt;&lt;p&gt;文件系统filesystem是操作系统内核中负责组织管理磁盘的程序。
 linux常见文件系统有xfs、ext4 和 btrfs 文件系统，它们都是&lt;strong&gt;日志文件系统&lt;/strong&gt;（其特点是文件系统将没提交的数据变化保存到日志文件，以便在系统崩溃或者掉电时恢复数据）
 每个硬盘分区都要有一个文件系统：&lt;/p&gt;
@@ -1520,10 +1520,10 @@ superblock 一个文件系统整体就一个
 对一个文件来说：
 inode block 就 1 个
 data block 可能有多个&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;820&#34;
 	height=&#34;607&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_1ba27ddfe6e792ff.png 480w, http://localhost:1313/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_aedb2354b44a0b7e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_1ba27ddfe6e792ff.png 480w, https://bestoko.cc/p/linux-basics-5/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_hu_aedb2354b44a0b7e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1765,11 +1765,11 @@ ps aux # 第一列就是当前进程的用户身份
         </item>
         <item>
         <title>Linux基础（四）：文件系统管理高级</title>
-        <link>http://localhost:1313/p/linux-basics-4/</link>
+        <link>https://bestoko.cc/p/linux-basics-4/</link>
         <pubDate>Fri, 23 May 2025 17:16:25 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-4/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
+        <guid>https://bestoko.cc/p/linux-basics-4/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-4/linux.png" alt="Featured image of post Linux基础（四）：文件系统管理高级" /&gt;&lt;h2 id=&#34;文件查找&#34;&gt;文件查找
 &lt;/h2&gt;&lt;h3 id=&#34;查看命令所属文件&#34;&gt;查看命令所属文件
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2022,10 +2022,10 @@ linux中用文件标识符&lt;/p&gt;
 &lt;li&gt;0代表标准输入&lt;/li&gt;
 &lt;li&gt;1代表标准正确输出&lt;/li&gt;
 &lt;li&gt;2代表标准错误输出
-&lt;img src=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
+&lt;img src=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;313&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, http://localhost:1313/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_7b7fe34efd585a2d.png 480w, https://bestoko.cc/p/linux-basics-4/%E9%87%8D%E5%AE%9A%E5%90%91_hu_15a5ff88066eeb43.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;重定向&#34;
@@ -2629,15 +2629,15 @@ PS: 压缩包的后缀不重要,但一定要携带.
         </item>
         <item>
         <title>Linux基础（三）：文件系统管理高级</title>
-        <link>http://localhost:1313/p/linux-basics-3/</link>
+        <link>https://bestoko.cc/p/linux-basics-3/</link>
         <pubDate>Thu, 22 May 2025 23:16:27 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-3/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/linux-basics-3/vim.png&#34;
+        <guid>https://bestoko.cc/p/linux-basics-3/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-3/linux.png" alt="Featured image of post Linux基础（三）：文件系统管理高级" /&gt;&lt;h2 id=&#34;命令行文本编辑器-vivim&#34;&gt;命令行文本编辑器 VI、VIM
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-3/vim.png&#34;
 	width=&#34;787&#34;
 	height=&#34;531&#34;
-	srcset=&#34;http://localhost:1313/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, http://localhost:1313/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/linux-basics-3/vim_hu_2fcf116d9d8332d1.png 480w, https://bestoko.cc/p/linux-basics-3/vim_hu_b9329d064b23d8f9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3065,11 +3065,11 @@ diff -u bbb.txt aaa.txt&lt;/p&gt;
         </item>
         <item>
         <title>Linux基础（二）：文件系统管理基础</title>
-        <link>http://localhost:1313/p/linux-basics-2/</link>
+        <link>https://bestoko.cc/p/linux-basics-2/</link>
         <pubDate>Wed, 21 May 2025 23:30:33 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-2/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
+        <guid>https://bestoko.cc/p/linux-basics-2/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-2/linux.png" alt="Featured image of post Linux基础（二）：文件系统管理基础" /&gt;&lt;h2 id=&#34;linux-的目录结构&#34;&gt;Linux 的目录结构
 &lt;/h2&gt;&lt;p&gt;整个系统目录结构是一个树形结构
 树根：/&lt;/p&gt;
 &lt;p&gt;一切皆文件的设计思想
@@ -3612,11 +3612,11 @@ xterm&lt;/li&gt;
         </item>
         <item>
         <title>Linux基础（一）：初识 Linux </title>
-        <link>http://localhost:1313/p/linux-basics-1/</link>
+        <link>https://bestoko.cc/p/linux-basics-1/</link>
         <pubDate>Tue, 20 May 2025 23:23:06 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/linux-basics-1/</guid>
-        <description>&lt;img src="http://localhost:1313/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
+        <guid>https://bestoko.cc/p/linux-basics-1/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/linux-basics-1/linux.png" alt="Featured image of post Linux基础（一）：初识 Linux " /&gt;&lt;h2 id=&#34;linux-系统构成&#34;&gt;Linux 系统构成
 &lt;/h2&gt;&lt;h3 id=&#34;从功能维度划分&#34;&gt;从功能维度划分
 &lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
@@ -3900,18 +3900,18 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Git学习笔记</title>
-        <link>http://localhost:1313/p/gitnotes/</link>
+        <link>https://bestoko.cc/p/gitnotes/</link>
         <pubDate>Mon, 23 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gitnotes/</guid>
-        <description>&lt;img src="http://localhost:1313/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/gitnotes/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/gitnotes/git_logo.jpg" alt="Featured image of post Git学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。&lt;/p&gt;
 &lt;p&gt;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
 &lt;p&gt;Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gitnotes/learnGit.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gitnotes/learnGit.png&#34;
 	width=&#34;1401&#34;
 	height=&#34;471&#34;
-	srcset=&#34;http://localhost:1313/p/gitnotes/learnGit_hu_3730a2b0972bbdb.png 480w, http://localhost:1313/p/gitnotes/learnGit_hu_ba6bbb76ce6bb5f6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gitnotes/learnGit_hu_3730a2b0972bbdb.png 480w, https://bestoko.cc/p/gitnotes/learnGit_hu_ba6bbb76ce6bb5f6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;learnGit&#34;
@@ -4100,11 +4100,11 @@ init 0 关机&lt;/li&gt;
         </item>
         <item>
         <title>Markdown学习笔记</title>
-        <link>http://localhost:1313/p/markdwonnotes/</link>
+        <link>https://bestoko.cc/p/markdwonnotes/</link>
         <pubDate>Thu, 12 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/markdwonnotes/</guid>
-        <description>&lt;img src="http://localhost:1313/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
+        <guid>https://bestoko.cc/p/markdwonnotes/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/markdwonnotes/markdown.jpg" alt="Featured image of post Markdown学习笔记" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;以下是Markdown的基础语法&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
