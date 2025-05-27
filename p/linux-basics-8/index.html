@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="进程结构、进程状态、ps aux/top、僵尸进程、孤儿进程、信号">
+<title>Linux基础（八）：进程管理</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/linux-basics-8/'>
+
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Linux基础（八）：进程管理">
+<meta property='og:description' content="进程结构、进程状态、ps aux/top、僵尸进程、孤儿进程、信号">
+<meta property='og:url' content='https://bestoko.cc/p/linux-basics-8/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2025-05-27T21:26:41&#43;08:00'/><meta property='article:modified_time' content='2025-05-27T21:26:41&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-basics-8/linux.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Linux基础（八）：进程管理">
+<meta name="twitter:description" content="进程结构、进程状态、ps aux/top、僵尸进程、孤儿进程、信号"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/linux-basics-8/linux.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.social/@bestoko'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/7oko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#储备知识">储备知识</a>
+      <ol>
+        <li><a href="#同步与异步任务的启动调用方式">同步与异步：任务的启动/调用方式</a></li>
+        <li><a href="#并发与并行指的是任务给人展现出的运行的效果">并发与并行：指的是任务给人展现出的运行的效果</a></li>
+      </ol>
+    </li>
+    <li><a href="#进程的结构树形结构">进程的结构：树形结构</a></li>
+    <li><a href="#进程的状态rsdtzx">进程的状态（R、S、D、T、Z、X）</a>
+      <ol>
+        <li><a href="#活着的">活着的</a></li>
+        <li><a href="#死了的">死了的</a></li>
+      </ol>
+    </li>
+    <li><a href="#ps-aux-命令解析">ps aux 命令解析</a>
+      <ol>
+        <li><a href="#vsz-虚拟内存与-rss-物理内存">VSZ 虚拟内存与 RSS 物理内存</a></li>
+      </ol>
+    </li>
+    <li><a href="#top-命令解析">top 命令解析</a>
+      <ol>
+        <li><a href="#显示信息解释">显示信息解释</a></li>
+      </ol>
+    </li>
+    <li><a href="#特殊进程">特殊进程</a>
+      <ol>
+        <li><a href="#僵尸进程孤儿进程">僵尸进程、孤儿进程</a></li>
+        <li><a href="#守护进程">守护进程</a></li>
+      </ol>
+    </li>
+    <li><a href="#管理进程">管理进程</a>
+      <ol>
+        <li><a href="#给进程发信号">给进程发信号</a></li>
+        <li><a href="#hup-信号">HUP 信号</a></li>
+        <li><a href="#脱离终端运行来规避-hup-信号影响">脱离终端运行来规避 HUP 信号影响</a>
+          <ol>
+            <li><a href="#1-nohup-命令">1. nohup 命令</a></li>
+            <li><a href="#2-setsid命令">2. setsid命令</a></li>
+            <li><a href="#3-在子shell中提交任务">3. 在子shell中提交任务</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux-basics-8/">
+                <img src="/p/linux-basics-8/linux_hu_d1c003d07bd4f873.png"
+                        srcset="/p/linux-basics-8/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-8/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（八）：进程管理" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" style="background-color: #2a9d8f; color: #fff;">
+                Linux
+            </a>
+        
+            <a href="/categories/study/" style="background-color: #2a9d8f; color: #fff;">
+                学习
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-basics-8/">Linux基础（八）：进程管理</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            进程结构、进程状态、ps aux/top、僵尸进程、孤儿进程、信号
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 27, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="储备知识">储备知识
+</h2><h3 id="同步与异步任务的启动调用方式">同步与异步：任务的启动/调用方式
+</h3><p>程序：存放代码的文件=》静态<br>
+进程：程序的运行过程=》动态</p>
+<ul>
+<li>
+<p>同步：
+多个任务是同步执行的指的是启动一个任务之后，必须在原地等待该任务运行完毕之后，才能启动下一个任务并且运行</p>
+</li>
+<li>
+<p>异步：
+提交完一个任务之后，不用在原地等待该任务运行完毕
+就能立即提交下一个任务执行</p>
+</li>
+</ul>
+<blockquote>
+<p>补充&amp;符号：
+&amp;作用：在bash命令后加&amp;符号，可以把该命令放到后台运行</p></blockquote>
+<h3 id="并发与并行指的是任务给人展现出的运行的效果">并发与并行：指的是任务给人展现出的运行的效果
+</h3><p>并发/并行：多个任务是”同时“运行的</p>
+<p>串行：一个任务运行完毕，才能运行下一个</p>
+<p>阻塞与非阻塞：任务在操作系统中的运行状态</p>
+<p>会引起阻塞的事项：
+1、硬盘io
+2、网络io
+3、sleep
+4、read命令</p>
+<h2 id="进程的结构树形结构">进程的结构：树形结构
+</h2><p>0 号：整个系统的祖宗进程</p>
+<p>0号进程会产生两个进程1号和2号</p>
+<ul>
+<li>1号：是所有用户态进程的祖宗</li>
+<li>2号：是所有内核态进程的祖宗</li>
+</ul>
+<h2 id="进程的状态rsdtzx">进程的状态（R、S、D、T、Z、X）
+</h2><h3 id="活着的">活着的
+</h3><ol>
+<li>运行、就绪着的 R
+<ul>
+<li>正在执行：手里拿着cpu正在运行</li>
+<li>就绪（随时可以投入运行）：正在等待操作系统分配cpu，一旦分配到，就可以立即投入运行</li>
+</ul>
+</li>
+<li>阻塞着的 S 或 D
+<ul>
+<li>S：可中断的睡眠
+<ul>
+<li>可以用例如ctrl+c, kill -9 pid号命令来终止</li>
+</ul>
+</li>
+<li>D: 不可中断睡眠（因为存储设备太忙了响应不过来了）
+<ul>
+<li>不可以被中止（linux系统为了防止数据丢失的一种保护机制）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="死了的">死了的
+</h3><ol>
+<li>僵尸进程 Z
+僵尸进程是操作系统的一种优化机制
+一个进程死掉之后，会把其占用的 cpu、内存资源都释放掉，但是会保留该进程的状态信息
+例如 pid 号、存在过的一些运行信息
+这些保留下来的信息都是操作系统给父进程准备的
+每个进程死掉之前都会进入僵尸进程的状态
+僵尸进程通常由父进程来回收</li>
+<li>退出的进程 X
+进程已完全终止，仅在内核态短暂出现。
+用户态工具（如 <code>ps</code>）通常看不到此状态。</li>
+</ol>
+<blockquote>
+<p>补充：
++号：前台运行的进程
+s：表示该进程是会话（session）的领导/领导进程，用来接收用户请求，然后自己不干给儿子进程去干
+l：当前进程是多线程模式
+&lt;: 高优先级的进程
+T：暂停</p>
+<p>给进程发送一个SIGSTOP信号，进程就会响应信号进入T状态，
+再通过发送SIGCONT信号让进程继续运行。
+kill -SIGSTOP pid号
+kill -SIGCONT pid号</p></blockquote>
+<h2 id="ps-aux-命令解析">ps aux 命令解析
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ps aux |head -5</span>
+</span></span><span class="line"><span class="cl">USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+</span></span><span class="line"><span class="cl">root          <span class="m">1</span>  0.0  0.3 <span class="m">128400</span>  <span class="m">7104</span> ?        Ss   8月12   0:05 /usr/lib/systemd/systemd --switched-root --system --deserialize <span class="m">22</span>
+</span></span><span class="line"><span class="cl">root          <span class="m">2</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    8月12   0:00 <span class="o">[</span>kthreadd<span class="o">]</span>
+</span></span><span class="line"><span class="cl">root          <span class="m">4</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S&lt;   8月12   0:00 <span class="o">[</span>kworker/0:0H<span class="o">]</span>
+</span></span><span class="line"><span class="cl">root          <span class="m">5</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    8月12   0:01 <span class="o">[</span>kworker/u256:0<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>USER:    运行进程的用户</p>
+<p>PID：    进程ID</p>
+<p>%CPU:    CPU占用率</p>
+<p>%MEM:    内存占用率，指的是实际内存RSS占用率</p>
+<p>VSZ：    占用虚拟内存，单位：KB（killo Bytes）
+VSZ是指已分配的线性空间大小，这个大小通常并不等于程序实际用到的内存大小，产生这个的可能性很多
+比如内存映射，共享的动态库，或者向系统申请了更多的堆，都会扩展线性空间大小。</p>
+<p>RSS:    占用实际内存，单位：KB（killo Bytes）
+RSZ是Resident Set Size，常驻内存大小，即进程实际占用的物理内存大小</p>
+<p>TTY：    进程运行的终端</p>
+<p>STAT：   进程状态     man ps (/STATE)         <br>
+R     运行
+S     可中断睡眠 Sleep，即在睡眠的过程中可以接收信号唤醒=》执行的IO操作可以得到硬件设备的响应
+D     不可中断睡眠，即在睡眠的过程中不可以接收信号唤醒=》执行的IO操作得不到硬件设备的响应
+T     停止的进程
+Z     僵尸进程
+X     死掉的进程(几乎看不见，因为死了就立即回收了)</p>
+<p>&lt;  标注了&lt;小于号代表优先级较高的进程
+N     N代表优先级较低的进程</p>
+<p>s     该进程包含子进程，该进程自己是整个会话的领导者</p>
+<pre><code>  +     +表示是前台的进程组
+
+  l     小写字母l，代表以线程的方式运行，即多线程
+  |     管道符号代表多进程
+</code></pre>
+<p>START:    进程的启动时间
+TIME：    进程占用CPU的总时间</p>
+<p>COMMAND： 进程文件，进程名
+带[]号的代表内核态进程
+不带[]号的代表用户态进程
+补充Centos9中还有一个大写字母I的进程状态
+大写字母&quot;I&quot;代表的进程状态是&quot;Idle kernel thread&quot;，这意味着该进程是一个空闲的内核线程，不是用户模式下的空闲进程。这个状态通常只应用于内核线程，用户进程通常不会有这个状态。</p></blockquote>
+<h3 id="vsz-虚拟内存与-rss-物理内存">VSZ 虚拟内存与 RSS 物理内存
+</h3><blockquote>
+<ol>
+<li>VSZ（Virtual Memory Size）</li>
+</ol>
+<ul>
+<li>含义：进程可访问的全部内存（包括实际占用+预留的共享库/映射文件）。</li>
+<li>特点：
+<ul>
+<li>包含未实际使用的内存（如申请但未写入的堆空间）。</li>
+<li>单位通常为 KB（<code>ps aux</code> 中显示的值）。</li>
+</ul>
+</li>
+<li>示例：<br>
+若进程申请 1GB 堆但仅写入 100MB，VSZ ≈ 1GB。</li>
+</ul>
+<ol start="2">
+<li>RSS（Resident Set Size）</li>
+</ol>
+<ul>
+<li>含义：进程实际占用的物理内存（不含交换分区 Swap）。</li>
+<li>特点：
+<ul>
+<li>包含共享库中已被加载的部分。</li>
+<li>直接反映进程对物理内存的压力。</li>
+</ul>
+</li>
+<li>示例：<br>
+上述进程中，RSS ≈ 100MB（实际写入的物理内存）。</li>
+</ul></blockquote>
+<p>pstree 查看进程树</p>
+<h2 id="top-命令解析">top 命令解析
+</h2><p>基本用法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top -d 1  # 1秒刷新一次</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top -d 1 -p 进程的pid</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top -d 1 -p `pgrep nginx | head -1`</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top -d 1 -p `pgrep sshd | head -1`,33  # 查看sshd以及pid为33的进程</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top -d 1 -u nginx  # 查看指定用户进程</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># top -b -n 2 &gt; top.txt  # 将2次top信息写入到文件</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="显示信息解释">显示信息解释
+</h3><ul>
+<li><strong>第1行</strong>（系统状态）：<br>
+<code>top - 15:30:02 up 10 days, 3 users, load average: 0.5, 0.3, 0.2</code>
+<ul>
+<li><strong><code>15:30:02</code></strong>：当前时间</li>
+<li><strong><code>up 10 days</code></strong>：系统运行时间</li>
+<li><strong><code>load average</code></strong>：1/5/15分钟的平均负载（核心数≤1为正常）。</li>
+</ul>
+</li>
+<li><strong>第2行</strong>（任务统计）：<br>
+<code>Tasks: 100 total, 2 running, 98 sleeping, 0 stopped, 0 zombie</code>
+<ul>
+<li><strong><code>running</code></strong>：运行中的进程数</li>
+<li><strong><code>zombie</code></strong>：僵尸进程数（需警惕）。</li>
+</ul>
+</li>
+<li><strong>第3行</strong>（CPU使用率）：<br>
+<code>%Cpu(s): 5.3 us, 2.0 sy, 0.0 ni, 92.7 id, 0.0 wa, 0.0 hi, 0.0 si</code>
+<ul>
+<li><strong><code>us</code></strong>：用户态CPU</li>
+<li><strong><code>sy</code></strong>：内核态CPU</li>
+<li><strong><code>ni</code></strong>： <strong>Nice Time</strong> 低优先级进程（Nice 值 &gt; 0）占用的 CPU 时间百分比</li>
+<li><strong><code>wa</code></strong>：I/O等待（高则磁盘瓶颈）</li>
+<li><strong><code>id</code></strong>：空闲CPU。</li>
+<li><strong><code>hi</code></strong>：Hardware Interrupt Time 硬件中断占用 CPU（如键盘/磁盘）占用的 CPU 时间百分比</li>
+<li><strong><code>si</code></strong>：Software Interrupt Time 软中断处理占用 CPU（网络、多核任务调度）占用的 CPU 时间百分比</li>
+</ul>
+</li>
+<li><strong>第4行</strong>（物理内存）：<br>
+<code>MiB Mem : 8000 total, 200 free, 5000 used, 2800 buff/cache</code>
+<ul>
+<li><strong><code>used</code></strong>：已用内存（含缓存）</li>
+<li><strong><code>free</code></strong>：完全空闲内存。</li>
+</ul>
+</li>
+<li><strong>第5行</strong>（交换分区）：<br>
+<code>MiB Swap: 2000 total, 1500 free, 500 used</code>
+<ul>
+<li><strong><code>used</code></strong>：Swap使用量（高则物理内存不足）。</li>
+</ul>
+</li>
+</ul>
+<p>交互快捷键</p>
+<ul>
+<li><strong><code>P</code></strong>：按CPU%排序</li>
+<li><strong><code>M</code></strong>：按内存%排序</li>
+<li><strong><code>k</code></strong>：终止进程（输入PID）</li>
+<li><strong><code>q</code></strong>：退出</li>
+<li><strong><code>1</code></strong>：展开多核CPU详情</li>
+</ul>
+<p>average 平均负载（负载指的是几个活跃的活要干）：在一段时间内，处于 R 状态的进程数+不可中断 D 睡眠的进程数
+平均负载是用来要衡量系统的繁忙程度
+4 个 cpu：
+平均负载为 3，代有个 3 个活跃进程，&mdash;》低负载
+平均负载为 4，代有个 4 个活跃进程，&mdash;》满负载
+平均负载&gt;4，                    &mdash;》超负载
+cpu 的利用率：反应的是 cpu 的使用情况</p>
+<h2 id="特殊进程">特殊进程
+</h2><h3 id="僵尸进程孤儿进程">僵尸进程、孤儿进程
+</h3><p>僵尸进程：进程已终止，但其退出状态未被父进程回收（残留内核中的 <code>task_struct</code>）。</p>
+<ul>
+<li>状态码 Z</li>
+<li>产生原因：
+<ul>
+<li>父进程未调用 <code>wait()</code> 或 <code>waitpid()</code>。</li>
+<li>父进程异常退出（如被 <code>kill -9</code>）。</li>
+</ul>
+</li>
+<li>影响：
+<ul>
+<li>占用 PID（可能导致 PID 耗尽）。</li>
+<li>不消耗 CPU/内存。</li>
+</ul>
+</li>
+<li>解决：
+<ul>
+<li>终止父进程（内核会回收其所有僵尸子进程）。</li>
+<li>重启服务或系统。</li>
+</ul>
+</li>
+</ul>
+<p>孤儿进程：父进程已终止，子进程被 <code>init</code>（PID 1）接
+管。</p>
+<ul>
+<li>状态码：正常（ <code>S</code> 或 <code>R</code>）</li>
+<li>产生原因：
+<ul>
+<li>父进程主动/被动退出（如崩溃）。</li>
+<li>子进程仍在运行。</li>
+</ul>
+</li>
+<li>影响：
+<ul>
+<li>无害，<code>init</code> 会负责回收资源。</li>
+<li>可能长期运行（如后台服务）。</li>
+</ul>
+</li>
+<li>用途：
+<ul>
+<li>实现守护进程（如 <code>nginx</code>、<code>sshd</code>）</li>
+</ul>
+</li>
+</ul>
+<h3 id="守护进程">守护进程
+</h3><p>Daemon Process
+守护进程是 <strong>在后台长期运行的特殊进程</strong>，脱离终端控制，通常作为系统服务（如 <code>sshd</code>、<code>nginx</code>）
+以下几点是守护进程的一些主要特征：<br>
+1、守护进程在后台运行，通常不需要与用户交互。<br>
+2、守护进程通常长时间运行，直到系统关闭。<br>
+3、守护进程没有控制终端，也不拥有标准输入设备，标准输出设备或标准错误设备。</p>
+<p>守护进程与普通进程的区别主要体现在：<br>
+1、生命周期：普通进程通常由用户启动，任务完成后结束；而守护进程在系统启动后自动运行，直到系统关闭。<br>
+2、控制：普通进程通常有控制终端，可以直接与用户交互；而守护进程没有控制终端，通常通过系统日志、配置文件等方式进行管理和配置。</p>
+<h2 id="管理进程">管理进程
+</h2><h3 id="给进程发信号">给进程发信号
+</h3><p><code>kill -l</code> 列出所有支持的信号
+最常用的八个信号：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>信号编号</th>
+          <th>信号名</th>
+          <th>默认行为</th>
+          <th>典型用途</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>1</code></td>
+          <td><code>SIGHUP</code></td>
+          <td>终止进程</td>
+          <td>重新加载配置（如 <code>nginx -s reload</code> 发送 <code>SIGHUP</code> 给主进程）</td>
+      </tr>
+      <tr>
+          <td><code>2</code></td>
+          <td><code>SIGINT</code></td>
+          <td>终止进程</td>
+          <td><strong>Ctrl+C</strong> 触发，优雅终止前台进程</td>
+      </tr>
+      <tr>
+          <td><code>3</code></td>
+          <td><code>SIGQUIT</code></td>
+          <td>终止 + 核心转储</td>
+          <td><strong>Ctrl+</strong> 触发，用于调试（生成 <code>core</code> 文件）</td>
+      </tr>
+      <tr>
+          <td><code>9</code></td>
+          <td><code>SIGKILL</code></td>
+          <td><strong>强制终止</strong></td>
+          <td>立即杀死进程（不可被捕获/忽略），救急用</td>
+      </tr>
+      <tr>
+          <td><code>15</code></td>
+          <td><code>SIGTERM</code></td>
+          <td>终止进程</td>
+          <td><strong>默认信号</strong>，允许进程清理资源（如 <code>kill &lt;PID&gt;</code>）</td>
+      </tr>
+      <tr>
+          <td><code>18</code></td>
+          <td><code>SIGCONT</code></td>
+          <td>继续运行</td>
+          <td>恢复被 <code>SIGSTOP</code> 暂停的进程（如 <code>kill -18 &lt;PID&gt;</code>）</td>
+      </tr>
+      <tr>
+          <td><code>19</code></td>
+          <td><code>SIGSTOP</code></td>
+          <td><strong>暂停进程</strong></td>
+          <td>立即暂停进程（不可被捕获/忽略），<strong>Ctrl+Z</strong> 触发</td>
+      </tr>
+      <tr>
+          <td><code>20</code></td>
+          <td><code>SIGTSTP</code></td>
+          <td>暂停进程</td>
+          <td>可被捕获的暂停（如 <code>Ctrl+Z</code> 时程序可先执行清理）</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>kill  -15杀死进程（该信号可以被捕获、忽略和阻塞，有时候会被进程捕获然后忽略导致无法终止，则需要用-9）</p>
+<p>杀死所有：根据进程名杀所有</p>
+<p><code>killall -9 vim</code>  <code>pkill -9 vim</code></p>
+<h3 id="hup-信号">HUP 信号
+</h3><p>HUP信号，主要涉及两种应用场景：
+1、终端关闭时，系统会向与该终端相连的所有进程发送SIGHUP信号，这会导致这些进程被关闭（所有才有了脱离终端运行的需求）
+2、用kill命令给进程发送SIGHUP信号实现该进程的平滑重启
+需要注意的是，并非所有的进程或应用都能处理SIGHUP信号，只有程序内写过专门的捕获并处理该信号的代码才行，
+nginx的源代码里就写了，并且会响应该信号来实现平滑重启</p>
+<h3 id="脱离终端运行来规避-hup-信号影响">脱离终端运行来规避 HUP 信号影响
+</h3><p>当用户注销（logout）或者网络断开或者终端关闭，时，终端都会收到Linux HUP信号（hangup）信号，然后终端在结束前会关闭其所有子进程。 注意注意注意，一定是终端整体关闭，不是单纯的exit，就是说你要点击窗口的×号关闭</p>
+<p>如果我们想让我们的进程在后台一直运行，不要因为用户注销（logout）或者网络断开或者终端关闭而一起被干掉，那么我们有两种解决方案</p>
+<ul>
+<li>方案1：让进程忽略Linux HUP信号</li>
+<li>方案2：让进程运行在新的会话里，从而成为不属于此终端的子进程，就不会在当前终端挂掉的情况下一起被带走。</li>
+</ul>
+<h4 id="1-nohup-命令">1. nohup 命令
+</h4><p>针对方案1，我们可以使用nohup命令，nohup 的用途就是让提交的命令忽略 hangup 信号，该命令通常与&amp;符号一起使用</p>
+<blockquote>
+<p>nohup 的使用是十分方便的，只需在要处理的命令前加上 nohup 即可，但是 nohup 命令会从终端解除进程的关联，进程会丢掉STDOUT，STDERR的链接。标准输出和标准错误缺省会被重定向到 nohup.out 文件中。一般我们可在结尾加上&quot;&amp;&ldquo;来将命令同时放入后台运行，也可用&rdquo;&gt;filename 2&gt;&amp;1&quot;来更改缺省的重定向文件名。</p></blockquote>
+<h4 id="2-setsid命令">2. setsid命令
+</h4><p>针对方案1，我们还可以用setsid命令实现，原理与3.1是一样的，setid是直接将进程的父pid设置成1，即让运行的进程归属于init的子进程，那么除非init结束，该子进程才会结束，当前进程所在的终端结束后并不会影响进程的运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1、在终端2中执行命令</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># setsid ping www.baidu.com  # 也可以在后面加&amp;符号</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 2、关闭终端2</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 3、在终端1中查看</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ps -ef |grep [p]ing</span>
+</span></span><span class="line"><span class="cl">root     <span class="m">102335</span>      <span class="m">1</span>  <span class="m">0</span> 17:53 ?        00:00:00 ping www.baidu.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3-在子shell中提交任务">3. 在子shell中提交任务
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1、在终端2中执行命令</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># (ping www.baidu.com &amp;)  # 提交的作业并不在作业列表中</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 2、关闭终端2</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 3、在终端1中查看</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ps -ef |grep [p]ing</span>
+</span></span><span class="line"><span class="cl">root     <span class="m">102361</span>      <span class="m">1</span>  <span class="m">0</span> 17:55 ?        00:00:00 ping www.baidu.com
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">可以看到新提交的进程的父 ID（PPID）为1（init 进程的 PID），并不是当前终端的进程 ID。因此并不属于当前终端的子进程，从而也就不会受到当前终端的Linux HUP信号的影响了。
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/notes/">Notes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-7/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（七）：存储管理"
+                        data-key="Linux-basics-7" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（七）：存储管理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（六）：系统权限管理进阶"
+                        data-key="Linux-basics-6" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（六）：系统权限管理进阶</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-5/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-5/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（五）：系统权限管理基础"
+                        data-key="Linux-basics-5" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（五）：系统权限管理基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-4/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-4/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（四）：文件系统管理高级"
+                        data-key="Linux-basics-4" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（四）：文件系统管理高级</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-3/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-3/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（三）：文件系统管理高级"
+                        data-key="Linux-basics-3" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（三）：文件系统管理高级</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
