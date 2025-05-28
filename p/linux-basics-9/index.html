@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="MMMMM">
+<title>Linux基础（九）：网络管理</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/linux-basics-9/'>
+
+<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Linux基础（九）：网络管理">
+<meta property='og:description' content="MMMMM">
+<meta property='og:url' content='https://bestoko.cc/p/linux-basics-9/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Notes' /><meta property='article:published_time' content='2025-05-28T13:01:59&#43;08:00'/><meta property='article:modified_time' content='2025-05-28T13:01:59&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/linux-basics-9/linux.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="Linux基础（九）：网络管理">
+<meta name="twitter:description" content="MMMMM"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/linux-basics-9/linux.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_8b192579da91f021.png" width="300"
+                            height="294" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.social/@bestoko'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/7oko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#netstat-查看网络状态">netstat 查看网络状态</a></li>
+    <li><a href="#proc-文件系统">proc 文件系统</a></li>
+    <li><a href="#进程间通信--管道">进程间通信  管道</a>
+      <ol>
+        <li><a href="#管道中的tee技术">管道中的tee技术</a></li>
+        <li><a href="#xargs-参数传递">xargs 参数传递</a></li>
+      </ol>
+    </li>
+    <li><a href="#网卡">网卡</a>
+      <ol>
+        <li><a href="#网卡名字">网卡名字</a></li>
+        <li><a href="#基本网络配置">基本网络配置</a>
+          <ol>
+            <li><a href="#查看网卡信息">查看网卡信息</a></li>
+            <li><a href="#ifconfig-命令">ifconfig 命令</a></li>
+            <li><a href="#ifconfg-命令查看到的结果解释">ifconfg 命令查看到的结果解释</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#基本网络配置-1">基本网络配置</a>
+      <ol>
+        <li><a href="#centos-79">centos 7.9</a>
+          <ol>
+            <li><a href="#网卡的配置文件">网卡的配置文件</a></li>
+            <li><a href="#dns-配置文件">dns 配置文件</a></li>
+          </ol>
+        </li>
+        <li><a href="#centos-9">centos 9</a></li>
+      </ol>
+    </li>
+    <li><a href="#网关路由-">网关/路由 （⭐）</a>
+      <ol>
+        <li><a href="#route-命令">route 命令</a></li>
+        <li><a href="#配置永久路由">配置永久路由</a>
+          <ol>
+            <li><a href="#centos-79-1">centos 7.9</a></li>
+            <li><a href="#centos-9-1">centos 9</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#网络命令补充">网络命令补充</a></li>
+    <li><a href="#网络问题排查思路">网络问题排查思路</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/linux-basics-9/">
+                <img src="/p/linux-basics-9/linux_hu_d1c003d07bd4f873.png"
+                        srcset="/p/linux-basics-9/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-9/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（九）：网络管理" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" style="background-color: #2a9d8f; color: #fff;">
+                Linux
+            </a>
+        
+            <a href="/categories/study/" style="background-color: #2a9d8f; color: #fff;">
+                学习
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux-basics-9/">Linux基础（九）：网络管理</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            MMMMM
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 28, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="netstat-查看网络状态">netstat 查看网络状态
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@tianyun ~<span class="o">]</span><span class="c1"># netstat -tnlp  # 查看正在监听的，且使用tcp协议的进程</span>
+</span></span><span class="line"><span class="cl">-t   tcp协议
+</span></span><span class="line"><span class="cl">-u   udp协议
+</span></span><span class="line"><span class="cl">-l   listen
+</span></span><span class="line"><span class="cl">-p   进程信息 PID/Program name
+</span></span><span class="line"><span class="cl">-n   不反解，不将IP地址解析为主机名，不将端口号解析成协议名（80 ---&gt; http）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># netstat -an |grep :22</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># netstat -an |grep :80</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># lsof -i:22</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-a  显示所有连接（包括监听和非监听）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">常用组合 
+</span></span><span class="line"><span class="cl">netstat -tunalp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="proc-文件系统">proc 文件系统
+</h2><p>top命令统计的cpu状态信息就是从/proc/stat中取，系统所有进程的运行状态都在/proc下</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>文件/目录</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong><code>/proc/cpuinfo</code></strong></td>
+          <td><strong>CPU 详细信息（型号、核心数、频率、缓存等）</strong></td>
+      </tr>
+      <tr>
+          <td><strong><code>/proc/meminfo</code></strong></td>
+          <td><strong>内存使用情况（总内存、空闲内存、缓存、Swap 等）</strong></td>
+      </tr>
+      <tr>
+          <td><code>/proc/version</code></td>
+          <td>内核版本和 GCC 编译版本</td>
+      </tr>
+      <tr>
+          <td><code>/proc/loadavg</code></td>
+          <td>系统负载（1/5/15 分钟的平均负载，运行中的进程数/总进程数）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/filesystems</code></td>
+          <td>当前内核支持的文件系统类型（如 ext4、xfs、proc 等）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/mounts</code></td>
+          <td>当前挂载的文件系统（等效于 <code>mount</code> 命令输出）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/diskstats</code></td>
+          <td>磁盘 I/O 统计信息（读写次数、扇区数等）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/net/</code></td>
+          <td>网络相关数据（如 <code>net/tcp</code>、<code>net/udp</code>、<code>net/route</code> 等）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/sys/</code></td>
+          <td><strong>内核运行时参数</strong>（可通过 <code>sysctl</code> 修改，如 <code>vm.swappiness</code>）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/interrupts</code></td>
+          <td>中断请求（IRQ）分配情况</td>
+      </tr>
+      <tr>
+          <td><code>/proc/ioports</code></td>
+          <td>当前使用的 I/O 端口范围</td>
+      </tr>
+      <tr>
+          <td><code>/proc/modules</code></td>
+          <td>已加载的内核模块（等效于 <code>lsmod</code> 命令）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/stat</code></td>
+          <td>系统综合统计（CPU 使用率、上下文切换次数、启动时间等）</td>
+      </tr>
+      <tr>
+          <td><code>/proc/uptime</code></td>
+          <td>系统运行时间（单位：秒）和空闲时间</td>
+      </tr>
+      <tr>
+          <td><code>/proc/devices</code></td>
+          <td>已注册的字符设备和块设备列表</td>
+      </tr>
+      <tr>
+          <td><strong><code>/proc/cmdline</code></strong></td>
+          <td><strong>内核启动时传递的参数</strong></td>
+      </tr>
+      <tr>
+          <td><code>/proc/swaps</code></td>
+          <td>Swap 分区使用情况</td>
+      </tr>
+      <tr>
+          <td><code>/proc/partitions</code></td>
+          <td>磁盘分区信息（主设备号、次设备号、块数等）</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">需要注意当卸载/proc后
+</span></span><span class="line"><span class="cl">umount /proc -l
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 下述命令都不可用</span>
+</span></span><span class="line"><span class="cl">free -m
+</span></span><span class="line"><span class="cl">uptime
+</span></span><span class="line"><span class="cl">lscpu
+</span></span><span class="line"><span class="cl">top
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="进程间通信--管道">进程间通信  管道
+</h2><p>管道操作符号 “|” ，主要用来连接左右两个命令, 将左侧的命令的标准输出, 交给右侧命令的标准输入</p>
+<p>PS: 无法传递标准错误输出至后者命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 统计当前/etc/passwd中用户使用的shell类型</span>
+</span></span><span class="line"><span class="cl">awk -F: <span class="s1">&#39;{print $7}&#39;</span> /etc/passwd <span class="p">|</span> sort <span class="p">|</span>uniq -c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 统计网站的访问情况</span>
+</span></span><span class="line"><span class="cl">netstat -an <span class="p">|</span>grep :80 <span class="p">|</span>awk -F<span class="s2">&#34;:&#34;</span> <span class="s1">&#39;{print $8}&#39;</span><span class="p">|</span>sort <span class="p">|</span>uniq -c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 打印当前所有IP</span>
+</span></span><span class="line"><span class="cl">ip addr <span class="p">|</span>grep <span class="s1">&#39;inet &#39;</span> <span class="p">|</span>awk <span class="s1">&#39;{print $2}&#39;</span> <span class="p">|</span>awk -F<span class="s2">&#34;/&#34;</span> <span class="s1">&#39;{print $1}&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 打印根分区已用空间的百分比（仅打印数字）</span>
+</span></span><span class="line"><span class="cl">df -P<span class="p">|</span>grep <span class="s1">&#39;/$&#39;</span> <span class="p">|</span>awk <span class="s1">&#39;{print $5}&#39;</span><span class="p">|</span>awk -F<span class="s2">&#34;%&#34;</span> <span class="s1">&#39;{print $1}&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 统计网站的访问最多的ip top 10</span>
+</span></span><span class="line"><span class="cl">awk <span class="s1">&#39;{print $1}&#39;</span> access.log <span class="p">|</span>sort <span class="p">|</span>uniq -c <span class="p">|</span>sort -rn<span class="p">|</span>head -n <span class="m">10</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="管道中的tee技术">管道中的tee技术
+</h3><p>tee -a # 追加
+<strong>重定向与 tee 在使用过程中有什么区别</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">date &gt; date.txt <span class="c1"># 直接将内容写入date.txt文件中</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">date <span class="p">|</span>tee date.txt <span class="c1"># 命令执行会输出至屏幕，但会同时保存一份至date.txt文件中</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="xargs-参数传递">xargs 参数传递
+</h3><p><strong>主要让一些不支持管道的命令可以使用管道技术</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which cat<span class="p">|</span>xargs ls -l
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ls <span class="p">|</span>xargs rm -fv
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ls <span class="p">|</span>xargs cp -rvt /tmp/ -或-&gt; ls <span class="p">|</span> xargs -I <span class="o">{}</span> cp -rv <span class="o">{}</span> /tmp/
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ls <span class="p">|</span>xargs mv -t /tmp/ -或-&gt; ls <span class="p">|</span> xargs -I <span class="o">{}</span> mv <span class="o">{}</span> /tmp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="网卡">网卡
+</h2><h3 id="网卡名字">网卡名字
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#1、传统命名</span>
+</span></span><span class="line"><span class="cl">CentOS6之前采用的都是传统的命名方式，如以太网：eth1，eth0....
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#2、可预知的命名方案</span>
+</span></span><span class="line"><span class="cl">Centos7提供了不同的命名规则，默认是基于固件、拓扑、位置信息来分配。这样做的优点是命名是全自动的、可预知的，缺点是比eth0更难读。比如ens33
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">可预知的命名方案例如：
+</span></span><span class="line"><span class="cl">①如果Fireware或BIOS为主板上集成的设备提供索引信息可用，则根据此索引进行命名，如：eno1, eno2, ...
+</span></span><span class="line"><span class="cl">②如果Fireware或BIOS为PCI-E扩展槽所提供的索引信息可用，且可预测，则根据此索引进行命名，如ens1, ens2, ...
+</span></span><span class="line"><span class="cl">③如果硬件接口的物理位置信息可用，则根据此信息命名，如enp2s0, ...
+</span></span><span class="line"><span class="cl">④如果用户显示定义，也可根据MAC地址命名，例如：enx122161ab212
+</span></span><span class="line"><span class="cl"><span class="c1">#上述均不可用时，则仍使用传统方式命名；</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">可预知的命名方案，如本机网卡名为ens33，命名格式的组成如下：
+</span></span><span class="line"><span class="cl">en：ethernet
+</span></span><span class="line"><span class="cl">wl：wlan     <span class="c1">#无线局域网</span>
+</span></span><span class="line"><span class="cl">ww：wwan     <span class="c1">#无线广域网</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">名称类型：
+</span></span><span class="line"><span class="cl">o&lt;index&gt;         <span class="c1">#集成设备的设备索引号；</span>
+</span></span><span class="line"><span class="cl">s&lt;slot&gt;          <span class="c1">#扩展槽对的索引号；</span>
+</span></span><span class="line"><span class="cl">x&lt;MAC&gt;           <span class="c1">#基于MAC地址的命名；</span>
+</span></span><span class="line"><span class="cl">p&lt;bus&gt;s&lt;slot&gt;    <span class="c1">#基于总线及槽的拓扑结构进行命名；</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="基本网络配置">基本网络配置
+</h3><h4 id="查看网卡信息">查看网卡信息
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看当前系统所连接的所有以太网卡</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># lspci |grep -i ethernet</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 确认网线已经连接好，以eth0 为例</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># mii-tool eth0  # 该命令需要安装有net-tools才能用</span>
+</span></span><span class="line"><span class="cl">eth0:negotiated 1000baseT-FD flow-control,link ok <span class="c1"># link ok网卡能够被识别，并且接了有效的网线</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># mii-tool eth1</span>
+</span></span><span class="line"><span class="cl">SIOCGMIIPHY on <span class="s1">&#39;eth1&#39;</span> failed: Invalid argument
+</span></span><span class="line"><span class="cl">网卡虽然能够被识别（网卡已经被驱动了，但不能用：网卡配置错误，网线没接等）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="ifconfig-命令">ifconfig 命令
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">1、ifconfig -a 查看所有网卡信息<span class="o">(</span>包括未激活的网卡<span class="o">)</span>
+</span></span><span class="line"><span class="cl">2、ifconfig eth0 查看单个网卡信息
+</span></span><span class="line"><span class="cl">3、ifconfig eth0 192.168.1.122 netmask 255.255.255.0 临时设定IP和掩码（重启服务或者系统都失效）
+</span></span><span class="line"><span class="cl">4、ifconfig eth0 192.168.1.122/24 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">5、ifconfig eth0:1 192.168.0.2 netmask 255.255.255.0 配置子接口
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除：下述两种方式都可以</span>
+</span></span><span class="line"><span class="cl">ifconfig eth0:0 down
+</span></span><span class="line"><span class="cl">ifconfig eth0:1 del 192.168.0.2  <span class="c1"># 删除，不必加掩码</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">6、开启与关闭
+</span></span><span class="line"><span class="cl">ifconfig eth0 down<span class="p">|</span>up  <span class="c1"># 不加载网卡配置文件</span>
+</span></span><span class="line"><span class="cl">ifdown eth0 <span class="p">|</span>ifup eth0  <span class="c1"># 加载网卡配置文件-centos7.9带</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">7、设置网卡最大传输单元
+</span></span><span class="line"><span class="cl">ifconfig eth0 mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">8、开启关闭模式<span class="o">(</span>了解<span class="o">)</span>
+</span></span><span class="line"><span class="cl">网卡的繁杂模式（Promiscuous mode）和多播（Multicast）是网络通信中两种非常重要的概念。
+</span></span><span class="line"><span class="cl">1.网卡的繁杂模式：在默认情况下，网卡只会接收发给自己MAC地址的数据帧，其它的数据帧则会被过滤丢弃。
+</span></span><span class="line"><span class="cl">但是当我们把网卡设置为繁杂模式时，网卡将接收通过该网卡的所有数据帧，
+</span></span><span class="line"><span class="cl">无论这些数据帧的目标MAC地址是什么。这个特性在一些特定的情况下很有用，
+</span></span><span class="line"><span class="cl">例如网络监听（sniffing）和网络调试。
+</span></span><span class="line"><span class="cl">2.多播：多播是一种网络传输技术，它允许一个网络节点将数据发送到多个接收节点，
+</span></span><span class="line"><span class="cl">但又不像广播那样向所有网络节点发送。多播通过使用特定的IP地址范围（224.0.0.0到239.255.255.255）和
+</span></span><span class="line"><span class="cl">MAC地址范围，来标示一组特定的接收节点。当发送节点发送数据时，
+</span></span><span class="line"><span class="cl">只有加入了相应多播组的节点会接收和处理这份数据，其它未加入的节点则会忽略这份数据。
+</span></span><span class="line"><span class="cl">多播技术可有效减少网络流量，提升网络的利用效率，因此在一些需要数据共享的场景，
+</span></span><span class="line"><span class="cl">例如视频直播和在线游戏，多播技术得到了广泛的应用。
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ifconfig eth0 promisc  <span class="c1"># 开启繁杂模式</span>
+</span></span><span class="line"><span class="cl">ifconfig eth0 -promisc  <span class="c1"># 关闭繁杂模式</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ifconfig ens33 multicast  <span class="c1"># 开启多播</span>
+</span></span><span class="line"><span class="cl">ifconfig ens33 -multicast  <span class="c1"># 关闭多播</span>
+</span></span><span class="line"><span class="cl">这条命令将网络设备ens33配置为接收多播流。这意味着，如果多播流被发送到与ens33关联的多播IP地址，
+</span></span><span class="line"><span class="cl">只要设备在这个多播组中，那么ens33就能接收到这个多播流。
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">ifconfig eth0 allmulti  <span class="c1"># 开启</span>
+</span></span><span class="line"><span class="cl">ifconfig eth0 -allmulti  <span class="c1"># 关闭</span>
+</span></span><span class="line"><span class="cl">条命令启用了网络设备eth0上的全多播模式。全多播模式是指，网络设备接收所有来自网络的多播流，
+</span></span><span class="line"><span class="cl">而不仅仅是它已经订阅的流。这对于一些需要接收所有多播流的特殊应用，
+</span></span><span class="line"><span class="cl">例如路由器或者一些网络调试工具，是非常有用的。
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">9、添加、删除ipv6地址
+</span></span><span class="line"><span class="cl">ifconfig eth0 add 3ffe:3240:800:1005::2/64
+</span></span><span class="line"><span class="cl">ifconfig eth0 del 3ffe:3240:800:1005::2/64
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="ifconfg-命令查看到的结果解释">ifconfg 命令查看到的结果解释
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># ifconfig ens33</span>
+</span></span><span class="line"><span class="cl">ens33: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 从flags可知该接口已启用，支持广播、组播，MTU:1500（最大传输单元）：1500字节</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 其他了解知识：</span>
+</span></span><span class="line"><span class="cl">         // UP：表示“接口已启用”。
+</span></span><span class="line"><span class="cl">         // BROADCAST ：表示“主机支持广播”。
+</span></span><span class="line"><span class="cl">         // RUNNING：表示“接口在工作中”。
+</span></span><span class="line"><span class="cl">         // MULTICAST：表示“主机支持多播”。
+</span></span><span class="line"><span class="cl">         // 可以了解一下繁杂模式：https://www.cnblogs.com/linhaifeng/articles/13949611.html
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        inet 192.168.12.42  netmask 255.255.255.0  broadcast 192.168.12.255
+</span></span><span class="line"><span class="cl">        <span class="c1"># IPv4地址           子网掩码               广播地址</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        inet6 fe80::499e:c2c1:f5ed:3900  prefixlen <span class="m">64</span>  scopeid 0x20&lt;link&gt;
+</span></span><span class="line"><span class="cl">        <span class="c1"># IPv6地址                        掩码长度       作用域，link表示仅该接口有效</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        ether 00:0c:29:86:f8:59  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#网卡接口的MAC地址         传输队列长度       接口类型为Ethernet</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">5708</span>  bytes <span class="m">1061424</span> <span class="o">(</span>1.0 MiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 表示开机后此接口累积接收的报文个数，总字节数</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">833</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 表示开机后此接口累积接收报文错误数，丢弃数，溢出数（由于速度过快而丢失的数据包数），冲突的帧数</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">102</span>  bytes <span class="m">16768</span> <span class="o">(</span>16.3 KiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 表示开机后此接口累积发送的报文个数，总字节数</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 表示开机后此接口累积发送报文错误数，丢弃数，溢出数（由于速度过快而丢失的数据包数），</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># carrier 载荷数(发生carrier错误而丢失的数据包数)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># collisions 冲突数</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="基本网络配置-1">基本网络配置
+</h2><h3 id="centos-79">centos 7.9
+</h3><p>使用 network 服务，相关配置文件</p>
+<h4 id="网卡的配置文件">网卡的配置文件
+</h4><p>/etc/sysconfig/network-scripts/ifcfg-ethX</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 打开网卡配置文件，完成静态ip配置，修改完毕后重启网络服务即可：systemctl restart network</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEVICE</span><span class="o">=</span>eth0 　　　　　　　　&lt;-- 网卡名字
+</span></span><span class="line"><span class="cl"><span class="nv">BOOTPROTO</span><span class="o">=</span>static 　　　　  &lt;---- dhcp 动态获取IP
+</span></span><span class="line"><span class="cl">                      &lt;---- none 根据其他选项决定动态还是静态
+</span></span><span class="line"><span class="cl">                      &lt;---- static肯定是手工指定IP
+</span></span><span class="line"><span class="cl"><span class="nv">NM_CONTROLLED</span><span class="o">=</span>no          &lt;---如果NetworkManager服务启用，该网卡配置文件也不受该服务管理
+</span></span><span class="line"><span class="cl"><span class="nv">ONBOOT</span><span class="o">=</span>yes 　　　　　　　　　&lt;---- 网络服务启动的时候，yes代表激活状态 ， no 代表禁用
+</span></span><span class="line"><span class="cl"><span class="nv">TYPE</span><span class="o">=</span>Ethernet
+</span></span><span class="line"><span class="cl"><span class="nv">IPADDR</span><span class="o">=</span>10.1.1.11 　　　　   &lt;-- IP 地址
+</span></span><span class="line"><span class="cl"><span class="nv">NETMASK</span><span class="o">=</span>255.255.255.0     &lt;-- 子网掩码
+</span></span><span class="line"><span class="cl"><span class="nv">GATEWAY</span><span class="o">=</span>10.1.1.1          &lt;-- 默认网关
+</span></span><span class="line"><span class="cl"><span class="nv">DNS1</span><span class="o">=</span>10.1.1.1             &lt;-- DNS1 服务器
+</span></span><span class="line"><span class="cl"><span class="nv">DNS2</span><span class="o">=</span>8.8.8.8              &lt;-- DNS2 服务器
+</span></span><span class="line"><span class="cl"><span class="nv">HWADDR</span><span class="o">=</span>14:da:e9:eb:a9:61  &lt;---MAC地址
+</span></span><span class="line"><span class="cl"><span class="nv">USERCTL</span><span class="o">=</span>no 　　　　　　　　  &lt;---是否允许普通用户启动或者停止该网卡
+</span></span><span class="line"><span class="cl"><span class="nv">IPV6INIT</span><span class="o">=</span>no 　　　　　　　　 &lt;---是否在该网卡上启动IPV6的功能
+</span></span><span class="line"><span class="cl"><span class="nv">PEERDNS</span><span class="o">=</span>yes 　　　　　　　　 &lt;---是否允许网卡在启动时向DHCP服务器查询DNS信息，
+</span></span><span class="line"><span class="cl">                      <span class="c1"># 设置为yes时，此文件设置的DNS将覆盖/etc/resolv.conf，</span>
+</span></span><span class="line"><span class="cl">                      <span class="c1"># 若开启了DHCP，则默认为yes，所以dhcp的dns也会覆盖/etc/resolv.conf</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="dns-配置文件">dns 配置文件
+</h4><ul>
+<li>/etc/resolv.conf DNS解析文件</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat /etc/resolv.conf # 设置DNS指向，最多3个  </span>
+</span></span><span class="line"><span class="cl">nameserver 8.8.8.8 <span class="c1"># 对应网卡配置文件中的配置项DNS1  </span>
+</span></span><span class="line"><span class="cl">nameserver 192.168.12.1 <span class="c1"># 对应网卡配置文件中的配置项DNS2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>/etc/hosts 本地名称解析文件，优先于DNS
+dns检索优先级<br>
+浏览器DNS缓存-&gt;本地系统DNS缓存-&gt;本地计算机HOSTS文件-&gt;ISP DNS缓存-&gt;递归or迭代搜索</li>
+</ul>
+<blockquote>
+<p>在NetworkManager服务开启的情况下，你在centos7中也可以用nmcli命令，使用该命令修改的就是
+/etc/sysconfig/network-scripts下的文件
+而在centos9中修改的则是/etc/NetworkManager/system-connections/下的文件</p></blockquote>
+<h3 id="centos-9">centos 9
+</h3><p>centos9中使用NetworkManager服务，与该服务相关的配置文件
+用命令直接设置静态ip，不用改配置文件，非常方便</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli con mod ens33 ipv4.addresses <span class="s2">&#34;192.168.1.100/24&#34;</span>
+</span></span><span class="line"><span class="cl">nmcli con mod ens33 ipv4.gateway <span class="s2">&#34;192.168.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">nmcli con mod ens33 ipv4.dns <span class="s2">&#34;8.8.8.8,8.8.4.4&#34;</span>  <span class="c1"># 多个dns</span>
+</span></span><span class="line"><span class="cl">nmcli con mod ens33 ipv4.method manual
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">nmcli con down ens33
+</span></span><span class="line"><span class="cl">nmcli con up ens33
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>详细命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1、新增两个块桥接网卡</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 2、查看设备信息，发现刚添加的两块网卡都是disconnected</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@rockylinux ~<span class="o">]</span><span class="c1"># nmcli  device</span>
+</span></span><span class="line"><span class="cl">DEVICE  TYPE      STATE                   CONNECTION 
+</span></span><span class="line"><span class="cl">ens160  ethernet  connected               ens160     
+</span></span><span class="line"><span class="cl">lo      loopback  connected <span class="o">(</span>externally<span class="o">)</span>  lo         
+</span></span><span class="line"><span class="cl">ens224  ethernet  disconnected            --         
+</span></span><span class="line"><span class="cl">ens256  ethernet  disconnected            --   
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 3、创建一个名为&#39;ens224&#39;的新以太网连接，该连接对应的网络接口（ifname）也是&#39;ens224&#39;。</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@rockylinux ~<span class="o">]</span><span class="c1"># nmcli con add type ethernet con-name ens224 ifname ens224</span>
+</span></span><span class="line"><span class="cl">Connection <span class="s1">&#39;ens224&#39;</span> （xxxx）successfully added.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@rockylinux ~<span class="o">]</span><span class="c1"># nmcli device</span>
+</span></span><span class="line"><span class="cl">DEVICE  TYPE      STATE                   CONNECTION 
+</span></span><span class="line"><span class="cl">ens160  ethernet  connected               ens160     
+</span></span><span class="line"><span class="cl">ens224  ethernet  connected               ens224     
+</span></span><span class="line"><span class="cl">lo      loopback  connected <span class="o">(</span>externally<span class="o">)</span>  lo         
+</span></span><span class="line"><span class="cl">ens256  ethernet  disconnected            --  
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">另外一个也添加一下：nmcli con add <span class="nb">type</span> ethernet con-name ens256 ifname ens256
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 4、上述命令会自动添加配置文件到该目录下</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@rockylinux ~<span class="o">]</span><span class="c1"># ll /etc/NetworkManager/system-connections</span>
+</span></span><span class="line"><span class="cl">total <span class="m">16</span>
+</span></span><span class="line"><span class="cl">-rw-------. <span class="m">1</span> root root <span class="m">229</span> Mar <span class="m">15</span> 18:17 ens160.nmconnection
+</span></span><span class="line"><span class="cl">-rw-------. <span class="m">1</span> root root <span class="m">184</span> Mar <span class="m">17</span> 15:59 ens224.nmconnection
+</span></span><span class="line"><span class="cl">-rw-------. <span class="m">1</span> root root <span class="m">184</span> Mar <span class="m">17</span> 16:01 ens256.nmconnection
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">如果你重复执行上面3中命令则会重复创建带uuid的文件，需要删掉，否则冲突
+</span></span><span class="line"><span class="cl">ens224-85d88cca-2cb2-491d-bc7c-7e216c9128cc.nmconnection
+</span></span><span class="line"><span class="cl">删掉方式请用命令
+</span></span><span class="line"><span class="cl">nmcli con delete connection_name
+</span></span><span class="line"><span class="cl">会删除 connection_name的所有，所以需要重新创建一下，总之以后记住不要重复创建就没这么麻烦啦
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 5、用命令操作ip配置，一边操作，会自动写入对应的配置文件中</span>
+</span></span><span class="line"><span class="cl">cat /etc/NetworkManager/system-connections/ens224.nmconnection
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置 IPv4 地址</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection modify ens224 ipv4.addresses 192.168.11.172/24</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置 IPv4网关</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection modify ens18 ipv4.gateway 192.168.11.254</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置 IPv4 DNS，多个 DNS IP 之间使用双引号 + 空格</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection modify ens18 ipv4.dns &#34;114.114.114.114 223.6.6.6&#34;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置 DNS 基础搜索，多个域名之间使用双引号 + 空格</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection modify ens18 ipv4.dns-search &#34;rockylinux.cn rockylinux.org&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">====================================================================================</span>
+</span></span><span class="line"><span class="cl">ipv4.dns和ipv4.dns-search两个选项用于指定DNS相关的配置。
+</span></span><span class="line"><span class="cl">1、ipv4.dns：这个选项用来指定DNS服务器的IP地址。这基本上就是你想让系统使用的DNS解析服务器。
+</span></span><span class="line"><span class="cl">你可以指定一个或多个IP地址，多个IP地址之间用逗号,分隔。
+</span></span><span class="line"><span class="cl">2、ipv4.dns-search：这个选项用来指定搜索域。这在你处于一个大型网络环境（比如公司网络）时特别有用。
+</span></span><span class="line"><span class="cl">搜索域是一种简化DNS解析的方式，它允许你只输入主机名（不包括域部分）来访问同一域中的计算机。
+</span></span><span class="line"><span class="cl">例如，如果你的完全限定域名（FQDN）是mycomputer.mydomain.com，并且你的搜索域设置为mydomain.com，
+</span></span><span class="line"><span class="cl">那么你只需要输入mycomputer就能访问这台计算机。
+</span></span><span class="line"><span class="cl">例如
+</span></span><span class="line"><span class="cl">nmcli con mod con-name ipv4.dns <span class="s2">&#34;8.8.8.8,8.8.4.4&#34;</span>
+</span></span><span class="line"><span class="cl">nmcli con mod con-name ipv4.dns-search <span class="s2">&#34;mydomain.com&#34;</span>
+</span></span><span class="line"><span class="cl">在这个例子中，我们设置了Google的DNS服务器8.8.8.8和8.8.4.4为解析服务器，同时设置搜索域为mydomain.com。这样，当你在浏览器或命令行中输入mycomputer时，系统会自动尝试解析mycomputer.mydomain.com。
+</span></span><span class="line"><span class="cl"><span class="o">====================================================================================</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 默认获取ip信息的method为auto，即DHCP模式，此处需要改为手动模式，不然会出现网络连接一会正常，一会中断的情况。这一点非常重要</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection modify ens18 ipv4.method manual</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 重新加载网络配置</span>
+</span></span><span class="line"><span class="cl">如果你上面没有设置为manual，则你执行up也会发现ip不变
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection down ens18; nmcli connection up ens18</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看接口配置信息</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli device show ens18</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看配置文件，如果需要配置多IP，可以修改此配置文件。</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># cat /etc/NetworkManager/system-connections/ens18.nmconnection</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>connection<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">id</span><span class="o">=</span>ens18
+</span></span><span class="line"><span class="cl"><span class="nv">uuid</span><span class="o">=</span>7f49fd62-02d9-323e-8f35-0c8249647a74
+</span></span><span class="line"><span class="cl"><span class="nv">type</span><span class="o">=</span>ethernet
+</span></span><span class="line"><span class="cl">autoconnect-priority<span class="o">=</span>-999
+</span></span><span class="line"><span class="cl">interface-name<span class="o">=</span>ens18
+</span></span><span class="line"><span class="cl"><span class="nv">timestamp</span><span class="o">=</span><span class="m">1669365850</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>ethernet<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>ipv4<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">address1</span><span class="o">=</span>192.168.11.172/24,192.168.11.254  <span class="c1"># 第一个ip地址：前一个地址是ip，后一个是网关</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># address2=192.168.11.145/24,192.168.11.254 # 第二个ip地址：同上</span>
+</span></span><span class="line"><span class="cl"><span class="nv">dns</span><span class="o">=</span>114.114.114.114<span class="p">;</span>223.6.6.6<span class="p">;</span>
+</span></span><span class="line"><span class="cl">dns-search<span class="o">=</span>rockylinux.cn<span class="p">;</span>rockylinux.org<span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">method</span><span class="o">=</span>manual
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>ipv6<span class="o">]</span>
+</span></span><span class="line"><span class="cl">addr-gen-mode<span class="o">=</span>eui64
+</span></span><span class="line"><span class="cl"><span class="nv">method</span><span class="o">=</span>disabled
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>proxy<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看网络连接</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># nmcli connection</span>
+</span></span><span class="line"><span class="cl">NAME   UUID                                  TYPE      DEVICE 
+</span></span><span class="line"><span class="cl">ens18  7f49fd62-02d9-323e-8f35-0c8249647a74  ethernet  ens18  
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 重启网络</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># systemctl restart NetworkManager</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># systemctl status NetworkManager</span>
+</span></span><span class="line"><span class="cl">● NetworkManager.service - Network Manager
+</span></span><span class="line"><span class="cl">     Loaded: loaded <span class="o">(</span>/usr/lib/systemd/system/NetworkManager.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+</span></span><span class="line"><span class="cl">     Active: active <span class="o">(</span>running<span class="o">)</span> since Fri 2022-11-25 03:52:19 EST<span class="p">;</span> 5s ago
+</span></span><span class="line"><span class="cl">       Docs: man:NetworkManager<span class="o">(</span>8<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   Main PID: <span class="m">2002</span> <span class="o">(</span>NetworkManager<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      Tasks: <span class="m">4</span> <span class="o">(</span>limit: 48930<span class="o">)</span>
+</span></span><span class="line"><span class="cl">     Memory: 2.9M
+</span></span><span class="line"><span class="cl">        CPU: 105ms
+</span></span><span class="line"><span class="cl">     CGroup: /system. slice/NetworkManager. service
+</span></span><span class="line"><span class="cl">             └─2002 /usr/sbin/NetworkManager --no-daemon<span class="sb">```</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## 路由 route</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### 路由与交换</span>
+</span></span><span class="line"><span class="cl">**路由**: 指跨网络访问的路径选择
+</span></span><span class="line"><span class="cl">**交换**: 指同网络访问。两台机器连在同一个交换机上，配置同网段的不同ip就可以直接通迅 <span class="o">(</span>这里不讨论三层交换<span class="o">)</span>.
+</span></span><span class="line"><span class="cl"><span class="c1">### Linux 处理数据包的过程</span>
+</span></span><span class="line"><span class="cl">当向外界主机发送数据时，数据从网卡流入后需要对它做路由决策，根据其目标决定是流入本机的用户空间还是在内核空间就直接转发给其他主机
+</span></span><span class="line"><span class="cl">1、如果是流入本机用户空间的数据，
+</span></span><span class="line"><span class="cl">则数据会从内核空间进入用户空间 <span class="o">(</span>被应用程序接收并处理<span class="o">)</span>；
+</span></span><span class="line"><span class="cl">此时如果本机用户空间的应用程序不需要产生新的数据包对外发送，那便不再涉及到从某个网卡流出数据；
+</span></span><span class="line"><span class="cl">但是如果本机用户空间的应用程序需要产生新的数据包对外发送，那便需要从某个网卡流出数据，但在流出之前，也需要做路由决策：根据目标决定从哪个网卡流出。
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">2、如果不是流入本机用户空间的数据，仅仅只是要经由本机把数据包转发给其他主机
+</span></span><span class="line"><span class="cl">则必然涉及到从某个网卡流出，此时数据包必须从流入网卡完整地转发给流出网卡，这要求 Linux 主机能够完成这样的转发。但 Linux 主机默认未开启 ip_forward 功能，这使得数据包无法转发而被丢弃。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">临时开启linux主机的路由转发功能，重启网络服务则失效：
+</span></span><span class="line"><span class="cl"><span class="sb">```</span>bash
+</span></span><span class="line"><span class="cl"><span class="c1"># 方式1：</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 方式2：</span>
+</span></span><span class="line"><span class="cl">sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/linux-basics-9/network.png"
+	width="519"
+	height="272"
+	srcset="/p/linux-basics-9/network_hu_c317185fc4be1493.png 480w, /p/linux-basics-9/network_hu_82aa143e91ee9cf.png 1024w"
+	loading="lazy"
+	
+		alt="linux处理数据包过程"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="457px"
+	
+></p>
+<p>若要永久生效，则应该写入配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在CentOS 6中:</span>
+</span></span><span class="line"><span class="cl">将/etc/sysctl.conf文件中的<span class="s2">&#34;net.ipv4.ip_forward&#34;</span>值改为1即可
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#在CentOS 7中:</span>
+</span></span><span class="line"><span class="cl">systemd管理了太多的功能，sysctl的配置文件也分化为多个，包括/etc/sysctl.conf、/etc/sysctl.d/*.conf和/usr/lib/sysctl.d/*.conf，并且这些文件中默认都没有net.ipv4.ip_forward项。当然，直接将此项写入到这些配置文件中也都是可以的，建议写在/etc/sysctl.d/*.conf中，这是systemd提供自定义内核修改项的目录。例如：
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;net.ipv4.ip_forward=1&#34;</span> &gt; /etc/sysctl.d/ip_forward.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看是否开启转发功能</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sysctl net.ipv4.ip_forward
+</span></span><span class="line"><span class="cl">cat /proc/sys/net/ipv4/ip_forward
+</span></span><span class="line"><span class="cl">sysctl -a <span class="p">|</span> grep ip_forward
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>**只有当本机被别人当成网关并且本机开启路由转发功能时，别人发来的请求包，本机才会帮忙转发</p>
+<p>如果Linux主机有多块网卡，如果不开启数据包转发功能，则这些网卡之间是无法互通的。</p>
+<p>主机1———————&gt;eth0 主机2 etht1——————————&gt;主机3</p>
+<p>172.16.10.11/24 &mdash;&mdash;-172.16.10.12/24 ,192.168.100.12/24 &mdash;&mdash;&mdash;192.168.100.11/24</p>
+<p>到达该Linux主机2的数据包无法从eth0交给eth1或者从eth1交给eth0，除非Linux主机开启了数据包转发功能。</p>
+<p>另外，IP地址是属于内核的(不仅如此，整个tcp/ip协议栈都属于内核，包括端口号)，只要能和其中一个地址通信，就能和另一个地址通信，而不需要开启数据包转发功能</p>
+<p>但是前提本机一定要有匹配的路由，</p>
+<p>例如主机1上要访问主机2的172.16.10.24/24</p>
+<p>主机1上就必须配置一条可以匹配目标地址172.16.10.24/24的路由，这个路由可以是默认路由、网络路由、主机路由都行，只要路由能匹配上保证数据包能送出去就行，否则内核层面发现本机匹配不到路由就会直接在本机就把包扔了</p>
+<h2 id="网关路由-">网关/路由 （⭐）
+</h2><p>Linux上分为3种路由：</p>
+<ul>
+<li>主机路由：掩码位32位，Destination精确到某一台主机，直接指明到某台具体的主机怎么走，主机路由也就是所谓的静态路由</li>
+<li>网络路由：掩码小于32位，Destination精确到某一个网段的主机，指明到某类网络怎么走</li>
+<li>默认路由：掩码通常为0，不走主机路由的和网络路由的、全部都走默认路由。操作系统上设置的默认路由一般也称为网关。
+路由是区分优先级的：若Linux上到某主机有多条路由可以选择，这时候会挑选优先级高的路由
+主机范围越小、越精确、优先级越高，而缩小主机范围的恰恰就是子网掩码，掩码越长范围越小、越精确、优先级越高</li>
+</ul>
+<h3 id="route-命令">route 命令
+</h3><p>需要安装 net-tools
+route命令用于显示和管理路由表。当使用了add或del选项时，route命令将设置路由条目，否则route命令将显示路由表。
+要显示路由表信息，只需简单的route -n即可，其中-n选项表示不解析主机名。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>root@localhost ~<span class="o">]</span><span class="c1"># route -n</span>
+</span></span><span class="line"><span class="cl">Kernel IP routing table
+</span></span><span class="line"><span class="cl">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+</span></span><span class="line"><span class="cl">0.0.0.0         192.168.100.2   0.0.0.0         UG    <span class="m">100</span>    <span class="m">0</span>        <span class="m">0</span> eth0
+</span></span><span class="line"><span class="cl">172.16.10.0     0.0.0.0         255.255.255.0   U     <span class="m">100</span>    <span class="m">0</span>        <span class="m">0</span> eth1
+</span></span><span class="line"><span class="cl">192.168.0.0     192.168.100.70  255.255.0.0     UG    <span class="m">0</span>      <span class="m">0</span>        <span class="m">0</span> eth0
+</span></span><span class="line"><span class="cl">192.168.100.0   0.0.0.0         255.255.255.0   U     <span class="m">100</span>    <span class="m">0</span>        <span class="m">0</span> eth0
+</span></span><span class="line"><span class="cl">192.168.100.78  0.0.0.0         255.255.255.255 UH    <span class="m">0</span>      <span class="m">0</span>        <span class="m">0</span> eth0
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">各字段含义
+</span></span><span class="line"><span class="cl"><span class="c1"># 1、Destination：目标网络或目标主机</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2、Gateway：要达到目标所需要经过的网关。如果没有通过网关，这部分将显示为0.0.0.0。</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3、Genmask：和目标IP配对使用的网络掩码</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 4、Flags：：表示特定的路由信息，有三个字符</span>
+</span></span><span class="line"><span class="cl">U 表示该路由处于up状态、该路由可用
+</span></span><span class="line"><span class="cl">G 表示通过网关，路由项指向了一个网关
+</span></span><span class="line"><span class="cl">H 表示路由项指向一个主机，而非整个网络
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>管理路由表</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>操作类型</th>
+          <th>命令示例</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>查看路由表</td>
+          <td><code>route -n</code></td>
+          <td>以数字格式显示路由表（不解析主机名），包含目标网络、网关、子网掩码、接口等信息。</td>
+      </tr>
+      <tr>
+          <td>添加网络路由</td>
+          <td><code>sudo route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.1 eth0</code></td>
+          <td>指定目标网络、子网掩码、网关和网卡，将流量路由到特定子网。</td>
+      </tr>
+      <tr>
+          <td>添加默认网关</td>
+          <td><code>sudo route add default gw 192.168.1.1</code></td>
+          <td>设置默认路由，所有未匹配的流量通过此网关转发。</td>
+      </tr>
+      <tr>
+          <td>删除特定路由</td>
+          <td><code>sudo route del -net 192.168.2.0 netmask 255.255.255.0</code></td>
+          <td>删除指定目标网络和子网掩码的路由规则。</td>
+      </tr>
+      <tr>
+          <td>删除默认网关</td>
+          <td><code>sudo route del default</code></td>
+          <td>移除当前默认网关配置。</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>修改临时生效，重启后丢失
+想要永久生效需将路由规则写入配置文件（如 <code>/etc/network/interfaces</code> 或通过 <code>netplan</code> / <code>nmcli</code> 工具）</p>
+<h3 id="配置永久路由">配置永久路由
+</h3><h4 id="centos-79-1">centos 7.9
+</h4><p>根据接口创建路由配置文件/etc/syconfig/network-scripts/route-ethX，要从那个接口出去X就是几。</p>
+<p>路由配置文件的配置格式非常简单，每一行一个路由条目，先是要到达的目标，然后是via关键字，最后是下一跳地址。要求下一跳必须能到达，且一般都和ethX同网段。</p>
+<blockquote>
+<p>DEST via nexthop</p></blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#默认路由</span>
+</span></span><span class="line"><span class="cl">default     via 192.168.100.1
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">0.0.0.0/0   via 192.168.100.1
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#网段路由</span>
+</span></span><span class="line"><span class="cl">192.168.10.0/24   via 192.168.100.1
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#主机路由</span>
+</span></span><span class="line"><span class="cl">192.168.100.52/32 via 192.168.100.33 dev eth1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置完后，重启network服务即可立即生效 <code>systemctl restart network</code>
+需要注意：</p>
+<blockquote>
+<p>(1).route-ethX的对应网卡配置文件ifcfg-ethX必须存在，否则路由无效。(注意：对于虚拟机，通常新添加的网卡都没有对应的ifcfg-ethX文件，但ifconfig却能找到该网卡)</p>
+<p>(2).如果在文件中配置永久默认路由，则必须保证所有使用了DHCP服务的网卡配置文件ifcfg-ethX中的DEFROUTE指令设置为”no”，表示DHCP不设置默认路由。</p>
+<p>(3).如果在route-ethX文件中配置永久路由，且该网卡使用了DHCP服务分配地址，则必须保证该网卡的ifcfg-ethX文件中的PEERROUTES指令设置为”no”，表示DHCP设置的路由允许被覆盖。</p></blockquote>
+<h4 id="centos-9-1">centos 9
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli的改动会直接自动改到配置文件中，
+</span></span><span class="line"><span class="cl">centos7改的是/etc/sysconfig/network-scripts/route-ens33
+</span></span><span class="line"><span class="cl">centos9改的是/etc/NetworkManager/system-connections/ens160.nmconnection，新增一条类似route1<span class="o">=</span>0.0.0.0/32,192.168.71.10
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">“nmcli connection up 网卡“后可以在route -n中看到
+</span></span><span class="line"><span class="cl">强调：+号代表增加路由条目，-号代表删除，如果不带任何符号代表覆盖
+</span></span><span class="line"><span class="cl"><span class="c1"># 1、添加默认路由：“0.0.0.0/0”代表所有IP地址，“192.168.1.1”代表路由的网关。</span>
+</span></span><span class="line"><span class="cl">   nmcli connection modify eth0 +ipv4.routes <span class="s2">&#34;0.0.0.0/0 192.168.1.1&#34;</span> <span class="c1"># 注意在centos7中该命令的掩码不允许设置为0</span>
+</span></span><span class="line"><span class="cl">   nmcli connection up eth0  <span class="c1"># 使更改生效</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 2、添加网络路由：“192.0.2.0/24”是目标网络，“192.168.1.1”是网关。</span>
+</span></span><span class="line"><span class="cl">   nmcli connection modify eth0 +ipv4.routes <span class="s2">&#34;192.0.2.0/24 192.168.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">   nmcli connection up eth0
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 3、添加主机路由：“192.0.2.2/32”是目标主机的网络地址， “192.168.1.1”是网关。</span>
+</span></span><span class="line"><span class="cl">   nmcli connection modify eth0 +ipv4.routes <span class="s2">&#34;192.0.2.2/32 192.168.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">   nmcli connection up eth0
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">删除它们也很简单，只需要将上述命令中的+ipv4.routes更改为-ipv4.routes即可：
+</span></span><span class="line"><span class="cl">   nmcli connection modify eth0 -ipv4.routes <span class="s2">&#34;0.0.0.0/0 192.168.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">   nmcli connection modify eth0 -ipv4.routes <span class="s2">&#34;192.0.2.0/24 192.168.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">   nmcli connection modify eth0 -ipv4.routes <span class="s2">&#34;192.0.2.2/32 192.168.1.1&#34;</span>
+</span></span><span class="line"><span class="cl">   nmcli connection up eth0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="网络命令补充">网络命令补充
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arp -n -v -i           <span class="c1"># 查看arp缓存</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">选项说明：
+</span></span><span class="line"><span class="cl">-n：不解析ip地址为名称
+</span></span><span class="line"><span class="cl">-v：详细信息
+</span></span><span class="line"><span class="cl">-i：指定操作的接口
+</span></span><span class="line"><span class="cl">-d：删除一个arp条目
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">arping 
+</span></span><span class="line"><span class="cl">用于发送arp请求报文，解析并获取目标地址的MAC。默认将先发送广播报文，收到回复后再发送单播报文，局域网内所有主机都能收到广播报文，但只有目标主机才会回复自己的MAC地址。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ip 命令
+</span></span><span class="line"><span class="cl">ip addr
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ip addr show
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ip route
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="网络问题排查思路">网络问题排查思路
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## 定位网络问题工具</span>
+</span></span><span class="line"><span class="cl">mii-tool   eth0 <span class="c1"># 判断物理网卡是否接了网线</span>
+</span></span><span class="line"><span class="cl">ping命令
+</span></span><span class="line"><span class="cl">telnet 目标ip 端口
+</span></span><span class="line"><span class="cl">tcpdump + wireshark抓包分析
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## 测试网络连通性</span>
+</span></span><span class="line"><span class="cl">1、判断网卡是否能识别，是否接了有效的网线
+</span></span><span class="line"><span class="cl">mii-tool   eth0 <span class="c1"># 判断物理网卡是否接了网线</span>
+</span></span><span class="line"><span class="cl">有可能明明连接了有效的网线，但是还是看不到link ok,可以先确定网卡配置文件是正确的，并且ONBOOT<span class="o">=</span>yes ，然后重启network服务（systemctl restart network ）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、**ping 127.0.0.1**
+</span></span><span class="line"><span class="cl">通，代表系统能够支持tcp/ip通信。
+</span></span><span class="line"><span class="cl">不通，原因： 相关驱动损坏或者没有。防火墙iptables拦截了。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、**ping 网卡的ip**
+</span></span><span class="line"><span class="cl">假设eth0配置10.1.1.22
+</span></span><span class="line"><span class="cl">ping 10.1.1.22
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">通，说明网卡是能够正常工作
+</span></span><span class="line"><span class="cl">不通，可能是网卡驱动工作不正常，或iptables防火墙问题。
+</span></span><span class="line"><span class="cl">或者是网卡未激活，可以尝试重启网络服务
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、**ping 网关**
+</span></span><span class="line"><span class="cl">不通
+</span></span><span class="line"><span class="cl">原因： 网关有问题，或者IP冲突
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">解决方法：ping 同一个网段中其他IP,或者用其他计算机也ping网关，如果能通，那就是自己机器的原因了
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">5、**ping 外网（IP或域名）**
+</span></span><span class="line"><span class="cl"><span class="c1"># ping 外网IP</span>
+</span></span><span class="line"><span class="cl">通，只能说明通信没问题，网关是ok的。
+</span></span><span class="line"><span class="cl">不通，很可能就是网关无法联网
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ping 域名</span>
+</span></span><span class="line"><span class="cl">如果连域名对应的IP都无法返回，说明域名解析失败，原因：DNS设定有问题。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7、**ping的错误类型**
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">**network unreachable <span class="o">(</span>网络不可达<span class="o">)</span>： 一般没有设定正确的网关**
+</span></span><span class="line"><span class="cl">**unknow host xxxx : 设定DNS无效**
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">======================</span>&gt;Ping命令返回错误信息说明&lt;<span class="o">======================</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1.Request timed out</span>
+</span></span><span class="line"><span class="cl">这是大家经常碰到的提示信息，很多文章中说这是对方机器置了过滤ICMP数据包，从上面工作过程来看，这是不完全正确的，至少有下几种情况。
+</span></span><span class="line"><span class="cl">（1） 对方已关机，或者网络上根本没有这个地址：比如在上图中主机A中PING 192.168.0.7 ，或者主机B关机了，在主机A中PING 192.168.0.5 都会得到超时的信息。
+</span></span><span class="line"><span class="cl">（2）对方与自己不在同一网段内，通过路由也无法找到对方，但有时对方确实是存在的，当然不存在也是返回超时的信息。
+</span></span><span class="line"><span class="cl">（3）对方确实存在，但设置了ICMP数据包过滤（比如防火墙设置）。
+</span></span><span class="line"><span class="cl">怎样知道对方是存在，还是不存在呢，可以用带参数 -a 的Ping命令探测对方，如果能得到对方的NETBIOS名称，则说明对方是存在的，是有防火墙设置，如果得不到，多半是对方不存在或关机，或不在同一网段内。
+</span></span><span class="line"><span class="cl">（4）错误设置IP地址
+</span></span><span class="line"><span class="cl">正常情况下，一台主机应该有一个网卡，一个IP地址，或多个网卡，多个IP地址（这些地址一定要处于不同的IP子网）。但如果一台电脑的“拨号网络适配器”（相当于一块软网卡）的TCP/IP设置中，设置了一个与网卡IP地址处于同一子网的IP地址，这样，在IP层协议看来，这台主机就有两个不同的接口处于同一网段内。当从这台主机Ping其他的机器时，会存在这样的问题：
+</span></span><span class="line"><span class="cl">A.主机不知道将数据包发到哪个网络接口，因为有两个网络接口都连接在同一网段。
+</span></span><span class="line"><span class="cl">B.主机不知道用哪个地址作为数据包的源地址。因此，从这台主机去Ping其他机器，IP层协议会无法处理，超时后，Ping 就会给出一个“超时无应答”的错误信息提示。但从其他主机Ping这台主机时，请求包从特定的网卡来，ICMP只须简单地将目的、源地址互换，并更改一些标志即可，ICMP应答包能顺利发出，其他主机也就能成功Ping通这台机器了。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2.Destination host Unreachable</span>
+</span></span><span class="line"><span class="cl">（1） 对方与自己不在同一网段内，而自己又未设置默认的路由，比如上例中A机中不设定默认的路由，运行Ping192.168.0.1.4就会出现“Destination host Unreachable”。
+</span></span><span class="line"><span class="cl">（2）网线出了故障
+</span></span><span class="line"><span class="cl">这里要说明一下“destination host unreachable”和 “time out”的区别，如果所经过的路由器的路由表中具有到达目标的路由，而目标因为其他原因不可到达，这时候会出现“time out”，如果路由表中连到达目标的路由都没有，那就会出现“destination host unreachable”。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3.Bad IP address</span>
+</span></span><span class="line"><span class="cl">这个信息表示您可能没有连接到DNS服务器，所以无法解析这个IP地址，也可能是IP地址不存在。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4.Source quench received</span>
+</span></span><span class="line"><span class="cl">这个信息比较特殊，它出现的机率很少。它表示对方或中途的服务器繁忙无法回应。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 5.Unknown host——不知名主机</span>
+</span></span><span class="line"><span class="cl">这种出错信息的意思是，该远程主机的名字不能被域名服务器（DNS）转换成IP地址。故障原因可能是域名服务器有故障，或者其名字不正确，或者网络管理员的系统与远程主机之间的通信线路有故障。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 6.No answer——无响应</span>
+</span></span><span class="line"><span class="cl">这种故障说明本地系统有一条通向中心主机的路由，但却接收不到它发给该中心主机的任何信息。故障原因可能是下列之一：中心主机没有工作；本地或中心主机网络配置不正确；本地或中心的路由器没有工作；通信线路有故障；中心主机存在路由选择问题。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 7.Ping 127.0.0.1</span>
+</span></span><span class="line"><span class="cl">127.0.0.1是本地循环地址.如果本地址无法Ping通，则表明本地机TCP/IP协议不能正常工作。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 8.no rout to host</span>
+</span></span><span class="line"><span class="cl">网卡工作不正常。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 9.transmit failed，error code：10043</span>
+</span></span><span class="line"><span class="cl">网卡驱动不正常。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 10.unknown host name</span>
+</span></span><span class="line"><span class="cl">DNS配置不正确
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/notes/">Notes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-8/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（八）：进程管理"
+                        data-key="Linux-basics-8" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（八）：进程管理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-7/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（七）：存储管理"
+                        data-key="Linux-basics-7" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（七）：存储管理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（六）：系统权限管理进阶"
+                        data-key="Linux-basics-6" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（六）：系统权限管理进阶</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-5/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-5/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（五）：系统权限管理基础"
+                        data-key="Linux-basics-5" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（五）：系统权限管理基础</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-4/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-4/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（四）：文件系统管理高级"
+                        data-key="Linux-basics-4" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（四）：文件系统管理高级</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
