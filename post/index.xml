@@ -6,7 +6,267 @@
         <description>Recent content in Posts on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 01 Jun 2025 17:09:50 +0800</lastBuildDate><atom:link href="https://bestoko.cc/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 02 Jun 2025 21:40:17 +0800</lastBuildDate><atom:link href="https://bestoko.cc/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>影响集群规模的性能指标</title>
+        <link>https://bestoko.cc/p/cluster-perf-metrics/</link>
+        <pubDate>Mon, 02 Jun 2025 21:40:17 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/cluster-perf-metrics/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/cluster-perf-metrics/cluster.png" alt="Featured image of post 影响集群规模的性能指标" /&gt;&lt;h2 id=&#34;影响集群规模的性能指标&#34;&gt;影响集群规模的性能指标
+&lt;/h2&gt;&lt;h3 id=&#34;pv与uv&#34;&gt;PV与UV
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PV（Page Views）&lt;/strong&gt;：页面浏览量，统计用户访问页面的总次数，反映网站流量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UV（Unique Visitors）&lt;/strong&gt;：独立访客数，统计一段时间内访问网站的不同用户数，反映用户规模。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PV
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;同一个用户访问了4次页面，就代表4个PV，但只能计为一次UV
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;强调：你访问一个页面，该页面加载过程中向后台发送了10个请求，那也只能记录为1pv，即pv计算的是页面访问量，而不是包含的请求数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UV
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;独立访客，统计1天内访问某站点的用户数。一个用户多次访问只计为1次
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意：&lt;/p&gt;
+&lt;p&gt;1、看日志分析出的pv、uv代表的是过去的信息，不能用于评估未来的集群规模最多可以作为一个经验参考，例如：发现用户80%的访问都是集中在20%的时间内&lt;/p&gt;
+&lt;p&gt;2、预估集群规模，应该与业务人员对齐，拿到一个未来可能发生的pv与uv数
+通常会在此基础上乘以一个系数（经验值）&lt;/p&gt;
+&lt;h3 id=&#34;吞吐量&#34;&gt;吞吐量
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;定义：单位时间内系统处理的数据量（如请求数、数据量）。&lt;/li&gt;
+&lt;li&gt;意义：衡量系统整体处理能力，常用于评估网络或服务性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qps&#34;&gt;QPS
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全称：Queries Per Second&lt;/li&gt;
+&lt;li&gt;定义：每秒处理的查询数，单次数据库或API操作。&lt;/li&gt;
+&lt;li&gt;应用：评估高并发查询场景，如搜索、API调用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;QPS（Queries Per Second）指的是每秒钟的处理完成的请求量。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;强调两个关键点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、在计算QPS时，是以请求被成功处理（服务端已经生成了响应并发送出去）为依据，无论这个请求最终是否被客户端接收到
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;即如果一个请求尚未处理完成，就不会被计算在QPS之内。只有当请求被服务器成功处理并且已经发出响应，才会被计入QPS。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、QPS统计的是一段时间内被处理的请求数，公式为：完成处理的总请求数/时间段(单位为s)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;例如：服务器访问日志里10s内成功响应了100次请求（例如请求的返回状态码都是200）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qps=100/10 得到qps为10，表示每秒可以处理完成10个请求
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;计算案例：我们预估一个网站每天有10w活跃用户，称之为10w日活，每人平均访问4个页面，每个页面平均衍生4个接口请求
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10w*4*4 = 160w个请求
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;一般人睡觉8个小时 so 一天 24-8=16h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;160W个请求 / (16h * 60 * 60) = 27qps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;强调上面是预估的量，肯定不是准确的量啊，没有人可以预测准确的未来。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;tps&#34;&gt;TPS
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全称：Transactions Per Second&lt;/li&gt;
+&lt;li&gt;定义：每秒处理的事务数，一个事务包含多个操作，需保证ACID特性。&lt;/li&gt;
+&lt;li&gt;应用：评估事务型系统，如金融、订单处理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;例如，在电商系统中，一个事务可能包括查找商品，添加到购物车，和完成支付等步骤。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;因此，TPS的高低体现了系统在单位时间内处理事务的能力
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;qps-与-tps-的区别&#34;&gt;QPS 与 TPS 的区别
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;QPS&lt;/strong&gt;：关注单次查询，强调吞吐量，适合查询密集场景。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TPS&lt;/strong&gt;：关注事务整体完成，强调一致性，适合事务型场景。&lt;/li&gt;
+&lt;li&gt;关系：1 TPS可能包含多个查询，TPS ≤ QPS。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rt&#34;&gt;RT
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全称：Response Time&lt;/li&gt;
+&lt;li&gt;定义：系统从接收请求到返回响应的时长。&lt;/li&gt;
+&lt;li&gt;意义：反映用户体验，RT越短，系统响应越快。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;响应时长通常是指一个请求（注意指的是单个请求）从客户端发送请求到服务器返回响应的总时间，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;包括
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、网络传输时间
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、服务器处理时间
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3、以及客户端接收时间等。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;在计算平均响应时间时，通常会将多次请求的响应时间求平均值。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;每次请求的响应时间是从发送请求到接收到响应的整个过程所花费的时间。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;因此，平均响应时间是多次请求的总响应时间除以请求数量，以反映系统的整体响应效率。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;页面加载完成时间&#34;&gt;页面加载完成时间
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;定义：页面从请求到完全加载（包括资源如图片、脚本）所需时间。&lt;/li&gt;
+&lt;li&gt;意义：直接影响用户体验，需优化前端和网络性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;页面的加载完成时间：这是用户在打开一个网页时，从发送请求到页面所有内容完全显示出来所需的时间。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这个时间的长短会直接影响到用户的体验。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;页面加载时间受到许多因素的影响，包括网络速度，服务器响应时间，以及页面内容的大小等。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;一个页面要想加载出来，或包含很多个请求，你可以打开浏览器随便访问一个网页然后F12看看就知道了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;一个页面涉及到很多资源请求例如
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、HTML
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、CSS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3、JS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4、图片等
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RT响应时长和页面加载完成时长的区别
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、前者是衡量的就是一个请求的响应速度
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、后者是一整个页面的加载速度，包含了很多请求
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;TPS与页面加载时间是截然不同的指标
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、二者衡量的是系统不同方面的性能，前者是系统处理事务的能力，后者是用户体验的直观体现。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、TPS是以完成的事务个数为计量单位的，一个事务里包含了很多请求操作，这些请求操作可能隶属于不同的页面
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3、如果你非要将TPS与一个页面加载时间比较一下的话，我只能告诉你，一个事务通常会跨域多个页面，你就想想你平时网购一个商品就明白了
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;并发量&#34;&gt;并发量
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;定义：是指在任意某一个时刻系统正在处理的请求的数量。&lt;/li&gt;
+&lt;li&gt;意义：衡量系统在高负载下的稳定性，需考虑资源分配。
+这个数量包括已经发起但还未得到响应的请求，也就是已经开始但还没有完成的请求。它反映了系统在某个时间点上的负载情况，可以理解为系统同时处理请求的能力。
+极限 qps 反映的是系统的最大处理效率
+能抗住的并发量反映系统能最大承受的压力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;并发量与QPS的区别或联系
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#1、二者的区别
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、QPS是以请求处理完成为计算标准的，而并发量则计算的是正在处理的请求数量。所以，它们的计算方式和含义是不一样的
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、并发量可以称之为瞬时并发，时间单位指的是某一时间点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;而QPS（Queries Per Second）的时间单位指的是某一个时间段
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#2、二者的联系
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、QPS（每秒查询数）的计算公式不直接考虑并发情况，因为它主要是用来标识服务器的处理能力。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;QPS的基础计算公式就是：请求总数 / 总时间。但并发处理的请求数量和处理时间是可以间接影响QPS的。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、打个比方
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果某一时刻你发现系统中有10个请求同时在处理，那此刻的并发量就为10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;但是但是但是，虽然此刻的并发量是10，但它并不代表系统的能力就只能抗10，懂了没，你可多发，没人不让你多发啊，但此刻就是10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;假设每个请求耗时1秒，因为是并发处理的，所以在1秒后，所有请求都会处理完成，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;假设这1s内没有任何新请求进来，那这1s内的查询数就为10，qps就是10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;又比如说，有5个并发请求，每个请求耗时2秒，那么在2秒后，所有请求处理完成，此时的QPS为5/2=2.5。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;所以
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、尽管QPS的公式并没有直接包含并发数，但是在系统可以承受的范围内加大并发的请求量（一定是在可承受的范围内），是可以提高单位时间内处理的请求数，从而提高QPS值的。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;同时，服务器处理每个请求的时间越短，处理的请求数就越多，同样可以提高QPS。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、但是你也要明白，增加并发的请求量并不总会提高QPS，因为一旦超出了服务器的处理/承受能力，反而可能会导致性能下降。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;因此，要提高系统性能（包括提高QPS），往往需要通过优化代码、架构、硬件等多方面来实现。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;dau-与-mau&#34;&gt;DAU 与 MAU
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DAU（Daily Active Users）&lt;/strong&gt;：日活跃用户数，统计一天内使用系统的用户数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAU（Monthly Active Users）&lt;/strong&gt;：月活跃用户数，统计一个月内的用户数。&lt;/li&gt;
+&lt;li&gt;意义：反映用户粘性和产品吸引力，DAU/MAU比值高表示用户活跃度高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;指标计算与容量预估&#34;&gt;指标计算与容量预估
+&lt;/h2&gt;&lt;p&gt;1、问运营、产品同学预估出某段时间可以达到的pv总数&lt;/p&gt;
+&lt;p&gt;2、预估峰值QPS
+计算方式一：80%的请求集中在20%的时间段内
+( 3000000 * 10 * 0.8 ) / (86400 * 0.2 ) = 1388 (QPS)
+计算方式二：
+( 3000000 * 10 ) / 86400  = 347 (QPS) 
+347 * 峰值因子 = 峰值qps&lt;/p&gt;
+&lt;p&gt;3、压测得到单台机器的峰值/极限qps&lt;/p&gt;
+&lt;p&gt;4、计算出需要多少机器来共同承载请求
+预估的未来发生的峰值qps / 单机的极限qps = 需要多少台机器&lt;/p&gt;
+&lt;p&gt;5、此外还需考虑网络带宽
+带宽（bps）=总流量数(bit)/产生流量的时长（秒）=（PV * 衍生请求数 * 每个请求的平均大小 * 8）/统计时间（秒）
+得到结果 * 峰值因子 = 峰值带宽&lt;/p&gt;
+&lt;p&gt;6、如何提升一套系统的整体处理速度
+提升最慢那个点的速度（通常都是跟io有关系）&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>漫评：无职转生 ~到了异世界就拿出真本事~</title>
         <link>https://bestoko.cc/p/mushoku-tensei/</link>
         <pubDate>Sun, 01 Jun 2025 17:09:50 +0800</pubDate>
