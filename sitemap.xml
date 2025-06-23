@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bestoko.cc/categories/</loc>
-    <lastmod>2025-06-02T21:40:17+08:00</lastmod>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2025-06-02T21:40:17+08:00</lastmod>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/redis/</loc>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/redis-replication-error/</loc>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2025-06-02T21:40:17+08:00</lastmod>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/</loc>
-    <lastmod>2025-06-02T21:40:17+08:00</lastmod>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/study/</loc>
+    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/categories/work/</loc>
     <lastmod>2025-06-02T21:40:17+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/</loc>
-    <lastmod>2025-06-02T21:40:17+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/study/</loc>
     <lastmod>2025-06-02T21:40:17+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/cluster-perf-metrics/</loc>

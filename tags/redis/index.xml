@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Redis on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/redis/</link>
+        <description>Recent content in Redis on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 23 Jun 2025 21:35:21 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/redis/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Redis 主从复制权限问题解决</title>
+        <link>https://bestoko.cc/p/redis-replication-error/</link>
+        <pubDate>Mon, 23 Jun 2025 21:35:21 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/redis-replication-error/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/redis-replication-error/replication-with-redis.png" alt="Featured image of post Redis 主从复制权限问题解决" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
+&lt;/h2&gt;&lt;p&gt;今天在搭建 redis主从复制环境时遇到了问题，两个从库都无法同步主库的数据&lt;/p&gt;
+&lt;p&gt;观察日志发现&lt;code&gt;Opening the temp file needed for MASTER &amp;lt;-&amp;gt; REPLICA synchronization: Permission denied&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error1.png&#34;
+	width=&#34;939&#34;
+	height=&#34;395&#34;
+	srcset=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error1_hu_41fdd88925e8f6be.png 480w, https://bestoko.cc/p/redis-replication-error/replication-with-redis-error1_hu_d6c91904466a3032.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;replication-with-redis-error1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;237&#34;
+		data-flex-basis=&#34;570px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error2.png&#34;
+	width=&#34;513&#34;
+	height=&#34;478&#34;
+	srcset=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error2_hu_765f41f68ed7f6ff.png 480w, https://bestoko.cc/p/redis-replication-error/replication-with-redis-error2_hu_ad0dd9c96254e8c1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;replication-with-redis-error2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;257px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;原因&#34;&gt;原因
+&lt;/h2&gt;&lt;p&gt;通过日志看出来是同步文件权限的问题&lt;/p&gt;
+&lt;p&gt;这是因为在需要完整数据传输时，redis 需要创建临时转储文件。如果关闭 rdb 设置，则在需要完整同步时，由于无法创建快照，将发生错误。&lt;/p&gt;
+&lt;h2 id=&#34;解决&#34;&gt;解决
+&lt;/h2&gt;&lt;p&gt;在 redis 的配置文件里加上 rdb 文件的配置路径，重启 redis 服务即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@localhost ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# cat /etc/redis/redis.conf | grep -v &amp;#34;#&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;daemonize yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;bind&lt;/span&gt; 0.0.0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;port &lt;span class=&#34;m&#34;&gt;6379&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slaveof 10.0.0.101 &lt;span class=&#34;m&#34;&gt;6379&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slave-read-only yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;masterauth &lt;span class=&#34;m&#34;&gt;123456&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;requirepass &lt;span class=&#34;m&#34;&gt;123456&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dir /var/lib/redis
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dbfilename dump.rdb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error3.png&#34;
+	width=&#34;543&#34;
+	height=&#34;521&#34;
+	srcset=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error3_hu_cd91ff528d9aa267.png 480w, https://bestoko.cc/p/redis-replication-error/replication-with-redis-error3_hu_9252e90c378a76ad.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;replication-with-redis-error3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;250px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;master_link_status up&lt;/code&gt; 数据可以正常同步了&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
