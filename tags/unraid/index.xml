@@ -363,7 +363,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;Please make sure to disable and enable Docker if you installed the Nvidia driver for the first time! Settings -&amp;gt;Docker -&amp;gt; Enable Docker &amp;lsquo;No&amp;rsquo; -&amp;gt; Apply -&amp;gt; Enable Docker &amp;lsquo;Yes&amp;rsquo; -&amp;gt; Apply
-plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
+plugin: nvidia-driver.plg installed&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;参照安装成功的提示去设置里先停用docker ，再启用docker。&lt;/p&gt;
 &lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
 	width=&#34;786&#34;

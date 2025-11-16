@@ -1275,7 +1275,8 @@ dns检索优先级&lt;br&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在NetworkManager服务开启的情况下，你在centos7中也可以用nmcli命令，使用该命令修改的就是
 /etc/sysconfig/network-scripts下的文件
-而在centos9中修改的则是/etc/NetworkManager/system-connections/下的文件&lt;/p&gt;&lt;/blockquote&gt;
+而在centos9中修改的则是/etc/NetworkManager/system-connections/下的文件&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;centos-9&#34;&gt;centos 9
 &lt;/h3&gt;&lt;p&gt;centos9中使用NetworkManager服务，与该服务相关的配置文件
 用命令直接设置静态ip，不用改配置文件，非常方便&lt;/p&gt;
@@ -1736,7 +1737,8 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
 &lt;/h4&gt;&lt;p&gt;根据接口创建路由配置文件/etc/syconfig/network-scripts/route-ethX，要从那个接口出去X就是几。&lt;/p&gt;
 &lt;p&gt;路由配置文件的配置格式非常简单，每一行一个路由条目，先是要到达的目标，然后是via关键字，最后是下一跳地址。要求下一跳必须能到达，且一般都和ethX同网段。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;DEST via nexthop&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;DEST via nexthop&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1768,7 +1770,8 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
 &lt;blockquote&gt;
 &lt;p&gt;(1).route-ethX的对应网卡配置文件ifcfg-ethX必须存在，否则路由无效。(注意：对于虚拟机，通常新添加的网卡都没有对应的ifcfg-ethX文件，但ifconfig却能找到该网卡)&lt;/p&gt;
 &lt;p&gt;(2).如果在文件中配置永久默认路由，则必须保证所有使用了DHCP服务的网卡配置文件ifcfg-ethX中的DEFROUTE指令设置为”no”，表示DHCP不设置默认路由。&lt;/p&gt;
-&lt;p&gt;(3).如果在route-ethX文件中配置永久路由，且该网卡使用了DHCP服务分配地址，则必须保证该网卡的ifcfg-ethX文件中的PEERROUTES指令设置为”no”，表示DHCP设置的路由允许被覆盖。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;(3).如果在route-ethX文件中配置永久路由，且该网卡使用了DHCP服务分配地址，则必须保证该网卡的ifcfg-ethX文件中的PEERROUTES指令设置为”no”，表示DHCP设置的路由允许被覆盖。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;centos-9-1&#34;&gt;centos 9
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2061,7 +2064,8 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;补充&amp;amp;符号：
-&amp;amp;作用：在bash命令后加&amp;amp;符号，可以把该命令放到后台运行&lt;/p&gt;&lt;/blockquote&gt;
+&amp;amp;作用：在bash命令后加&amp;amp;符号，可以把该命令放到后台运行&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;并发与并行指的是任务给人展现出的运行的效果&#34;&gt;并发与并行：指的是任务给人展现出的运行的效果
 &lt;/h3&gt;&lt;p&gt;并发/并行：多个任务是”同时“运行的&lt;/p&gt;
 &lt;p&gt;串行：一个任务运行完毕，才能运行下一个&lt;/p&gt;
@@ -2125,7 +2129,8 @@ T：暂停&lt;/p&gt;
 &lt;p&gt;给进程发送一个SIGSTOP信号，进程就会响应信号进入T状态，
 再通过发送SIGCONT信号让进程继续运行。
 kill -SIGSTOP pid号
-kill -SIGCONT pid号&lt;/p&gt;&lt;/blockquote&gt;
+kill -SIGCONT pid号&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;ps-aux-命令解析&#34;&gt;ps aux 命令解析
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2177,7 +2182,8 @@ TIME：    进程占用CPU的总时间&lt;/p&gt;
 带[]号的代表内核态进程
 不带[]号的代表用户态进程
 补充Centos9中还有一个大写字母I的进程状态
-大写字母&amp;quot;I&amp;quot;代表的进程状态是&amp;quot;Idle kernel thread&amp;quot;，这意味着该进程是一个空闲的内核线程，不是用户模式下的空闲进程。这个状态通常只应用于内核线程，用户进程通常不会有这个状态。&lt;/p&gt;&lt;/blockquote&gt;
+大写字母&amp;quot;I&amp;quot;代表的进程状态是&amp;quot;Idle kernel thread&amp;quot;，这意味着该进程是一个空闲的内核线程，不是用户模式下的空闲进程。这个状态通常只应用于内核线程，用户进程通常不会有这个状态。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;vsz-虚拟内存与-rss-物理内存&#34;&gt;VSZ 虚拟内存与 RSS 物理内存
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;ol&gt;
@@ -2207,7 +2213,8 @@ TIME：    进程占用CPU的总时间&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;示例：&lt;br&gt;
 上述进程中，RSS ≈ 100MB（实际写入的物理内存）。&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;pstree 查看进程树&lt;/p&gt;
 &lt;h2 id=&#34;top-命令解析&#34;&gt;top 命令解析
 &lt;/h2&gt;&lt;p&gt;基本用法&lt;/p&gt;
@@ -2428,7 +2435,8 @@ nginx的源代码里就写了，并且会响应该信号来实现平滑重启&lt
 &lt;h4 id=&#34;1-nohup-命令&#34;&gt;1. nohup 命令
 &lt;/h4&gt;&lt;p&gt;针对方案1，我们可以使用nohup命令，nohup 的用途就是让提交的命令忽略 hangup 信号，该命令通常与&amp;amp;符号一起使用&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;nohup 的使用是十分方便的，只需在要处理的命令前加上 nohup 即可，但是 nohup 命令会从终端解除进程的关联，进程会丢掉STDOUT，STDERR的链接。标准输出和标准错误缺省会被重定向到 nohup.out 文件中。一般我们可在结尾加上&amp;quot;&amp;amp;&amp;ldquo;来将命令同时放入后台运行，也可用&amp;rdquo;&amp;gt;filename 2&amp;gt;&amp;amp;1&amp;quot;来更改缺省的重定向文件名。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;nohup 的使用是十分方便的，只需在要处理的命令前加上 nohup 即可，但是 nohup 命令会从终端解除进程的关联，进程会丢掉STDOUT，STDERR的链接。标准输出和标准错误缺省会被重定向到 nohup.out 文件中。一般我们可在结尾加上&amp;quot;&amp;amp;&amp;ldquo;来将命令同时放入后台运行，也可用&amp;rdquo;&amp;gt;filename 2&amp;gt;&amp;amp;1&amp;quot;来更改缺省的重定向文件名。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;2-setsid命令&#34;&gt;2. setsid命令
 &lt;/h4&gt;&lt;p&gt;针对方案1，我们还可以用setsid命令实现，原理与3.1是一样的，setid是直接将进程的父pid设置成1，即让运行的进程归属于init的子进程，那么除非init结束，该子进程才会结束，当前进程所在的终端结束后并不会影响进程的运行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2535,7 +2543,8 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 &lt;p&gt;在一些特殊的场景下，命名空间的功能非常有用。例如，在数据中心环境中，一台物理服务器可能会被虚拟化为多个虚拟机，
 每个虚拟机都运行着自己的操作系统和应用程序。如果这台服务器上有一块 NVMe 硬盘，我们可以为每个虚拟机分配一个命名空间。
 每个虚拟机会认为自己独占了一块 NVMe 硬盘，而实际上，这些虚拟机都在共享同一块物理硬盘。
-这样，就实现了物理硬盘资源的共享，同时保证了每个虚拟机之间的数据隔离。&lt;/p&gt;&lt;/blockquote&gt;
+这样，就实现了物理硬盘资源的共享，同时保证了每个虚拟机之间的数据隔离。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;分区主要分为三类：主分区 &amp;lt;—扩展分区 &amp;lt;—逻辑分区&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;1、逻辑分区属于扩展分区，扩展分区属于主分区
@@ -2551,7 +2560,8 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 		data-flex-grow=&#34;148&#34;
 		data-flex-basis=&#34;355px&#34;
 	
-&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;常见的磁盘分区格式有两张，MBR 分区和 GPT 分区：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;MBR 分区，MBR 的意思是 &amp;ldquo;主引导记录&amp;rdquo;。MBR 最大支持 2 TB 容量，在容量方面存在着极大的瓶颈。并且只支持创建最多 4 个主分区，。而 GPT 分区方式就没有这些限制&lt;/li&gt;
@@ -2806,7 +2816,8 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;centos7选择xfs格式作为默认文件系统，而且不再使用以前的ext，仍然支持ext4，xfs专为大数据产生，每个单个文件系统最大可以支持8eb，单个文件可以支持16tb，不仅数据量大，而且扩展性高。还可以通过xfsdump，xfsrestore来备份和恢复。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;centos7选择xfs格式作为默认文件系统，而且不再使用以前的ext，仍然支持ext4，xfs专为大数据产生，每个单个文件系统最大可以支持8eb，单个文件可以支持16tb，不仅数据量大，而且扩展性高。还可以通过xfsdump，xfsrestore来备份和恢复。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;挂载与卸载&#34;&gt;挂载与卸载
 &lt;/h3&gt;&lt;p&gt;以 / dev/sdb1 为例演示&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3243,7 +3254,8 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 对于分区过小的问题，我们可以重新划分磁盘的分区，或者通过软连接的方式将此分区的目录链接到另外一个分区。这样做虽然能够临时解决问题，但是给管理带来了麻烦
 上述问题可以通过 LVM 来解决。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;逻辑卷管理LVM是硬盘的一个系统工具。无论在Linux或者其他类似的系统，都是非常的好用。传统分区使用固定大小分区，重新调整大小十分麻烦。但是，LVM可以创建和管理“逻辑”卷，而不是直接使用物理硬盘。可以让管理员弹性的管理逻辑卷的扩大缩小，操作简单，而不损坏已存储的数据。可以随意将新的硬盘添加到LVM，以直接扩展已经存在的逻辑卷。LVM并不需要重启就可以让内核知道分区的存在。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;逻辑卷管理LVM是硬盘的一个系统工具。无论在Linux或者其他类似的系统，都是非常的好用。传统分区使用固定大小分区，重新调整大小十分麻烦。但是，LVM可以创建和管理“逻辑”卷，而不是直接使用物理硬盘。可以让管理员弹性的管理逻辑卷的扩大缩小，操作简单，而不损坏已存储的数据。可以随意将新的硬盘添加到LVM，以直接扩展已经存在的逻辑卷。LVM并不需要重启就可以让内核知道分区的存在。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-basics-7/Linux-basics-7-2.png&#34;
 	width=&#34;302&#34;
 	height=&#34;342&#34;
@@ -3273,7 +3285,8 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 &lt;p&gt;物理卷(PV):（physical volume）,把常规的磁盘设备通过pvcreate命令对其进行初始化，形成了物理卷。其实就是硬盘或分区。（面粉）&lt;/p&gt;
 &lt;p&gt;卷组(VG):（volume group）,把多个物理卷组成一个逻辑的整体，这样卷组的大小就是多个硬盘之和。或者理解就是由一个或多个PV组成的整体。（面团）&lt;/p&gt;
 &lt;p&gt;逻辑卷(LV)：（logical volume），从卷组中划分需要的空间大小出来。用户仅需对其格式化然后即可挂载使用。从VG中切割出的空间用于创建文件系统。（切成馒头）&lt;/p&gt;
-&lt;p&gt;基本单元(PE)：(physical extend),分配的逻辑大小的最小单元，默认为4MB的基本块。（假设分配100MB逻辑空间，则需要创建25个PE）&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;基本单元(PE)：(physical extend),分配的逻辑大小的最小单元，默认为4MB的基本块。（假设分配100MB逻辑空间，则需要创建25个PE）&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;lvm-优缺点总结&#34;&gt;LVM 优缺点总结
 &lt;/h3&gt;&lt;p&gt;优点：
 1、可以在系统运行的状态下动态的扩展文件系统的大小。
@@ -3585,7 +3598,8 @@ xfsdump 备份与 xfsrestore 恢复&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;p&gt;由于快照区与原本的 LV 共享很多 PE 区块，因此快照区与被快照的 LV 必须要在同一个 VG 上头，下面两点非常重要：
 1、VG中需要预留存放快照本身的空间，不能全部被占满。
-2、快照所在的 VG 必须与被备份的 LV 相同，否则创建快照会失败。&lt;/p&gt;&lt;/blockquote&gt;
+2、快照所在的 VG 必须与被备份的 LV 相同，否则创建快照会失败。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;快照的本质就是一个特殊的 lv，创建快照后，如果源数据卷中的文件被更新了，会将老数据赋给快照的空间，这就要求快照的空间也是够用的&lt;/p&gt;
 &lt;p&gt;示例1：利用快照恢复单个文件&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -5572,7 +5586,8 @@ d/1.txt&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!NOTE] 补充：
 windows的文件夹不区分大小写
-linux的文件夹区分大小写&lt;/p&gt;&lt;/blockquote&gt;
+linux的文件夹区分大小写&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;文件的种类&#34;&gt;文件的种类
 &lt;/h2&gt;&lt;p&gt;对比windows系统，区分文件，用后缀名区分
 a.txt  # 文本文件
@@ -5944,7 +5959,8 @@ xterm&lt;/li&gt;
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;修改时间（mtime, Modification Time）
 访问时间（atime, Access Time）
-变更时间（ctime, Change Time）&lt;/p&gt;&lt;/blockquote&gt;
+变更时间（ctime, Change Time）&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -6101,7 +6117,8 @@ xterm&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;内核：负责具体控制硬件的运行&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;应用程序本身是无法操作硬件的，但凡想操作硬件都要给系统发请求&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;应用程序本身是无法操作硬件的，但凡想操作硬件都要给系统发请求&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;操作系统的两种工作状态：&lt;/p&gt;
@@ -6123,7 +6140,8 @@ xterm&lt;/li&gt;
 &lt;p&gt;程序与进程
 程序：就是一个或者一系列代码文件&amp;mdash;》静态
 进程：就是一个程序的运行过程&amp;mdash;&amp;mdash;&amp;ndash;》动态&lt;/p&gt;
-&lt;p&gt;进程代表的是程序的运行过程，而负责运行整个过程是操作系统，所以进程是操作系统的最核心的概念没有之一&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;进程代表的是程序的运行过程，而负责运行整个过程是操作系统，所以进程是操作系统的最核心的概念没有之一&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;加电，先启动 bios&lt;/li&gt;
 &lt;li&gt;Bios 负责找到启动盘&lt;/li&gt;

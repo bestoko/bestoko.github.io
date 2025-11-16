@@ -57,7 +57,8 @@
         <description>&lt;img src="https://bestoko.cc/p/linux-virtualbox-error/virtualbox-oracle.jpg" alt="Featured image of post Linux上VirtualBox启动时sbin/vboxconfig错误的解决办法" /&gt;&lt;p&gt;在 &lt;code&gt;Arch Linux&lt;/code&gt; 上使用 &lt;code&gt;Virtual Box&lt;/code&gt; 制作虚拟机，打开时却出了问题。&lt;/p&gt;
 &lt;h2 id=&#34;报错信息&#34;&gt;报错信息
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Kernel driver not installed (rc=-1908)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/linux-virtualbox-error/virtualbox-error.png&#34;
 	width=&#34;630&#34;
 	height=&#34;497&#34;
@@ -96,7 +97,8 @@
 &lt;h2 id=&#34;为什么时间不一致&#34;&gt;为什么时间不一致
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这是因为BIOS硬件时间本身并没有时区概念，但Windows和Linux对Bios硬件时间与时区关系的理解不一样。Linux将BIOS硬件时间视为协调世界时（UTC），即不存在本地时区；而Windows则将BIOS硬件时间视为当地时间，带上了设置后的时区。Windows这样做，一是早期为了兼容MS-DOS/Windows 3.x，二是为了照顾大众，防止用户问为什么BIOS显示的时间和实际不一致。&lt;/p&gt;
-&lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;中国大陆、中国香港、中国澳门、中国台湾、蒙古国、新加坡、马来西亚、菲律宾、西澳大利亚州的时间与UTC的时差均为+8，也就是UTC+8。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;推荐的解决办法&#34;&gt;推荐的解决办法
 &lt;/h2&gt;&lt;p&gt;Windows 其实也能处理 UTC，需要修改注册表。建议&lt;strong&gt;让 Windows 使用 UTC，而非让 Linux 使用地方时&lt;/strong&gt;。Windows 使用 UTC 后，请记得禁用 Windows 的时间同步功能，以防 Windows 错误设置硬件时间。&lt;/p&gt;
 &lt;p&gt;Linux 可以使用&lt;strong&gt;NTP服务&lt;/strong&gt;来在线同步硬件时钟。&lt;/p&gt;

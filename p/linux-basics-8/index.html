@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://bestoko.cc/p/linux-basics-8/'>
 
-<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Linux基础（八）：进程管理">
+<link rel="stylesheet" href="/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css"><meta property='og:title' content="Linux基础（八）：进程管理">
 <meta property='og:description' content="进程结构、进程状态、ps aux/top、僵尸进程、孤儿进程、信号">
 <meta property='og:url' content='https://bestoko.cc/p/linux-basics-8/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
@@ -92,20 +92,6 @@
 
 
 
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://mastodon.social/@bestoko'
-                        target="_blank"
-                        title="Mastodon"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
                         
                     </a>
                 </li>
@@ -463,7 +449,8 @@
 </ul>
 <blockquote>
 <p>补充&amp;符号：
-&amp;作用：在bash命令后加&amp;符号，可以把该命令放到后台运行</p></blockquote>
+&amp;作用：在bash命令后加&amp;符号，可以把该命令放到后台运行</p>
+</blockquote>
 <h3 id="并发与并行指的是任务给人展现出的运行的效果">并发与并行：指的是任务给人展现出的运行的效果
 </h3><p>并发/并行：多个任务是”同时“运行的</p>
 <p>串行：一个任务运行完毕，才能运行下一个</p>
@@ -527,7 +514,8 @@ T：暂停</p>
 <p>给进程发送一个SIGSTOP信号，进程就会响应信号进入T状态，
 再通过发送SIGCONT信号让进程继续运行。
 kill -SIGSTOP pid号
-kill -SIGCONT pid号</p></blockquote>
+kill -SIGCONT pid号</p>
+</blockquote>
 <h2 id="ps-aux-命令解析">ps aux 命令解析
 </h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -579,7 +567,8 @@ TIME：    进程占用CPU的总时间</p>
 带[]号的代表内核态进程
 不带[]号的代表用户态进程
 补充Centos9中还有一个大写字母I的进程状态
-大写字母&quot;I&quot;代表的进程状态是&quot;Idle kernel thread&quot;，这意味着该进程是一个空闲的内核线程，不是用户模式下的空闲进程。这个状态通常只应用于内核线程，用户进程通常不会有这个状态。</p></blockquote>
+大写字母&quot;I&quot;代表的进程状态是&quot;Idle kernel thread&quot;，这意味着该进程是一个空闲的内核线程，不是用户模式下的空闲进程。这个状态通常只应用于内核线程，用户进程通常不会有这个状态。</p>
+</blockquote>
 <h3 id="vsz-虚拟内存与-rss-物理内存">VSZ 虚拟内存与 RSS 物理内存
 </h3><blockquote>
 <ol>
@@ -609,7 +598,8 @@ TIME：    进程占用CPU的总时间</p>
 </li>
 <li>示例：<br>
 上述进程中，RSS ≈ 100MB（实际写入的物理内存）。</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p>pstree 查看进程树</p>
 <h2 id="top-命令解析">top 命令解析
 </h2><p>基本用法</p>
@@ -830,7 +820,8 @@ nginx的源代码里就写了，并且会响应该信号来实现平滑重启</p
 <h4 id="1-nohup-命令">1. nohup 命令
 </h4><p>针对方案1，我们可以使用nohup命令，nohup 的用途就是让提交的命令忽略 hangup 信号，该命令通常与&amp;符号一起使用</p>
 <blockquote>
-<p>nohup 的使用是十分方便的，只需在要处理的命令前加上 nohup 即可，但是 nohup 命令会从终端解除进程的关联，进程会丢掉STDOUT，STDERR的链接。标准输出和标准错误缺省会被重定向到 nohup.out 文件中。一般我们可在结尾加上&quot;&amp;&ldquo;来将命令同时放入后台运行，也可用&rdquo;&gt;filename 2&gt;&amp;1&quot;来更改缺省的重定向文件名。</p></blockquote>
+<p>nohup 的使用是十分方便的，只需在要处理的命令前加上 nohup 即可，但是 nohup 命令会从终端解除进程的关联，进程会丢掉STDOUT，STDERR的链接。标准输出和标准错误缺省会被重定向到 nohup.out 文件中。一般我们可在结尾加上&quot;&amp;&ldquo;来将命令同时放入后台运行，也可用&rdquo;&gt;filename 2&gt;&amp;1&quot;来更改缺省的重定向文件名。</p>
+</blockquote>
 <h4 id="2-setsid命令">2. setsid命令
 </h4><p>针对方案1，我们还可以用setsid命令实现，原理与3.1是一样的，setid是直接将进程的父pid设置成1，即让运行的进程归属于init的子进程，那么除非init结束，该子进程才会结束，当前进程所在的终端结束后并不会影响进程的运行</p>
 <div class="highlight"><div class="chroma">

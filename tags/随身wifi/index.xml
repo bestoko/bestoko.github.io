@@ -52,7 +52,8 @@
 &lt;p&gt;5G: n28 / n41 / n77 / n78&lt;/p&gt;
 &lt;p&gt;4G: LTE FDD: B1 / B3 / B17 / B18 TDD: B41&lt;/p&gt;
 &lt;p&gt;Disabled Bands that can be enabled:&lt;/p&gt;
-&lt;p&gt;4G: B7 / B38&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;4G: B7 / B38&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;其实相较于国内很多随身WiFi的配置，这个性价比并不高，但耐不住颜值戳中我，放着当个日历摆件也好看，黄鱼入手。&lt;/p&gt;
 &lt;h2 id=&#34;解除sim-锁-开启5g频段&#34;&gt;解除SIM 锁 开启5G频段
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -63,7 +64,8 @@
 &lt;li&gt;这时输入 &lt;code&gt;Q&lt;/code&gt; 并确认，在此界面等待大概一分钟后，会进入到主菜单界面&lt;/li&gt;
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
@@ -164,7 +166,8 @@
 &lt;li&gt;apn类型：*&lt;/li&gt;
 &lt;li&gt;apn协议：IPV4&amp;amp;IPV6&lt;/li&gt;
 &lt;li&gt;apn漫游协议：IPV4&amp;amp;IPV6&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;使用感想&#34;&gt;使用感想
 &lt;/h2&gt;&lt;p&gt;耐用，耐用，还是tm的耐用！&lt;/p&gt;
 &lt;p&gt;在阉割了很多不必要的硬件情况下（扬声器等），5000毫安时的电池真是太耐用了，我从上班到下班，一直连着2~3个设备的情况下，还能剩下30+%的电量，确实很舒服。&lt;/p&gt;

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://bestoko.cc/p/linux-basics-7/'>
 
-<link rel="stylesheet" href="/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Linux基础（七）：存储管理">
+<link rel="stylesheet" href="/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css"><meta property='og:title' content="Linux基础（七）：存储管理">
 <meta property='og:description' content="磁盘设备、文件系统、swap分区、LVM">
 <meta property='og:url' content='https://bestoko.cc/p/linux-basics-7/'>
 <meta property='og:site_name' content='Toko&#39;s blog'>
@@ -92,20 +92,6 @@
 
 
 
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://mastodon.social/@bestoko'
-                        target="_blank"
-                        title="Mastodon"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
                         
                     </a>
                 </li>
@@ -481,7 +467,8 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 <p>在一些特殊的场景下，命名空间的功能非常有用。例如，在数据中心环境中，一台物理服务器可能会被虚拟化为多个虚拟机，
 每个虚拟机都运行着自己的操作系统和应用程序。如果这台服务器上有一块 NVMe 硬盘，我们可以为每个虚拟机分配一个命名空间。
 每个虚拟机会认为自己独占了一块 NVMe 硬盘，而实际上，这些虚拟机都在共享同一块物理硬盘。
-这样，就实现了物理硬盘资源的共享，同时保证了每个虚拟机之间的数据隔离。</p></blockquote>
+这样，就实现了物理硬盘资源的共享，同时保证了每个虚拟机之间的数据隔离。</p>
+</blockquote>
 <p>分区主要分为三类：主分区 &lt;—扩展分区 &lt;—逻辑分区</p>
 <blockquote>
 <p>1、逻辑分区属于扩展分区，扩展分区属于主分区
@@ -497,7 +484,8 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 		data-flex-grow="148"
 		data-flex-basis="355px"
 	
-></p></blockquote>
+></p>
+</blockquote>
 <p>常见的磁盘分区格式有两张，MBR 分区和 GPT 分区：</p>
 <ul>
 <li>MBR 分区，MBR 的意思是 &ldquo;主引导记录&rdquo;。MBR 最大支持 2 TB 容量，在容量方面存在着极大的瓶颈。并且只支持创建最多 4 个主分区，。而 GPT 分区方式就没有这些限制</li>
@@ -752,7 +740,8 @@ nvme0：代表主板上的第一个控制或插槽编号，用来插入硬盘的
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>centos7选择xfs格式作为默认文件系统，而且不再使用以前的ext，仍然支持ext4，xfs专为大数据产生，每个单个文件系统最大可以支持8eb，单个文件可以支持16tb，不仅数据量大，而且扩展性高。还可以通过xfsdump，xfsrestore来备份和恢复。</p></blockquote>
+<p>centos7选择xfs格式作为默认文件系统，而且不再使用以前的ext，仍然支持ext4，xfs专为大数据产生，每个单个文件系统最大可以支持8eb，单个文件可以支持16tb，不仅数据量大，而且扩展性高。还可以通过xfsdump，xfsrestore来备份和恢复。</p>
+</blockquote>
 <h3 id="挂载与卸载">挂载与卸载
 </h3><p>以 / dev/sdb1 为例演示</p>
 <div class="highlight"><div class="chroma">
@@ -1189,7 +1178,8 @@ xfsdump 备份与 xfsrestore 恢复</li>
 对于分区过小的问题，我们可以重新划分磁盘的分区，或者通过软连接的方式将此分区的目录链接到另外一个分区。这样做虽然能够临时解决问题，但是给管理带来了麻烦
 上述问题可以通过 LVM 来解决。</p>
 <blockquote>
-<p>逻辑卷管理LVM是硬盘的一个系统工具。无论在Linux或者其他类似的系统，都是非常的好用。传统分区使用固定大小分区，重新调整大小十分麻烦。但是，LVM可以创建和管理“逻辑”卷，而不是直接使用物理硬盘。可以让管理员弹性的管理逻辑卷的扩大缩小，操作简单，而不损坏已存储的数据。可以随意将新的硬盘添加到LVM，以直接扩展已经存在的逻辑卷。LVM并不需要重启就可以让内核知道分区的存在。</p></blockquote>
+<p>逻辑卷管理LVM是硬盘的一个系统工具。无论在Linux或者其他类似的系统，都是非常的好用。传统分区使用固定大小分区，重新调整大小十分麻烦。但是，LVM可以创建和管理“逻辑”卷，而不是直接使用物理硬盘。可以让管理员弹性的管理逻辑卷的扩大缩小，操作简单，而不损坏已存储的数据。可以随意将新的硬盘添加到LVM，以直接扩展已经存在的逻辑卷。LVM并不需要重启就可以让内核知道分区的存在。</p>
+</blockquote>
 <p><img src="/p/linux-basics-7/Linux-basics-7-2.png"
 	width="302"
 	height="342"
@@ -1219,7 +1209,8 @@ xfsdump 备份与 xfsrestore 恢复</li>
 <p>物理卷(PV):（physical volume）,把常规的磁盘设备通过pvcreate命令对其进行初始化，形成了物理卷。其实就是硬盘或分区。（面粉）</p>
 <p>卷组(VG):（volume group）,把多个物理卷组成一个逻辑的整体，这样卷组的大小就是多个硬盘之和。或者理解就是由一个或多个PV组成的整体。（面团）</p>
 <p>逻辑卷(LV)：（logical volume），从卷组中划分需要的空间大小出来。用户仅需对其格式化然后即可挂载使用。从VG中切割出的空间用于创建文件系统。（切成馒头）</p>
-<p>基本单元(PE)：(physical extend),分配的逻辑大小的最小单元，默认为4MB的基本块。（假设分配100MB逻辑空间，则需要创建25个PE）</p></blockquote>
+<p>基本单元(PE)：(physical extend),分配的逻辑大小的最小单元，默认为4MB的基本块。（假设分配100MB逻辑空间，则需要创建25个PE）</p>
+</blockquote>
 <h3 id="lvm-优缺点总结">LVM 优缺点总结
 </h3><p>优点：
 1、可以在系统运行的状态下动态的扩展文件系统的大小。
@@ -1531,7 +1522,8 @@ xfsdump 备份与 xfsrestore 恢复</li>
 <blockquote>
 <p>由于快照区与原本的 LV 共享很多 PE 区块，因此快照区与被快照的 LV 必须要在同一个 VG 上头，下面两点非常重要：
 1、VG中需要预留存放快照本身的空间，不能全部被占满。
-2、快照所在的 VG 必须与被备份的 LV 相同，否则创建快照会失败。</p></blockquote>
+2、快照所在的 VG 必须与被备份的 LV 相同，否则创建快照会失败。</p>
+</blockquote>
 <p>快照的本质就是一个特殊的 lv，创建快照后，如果源数据卷中的文件被更新了，会将老数据赋给快照的空间，这就要求快照的空间也是够用的</p>
 <p>示例1：利用快照恢复单个文件</p>
 <div class="highlight"><div class="chroma">

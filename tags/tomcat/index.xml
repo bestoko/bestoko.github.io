@@ -29,7 +29,8 @@
 &lt;h2 id=&#34;原因&#34;&gt;原因
 &lt;/h2&gt;&lt;p&gt;经过排查后发现是nginx 转发给后端服务器的名字不支持下划线&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;具体到 &lt;code&gt;The character [_] is never valid in a domain name.&lt;/code&gt; 错误，这是 Tomcat 8.5.6（或更早一点）之后引入的更严格的 &lt;code&gt;Host&lt;/code&gt; 头解析机制的结果。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;具体到 &lt;code&gt;The character [_] is never valid in a domain name.&lt;/code&gt; 错误，这是 Tomcat 8.5.6（或更早一点）之后引入的更严格的 &lt;code&gt;Host&lt;/code&gt; 头解析机制的结果。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;修改&#34;&gt;修改
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
