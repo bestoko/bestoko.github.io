@@ -20,11 +20,8 @@
     <loc>https://bestoko.cc/</loc>
     <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/categories/study/</loc>
+    <loc>https://bestoko.cc/categories/growth/</loc>
     <lastmod>2025-06-23T21:35:21+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/work/</loc>
-    <lastmod>2025-06-02T21:40:17+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2025-06-02T21:40:17+08:00</lastmod>
@@ -47,9 +44,6 @@
     <loc>https://bestoko.cc/tags/%E6%97%A0%E8%81%8C%E8%BD%AC%E7%94%9F/</loc>
     <lastmod>2025-06-01T17:09:50+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/categories/linux/</loc>
-    <lastmod>2025-05-29T23:05:26+08:00</lastmod>
-  </url><url>
     <loc>https://bestoko.cc/tags/linux/</loc>
     <lastmod>2025-05-29T23:05:26+08:00</lastmod>
   </url><url>
@@ -64,9 +58,6 @@
   </url><url>
     <loc>https://bestoko.cc/p/linux-basics-8/</loc>
     <lastmod>2025-05-27T21:26:41+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/nginx/</loc>
-    <lastmod>2025-05-26T16:32:22+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/nginx/</loc>
     <lastmod>2025-05-26T16:32:22+08:00</lastmod>
@@ -104,7 +95,7 @@
     <loc>https://bestoko.cc/tags/ios/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/categories/life/</loc>
+    <loc>https://bestoko.cc/categories/gadgets/</loc>
     <lastmod>2025-05-01T23:00:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/androidios/</loc>
@@ -122,13 +113,10 @@
     <loc>https://bestoko.cc/tags/%E9%9A%8F%E8%BA%ABwifi/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
-    <loc>https://bestoko.cc/categories/android-modding/</loc>
+    <loc>https://bestoko.cc/categories/tinker/</loc>
     <lastmod>2024-12-15T23:55:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/fnos/</loc>
-    <lastmod>2024-11-14T21:40:00+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/homelab/</loc>
     <lastmod>2024-11-14T21:40:00+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/nas/</loc>
@@ -166,6 +154,9 @@
   </url><url>
     <loc>https://bestoko.cc/p/qbittorrenttips/</loc>
     <lastmod>2023-06-07T22:42:16+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/life/</loc>
+    <lastmod>2023-03-25T23:31:05+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5/</loc>
     <lastmod>2023-03-25T23:31:05+08:00</lastmod>
@@ -312,9 +303,6 @@
     <lastmod>2020-03-30T09:00:01+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/gba2cia/</loc>
-    <lastmod>2020-03-30T09:00:01+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/play/</loc>
     <lastmod>2020-03-30T09:00:01+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/git/</loc>
