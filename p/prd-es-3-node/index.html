@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="ansible-playbook -i hosts.ini site.yml -vvv">
+<title>生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/prd-es-3-node/'>
+
+<link rel="stylesheet" href="/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css"><meta property='og:title' content="生产环境Ansible+Docker离线部署Elasticsearch高可用集群小记">
+<meta property='og:description' content="ansible-playbook -i hosts.ini site.yml -vvv">
+<meta property='og:url' content='https://bestoko.cc/p/prd-es-3-node/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Notes' /><meta property='article:tag' content='ansible' /><meta property='article:tag' content='Elasticsearch' /><meta property='article:published_time' content='2025-11-26T23:32:02&#43;08:00'/><meta property='article:modified_time' content='2025-11-26T23:32:02&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/prd-es-3-node/prd-es-3-node.jpg' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="生产环境Ansible+Docker离线部署Elasticsearch高可用集群小记">
+<meta name="twitter:description" content="ansible-playbook -i hosts.ini site.yml -vvv"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/prd-es-3-node/prd-es-3-node.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_80328940ddda21.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/bestoko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://bestoko.cc/index.xml' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#背景需求">背景需求</a></li>
+    <li><a href="#1-架构规划与硬件配置">1. 架构规划与硬件配置</a></li>
+    <li><a href="#2-部署前准备-pre-flight">2. 部署前准备 (Pre-flight)</a>
+      <ol>
+        <li><a href="#21-系统初始化-所有节点手动执行">2.1 系统初始化 (所有节点手动执行)</a></li>
+        <li><a href="#22-中控机安装-ansible">2.2 中控机安装 Ansible</a></li>
+      </ol>
+    </li>
+    <li><a href="#3-ansible-项目结构设计">3. Ansible 项目结构设计</a></li>
+    <li><a href="#4-核心配置详解">4. 核心配置详解</a>
+      <ol>
+        <li><a href="#41-资产清单-hostsini">4.1 资产清单 (<code>hosts.ini</code>)</a></li>
+        <li><a href="#42-role-prepare-基础环境与-docker">4.2 Role: Prepare (基础环境与 Docker)</a></li>
+        <li><a href="#43-role-es-es-集群部署">4.3 Role: ES (ES 集群部署)</a></li>
+        <li><a href="#44-role-access-接入层部署">4.4 Role: Access (接入层部署)</a></li>
+      </ol>
+    </li>
+    <li><a href="#5-执行部署与验证">5. 执行部署与验证</a>
+      <ol>
+        <li><a href="#51-执行-playbook">5.1 执行 Playbook</a></li>
+        <li><a href="#52-验证检查清单">5.2 验证检查清单</a></li>
+      </ol>
+    </li>
+    <li><a href="#6-避坑总结">6. 避坑总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/prd-es-3-node/">
+                <img src="/p/prd-es-3-node/prd-es-3-node_hu_f79c31608653070a.jpg"
+                        srcset="/p/prd-es-3-node/prd-es-3-node_hu_f79c31608653070a.jpg 800w, /p/prd-es-3-node/prd-es-3-node_hu_abef95c2342555ee.jpg 1600w"
+                        width="800" 
+                        height="437" 
+                        loading="lazy"
+                        alt="Featured image of post 生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/growth/" style="background-color: #1d3557; color: #fff;">
+                修业
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/prd-es-3-node/">生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            ansible-playbook -i hosts.ini site.yml -vvv
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 26, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="背景需求">背景需求
+</h2><p>企业内网生产环境中，利用 Ansible 和 Docker Compose 快速构建一套高可用的 Elasticsearch (ES) 集群 + Kibana + Nginx 负载均衡架构，专供MES系统使用。</p>
+<h2 id="1-架构规划与硬件配置">1. 架构规划与硬件配置
+</h2><p>集群采用经典的 <strong>3节点混合架构</strong> (同时承担 Master 和 Data 角色)，外加一台 <strong>接入层</strong> 负责流量分发和可视化。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">角色</th>
+          <th style="text-align: left">主机名 (Hostname)</th>
+          <th style="text-align: left">IP 地址</th>
+          <th style="text-align: left">硬件配置</th>
+          <th style="text-align: left">部署组件</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>ES Node 1</strong></td>
+          <td style="text-align: left"><code>es-node-01</code></td>
+          <td style="text-align: left"><code>192.168.10.101</code></td>
+          <td style="text-align: left">16C / 16G / 100G</td>
+          <td style="text-align: left">Elasticsearch, IK插件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ES Node 2</strong></td>
+          <td style="text-align: left"><code>es-node-02</code></td>
+          <td style="text-align: left"><code>192.168.10.102</code></td>
+          <td style="text-align: left">16C / 16G / 100G</td>
+          <td style="text-align: left">Elasticsearch, IK插件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ES Node 3</strong></td>
+          <td style="text-align: left"><code>es-node-03</code></td>
+          <td style="text-align: left"><code>192.168.10.103</code></td>
+          <td style="text-align: left">16C / 16G / 100G</td>
+          <td style="text-align: left">Elasticsearch, IK插件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Access Node</strong></td>
+          <td style="text-align: left"><code>es-access</code></td>
+          <td style="text-align: left"><code>192.168.10.200</code></td>
+          <td style="text-align: left">4C / 8G / 100G</td>
+          <td style="text-align: left"><strong>Ansible(中控)</strong>, Kibana, Nginx</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="2-部署前准备-pre-flight">2. 部署前准备 (Pre-flight)
+</h2><p>由于是离线环境，我们需要在有网的机器上提前准备好物资，并上传至中控机 (<code>es-access</code>) 的 <code>/opt/es-resources</code> 目录。</p>
+<p><strong>物资清单：</strong></p>
+<ol>
+<li><strong>Docker 镜像 (tar包):</strong>
+<ul>
+<li><code>elasticsearch:7.5.0</code></li>
+<li><code>kibana:7.5.0</code></li>
+<li><code>nginx:stable</code></li>
+</ul>
+</li>
+<li><strong>插件:</strong> <code>elasticsearch-analysis-ik-7.5.0.zip</code></li>
+<li><strong>RPM 包:</strong> Docker CE 全套 RPM (含 <code>containerd</code>, <code>docker-compose-plugin</code> 等)</li>
+</ol>
+<h3 id="21-系统初始化-所有节点手动执行">2.1 系统初始化 (所有节点手动执行)
+</h3><p>在 Ansible 跑通之前，建议先手动在所有机器执行基础的安全设置，防止网络层面的干扰。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 关闭防火墙 (生产环境建议通过硬件防火墙控制ACL，内网机器互通)</span>
+</span></span><span class="line"><span class="cl">systemctl stop firewalld
+</span></span><span class="line"><span class="cl">systemctl disable firewalld
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 关闭 SELinux (避免容器挂载权限问题)</span>
+</span></span><span class="line"><span class="cl">setenforce <span class="m">0</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/^SELINUX=.*/SELINUX=disabled/&#39;</span> /etc/selinux/config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 修正时区 (避免日志相差8小时)</span>
+</span></span><span class="line"><span class="cl">timedatectl set-timezone Asia/Shanghai
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="22-中控机安装-ansible">2.2 中控机安装 Ansible
+</h3><p>在 <code>es-access</code> 节点安装 Ansible 和 <code>sshpass</code> (用于密码认证)。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 离线环境下通常使用 pip 或 rpm 安装</span>
+</span></span><span class="line"><span class="cl">yum install -y ansible sshpass
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="3-ansible-项目结构设计">3. Ansible 项目结构设计
+</h2><p>我们在 <code>/opt/ansible-es</code> 目录下构建如下工程结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/opt/ansible-es/
+</span></span><span class="line"><span class="cl">├── hosts.ini                       # 资产清单
+</span></span><span class="line"><span class="cl">├── site.yml                        # 主 Playbook
+</span></span><span class="line"><span class="cl">├── roles/
+</span></span><span class="line"><span class="cl">│   ├── prepare/                    # [初始化] 安装Docker、系统调优
+</span></span><span class="line"><span class="cl">│   ├── es/                         # [ES集群] 部署ES、安装插件
+</span></span><span class="line"><span class="cl">│   └── access/                     # [接入层] 部署Kibana、Nginx
+</span></span><span class="line"><span class="cl">└── templates/                      # 配置文件模板
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="4-核心配置详解">4. 核心配置详解
+</h2><h3 id="41-资产清单-hostsini">4.1 资产清单 (<code>hosts.ini</code>)
+</h3><p><strong>注意：</strong> 生产环境建议配置 SSH Key 免密互信，若使用密码请做好脱敏。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[es_cluster]</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.10.101 hostname</span><span class="o">=</span><span class="s">es-node-01 node_name=es-node-01</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.10.102 hostname</span><span class="o">=</span><span class="s">es-node-02 node_name=es-node-02</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.10.103 hostname</span><span class="o">=</span><span class="s">es-node-03 node_name=es-node-03</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[access_layer]</span>
+</span></span><span class="line"><span class="cl"><span class="na">192.168.10.200 hostname</span><span class="o">=</span><span class="s">es-access</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[all:vars]</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_user</span><span class="o">=</span><span class="s">root</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_ssh_pass</span><span class="o">=</span><span class="s">&lt;YOUR_SECURE_PASSWORD&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="na">ansible_ssh_common_args</span><span class="o">=</span><span class="s">&#39;-o StrictHostKeyChecking=no&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 全局变量</span>
+</span></span><span class="line"><span class="cl"><span class="na">es_version</span><span class="o">=</span><span class="s">7.5.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">es_heap_size</span><span class="o">=</span><span class="s">8g</span>
+</span></span><span class="line"><span class="cl"><span class="na">resource_dir</span><span class="o">=</span><span class="s">/opt/es-resources</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="42-role-prepare-基础环境与-docker">4.2 Role: Prepare (基础环境与 Docker)
+</h3><p><strong>文件:</strong> <code>roles/prepare/tasks/main.yml</code></p>
+<p>这里有一个<strong>坑</strong>：安装完 Docker RPM 后，服务默认是不启动的，会导致后续 <code>docker load</code> 报错 <code>connection refused</code>。务必加入启动服务的步骤。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Set vm.max_map_count (ES 必须)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sysctl</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">vm.max_map_count</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;262144&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l">present</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">reload</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Disable Swap</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l">swapoff -a</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install Docker (Offline RPMs)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;yum localinstall -y {{ resource_dir }}/rpm/*.rpm&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># [关键步骤] 必须显式启动 Docker，否则后续无法导入镜像</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Enable and Start Docker Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">docker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l">started</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Load Docker Images</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    docker load -i {{ resource_dir }}/es-7.5.0.tar
+</span></span></span><span class="line"><span class="cl"><span class="sd">    docker load -i {{ resource_dir }}/kibana-7.5.0.tar
+</span></span></span><span class="line"><span class="cl"><span class="sd">    docker load -i {{ resource_dir }}/nginx.tar</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="43-role-es-es-集群部署">4.3 Role: ES (ES 集群部署)
+</h3><p><strong>文件:</strong> <code>roles/es/tasks/main.yml</code></p>
+<p>这里有第二个<strong>坑</strong>：IK 分词器的 zip 包解压后是散乱的文件。如果直接解压到 <code>plugins/</code> 根目录，ES 会把 jar 包误判为插件目录，导致启动报错 <code>Not a directory</code>。
+<strong>正确做法：</strong> 先创建 <code>ik</code> 子目录，再解压进去。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Create Data Directories</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">file</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ item }}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l">directory</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="c"># ES 容器内用户 UID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;0755&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">loop</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">/data/es/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">/data/es/logs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">/data/es/plugins/ik </span><span class="w"> </span><span class="c"># &lt;--- 关键：提前建好子目录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Unzip IK Plugin (Correctly)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">unarchive</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ resource_dir }}/elasticsearch-analysis-ik-7.5.0.zip&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/data/es/plugins/ik/&#34;</span><span class="w">  </span><span class="c"># &lt;--- 解压到子目录中</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Docker Compose</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">es-compose.yml.j2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l">/opt/es-deploy/docker-compose.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Start ES Cluster</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l">docker compose up -d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">args</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">chdir</span><span class="p">:</span><span class="w"> </span><span class="l">/opt/es-deploy</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>ES Compose 模板 (<code>roles/es/templates/es-compose.yml.j2</code>):</strong>
+使用 <code>network_mode: host</code> 获得最佳性能，并挂载时区文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">elasticsearch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:{{ es_version }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">node_name }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">node.name={{ node_name }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">cluster.name=shopping-prod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">discovery.seed_hosts=192.168.10.101,192.168.10.102,192.168.10.103</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">cluster.initial_master_nodes=es-node-01,es-node-02,es-node-03</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">bootstrap.memory_lock=true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;ES_JAVA_OPTS=-Xms{{ es_heap_size }} -Xmx{{ es_heap_size }}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ulimits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">memlock</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">soft</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">hard</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/data/es/data:/usr/share/elasticsearch/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/data/es/plugins:/usr/share/elasticsearch/plugins</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/etc/localtime:/etc/localtime:ro </span><span class="w"> </span><span class="c"># &lt;--- 关键：同步宿主机时区</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;host&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="44-role-access-接入层部署">4.4 Role: Access (接入层部署)
+</h3><p>Nginx 配置核心部分，负责负载均衡。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">upstream</span> <span class="s">es_cluster</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server</span> <span class="n">192.168.10.101</span><span class="p">:</span><span class="mi">9200</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server</span> <span class="n">192.168.10.102</span><span class="p">:</span><span class="mi">9200</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server</span> <span class="n">192.168.10.103</span><span class="p">:</span><span class="mi">9200</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">9200</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">proxy_pass</span> <span class="s">http://es_cluster</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 生产环境必须设置，防止大查询超时
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kn">proxy_read_timeout</span> <span class="s">300s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="5-执行部署与验证">5. 执行部署与验证
+</h2><h3 id="51-执行-playbook">5.1 执行 Playbook
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /opt/ansible-es
+</span></span><span class="line"><span class="cl">ansible-playbook -i hosts.ini site.yml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="52-验证检查清单">5.2 验证检查清单
+</h3><ol>
+<li>
+<p><strong>集群状态:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://192.168.10.200:9200/_cat/nodes?v
+</span></span><span class="line"><span class="cl"><span class="c1"># 应显示 3 个节点，状态为 * 或 m</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>分词器验证:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;http://192.168.10.200:9200/_analyze?pretty&#34;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> -d<span class="s1">&#39;{&#34;analyzer&#34;: &#34;ik_smart&#34;, &#34;text&#34;: &#34;运维工程师&#34;}&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Kibana 访问:</strong>
+浏览器打开 <code>http://192.168.10.200</code>。如果看到 &ldquo;Kibana server is not ready yet&rdquo;，请耐心等待 ES 集群初始化完成（约1-2分钟）。</p>
+</li>
+</ol>
+<hr>
+<h2 id="6-避坑总结">6. 避坑总结
+</h2><p>在本次部署中，主要遇到了以下几个问题：</p>
+<ol>
+<li>
+<p><strong>Docker API 连接失败:</strong></p>
+<ul>
+<li><em>现象:</em> Ansible 报错 <code>failed to connect to the docker API... no such file or directory</code>。</li>
+<li><em>原因:</em> <code>yum install docker</code> 不会自动启动服务。</li>
+<li><em>解决:</em> Ansible 中必须加入 <code>service: name=docker state=started</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>ES 启动失败 (Plugin Error):</strong></p>
+<ul>
+<li><em>现象:</em> 日志报错 <code>java.nio.file.FileSystemException: .../plugin-descriptor.properties: Not a directory</code>。</li>
+<li><em>原因:</em> IK 插件直接解压到了 <code>plugins</code> 根目录。</li>
+<li><em>解决:</em> 创建 <code>plugins/ik</code> 目录，将 zip 包解压到该子目录内。</li>
+</ul>
+</li>
+<li>
+<p><strong>时间差问题:</strong></p>
+<ul>
+<li><em>现象:</em> 日志时间比当前时间慢 8 小时。</li>
+<li><em>原因:</em> 容器默认使用 UTC 时区。</li>
+<li><em>解决:</em> 修正宿主机时区，并在 Docker Compose 中挂载 <code>- /etc/localtime:/etc/localtime:ro</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>网络不通:</strong></p>
+<ul>
+<li><em>现象:</em> Nginx 报 502 或 Curl 报 <code>No route to host</code>。</li>
+<li><em>原因:</em> Rocky Linux 9 默认开启 Firewalld。</li>
+<li><em>解决:</em> 确保所有节点（包括 ES 数据节点）的防火墙均已关闭。</li>
+</ul>
+</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/notes/">Notes</a>
+        
+            <a href="/tags/ansible/">Ansible</a>
+        
+            <a href="/tags/elasticsearch/">Elasticsearch</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-10/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-10/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（十）：Linux 重要服务"
+                        data-key="Linux-basics-10" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（十）：Linux 重要服务</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-9/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-9/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（九）：网络管理"
+                        data-key="Linux-basics-9" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（九）：网络管理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-8/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（八）：进程管理"
+                        data-key="Linux-basics-8" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（八）：进程管理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-7/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（七）：存储管理"
+                        data-key="Linux-basics-7" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（七）：存储管理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（六）：系统权限管理进阶"
+                        data-key="Linux-basics-6" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（六）：系统权限管理进阶</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

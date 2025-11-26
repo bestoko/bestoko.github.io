@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bestoko.cc/tags/ansible/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
     <loc>https://bestoko.cc/categories/</loc>
-    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/elasticsearch/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/notes/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/post/</loc>
-    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/tags/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/p/prd-es-3-node/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
+  </url><url>
+    <loc>https://bestoko.cc/categories/growth/</loc>
+    <lastmod>2025-11-26T23:32:02+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/redis/</loc>
     <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/redis-replication-error/</loc>
-    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/</loc>
-    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/</loc>
-    <lastmod>2025-06-23T21:35:21+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/categories/growth/</loc>
     <lastmod>2025-06-23T21:35:21+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/</loc>
@@ -48,9 +60,6 @@
     <lastmod>2025-05-29T23:05:26+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/linux-basics-10/</loc>
-    <lastmod>2025-05-29T23:05:26+08:00</lastmod>
-  </url><url>
-    <loc>https://bestoko.cc/tags/notes/</loc>
     <lastmod>2025-05-29T23:05:26+08:00</lastmod>
   </url><url>
     <loc>https://bestoko.cc/p/linux-basics-9/</loc>

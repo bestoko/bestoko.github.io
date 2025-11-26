@@ -6,7 +6,31 @@
         <description>Recent content in Tags on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 23 Jun 2025 21:35:21 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Nov 2025 23:32:02 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ansible</title>
+        <link>https://bestoko.cc/tags/ansible/</link>
+        <pubDate>Wed, 26 Nov 2025 23:32:02 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/ansible/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Elasticsearch</title>
+        <link>https://bestoko.cc/tags/elasticsearch/</link>
+        <pubDate>Wed, 26 Nov 2025 23:32:02 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/elasticsearch/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Notes</title>
+        <link>https://bestoko.cc/tags/notes/</link>
+        <pubDate>Wed, 26 Nov 2025 23:32:02 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/tags/notes/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Redis</title>
         <link>https://bestoko.cc/tags/redis/</link>
         <pubDate>Mon, 23 Jun 2025 21:35:21 +0800</pubDate>
@@ -52,14 +76,6 @@
         <pubDate>Thu, 29 May 2025 23:05:26 +0800</pubDate>
         
         <guid>https://bestoko.cc/tags/linux/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Notes</title>
-        <link>https://bestoko.cc/tags/notes/</link>
-        <pubDate>Thu, 29 May 2025 23:05:26 +0800</pubDate>
-        
-        <guid>https://bestoko.cc/tags/notes/</guid>
         <description></description>
         </item>
         <item>
