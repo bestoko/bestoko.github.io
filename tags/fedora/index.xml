@@ -31,8 +31,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;meson是用Python语言开发的构建工具，编译需要Ninja（用C++实现）命令。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;所以首先&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -118,8 +117,7 @@
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;此外这个文件里还有几个常用的设置
 &lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;   可以设置超时时间，设置-1可以取消倒计时
-&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置
 &lt;/h2&gt;&lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

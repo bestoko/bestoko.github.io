@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在这个硬件价格飞涨的时候折腾NAS到底是哪里想不开...">
+<title>是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/tbr3-fnos/'>
+
+<link rel="stylesheet" href="/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css"><meta property='og:title' content="是真香还是...?天钡R3+飞牛fnOS 自组家庭影音NAS">
+<meta property='og:description' content="在这个硬件价格飞涨的时候折腾NAS到底是哪里想不开...">
+<meta property='og:url' content='https://bestoko.cc/p/tbr3-fnos/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='fnos' /><meta property='article:tag' content='飞牛' /><meta property='article:tag' content='NAS' /><meta property='article:tag' content='天钡' /><meta property='article:published_time' content='2025-12-09T12:15:48&#43;08:00'/><meta property='article:modified_time' content='2025-12-09T12:15:48&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/tbr3-fnos/tbr3.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="是真香还是...?天钡R3+飞牛fnOS 自组家庭影音NAS">
+<meta name="twitter:description" content="在这个硬件价格飞涨的时候折腾NAS到底是哪里想不开..."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/tbr3-fnos/tbr3.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_80328940ddda21.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/bestoko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://bestoko.cc/index.xml' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言为什么选择这套组合">前言：为什么选择这套组合</a></li>
+    <li><a href="#硬件准备与开箱简评">硬件准备与开箱简评</a></li>
+    <li><a href="#系统安装飞牛fnos">系统安装（飞牛fnOS）</a></li>
+    <li><a href="#影音自动化">影音自动化</a></li>
+    <li><a href="#脚本自动化">脚本自动化</a></li>
+    <li><a href="#进阶玩法与远程访问">进阶玩法与远程访问</a></li>
+    <li><a href="#结语值不值得折腾">结语：值不值得折腾？</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/tbr3-fnos/">
+                <img src="/p/tbr3-fnos/tbr3_hu_b425e9154406a2a4.png"
+                        srcset="/p/tbr3-fnos/tbr3_hu_b425e9154406a2a4.png 800w, /p/tbr3-fnos/tbr3_hu_8731c6f5324422ef.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tinker/" style="background-color: #3a86ff; color: #fff;">
+                折腾
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/tbr3-fnos/">是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            在这个硬件价格飞涨的时候折腾NAS到底是哪里想不开...
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 09, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言为什么选择这套组合">前言：为什么选择这套组合
+</h2><p>很早之前我在虚拟机体验fnos的时候想过以后可能会单独组一套来装物理飞牛<a class="link" href="https://bestoko.cc/p/fnos_unraid/"  target="_blank" rel="noopener"
+    >Unraid 上部署飞牛OS虚拟机小记</a></p>
+<p>当我换个城市工作时，家里的大黑盒子（all in one）也不好意思一直开着，还是太费电，关掉后父母看影视剧又不方便。于是就考虑趁着回来，买个双盘位的NAS，转移下影音资源。本来我考虑的是基于主要是影音需求以及父母方便上手，买个成品NAS如绿联DXP2800，极空间Z2Pro等&hellip;可是看了一圈价格实在是下不去手（为什么N100 N150还能越来越贵了&hellip;）</p>
+<p>恰逢看到天钡老瓶装新酒出了个R3 3200U的双盘位（本质还是最早的R1模具改的），搜索对比了下发现3200U也算是略低于N100一点点，主要家庭影音使用应该是绰绰有余了。于是某多多 886购入准系统。</p>
+<p><img src="/p/tbr3-fnos/pdd.png"
+	width="660"
+	height="727"
+	srcset="/p/tbr3-fnos/pdd_hu_a2ff964dcad8d58b.png 480w, /p/tbr3-fnos/pdd_hu_fb04c2c1bc493289.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="90"
+		data-flex-basis="217px"
+	
+></p>
+<h2 id="硬件准备与开箱简评">硬件准备与开箱简评
+</h2><p>准系统是没有内存硬盘WiFi网卡的。</p>
+<p>硬盘这里我有之前闲置的128G PM991A，网卡我们不需要使用。内存倒是折腾了一番，135收的海力士颗粒杂牌内存8G 2666无法点亮，问了客服说是推荐使用三星3200。着急使用咬咬牙同城面交收305了个酷兽16G三星颗粒 3200&hellip;.谁能想到一年前比这个价格更低我还卖掉了同样的16Gx2呢&hellip;</p>
+<p>机器总的来说质感一般，大块的塑料机身，底部风扇进风顶部出风散热的设计。天钡换壳出了几代，也说明这个模具也算很成熟了，我塞了两块18T HC550进去也没有遇到有人说的热罐问题。综合这个价位考虑，都算是可以接受的。</p>
+<h2 id="系统安装飞牛fnos">系统安装（飞牛fnOS）
+</h2><p>这部分我就不展开了。ventoy U盘放入fnos镜像，一路安装即可。</p>
+<p><img src="/p/tbr3-fnos/fnos.png"
+	width="2298"
+	height="1286"
+	srcset="/p/tbr3-fnos/fnos_hu_6b48ce54b93343d6.png 480w, /p/tbr3-fnos/fnos_hu_d0ddd59ad739b89.png 1024w"
+	loading="lazy"
+	
+		alt="fnos"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h2 id="影音自动化">影音自动化
+</h2><p>这部分我使用的是 moviepiolt v2 + qbittorrent + 官方的飞牛影视</p>
+<p>后两者安装非常简单，应用中心点点点即可，mp需要参考<a class="link" href="https://wiki.movie-pilot.org/"  target="_blank" rel="noopener"
+    >MoviePilot Wiki</a>，按需设置好路径等。</p>
+<p>这里给出我的设置仅供参考。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /vol2/1000/media路径，同时映射到qbit和mp容器的/media</span>
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── downloads
+</span></span><span class="line"><span class="cl">    ├── 动画电影
+</span></span><span class="line"><span class="cl">    ├── 华语电影
+</span></span><span class="line"><span class="cl">    ├── 国产剧
+</span></span><span class="line"><span class="cl">    ├── 国漫
+</span></span><span class="line"><span class="cl">    ├── 外语电影
+</span></span><span class="line"><span class="cl">    ├── 日番
+</span></span><span class="line"><span class="cl">    ├── 日韩剧
+</span></span><span class="line"><span class="cl">    ├── 未分类
+</span></span><span class="line"><span class="cl">    ├── 欧美剧
+</span></span><span class="line"><span class="cl">    ├── 纪录片
+</span></span><span class="line"><span class="cl">    └── 综艺
+</span></span><span class="line"><span class="cl">└── links
+</span></span><span class="line"><span class="cl">    ├── movie
+</span></span><span class="line"><span class="cl">    │   ├── 动画电影
+</span></span><span class="line"><span class="cl">    │   ├── 华语电影
+</span></span><span class="line"><span class="cl">    │   └── 外语电影
+</span></span><span class="line"><span class="cl">    └── tv
+</span></span><span class="line"><span class="cl">        ├── 儿童
+</span></span><span class="line"><span class="cl">        ├── 其他
+</span></span><span class="line"><span class="cl">        ├── 国产剧
+</span></span><span class="line"><span class="cl">        ├── 国漫
+</span></span><span class="line"><span class="cl">        ├── 日番
+</span></span><span class="line"><span class="cl">        ├── 日韩剧
+</span></span><span class="line"><span class="cl">        ├── 未分类
+</span></span><span class="line"><span class="cl">        ├── 欧美剧
+</span></span><span class="line"><span class="cl">        ├── 纪录片
+</span></span><span class="line"><span class="cl">        └── 综艺
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>MP V2的docker-compose 仅供参考</p>
+<p><strong>不可直接复制使用，注意替换你的路径和密码</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.8&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">moviepilot</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">jxxghp/moviepilot-v2:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">moviepilot-v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">moviepilot-v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;3000:3000&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;3001:3001&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/vol2/1000/media:/media&#39;</span><span class="w">                        </span><span class="c"># 媒体库</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/vol1/1000/appdata/moviepilot/config:/config&#39;</span><span class="w">    </span><span class="c"># 配置文件</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/vol1/1000/appdata/moviepilot/core:/moviepilot/.cache/ms-playwright&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/var/run/docker.sock:/var/run/docker.sock:ro&#39;</span><span class="w">   </span><span class="c"># 用于容器控制</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/vol1/1000/appdata/qbittorrent/qBittorrent/BT_backup:/BT_backup&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">NGINX_PORT=3000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PORT=3001</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PUID=0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PGID=0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">UMASK=000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">TZ=Asia/Shanghai</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">SUPERUSER=admin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 【修改】请把下面的占位符换成你自己的强密码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">SUPERUSER_PASSWORD=&lt;PLEASE_SET_A_STRONG_PASSWORD&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 数据库配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DB_TYPE=postgresql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DB_POSTGRESQL_HOST=postgresql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DB_POSTGRESQL_PORT=5432</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DB_POSTGRESQL_DATABASE=moviepilot</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DB_POSTGRESQL_USERNAME=moviepilot</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 【修改】数据库密码需与 postgresql 服务一致</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DB_POSTGRESQL_PASSWORD=&lt;PLEASE_SET_A_STRONG_PASSWORD&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 缓存配置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">CACHE_BACKEND_TYPE=redis</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 【修改】Redis 密码需与 redis 服务一致</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">CACHE_BACKEND_URL=redis://:&lt;PLEASE_SET_A_STRONG_PASSWORD&gt;@redis:6379</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">postgresql</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l">service_healthy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">redis</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l">service_healthy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">redis</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">redis:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">moviepilot-redis</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 【修改】把下面的占位符换成你自己的强密码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">redis-server --save 600 1 --requirepass &lt;PLEASE_SET_A_STRONG_PASSWORD&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/vol1/1000/appdata/moviepilot/redis:/data&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;CMD&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;redis-cli&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;--raw&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;incr&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;ping&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l">10s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l">5s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">postgresql</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:16-alpine</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">moviepilot-postgres</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l">moviepilot</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l">moviepilot</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 【修改】把下面的占位符换成你自己的强密码，且与 moviepilot 环境变量保持一致</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;PLEASE_SET_A_STRONG_PASSWORD&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;/vol1/1000/appdata/moviepilot/postgres:/var/lib/postgresql/data&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;CMD-SHELL&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;pg_isready -U moviepilot -d moviepilot&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l">10s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l">5s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>小提示：如果你需要使用应用中心的浏览器（<del>并不好用</del>）,为防止冲突可以将MP用的3000和3001端口换成别的。</p>
+<p>MP 的存储目录按如此设置（需要下载器开启<strong>自动分类管理</strong>）</p>
+<p><img src="/p/tbr3-fnos/mpv2.png"
+	width="2298"
+	height="1286"
+	srcset="/p/tbr3-fnos/mpv2_hu_a8876ac1418ddff8.png 480w, /p/tbr3-fnos/mpv2_hu_b46c100616dc7ad4.png 1024w"
+	loading="lazy"
+	
+		alt="MoviePilot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p>至于如何PT站认证、如何订阅下载，就不展开说了，wiki里也很详细了。</p>
+<p>将之前NAS的影音路径smb挂载后复制了一份，现在可以开始初步享受了~</p>
+<p><img src="/p/tbr3-fnos/fnmedia1.png"
+	width="2298"
+	height="1286"
+	srcset="/p/tbr3-fnos/fnmedia1_hu_97986cfeeb0cb764.png 480w, /p/tbr3-fnos/fnmedia1_hu_fff6efe5dafb73e2.png 1024w"
+	loading="lazy"
+	
+		alt="飞牛影视1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p><img src="/p/tbr3-fnos/fnmedia2.png"
+	width="2298"
+	height="1286"
+	srcset="/p/tbr3-fnos/fnmedia2_hu_aa9321c636a3248d.png 480w, /p/tbr3-fnos/fnmedia2_hu_df6506ea1561f767.png 1024w"
+	loading="lazy"
+	
+		alt="飞牛影视2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h2 id="脚本自动化">脚本自动化
+</h2><p>本着不浪费的原则，我把一些需要长期挂着的脚本也放到这台NAS上了。直接配置在应用中心安装的青龙面板即可。</p>
+<p><img src="/p/tbr3-fnos/ql.png"
+	width="2298"
+	height="1286"
+	srcset="/p/tbr3-fnos/ql_hu_ef15ef8a74db96d2.png 480w, /p/tbr3-fnos/ql_hu_a0465acbf1afb971.png 1024w"
+	loading="lazy"
+	
+		alt="青龙面板"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<p>一些脚本来源（本人不对可能的安全风险负责，<strong>使用前请自辩</strong>）：</p>
+<p><a class="link" href="https://github.com/Sitoi/dailycheckin"  target="_blank" rel="noopener"
+    >https://github.com/Sitoi/dailycheckin</a></p>
+<p><a class="link" href="https://github.com/Cat-zaizai/ZaiZaiCat-Checkin"  target="_blank" rel="noopener"
+    >https://github.com/Cat-zaizai/ZaiZaiCat-Checkin</a></p>
+<p><a class="link" href="https://github.com/RayWangQvQ/BiliBiliToolPro.git"  target="_blank" rel="noopener"
+    >https://github.com/RayWangQvQ/BiliBiliToolPro.git</a></p>
+<p><a class="link" href="https://github.com/6dylan6/jdpro.git"  target="_blank" rel="noopener"
+    >https://github.com/6dylan6/jdpro.git</a></p>
+<p>如果你是kamePT的用户，需要每日签到也可以使用我搓的脚本</p>
+<p><a class="link" href="https://github.com/bestoko/KamePT_Sign.git"  target="_blank" rel="noopener"
+    >https://github.com/bestoko/KamePT_Sign.git</a></p>
+<hr>
+<p>依赖参考</p>
+<p>NodeJS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">js-base64
+</span></span><span class="line"><span class="cl">dotenv
+</span></span><span class="line"><span class="cl">magic
+</span></span><span class="line"><span class="cl">tough-cookie
+</span></span><span class="line"><span class="cl">ws@7.4.3
+</span></span><span class="line"><span class="cl">require
+</span></span><span class="line"><span class="cl">requests
+</span></span><span class="line"><span class="cl">date-fns
+</span></span><span class="line"><span class="cl">ts-md5
+</span></span><span class="line"><span class="cl">typescript
+</span></span><span class="line"><span class="cl">json5
+</span></span><span class="line"><span class="cl">axios@v0.27.2
+</span></span><span class="line"><span class="cl">crypto-js
+</span></span><span class="line"><span class="cl">@types/node
+</span></span><span class="line"><span class="cl">png-js
+</span></span><span class="line"><span class="cl">node-telegram-bot-api
+</span></span><span class="line"><span class="cl">fs
+</span></span><span class="line"><span class="cl">jsdom
+</span></span><span class="line"><span class="cl">form-data
+</span></span><span class="line"><span class="cl">jieba
+</span></span><span class="line"><span class="cl">tslib
+</span></span><span class="line"><span class="cl">ds
+</span></span><span class="line"><span class="cl">jsdom -g
+</span></span><span class="line"><span class="cl">prettytable
+</span></span><span class="line"><span class="cl">ql
+</span></span><span class="line"><span class="cl">common
+</span></span><span class="line"><span class="cl">node-jsencrypt
+</span></span><span class="line"><span class="cl">juejin-helper
+</span></span><span class="line"><span class="cl">moment
+</span></span><span class="line"><span class="cl">global-agent
+</span></span><span class="line"><span class="cl">cheerio
+</span></span><span class="line"><span class="cl">wget
+</span></span><span class="line"><span class="cl">redis
+</span></span><span class="line"><span class="cl">crypto-js
+</span></span><span class="line"><span class="cl">prettytable
+</span></span><span class="line"><span class="cl">dotenv
+</span></span><span class="line"><span class="cl">jsdom
+</span></span><span class="line"><span class="cl">date-fns
+</span></span><span class="line"><span class="cl">tough-cookie
+</span></span><span class="line"><span class="cl">tslib
+</span></span><span class="line"><span class="cl">ws@7.4.3
+</span></span><span class="line"><span class="cl">ts-md5
+</span></span><span class="line"><span class="cl">jsdom -g
+</span></span><span class="line"><span class="cl">jieba
+</span></span><span class="line"><span class="cl">fs
+</span></span><span class="line"><span class="cl">form-data
+</span></span><span class="line"><span class="cl">json5
+</span></span><span class="line"><span class="cl">global-agent
+</span></span><span class="line"><span class="cl">png-js
+</span></span><span class="line"><span class="cl">@types/node
+</span></span><span class="line"><span class="cl">require
+</span></span><span class="line"><span class="cl">typescript
+</span></span><span class="line"><span class="cl">js-base64
+</span></span><span class="line"><span class="cl">axios
+</span></span><span class="line"><span class="cl">moment
+</span></span><span class="line"><span class="cl">ds
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Python3</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="n">dailycheckin</span>
+</span></span><span class="line"><span class="cl"><span class="n">beautifulsoup4</span>
+</span></span><span class="line"><span class="cl"><span class="n">jieba</span>
+</span></span><span class="line"><span class="cl"><span class="n">PyExecJS</span>
+</span></span><span class="line"><span class="cl"><span class="n">ping3</span>
+</span></span><span class="line"><span class="cl"><span class="n">canvas</span>
+</span></span><span class="line"><span class="cl"><span class="n">Crypto</span>
+</span></span><span class="line"><span class="cl"><span class="n">ds</span>
+</span></span><span class="line"><span class="cl"><span class="n">requests</span>
+</span></span><span class="line"><span class="cl"><span class="n">pycryptodome</span>
+</span></span><span class="line"><span class="cl"><span class="n">aiohttp</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Linux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gcc
+</span></span><span class="line"><span class="cl">g++
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">libffi-dev
+</span></span><span class="line"><span class="cl">openssl-dev
+</span></span><span class="line"><span class="cl">libc-dev
+</span></span><span class="line"><span class="cl">python3-dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="进阶玩法与远程访问">进阶玩法与远程访问
+</h2><p>AMD 3200U的性能比我想的还够用些。我还在上面部署了一点进阶的玩法，比如astrbot+napcat 跑了个QQ机器人，又比如跑了个komga做漫画库（虽然目前没填充几部进去，后续有空再填充了），具体操作就不展开了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># docker-compose.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">napcat</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">NAPCAT_UID=${NAPCAT_UID:-1000}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">NAPCAT_GID=${NAPCAT_GID:-1000}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">MODE=astrbot</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">6099</span><span class="p">:</span><span class="m">6099</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">napcat</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mlikiowa/napcat-docker:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/vol1/1000/appdata/astrbot/data:/AstrBot/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/vol1/1000/appdata/astrbot/napcat/config:/app/napcat/config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/vol1/1000/appdata/astrbot/ntqq:/app/.config/QQ</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">astrbot_network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mac_address</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;02:42:ac:11:00:02&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">astrbot</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">TZ=Asia/Shanghai</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">soulter/astrbot:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">astrbot</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;6185:6185&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;6195:6195&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;6199:6199&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/vol1/1000/appdata/astrbot/data:/AstrBot/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">astrbot_network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">astrbot_network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>玩到现在，CPU和内存的空闲仍有很多。这台机器默认开启了AMD-V和IOMMU，搭配飞牛自带的虚拟机，也可以解锁更多玩法，时间原因，我就先不继续折腾了。</p>
+<hr>
+<p>在不考虑外网观看的情况下，fnos免费的2M内网穿透已经基本够用。</p>
+<p>这里我用的是 tailscale，yaml文件如下供参考。</p>
+<p>TS_AUTHKEY 可以在控制台 Settings-Keys-Generate auth key 生成，切记勾选Reusable</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tailscale</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">tailscale/tailscale:stable</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">tailscale</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">privileged</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TS_AUTHKEY</span><span class="p">:</span><span class="w"> </span><span class="l">tskey-auth-XXXXXXXXX</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TS_STATE_DIR</span><span class="p">:</span><span class="w"> </span><span class="l">/var/lib/tailscale</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TS_ROUTES</span><span class="p">:</span><span class="w"> </span><span class="m">10.0.0.0</span><span class="l">/24</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TS_HOSTNAME</span><span class="p">:</span><span class="w"> </span><span class="l">fnos</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/vol1/1000/appdata/tailscale/state:/var/lib/tailscale</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">devices</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/dev/net/tun:/dev/net/tun</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cap_add</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">net_admin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="结语值不值得折腾">结语：值不值得折腾？
+</h2><p>我的评价是尚可。在DIY硬件价格飞涨的现在，综合功耗和性能考虑，千元内也没有多少性价比更高的选择。加上仅作为非严肃协作向的使用，飞牛OS已经够用了。</p>
+<p><del>这里吐槽下飞牛的文件管理居然是以每个用户的ID去建文件夹区分&hellip;放着Linux好好的权限不去用多少有些莫名其妙了。</del></p>
+<p>最后的最后，感谢一下fnOS的开发者们，国内NAS圈提到自组NAS终于不是黑群晖了&hellip;</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/fnos/">FNOS</a>
+        
+            <a href="/tags/%E9%A3%9E%E7%89%9B/">飞牛</a>
+        
+            <a href="/tags/nas/">NAS</a>
+        
+            <a href="/tags/%E5%A4%A9%E9%92%A1/">天钡</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/fnos_unraid/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fnos_unraid/FNOS_VM_install6.c2b318d3027c3414e6eebf50fbaec81b_hu_2a38fd04eec7bb87.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记"
+                        data-key="fnOS_UNraid" 
+                        data-hash="md5-wrMY0wJ8NBTm7r9Q&#43;67IGw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Unraid 上部署飞牛OS虚拟机小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/teslap4_unraid/">
+        
+        
+            <div class="article-image">
+                <img src="/p/teslap4_unraid/TeslaP4.66c0c57e65d9a1dca31dc09e852d2964_hu_bebf2a760e00f10a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Tesla P4 Unraid 下折腾小记"
+                        data-key="TeslaP4_UNraid" 
+                        data-hash="md5-ZsDFfmXZodyjHcCehS0pZA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tesla P4 Unraid 下折腾小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/qbittorrenttips/">
+        
+        
+            <div class="article-image">
+                <img src="/p/qbittorrenttips/qBittorrent.d1959837a0d734c37da4ad0b534455ed_hu_41ad739d268764a7.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子"
+                        data-key="qBittorrentTips" 
+                        data-hash="md5-0ZWYN6DXNMN9pK0LU0RV7Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">qBittorrent 批量清理被PT站点删除的种子</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/scr01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/scr01/SCR01.566e23c67fe8e869be6257f16e3c276e_hu_b590d2e4dbe00e9c.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 三星 SCR01 入手简单折腾 "
+                        data-key="SCR01" 
+                        data-hash="md5-Vm4jxn/o6Gm&#43;Ylfxbjwnbg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">三星 SCR01 入手简单折腾 </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/oneplus_ace2_pro/">
+        
+        
+            <div class="article-image">
+                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu_2e515bb37b667ffa.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)"
+                        data-key="oneplus_ace2_pro" 
+                        data-hash="md5-gNpxvWOdfE1hrOFnwmbsHw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2023年该如何愉快的玩机 (一加Ace2 Pro为例)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

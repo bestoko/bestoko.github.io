@@ -402,8 +402,7 @@
 <h2 id="原因">原因
 </h2><p>经过排查后发现是nginx 转发给后端服务器的名字不支持下划线</p>
 <blockquote>
-<p>具体到 <code>The character [_] is never valid in a domain name.</code> 错误，这是 Tomcat 8.5.6（或更早一点）之后引入的更严格的 <code>Host</code> 头解析机制的结果。</p>
-</blockquote>
+<p>具体到 <code>The character [_] is never valid in a domain name.</code> 错误，这是 Tomcat 8.5.6（或更早一点）之后引入的更严格的 <code>Host</code> 头解析机制的结果。</p></blockquote>
 <h2 id="修改">修改
 </h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
