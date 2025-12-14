@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Unable to get device for partition 1 on device /dev/mmcblk0">
+<title>如何在eMMC上安装PVE与优化配置</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/install-pve-emmc/'>
+
+<link rel="stylesheet" href="/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css"><meta property='og:title' content="如何在eMMC上安装PVE与优化配置">
+<meta property='og:description' content="Unable to get device for partition 1 on device /dev/mmcblk0">
+<meta property='og:url' content='https://bestoko.cc/p/install-pve-emmc/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='PVE' /><meta property='article:tag' content='Proxmox Virtual Environment' /><meta property='article:published_time' content='2025-12-14T23:28:34&#43;08:00'/><meta property='article:modified_time' content='2025-12-14T23:28:34&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/install-pve-emmc/pve.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="如何在eMMC上安装PVE与优化配置">
+<meta name="twitter:description" content="Unable to get device for partition 1 on device /dev/mmcblk0"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/install-pve-emmc/pve.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_80328940ddda21.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/bestoko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://bestoko.cc/index.xml' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#现象">现象</a></li>
+    <li><a href="#原因">原因</a></li>
+    <li><a href="#解决">解决</a></li>
+    <li><a href="#优化">优化</a>
+      <ol>
+        <li><a href="#安装阶段">安装阶段</a>
+          <ol>
+            <li><a href="#文件系统选择ext4">文件系统选择<code>ext4</code></a></li>
+          </ol>
+        </li>
+        <li><a href="#系统级优化">系统级优化</a>
+          <ol>
+            <li><a href="#禁用swap">禁用swap</a></li>
+            <li><a href="#开启trim-垃圾回收">开启TRIM (垃圾回收)</a></li>
+            <li><a href="#挂载参数优化-noatime">挂载参数优化 (noatime)</a></li>
+          </ol>
+        </li>
+        <li><a href="#pve-服务优化">PVE 服务优化</a>
+          <ol>
+            <li><a href="#禁用高可用-ha-服务">禁用高可用 (HA) 服务</a></li>
+            <li><a href="#使用-log2ram-减少日志落盘频率">使用 log2ram 减少日志落盘频率</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/install-pve-emmc/">
+                <img src="/p/install-pve-emmc/pve_hu_87e7137284c8a1c3.png"
+                        srcset="/p/install-pve-emmc/pve_hu_87e7137284c8a1c3.png 800w, /p/install-pve-emmc/pve_hu_d951b625122d05c5.png 1600w"
+                        width="800" 
+                        height="427" 
+                        loading="lazy"
+                        alt="Featured image of post 如何在eMMC上安装PVE与优化配置" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tinker/" style="background-color: #3a86ff; color: #fff;">
+                折腾
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/install-pve-emmc/">如何在eMMC上安装PVE与优化配置</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Unable to get device for partition 1 on device /dev/mmcblk0
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 14, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="现象">现象
+</h2><p>今天在尝试给之前买的N150小主机虚拟化折腾下随身软路由+轻NAS时，本着不浪费M.2硬盘位的原则，想把PVE(9.1)装在自带的64G eMMC上一直报错。一开始是怀疑之前装fnos测试时的分区没清干净，到PE下格式化了两次仍然如此。</p>
+<blockquote>
+<p>Installation failed!</p>
+<p>Unable to get device for partition 1 on device /dev/mmcblk0</p></blockquote>
+<h2 id="原因">原因
+</h2><p>检索后发现论坛上早有人提过，而官方的回复看起来则是不希望用户安装在eMMC上，因为会每天写入很多log，而eMMC之类在如此频繁写入下操作寿命堪忧。</p>
+<p><a class="link" href="https://forum.proxmox.com/threads/unable-to-get-device-for-partition-1-on-device-dev-mmcblk0.42348/"  target="_blank" rel="noopener"
+    >无法获取设备 /dev/mmcblk0 上分区 1 的设备 | Proxmox 支持论坛 &mdash; Unable to get device for partition 1 on device /dev/mmcblk0 | Proxmox Support Forum</a></p>
+<blockquote>
+<p>Hi,</p>
+<p>Proxmox VE is not made for install on USB/eMMC/CFCard or equal.
+Proxmox VE have to be installed on a SSD/HDD. The OS will write some GB logs per day.
+A USB/eMMC/CFCard or equal will not last long with this many writing.</p></blockquote>
+<h2 id="解决">解决
+</h2><p>不过也有绕过的办法,我们只要安装时选择Install Proxmox VE (Debug mode)，修改对应的perl安装脚本即可。</p>
+<p>exit跳过第一个命令提示符，在第二次进入shell后，修改<code>usr/share/perl5/Proxmox/Sys/Block.pm</code>（可以使用vi或者nano）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">elsif</span> <span class="p">(</span><span class="nv">$dev</span> <span class="o">=~</span> <span class="n">m</span><span class="o">|^</span><span class="sr">/dev/</span><span class="p">[</span><span class="o">^</span><span class="sr">/]+/</span><span class="n">hd</span><span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="n">z</span><span class="p">]</span><span class="vg">$|</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="s">&#34;${dev}$partnum&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">elsif</span> <span class="p">(</span><span class="nv">$dev</span> <span class="o">=~</span> <span class="n">m</span><span class="o">|^</span><span class="sr">/dev/</span><span class="n">nvme</span><span class="o">\</span><span class="n">d</span><span class="o">+</span><span class="n">n</span><span class="o">\</span><span class="n">d</span><span class="o">+</span><span class="vg">$|</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="s">&#34;${dev}p$partnum&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nb">die</span> <span class="s">&#34;unable to get device for partition $partnum on device $dev\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们以此类推添加上<code>/dev/mmcblk</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">elsif</span> <span class="p">(</span><span class="nv">$dev</span> <span class="o">=~</span> <span class="n">m</span><span class="o">|^</span><span class="sr">/dev/</span><span class="p">[</span><span class="o">^</span><span class="sr">/]+/</span><span class="n">hd</span><span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="n">z</span><span class="p">]</span><span class="vg">$|</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="s">&#34;${dev}$partnum&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">elsif</span> <span class="p">(</span><span class="nv">$dev</span> <span class="o">=~</span> <span class="n">m</span><span class="o">|^</span><span class="sr">/dev/</span><span class="n">nvme</span><span class="o">\</span><span class="n">d</span><span class="o">+</span><span class="n">n</span><span class="o">\</span><span class="n">d</span><span class="o">+</span><span class="vg">$|</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="s">&#34;${dev}p$partnum&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">elsif</span> <span class="p">(</span><span class="nv">$dev</span> <span class="o">=~</span> <span class="n">m</span><span class="o">|^</span><span class="sr">/dev/mmc</span><span class="n">blk</span><span class="o">\</span><span class="n">d</span><span class="o">+</span><span class="vg">$|</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="k">return</span> <span class="s">&#34;${dev}p$partnum&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nb">die</span> <span class="s">&#34;unable to get device for partition $partnum on device $dev\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>保存退出，一路exit跳过接下来的shell即可正常安装。</p>
+<p>切记选择<code>/dev/mmcblk0</code>也就是不带<code>bootX</code>后缀的盘符作为安装目标。</p>
+<h2 id="优化">优化
+</h2><p>当然官方说的还是有一定道理的，考虑到我也不想要这个emmc暴毙，我又做了一些优化来减少写入。</p>
+<h3 id="安装阶段">安装阶段
+</h3><h4 id="文件系统选择ext4">文件系统选择<code>ext4</code>
+</h4><p>因为ZFS有严重的写放大和COW（写时复制）机制，对eMMC是毁灭性打击。</p>
+<h3 id="系统级优化">系统级优化
+</h3><h4 id="禁用swap">禁用swap
+</h4><p>PVE 倾向于使用 Swap，频繁的内存交换会瞬间卡死 eMMC。</p>
+<p>我们可以调低或者关闭它</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 关闭swap</span>
+</span></span><span class="line"><span class="cl">swapoff -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 永久禁用：编辑 /etc/fstab，在 Swap 那一行开头加 # 注释掉。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果内存很小必须使用swap，也可以考虑把 swappiness 调到最低</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;vm.swappiness=0&#34;</span> &gt;&gt; /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">sysctl -p
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="开启trim-垃圾回收">开启TRIM (垃圾回收)
+</h4><p>eMMC 像 SSD 一样需要 TRIM 来保持性能。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> fstrim.timer
+</span></span><span class="line"><span class="cl">systemctl start fstrim.timer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="挂载参数优化-noatime">挂载参数优化 (noatime)
+</h4><p>默认情况下，Linux 每次读取文件都会更新“访问时间”，这是无意义的写入。</p>
+<p><strong>操作</strong>：编辑 <code>/etc/fstab</code>，在根目录 <code>/</code> 的挂载选项中加入 <code>noatime</code>。</p>
+<ul>
+<li>修改前：<code>defaults,errors=remount-ro</code></li>
+<li>修改后：<code>defaults,noatime,errors=remount-ro</code></li>
+</ul>
+<h3 id="pve-服务优化">PVE 服务优化
+</h3><h4 id="禁用高可用-ha-服务">禁用高可用 (HA) 服务
+</h4><p>PVE 的 HA 服务会每隔几秒向磁盘写入心跳信息（Watchdog），单机环境下这毫无意义且伤盘。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl stop pve-ha-lrm
+</span></span><span class="line"><span class="cl">systemctl stop pve-ha-crm
+</span></span><span class="line"><span class="cl">systemctl disable pve-ha-lrm
+</span></span><span class="line"><span class="cl">systemctl disable pve-ha-crm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="使用-log2ram-减少日志落盘频率">使用 log2ram 减少日志落盘频率
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install log2ram -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># /etc/log2ram.conf 关键配置
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SIZE=256M
+</span></span><span class="line"><span class="cl">默认通常是 40M，这对 PVE 来说太小了。
+</span></span><span class="line"><span class="cl">如果你内存有 8G 或以上，建议改为 256M 或 512M。
+</span></span><span class="line"><span class="cl">如果你内存只有 4G，建议改为 128M。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">USE_RSYNC=true
+</span></span><span class="line"><span class="cl">确保设为 true。这会使用 rsync 增量同步，比 cp 更高效，减少写入。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ZL2R=true
+</span></span><span class="line"><span class="cl">开启后，它会使用 ZRAM 技术（内存压缩），这意味着你分配 256M 内存，实际能存大概 500M+ 的日志数据，且物理内存占用很小。这对 eMMC 小主机非常友好。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">重启
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">df -h 看log2ram的size大小是否生效
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>log2ram的工作逻辑</p>
+<ol>
+<li><strong>开机时</strong>：把硬盘 <code>/var/hdd.log</code> (旧日志) 的内容加载到内存 <code>/var/log</code>。</li>
+<li><strong>运行时</strong>：PVE 所有的日志都写入内存，不读写 eMMC。</li>
+<li><strong>关机/重启时</strong>：自动把内存里的新日志同步回硬盘保存。</li>
+<li><strong>定时任务</strong>：它默认每天（daily）会自动同步一次到硬盘，防止断电导致全天日志丢失。</li>
+</ol>
+<p>我们也可以手动<code>log2ram write</code>落盘。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/pve/">PVE</a>
+        
+            <a href="/tags/proxmox-virtual-environment/">Proxmox Virtual Environment</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/tbr3-fnos/">
+        
+        
+            <div class="article-image">
+                <img src="/p/tbr3-fnos/tbr3.ca51bb1b744b8571d7311b9ed706a773_hu_10baea4e009d9988.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS"
+                        data-key="tbr3-fnos" 
+                        data-hash="md5-ylG7G3RLhXHXMRue1wancw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/scr01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/scr01/SCR01.566e23c67fe8e869be6257f16e3c276e_hu_b590d2e4dbe00e9c.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 三星 SCR01 入手简单折腾 "
+                        data-key="SCR01" 
+                        data-hash="md5-Vm4jxn/o6Gm&#43;Ylfxbjwnbg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">三星 SCR01 入手简单折腾 </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/fnos_unraid/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fnos_unraid/FNOS_VM_install6.c2b318d3027c3414e6eebf50fbaec81b_hu_2a38fd04eec7bb87.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记"
+                        data-key="fnOS_UNraid" 
+                        data-hash="md5-wrMY0wJ8NBTm7r9Q&#43;67IGw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Unraid 上部署飞牛OS虚拟机小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/teslap4_unraid/">
+        
+        
+            <div class="article-image">
+                <img src="/p/teslap4_unraid/TeslaP4.66c0c57e65d9a1dca31dc09e852d2964_hu_bebf2a760e00f10a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Tesla P4 Unraid 下折腾小记"
+                        data-key="TeslaP4_UNraid" 
+                        data-hash="md5-ZsDFfmXZodyjHcCehS0pZA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tesla P4 Unraid 下折腾小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/oneplus_ace2_pro/">
+        
+        
+            <div class="article-image">
+                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu_2e515bb37b667ffa.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)"
+                        data-key="oneplus_ace2_pro" 
+                        data-hash="md5-gNpxvWOdfE1hrOFnwmbsHw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2023年该如何愉快的玩机 (一加Ace2 Pro为例)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
