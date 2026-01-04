@@ -16,7 +16,8 @@
 &lt;/h2&gt;&lt;p&gt;今天在尝试给之前买的N150小主机虚拟化折腾下随身软路由+轻NAS时，本着不浪费M.2硬盘位的原则，想把PVE(9.1)装在自带的64G eMMC上一直报错。一开始是怀疑之前装fnos测试时的分区没清干净，到PE下格式化了两次仍然如此。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Installation failed!&lt;/p&gt;
-&lt;p&gt;Unable to get device for partition 1 on device /dev/mmcblk0&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Unable to get device for partition 1 on device /dev/mmcblk0&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;原因&#34;&gt;原因
 &lt;/h2&gt;&lt;p&gt;检索后发现论坛上早有人提过，而官方的回复看起来则是不希望用户安装在eMMC上，因为会每天写入很多log，而eMMC之类在如此频繁写入下操作寿命堪忧。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://forum.proxmox.com/threads/unable-to-get-device-for-partition-1-on-device-dev-mmcblk0.42348/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -25,7 +26,8 @@
 &lt;p&gt;Hi,&lt;/p&gt;
 &lt;p&gt;Proxmox VE is not made for install on USB/eMMC/CFCard or equal.
 Proxmox VE have to be installed on a SSD/HDD. The OS will write some GB logs per day.
-A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&lt;/blockquote&gt;
+A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;解决&#34;&gt;解决
 &lt;/h2&gt;&lt;p&gt;不过也有绕过的办法,我们只要安装时选择Install Proxmox VE (Debug mode)，修改对应的perl安装脚本即可。&lt;/p&gt;
 &lt;p&gt;exit跳过第一个命令提示符，在第二次进入shell后，修改&lt;code&gt;usr/share/perl5/Proxmox/Sys/Block.pm&lt;/code&gt;（可以使用vi或者nano）&lt;/p&gt;

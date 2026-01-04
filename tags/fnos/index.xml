@@ -20,7 +20,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/pdd.png&#34;
 	width=&#34;660&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_a2ff964dcad8d58b.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fb04c2c1bc493289.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -38,7 +38,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnos.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_6b48ce54b93343d6.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_d0ddd59ad739b89.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;fnos&#34;
@@ -205,7 +205,7 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;3.8&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;moviepilot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;jxxghp/moviepilot-v2:latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;container_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;moviepilot-v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -287,7 +287,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_a8876ac1418ddff8.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_b46c100616dc7ad4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;MoviePilot&#34;
@@ -303,7 +303,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_97986cfeeb0cb764.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_fff6efe5dafb73e2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视1&#34;
@@ -317,7 +317,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_aa9321c636a3248d.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_df6506ea1561f767.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视2&#34;
@@ -333,7 +333,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/ql.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_ef15ef8a74db96d2.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_a0465acbf1afb971.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;青龙面板&#34;
@@ -571,8 +571,8 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# docker-compose.yml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;napcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;NAPCAT_UID=${NAPCAT_UID:-1000}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -604,7 +604,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;/vol1/1000/appdata/astrbot/data:/AstrBot/data&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;astrbot_network&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;astrbot_network&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;driver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;bridge&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -679,7 +679,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting.png&#34;
 	width=&#34;1162&#34;
 	height=&#34;1242&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_21d391fbbdc3bdb3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_63db62a10899822b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_bc30785d877a7d1c.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_fbaaa15510d7bf22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -691,7 +691,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_dbcf97ca08afde04.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_4c1504786a945834.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_1ef913269ae2efc9.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_3fd065f62fafd3d9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -702,7 +702,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_18a309f848625abe.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_7ec974132f1f2b32.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_9fe9f674e042a5b5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_cf3e40b64fb035ce.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -713,7 +713,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_df3c75e1a32fa0f0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_d2b0998ef5f81bad.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_52c7644251aaa3ce.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_375f12c31478b786.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -724,7 +724,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_8b49fd3e26729502.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_fffc3139ec046df3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_72e74d6092d7f40d.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_83becc4698f6c60d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -735,7 +735,7 @@
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_681d2eb95c50a5e0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_816415ece116611c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_fd1b809c68ec1cc3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_d93cb711b2685179.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -747,7 +747,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_86528a76a592bdb6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_71b685c4690fcaa1.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_c7202491df802d6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_e44446200edcedff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -759,7 +759,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_14ac0402d538e868.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_71d8719e5331025a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_6e42b04edb407eb9.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_4d8829c243545363.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -773,7 +773,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network.png&#34;
 	width=&#34;1136&#34;
 	height=&#34;879&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_a132d07544586e06.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_5d7eac1e9f7cbc03.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_c0e625f07b8f59f7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_45aefa5e83475e9b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -786,7 +786,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1.png&#34;
 	width=&#34;1369&#34;
 	height=&#34;813&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_e98fddd2b5c506e7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_77be56faf5521f47.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_7635ca95b8adc80b.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_56953bb9d4c1934f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;smb挂载&#34;
@@ -800,7 +800,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2.png&#34;
 	width=&#34;1389&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_708cc30bd84ae1a7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_bc34056ca66c548a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_a134ab141a2a64db.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_fe0948758fbd19a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;共享影视目录&#34;
@@ -815,7 +815,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_f3ea14d0a1d8193.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_cd6feecc7d467231.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_ba93a0ac4204f7b8.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_b41e50e11898ccac.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -827,7 +827,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_79621c8ab0f5aede.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_82e7214c6d4da4d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_ca91264f91d299e1.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_6bd41d548c25b292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -840,7 +840,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_fbab5cb83623a292.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_64810204f76ee010.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_c22fb93aa6ca0d6f.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_18a91f78c719cb5c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -854,7 +854,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
 	width=&#34;1786&#34;
 	height=&#34;117&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_2d195fa474af6346.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_ef0ad94e451953e0.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_28089d0d3c66b979.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_6d51e938d34e2547.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -867,7 +867,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
 	width=&#34;822&#34;
 	height=&#34;434&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_ea98cd3afa7ff087.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_e71027daa38a20fb.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_f3f80be42bf33fc0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_85e225d8db825bc4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -880,7 +880,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
 	width=&#34;1656&#34;
 	height=&#34;1173&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_9f03cf0e30db824e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_fba7cb6b8d4a4e34.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_bac314ada57b9c8.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_2759e3b5b05580de.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -892,7 +892,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
 	width=&#34;793&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_c6c8bc17715815c5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_1cffe7ee25945b8d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_6b8c3062cc8c3c7e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_8c214b1d2fc9f855.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -905,7 +905,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
 	width=&#34;1334&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_327c8af997d7b03.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_4c6b67e5b6b7adab.PNG 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_12ab65ca31466ef9.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_d0d1ba295521f8bd.PNG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

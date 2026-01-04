@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_80328940ddda21.jpg" width="300"
+                        <img src="/img/avatar_hu_acf6d2dc3da62cd2.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -345,8 +345,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/p/install-pve-emmc/">
-                <img src="/p/install-pve-emmc/pve_hu_87e7137284c8a1c3.png"
-                        srcset="/p/install-pve-emmc/pve_hu_87e7137284c8a1c3.png 800w, /p/install-pve-emmc/pve_hu_d951b625122d05c5.png 1600w"
+                <img src="/p/install-pve-emmc/pve_hu_7f7df009a759c575.png"
+                        srcset="/p/install-pve-emmc/pve_hu_7f7df009a759c575.png 800w, /p/install-pve-emmc/pve_hu_e7e086a7e894553a.png 1600w"
                         width="800" 
                         height="427" 
                         loading="lazy"
@@ -415,7 +415,8 @@
 </h2><p>今天在尝试给之前买的N150小主机虚拟化折腾下随身软路由+轻NAS时，本着不浪费M.2硬盘位的原则，想把PVE(9.1)装在自带的64G eMMC上一直报错。一开始是怀疑之前装fnos测试时的分区没清干净，到PE下格式化了两次仍然如此。</p>
 <blockquote>
 <p>Installation failed!</p>
-<p>Unable to get device for partition 1 on device /dev/mmcblk0</p></blockquote>
+<p>Unable to get device for partition 1 on device /dev/mmcblk0</p>
+</blockquote>
 <h2 id="原因">原因
 </h2><p>检索后发现论坛上早有人提过，而官方的回复看起来则是不希望用户安装在eMMC上，因为会每天写入很多log，而eMMC之类在如此频繁写入下操作寿命堪忧。</p>
 <p><a class="link" href="https://forum.proxmox.com/threads/unable-to-get-device-for-partition-1-on-device-dev-mmcblk0.42348/"  target="_blank" rel="noopener"
@@ -424,7 +425,8 @@
 <p>Hi,</p>
 <p>Proxmox VE is not made for install on USB/eMMC/CFCard or equal.
 Proxmox VE have to be installed on a SSD/HDD. The OS will write some GB logs per day.
-A USB/eMMC/CFCard or equal will not last long with this many writing.</p></blockquote>
+A USB/eMMC/CFCard or equal will not last long with this many writing.</p>
+</blockquote>
 <h2 id="解决">解决
 </h2><p>不过也有绕过的办法,我们只要安装时选择Install Proxmox VE (Debug mode)，修改对应的perl安装脚本即可。</p>
 <p>exit跳过第一个命令提示符，在第二次进入shell后，修改<code>usr/share/perl5/Proxmox/Sys/Block.pm</code>（可以使用vi或者nano）</p>
@@ -641,7 +643,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.</p></block
         
         
             <div class="article-image">
-                <img src="/p/tbr3-fnos/tbr3.ca51bb1b744b8571d7311b9ed706a773_hu_10baea4e009d9988.png" 
+                <img src="/p/tbr3-fnos/tbr3.ca51bb1b744b8571d7311b9ed706a773_hu_d4717018ae8afc28.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -665,7 +667,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.</p></block
         
         
             <div class="article-image">
-                <img src="/p/scr01/SCR01.566e23c67fe8e869be6257f16e3c276e_hu_b590d2e4dbe00e9c.png" 
+                <img src="/p/scr01/SCR01.566e23c67fe8e869be6257f16e3c276e_hu_2ce34e2511d75812.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -689,7 +691,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.</p></block
         
         
             <div class="article-image">
-                <img src="/p/fnos_unraid/FNOS_VM_install6.c2b318d3027c3414e6eebf50fbaec81b_hu_2a38fd04eec7bb87.png" 
+                <img src="/p/fnos_unraid/FNOS_VM_install6.c2b318d3027c3414e6eebf50fbaec81b_hu_840880bdd76d359a.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -713,7 +715,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.</p></block
         
         
             <div class="article-image">
-                <img src="/p/teslap4_unraid/TeslaP4.66c0c57e65d9a1dca31dc09e852d2964_hu_bebf2a760e00f10a.jpg" 
+                <img src="/p/teslap4_unraid/TeslaP4.66c0c57e65d9a1dca31dc09e852d2964_hu_98c9012665adaf13.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -737,7 +739,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.</p></block
         
         
             <div class="article-image">
-                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu_2e515bb37b667ffa.jpg" 
+                <img src="/p/oneplus_ace2_pro/oneplus-new-logo-scaled.80da71bd639d7c4d61ace167c266ec1f_hu_afb02886d6483d73.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -816,7 +818,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.</p></block
         
             2020 - 
         
-        2025 Toko&#39;s blog
+        2026 Toko&#39;s blog
     </section>
     
     <section class="powerby">

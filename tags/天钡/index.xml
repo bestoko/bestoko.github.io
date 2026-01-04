@@ -20,7 +20,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/pdd.png&#34;
 	width=&#34;660&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_a2ff964dcad8d58b.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fb04c2c1bc493289.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -38,7 +38,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnos.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_6b48ce54b93343d6.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_d0ddd59ad739b89.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;fnos&#34;
@@ -205,7 +205,7 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;3.8&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;moviepilot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;jxxghp/moviepilot-v2:latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;container_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;moviepilot-v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -287,7 +287,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_a8876ac1418ddff8.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_b46c100616dc7ad4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;MoviePilot&#34;
@@ -303,7 +303,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_97986cfeeb0cb764.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_fff6efe5dafb73e2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视1&#34;
@@ -317,7 +317,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_aa9321c636a3248d.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_df6506ea1561f767.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视2&#34;
@@ -333,7 +333,7 @@
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/ql.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_ef15ef8a74db96d2.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_a0465acbf1afb971.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;青龙面板&#34;
@@ -571,8 +571,8 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# docker-compose.yml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;napcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;NAPCAT_UID=${NAPCAT_UID:-1000}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -604,7 +604,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;/vol1/1000/appdata/astrbot/data:/AstrBot/data&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;astrbot_network&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;astrbot_network&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;driver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;bridge&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;

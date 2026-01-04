@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_80328940ddda21.jpg" width="300"
+                        <img src="/img/avatar_hu_acf6d2dc3da62cd2.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -344,8 +344,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/p/prd-es-3-node/">
-                <img src="/p/prd-es-3-node/prd-es-3-node_hu_f79c31608653070a.jpg"
-                        srcset="/p/prd-es-3-node/prd-es-3-node_hu_f79c31608653070a.jpg 800w, /p/prd-es-3-node/prd-es-3-node_hu_abef95c2342555ee.jpg 1600w"
+                <img src="/p/prd-es-3-node/prd-es-3-node_hu_cfb226ba91d96ae0.jpg"
+                        srcset="/p/prd-es-3-node/prd-es-3-node_hu_cfb226ba91d96ae0.jpg 800w, /p/prd-es-3-node/prd-es-3-node_hu_bd76ff677b9a114d.jpg 1600w"
                         width="800" 
                         height="437" 
                         loading="lazy"
@@ -616,21 +616,21 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l">present</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">reload</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Disable Swap</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Disable Swap</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l">swapoff -a</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install Docker (Offline RPMs)</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install Docker (Offline RPMs)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;yum localinstall -y {{ resource_dir }}/rpm/*.rpm&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># [关键步骤] 必须显式启动 Docker，否则后续无法导入镜像</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Enable and Start Docker Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># [关键步骤] 必须显式启动 Docker，否则后续无法导入镜像</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Enable and Start Docker Service</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">docker</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l">started</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">yes</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Load Docker Images</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Load Docker Images</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
 </span></span></span><span class="line"><span class="cl"><span class="sd">    docker load -i {{ resource_dir }}/es-7.5.0.tar
 </span></span></span><span class="line"><span class="cl"><span class="sd">    docker load -i {{ resource_dir }}/kibana-7.5.0.tar
@@ -685,19 +685,19 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">/data/es/logs</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">/data/es/plugins/ik </span><span class="w"> </span><span class="c"># &lt;--- 关键：提前建好子目录</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Unzip IK Plugin (Correctly)</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Unzip IK Plugin (Correctly)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">unarchive</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ resource_dir }}/elasticsearch-analysis-ik-7.5.0.zip&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/data/es/plugins/ik/&#34;</span><span class="w">  </span><span class="c"># &lt;--- 解压到子目录中</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Docker Compose</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Docker Compose</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">es-compose.yml.j2</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l">/opt/es-deploy/docker-compose.yml</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Start ES Cluster</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Start ES Cluster</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l">docker compose up -d</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">args</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">chdir</span><span class="p">:</span><span class="w"> </span><span class="l">/opt/es-deploy</span><span class="w">
@@ -732,7 +732,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">elasticsearch</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">elasticsearch:{{ es_version }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">node_name }}</span><span class="w">
@@ -784,7 +784,7 @@
 </span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="kn">proxy_pass</span> <span class="s">http://es_cluster</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># 生产环境必须设置，防止大查询超时
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kn">proxy_read_timeout</span> <span class="s">300s</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">        <span class="kn">proxy_read_timeout</span> <span class="s">300s</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -920,7 +920,7 @@
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-10/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-10/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -944,7 +944,7 @@
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-9/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-9/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -968,7 +968,7 @@
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-8/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-8/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -992,7 +992,7 @@
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1016,7 +1016,7 @@
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1095,7 +1095,7 @@
         
             2020 - 
         
-        2025 Toko&#39;s blog
+        2026 Toko&#39;s blog
     </section>
     
     <section class="powerby">

@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_80328940ddda21.jpg" width="300"
+                        <img src="/img/avatar_hu_acf6d2dc3da62cd2.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -364,8 +364,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/p/linux-basics-9/">
-                <img src="/p/linux-basics-9/linux_hu_d1c003d07bd4f873.png"
-                        srcset="/p/linux-basics-9/linux_hu_d1c003d07bd4f873.png 800w, /p/linux-basics-9/linux_hu_7bcbc8c4c4a7ef9a.png 1600w"
+                <img src="/p/linux-basics-9/linux_hu_2d58eb9b183173b9.png"
+                        srcset="/p/linux-basics-9/linux_hu_2d58eb9b183173b9.png 800w, /p/linux-basics-9/linux_hu_70eb18db4f11be78.png 1600w"
                         width="800" 
                         height="800" 
                         loading="lazy"
@@ -978,7 +978,8 @@ dns检索优先级<br>
 <blockquote>
 <p>在NetworkManager服务开启的情况下，你在centos7中也可以用nmcli命令，使用该命令修改的就是
 /etc/sysconfig/network-scripts下的文件
-而在centos9中修改的则是/etc/NetworkManager/system-connections/下的文件</p></blockquote>
+而在centos9中修改的则是/etc/NetworkManager/system-connections/下的文件</p>
+</blockquote>
 <h3 id="centos-9">centos 9
 </h3><p>centos9中使用NetworkManager服务，与该服务相关的配置文件
 用命令直接设置静态ip，不用改配置文件，非常方便</p>
@@ -1288,7 +1289,7 @@ dns检索优先级<br>
 </div><p><img src="/p/linux-basics-9/network.png"
 	width="519"
 	height="272"
-	srcset="/p/linux-basics-9/network_hu_c317185fc4be1493.png 480w, /p/linux-basics-9/network_hu_82aa143e91ee9cf.png 1024w"
+	srcset="/p/linux-basics-9/network_hu_f6fd4da01e99389b.png 480w, /p/linux-basics-9/network_hu_6a99d38fd80740c0.png 1024w"
 	loading="lazy"
 	
 		alt="linux处理数据包过程"
@@ -1439,7 +1440,8 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
 </h4><p>根据接口创建路由配置文件/etc/syconfig/network-scripts/route-ethX，要从那个接口出去X就是几。</p>
 <p>路由配置文件的配置格式非常简单，每一行一个路由条目，先是要到达的目标，然后是via关键字，最后是下一跳地址。要求下一跳必须能到达，且一般都和ethX同网段。</p>
 <blockquote>
-<p>DEST via nexthop</p></blockquote>
+<p>DEST via nexthop</p>
+</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1471,7 +1473,8 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
 <blockquote>
 <p>(1).route-ethX的对应网卡配置文件ifcfg-ethX必须存在，否则路由无效。(注意：对于虚拟机，通常新添加的网卡都没有对应的ifcfg-ethX文件，但ifconfig却能找到该网卡)</p>
 <p>(2).如果在文件中配置永久默认路由，则必须保证所有使用了DHCP服务的网卡配置文件ifcfg-ethX中的DEFROUTE指令设置为”no”，表示DHCP不设置默认路由。</p>
-<p>(3).如果在route-ethX文件中配置永久路由，且该网卡使用了DHCP服务分配地址，则必须保证该网卡的ifcfg-ethX文件中的PEERROUTES指令设置为”no”，表示DHCP设置的路由允许被覆盖。</p></blockquote>
+<p>(3).如果在route-ethX文件中配置永久路由，且该网卡使用了DHCP服务分配地址，则必须保证该网卡的ifcfg-ethX文件中的PEERROUTES指令设置为”no”，表示DHCP设置的路由允许被覆盖。</p>
+</blockquote>
 <h4 id="centos-9-1">centos 9
 </h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1787,7 +1790,7 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-10/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-10/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1811,7 +1814,7 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-8/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-8/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1835,7 +1838,7 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-7/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1859,7 +1862,7 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-6/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1883,7 +1886,7 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
         
         
             <div class="article-image">
-                <img src="/p/linux-basics-5/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_210a40f22a6f1e85.png" 
+                <img src="/p/linux-basics-5/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -1962,7 +1965,7 @@ route命令用于显示和管理路由表。当使用了add或del选项时，rou
         
             2020 - 
         
-        2025 Toko&#39;s blog
+        2026 Toko&#39;s blog
     </section>
     
     <section class="powerby">

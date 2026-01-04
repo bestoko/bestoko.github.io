@@ -16,7 +16,8 @@
 &lt;/h2&gt;&lt;p&gt;今天在尝试给之前买的N150小主机虚拟化折腾下随身软路由+轻NAS时，本着不浪费M.2硬盘位的原则，想把PVE(9.1)装在自带的64G eMMC上一直报错。一开始是怀疑之前装fnos测试时的分区没清干净，到PE下格式化了两次仍然如此。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Installation failed!&lt;/p&gt;
-&lt;p&gt;Unable to get device for partition 1 on device /dev/mmcblk0&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Unable to get device for partition 1 on device /dev/mmcblk0&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;原因&#34;&gt;原因
 &lt;/h2&gt;&lt;p&gt;检索后发现论坛上早有人提过，而官方的回复看起来则是不希望用户安装在eMMC上，因为会每天写入很多log，而eMMC之类在如此频繁写入下操作寿命堪忧。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://forum.proxmox.com/threads/unable-to-get-device-for-partition-1-on-device-dev-mmcblk0.42348/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -25,7 +26,8 @@
 &lt;p&gt;Hi,&lt;/p&gt;
 &lt;p&gt;Proxmox VE is not made for install on USB/eMMC/CFCard or equal.
 Proxmox VE have to be installed on a SSD/HDD. The OS will write some GB logs per day.
-A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&lt;/blockquote&gt;
+A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;解决&#34;&gt;解决
 &lt;/h2&gt;&lt;p&gt;不过也有绕过的办法,我们只要安装时选择Install Proxmox VE (Debug mode)，修改对应的perl安装脚本即可。&lt;/p&gt;
 &lt;p&gt;exit跳过第一个命令提示符，在第二次进入shell后，修改&lt;code&gt;usr/share/perl5/Proxmox/Sys/Block.pm&lt;/code&gt;（可以使用vi或者nano）&lt;/p&gt;
@@ -210,7 +212,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/pdd.png&#34;
 	width=&#34;660&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_a2ff964dcad8d58b.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fb04c2c1bc493289.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -228,7 +230,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnos.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_6b48ce54b93343d6.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_d0ddd59ad739b89.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;fnos&#34;
@@ -395,7 +397,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;3.8&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;moviepilot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;jxxghp/moviepilot-v2:latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;container_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;moviepilot-v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -477,7 +479,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_a8876ac1418ddff8.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_b46c100616dc7ad4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;MoviePilot&#34;
@@ -493,7 +495,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_97986cfeeb0cb764.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_fff6efe5dafb73e2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视1&#34;
@@ -507,7 +509,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_aa9321c636a3248d.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_df6506ea1561f767.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视2&#34;
@@ -523,7 +525,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/ql.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_ef15ef8a74db96d2.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_a0465acbf1afb971.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;青龙面板&#34;
@@ -761,8 +763,8 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# docker-compose.yml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose -f ./compose/astrbot.yml up -d&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;napcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;NAPCAT_UID=${NAPCAT_UID:-1000}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -794,7 +796,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;/vol1/1000/appdata/astrbot/data:/AstrBot/data&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;astrbot_network&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;networks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;astrbot_network&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;driver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;bridge&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -863,7 +865,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_abc440233b833cb3.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_9391246626a19aca.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_2273e207926fa616.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_2d72b52ad55d4f92.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -875,7 +877,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_b9b3f3e4d7512cce.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_22193c9e4f203df5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_9efc4269b6a6469f.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_90f07d57d9ee0261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -898,7 +900,8 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;5G: n28 / n41 / n77 / n78&lt;/p&gt;
 &lt;p&gt;4G: LTE FDD: B1 / B3 / B17 / B18 TDD: B41&lt;/p&gt;
 &lt;p&gt;Disabled Bands that can be enabled:&lt;/p&gt;
-&lt;p&gt;4G: B7 / B38&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;4G: B7 / B38&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;其实相较于国内很多随身WiFi的配置，这个性价比并不高，但耐不住颜值戳中我，放着当个日历摆件也好看，黄鱼入手。&lt;/p&gt;
 &lt;h2 id=&#34;解除sim-锁-开启5g频段&#34;&gt;解除SIM 锁 开启5G频段
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -909,11 +912,12 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;li&gt;这时输入 &lt;code&gt;Q&lt;/code&gt; 并确认，在此界面等待大概一分钟后，会进入到主菜单界面&lt;/li&gt;
 &lt;li&gt;点击 &lt;code&gt;[2] UE SETTING &amp;amp; INFO&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] SETTING&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] PROTOCOL&lt;/code&gt; &amp;raquo; &lt;code&gt;[9] NR&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list control&lt;/code&gt; &amp;raquo; &lt;code&gt;[2] allow list off&lt;/code&gt;，显示 APPLY success，&lt;/li&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_3ac9f4dc1f9b5123.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_76bc9f50c07ef461.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_b156c7bb392e609d.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_cd02206bd2596828.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -925,7 +929,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_1c1bb9e1b997e346.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_6047ed191e78f3d6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_7df02e6527d6c2b3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_58f32c74520b37f1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -937,7 +941,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_2af81596ba321322.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_40b37e9afb0b59dc.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_b3ab4f4d0757d8f4.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_ca1bd4e1a8508f11.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -949,7 +953,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_f3fe96230ad7ea1e.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_9f9744bf39dd6a9.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_55130d73a64d2cb4.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_92e983051276bdcf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -961,7 +965,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_7b2337ebb07f1e4c.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_f11d8336539bed81.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_b2d4aad205923813.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_21d56e11645b056c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -973,7 +977,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_71bf425508ecbce3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_989007b6a0f9553f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_9d3a7940ef83b634.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_694d290c5601d05d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -988,7 +992,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_1d68c2dbda5aef9f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_613f9e9c81c9a4a7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_61fdf6036aad19f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_6afe9c8de427541d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1010,7 +1014,8 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;li&gt;apn类型：*&lt;/li&gt;
 &lt;li&gt;apn协议：IPV4&amp;amp;IPV6&lt;/li&gt;
 &lt;li&gt;apn漫游协议：IPV4&amp;amp;IPV6&lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;使用感想&#34;&gt;使用感想
 &lt;/h2&gt;&lt;p&gt;耐用，耐用，还是tm的耐用！&lt;/p&gt;
 &lt;p&gt;在阉割了很多不必要的硬件情况下（扬声器等），5000毫安时的电池真是太耐用了，我从上班到下班，一直连着2~3个设备的情况下，还能剩下30+%的电量，确实很舒服。&lt;/p&gt;
@@ -1035,7 +1040,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting.png&#34;
 	width=&#34;1162&#34;
 	height=&#34;1242&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_21d391fbbdc3bdb3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_63db62a10899822b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_bc30785d877a7d1c.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_fbaaa15510d7bf22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1047,7 +1052,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_dbcf97ca08afde04.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_4c1504786a945834.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_1ef913269ae2efc9.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_3fd065f62fafd3d9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1058,7 +1063,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_18a309f848625abe.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_7ec974132f1f2b32.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_9fe9f674e042a5b5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_cf3e40b64fb035ce.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1069,7 +1074,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_df3c75e1a32fa0f0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_d2b0998ef5f81bad.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_52c7644251aaa3ce.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_375f12c31478b786.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1080,7 +1085,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_8b49fd3e26729502.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_fffc3139ec046df3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_72e74d6092d7f40d.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_83becc4698f6c60d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1091,7 +1096,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_681d2eb95c50a5e0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_816415ece116611c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_fd1b809c68ec1cc3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_d93cb711b2685179.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1103,7 +1108,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_86528a76a592bdb6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_71b685c4690fcaa1.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_c7202491df802d6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_e44446200edcedff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1115,7 +1120,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_14ac0402d538e868.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_71d8719e5331025a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_6e42b04edb407eb9.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_4d8829c243545363.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1129,7 +1134,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network.png&#34;
 	width=&#34;1136&#34;
 	height=&#34;879&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_a132d07544586e06.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_5d7eac1e9f7cbc03.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_c0e625f07b8f59f7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_45aefa5e83475e9b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1142,7 +1147,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1.png&#34;
 	width=&#34;1369&#34;
 	height=&#34;813&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_e98fddd2b5c506e7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_77be56faf5521f47.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_7635ca95b8adc80b.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_56953bb9d4c1934f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;smb挂载&#34;
@@ -1156,7 +1161,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2.png&#34;
 	width=&#34;1389&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_708cc30bd84ae1a7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_bc34056ca66c548a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_a134ab141a2a64db.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_fe0948758fbd19a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;共享影视目录&#34;
@@ -1171,7 +1176,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_f3ea14d0a1d8193.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_cd6feecc7d467231.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_ba93a0ac4204f7b8.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_b41e50e11898ccac.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1183,7 +1188,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_79621c8ab0f5aede.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_82e7214c6d4da4d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_ca91264f91d299e1.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_6bd41d548c25b292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1196,7 +1201,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_fbab5cb83623a292.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_64810204f76ee010.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_c22fb93aa6ca0d6f.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_18a91f78c719cb5c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1210,7 +1215,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
 	width=&#34;1786&#34;
 	height=&#34;117&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_2d195fa474af6346.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_ef0ad94e451953e0.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_28089d0d3c66b979.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_6d51e938d34e2547.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1223,7 +1228,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
 	width=&#34;822&#34;
 	height=&#34;434&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_ea98cd3afa7ff087.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_e71027daa38a20fb.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_f3f80be42bf33fc0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_85e225d8db825bc4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1236,7 +1241,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
 	width=&#34;1656&#34;
 	height=&#34;1173&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_9f03cf0e30db824e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_fba7cb6b8d4a4e34.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_bac314ada57b9c8.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_2759e3b5b05580de.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1248,7 +1253,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
 	width=&#34;793&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_c6c8bc17715815c5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_1cffe7ee25945b8d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_6b8c3062cc8c3c7e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_8c214b1d2fc9f855.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1261,7 +1266,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
 	width=&#34;1334&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_327c8af997d7b03.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_4c6b67e5b6b7adab.PNG 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_12ab65ca31466ef9.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_d0d1ba295521f8bd.PNG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1286,7 +1291,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4.png&#34;
 	width=&#34;730&#34;
 	height=&#34;321&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_f0f055ce1c509ce9.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_d7624ffeb2271bc2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_50bcc49b225fd0ea.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_c559de63c65aecd7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;后置涡扇&#34;
@@ -1302,7 +1307,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5.png&#34;
 	width=&#34;1395&#34;
 	height=&#34;1395&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_ab9212a184ec715d.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_396d31ac101ed9a4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_c899fe3aad54072f.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_f1ee0d559f2d24e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;鸦无量 散热改装套件&#34;
@@ -1317,7 +1322,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_438ad8f993c22b5d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_56e3b45ddda60e89.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_4ad95dcd259caf0b.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_24bdd340c09bd109.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热1&#34;
@@ -1331,7 +1336,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_62eba18a0518268d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_a5c59b5c5b492c68.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_d9d9e9e18f54cdce.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_89bdc3c7b1c11358.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热2&#34;
@@ -1345,7 +1350,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_1e526a145c6faa0d.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_80e79166bf351ab0.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_294086ac81863ffa.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_80a99bdaefbcf5c3.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热3&#34;
@@ -1361,7 +1366,7 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
 	width=&#34;678&#34;
 	height=&#34;690&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_2ff8746e3dd47be6.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_48f9d9b721409c4e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_8bdefd4b21dfa1ba.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_1aa83380bbf3df98.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;nvidia_driver&#34;
@@ -1375,12 +1380,18 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;&
 &lt;blockquote&gt;
 &lt;p&gt;&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;Please make sure to disable and enable Docker if you installed the Nvidia driver for the first time! Settings -&amp;gt;Docker -&amp;gt; Enable Docker &amp;lsquo;No&amp;rsquo; -&amp;gt; Apply -&amp;gt; Enable Docker &amp;lsquo;Yes&amp;rsquo; -&amp;gt; Apply
-plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
+plugin: nvidia-driver.plg installed&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;参照安装成功的提示去设置里先停用docker ，再启用docker。&lt;/p&gt;
-&lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
+&lt;p&gt;然后我们打开 plugins -  Nvidia Driver, 记录下我们的显卡编号，如图上的&lt;strong&gt;GPU-4220501a-f1b0-d74e-ec65-b17844258a75&lt;/strong&gt;； 并将显卡驱动版本从默认的 latest version 改为 available version 之一，避免 unraid 重启时重新去检测并下载 Nvidia 显卡驱动，导致启动时间拉长甚至在网络环境不佳的情况下&lt;strong&gt;无法启动&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新注意：The v590.x NVidia drivers drop support for the pascal architecture
+v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版本！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
 	width=&#34;786&#34;
 	height=&#34;1005&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_db9784affa97d460.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_bffc864e026eb249.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_65720b3b8c88980.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_682a9c11344883af.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nvidia Driver&#34;
@@ -1397,7 +1408,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1.png&#34;
 	width=&#34;1197&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_36c7ebf367d83fda.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_623b83e371945ab1.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_8f32f800c198df8a.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_75d37baf8962e9fa.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin&#34;
@@ -1412,7 +1423,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2.png&#34;
 	width=&#34;1733&#34;
 	height=&#34;715&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_6464edabaa5823aa.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_8e7167f5018907c4.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_6d81648e5ba519a8.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_118ef6834f6d5919.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting2&#34;
@@ -1427,7 +1438,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3.png&#34;
 	width=&#34;2520&#34;
 	height=&#34;1207&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_b7bde3f7b228b3cd.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_cfdc703ce2f607da.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_7e45c6e5ef1eaab0.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_2e952744ac1990fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting3&#34;
@@ -1441,7 +1452,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4.png&#34;
 	width=&#34;804&#34;
 	height=&#34;467&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_e15f20edaed7798c.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_e676d888d0de9bdc.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_170de93e1b12353.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_a5cbe98899ac341c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting4&#34;
@@ -1458,7 +1469,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
 	width=&#34;986&#34;
 	height=&#34;685&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_279ad37bb36053c.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_1ee7541770b651b3.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_9e3f6748f2271195.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_373e83659c86a3c2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1470,7 +1481,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;112&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_18d2192e68c287e.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_783af90ae4c6a83b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_92c8d25f0804545.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_28a01cde50613674.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1486,7 +1497,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload.png&#34;
 	width=&#34;813&#34;
 	height=&#34;449&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_fcb6409855d9a2.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_7c2d6f8d7f12691e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_a5324b144cb08367.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_a343d1efb7412d11.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;FDM&#34;
@@ -1504,7 +1515,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
 	width=&#34;2532&#34;
 	height=&#34;1269&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_69bf336316cd6b1b.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_ad1e155e62e1c4a7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_7d56d8685f698c81.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_e36b10dd96a8d760.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;SD WEBUI&#34;
@@ -1519,7 +1530,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
 	width=&#34;792&#34;
 	height=&#34;436&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3edf8cc10edc1b31.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_3da2af7e78e0c67b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_1b7a69d89799a7d5.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_61a267817af5fc7a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;画图时的显卡占用&#34;
@@ -1536,7 +1547,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/pdd.png&#34;
 	width=&#34;1238&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu_e51f7d0a5eaecdde.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu_258316aa89fd15bf.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu_274eac999c91308d.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu_4ee9ebd22ac92fbf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;风扇集中调速&#34;
@@ -1588,7 +1599,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# check for driver&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# check for driver&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; -v nvidia-smi &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&amp;gt; /dev/null &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;nvidia driver is not installed you will need to install this from community applications ... exiting.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nvidia drivers are installed&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
@@ -1626,7 +1637,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt.png&#34;
 	width=&#34;1471&#34;
 	height=&#34;405&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_2f57ac0f0b98e8ea.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_581f38b87a890524.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_c04b83ddc690d390.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_be8bf43e59d85060.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;User Scripts&#34;
@@ -1655,7 +1666,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_cd24630faefa8799.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_e1809e344c59bdb5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -1672,7 +1683,8 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;KernelSU 是 Android GKI 设备的 root 解决方案，它工作在内核模式，并直接在内核空间中为用户空间应用程序授予 root 权限。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
@@ -1694,7 +1706,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_2529dae02b22d62a.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_959a485499053f22.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -1723,7 +1735,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_f8ac1946299eb7a6.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_6ca6606a94eee321.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1737,7 +1749,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_409fa0bebaf775d8.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_f8647ec788366f8a.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1751,7 +1763,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_3e75883d3b6cddfb.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_8a8a4f2ab557faa6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1765,7 +1777,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_31442ee55365581e.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_601bdce89acf141b.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1779,7 +1791,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_edab8521c7449d33.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_d633f4f98d6dde66.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1793,7 +1805,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_9a4173c75e972ab5.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_6717e0b6d8663d1c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -1807,7 +1819,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_7b2d0dc78f4d8aab.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_f22aed7d435973d8.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -1835,7 +1847,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu_48ab7c8f780cefa8.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu_bdd5477c6cd08e2c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu_31aa372876b489ff.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu_96452c3f34348196.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -1850,7 +1862,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu_d4abb886dda80519.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu_bda6b3725cf8f92f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu_ca060f0885e24c4c.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu_a624613d51a60b42.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -1866,7 +1878,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu_509e275034a7fd2b.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu_b41d52562529f274.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu_521f98f245d4090.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu_38fd0304c22cf7ec.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -1880,7 +1892,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu_51c9ee0a4a6c8394.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu_759327956f71a33f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu_1d338d1868608573.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu_d1ae4ef982b45924.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;
@@ -1920,7 +1932,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu_3e6dc9232ea39a41.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu_9c408d0238609ff7.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu_c7df4b6c7dddccbd.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu_741ab1aaa45d3d3a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1933,7 +1945,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_ced83dad467a25b4.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_114c5123e6fc9fa6.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_cf972a6b91c3f67e.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_208df3a194edd877.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1946,7 +1958,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_cafe5d84a1cb02c0.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_5b1241c20f6cbf6c.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_643514a7c7bb28b2.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_f762aed3603a6815.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1959,7 +1971,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_f239d494338c029c.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_66a9bbe8319667d2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_5ae7e3af2445a8a6.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_1d7d56dafd273fd9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1974,7 +1986,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_18c7f062a2620dd5.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_d7dfc3f8932528e2.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_a3c79a360c8fec8.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_38de11c7c711f896.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1986,7 +1998,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_19a9a977b35af2ce.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_55b43feeae2018a8.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_584cf79b070d5d9b.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_f7bfa5eb1cf6f80c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2015,7 +2027,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_b8309d6d7a045085.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_fa0f485f1de4c32.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_237bb2af92c88823.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_1f850b10f02609f0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2038,7 +2050,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_b9d006f03789fa7d.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_28725742162e613f.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_53c578e361d237f8.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_2e504f3b561d06d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2060,7 +2072,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_a969d06d4aca4d61.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_7329e4d1bbe09b59.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_8c9d1f821673362c.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_529733669ca2675c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2073,7 +2085,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_d87305064d9cb9c3.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_44ec456a162563e5.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_c1a0ebad16b867da.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_18d14cec4f2c19e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2221,7 +2233,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1da7b211c0a5bb06.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_1d0963187a0391ba.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_95d3828463237875.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_ec34d001be23bb86.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -2247,7 +2259,8 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;此外这个文件里还有几个常用的设置
 &lt;code&gt;GRUB_TIMEOUT=5&lt;/code&gt;   可以设置超时时间，设置-1可以取消倒计时
-&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;&lt;/blockquote&gt;
+&lt;code&gt;GRUB_DEFAULT=saved&lt;/code&gt; saved：光标会默认选择上一个成功进入的启动项，也可以填入数字，以指定启动列表中第x项为启动项，x从0开始计数&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;更新grub2配置&#34;&gt;更新Grub2配置
 &lt;/h2&gt;&lt;p&gt;如果跟我一样使用GPT分区，以UEFI启动方式的话，启动时读取的位置是&lt;code&gt;/boot/efi/EFI/fedora/grub.cfg &lt;/code&gt;，更新命令如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2289,7 +2302,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ curl -s https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo pacman-key --add -
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo pacman-key --add -
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;检查完整性并本地签名&#34;&gt;检查完整性并本地签名
@@ -2553,7 +2566,8 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/div&gt;&lt;p&gt;确认下是否挂载无误&lt;/p&gt;
 &lt;h4 id=&#34;chroot&#34;&gt;chroot
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Chroot&lt;/code&gt;意为&lt;code&gt;Change root&lt;/code&gt;，相当于把操纵权交给我们新安装（或已经存在）的&lt;code&gt;Linux&lt;/code&gt;系统，&lt;strong&gt;执行了这步以后，我们的操作都相当于在磁盘上新装的系统中进行&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2741,7 +2755,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_944813087dd61bb8.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_31edeefe4eb6ea3b.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_8d74a0d8beb7876b.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_f9e8f7e0e015a2a5.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -2755,7 +2769,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_cc8fb6c5980547d0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_58f54b060f8769a8.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_d0203a6ccfb444a4.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_7a781abe761c60d3.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -2769,7 +2783,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_423b614222fcfb0.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_599b3532613a4871.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_a4a5fc19099f339f.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_ed4a925312ed9577.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -2783,7 +2797,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_6dfc88c644a71d49.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_787955676cc69aa6.jpg 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_59a4e06792f9df86.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_c596c0e49186055b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
@@ -2835,7 +2849,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu_518bf3262008e33a.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu_af93733b1c00f456.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu_5f04cce3b1244764.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu_f7467e53a8359db3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -2849,7 +2863,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu_70aaa8735bc63cba.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu_8b6b14b5cbbfd402.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu_d2dde9da0c96728d.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu_f1542128f7d6f2fd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -2866,7 +2880,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu_efdabd3a0d22d85.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu_979edc3f62f72dc0.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu_3675b378c42cbb0c.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu_91bd53405ff4a227.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -2880,7 +2894,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu_40ad098673508531.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu_f6bcd466a88ad792.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu_c72cfd8fba825b48.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu_3f4b1ad588f603e7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -2897,7 +2911,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu_75d774794fec32ac.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu_d4070b253097fc4d.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu_1ce0560f7345002b.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu_d04e0ac5295e5a5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -2918,7 +2932,7 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu_2a00cfcd42d1fb7a.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu_b91c6c12bbe88d9e.png 1024w&#34;
+	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu_fedd9cd1568a2ab4.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu_565ecffc2111e260.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;
