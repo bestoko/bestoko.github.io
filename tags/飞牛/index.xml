@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>飞牛 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/%E9%A3%9E%E7%89%9B/</link>
+        <link>http://localhost:1313/tags/%E9%A3%9E%E7%89%9B/</link>
         <description>Recent content in 飞牛 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 09 Dec 2025 12:15:48 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E9%A3%9E%E7%89%9B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 09 Dec 2025 12:15:48 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%A3%9E%E7%89%9B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS</title>
-        <link>https://bestoko.cc/p/tbr3-fnos/</link>
+        <link>http://localhost:1313/p/tbr3-fnos/</link>
         <pubDate>Tue, 09 Dec 2025 12:15:48 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/tbr3-fnos/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/tbr3-fnos/tbr3.png" alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS" /&gt;&lt;h2 id=&#34;前言为什么选择这套组合&#34;&gt;前言：为什么选择这套组合
+        <guid>http://localhost:1313/p/tbr3-fnos/</guid>
+        <description>&lt;img src="http://localhost:1313/p/tbr3-fnos/tbr3.png" alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS" /&gt;&lt;h2 id=&#34;前言为什么选择这套组合&#34;&gt;前言：为什么选择这套组合
 &lt;/h2&gt;&lt;p&gt;很早之前我在虚拟机体验fnos的时候想过以后可能会单独组一套来装物理飞牛&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/fnos_unraid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Unraid 上部署飞牛OS虚拟机小记&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;当我换个城市工作时，家里的大黑盒子（all in one）也不好意思一直开着，还是太费电，关掉后父母看影视剧又不方便。于是就考虑趁着回来，买个双盘位的NAS，转移下影音资源。本来我考虑的是基于主要是影音需求以及父母方便上手，买个成品NAS如绿联DXP2800，极空间Z2Pro等&amp;hellip;可是看了一圈价格实在是下不去手（为什么N100 N150还能越来越贵了&amp;hellip;）&lt;/p&gt;
 &lt;p&gt;恰逢看到天钡老瓶装新酒出了个R3 3200U的双盘位（本质还是最早的R1模具改的），搜索对比了下发现3200U也算是略低于N100一点点，主要家庭影音使用应该是绰绰有余了。于是某多多 886购入准系统。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/pdd.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/pdd.png&#34;
 	width=&#34;660&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, http://localhost:1313/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -35,10 +35,10 @@
 &lt;p&gt;机器总的来说质感一般，大块的塑料机身，底部风扇进风顶部出风散热的设计。天钡换壳出了几代，也说明这个模具也算很成熟了，我塞了两块18T HC550进去也没有遇到有人说的热罐问题。综合这个价位考虑，都算是可以接受的。&lt;/p&gt;
 &lt;h2 id=&#34;系统安装飞牛fnos&#34;&gt;系统安装（飞牛fnOS）
 &lt;/h2&gt;&lt;p&gt;这部分我就不展开了。ventoy U盘放入fnos镜像，一路安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnos.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/fnos.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, http://localhost:1313/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;fnos&#34;
@@ -284,10 +284,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;小提示：如果你需要使用应用中心的浏览器（&lt;del&gt;并不好用&lt;/del&gt;）,为防止冲突可以将MP用的3000和3001端口换成别的。&lt;/p&gt;
 &lt;p&gt;MP 的存储目录按如此设置（需要下载器开启&lt;strong&gt;自动分类管理&lt;/strong&gt;）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/mpv2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, http://localhost:1313/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;MoviePilot&#34;
@@ -300,10 +300,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;至于如何PT站认证、如何订阅下载，就不展开说了，wiki里也很详细了。&lt;/p&gt;
 &lt;p&gt;将之前NAS的影音路径smb挂载后复制了一份，现在可以开始初步享受了~&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia1.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, http://localhost:1313/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视1&#34;
@@ -314,10 +314,10 @@
 		data-flex-basis=&#34;428px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, http://localhost:1313/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视2&#34;
@@ -330,10 +330,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;脚本自动化&#34;&gt;脚本自动化
 &lt;/h2&gt;&lt;p&gt;本着不浪费的原则，我把一些需要长期挂着的脚本也放到这台NAS上了。直接配置在应用中心安装的青龙面板即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/ql.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/ql.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, http://localhost:1313/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;青龙面板&#34;

@@ -2,17 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>折腾 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/categories/tinker/</link>
+        <link>http://localhost:1313/categories/tinker/</link>
         <description>Recent content in 折腾 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 14 Dec 2025 23:28:34 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/tinker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 14 Dec 2025 23:28:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/tinker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>我的 unraid all in one</title>
+        <link>http://localhost:1313/p/unradi-homeserver/</link>
+        <pubDate>Thu, 29 May 2025 23:11:52 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/unradi-homeserver/</guid>
+        <description>&lt;img src="http://localhost:1313/linux.png" alt="Featured image of post 我的 unraid all in one" /&gt;</description>
+        </item>
+        <item>
         <title>如何在eMMC上安装PVE与优化配置</title>
-        <link>https://bestoko.cc/p/install-pve-emmc/</link>
+        <link>http://localhost:1313/p/install-pve-emmc/</link>
         <pubDate>Sun, 14 Dec 2025 23:28:34 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/install-pve-emmc/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/install-pve-emmc/pve.png" alt="Featured image of post 如何在eMMC上安装PVE与优化配置" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
+        <guid>http://localhost:1313/p/install-pve-emmc/</guid>
+        <description>&lt;img src="http://localhost:1313/p/install-pve-emmc/pve.png" alt="Featured image of post 如何在eMMC上安装PVE与优化配置" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
 &lt;/h2&gt;&lt;p&gt;今天在尝试给之前买的N150小主机虚拟化折腾下随身软路由+轻NAS时，本着不浪费M.2硬盘位的原则，想把PVE(9.1)装在自带的64G eMMC上一直报错。一开始是怀疑之前装fnos测试时的分区没清干净，到PE下格式化了两次仍然如此。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Installation failed!&lt;/p&gt;
@@ -200,19 +208,19 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
         </item>
         <item>
         <title>是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS</title>
-        <link>https://bestoko.cc/p/tbr3-fnos/</link>
+        <link>http://localhost:1313/p/tbr3-fnos/</link>
         <pubDate>Tue, 09 Dec 2025 12:15:48 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/tbr3-fnos/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/tbr3-fnos/tbr3.png" alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS" /&gt;&lt;h2 id=&#34;前言为什么选择这套组合&#34;&gt;前言：为什么选择这套组合
+        <guid>http://localhost:1313/p/tbr3-fnos/</guid>
+        <description>&lt;img src="http://localhost:1313/p/tbr3-fnos/tbr3.png" alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS" /&gt;&lt;h2 id=&#34;前言为什么选择这套组合&#34;&gt;前言：为什么选择这套组合
 &lt;/h2&gt;&lt;p&gt;很早之前我在虚拟机体验fnos的时候想过以后可能会单独组一套来装物理飞牛&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/fnos_unraid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Unraid 上部署飞牛OS虚拟机小记&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;当我换个城市工作时，家里的大黑盒子（all in one）也不好意思一直开着，还是太费电，关掉后父母看影视剧又不方便。于是就考虑趁着回来，买个双盘位的NAS，转移下影音资源。本来我考虑的是基于主要是影音需求以及父母方便上手，买个成品NAS如绿联DXP2800，极空间Z2Pro等&amp;hellip;可是看了一圈价格实在是下不去手（为什么N100 N150还能越来越贵了&amp;hellip;）&lt;/p&gt;
 &lt;p&gt;恰逢看到天钡老瓶装新酒出了个R3 3200U的双盘位（本质还是最早的R1模具改的），搜索对比了下发现3200U也算是略低于N100一点点，主要家庭影音使用应该是绰绰有余了。于是某多多 886购入准系统。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/pdd.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/pdd.png&#34;
 	width=&#34;660&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, https://bestoko.cc/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/pdd_hu_9c3334d42ab0e7a.png 480w, http://localhost:1313/p/tbr3-fnos/pdd_hu_fc2d5421fe75459d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -227,10 +235,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &lt;p&gt;机器总的来说质感一般，大块的塑料机身，底部风扇进风顶部出风散热的设计。天钡换壳出了几代，也说明这个模具也算很成熟了，我塞了两块18T HC550进去也没有遇到有人说的热罐问题。综合这个价位考虑，都算是可以接受的。&lt;/p&gt;
 &lt;h2 id=&#34;系统安装飞牛fnos&#34;&gt;系统安装（飞牛fnOS）
 &lt;/h2&gt;&lt;p&gt;这部分我就不展开了。ventoy U盘放入fnos镜像，一路安装即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnos.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/fnos.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, https://bestoko.cc/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/fnos_hu_71d62f1d101bab02.png 480w, http://localhost:1313/p/tbr3-fnos/fnos_hu_8b16e00f553ee0d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;fnos&#34;
@@ -476,10 +484,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;小提示：如果你需要使用应用中心的浏览器（&lt;del&gt;并不好用&lt;/del&gt;）,为防止冲突可以将MP用的3000和3001端口换成别的。&lt;/p&gt;
 &lt;p&gt;MP 的存储目录按如此设置（需要下载器开启&lt;strong&gt;自动分类管理&lt;/strong&gt;）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/mpv2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, https://bestoko.cc/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/mpv2_hu_75874cd4292b4a.png 480w, http://localhost:1313/p/tbr3-fnos/mpv2_hu_68576727eb0a094c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;MoviePilot&#34;
@@ -492,10 +500,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;至于如何PT站认证、如何订阅下载，就不展开说了，wiki里也很详细了。&lt;/p&gt;
 &lt;p&gt;将之前NAS的影音路径smb挂载后复制了一份，现在可以开始初步享受了~&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia1.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia1_hu_bd1fca3957d7a77.png 480w, http://localhost:1313/p/tbr3-fnos/fnmedia1_hu_6afe248d33ea0ed9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视1&#34;
@@ -506,10 +514,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;428px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia2.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, https://bestoko.cc/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/fnmedia2_hu_e8325c304fb493e9.png 480w, http://localhost:1313/p/tbr3-fnos/fnmedia2_hu_26d0aaf14d86bb28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;飞牛影视2&#34;
@@ -522,10 +530,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;脚本自动化&#34;&gt;脚本自动化
 &lt;/h2&gt;&lt;p&gt;本着不浪费的原则，我把一些需要长期挂着的脚本也放到这台NAS上了。直接配置在应用中心安装的青龙面板即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/tbr3-fnos/ql.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/tbr3-fnos/ql.png&#34;
 	width=&#34;2298&#34;
 	height=&#34;1286&#34;
-	srcset=&#34;https://bestoko.cc/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, https://bestoko.cc/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/tbr3-fnos/ql_hu_beff78ad91725aad.png 480w, http://localhost:1313/p/tbr3-fnos/ql_hu_ecea1f2d6b607f32.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;青龙面板&#34;
@@ -856,16 +864,16 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
         </item>
         <item>
         <title>三星 SCR01 入手简单折腾 </title>
-        <link>https://bestoko.cc/p/scr01/</link>
+        <link>http://localhost:1313/p/scr01/</link>
         <pubDate>Sun, 15 Dec 2024 23:55:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/scr01/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
+        <guid>http://localhost:1313/p/scr01/</guid>
+        <description>&lt;img src="http://localhost:1313/p/scr01/SCR01.png" alt="Featured image of post 三星 SCR01 入手简单折腾 " /&gt;&lt;p&gt;公司的网络最近经常抽风，逛小绿书无意间发现了三星有给日本运营商定制过一批随身WIFI，颜值特别高，遂入手配合联通副卡过渡使用。&lt;/p&gt;
 &lt;h2 id=&#34;外观与配置&#34;&gt;外观与配置
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01A.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01A.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01A_hu_2273e207926fa616.png 480w, https://bestoko.cc/p/scr01/SCR01A_hu_2d72b52ad55d4f92.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01A_hu_2273e207926fa616.png 480w, http://localhost:1313/p/scr01/SCR01A_hu_2d72b52ad55d4f92.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -874,10 +882,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01B.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01B.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01B_hu_9efc4269b6a6469f.png 480w, https://bestoko.cc/p/scr01/SCR01B_hu_90f07d57d9ee0261.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01B_hu_9efc4269b6a6469f.png 480w, http://localhost:1313/p/scr01/SCR01B_hu_90f07d57d9ee0261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -914,10 +922,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &lt;li&gt;右上角菜单，点击两次 &lt;code&gt;back&lt;/code&gt; 回到上层目录，点击 &lt;code&gt;[1]nr5g sa/nsa mode control&lt;/code&gt; &amp;raquo; &lt;code&gt;[1] sa/nsa enable&lt;/code&gt;，按照提示重启设备&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting1.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting1_hu_b156c7bb392e609d.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting1_hu_cd02206bd2596828.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting1_hu_b156c7bb392e609d.png 480w, http://localhost:1313/p/scr01/SCR01_Setting1_hu_cd02206bd2596828.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -926,10 +934,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting2.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting2_hu_7df02e6527d6c2b3.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting2_hu_58f32c74520b37f1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting2_hu_7df02e6527d6c2b3.png 480w, http://localhost:1313/p/scr01/SCR01_Setting2_hu_58f32c74520b37f1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -938,10 +946,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting3.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting3_hu_b3ab4f4d0757d8f4.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting3_hu_ca1bd4e1a8508f11.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting3_hu_b3ab4f4d0757d8f4.png 480w, http://localhost:1313/p/scr01/SCR01_Setting3_hu_ca1bd4e1a8508f11.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -950,10 +958,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting4.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting4_hu_55130d73a64d2cb4.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting4_hu_92e983051276bdcf.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting4_hu_55130d73a64d2cb4.png 480w, http://localhost:1313/p/scr01/SCR01_Setting4_hu_92e983051276bdcf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -962,10 +970,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting5.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting5_hu_b2d4aad205923813.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting5_hu_21d56e11645b056c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting5_hu_b2d4aad205923813.png 480w, http://localhost:1313/p/scr01/SCR01_Setting5_hu_21d56e11645b056c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -974,10 +982,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_Setting6.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_Setting6_hu_9d3a7940ef83b634.png 480w, https://bestoko.cc/p/scr01/SCR01_Setting6_hu_694d290c5601d05d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_Setting6_hu_9d3a7940ef83b634.png 480w, http://localhost:1313/p/scr01/SCR01_Setting6_hu_694d290c5601d05d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -989,10 +997,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;allow list off&lt;/code&gt; 即运营商锁，关掉之后我们才可以使用默认日本运营商之外的卡&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sa/nsa enable&lt;/code&gt; 默认disable，开启后则可以使用5G&lt;/p&gt;
 &lt;h2 id=&#34;设置apn&#34;&gt;设置APN
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/scr01/SCR01_APN.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/scr01/SCR01_APN.png&#34;
 	width=&#34;587&#34;
 	height=&#34;1206&#34;
-	srcset=&#34;https://bestoko.cc/p/scr01/SCR01_APN_hu_61fdf6036aad19f.png 480w, https://bestoko.cc/p/scr01/SCR01_APN_hu_6afe9c8de427541d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/scr01/SCR01_APN_hu_61fdf6036aad19f.png 480w, http://localhost:1313/p/scr01/SCR01_APN_hu_6afe9c8de427541d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1025,11 +1033,11 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
         </item>
         <item>
         <title>Unraid 上部署飞牛OS虚拟机小记</title>
-        <link>https://bestoko.cc/p/fnos_unraid/</link>
+        <link>http://localhost:1313/p/fnos_unraid/</link>
         <pubDate>Thu, 14 Nov 2024 21:40:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/fnos_unraid/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png" alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记" /&gt;&lt;h2 id=&#34;飞牛私有云&#34;&gt;飞牛私有云
+        <guid>http://localhost:1313/p/fnos_unraid/</guid>
+        <description>&lt;img src="http://localhost:1313/p/fnos_unraid/FNOS_VM_install6.png" alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记" /&gt;&lt;h2 id=&#34;飞牛私有云&#34;&gt;飞牛私有云
 &lt;/h2&gt;&lt;p&gt;最近 DIY NAS 圈飞牛私有云的热度很高（不排除很多是商单广告）。我大概看了看，虽然还只是 beta 版本，但基本功能的完成度已经很高了。文件存储、docker、影视、相册、应用中心都已经开箱即用了，另外还有比较方便的外网访问（据说后期会额外收费，或者免费版本限速）。最让我眼馋的还是飞牛的影视功能，我之前辛苦折腾的挂削组件，相互配合之间还老出点小毛病。不过主力NAS unraid 已经使用很久了，数据迁移实在麻烦，决定在上面用虚拟机的方式部署使用。&lt;/p&gt;
 &lt;h2 id=&#34;unraid-fnos-vm-部署&#34;&gt;UNraid FNOS VM 部署
 &lt;/h2&gt;&lt;p&gt;首先去官网下载最新的镜像文件 iso  &lt;a class=&#34;link&#34; href=&#34;https://www.fnnas.com/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1037,10 +1045,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &lt;p&gt;通过 smb 复制到unraid 的isos 共享文件夹&lt;/p&gt;
 &lt;p&gt;接着新建一个 Linux 虚拟机，设置好所分配的 CPU 核心、内存、虚拟硬盘大小，OS INSTALL ISO 选择我们刚上传的系统镜像即可。&lt;/p&gt;
 &lt;p&gt;这里我的闲置空间比较多，分配了100G 给 fnos，官方建议是64G 以上，可以根据自己硬件条件来设置。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_setting.png&#34;
 	width=&#34;1162&#34;
 	height=&#34;1242&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_bc30785d877a7d1c.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_setting_hu_fbaaa15510d7bf22.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_setting_hu_bc30785d877a7d1c.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_setting_hu_fbaaa15510d7bf22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1049,10 +1057,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;224px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install1.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_1ef913269ae2efc9.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install1_hu_3fd065f62fafd3d9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install1_hu_1ef913269ae2efc9.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install1_hu_3fd065f62fafd3d9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1060,10 +1068,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2.png&#34;
+&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install2.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_9fe9f674e042a5b5.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install2_hu_cf3e40b64fb035ce.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install2_hu_9fe9f674e042a5b5.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install2_hu_cf3e40b64fb035ce.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1071,10 +1079,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3.png&#34;
+&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install3.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_52c7644251aaa3ce.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install3_hu_375f12c31478b786.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install3_hu_52c7644251aaa3ce.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install3_hu_375f12c31478b786.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1082,10 +1090,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4.png&#34;
+&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install4.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_72e74d6092d7f40d.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install4_hu_83becc4698f6c60d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install4_hu_72e74d6092d7f40d.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install4_hu_83becc4698f6c60d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1093,10 +1101,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-grow=&#34;133&#34;
 		data-flex-basis=&#34;319px&#34;
 	
-&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5.png&#34;
+&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install5.png&#34;
 	width=&#34;1294&#34;
 	height=&#34;972&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_fd1b809c68ec1cc3.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install5_hu_d93cb711b2685179.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install5_hu_fd1b809c68ec1cc3.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install5_hu_d93cb711b2685179.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1105,10 +1113,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;319px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install6.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_c7202491df802d6.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install6_hu_e44446200edcedff.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install6_hu_c7202491df802d6.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install6_hu_e44446200edcedff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1117,10 +1125,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;483px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install7.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1271&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_6e42b04edb407eb9.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_install7_hu_4d8829c243545363.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_install7_hu_6e42b04edb407eb9.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_install7_hu_4d8829c243545363.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1131,10 +1139,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;修改飞牛ip-挂载媒体库并配置影视应用&#34;&gt;修改飞牛IP 挂载媒体库并配置影视应用
 &lt;/h2&gt;&lt;p&gt;一路按需设置即可，需要注意的是进系统设置的第一个账号默认为有 SSH 权限的且不可删除的管理员账号，DHCP 获取的 IP 地址不满意，可以进系统后手动指定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_network.png&#34;
 	width=&#34;1136&#34;
 	height=&#34;879&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_c0e625f07b8f59f7.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_network_hu_45aefa5e83475e9b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_network_hu_c0e625f07b8f59f7.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_network_hu_45aefa5e83475e9b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1144,10 +1152,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着简单安装下影视应用，将unraid 里的影音库目录 挂载到飞牛OS，并共享给影视应用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb1.png&#34;
 	width=&#34;1369&#34;
 	height=&#34;813&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_7635ca95b8adc80b.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb1_hu_56953bb9d4c1934f.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb1_hu_7635ca95b8adc80b.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_smb1_hu_56953bb9d4c1934f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;smb挂载&#34;
@@ -1158,10 +1166,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;404px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb2.png&#34;
 	width=&#34;1389&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_a134ab141a2a64db.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_smb2_hu_fe0948758fbd19a8.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_smb2_hu_a134ab141a2a64db.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_smb2_hu_fe0948758fbd19a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;共享影视目录&#34;
@@ -1173,10 +1181,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;进入影视，设置下自己目录对应的媒体分类，稍等片刻，即可挂削完毕&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video1.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_ba93a0ac4204f7b8.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video1_hu_b41e50e11898ccac.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video1_hu_ba93a0ac4204f7b8.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_video1_hu_b41e50e11898ccac.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1185,10 +1193,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;485px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video2.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_ca91264f91d299e1.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video2_hu_6bd41d548c25b292.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video2_hu_ca91264f91d299e1.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_video2_hu_6bd41d548c25b292.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1198,10 +1206,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;可以看到飞牛的播放器完成度还是比较高的，个人感觉比 emby 和 jellyfin 的网页版易用点&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video3.png&#34;
 	width=&#34;2560&#34;
 	height=&#34;1266&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_c22fb93aa6ca0d6f.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_video3_hu_18a91f78c719cb5c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_video3_hu_c22fb93aa6ca0d6f.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_video3_hu_18a91f78c719cb5c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1212,10 +1220,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;核显直通转码&#34;&gt;核显直通转码
 &lt;/h2&gt;&lt;p&gt;unraid 下直通核显比较简单，首先去Tools - System Devices 找到并勾选核显，Bind selected to VFIO at Boot，并重启。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode1.png&#34;
 	width=&#34;1786&#34;
 	height=&#34;117&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_28089d0d3c66b979.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode1_hu_6d51e938d34e2547.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode1_hu_28089d0d3c66b979.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode1_hu_6d51e938d34e2547.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1225,10 +1233,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着将暂停飞牛虚拟机，将设置的显卡从 VNC 改成 你的核显重启虚拟机即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode2.png&#34;
 	width=&#34;822&#34;
 	height=&#34;434&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_f3f80be42bf33fc0.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode2_hu_85e225d8db825bc4.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode2_hu_f3f80be42bf33fc0.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode2_hu_85e225d8db825bc4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1238,10 +1246,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;最后，在飞牛影视里 勾选启用 GPU 加速转码即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode3.png&#34;
 	width=&#34;1656&#34;
 	height=&#34;1173&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_bac314ada57b9c8.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode3_hu_2759e3b5b05580de.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode3_hu_bac314ada57b9c8.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode3_hu_2759e3b5b05580de.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1250,10 +1258,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;338px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode4.png&#34;
 	width=&#34;793&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_6b8c3062cc8c3c7e.png 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode4_hu_8c214b1d2fc9f855.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode4_hu_6b8c3062cc8c3c7e.png 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode4_hu_8c214b1d2fc9f855.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1263,10 +1271,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我们把手机上切成流量，模拟在外面访问家里的nas，需要转码的情况，可以看到已经成功驱动。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode5.PNG&#34;
 	width=&#34;1334&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_12ab65ca31466ef9.PNG 480w, https://bestoko.cc/p/fnos_unraid/FNOS_VM_transcode5_hu_d0d1ba295521f8bd.PNG 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode5_hu_12ab65ca31466ef9.PNG 480w, http://localhost:1313/p/fnos_unraid/FNOS_VM_transcode5_hu_d0d1ba295521f8bd.PNG 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1281,17 +1289,17 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
         </item>
         <item>
         <title>Tesla P4 Unraid 下折腾小记</title>
-        <link>https://bestoko.cc/p/teslap4_unraid/</link>
+        <link>http://localhost:1313/p/teslap4_unraid/</link>
         <pubDate>Sun, 27 Oct 2024 14:40:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/teslap4_unraid/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/teslap4_unraid/TeslaP4.jpg" alt="Featured image of post Tesla P4 Unraid 下折腾小记" /&gt;&lt;p&gt;最近在黄鱼捡垃圾时，发现一张散热改装深得我心的 Tesla P4 显卡，虽然已经溢价到598块（年前不带散热改装的还300不到来着T_T），还是拿下了，塞到自己小小的AIO主机里开始折腾，简单记录下在 unraid 上使用这张卡的记录&lt;/p&gt;
+        <guid>http://localhost:1313/p/teslap4_unraid/</guid>
+        <description>&lt;img src="http://localhost:1313/p/teslap4_unraid/TeslaP4.jpg" alt="Featured image of post Tesla P4 Unraid 下折腾小记" /&gt;&lt;p&gt;最近在黄鱼捡垃圾时，发现一张散热改装深得我心的 Tesla P4 显卡，虽然已经溢价到598块（年前不带散热改装的还300不到来着T_T），还是拿下了，塞到自己小小的AIO主机里开始折腾，简单记录下在 unraid 上使用这张卡的记录&lt;/p&gt;
 &lt;h2 id=&#34;简单介绍&#34;&gt;简单介绍
 &lt;/h2&gt;&lt;p&gt;Tesla P4 这种卡设计之初都是放到服务器用的，因此都没有设计主动散热，毕竟服务器暴力扇力大砖飞，轻轻松松带走发热。而我们垃圾佬拿来家用时就不得不权衡一下噪音与散热了，因此简单的改装是很有必要的。常见的改装方案是在原装散热器后方3D打印出一个涡轮风扇，显卡长度增加了一截不说，也实在说不上优雅。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_4.png&#34;
 	width=&#34;730&#34;
 	height=&#34;321&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_50bcc49b225fd0ea.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_4_hu_c559de63c65aecd7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_4_hu_50bcc49b225fd0ea.png 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_4_hu_c559de63c65aecd7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;后置涡扇&#34;
@@ -1304,10 +1312,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;此外我最喜欢的方案是 B站 &lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/2838092/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;鸦无量&lt;/a&gt; 的替换3D打印盖板，增加3组风扇的散热改装套件了，详细的可以参考视频 BV1oZ421q7qn&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_5.png&#34;
 	width=&#34;1395&#34;
 	height=&#34;1395&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_c899fe3aad54072f.png 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_5_hu_f1ee0d559f2d24e5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_5_hu_c899fe3aad54072f.png 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_5_hu_f1ee0d559f2d24e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;鸦无量 散热改装套件&#34;
@@ -1319,10 +1327,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;而我这次购入的则是卖家定制不锈钢外壳，纯铜底板铜板散热器，3组风扇的版本，拿在手里沉甸甸的，很有质感，因为已经装进NAS里了，拆装比较麻烦，这里就直接使用卖家的图展示了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_1.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_4ad95dcd259caf0b.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_1_hu_24bdd340c09bd109.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_1_hu_4ad95dcd259caf0b.jpg 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_1_hu_24bdd340c09bd109.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热1&#34;
@@ -1333,10 +1341,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_2.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_d9d9e9e18f54cdce.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_2_hu_89bdc3c7b1c11358.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_2_hu_d9d9e9e18f54cdce.jpg 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_2_hu_89bdc3c7b1c11358.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热2&#34;
@@ -1347,10 +1355,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_3.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_294086ac81863ffa.jpg 480w, https://bestoko.cc/p/teslap4_unraid/TeslaP4_3_hu_80a99bdaefbcf5c3.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/TeslaP4_3_hu_294086ac81863ffa.jpg 480w, http://localhost:1313/p/teslap4_unraid/TeslaP4_3_hu_80a99bdaefbcf5c3.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;闲鱼改造散热3&#34;
@@ -1363,10 +1371,10 @@ A USB/eMMC/CFCard or equal will not last long with this many writing.&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;unraid-上安装驱动并配置&#34;&gt;UNraid 上安装驱动并配置
 &lt;/h2&gt;&lt;p&gt;首先需要安装 &lt;strong&gt;Nvidia-Driver&lt;/strong&gt; 插件，可以自动检测当前设备上的 Nvidia 显卡并自动下载相应的驱动&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver.png&#34;
 	width=&#34;678&#34;
 	height=&#34;690&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_8bdefd4b21dfa1ba.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_hu_1aa83380bbf3df98.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_hu_8bdefd4b21dfa1ba.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_hu_1aa83380bbf3df98.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;nvidia_driver&#34;
@@ -1388,10 +1396,10 @@ plugin: nvidia-driver.plg installed&lt;/p&gt;
 &lt;p&gt;更新注意：The v590.x NVidia drivers drop support for the pascal architecture
 v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版本！！&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_setting.png&#34;
 	width=&#34;786&#34;
 	height=&#34;1005&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_65720b3b8c88980.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_682a9c11344883af.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_65720b3b8c88980.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_nvidia_driver_setting_hu_682a9c11344883af.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nvidia Driver&#34;
@@ -1405,10 +1413,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;h2 id=&#34;视频转码配置-jellyfin-为例&#34;&gt;视频转码配置（ jellyfin 为例）
 &lt;/h2&gt;&lt;p&gt;我们在 jellyfin docker配置额外参数（&lt;code&gt;Extra Parameters&lt;/code&gt;）加上 &lt;code&gt;--runtime=nvidia&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;并添加两个变量 &lt;code&gt;NVIDIA_VISIBLE_DEVICES&lt;/code&gt; 和 &lt;code&gt;NVIDIA_DRIVER_CAPABILITIES&lt;/code&gt; , 值分别为上面配置时拿到的 &lt;code&gt;GPU-XXXYYYZZZ&lt;/code&gt; 编号和 &lt;code&gt;all&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting1.png&#34;
 	width=&#34;1197&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_8f32f800c198df8a.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting1_hu_75d37baf8962e9fa.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting1_hu_8f32f800c198df8a.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting1_hu_75d37baf8962e9fa.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin&#34;
@@ -1420,10 +1428,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;jellyfin - playback - transcoding 选择 Nvidia NVENC 保存并重新启动 docker，选择一个电影测试一下即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting2.png&#34;
 	width=&#34;1733&#34;
 	height=&#34;715&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_6d81648e5ba519a8.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting2_hu_118ef6834f6d5919.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting2_hu_6d81648e5ba519a8.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting2_hu_118ef6834f6d5919.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting2&#34;
@@ -1435,10 +1443,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这里我以 奥本海默 为例，可以看的已经成功转码播放，unraid 仪表盘也可以看到 P4 的使用情况（需安装 GPU Statistics 插件），以及在使用的APP jellyfin&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting3.png&#34;
 	width=&#34;2520&#34;
 	height=&#34;1207&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_7e45c6e5ef1eaab0.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting3_hu_2e952744ac1990fb.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting3_hu_7e45c6e5ef1eaab0.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting3_hu_2e952744ac1990fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting3&#34;
@@ -1449,10 +1457,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;501px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting4.png&#34;
 	width=&#34;804&#34;
 	height=&#34;467&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_170de93e1b12353.png 480w, https://bestoko.cc/p/teslap4_unraid/jellyfin_setting4_hu_a5cbe98899ac341c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/jellyfin_setting4_hu_170de93e1b12353.png 480w, http://localhost:1313/p/teslap4_unraid/jellyfin_setting4_hu_a5cbe98899ac341c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;jellyfin_setting4&#34;
@@ -1466,10 +1474,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;h2 id=&#34;ai-画图&#34;&gt;AI 画图
 &lt;/h2&gt;&lt;p&gt;选 P4 的一大原因自然是因为它 8 GB的显存，2560 个 CUDA 核心，不拿来狠狠地 AI 画图也是可惜了: )&lt;/p&gt;
 &lt;p&gt;unraid 应用商店搜索 stable diffusion，&lt;code&gt;goolashe/automatic1111-sd-webui&lt;/code&gt;  这个整合镜像简单设置下就可以开画了！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion.png&#34;
 	width=&#34;986&#34;
 	height=&#34;685&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_9e3f6748f2271195.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_hu_373e83659c86a3c2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_hu_9e3f6748f2271195.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_hu_373e83659c86a3c2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1478,10 +1486,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;345px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion-setting.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;112&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_92c8d25f0804545.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_28a01cde50613674.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_92c8d25f0804545.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion-setting_hu_28a01cde50613674.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1494,10 +1502,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;p&gt;默认第一次启动时会在 &lt;code&gt;/data/models&lt;/code&gt; 目录下载一些配置所需的模型文件，小文件还好，Stable-diffusion 目录下的 &lt;code&gt;Stable-diffusionv1-5-pruned-emaonly.safetensors&lt;/code&gt; 可能很难下得动。这时候你可以在docker 的log 里找到 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://huggingface.co/&lt;/a&gt; 开头的模型下载链接，在下载器里将其替换成 &lt;a class=&#34;link&#34; href=&#34;https://hf-mirror.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://hf-mirror.com/&lt;/a&gt; （一个国内镜像，速度还是很快的），下载完手动转移到 &lt;code&gt;/data/models/Stable-diffusion&lt;/code&gt; 即可，后期你也可以找些别的模型放到这里，webui刷新一下即可调用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/hfdownload.png&#34;
 	width=&#34;813&#34;
 	height=&#34;449&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_a5324b144cb08367.png 480w, https://bestoko.cc/p/teslap4_unraid/hfdownload_hu_a343d1efb7412d11.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/hfdownload_hu_a5324b144cb08367.png 480w, http://localhost:1313/p/teslap4_unraid/hfdownload_hu_a343d1efb7412d11.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;FDM&#34;
@@ -1512,10 +1520,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;p&gt;正向提示词随便写几个 &lt;code&gt;cat_ears,2_girls, cute, young, flowers&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;反向提示词 &lt;code&gt;bad hands &lt;/code&gt; （对 AI 画的手梁木了 XD）&lt;/p&gt;
 &lt;p&gt;Sampling method: DPM++2M，Schedule type: Karras ，其余默认，大概花了 17s 生成出来。生成的文件可以在 &lt;code&gt;/output/txt2img&lt;/code&gt;里找到。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_webui.png&#34;
 	width=&#34;2532&#34;
 	height=&#34;1269&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_7d56d8685f698c81.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_e36b10dd96a8d760.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_7d56d8685f698c81.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_webui_hu_e36b10dd96a8d760.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;SD WEBUI&#34;
@@ -1527,10 +1535,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;此时在仪表盘也可以看到，P4的显存被吃满了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_gpustat.png&#34;
 	width=&#34;792&#34;
 	height=&#34;436&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_1b7a69d89799a7d5.png 480w, https://bestoko.cc/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_61a267817af5fc7a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_1b7a69d89799a7d5.png 480w, http://localhost:1313/p/teslap4_unraid/unraid_stable-diffusion_gpustat_hu_61a267817af5fc7a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;画图时的显卡占用&#34;
@@ -1544,10 +1552,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;h2 id=&#34;其他设置&#34;&gt;其他设置
 &lt;/h2&gt;&lt;h3 id=&#34;静音调整&#34;&gt;静音调整
 &lt;/h3&gt;&lt;p&gt;说实话，卖家这散热改装效果确实不错，就是声音有点太大了，三风扇满速时还是蛮吵的。于是我从PDD买了个小玩意，手动降速到满意的程度了，基本跟氦气盘读写时的声音差不多，也不怎么影响温度。旋钮在PCI挡板的位置，还是挺方便的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/pdd.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/pdd.png&#34;
 	width=&#34;1238&#34;
 	height=&#34;750&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/pdd_hu_274eac999c91308d.png 480w, https://bestoko.cc/p/teslap4_unraid/pdd_hu_4ee9ebd22ac92fbf.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/pdd_hu_274eac999c91308d.png 480w, http://localhost:1313/p/teslap4_unraid/pdd_hu_4ee9ebd22ac92fbf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;风扇集中调速&#34;
@@ -1634,10 +1642,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/teslap4_unraid/Nvidia_scirpt.png&#34;
 	width=&#34;1471&#34;
 	height=&#34;405&#34;
-	srcset=&#34;https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_c04b83ddc690d390.png 480w, https://bestoko.cc/p/teslap4_unraid/Nvidia_scirpt_hu_be8bf43e59d85060.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/teslap4_unraid/Nvidia_scirpt_hu_c04b83ddc690d390.png 480w, http://localhost:1313/p/teslap4_unraid/Nvidia_scirpt_hu_be8bf43e59d85060.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;User Scripts&#34;
@@ -1654,19 +1662,29 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 </description>
         </item>
         <item>
+        <title>follow.is 认证用 </title>
+        <link>http://localhost:1313/p/follow/</link>
+        <pubDate>Thu, 10 Oct 2024 22:31:01 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/follow/</guid>
+        <description>&lt;p&gt;This message is used to verify that this feed (feedId:66996134550026240) belongs to me (userId:66750646631429120). Join me in enjoying the next generation information browser &lt;a class=&#34;link&#34; href=&#34;https://follow.is&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://follow.is&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title>
-        <link>https://bestoko.cc/p/oneplus_ace2_pro/</link>
+        <link>http://localhost:1313/p/oneplus_ace2_pro/</link>
         <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>http://localhost:1313/p/oneplus_ace2_pro/</guid>
+        <description>&lt;img src="http://localhost:1313/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share.png&#34;
 	width=&#34;319&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分享记录&#34;
@@ -1703,10 +1721,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;li&gt;
 &lt;p&gt;安装 KernelFlasher 并赋予 Root 权限&lt;/p&gt;
 &lt;p&gt;在已挂载槽位，点击刷入AK3压缩包，刷入对应的Anykernel3.zip即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3.png&#34;
 	width=&#34;762&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AK3&#34;
@@ -1732,10 +1750,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1746,10 +1764,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1760,10 +1778,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1774,10 +1792,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1788,10 +1806,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;KernelSU&#34;
@@ -1802,10 +1820,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -1816,10 +1834,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;107px&#34;
 	
 &gt;
-&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
 	width=&#34;1240&#34;
 	height=&#34;2772&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LSPosed&#34;
@@ -1839,15 +1857,15 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>qBittorrent 批量清理被PT站点删除的种子</title>
-        <link>https://bestoko.cc/p/qbittorrenttips/</link>
+        <link>http://localhost:1313/p/qbittorrenttips/</link>
         <pubDate>Wed, 07 Jun 2023 22:42:16 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/qbittorrenttips/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/pt.png&#34;
+        <guid>http://localhost:1313/p/qbittorrenttips/</guid>
+        <description>&lt;img src="http://localhost:1313/p/qbittorrenttips/qBittorrent.jpg" alt="Featured image of post qBittorrent 批量清理被PT站点删除的种子" /&gt;&lt;p&gt;自从折腾了自组 NAS 后，顺理成章的也入了 PT 的坑，虽然多数时候只要下载保种就完事了，但是遇到了某审核严格的站点（避嫌不说名字了，特色是漫画与轻小说，审核会删除拔作与撞车种子），手动去一个个到 qBittorrent 里挑出来也太麻烦了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/pt.png&#34;
 	width=&#34;1288&#34;
 	height=&#34;1162&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/pt_hu_31aa372876b489ff.png 480w, https://bestoko.cc/p/qbittorrenttips/pt_hu_96452c3f34348196.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/pt_hu_31aa372876b489ff.png 480w, http://localhost:1313/p/qbittorrenttips/pt_hu_96452c3f34348196.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PT站删种提醒&#34;
@@ -1859,10 +1877,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我才注册了几个月就收到一大堆删种站内信，该说不说，管理也太尽职尽责了&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit1.png&#34;
 	width=&#34;2197&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit1_hu_ca060f0885e24c4c.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit1_hu_a624613d51a60b42.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit1_hu_ca060f0885e24c4c.png 480w, http://localhost:1313/p/qbittorrenttips/qbit1_hu_a624613d51a60b42.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;种子被删除&#34;
@@ -1875,10 +1893,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &gt;&lt;/p&gt;
 &lt;p&gt;被站点删除的种子在 qBittorrent 里与正常种子不会有什么不同，只有点进去才能看到 &lt;code&gt;torrent not registered with this tracker&lt;/code&gt; 字样，Transmission 则会把所有红种、警告标记出来。我去查解决方法的时候甚至看到有说用 IYUU 转种到 Transmission 的建议&amp;hellip;只能说几千多个种子，转完再重新校验，实在有些“不够优雅”&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;其实，只需要在 qBittorrent 右键列标题，添加tracker 筛选框，并排序即可。被站点删除的种子 tracker 栏是空白，即可批量选中并移除。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit2.png&#34;
 	width=&#34;713&#34;
 	height=&#34;688&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit2_hu_521f98f245d4090.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit2_hu_38fd0304c22cf7ec.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit2_hu_521f98f245d4090.png 480w, http://localhost:1313/p/qbittorrenttips/qbit2_hu_38fd0304c22cf7ec.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;添加tracker筛选&#34;
@@ -1889,10 +1907,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;248px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/qbittorrenttips/qbit3.png&#34;
 	width=&#34;2459&#34;
 	height=&#34;1059&#34;
-	srcset=&#34;https://bestoko.cc/p/qbittorrenttips/qbit3_hu_1d338d1868608573.png 480w, https://bestoko.cc/p/qbittorrenttips/qbit3_hu_d1ae4ef982b45924.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/qbittorrenttips/qbit3_hu_1d338d1868608573.png 480w, http://localhost:1313/p/qbittorrenttips/qbit3_hu_d1ae4ef982b45924.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;按tracker排序&#34;
@@ -1911,11 +1929,11 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
-        <link>https://bestoko.cc/p/koishi-chatgpt/</link>
+        <link>http://localhost:1313/p/koishi-chatgpt/</link>
         <pubDate>Wed, 01 Mar 2023 21:30:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/koishi-chatgpt/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
+        <guid>http://localhost:1313/p/koishi-chatgpt/</guid>
+        <description>&lt;img src="http://localhost:1313/p/koishi-chatgpt/KoishiJS.png" alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" /&gt;&lt;p&gt;OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。&lt;/p&gt;
 &lt;h2 id=&#34;事前准备&#34;&gt;事前准备
 &lt;/h2&gt;&lt;p&gt;你需要准备：&lt;/p&gt;
 &lt;ol&gt;
@@ -1929,10 +1947,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;p&gt;下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）&lt;/p&gt;
 &lt;h2 id=&#34;操作部署&#34;&gt;操作部署
 &lt;/h2&gt;&lt;h3 id=&#34;unraid-docker-部署-koishi&#34;&gt;unraid docker 部署 koishi
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi.png&#34;
 	width=&#34;1180&#34;
 	height=&#34;1326&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_hu_c7df4b6c7dddccbd.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_hu_741ab1aaa45d3d3a.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_hu_c7df4b6c7dddccbd.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_hu_741ab1aaa45d3d3a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1942,10 +1960,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;也可通过 unraid 的 docker 配置，具体如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker.png&#34;
 	width=&#34;1657&#34;
 	height=&#34;893&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_cf972a6b91c3f67e.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_hu_208df3a194edd877.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu_cf972a6b91c3f67e.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_hu_208df3a194edd877.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1955,10 +1973,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo.png&#34;
 	width=&#34;1187&#34;
 	height=&#34;425&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_643514a7c7bb28b2.png 480w, https://bestoko.cc/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_f762aed3603a6815.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_643514a7c7bb28b2.png 480w, http://localhost:1313/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_f762aed3603a6815.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1968,10 +1986,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;koishi-以及-chatgpt-插件的配置&#34;&gt;koishi 以及 chatGPT 插件的配置
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot.png&#34;
 	width=&#34;2316&#34;
 	height=&#34;1310&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_5ae7e3af2445a8a6.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_adapter-onebot_hu_1d7d56dafd273fd9.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu_5ae7e3af2445a8a6.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_adapter-onebot_hu_1d7d56dafd273fd9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1983,10 +2001,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;p&gt;按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。&lt;/p&gt;
 &lt;p&gt;接着去插件市场安装 &lt;a class=&#34;link&#34; href=&#34;https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;koishi_chatGPT 插件&lt;/a&gt;根据提示加载 cache 服务并配置 apiKey ：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt.png&#34;
 	width=&#34;594&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_a3c79a360c8fec8.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt_hu_38de11c7c711f896.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu_a3c79a360c8fec8.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt_hu_38de11c7c711f896.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1995,10 +2013,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;470px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2.png&#34;
 	width=&#34;1268&#34;
 	height=&#34;782&#34;
-	srcset=&#34;https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_584cf79b070d5d9b.png 480w, https://bestoko.cc/p/koishi-chatgpt/koishi_chatgpt2_hu_f7bfa5eb1cf6f80c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu_584cf79b070d5d9b.png 480w, http://localhost:1313/p/koishi-chatgpt/koishi_chatgpt2_hu_f7bfa5eb1cf6f80c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2018,16 +2036,16 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>Windows11 WSL2 下配置 hugo 环境踩坑 </title>
-        <link>https://bestoko.cc/p/hugo_wsl2/</link>
+        <link>http://localhost:1313/p/hugo_wsl2/</link>
         <pubDate>Sat, 10 Dec 2022 23:25:00 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/hugo_wsl2/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
+        <guid>http://localhost:1313/p/hugo_wsl2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hugo_wsl2/WSL2.png" alt="Featured image of post Windows11 WSL2 下配置 hugo 环境踩坑 " /&gt;&lt;h2 id=&#34;问题&#34;&gt;问题
 &lt;/h2&gt;&lt;p&gt;​	最近我想用 Windows11 WSL2 上的 Ubuntu 20.04 来折腾我写博客用的 hugo 环境，发现执行 &lt;code&gt;hugo server&lt;/code&gt;后并不能在主机的&lt;code&gt; localhost:1313&lt;/code&gt; 成功预览（尽管微软的文档里说的是可以:sweat:）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2.png&#34;
 	width=&#34;1958&#34;
 	height=&#34;958&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_237bb2af92c88823.png 480w, https://bestoko.cc/p/hugo_wsl2/MS_WSL2_hu_1f850b10f02609f0.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_237bb2af92c88823.png 480w, http://localhost:1313/p/hugo_wsl2/MS_WSL2_hu_1f850b10f02609f0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2047,10 +2065,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1.png&#34;
 	width=&#34;1492&#34;
 	height=&#34;824&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_53c578e361d237f8.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu1_hu_2e504f3b561d06d6.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_53c578e361d237f8.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu1_hu_2e504f3b561d06d6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2069,10 +2087,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --bind 172.20.3.63 --baseURL=http://172.20.3.63
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2.png&#34;
 	width=&#34;2482&#34;
 	height=&#34;843&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_8c9d1f821673362c.png 480w, https://bestoko.cc/p/hugo_wsl2/Ubuntu2_hu_529733669ca2675c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_8c9d1f821673362c.png 480w, http://localhost:1313/p/hugo_wsl2/Ubuntu2_hu_529733669ca2675c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2082,10 +2100,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着 Windows 主机的浏览器就可以通过访问 &lt;code&gt;172.20.3.63:1313 &lt;/code&gt;成功预览了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever.png&#34;
 	width=&#34;2736&#34;
 	height=&#34;1730&#34;
-	srcset=&#34;https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_c1a0ebad16b867da.png 480w, https://bestoko.cc/p/hugo_wsl2/HugoSever_hu_18d14cec4f2c19e5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/hugo_wsl2/HugoSever_hu_c1a0ebad16b867da.png 480w, http://localhost:1313/p/hugo_wsl2/HugoSever_hu_18d14cec4f2c19e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2098,11 +2116,11 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>Ubuntu 20.04 终端插件配置与美化</title>
-        <link>https://bestoko.cc/p/zsh/</link>
+        <link>http://localhost:1313/p/zsh/</link>
         <pubDate>Tue, 08 Mar 2022 20:56:36 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/zsh/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
+        <guid>http://localhost:1313/p/zsh/</guid>
+        <description>&lt;img src="http://localhost:1313/p/zsh/prompt-styles-high-contrast.png" alt="Featured image of post Ubuntu 20.04 终端插件配置与美化" /&gt;&lt;p&gt;​	对 Linux 用户来说, 一个美观方便的终端可以提高很多工作效率.我所推荐的终端方案是 zsh + oh-my-zsh + Powerlevel10k ,兼顾美观与高效. 我所在的公司开发环境是 Ubuntu 20.04 , 本文就以这此发行版为例进行配置.&lt;/p&gt;
 &lt;h2 id=&#34;zsh&#34;&gt;Zsh
 &lt;/h2&gt;&lt;p&gt;安装 zsh&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2222,18 +2240,18 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>Grub2主题美化踩坑记录</title>
-        <link>https://bestoko.cc/p/fedora-grub2-theme/</link>
+        <link>http://localhost:1313/p/fedora-grub2-theme/</link>
         <pubDate>Wed, 29 Dec 2021 18:56:18 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/fedora-grub2-theme/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
+        <guid>http://localhost:1313/p/fedora-grub2-theme/</guid>
+        <description>&lt;img src="http://localhost:1313/p/fedora-grub2-theme/grub2.jpg" alt="Featured image of post Grub2主题美化踩坑记录" /&gt;&lt;p&gt;双系统用了一段时间后，开机黑洞洞的grub界面自然看着不爽 &lt;del&gt;（虽然只有几秒）&lt;/del&gt;,于是想着去美化一下，其中遇到了点小坑，记录一下。使用的机器装了&lt;code&gt;Windows11&lt;/code&gt;和&lt;code&gt;Fedora35&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;下载主题&#34;&gt;下载主题
 &lt;/h2&gt;&lt;p&gt;首先下载好你想要的主题文件，我选择的是这个MacOS风格的&lt;a class=&#34;link&#34; href=&#34;https://www.gnome-look.org/p/1577873&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MacOS Monterey inspired grub theme&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
-	srcset=&#34;https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_95d3828463237875.png 480w, https://bestoko.cc/p/fedora-grub2-theme/grub-theme_hu_ec34d001be23bb86.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_95d3828463237875.png 480w, http://localhost:1313/p/fedora-grub2-theme/grub-theme_hu_ec34d001be23bb86.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;展示效果&#34;
@@ -2285,11 +2303,11 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>Surface设备在Arch Linux下驱动问题的解决方案</title>
-        <link>https://bestoko.cc/p/surface-linux/</link>
+        <link>http://localhost:1313/p/surface-linux/</link>
         <pubDate>Thu, 16 Dec 2021 01:48:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/surface-linux/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/surface-linux/</guid>
+        <description>&lt;img src="http://localhost:1313/p/surface-linux/surface.jpg" alt="Featured image of post Surface设备在Arch Linux下驱动问题的解决方案" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;之前我已经在&lt;code&gt;Surface Pro &lt;/code&gt;上安装了&lt;code&gt;Arch Linux&lt;/code&gt;，可是由简入奢易，由奢入艰难，习惯了的二合一设备突然不能正常触屏还是有些不爽（&lt;del&gt;之前买的surface pen也成了摆设&lt;/del&gt;），于是我在&lt;code&gt;github&lt;/code&gt;上找到了第三方内核。由于是第三方内核，各设备各硬件的适配情况并不完善，具体可以查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/linux-surface/linux-surface/wiki/Supported-Devices-and-Features#feature-matrix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;安装驱动&#34;&gt;安装驱动
@@ -2347,11 +2365,11 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>Arch Linux安装备忘录（一）</title>
-        <link>https://bestoko.cc/p/archinstall/</link>
+        <link>http://localhost:1313/p/archinstall/</link>
         <pubDate>Tue, 14 Dec 2021 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/archinstall/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
+        <guid>http://localhost:1313/p/archinstall/</guid>
+        <description>&lt;img src="http://localhost:1313/p/archinstall/ArchLinux.jpg" alt="Featured image of post Arch Linux安装备忘录（一）" /&gt;&lt;h2 id=&#34;写在前面&#34;&gt;写在前面
 &lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;Arch&lt;/code&gt;最好最全面的教程就是官方的 &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/installation_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Installation guide&lt;/a&gt;。但是Wiki上的介绍更偏向文档，而不是新手习惯的那种按步骤编排的教程，加上中文Wiki的翻译往往落后于英文版，缺乏预备&lt;code&gt;Linux&lt;/code&gt;知识的新手经常无从下手。&lt;/p&gt;
 &lt;p&gt;笔者也是初学者，本篇文章仅作为自己在&lt;code&gt;Surface Pro 2017&lt;/code&gt;从0开始安装配置&lt;code&gt;Arch&lt;/code&gt;的记录。&lt;/p&gt;
@@ -2664,11 +2682,11 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>一加8的Android 11 折腾指南</title>
-        <link>https://bestoko.cc/p/oneplus8/</link>
+        <link>http://localhost:1313/p/oneplus8/</link>
         <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/oneplus8/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
+        <guid>http://localhost:1313/p/oneplus8/</guid>
+        <description>&lt;img src="http://localhost:1313/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -2752,10 +2770,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8info.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_8d74a0d8beb7876b.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_f9e8f7e0e015a2a5.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8info_hu_8d74a0d8beb7876b.jpg 480w, http://localhost:1313/p/oneplus8/op8info_hu_f9e8f7e0e015a2a5.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8info&#34;
@@ -2766,10 +2784,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk1.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_d0203a6ccfb444a4.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_7a781abe761c60d3.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk1_hu_d0203a6ccfb444a4.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk1_hu_7a781abe761c60d3.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk1&#34;
@@ -2780,10 +2798,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8magisk2.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_a4a5fc19099f339f.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_ed4a925312ed9577.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8magisk2_hu_a4a5fc19099f339f.jpg 480w, http://localhost:1313/p/oneplus8/op8magisk2_hu_ed4a925312ed9577.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8magisk2&#34;
@@ -2794,10 +2812,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;108px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus8/op8edxposed.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;2400&#34;
-	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_59a4e06792f9df86.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_c596c0e49186055b.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/oneplus8/op8edxposed_hu_59a4e06792f9df86.jpg 480w, http://localhost:1313/p/oneplus8/op8edxposed_hu_c596c0e49186055b.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;op8edxposed&#34;
@@ -2812,11 +2830,11 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
         </item>
         <item>
         <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-        <link>https://bestoko.cc/p/gba2cia/</link>
+        <link>http://localhost:1313/p/gba2cia/</link>
         <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/gba2cia/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
+        <guid>http://localhost:1313/p/gba2cia/</guid>
+        <description>&lt;img src="http://localhost:1313/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
 &lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
@@ -2846,10 +2864,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia1.png&#34;
 	width=&#34;1185&#34;
 	height=&#34;588&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia1_hu_5f04cce3b1244764.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu_f7467e53a8359db3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia1_hu_5f04cce3b1244764.png 480w, http://localhost:1313/p/gba2cia/gba2cia1_hu_f7467e53a8359db3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia1&#34;
@@ -2860,10 +2878,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;483px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia2.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia2_hu_d2dde9da0c96728d.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu_f1542128f7d6f2fd.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia2_hu_d2dde9da0c96728d.png 480w, http://localhost:1313/p/gba2cia/gba2cia2_hu_f1542128f7d6f2fd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia2&#34;
@@ -2877,10 +2895,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia3.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia3_hu_3675b378c42cbb0c.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu_91bd53405ff4a227.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia3_hu_3675b378c42cbb0c.png 480w, http://localhost:1313/p/gba2cia/gba2cia3_hu_91bd53405ff4a227.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia3&#34;
@@ -2891,10 +2909,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia4.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia4_hu_c72cfd8fba825b48.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu_3f4b1ad588f603e7.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia4_hu_c72cfd8fba825b48.png 480w, http://localhost:1313/p/gba2cia/gba2cia4_hu_3f4b1ad588f603e7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia4&#34;
@@ -2908,10 +2926,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;设置VC参数并导出CIA文件(注意当转换多个&lt;code&gt;.cia&lt;/code&gt;文件时，确保每个文件的&lt;em&gt;产品代码&lt;/em&gt;及&lt;em&gt;项目ID&lt;/em&gt;都不一样)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia5.png&#34;
 	width=&#34;824&#34;
 	height=&#34;542&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia5_hu_1ce0560f7345002b.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu_d04e0ac5295e5a5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia5_hu_1ce0560f7345002b.png 480w, http://localhost:1313/p/gba2cia/gba2cia5_hu_d04e0ac5295e5a5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia5&#34;
@@ -2929,10 +2947,10 @@ v590开始的驱动不支持帕斯卡架构的卡了，请注意你安装的版�
 &lt;/ol&gt;
 &lt;p&gt;关于如何B9S&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/install-cia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;如何安装cia文件&lt;/strong&gt;&lt;/a&gt;这里不再赘述(实在懒得截图了)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/gba2cia/gba2cia6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia6.png&#34;
 	width=&#34;4608&#34;
 	height=&#34;3456&#34;
-	srcset=&#34;https://bestoko.cc/p/gba2cia/gba2cia6_hu_fedd9cd1568a2ab4.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu_565ecffc2111e260.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia6_hu_fedd9cd1568a2ab4.png 480w, http://localhost:1313/p/gba2cia/gba2cia6_hu_565ecffc2111e260.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;gba2cia6&#34;

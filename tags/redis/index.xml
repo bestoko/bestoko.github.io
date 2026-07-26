@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Redis on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/redis/</link>
+        <link>http://localhost:1313/tags/redis/</link>
         <description>Recent content in Redis on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 23 Jun 2025 21:35:21 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/redis/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Jun 2025 21:35:21 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/redis/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Redis 主从复制权限问题解决</title>
-        <link>https://bestoko.cc/p/redis-replication-error/</link>
+        <link>http://localhost:1313/p/redis-replication-error/</link>
         <pubDate>Mon, 23 Jun 2025 21:35:21 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/redis-replication-error/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/redis-replication-error/replication-with-redis.png" alt="Featured image of post Redis 主从复制权限问题解决" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
+        <guid>http://localhost:1313/p/redis-replication-error/</guid>
+        <description>&lt;img src="http://localhost:1313/p/redis-replication-error/replication-with-redis.png" alt="Featured image of post Redis 主从复制权限问题解决" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
 &lt;/h2&gt;&lt;p&gt;今天在搭建 redis主从复制环境时遇到了问题，两个从库都无法同步主库的数据&lt;/p&gt;
 &lt;p&gt;观察日志发现&lt;code&gt;Opening the temp file needed for MASTER &amp;lt;-&amp;gt; REPLICA synchronization: Permission denied&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/redis-replication-error/replication-with-redis-error1.png&#34;
 	width=&#34;939&#34;
 	height=&#34;395&#34;
-	srcset=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error1_hu_8419ac85ce9c704e.png 480w, https://bestoko.cc/p/redis-replication-error/replication-with-redis-error1_hu_abe356661948eadc.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/redis-replication-error/replication-with-redis-error1_hu_8419ac85ce9c704e.png 480w, http://localhost:1313/p/redis-replication-error/replication-with-redis-error1_hu_abe356661948eadc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;replication-with-redis-error1&#34;
@@ -29,10 +29,10 @@
 		data-flex-basis=&#34;570px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/redis-replication-error/replication-with-redis-error2.png&#34;
 	width=&#34;513&#34;
 	height=&#34;478&#34;
-	srcset=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error2_hu_c9c264783466e9e8.png 480w, https://bestoko.cc/p/redis-replication-error/replication-with-redis-error2_hu_5e773d3ea6371e82.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/redis-replication-error/replication-with-redis-error2_hu_c9c264783466e9e8.png 480w, http://localhost:1313/p/redis-replication-error/replication-with-redis-error2_hu_5e773d3ea6371e82.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;replication-with-redis-error2&#34;
@@ -76,10 +76,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dbfilename dump.rdb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error3.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/redis-replication-error/replication-with-redis-error3.png&#34;
 	width=&#34;543&#34;
 	height=&#34;521&#34;
-	srcset=&#34;https://bestoko.cc/p/redis-replication-error/replication-with-redis-error3_hu_e92c0cb3006abf7c.png 480w, https://bestoko.cc/p/redis-replication-error/replication-with-redis-error3_hu_1ef383f4f5dc2ce5.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/redis-replication-error/replication-with-redis-error3_hu_e92c0cb3006abf7c.png 480w, http://localhost:1313/p/redis-replication-error/replication-with-redis-error3_hu_1ef383f4f5dc2ce5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;replication-with-redis-error3&#34;

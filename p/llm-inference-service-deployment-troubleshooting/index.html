@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Docker、Kubernetes、vLLM、vLLM Ascend 与 SGLang 部署及分层排障">
+<title>一小时入门大模型推理服务部署与排障</title>
+
+<link rel='canonical' href='http://localhost:1313/p/llm-inference-service-deployment-troubleshooting/'>
+
+<link rel="stylesheet" href="/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css"><meta property='og:title' content="一小时入门大模型推理服务部署与排障">
+<meta property='og:description' content="Docker、Kubernetes、vLLM、vLLM Ascend 与 SGLang 部署及分层排障">
+<meta property='og:url' content='http://localhost:1313/p/llm-inference-service-deployment-troubleshooting/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='LLM' /><meta property='article:tag' content='vLLM' /><meta property='article:tag' content='Kubernetes' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='SGLang' /><meta property='article:tag' content='Ascend' /><meta property='article:published_time' content='2026-07-23T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-07-23T00:00:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/llm-inference-service-deployment-troubleshooting/training-roadmap.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="一小时入门大模型推理服务部署与排障">
+<meta name="twitter:description" content="Docker、Kubernetes、vLLM、vLLM Ascend 与 SGLang 部署及分层排障"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/llm-inference-service-deployment-troubleshooting/training-roadmap.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_acf6d2dc3da62cd2.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/bestoko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://bestoko.cc/index.xml' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一基本概念">一、基本概念</a>
+      <ol>
+        <li><a href="#1-模型的主要类型">1. 模型的主要类型</a></li>
+        <li><a href="#2-模型文件分别做什么">2. 模型文件分别做什么</a></li>
+        <li><a href="#3-模型与服务性能指标">3. 模型与服务性能指标</a></li>
+        <li><a href="#4-推理引擎及选型">4. 推理引擎及选型</a></li>
+        <li><a href="#5-vllm-原理整体架构">5. vLLM 原理：整体架构</a></li>
+        <li><a href="#6-vllm-原理continuous-batching">6. vLLM 原理：Continuous Batching</a></li>
+        <li><a href="#7-vllm-原理pagedattention">7. vLLM 原理：PagedAttention</a></li>
+      </ol>
+    </li>
+    <li><a href="#二使用-docker-部署">二、使用 Docker 部署</a>
+      <ol>
+        <li><a href="#1-部署前检查">1. 部署前检查</a></li>
+        <li><a href="#2-vllm-单卡部署nvidia">2. vLLM 单卡部署（NVIDIA）</a></li>
+        <li><a href="#3-多卡与关键参数">3. 多卡与关键参数</a></li>
+        <li><a href="#4-api-验证">4. API 验证</a></li>
+        <li><a href="#5-vllm-ascend-部署结构">5. vLLM Ascend 部署结构</a></li>
+        <li><a href="#6-sglang-启动方式">6. SGLang 启动方式</a></li>
+      </ol>
+    </li>
+    <li><a href="#三使用-kubernetes-部署">三、使用 Kubernetes 部署</a>
+      <ol>
+        <li><a href="#1-组件职责">1. 组件职责</a></li>
+        <li><a href="#2-vllm-deployment-核心示例">2. vLLM Deployment 核心示例</a></li>
+        <li><a href="#3-service-与验证">3. Service 与验证</a></li>
+        <li><a href="#4-昇腾资源替换">4. 昇腾资源替换</a></li>
+        <li><a href="#5-生产部署五个重点">5. 生产部署五个重点</a></li>
+      </ol>
+    </li>
+    <li><a href="#四问题排障">四、问题排障</a>
+      <ol>
+        <li><a href="#1-标准排障顺序">1. 标准排障顺序</a></li>
+        <li><a href="#2-典型问题速查">2. 典型问题速查</a></li>
+        <li><a href="#3-三组常用命令">3. 三组常用命令</a></li>
+      </ol>
+    </li>
+    <li><a href="#五总结">五、总结</a>
+      <ol>
+        <li><a href="#需要记住的六件事">需要记住的六件事</a></li>
+        <li><a href="#上线前最小检查清单">上线前最小检查清单</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/llm-inference-service-deployment-troubleshooting/">
+                <img src="/p/llm-inference-service-deployment-troubleshooting/training-roadmap_hu_cb970236c183a57f.png"
+                        srcset="/p/llm-inference-service-deployment-troubleshooting/training-roadmap_hu_cb970236c183a57f.png 800w, /p/llm-inference-service-deployment-troubleshooting/training-roadmap_hu_d300a7559b1a224.png 1600w"
+                        width="800" 
+                        height="444" 
+                        loading="lazy"
+                        alt="Featured image of post 一小时入门大模型推理服务部署与排障" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/growth/" style="background-color: #1d3557; color: #fff;">
+                修业
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/llm-inference-service-deployment-troubleshooting/">一小时入门大模型推理服务部署与排障</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Docker、Kubernetes、vLLM、vLLM Ascend 与 SGLang 部署及分层排障
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 23, 2026</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/llm-inference-service-deployment-troubleshooting/training-roadmap.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/training-roadmap_hu_c4124407b320bc05.png 480w, /p/llm-inference-service-deployment-troubleshooting/training-roadmap_hu_b06fad882c63ff2.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>部分</strong></td>
+          <td style="text-align: center"><strong>内容</strong></td>
+          <td style="text-align: center"><strong>建议时间</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">一、基本概念</td>
+          <td style="text-align: center">模型类型、模型文件、性能指标、推理引擎与 vLLM 原理</td>
+          <td style="text-align: center">15 分钟</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">二、Docker 部署</td>
+          <td style="text-align: center">NVIDIA/昇腾环境检查，vLLM、vLLM Ascend、SGLang 启动</td>
+          <td style="text-align: center">15 分钟</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">三、Kubernetes 部署</td>
+          <td style="text-align: center">Device Plugin、Deployment、Service、PVC 与探针</td>
+          <td style="text-align: center">15 分钟</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">四、问题排障</td>
+          <td style="text-align: center">硬件到请求的标准排障路径与典型故障</td>
+          <td style="text-align: center">10 分钟</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">五、总结</td>
+          <td style="text-align: center">关键结论和上线检查</td>
+          <td style="text-align: center">5 分钟</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>**使用原则　**文中的镜像标签、设备资源名和模型路径均为模板。生产使用前必须替换为企业已验证版本，并核对驱动、CUDA/CANN、PyTorch/torch-npu 与框架兼容矩阵。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="一基本概念">一、基本概念
+</h2><h3 id="1-模型的主要类型">1. 模型的主要类型
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>模型类型</strong></td>
+          <td style="text-align: center"><strong>输入 → 输出</strong></td>
+          <td style="text-align: center"><strong>典型用途</strong></td>
+          <td style="text-align: center"><strong>部署关注点</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">文本生成</td>
+          <td style="text-align: center">文本 → 文本</td>
+          <td style="text-align: center">问答、代码、摘要、Agent</td>
+          <td style="text-align: center">上下文、KV Cache、工具调用</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">视觉多模态</td>
+          <td style="text-align: center">图片/视频+文本 → 文本</td>
+          <td style="text-align: center">OCR、图表、图片问答</td>
+          <td style="text-align: center">Processor、图片 Token、显存</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">TTS</td>
+          <td style="text-align: center">文本 → 语音</td>
+          <td style="text-align: center">播报、数字人</td>
+          <td style="text-align: center">首包延迟、RTF、音色</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">ASR</td>
+          <td style="text-align: center">语音 → 文本</td>
+          <td style="text-align: center">转写、会议、客服</td>
+          <td style="text-align: center">CER/WER、流式、采样率</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Embedding/Reranker</td>
+          <td style="text-align: center">文本 → 向量/分数</td>
+          <td style="text-align: center">检索与 RAG</td>
+          <td style="text-align: center">批量吞吐、向量维度</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="2-模型文件分别做什么">2. 模型文件分别做什么
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>文件</strong></td>
+          <td style="text-align: center"><strong>作用</strong></td>
+          <td style="text-align: center"><strong>常见问题</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">config.json</td>
+          <td style="text-align: center">模型架构、层数、维度、最大位置长度、数据类型</td>
+          <td style="text-align: center">架构不受支持或参数与权重不匹配</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">*.safetensors / *.bin</td>
+          <td style="text-align: center">模型权重；大模型通常拆成多个分片</td>
+          <td style="text-align: center">缺失、损坏、权限或磁盘不足</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">*.index.json</td>
+          <td style="text-align: center">权重名称到分片文件的索引</td>
+          <td style="text-align: center">索引引用的分片不存在</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">tokenizer.*</td>
+          <td style="text-align: center">文本与 Token 相互转换</td>
+          <td style="text-align: center">Tokenizer 与权重版本不一致</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">generation_config.json</td>
+          <td style="text-align: center">温度、采样、最大输出等默认生成参数</td>
+          <td style="text-align: center">默认值不符合业务预期</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">processor_config 等</td>
+          <td style="text-align: center">图片、音频等多模态预处理</td>
+          <td style="text-align: center">分辨率、采样率或处理器缺失</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>**部署前检查　**至少确认：目录完整、SHA256 正确、容器用户可读、模型架构被框架支持、量化格式兼容、是否需要 trust_remote_code。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="3-模型与服务性能指标">3. 模型与服务性能指标
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>类别</strong></td>
+          <td style="text-align: center"><strong>指标</strong></td>
+          <td style="text-align: center"><strong>含义</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">文本质量</td>
+          <td style="text-align: center">准确率、事实性、指令遵循、工具调用正确率</td>
+          <td style="text-align: center">回答是否正确、可控、符合业务</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">TTS/ASR</td>
+          <td style="text-align: center">MOS/音色相似度；CER/WER；RTF</td>
+          <td style="text-align: center">语音质量、识别错误与实时能力</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">交互延迟</td>
+          <td style="text-align: center">TTFT、TPOT/ITL、P95/P99</td>
+          <td style="text-align: center">首字等待、生成速度与尾延迟</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">吞吐容量</td>
+          <td style="text-align: center">req/s、输入/输出 Tokens/s、并发</td>
+          <td style="text-align: center">单实例可承载的稳定负载</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">资源</td>
+          <td style="text-align: center">GPU/NPU 利用率、显存/HBM、功耗</td>
+          <td style="text-align: center">硬件是否饱和及是否接近 OOM</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><img src="/p/llm-inference-service-deployment-troubleshooting/prefill-decode-metrics.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/prefill-decode-metrics_hu_931122ecb5a78908.png 480w, /p/llm-inference-service-deployment-troubleshooting/prefill-decode-metrics_hu_ba1b203ec157c8fe.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 2　Prefill 与 Decode 的负载差异及其对指标的影响</em></p>
+<h3 id="4-推理引擎及选型">4. 推理引擎及选型
+</h3><p>推理引擎负责加载权重、处理请求、动态组成 Batch、管理 KV Cache、执行多卡并行并暴露 API。相同模型和硬件下，调度与缓存管理会显著影响吞吐和延迟。</p>
+<p><img src="/p/llm-inference-service-deployment-troubleshooting/inference-software-stack.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/inference-software-stack_hu_5054b6ac2fc14893.png 480w, /p/llm-inference-service-deployment-troubleshooting/inference-software-stack_hu_5ba1681254d1f989.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 3　NVIDIA 与昇腾推理软件栈</em></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>框架</strong></td>
+          <td style="text-align: center"><strong>适用平台与优势</strong></td>
+          <td style="text-align: center"><strong>主要注意事项</strong></td>
+          <td style="text-align: center"><strong>建议</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">vLLM</td>
+          <td style="text-align: center">NVIDIA 等平台；生态成熟、OpenAI API、持续批处理</td>
+          <td style="text-align: center">模型和量化支持随版本变化</td>
+          <td style="text-align: center">NVIDIA 通用服务优先</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">vLLM Ascend</td>
+          <td style="text-align: center">昇腾；沿用 vLLM 接口与调度理念</td>
+          <td style="text-align: center">Driver/Firmware/CANN/torch-npu 强版本约束</td>
+          <td style="text-align: center">昇腾环境优先</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">SGLang</td>
+          <td style="text-align: center">高效前缀复用、结构化生成、多模态</td>
+          <td style="text-align: center">需按目标模型和业务负载实测</td>
+          <td style="text-align: center">特殊场景对比评估</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><a class="link" href="https://docs.vllm.ai/en/latest/getting_started/quickstart/"  target="_blank" rel="noopener"
+    >vLLM 文档</a></p>
+<p><a class="link" href="https://docs.vllm.ai/projects/ascend/en/v0.18.0/"  target="_blank" rel="noopener"
+    >vLLM Ascend 文档</a></p>
+<p><a class="link" href="https://docs.sglang.io/docs/basic_usage/overview"  target="_blank" rel="noopener"
+    >SGLang 文档</a></p>
+<h3 id="5-vllm-原理整体架构">5. vLLM 原理：整体架构
+</h3><p><img src="/p/llm-inference-service-deployment-troubleshooting/vllm-architecture.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/vllm-architecture_hu_1c5e64d5234ac7ae.png 480w, /p/llm-inference-service-deployment-troubleshooting/vllm-architecture_hu_f553f3855a44a88e.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 4　vLLM 推理引擎内部组件与数据路径</em></p>
+<p>API Server 接收请求并完成输入处理；Scheduler 在 Waiting 与 Running 请求间分配计算预算；Worker/Executor 在设备上执行模型，并由 Cache Engine 管理 KV Block。多卡场景通过 TP/PP 和 NCCL/HCCL 协同。</p>
+<h3 id="6-vllm-原理continuous-batching">6. vLLM 原理：Continuous Batching
+</h3><p><img src="/p/llm-inference-service-deployment-troubleshooting/continuous-batching.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/continuous-batching_hu_7d7f3545b8a69f2e.png 480w, /p/llm-inference-service-deployment-troubleshooting/continuous-batching_hu_10b5af84e236da03.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 5　连续批处理的动态请求调度</em></p>
+<p>传统静态 Batch 必须等待最慢请求结束。连续批处理在每个调度步允许新请求加入、完成请求退出，因此设备更少空闲。max-num-seqs 与 max-num-batched-tokens 决定调度边界，过大可能增加 KV Cache 压力与尾延迟。</p>
+<h3 id="7-vllm-原理pagedattention">7. vLLM 原理：PagedAttention
+</h3><p><img src="/p/llm-inference-service-deployment-troubleshooting/paged-attention.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/paged-attention_hu_c7ec24cd619dffe0.png 480w, /p/llm-inference-service-deployment-troubleshooting/paged-attention_hu_dd291aad9d8d59a6.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 6　PagedAttention 的逻辑块、块表与物理 KV Cache</em></p>
+<p>每个请求看到连续的逻辑 KV Block，实际物理块可以分散在显存中。Block Table 负责映射；请求结束后物理块可立即回收，公共前缀还可共享块。这样减少连续大内存分配与碎片浪费，提高可承载并发。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>**参数关系　**max-model-len、并发请求数、max-num-seqs、max-num-batched-tokens、缓存精度和内存利用率共同决定容量。调参必须同时观察 TTFT、TPOT、吞吐、队列和 OOM。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="二使用-docker-部署">二、使用 Docker 部署
+</h2><p><img src="/p/llm-inference-service-deployment-troubleshooting/docker-deployment.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/docker-deployment_hu_8a3aa3f3e321a5f8.png 480w, /p/llm-inference-service-deployment-troubleshooting/docker-deployment_hu_fae489c1a7118d23.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 7　Docker 单机模型服务部署结构</em></p>
+<h3 id="1-部署前检查">1. 部署前检查
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># NVIDIA：宿主机与容器内都应识别 GPU</span>
+</span></span><span class="line"><span class="cl">nvidia-smi
+</span></span><span class="line"><span class="cl">docker run --rm --gpus all <span class="si">${</span><span class="nv">CUDA_BASE_IMAGE</span><span class="si">}</span> nvidia-smi
+</span></span><span class="line"><span class="cl"><span class="c1"># 昇腾：确认设备、健康状态、驱动和固件</span>
+</span></span><span class="line"><span class="cl">npu-smi info
+</span></span><span class="line"><span class="cl">npu-smi info -t health
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-vllm-单卡部署nvidia">2. vLLM 单卡部署（NVIDIA）
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MODEL</span><span class="o">=</span>/srv/models/Qwen/Qwen2.5-7B-Instruct
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">IMAGE</span><span class="o">=</span>vllm/vllm-openai:&lt;已验证版本&gt;
+</span></span><span class="line"><span class="cl">docker run --rm --name vllm-server <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --gpus <span class="s1">&#39;&#34;device=0&#34;&#39;</span> --ipc<span class="o">=</span>host <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -p 8000:8000 -v <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&#34;</span>:/model:ro <span class="se">\
+</span></span></span><span class="line"><span class="cl">  <span class="s2">&#34;</span><span class="si">${</span><span class="nv">IMAGE</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --model /model <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --served-model-name qwen-instruct <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --max-model-len <span class="m">8192</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --gpu-memory-utilization 0.90
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-多卡与关键参数">3. 多卡与关键参数
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>参数</strong></td>
+          <td style="text-align: center"><strong>用途</strong></td>
+          <td style="text-align: center"><strong>操作建议</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&ndash;tensor-parallel-size</td>
+          <td style="text-align: center">张量并行卡数</td>
+          <td style="text-align: center">与容器可见设备一致；先看拓扑</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&ndash;max-model-len</td>
+          <td style="text-align: center">最大上下文</td>
+          <td style="text-align: center">按业务上限设置，避免无意义预留</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&ndash;gpu-memory-utilization</td>
+          <td style="text-align: center">可用于引擎的显存比例</td>
+          <td style="text-align: center">留出运行与波动余量</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&ndash;max-num-seqs</td>
+          <td style="text-align: center">并发序列上限</td>
+          <td style="text-align: center">结合真实并发逐步压测</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&ndash;enable-prefix-caching</td>
+          <td style="text-align: center">共享前缀缓存</td>
+          <td style="text-align: center">公共系统 Prompt 多时验证收益</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="4-api-验证">4. API 验证
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sS http://127.0.0.1:8000/v1/models
+</span></span><span class="line"><span class="cl">curl -N http://127.0.0.1:8000/v1/chat/completions <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;model&#34;: &#34;qwen-instruct&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;messages&#34;: [
+</span></span></span><span class="line"><span class="cl"><span class="s1">      {
+</span></span></span><span class="line"><span class="cl"><span class="s1">        &#34;role&#34;: &#34;user&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">        &#34;content&#34;: &#34;介绍一下 Kubernetes&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">      }
+</span></span></span><span class="line"><span class="cl"><span class="s1">    ],
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;max_tokens&#34;: 128,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;stream&#34;: true
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-vllm-ascend-部署结构">5. vLLM Ascend 部署结构
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MODEL</span><span class="o">=</span>/srv/models/&lt;模型目录&gt;
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">IMAGE</span><span class="o">=</span>&lt;企业仓库&gt;/vllm-ascend:&lt;已验证版本&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># 设备和驱动映射因服务器与运行时而异，以下仅表示结构</span>
+</span></span><span class="line"><span class="cl">docker run --rm --name vllm-ascend --shm-size<span class="o">=</span>16g <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -p 8000:8000 -v <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&#34;</span>:/model:ro <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v /usr/local/Ascend/driver:/usr/local/Ascend/driver:ro <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --device<span class="o">=</span>/dev/davinci0 --device<span class="o">=</span>/dev/davinci_manager <span class="se">\
+</span></span></span><span class="line"><span class="cl">  <span class="s2">&#34;</span><span class="si">${</span><span class="nv">IMAGE</span><span class="si">}</span><span class="s2">&#34;</span> --model /model --served-model-name ascend-model
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>**昇腾版本矩阵　**必须同时核对 Driver、Firmware、CANN、PyTorch、torch-npu、vLLM 与 vLLM Ascend。多卡场景还需先验证 HCCL。</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="6-sglang-启动方式">6. SGLang 启动方式
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run --rm --gpus <span class="s1">&#39;&#34;device=0,1&#34;&#39;</span> --ipc<span class="o">=</span>host <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -p 30000:30000 -v <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&#34;</span>:/model:ro <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SGLANG_IMAGE</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  python3 -m sglang.launch_server <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --model-path /model --served-model-name production-model <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tp <span class="m">2</span> --host 0.0.0.0 --port <span class="m">30000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="三使用-kubernetes-部署">三、使用 Kubernetes 部署
+</h2><p><img src="/p/llm-inference-service-deployment-troubleshooting/kubernetes-architecture.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/kubernetes-architecture_hu_e95f2708d7c0cafd.png 480w, /p/llm-inference-service-deployment-troubleshooting/kubernetes-architecture_hu_86b0f403eeb1b6ca.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 8　Kubernetes 模型服务参考架构</em></p>
+<h3 id="1-组件职责">1. 组件职责
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>组件</strong></td>
+          <td style="text-align: center"><strong>职责</strong></td>
+          <td style="text-align: center"><strong>模型服务注意事项</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Device Plugin</td>
+          <td style="text-align: center">向 kubelet 注册 GPU/NPU</td>
+          <td style="text-align: center">资源名以节点 allocatable 为准</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Deployment</td>
+          <td style="text-align: center">管理推理 Pod 与发布</td>
+          <td style="text-align: center">独占多卡时可能没有升级余量</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">PVC</td>
+          <td style="text-align: center">挂载模型与缓存</td>
+          <td style="text-align: center">共享存储启动风暴和权限</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Service/Gateway</td>
+          <td style="text-align: center">服务发现、鉴权与流量入口</td>
+          <td style="text-align: center">流式超时、限流、最大 Token</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Probe</td>
+          <td style="text-align: center">启动、就绪与存活检查</td>
+          <td style="text-align: center">模型加载慢，startupProbe 必须足够长</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="2-vllm-deployment-核心示例">2. vLLM Deployment 核心示例
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Deployment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">vllm-qwen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">llm-serving</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Recreate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">vllm-qwen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">vllm-qwen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">terminationGracePeriodSeconds</span><span class="p">:</span><span class="w"> </span><span class="m">120</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">registry.example.com/ai/vllm:&lt;已验证版本&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">args</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- --<span class="l">model=/models/qwen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- --<span class="l">served-model-name=qwen-instruct</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- --<span class="l">tensor-parallel-size=2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- --<span class="l">max-model-len=8192</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">http</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">limits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">nvidia.com/gpu</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">requests</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;8&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">32Gi</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">model</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/models</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">shm</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/dev/shm</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">startupProbe</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">httpGet</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">/health</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l">http</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="m">90</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">readinessProbe</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">httpGet</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">/health</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l">http</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">model</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l">llm-models</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">shm</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">medium</span><span class="p">:</span><span class="w"> </span><span class="l">Memory</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">sizeLimit</span><span class="p">:</span><span class="w"> </span><span class="l">16Gi</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-service-与验证">3. Service 与验证
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">vllm-qwen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">llm-serving</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">vllm-qwen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">http</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l">http</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 部署检查</span>
+</span></span><span class="line"><span class="cl">kubectl -n llm-serving get pods -o wide
+</span></span><span class="line"><span class="cl">kubectl -n llm-serving describe pod &lt;pod&gt;
+</span></span><span class="line"><span class="cl">kubectl -n llm-serving logs -f &lt;pod&gt; -c server
+</span></span><span class="line"><span class="cl">kubectl -n llm-serving get endpoints vllm-qwen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-昇腾资源替换">4. 昇腾资源替换
+</h3><p>vLLM Ascend 的 Deployment 结构相同，但镜像、节点标签、设备资源名和环境变量需替换为企业 Ascend Device Plugin 规范。先查看节点实际资源，再编写 limits。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get node &lt;ascend-node&gt; -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.status.allocatable}&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># 资源名仅示意，以集群实际输出为准</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">limits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">huawei.com/Ascend910</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;4&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-生产部署五个重点">5. 生产部署五个重点
+</h3><p>1.　Pod 多卡资源必须在同一节点同时满足，注意资源碎片。</p>
+<p>2.　startupProbe 覆盖最坏模型加载时间，readiness 通过后才接流量。</p>
+<p>3.　大模型发布可能需要双份设备容量；不足时采用 Recreate 或蓝绿集群。</p>
+<p>4.　网关设置鉴权、最大输入/输出 Token、并发、队列和流式超时。</p>
+<p>5.　上线前完成预热、压测、优雅退出和回滚演练。</p>
+<h2 id="四问题排障">四、问题排障
+</h2><p><img src="/p/llm-inference-service-deployment-troubleshooting/troubleshooting-path.png"
+	width="1800"
+	height="1000"
+	srcset="/p/llm-inference-service-deployment-troubleshooting/troubleshooting-path_hu_f3727f39810dedfc.png 480w, /p/llm-inference-service-deployment-troubleshooting/troubleshooting-path_hu_ee1659bb310061be.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>图 9　模型服务分层排障路径</em></p>
+<h3 id="1-标准排障顺序">1. 标准排障顺序
+</h3><p>坚持自底向上：硬件 → 驱动/固件 → CUDA/CANN → 容器设备 → PyTorch/torch-npu → 推理引擎 → 模型文件 → Kubernetes → Service/Gateway → 请求与容量。每一步保存时间戳、命令输出和最近变更。</p>
+<h3 id="2-典型问题速查">2. 典型问题速查
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>现象</strong></td>
+          <td style="text-align: center"><strong>优先检查</strong></td>
+          <td style="text-align: center"><strong>常见处理</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">容器看不到 GPU/NPU</td>
+          <td style="text-align: center">宿主机状态、运行时、设备映射</td>
+          <td style="text-align: center">修复 Device Plugin/Runtime 或设备权限</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">模型启动失败</td>
+          <td style="text-align: center">首个 ERROR、模型文件、版本矩阵</td>
+          <td style="text-align: center">校验权重，固定兼容镜像</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">CUDA/NPU OOM</td>
+          <td style="text-align: center">发生阶段、上下文、并发、其他进程</td>
+          <td style="text-align: center">缩短上下文、降并发、量化或增加并行</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">NCCL/HCCL 挂起</td>
+          <td style="text-align: center">Rank、拓扑、网络、共享内存</td>
+          <td style="text-align: center">先跑通信测试，再启动模型</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Pod Pending</td>
+          <td style="text-align: center">Events、扩展资源、PVC、亲和性</td>
+          <td style="text-align: center">释放/增加设备或修正调度约束</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">探针反复重启</td>
+          <td style="text-align: center">启动耗时与 probe 配置</td>
+          <td style="text-align: center">增加 startupProbe 窗口</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Service 不通</td>
+          <td style="text-align: center">Pod Ready、selector、Endpoint、端口</td>
+          <td style="text-align: center">逐层验证 Pod IP 与 Service</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">TTFT 突然升高</td>
+          <td style="text-align: center">队列、长输入、Prefill、网关</td>
+          <td style="text-align: center">限制输入和并发，检查扩容与过载</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="3-三组常用命令">3. 三组常用命令
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 设备</span>
+</span></span><span class="line"><span class="cl">nvidia-smi
+</span></span><span class="line"><span class="cl">npu-smi info
+</span></span><span class="line"><span class="cl"><span class="c1"># Docker</span>
+</span></span><span class="line"><span class="cl">docker ps -a
+</span></span><span class="line"><span class="cl">docker logs --tail <span class="m">200</span> &lt;container&gt;
+</span></span><span class="line"><span class="cl">docker inspect &lt;container&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># Kubernetes</span>
+</span></span><span class="line"><span class="cl">kubectl describe pod &lt;pod&gt;
+</span></span><span class="line"><span class="cl">kubectl logs &lt;pod&gt; --previous
+</span></span><span class="line"><span class="cl">kubectl get events --sort-by<span class="o">=</span>.lastTimestamp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="五总结">五、总结
+</h2><h3 id="需要记住的六件事">需要记住的六件事
+</h3><p>1.　先判断模型类型，再检查 config、权重、Tokenizer/Processor 和量化格式。</p>
+<p>2.　TTFT 主要受排队与 Prefill 影响，TPOT 主要反映 Decode；容量必须看尾延迟和错误率。</p>
+<p>3.　vLLM 的核心是 Continuous Batching 与 PagedAttention/KV Cache 管理。</p>
+<p>4.　NVIDIA 通用部署优先 vLLM；昇腾优先 vLLM Ascend；特殊场景再评估 SGLang。</p>
+<p>5.　Docker 负责快速验证，Kubernetes 负责资源调度、服务治理和生产发布。</p>
+<p>6.　故障排查从硬件到底层逐层向上，不要一开始就反复改模型参数。</p>
+<h3 id="上线前最小检查清单">上线前最小检查清单
+</h3><ul>
+<li>
+<p><input disabled="" type="checkbox"> 模型文件完整、版本可追溯，目标框架支持</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 硬件、驱动、计算栈、PyTorch 与框架版本矩阵已验证</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> API、流式输出、长输入、异常请求和取消行为通过</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 目标并发下 TTFT、TPOT、吞吐、显存/HBM 和错误率达标</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> Kubernetes 探针、优雅退出、流量限制和回滚经过演练</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 设备、框架、请求和 Kubernetes 指标已接入监控告警</p>
+</li>
+</ul>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>**最终原则　**生产结论以目标模型、目标硬件和真实业务负载的压测为准。不要把社区单点性能数据直接当作本系统容量。</td>
+      </tr>
+  </tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/llm/">LLM</a>
+        
+            <a href="/tags/vllm/">VLLM</a>
+        
+            <a href="/tags/kubernetes/">Kubernetes</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/sglang/">SGLang</a>
+        
+            <a href="/tags/ascend/">Ascend</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/dameng-dem-xinchuang-linux-deployment-pitfalls/">
+        
+        
+            <div class="article-image">
+                <img src="/p/dameng-dem-xinchuang-linux-deployment-pitfalls/dameng.017716f9af21c503ebb60db2dd6ba03b_hu_871dcbc4c4605b0a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 信创 Linux 部署达梦 DEM 踩坑记录"
+                        data-key="dameng-dem-xinchuang-linux-deployment-pitfalls" 
+                        data-hash="md5-AXcW&#43;a8hxQPrtg2y3WugOw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">信创 Linux 部署达梦 DEM 踩坑记录</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/prd-es-3-node/">
+        
+        
+            <div class="article-image">
+                <img src="/p/prd-es-3-node/prd-es-3-node.8e6920660ae213ba13e732e431455db5_hu_82d2e35cdd5ee21c.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记"
+                        data-key="prd-es-3-node" 
+                        data-hash="md5-jmkgZgriE7oT5zLkMUVdtQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/redis-replication-error/">
+        
+        
+            <div class="article-image">
+                <img src="/p/redis-replication-error/replication-with-redis.daa11ffdb4eadfbd8d65a754e6e410fc_hu_27282445e2bacbc4.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Redis 主从复制权限问题解决"
+                        data-key="Redis-replication-error" 
+                        data-hash="md5-2qEf/bTq372NZadU5uQQ/A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Redis 主从复制权限问题解决</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/cluster-perf-metrics/">
+        
+        
+            <div class="article-image">
+                <img src="/p/cluster-perf-metrics/cluster.de9964da6a311adffa43ebf7d210ce5e_hu_c630994917979b0e.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 影响集群规模的性能指标"
+                        data-key="cluster-perf-metrics" 
+                        data-hash="md5-3plk2moxGt/6Q&#43;v30hDOXg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">影响集群规模的性能指标</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/linux-basics-10/">
+        
+        
+            <div class="article-image">
+                <img src="/p/linux-basics-10/linux.aefe83e6a42c43a1536aa94aba2c4753_hu_51ccaf93b5a28983.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Linux基础（十）：Linux 重要服务"
+                        data-key="Linux-basics-10" 
+                        data-hash="md5-rv6D5qQsQ6FTaqlKuixHUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux基础（十）：Linux 重要服务</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
