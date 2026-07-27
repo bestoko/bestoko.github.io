@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>DEM on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/dem/</link>
+        <link>https://bestoko.cc/tags/dem/</link>
         <description>Recent content in DEM on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/dem/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/dem/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>信创 Linux 部署达梦 DEM 踩坑记录</title>
-        <link>http://localhost:1313/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</link>
+        <link>https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</link>
         <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</guid>
-        <description>&lt;img src="http://localhost:1313/p/dameng-dem-xinchuang-linux-deployment-pitfalls/dameng.jpg" alt="Featured image of post 信创 Linux 部署达梦 DEM 踩坑记录" /&gt;&lt;p&gt;新公司业务涉及到一些国产化信创软硬件的东西，简单记录下这次在信创Linux上部署达梦数据库 DEM 监控的踩坑与处理。&lt;/p&gt;
+        <guid>https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/dameng.jpg" alt="Featured image of post 信创 Linux 部署达梦 DEM 踩坑记录" /&gt;&lt;p&gt;新公司业务涉及到一些国产化信创软硬件的东西，简单记录下这次在信创Linux上部署达梦数据库 DEM 监控的踩坑与处理。&lt;/p&gt;
 &lt;h2 id=&#34;架构与通信链路&#34;&gt;架构与通信链路
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

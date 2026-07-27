@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>PVE on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/pve/</link>
+        <link>https://bestoko.cc/tags/pve/</link>
         <description>Recent content in PVE on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 14 Dec 2025 23:28:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/pve/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 14 Dec 2025 23:28:34 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/pve/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何在eMMC上安装PVE与优化配置</title>
-        <link>http://localhost:1313/p/install-pve-emmc/</link>
+        <link>https://bestoko.cc/p/install-pve-emmc/</link>
         <pubDate>Sun, 14 Dec 2025 23:28:34 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/install-pve-emmc/</guid>
-        <description>&lt;img src="http://localhost:1313/p/install-pve-emmc/pve.png" alt="Featured image of post 如何在eMMC上安装PVE与优化配置" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
+        <guid>https://bestoko.cc/p/install-pve-emmc/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/install-pve-emmc/pve.png" alt="Featured image of post 如何在eMMC上安装PVE与优化配置" /&gt;&lt;h2 id=&#34;现象&#34;&gt;现象
 &lt;/h2&gt;&lt;p&gt;今天在尝试给之前买的N150小主机虚拟化折腾下随身软路由+轻NAS时，本着不浪费M.2硬盘位的原则，想把PVE(9.1)装在自带的64G eMMC上一直报错。一开始是怀疑之前装fnos测试时的分区没清干净，到PE下格式化了两次仍然如此。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Installation failed!&lt;/p&gt;

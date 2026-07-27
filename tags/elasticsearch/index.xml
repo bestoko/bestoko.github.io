@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Elasticsearch on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/elasticsearch/</link>
+        <link>https://bestoko.cc/tags/elasticsearch/</link>
         <description>Recent content in Elasticsearch on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 26 Nov 2025 23:32:02 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Nov 2025 23:32:02 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记</title>
-        <link>http://localhost:1313/p/prd-es-3-node/</link>
+        <link>https://bestoko.cc/p/prd-es-3-node/</link>
         <pubDate>Wed, 26 Nov 2025 23:32:02 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/prd-es-3-node/</guid>
-        <description>&lt;img src="http://localhost:1313/p/prd-es-3-node/prd-es-3-node.jpg" alt="Featured image of post 生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记" /&gt;&lt;h2 id=&#34;背景需求&#34;&gt;背景需求
+        <guid>https://bestoko.cc/p/prd-es-3-node/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/prd-es-3-node/prd-es-3-node.jpg" alt="Featured image of post 生产环境Ansible&#43;Docker离线部署Elasticsearch高可用集群小记" /&gt;&lt;h2 id=&#34;背景需求&#34;&gt;背景需求
 &lt;/h2&gt;&lt;p&gt;企业内网生产环境中，利用 Ansible 和 Docker Compose 快速构建一套高可用的 Elasticsearch (ES) 集群 + Kibana + Nginx 负载均衡架构，专供MES系统使用。&lt;/p&gt;
 &lt;h2 id=&#34;1-架构规划与硬件配置&#34;&gt;1. 架构规划与硬件配置
 &lt;/h2&gt;&lt;p&gt;集群采用经典的 &lt;strong&gt;3节点混合架构&lt;/strong&gt; (同时承担 Master 和 Data 角色)，外加一台 &lt;strong&gt;接入层&lt;/strong&gt; 负责流量分发和可视化。&lt;/p&gt;
