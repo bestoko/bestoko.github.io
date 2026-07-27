@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>集群架构 on Toko&#39;s blog</title>
-        <link>https://bestoko.cc/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/</link>
+        <link>http://localhost:1313/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/</link>
         <description>Recent content in 集群架构 on Toko&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 02 Jun 2025 21:40:17 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 02 Jun 2025 21:40:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>影响集群规模的性能指标</title>
-        <link>https://bestoko.cc/p/cluster-perf-metrics/</link>
+        <link>http://localhost:1313/p/cluster-perf-metrics/</link>
         <pubDate>Mon, 02 Jun 2025 21:40:17 +0800</pubDate>
         
-        <guid>https://bestoko.cc/p/cluster-perf-metrics/</guid>
-        <description>&lt;img src="https://bestoko.cc/p/cluster-perf-metrics/cluster.png" alt="Featured image of post 影响集群规模的性能指标" /&gt;&lt;h2 id=&#34;影响集群规模的性能指标&#34;&gt;影响集群规模的性能指标
+        <guid>http://localhost:1313/p/cluster-perf-metrics/</guid>
+        <description>&lt;img src="http://localhost:1313/p/cluster-perf-metrics/cluster.png" alt="Featured image of post 影响集群规模的性能指标" /&gt;&lt;h2 id=&#34;影响集群规模的性能指标&#34;&gt;影响集群规模的性能指标
 &lt;/h2&gt;&lt;h3 id=&#34;pv与uv&#34;&gt;PV与UV
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;PV（Page Views）&lt;/strong&gt;：页面浏览量，统计用户访问页面的总次数，反映网站流量。&lt;/li&gt;
