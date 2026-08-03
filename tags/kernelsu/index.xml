@@ -1,37 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>KernelSU on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/kernelsu/</link>
-        <description>Recent content in KernelSU on Toko&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Thu, 31 Aug 2023 10:10:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/kernelsu/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title>
-        <link>http://localhost:1313/p/oneplus_ace2_pro/</link>
-        <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/oneplus_ace2_pro/</guid>
-        <description>&lt;img src="http://localhost:1313/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KernelSU on Toko's blog</title><link>https://bestoko.cc/tags/kernelsu/</link><description>Recent content in KernelSU on Toko's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 31 Aug 2023 10:10:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/kernelsu/index.xml" rel="self" type="application/rss+xml"/><item><title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title><link>https://bestoko.cc/p/oneplus_ace2_pro/</link><pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate><guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid><description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id="前言"&gt;前言
 &lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share.png&#34;
-	width=&#34;319&#34;
-	height=&#34;483&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, http://localhost:1313/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;分享记录&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;66&#34;
-		data-flex-basis=&#34;158px&#34;
-	
+&lt;p&gt;&lt;a class="link" href="https://bestoko.cc/p/oneplus8/" target="_blank" rel="noopener"
+&gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/op8share.png"
+width="319"
+height="483"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w"
+loading="lazy"
+alt="分享记录"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="158px"
 &gt;&lt;/p&gt;
 &lt;p&gt;时过境迁，三年时间过去了，玩机的方式也在不断变换，过去的教程已经不具备多少意义。恰逢一加发布了新的Ace2 Pro，参数方面我非常满意，立刻首发购入开刷。并将此间折腾稍作记录，希望也能对看到这篇文章的你有帮助。&lt;/p&gt;
-&lt;h2 id=&#34;方向与工具的选择&#34;&gt;方向与工具的选择
+&lt;h2 id="方向与工具的选择"&gt;方向与工具的选择
 &lt;/h2&gt;&lt;p&gt;我们玩机大部分时间说的指的是使用各种 xposed 模块对不同应用和系统进行修改，达到自己想要的目的。&lt;/p&gt;
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
@@ -41,39 +23,35 @@
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
-&lt;h2 id=&#34;kernelsu启动&#34;&gt;KernelSU，启动！
+&lt;h2 id="kernelsu启动"&gt;KernelSU，启动！
 &lt;/h2&gt;&lt;p&gt;KernelSU的刷入方式也有很多种，这里我就使用相对不容易出错的一种，方便新手参考。&lt;del&gt;（虽然有点曲线救国）&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大概流程是通过 Magisk 获取 Root 权限后使用内核刷写器刷入 KernelSU 的 AnyKernel 包。&lt;/strong&gt; 最后再卸载magisk即可&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;首先是解锁 bootloader，刷入 magisk&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;​		新手可以直接用 @大侠阿木 的&lt;a class=&#34;link&#34; href=&#34;https://optool.daxiaamu.com/wiki_pctool&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt; 一加全能盒子&lt;/a&gt;  解锁及刷入都可以按提示一键完成&lt;/p&gt;
-&lt;p&gt;​		老手可以选择用一加11的 TWRP（同为骁龙8Gen2通用），adb sideload的方式刷入magisk.zip&lt;/p&gt;
-&lt;p&gt;​		（当然这一步刷了 TWRP 后也可以直接在TWRP里刷入对应 AK3 压缩包，直接刷入KernelSU）&lt;/p&gt;
-&lt;p&gt;​		我偷懒这边就直接用盒子一键解锁一键刷入 Magisk 了&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
+&lt;p&gt;​ 新手可以直接用 @大侠阿木 的&lt;a class="link" href="https://optool.daxiaamu.com/wiki_pctool" target="_blank" rel="noopener"
+&gt; 一加全能盒子&lt;/a&gt; 解锁及刷入都可以按提示一键完成&lt;/p&gt;
+&lt;p&gt;​ 老手可以选择用一加11的 TWRP（同为骁龙8Gen2通用），adb sideload的方式刷入magisk.zip&lt;/p&gt;
+&lt;p&gt;​ （当然这一步刷了 TWRP 后也可以直接在TWRP里刷入对应 AK3 压缩包，直接刷入KernelSU）&lt;/p&gt;
+&lt;p&gt;​ 我偷懒这边就直接用盒子一键解锁一键刷入 Magisk 了&lt;/p&gt;
+&lt;ol start="2"&gt;
 &lt;li&gt;
 &lt;p&gt;安装 KernelFlasher 并赋予 Root 权限&lt;/p&gt;
 &lt;p&gt;在已挂载槽位，点击刷入AK3压缩包，刷入对应的Anykernel3.zip即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3.png&#34;
-	width=&#34;762&#34;
-	height=&#34;605&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, http://localhost:1313/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;AK3&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;125&#34;
-		data-flex-basis=&#34;302px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/AK3.png"
+width="762"
+height="605"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w"
+loading="lazy"
+alt="AK3"
+class="gallery-image"
+data-flex-grow="125"
+data-flex-basis="302px"
 &gt;&lt;/p&gt;
 &lt;p&gt;一加Ace2 Pro请选择 AnyKernel3-android13-5.15.74 开头的zip&lt;/p&gt;
 &lt;p&gt;别的机型请在安装kernelSU apk后查看内核版本，来确定你需要下载的AK3压缩包&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tiann/KernelSU/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Releases · tiann/KernelSU (github.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/tiann/KernelSU/releases" target="_blank" rel="noopener"
+&gt;Releases · tiann/KernelSU (github.com)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;接着在KernelSU里 刷入【Zygisk on KernelSU 】和【Zygisk -LSposed】，【shamiko】（可选）&lt;/p&gt;
@@ -84,112 +62,79 @@
 &lt;p&gt;enjoy it&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;KernelSU&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;h2 id="我使用的部分模块截图"&gt;我使用的部分模块截图
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w"
+loading="lazy"
+alt="KernelSU"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;KernelSU&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w"
+loading="lazy"
+alt="KernelSU"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;KernelSU&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w"
+loading="lazy"
+alt="KernelSU"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;KernelSU&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w"
+loading="lazy"
+alt="KernelSU"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, http://localhost:1313/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;KernelSU&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w"
+loading="lazy"
+alt="KernelSU"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;LSPosed&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w"
+loading="lazy"
+alt="LSPosed"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;
-&lt;img src=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
-	width=&#34;1240&#34;
-	height=&#34;2772&#34;
-	srcset=&#34;http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, http://localhost:1313/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;LSPosed&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;44&#34;
-		data-flex-basis=&#34;107px&#34;
-	
+&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png"
+width="1240"
+height="2772"
+srcset="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w"
+loading="lazy"
+alt="LSPosed"
+class="gallery-image"
+data-flex-grow="44"
+data-flex-basis="107px"
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;文中提及资源分享含9008已授权工具及救砖包&#34;&gt;文中提及资源分享（含9008已授权工具及救砖包）
+&lt;h2 id="文中提及资源分享含9008已授权工具及救砖包"&gt;文中提及资源分享（含9008已授权工具及救砖包）
 &lt;/h2&gt;&lt;p&gt;链接：https://pan.baidu.com/s/1w1irNJf6ZsCVuSqR3YR6Lg?pwd=toko
 提取码：toko&lt;/p&gt;
-&lt;p&gt;9008工具来自酷安@秋水105  【理论上一加11 、一加Ace2 Pro 、oppo find x6 pro、realme GT5 通用】&lt;/p&gt;
-&lt;p&gt;救砖包来自@大侠阿木&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;p&gt;9008工具来自酷安@秋水105 【理论上一加11 、一加Ace2 Pro 、oppo find x6 pro、realme GT5 通用】&lt;/p&gt;
+&lt;p&gt;救砖包来自@大侠阿木&lt;/p&gt;</description></item></channel></rss>

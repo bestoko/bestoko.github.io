@@ -1,153 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>3ds on Toko&#39;s blog</title>
-        <link>http://localhost:1313/tags/3ds/</link>
-        <description>Recent content in 3ds on Toko&#39;s blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Mon, 30 Mar 2020 09:00:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/3ds/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title>
-        <link>http://localhost:1313/p/gba2cia/</link>
-        <pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/gba2cia/</guid>
-        <description>&lt;img src="http://localhost:1313/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id=&#34;前情提要&#34;&gt;前情提要
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3ds on Toko's blog</title><link>https://bestoko.cc/tags/3ds/</link><description>Recent content in 3ds on Toko's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Mar 2020 09:00:01 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/3ds/index.xml" rel="self" type="application/rss+xml"/><item><title>GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案</title><link>https://bestoko.cc/p/gba2cia/</link><pubDate>Mon, 30 Mar 2020 09:00:01 +0800</pubDate><guid>https://bestoko.cc/p/gba2cia/</guid><description>&lt;img src="https://bestoko.cc/p/gba2cia/3ds.jpg" alt="Featured image of post GBA文件转CIA文件，在3ds上游玩GBA游戏的解决方案" /&gt;&lt;h2 id="前情提要"&gt;前情提要
 &lt;/h2&gt;&lt;p&gt;&lt;del&gt;为什么要水这么一篇文章&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;在把switch借给朋友玩的这段时间，我把目光投向了吃灰已久的3ds&amp;hellip;.&lt;/p&gt;
 &lt;p&gt;我想要在实机上游玩gba游戏，但是3ds上的模拟器又有各种各样的兼容性问题，达不到eshop里VC金银流畅的游玩体验；宣称能游玩GBA的DSTWO PLUS烧录卡早已停产，某宝/闲鱼的价格居高不下&amp;hellip;经过一番摸索，我找到了&lt;strong&gt;可能&lt;/strong&gt;是现今最好的解决方案。&lt;/p&gt;
-&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;h2 id="准备工作"&gt;准备工作
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;一台BOOT9STARP(B9S)破解的3ds&lt;/p&gt;
-&lt;p&gt;参考&lt;a class=&#34;link&#34; href=&#34;https://3ds.hacks.guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;3ds破解手册&lt;/a&gt;或者&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/3dshack-getstarted&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;一只火狐大佬整理的教程&lt;/a&gt;(推荐)&lt;/p&gt;
+&lt;p&gt;参考&lt;a class="link" href="https://3ds.hacks.guide/" target="_blank" rel="noopener"
+&gt;3ds破解手册&lt;/a&gt;或者&lt;a class="link" href="https://stray-soul.site/index.php/3dshack-getstarted" target="_blank" rel="noopener"
+&gt;一只火狐大佬整理的教程&lt;/a&gt;(推荐)&lt;/p&gt;
 &lt;p&gt;嫌麻烦的同学可以&lt;del&gt;交给热心摊主处理&lt;/del&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gbatemp.net/threads/release-ultimate-gba-vc-injector-for-3ds.438057/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Ultimate GBA VC Injector for 3DS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://gbatemp.net/threads/release-ultimate-gba-vc-injector-for-3ds.438057/" target="_blank" rel="noopener"
+&gt;Ultimate GBA VC Injector for 3DS&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;汉化版&lt;a class=&#34;link&#34; href=&#34;https://1drv.ms/u/s!AuzARhFyMrG9lD29u9s_vl-PE0CN?e=pyFypW&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;下载链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;汉化版&lt;a class="link" href="https://1drv.ms/u/s!AuzARhFyMrG9lD29u9s_vl-PE0CN?e=pyFypW" target="_blank" rel="noopener"
+&gt;下载链接&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;你想要在3ds上运行的GBA游戏ROM文件&lt;/p&gt;
 &lt;p&gt;这里以&lt;strong&gt;漆黑的魅影&lt;/strong&gt;为例（很棒的GBA宝可梦改版，我一直想在实机上玩）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;gba-转cia&#34;&gt;GBA 转CIA
+&lt;h2 id="gba-转cia"&gt;GBA 转CIA
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;打开软件并导入下载好的&lt;code&gt;.gba&lt;/code&gt;文件，ROM大小和存档类型会自动确认(汉化版ROM往往是&lt;em&gt;数据库未找到该游戏&lt;/em&gt;，请确保选择的&lt;strong&gt;正确无误&lt;/strong&gt;以免影响存档)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia1.png&#34;
-	width=&#34;1185&#34;
-	height=&#34;588&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia1_hu_5f04cce3b1244764.png 480w, http://localhost:1313/p/gba2cia/gba2cia1_hu_f7467e53a8359db3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;gba2cia1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;201&#34;
-		data-flex-basis=&#34;483px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/gba2cia/gba2cia1.png"
+width="1185"
+height="588"
+srcset="https://bestoko.cc/p/gba2cia/gba2cia1_hu_5f04cce3b1244764.png 480w, https://bestoko.cc/p/gba2cia/gba2cia1_hu_f7467e53a8359db3.png 1024w"
+loading="lazy"
+alt="gba2cia1"
+class="gallery-image"
+data-flex-grow="201"
+data-flex-basis="483px"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia2.png&#34;
-	width=&#34;824&#34;
-	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia2_hu_d2dde9da0c96728d.png 480w, http://localhost:1313/p/gba2cia/gba2cia2_hu_f1542128f7d6f2fd.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;gba2cia2&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;152&#34;
-		data-flex-basis=&#34;364px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/gba2cia/gba2cia2.png"
+width="824"
+height="542"
+srcset="https://bestoko.cc/p/gba2cia/gba2cia2_hu_d2dde9da0c96728d.png 480w, https://bestoko.cc/p/gba2cia/gba2cia2_hu_f1542128f7d6f2fd.png 1024w"
+loading="lazy"
+alt="gba2cia2"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="364px"
 &gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
+&lt;ol start="2"&gt;
 &lt;li&gt;
 &lt;p&gt;填写要转换的VC图标和名称(因为3ds字库的原因建议不要使用中文XD)，设置3D横幅(就是选中这个游戏时3ds上屏的画面)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia3.png&#34;
-	width=&#34;824&#34;
-	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia3_hu_3675b378c42cbb0c.png 480w, http://localhost:1313/p/gba2cia/gba2cia3_hu_91bd53405ff4a227.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;gba2cia3&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;152&#34;
-		data-flex-basis=&#34;364px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/gba2cia/gba2cia3.png"
+width="824"
+height="542"
+srcset="https://bestoko.cc/p/gba2cia/gba2cia3_hu_3675b378c42cbb0c.png 480w, https://bestoko.cc/p/gba2cia/gba2cia3_hu_91bd53405ff4a227.png 1024w"
+loading="lazy"
+alt="gba2cia3"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="364px"
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia4.png&#34;
-	width=&#34;824&#34;
-	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia4_hu_c72cfd8fba825b48.png 480w, http://localhost:1313/p/gba2cia/gba2cia4_hu_3f4b1ad588f603e7.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;gba2cia4&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;152&#34;
-		data-flex-basis=&#34;364px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/gba2cia/gba2cia4.png"
+width="824"
+height="542"
+srcset="https://bestoko.cc/p/gba2cia/gba2cia4_hu_c72cfd8fba825b48.png 480w, https://bestoko.cc/p/gba2cia/gba2cia4_hu_3f4b1ad588f603e7.png 1024w"
+loading="lazy"
+alt="gba2cia4"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="364px"
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;设置VC参数并导出CIA文件(注意当转换多个&lt;code&gt;.cia&lt;/code&gt;文件时，确保每个文件的&lt;em&gt;产品代码&lt;/em&gt;及&lt;em&gt;项目ID&lt;/em&gt;都不一样)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia5.png&#34;
-	width=&#34;824&#34;
-	height=&#34;542&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia5_hu_1ce0560f7345002b.png 480w, http://localhost:1313/p/gba2cia/gba2cia5_hu_d04e0ac5295e5a5.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;gba2cia5&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;152&#34;
-		data-flex-basis=&#34;364px&#34;
-	
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/gba2cia/gba2cia5.png"
+width="824"
+height="542"
+srcset="https://bestoko.cc/p/gba2cia/gba2cia5_hu_1ce0560f7345002b.png 480w, https://bestoko.cc/p/gba2cia/gba2cia5_hu_d04e0ac5295e5a5.png 1024w"
+loading="lazy"
+alt="gba2cia5"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="364px"
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在3ds上安装转换好的&lt;code&gt;.cia&lt;/code&gt;文件&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;关于如何B9S&lt;a class=&#34;link&#34; href=&#34;https://stray-soul.site/index.php/install-cia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;strong&gt;如何安装cia文件&lt;/strong&gt;&lt;/a&gt;这里不再赘述(实在懒得截图了)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/gba2cia/gba2cia6.png&#34;
-	width=&#34;4608&#34;
-	height=&#34;3456&#34;
-	srcset=&#34;http://localhost:1313/p/gba2cia/gba2cia6_hu_fedd9cd1568a2ab4.png 480w, http://localhost:1313/p/gba2cia/gba2cia6_hu_565ecffc2111e260.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;gba2cia6&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
+&lt;p&gt;关于如何B9S&lt;a class="link" href="https://stray-soul.site/index.php/install-cia" target="_blank" rel="noopener"
+&gt;&lt;strong&gt;如何安装cia文件&lt;/strong&gt;&lt;/a&gt;这里不再赘述(实在懒得截图了)&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://bestoko.cc/p/gba2cia/gba2cia6.png"
+width="4608"
+height="3456"
+srcset="https://bestoko.cc/p/gba2cia/gba2cia6_hu_fedd9cd1568a2ab4.png 480w, https://bestoko.cc/p/gba2cia/gba2cia6_hu_565ecffc2111e260.png 1024w"
+loading="lazy"
+alt="gba2cia6"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
 &gt;&lt;/p&gt;
 &lt;p&gt;大功告成~&lt;/p&gt;
-&lt;h2 id=&#34;备注事项&#34;&gt;备注事项
+&lt;h2 id="备注事项"&gt;备注事项
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;据说部分老款3ds对这种方式转换的&lt;code&gt;.cia&lt;/code&gt;支持不好，会出现黑屏情况(我的美版老小三反正测试是没问题啦)&lt;/li&gt;
 &lt;li&gt;港版不支持港版不支持港版不支持&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;存档类型&lt;/strong&gt;一定要设置正确&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;/ul&gt;</description></item></channel></rss>
