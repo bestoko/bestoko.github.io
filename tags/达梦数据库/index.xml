@@ -1,105 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>达梦数据库 on Toko's blog</title><link>https://bestoko.cc/tags/%E8%BE%BE%E6%A2%A6%E6%95%B0%E6%8D%AE%E5%BA%93/</link><description>Recent content in 达梦数据库 on Toko's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E8%BE%BE%E6%A2%A6%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml"/><item><title>信创 Linux 部署达梦 DEM 踩坑记录</title><link>https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</link><pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate><guid>https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</guid><description>&lt;img src="https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/dameng.jpg" alt="Featured image of post 信创 Linux 部署达梦 DEM 踩坑记录" /&gt;&lt;p&gt;新公司业务涉及到一些国产化信创软硬件的东西，简单记录下这次在信创Linux上部署达梦数据库 DEM 监控的踩坑与处理。&lt;/p&gt;
-&lt;h2 id="架构与通信链路"&gt;架构与通信链路
-&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>达梦数据库 on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/%E8%BE%BE%E6%A2%A6%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+        <description>Recent content in 达梦数据库 on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/%E8%BE%BE%E6%A2%A6%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>信创 Linux 部署达梦 DEM 踩坑记录</title>
+        <link>https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</link>
+        <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/dameng-dem-xinchuang-linux-deployment-pitfalls/dameng.jpg" alt="Featured image of post 信创 Linux 部署达梦 DEM 踩坑记录" /&gt;&lt;p&gt;新公司业务涉及到一些国产化信创软硬件的东西，简单记录下这次在信创Linux上部署达梦数据库 DEM 监控的踩坑与处理。&lt;/p&gt;
+&lt;h2 id=&#34;架构与通信链路&#34;&gt;架构与通信链路
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;┌─────────────────────────────────────────────────────┐
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ DEM 管理端 (dem-server) │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ┌──────────┐ ┌──────────────┐ ┌───────────────┐ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ │ 浏览器 │→ │ Tomcat(DEM) │→ │ DEM元数据库 │ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ │ HTTPS │ │ :8080/443 │ │ (DM8 独立实例) │ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └──────────┘ └──────┬───────┘ └───────────────┘ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ │ 通过 dmagent API 通信 │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└───────────────────────┼─────────────────────────────┘
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ :6363（dmagent 默认端口）
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;┌───────────────────────┼─────────────────────────────┐
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ 被监控节点 (dm-node-01) │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ ┌───────────────┐ │ ┌──────────────────┐ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ │ DM8 实例 │←──┼──→│ dmagent │ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ │ :5236 │ │ :6363 │ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;│ └───────────────┘ └──────────────────┘ │
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└─────────────────────────────────────────────────────┘
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;┌─────────────────────────────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│                  DEM 管理端 (dem-server)             │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  ┌──────────┐  ┌──────────────┐  ┌───────────────┐  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  │ 浏览器    │→ │ Tomcat(DEM)  │→ │ DEM元数据库    │  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  │ HTTPS    │  │ :8080/443    │  │ (DM8 独立实例) │  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  └──────────┘  └──────┬───────┘  └───────────────┘  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│                       │ 通过 dmagent API 通信        │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└───────────────────────┼─────────────────────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        │ :6363（dmagent 默认端口）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;┌───────────────────────┼─────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│           被监控节点 (dm-node-01)                     │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  ┌───────────────┐   │   ┌──────────────────┐       │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  │  DM8 实例      │←──┼──→│  dmagent         │      │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  │  :5236        │       │  :6363           │       │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  └───────────────┘       └──────────────────┘       │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└─────────────────────────────────────────────────────┘
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;DEM 管理端通过 dmagent 的 HTTP API（默认 6363 端口）采集被监控实例的指标数据，dmagent 再通过本地连接采集 DM8 实例信息&lt;/p&gt;
 &lt;p&gt;通过在 DEM 中配置监控资源，便可以生成 metrics 数据，供 Prometheus 使用&lt;/p&gt;
-&lt;h2 id="踩坑记录"&gt;踩坑记录
+&lt;h2 id=&#34;踩坑记录&#34;&gt;踩坑记录
 &lt;/h2&gt;&lt;p&gt;首先是信创Linux的架构，这次客户所用的机器是麒麟。官方文档提到&lt;code&gt;DEM 和 dmagent 所在机器需要配置 JAVA 环境，JAVA 版本必须为 JAVA 1.8&lt;/code&gt;因此需要提前准备aarch64的Java JDK&lt;/p&gt;
 &lt;p&gt;其次是资源紧张引出的新问题。官方文档有提到需要&lt;code&gt;创建一个 DM 数据库作为 DEM 后台数据库&lt;/code&gt;，同时&lt;code&gt;SYSDBA（或管理员用户）执行 SQL 脚本 dem_init.sql&lt;/code&gt; 而本次部署资源紧张，选择复用被监控节点其中一个实例作为DEM后台数据库。当然不能将业务数据库的SYSDBA直接配置过去，需要新建一个用户，给予DBA权限。&lt;/p&gt;
 &lt;p&gt;接着是监控所需的用户，实测按照官方给的最小连接权限是不够的。还需要授予查询系统动态视图的权限。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sql" data-lang="sql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;USER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IDENTIFIED&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;BY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;*******&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;LIMIT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SESSION_PER_USER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CONNECT_IDLE_TIME&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;GRANT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;PUBLIC&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TO&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;GRANT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;VIEW&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SEQUENCE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TO&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;-- 授予查询系统动态视图的权限
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;GRANT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;VTI&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TO&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TEST&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;USER&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IDENTIFIED&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;*******&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LIMIT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SESSION_PER_USER&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CONNECT_IDLE_TIME&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;GRANT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;PUBLIC&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TO&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;GRANT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;VIEW&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SEQUENCE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TO&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;TEST&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;-- 授予查询系统动态视图的权限
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;GRANT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VTI&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;TO&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TEST&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;strong&gt;权限项&lt;/strong&gt;&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;PUBLIC角色&lt;/td&gt;
-&lt;td&gt;对当前模式下对象的数据操作权限，不包含任何用户业务表的访问权限&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;VTI角色&lt;/td&gt;
-&lt;td&gt;V$动态性能视图，不包含任何用户业务表的访问权限&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SELECT TABLE&lt;/td&gt;
-&lt;td&gt;可查询已被显式授权的表，但监控账号未获得任何业务表的GRANT，因此此权限对业务表无效&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SELECT VIEW&lt;/td&gt;
-&lt;td&gt;可查询已被显式授权的视图，同上，对业务视图无效&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SELECT SEQUENCE&lt;/td&gt;
-&lt;td&gt;可查询序列值，与业务数据无关&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;session_per_user=50&lt;/td&gt;
-&lt;td&gt;限制最大并发连接数，防止资源滥用&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;connect_idle_time=10&lt;/td&gt;
-&lt;td&gt;空闲10分钟自动断开，降低安全风险&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;权限项&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;PUBLIC角色&lt;/td&gt;
+          &lt;td&gt;对当前模式下对象的数据操作权限，不包含任何用户业务表的访问权限&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;VTI角色&lt;/td&gt;
+          &lt;td&gt;V$动态性能视图，不包含任何用户业务表的访问权限&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SELECT TABLE&lt;/td&gt;
+          &lt;td&gt;可查询已被显式授权的表，但监控账号未获得任何业务表的GRANT，因此此权限对业务表无效&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SELECT VIEW&lt;/td&gt;
+          &lt;td&gt;可查询已被显式授权的视图，同上，对业务视图无效&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SELECT SEQUENCE&lt;/td&gt;
+          &lt;td&gt;可查询序列值，与业务数据无关&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;session_per_user=50&lt;/td&gt;
+          &lt;td&gt;限制最大并发连接数，防止资源滥用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;connect_idle_time=10&lt;/td&gt;
+          &lt;td&gt;空闲10分钟自动断开，降低安全风险&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;最后是意料之外的坑，但其实应该最早就确认下。在其中一台DEM具无法添加监控实例，提示【无效的主机，或主机上未启动数据库代理的情况】。经排查是这几台机器的时间偏差太多（接近二十分钟了也不知道是怎么埋下的坑），同步时间后正常添加监控。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;最后是意料之外的坑，但其实应该最早就确认下。在其中一台DEM具无法添加监控实例，提示【无效的主机，或主机上未启动数据库代理的情况】。经排查是这几台机器的时间偏差太多（接近二十分钟了也不知道是怎么埋下的坑），同步时间后正常添加监控。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

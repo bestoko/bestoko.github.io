@@ -1,42 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on Toko's blog</title><link>https://bestoko.cc/tags/android/</link><description>Recent content in Android on Toko's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 May 2025 23:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>主力机换到iOS的这半年</title><link>https://bestoko.cc/p/androidios/</link><pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate><guid>https://bestoko.cc/p/androidios/</guid><description>&lt;img src="https://bestoko.cc/p/androidios/Android2iOS.jpg" alt="Featured image of post 主力机换到iOS的这半年" /&gt;&lt;h2 id="契机"&gt;契机
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Android on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/tags/android/</link>
+        <description>Recent content in Android on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 01 May 2025 23:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/tags/android/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>主力机换到iOS的这半年</title>
+        <link>https://bestoko.cc/p/androidios/</link>
+        <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/androidios/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/androidios/Android2iOS.jpg" alt="Featured image of post 主力机换到iOS的这半年" /&gt;&lt;h2 id=&#34;契机&#34;&gt;契机
 &lt;/h2&gt;&lt;p&gt;首先我得承认去年的 wwdc 上 Apple Intelligence（Apple AI）画的大饼确实吸引了我，一直用一加玩机的我也不觉得在各家手机厂商都在积极拥抱ai的情况下，日后折腾的体验会比厂商调教的更顺手。虽然中文苹果智能真正落地兑现还是今年4月的事情，黑五有了优惠后就咬咬牙入了日版的16PM（当然是256G丐版 我可接受不了苹果比金子还贵的存储定价）。至今用了也差不多半年时间，也差不多不带偏见可以写写自己从 Android 换到 iOS 的感受了。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/androidios/jd.PNG"
-width="1320"
-height="2698"
-srcset="https://bestoko.cc/p/androidios/jd_hu_899430107a4357a8.PNG 480w, https://bestoko.cc/p/androidios/jd_hu_5516fc4b2bc7a320.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="48"
-data-flex-basis="117px"
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/androidios/jd.PNG&#34;
+	width=&#34;1320&#34;
+	height=&#34;2698&#34;
+	srcset=&#34;https://bestoko.cc/p/androidios/jd_hu_899430107a4357a8.PNG 480w, https://bestoko.cc/p/androidios/jd_hu_5516fc4b2bc7a320.PNG 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;117px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;h2 id="android"&gt;Android
+&lt;h2 id=&#34;android&#34;&gt;Android
 &lt;/h2&gt;&lt;p&gt;先来谈谈Android吧。&lt;/p&gt;
 &lt;p&gt;我的玩机历史大概要从高一时买的乐视 1手机才算开始。~~（贾老板下周回国吗？）~~应该是国内厂商中最早用type-c接口的了，可惜现在的舆论上被华为摘了桃子，意难平XD。乐视1的硬件在当时确实很好，可惜那个系统真的是难用，还有无法隐藏的自家视频入口。我就折腾起了刷机，后来在XDA上搜到了某人移植的魔趣 mokee rom。接触到魔趣这个差不多算国内 lineageOS 的项目，自然不可避免地去了解哪些手机容易解锁、包比较多。接着就是一加人一加魂，一加5-一加8-一加Ace2Pro，刷过MIUI、flyme各种官改移植，也玩过很多类原生毛坯房。也有大半夜救砖的黑历史。总的来说还是乐趣大于折腾的麻烦。&lt;/p&gt;
 &lt;p&gt;这大概就是Android最大的优点了，开放性高，桌面、主题、文件管理等等都有非常多的可选项与调整的可能。再不济可以掀桌子（解锁）刷入别的系统，把手机一点点打造成自己最顺手最喜欢的样子。当然这个过程中最痛苦的是跟各种金融app斗智斗勇了（安全上不可调和的矛盾了属于是）。&lt;/p&gt;
 &lt;p&gt;与此同时，在这么多年的过程中我也发现了自认为Android最大的缺点，那就是系统更新的维护性并不积极，甚至可以说是管生不管养。之前爆出的拼多多利用漏洞提权获取Android用户隐私的事，厂商的安全补丁推送却很慢，甚至小厂根本就没有。站在厂商的角度很好理解，东西已经卖出去了，为什么要花那么大力气去维护几年前的老机型，给个两三个大版本的更新推送你就该谢天谢地了。时至今日，某些厂商甚至还有云控恶意降低老机型流畅度来迫使用户换手机的做法，实在是无法接受。&lt;/p&gt;
-&lt;h2 id="ios"&gt;iOS
+&lt;h2 id=&#34;ios&#34;&gt;iOS
 &lt;/h2&gt;&lt;p&gt;主力机换到 iOS 后，第一感觉是精致感。当然我说的不是硬件上的（PM这玩意板砖似的实在称不上有什么好的握持体验）。而是系统上的诸如解锁、打断动画、毛玻璃之类的小细节。尤其是图标，可能是安卓厂商很难去强迫应用去做到一个统一规范，用第三方图标包又难免有遗漏不全的地方，iOS的图标就明显顺眼很多。第二大惊喜的就是续航。本来最担心的是没有快充该怎么适应，结果实际用下来，WiFi 场景下省电情况超乎我的想象。在公司大部分时间都是WiFi的情况下，4800毫安时的苹果甚至可以做到一天一充，跟现在动辄六七千毫安时的国产安卓手机对比也不落下风了。接着就是老生常谈的AppStore了，切换外区商店，购买下载等等都一气呵成，还是很容易有个不错的下载体验的。&lt;/p&gt;
 &lt;p&gt;当然我不是变成了luv letter那样的果吹。还是有些地方让我用起来觉得很不方便，或者说能理解为什么这么设计但还是不爽的地方。&lt;/p&gt;
 &lt;p&gt;首先是完全不理解的，能做好但不去做的功能。没有一个统一的全局返回手势，Android 上全面屏手势已经基本统一，无论是左滑还是右滑，都可以很轻松的返回上一级菜单。而iOS让我无力吐槽，一部分app可以右滑返回，一部分只能点击左上角返回。右滑返回的体验也不好，如 bilibili 连续点了很多视频下去的话，右滑返回会直接回到首页而非上一个视频。左上角返回更是无力吐槽，那么大的板砖单手握持已经很不舒服了，给到小指很大压力，大拇指再费力去够到左上角实在是糟糕透了。本地化的缺失也是我狂喷的另一个点，再没有换过来之前，我很难想象iOS用户甚至没有官方的法定节假日闹钟。最后也是经典的信号问题，没想到我每天下楼时拿着手机会连不上网，同样的位置同样的手机卡，Android手机从来没有出现过这样的事。&lt;/p&gt;
 &lt;p&gt;还有一些可能是因为隐私考虑而导致的不方便。我可以理解，也在尝试自适应。比如通话录音时的提醒音。又比如连续复制时，中途如果没有切换到输入法，是不会记录下来中间的复制文本的，只保留最后一次的结果。 还有通知栏与负一屏小组件状态同步不及时的小毛病。钱包也不能自由录入NFC卡片。没有长截屏等等。&lt;/p&gt;
 &lt;p&gt;最后是这个半成品的apple ai，我该夸还是骂呢。有时候通知栏总结还是挺方便的，图片消除也凑合（是的凑合，可能是因为仅本地模型处理的原因）文本的概括也还行，写作我没有尝试，但大部分场景下也就那样吧，与画的智能Siri、多app联动的大饼差远了&amp;hellip;希望真的是未来可期吧: )&lt;/p&gt;
-&lt;h2 id="总结"&gt;总结
-&lt;/h2&gt;&lt;p&gt;总的来说体验不能算后悔，但也谈不上有符合预期。好的设计是趋同的，我还是希望iOS能多搬点好用的Android已经成熟的功能过来的。也让我意识到双持才是最好滴。PM已经这么大了，还是再收一台可以解锁的小屏安卓搭配着玩吧。&lt;/p&gt;</description></item><item><title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title><link>https://bestoko.cc/p/oneplus_ace2_pro/</link><pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate><guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid><description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id="前言"&gt;前言
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;总的来说体验不能算后悔，但也谈不上有符合预期。好的设计是趋同的，我还是希望iOS能多搬点好用的Android已经成熟的功能过来的。也让我意识到双持才是最好滴。PM已经这么大了，还是再收一台可以解锁的小屏安卓搭配着玩吧。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>2023年该如何愉快的玩机 (一加Ace2 Pro为例)</title>
+        <link>https://bestoko.cc/p/oneplus_ace2_pro/</link>
+        <pubDate>Thu, 31 Aug 2023 10:10:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/oneplus_ace2_pro/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/oneplus-new-logo-scaled.jpg" alt="Featured image of post 2023年该如何愉快的玩机 (一加Ace2 Pro为例)" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;三年以前，我用的手机是一加8，彼时经过一加5时期的瞎折腾，初入玩机大门。为方便自查也方便同我一样的小白使用方便，写过一篇&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://bestoko.cc/p/oneplus8/" target="_blank" rel="noopener"
-&gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/op8share.png"
-width="319"
-height="483"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w"
-loading="lazy"
-alt="分享记录"
-class="gallery-image"
-data-flex-grow="66"
-data-flex-basis="158px"
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bestoko.cc/p/oneplus8/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;《一加8的Android 11 折腾指南》&lt;/a&gt; 以为挂这里不会有什么人看，没想到竟然也帮到了不少人。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share.png&#34;
+	width=&#34;319&#34;
+	height=&#34;483&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_85b43e9d7e5bbfce.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/op8share_hu_2c9373c6f1de0db2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分享记录&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;158px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;时过境迁，三年时间过去了，玩机的方式也在不断变换，过去的教程已经不具备多少意义。恰逢一加发布了新的Ace2 Pro，参数方面我非常满意，立刻首发购入开刷。并将此间折腾稍作记录，希望也能对看到这篇文章的你有帮助。&lt;/p&gt;
-&lt;h2 id="方向与工具的选择"&gt;方向与工具的选择
+&lt;h2 id=&#34;方向与工具的选择&#34;&gt;方向与工具的选择
 &lt;/h2&gt;&lt;p&gt;我们玩机大部分时间说的指的是使用各种 xposed 模块对不同应用和系统进行修改，达到自己想要的目的。&lt;/p&gt;
 &lt;p&gt;在之前我们使用的是 EdXposed 框架，而现在因为种种原因，我们选择更为主流更为先进的 LSPosed 框架&lt;/p&gt;
 &lt;p&gt;另外不同于之前我们选择的 Magisk 接管 Root 权限，这次我们选择 &lt;strong&gt;KernelSU&lt;/strong&gt;！&lt;/p&gt;
@@ -46,35 +76,39 @@ data-flex-basis="158px"
 &lt;p&gt;你只需要知道相较于 Magisk 而言，选择 kernelSU 可以大大减少你与app（例如各种银行）斗智斗勇的时间。&lt;/p&gt;
 &lt;p&gt;当前就目前使用而言，Magisk delta版本（俗称 狐狸面具🦊） 搭配 shamiko 白名单的情况也基本没什么问题。&lt;/p&gt;
 &lt;p&gt;总之，这里就看你个人喜好了。&lt;/p&gt;
-&lt;h2 id="kernelsu启动"&gt;KernelSU，启动！
+&lt;h2 id=&#34;kernelsu启动&#34;&gt;KernelSU，启动！
 &lt;/h2&gt;&lt;p&gt;KernelSU的刷入方式也有很多种，这里我就使用相对不容易出错的一种，方便新手参考。&lt;del&gt;（虽然有点曲线救国）&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大概流程是通过 Magisk 获取 Root 权限后使用内核刷写器刷入 KernelSU 的 AnyKernel 包。&lt;/strong&gt; 最后再卸载magisk即可&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;首先是解锁 bootloader，刷入 magisk&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;​ 新手可以直接用 @大侠阿木 的&lt;a class="link" href="https://optool.daxiaamu.com/wiki_pctool" target="_blank" rel="noopener"
-&gt; 一加全能盒子&lt;/a&gt; 解锁及刷入都可以按提示一键完成&lt;/p&gt;
-&lt;p&gt;​ 老手可以选择用一加11的 TWRP（同为骁龙8Gen2通用），adb sideload的方式刷入magisk.zip&lt;/p&gt;
-&lt;p&gt;​ （当然这一步刷了 TWRP 后也可以直接在TWRP里刷入对应 AK3 压缩包，直接刷入KernelSU）&lt;/p&gt;
-&lt;p&gt;​ 我偷懒这边就直接用盒子一键解锁一键刷入 Magisk 了&lt;/p&gt;
-&lt;ol start="2"&gt;
+&lt;p&gt;​		新手可以直接用 @大侠阿木 的&lt;a class=&#34;link&#34; href=&#34;https://optool.daxiaamu.com/wiki_pctool&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; 一加全能盒子&lt;/a&gt;  解锁及刷入都可以按提示一键完成&lt;/p&gt;
+&lt;p&gt;​		老手可以选择用一加11的 TWRP（同为骁龙8Gen2通用），adb sideload的方式刷入magisk.zip&lt;/p&gt;
+&lt;p&gt;​		（当然这一步刷了 TWRP 后也可以直接在TWRP里刷入对应 AK3 压缩包，直接刷入KernelSU）&lt;/p&gt;
+&lt;p&gt;​		我偷懒这边就直接用盒子一键解锁一键刷入 Magisk 了&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;安装 KernelFlasher 并赋予 Root 权限&lt;/p&gt;
 &lt;p&gt;在已挂载槽位，点击刷入AK3压缩包，刷入对应的Anykernel3.zip即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/AK3.png"
-width="762"
-height="605"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w"
-loading="lazy"
-alt="AK3"
-class="gallery-image"
-data-flex-grow="125"
-data-flex-basis="302px"
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3.png&#34;
+	width=&#34;762&#34;
+	height=&#34;605&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_4e07bd912e261162.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/AK3_hu_df04cd7ae5eba841.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AK3&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;一加Ace2 Pro请选择 AnyKernel3-android13-5.15.74 开头的zip&lt;/p&gt;
 &lt;p&gt;别的机型请在安装kernelSU apk后查看内核版本，来确定你需要下载的AK3压缩包&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://github.com/tiann/KernelSU/releases" target="_blank" rel="noopener"
-&gt;Releases · tiann/KernelSU (github.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tiann/KernelSU/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases · tiann/KernelSU (github.com)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;接着在KernelSU里 刷入【Zygisk on KernelSU 】和【Zygisk -LSposed】，【shamiko】（可选）&lt;/p&gt;
@@ -85,383 +119,440 @@ data-flex-basis="302px"
 &lt;p&gt;enjoy it&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="我使用的部分模块截图"&gt;我使用的部分模块截图
-&lt;/h2&gt;&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w"
-loading="lazy"
-alt="KernelSU"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;h2 id=&#34;我使用的部分模块截图&#34;&gt;我使用的部分模块截图
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_c63633a356b9179b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU1_hu_20720b9358b81ddd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;KernelSU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;
-&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w"
-loading="lazy"
-alt="KernelSU"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_4a9019bd5fe7b17b.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU2_hu_48179a81484006da.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;KernelSU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;
-&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w"
-loading="lazy"
-alt="KernelSU"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_21143b0044357ecf.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%971_hu_2d5f9d0df0f97f73.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;KernelSU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;
-&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w"
-loading="lazy"
-alt="KernelSU"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_e5a541111ac8941c.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%972_hu_c6da5ea424d24cc7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;KernelSU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;
-&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w"
-loading="lazy"
-alt="KernelSU"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_96686ae14b8fb139.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/KSU%E6%A8%A1%E5%9D%973_hu_31df1179115f1e62.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;KernelSU&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w"
-loading="lazy"
-alt="LSPosed"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_c8e38719e66c6e82.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed_hu_afaaaff8d6b71fbc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LSPosed&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;
-&lt;img src="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png"
-width="1240"
-height="2772"
-srcset="https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w"
-loading="lazy"
-alt="LSPosed"
-class="gallery-image"
-data-flex-grow="44"
-data-flex-basis="107px"
+&lt;img src=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97.png&#34;
+	width=&#34;1240&#34;
+	height=&#34;2772&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_36a152c4fcc34d74.png 480w, https://bestoko.cc/p/oneplus_ace2_pro/LSPosed%E6%A8%A1%E5%9D%97_hu_c15d7bf2d7c0c3a0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LSPosed&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;107px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;h2 id="文中提及资源分享含9008已授权工具及救砖包"&gt;文中提及资源分享（含9008已授权工具及救砖包）
+&lt;h2 id=&#34;文中提及资源分享含9008已授权工具及救砖包&#34;&gt;文中提及资源分享（含9008已授权工具及救砖包）
 &lt;/h2&gt;&lt;p&gt;链接：https://pan.baidu.com/s/1w1irNJf6ZsCVuSqR3YR6Lg?pwd=toko
 提取码：toko&lt;/p&gt;
-&lt;p&gt;9008工具来自酷安@秋水105 【理论上一加11 、一加Ace2 Pro 、oppo find x6 pro、realme GT5 通用】&lt;/p&gt;
-&lt;p&gt;救砖包来自@大侠阿木&lt;/p&gt;</description></item><item><title>为Android Kernel Log添加时间戳</title><link>https://bestoko.cc/p/kernellogaddtime/</link><pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate><guid>https://bestoko.cc/p/kernellogaddtime/</guid><description>&lt;img src="https://bestoko.cc/p/kernellogaddtime/Linux-Kernel.jpg" alt="Featured image of post 为Android Kernel Log添加时间戳" /&gt;&lt;p&gt;将下面的代码保存为kernel.py, 加入可执行权限， 执行./kernel.py -i kernel_log -o kernel.txt , 打开kernel.txt 就可以看到（与android logcat -v time一样的）时间戳&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt; 10
-&lt;/span&gt;&lt;span class="lnt"&gt; 11
-&lt;/span&gt;&lt;span class="lnt"&gt; 12
-&lt;/span&gt;&lt;span class="lnt"&gt; 13
-&lt;/span&gt;&lt;span class="lnt"&gt; 14
-&lt;/span&gt;&lt;span class="lnt"&gt; 15
-&lt;/span&gt;&lt;span class="lnt"&gt; 16
-&lt;/span&gt;&lt;span class="lnt"&gt; 17
-&lt;/span&gt;&lt;span class="lnt"&gt; 18
-&lt;/span&gt;&lt;span class="lnt"&gt; 19
-&lt;/span&gt;&lt;span class="lnt"&gt; 20
-&lt;/span&gt;&lt;span class="lnt"&gt; 21
-&lt;/span&gt;&lt;span class="lnt"&gt; 22
-&lt;/span&gt;&lt;span class="lnt"&gt; 23
-&lt;/span&gt;&lt;span class="lnt"&gt; 24
-&lt;/span&gt;&lt;span class="lnt"&gt; 25
-&lt;/span&gt;&lt;span class="lnt"&gt; 26
-&lt;/span&gt;&lt;span class="lnt"&gt; 27
-&lt;/span&gt;&lt;span class="lnt"&gt; 28
-&lt;/span&gt;&lt;span class="lnt"&gt; 29
-&lt;/span&gt;&lt;span class="lnt"&gt; 30
-&lt;/span&gt;&lt;span class="lnt"&gt; 31
-&lt;/span&gt;&lt;span class="lnt"&gt; 32
-&lt;/span&gt;&lt;span class="lnt"&gt; 33
-&lt;/span&gt;&lt;span class="lnt"&gt; 34
-&lt;/span&gt;&lt;span class="lnt"&gt; 35
-&lt;/span&gt;&lt;span class="lnt"&gt; 36
-&lt;/span&gt;&lt;span class="lnt"&gt; 37
-&lt;/span&gt;&lt;span class="lnt"&gt; 38
-&lt;/span&gt;&lt;span class="lnt"&gt; 39
-&lt;/span&gt;&lt;span class="lnt"&gt; 40
-&lt;/span&gt;&lt;span class="lnt"&gt; 41
-&lt;/span&gt;&lt;span class="lnt"&gt; 42
-&lt;/span&gt;&lt;span class="lnt"&gt; 43
-&lt;/span&gt;&lt;span class="lnt"&gt; 44
-&lt;/span&gt;&lt;span class="lnt"&gt; 45
-&lt;/span&gt;&lt;span class="lnt"&gt; 46
-&lt;/span&gt;&lt;span class="lnt"&gt; 47
-&lt;/span&gt;&lt;span class="lnt"&gt; 48
-&lt;/span&gt;&lt;span class="lnt"&gt; 49
-&lt;/span&gt;&lt;span class="lnt"&gt; 50
-&lt;/span&gt;&lt;span class="lnt"&gt; 51
-&lt;/span&gt;&lt;span class="lnt"&gt; 52
-&lt;/span&gt;&lt;span class="lnt"&gt; 53
-&lt;/span&gt;&lt;span class="lnt"&gt; 54
-&lt;/span&gt;&lt;span class="lnt"&gt; 55
-&lt;/span&gt;&lt;span class="lnt"&gt; 56
-&lt;/span&gt;&lt;span class="lnt"&gt; 57
-&lt;/span&gt;&lt;span class="lnt"&gt; 58
-&lt;/span&gt;&lt;span class="lnt"&gt; 59
-&lt;/span&gt;&lt;span class="lnt"&gt; 60
-&lt;/span&gt;&lt;span class="lnt"&gt; 61
-&lt;/span&gt;&lt;span class="lnt"&gt; 62
-&lt;/span&gt;&lt;span class="lnt"&gt; 63
-&lt;/span&gt;&lt;span class="lnt"&gt; 64
-&lt;/span&gt;&lt;span class="lnt"&gt; 65
-&lt;/span&gt;&lt;span class="lnt"&gt; 66
-&lt;/span&gt;&lt;span class="lnt"&gt; 67
-&lt;/span&gt;&lt;span class="lnt"&gt; 68
-&lt;/span&gt;&lt;span class="lnt"&gt; 69
-&lt;/span&gt;&lt;span class="lnt"&gt; 70
-&lt;/span&gt;&lt;span class="lnt"&gt; 71
-&lt;/span&gt;&lt;span class="lnt"&gt; 72
-&lt;/span&gt;&lt;span class="lnt"&gt; 73
-&lt;/span&gt;&lt;span class="lnt"&gt; 74
-&lt;/span&gt;&lt;span class="lnt"&gt; 75
-&lt;/span&gt;&lt;span class="lnt"&gt; 76
-&lt;/span&gt;&lt;span class="lnt"&gt; 77
-&lt;/span&gt;&lt;span class="lnt"&gt; 78
-&lt;/span&gt;&lt;span class="lnt"&gt; 79
-&lt;/span&gt;&lt;span class="lnt"&gt; 80
-&lt;/span&gt;&lt;span class="lnt"&gt; 81
-&lt;/span&gt;&lt;span class="lnt"&gt; 82
-&lt;/span&gt;&lt;span class="lnt"&gt; 83
-&lt;/span&gt;&lt;span class="lnt"&gt; 84
-&lt;/span&gt;&lt;span class="lnt"&gt; 85
-&lt;/span&gt;&lt;span class="lnt"&gt; 86
-&lt;/span&gt;&lt;span class="lnt"&gt; 87
-&lt;/span&gt;&lt;span class="lnt"&gt; 88
-&lt;/span&gt;&lt;span class="lnt"&gt; 89
-&lt;/span&gt;&lt;span class="lnt"&gt; 90
-&lt;/span&gt;&lt;span class="lnt"&gt; 91
-&lt;/span&gt;&lt;span class="lnt"&gt; 92
-&lt;/span&gt;&lt;span class="lnt"&gt; 93
-&lt;/span&gt;&lt;span class="lnt"&gt; 94
-&lt;/span&gt;&lt;span class="lnt"&gt; 95
-&lt;/span&gt;&lt;span class="lnt"&gt; 96
-&lt;/span&gt;&lt;span class="lnt"&gt; 97
-&lt;/span&gt;&lt;span class="lnt"&gt; 98
-&lt;/span&gt;&lt;span class="lnt"&gt; 99
-&lt;/span&gt;&lt;span class="lnt"&gt;100
-&lt;/span&gt;&lt;span class="lnt"&gt;101
-&lt;/span&gt;&lt;span class="lnt"&gt;102
-&lt;/span&gt;&lt;span class="lnt"&gt;103
-&lt;/span&gt;&lt;span class="lnt"&gt;104
-&lt;/span&gt;&lt;span class="lnt"&gt;105
+&lt;p&gt;9008工具来自酷安@秋水105  【理论上一加11 、一加Ace2 Pro 、oppo find x6 pro、realme GT5 通用】&lt;/p&gt;
+&lt;p&gt;救砖包来自@大侠阿木&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>为Android Kernel Log添加时间戳</title>
+        <link>https://bestoko.cc/p/kernellogaddtime/</link>
+        <pubDate>Wed, 22 Jun 2022 23:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/kernellogaddtime/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/kernellogaddtime/Linux-Kernel.jpg" alt="Featured image of post 为Android Kernel Log添加时间戳" /&gt;&lt;p&gt;将下面的代码保存为kernel.py, 加入可执行权限， 执行./kernel.py -i kernel_log -o kernel.txt , 打开kernel.txt 就可以看到（与android logcat -v time一样的）时间戳&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;getopt&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;a_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;s_second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;s_microsecone&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;abs_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;inputfile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;outputfile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;usage&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;Help Information:
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; -h, --help: Show help information
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; -i, --inputfile: input file to parse
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; -o, --outputfile: output file parsed
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;calc_delta&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stream&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;s_second&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;s_microsecond&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;a_time&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;outfile&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;begin_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;end_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;delta_second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;delta_mircosecond&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;delta_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;d_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;new_line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a_time&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Can&amp;#39;t convert to android time&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stream&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;begin_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;end_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;begin_index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;]&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;begin_index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;time_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;begin_index&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;end_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;d_second&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;d_microsecond&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time_string&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;delta_second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_second&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s_second&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;delta_microsecond&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_microsecond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s_microsecond&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;delta_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timedelta&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seconds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;delta_second&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;microseconds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;delta_microsecond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;d_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a_time&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;delta_time&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;new_line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d_time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;%m-&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; %H:%M:%S.&lt;/span&gt;&lt;span class="si"&gt;%f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new_line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_atime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stream&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;s_second&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;s_microsecond&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;a_time&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;a_time_op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;begin_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;end_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stream&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;a_time_op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;android time&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a_time_op&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;begin_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;end_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;begin_index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;]&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;begin_index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;date_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a_time_op&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;abs_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;begin_index&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;end_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s_second&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s_microsecond&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;abs_time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;a_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strptime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date_string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;%Y-%m-&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; %H:%M:%S.&lt;/span&gt;&lt;span class="si"&gt;%f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;break&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;inputfile&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;outputfile&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;inputpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getopt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getopt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;hi:o:&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;help&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;inputfile=&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;outputfile=&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;getopt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetoptError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;opt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;opt&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;-h&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;--help&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;opt&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;--inputfile&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;inputpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;opt&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;-o&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;outputfile&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;inputpath&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;outputpath&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getcwd&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;/out.txt&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;inputfile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputfile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outputpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;get_atime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputfile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;inputfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seek&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;calc_delta&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputfile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;inputfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;outputfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;datetime&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;getopt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_microsecone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;abs_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;outputfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;usage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;Help Information:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;             -h, --help:        Show help information
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;             -i, --inputfile:   input file  to parse
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;             -o, --outputfile:  output file parsed
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;                        &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;calc_delta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s_second&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s_microsecond&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a_time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;end_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;delta_second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;delta_mircosecond&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;delta_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;d_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;new_line&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Can&amp;#39;t convert to android time&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;end_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;]&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;time_string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end_index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_second&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_microsecond&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;time_string&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;delta_second&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_second&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s_second&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;delta_microsecond&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_microsecond&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s_microsecond&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;delta_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timedelta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delta_second&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;microseconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delta_microsecond&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;d_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;delta_time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;new_line&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d_time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strftime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;%m-&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; %H:%M:%S.&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;outputfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;outputfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_atime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s_second&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s_microsecond&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a_time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;a_time_op&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;end_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;a_time_op&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;android time&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a_time_op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;end_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;]&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;date_string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a_time_op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;abs_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;begin_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end_index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s_second&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s_microsecond&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abs_time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;a_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strptime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;%Y-%m-&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; %H:%M:%S.&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outputfile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;outputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;opts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getopt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getopt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hi:o:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;inputfile=&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;outputfile=&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getopt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetoptError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;usage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;opts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-h&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;--help&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;usage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;--inputfile&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;inputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-o&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;outputfile&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;outputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;usage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;outputpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getcwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/out.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;outputfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;outputpath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;get_atime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;seek&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;calc_delta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inputfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;outputfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:])&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>MTK 平台 Camera HAL3 相关模块的代码路径</title><link>https://bestoko.cc/p/mtkcamerahal3modules/</link><pubDate>Wed, 15 Jun 2022 20:00:00 +0800</pubDate><guid>https://bestoko.cc/p/mtkcamerahal3modules/</guid><description>&lt;img src="https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png" alt="Featured image of post MTK 平台 Camera HAL3 相关模块的代码路径" /&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Camera 相关模块&lt;/th&gt;
-&lt;th&gt;代码路径&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraService&lt;/td&gt;
-&lt;td&gt;frameworks/av/services/camera/libcameraservice/CameraService.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraHALServer&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/service/service.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;ICameraProvider&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;ICameraDevice&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3Impl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;ICameraDeviceSession&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraDeviceManager&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AppStreamMgr&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/app/AppStreamMgr.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PipelineModel&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/model/PipelineModelImpl.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CameraSetting&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;MetadataProvider&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/utils/metastore/metadataprovider/MetadataProvider.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;StreamBuffer&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/pipeline/utils/streambuf/StreamBuffers.cpp&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Hardware Node&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/hwnode/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;FeaturePipe&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/feature/core/featurePipe/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Pipe Driver&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/drv/src/isp/isp_6s/imageio/pipe&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Sensor Driver&lt;/td&gt;
-&lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;EEPROM Driver&lt;/td&gt;
-&lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Android平台架构学习笔记</title><link>https://bestoko.cc/p/android-framework/</link><pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate><guid>https://bestoko.cc/p/android-framework/</guid><description>&lt;img src="https://bestoko.cc/p/android-framework/android-logo.png" alt="Featured image of post Android平台架构学习笔记" /&gt;&lt;h2 id="平台架构"&gt;平台架构
-&lt;/h2&gt;&lt;p&gt;&lt;img src="https://bestoko.cc/p/android-framework/android-stack_2x.png"
-width="1384"
-height="2038"
-srcset="https://bestoko.cc/p/android-framework/android-stack_2x_hu_d12eb78839e89c7b.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu_f68c0d53df401d9c.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="67"
-data-flex-basis="162px"
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>MTK 平台 Camera HAL3 相关模块的代码路径</title>
+        <link>https://bestoko.cc/p/mtkcamerahal3modules/</link>
+        <pubDate>Wed, 15 Jun 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/mtkcamerahal3modules/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/mtkcamerahal3modules/HAL3.png" alt="Featured image of post MTK 平台 Camera HAL3 相关模块的代码路径" /&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Camera 相关模块&lt;/th&gt;
+          &lt;th&gt;代码路径&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CameraService&lt;/td&gt;
+          &lt;td&gt;frameworks/av/services/camera/libcameraservice/CameraService.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CameraHALServer&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/service/service.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ICameraProvider&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/main/hal/devicemgr/provider/2.4/CameraProviderImpl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ICameraDevice&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3Impl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;ICameraDeviceSession&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/device/CameraDevice3SessionImpl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CameraDeviceManager&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/devicemgr/base/CameraDeviceManagerBase.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;AppStreamMgr&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/main/hal/device/3.x/app/AppStreamMgr.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;PipelineModel&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/model/PipelineModelImpl.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CameraSetting&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/middleware/v3/pipeline/CameraSetting/CameraSettingMgr_Imp.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;MetadataProvider&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/utils/metastore/metadataprovider/MetadataProvider.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;StreamBuffer&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/pipeline/utils/streambuf/StreamBuffers.cpp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hardware Node&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/pipeline/hwnode/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;FeaturePipe&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam3&lt;/strong&gt;/feature/core/featurePipe/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pipe Driver&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;mtkcam&lt;/strong&gt;/drv/src/isp/isp_6s/imageio/pipe&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sensor Driver&lt;/td&gt;
+          &lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/mediatek/imgsensor/src/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EEPROM Driver&lt;/td&gt;
+          &lt;td&gt;&amp;lt;kernel-x.xx&amp;gt;/drivers/misc/eeprom/eeprom.c&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>Android平台架构学习笔记</title>
+        <link>https://bestoko.cc/p/android-framework/</link>
+        <pubDate>Thu, 03 Mar 2022 20:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/android-framework/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/android-framework/android-logo.png" alt="Featured image of post Android平台架构学习笔记" /&gt;&lt;h2 id=&#34;平台架构&#34;&gt;平台架构
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/android-framework/android-stack_2x.png&#34;
+	width=&#34;1384&#34;
+	height=&#34;2038&#34;
+	srcset=&#34;https://bestoko.cc/p/android-framework/android-stack_2x_hu_d12eb78839e89c7b.png 480w, https://bestoko.cc/p/android-framework/android-stack_2x_hu_f68c0d53df401d9c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;67&#34;
+		data-flex-basis=&#34;162px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="link" href="https://developer.android.com/guide/platform?hl=zh-cn" target="_blank" rel="noopener"
-&gt;https://developer.android.com/guide/platform?hl=zh-cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://developer.android.com/guide/platform?hl=zh-cn&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;从下到上依次分为：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Linux内核层&lt;/li&gt;
@@ -471,70 +562,70 @@ data-flex-basis="162px"
 &lt;li&gt;系统应用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;每一层都包含大量的子模块或子系统。&lt;/p&gt;
-&lt;h2 id="linux内核层-linux-kernel"&gt;Linux内核层 (Linux Kernel)
+&lt;h2 id=&#34;linux内核层-linux-kernel&#34;&gt;Linux内核层 (Linux Kernel)
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Android 平台的基础是 Linux 内核。例如，&lt;a class="link" href="https://developer.android.com/guide/platform?hl=zh-cn#art" target="_blank" rel="noopener"
-&gt;Android Runtime (ART)&lt;/a&gt; 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。&lt;/p&gt;
-&lt;p&gt;使用 Linux 内核可让 Android 利用&lt;a class="link" href="https://source.android.com/security/overview/kernel-security.html?hl=zh-cn" target="_blank" rel="noopener"
-&gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;
+&lt;p&gt;Android 平台的基础是 Linux 内核。例如，&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#art&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Android Runtime (ART)&lt;/a&gt; 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。&lt;/p&gt;
+&lt;p&gt;使用 Linux 内核可让 Android 利用&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/security/overview/kernel-security.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主要安全功能&lt;/a&gt;，并且允许设备制造商为著名的内核开发硬件驱动程序。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Android平台以Linux内核为基础，避开了直接与硬件打交道，为驱动开发提供了高度扩展性和易用性，大大降低了 Android 系统移植工作的难度。&lt;/p&gt;
-&lt;h2 id="硬件抽象层-hardware-abstract-layerhal"&gt;硬件抽象层 (Hardware Abstract Layer,HAL)
+&lt;h2 id=&#34;硬件抽象层-hardware-abstract-layerhal&#34;&gt;硬件抽象层 (Hardware Abstract Layer,HAL)
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="link" href="https://source.android.com/devices/architecture/hal-types?hl=zh-cn" target="_blank" rel="noopener"
-&gt;硬件抽象层 (HAL)&lt;/a&gt; 提供标准界面，向更高级别的 &lt;a class="link" href="https://developer.android.com/guide/platform?hl=zh-cn#api-framework" target="_blank" rel="noopener"
-&gt;Java API 框架&lt;/a&gt;显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如&lt;a class="link" href="https://source.android.com/devices/camera/index.html?hl=zh-cn" target="_blank" rel="noopener"
-&gt;相机&lt;/a&gt;或&lt;a class="link" href="https://source.android.com/devices/bluetooth.html?hl=zh-cn" target="_blank" rel="noopener"
-&gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/architecture/hal-types?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;硬件抽象层 (HAL)&lt;/a&gt; 提供标准界面，向更高级别的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform?hl=zh-cn#api-framework&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Java API 框架&lt;/a&gt;显示设备硬件功能。HAL 包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/camera/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;相机&lt;/a&gt;或&lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/bluetooth.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;蓝牙&lt;/a&gt;模块。当框架 API 要求访问设备硬件时，Android 系统将为该硬件组件加载库模块。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Linux内核层与HAL层共同实现了对硬件的支持。其中HAL层运行在用户空间(User Space)，而Linux内核驱动程序运行在内核空间(Kernel Space)。为什么不把它们整合起来放到内核空间呢？技术角度是可以实现的，然而商业角度上会损害硬件厂商的利益。Linux内核源代码版权遵循GNU License(发布产品时必须公布源代码)，而Android源代码版权遵循Apache License(发布产品时无须公布源代码)。&lt;/p&gt;
 &lt;p&gt;也就是说，Android放在内核空间的驱动程序对硬件的支持是不完整的，因此被踢出Linux内核主线代码树。&lt;/p&gt;
-&lt;h2 id="系统运行库层"&gt;系统运行库层
+&lt;h2 id=&#34;系统运行库层&#34;&gt;系统运行库层
 &lt;/h2&gt;&lt;p&gt;这一层中包含了支撑整个系统正常运行的基础库，由系统类库和Android运行时组成。由于这些库多数由C/C++实现，因此也被一些开发人员称为“C库层”，以区别应用程序框架层。&lt;/p&gt;
-&lt;h3 id="原生-cc-库-native-cc-libraries"&gt;原生 C/C++ 库 (Native C/C++ Libraries)
+&lt;h3 id=&#34;原生-cc-库-native-cc-libraries&#34;&gt;原生 C/C++ 库 (Native C/C++ Libraries)
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 &lt;a class="link" href="https://developer.android.com/reference/android/opengl/package-summary?hl=zh-cn" target="_blank" rel="noopener"
-&gt;Java OpenGL API&lt;/a&gt; 访问 &lt;a class="link" href="https://developer.android.com/guide/topics/graphics/opengl?hl=zh-cn" target="_blank" rel="noopener"
-&gt;OpenGL ES&lt;/a&gt;，以支持在应用中绘制和操作 2D 和 3D 图形。&lt;/p&gt;
-&lt;p&gt;如果开发的是需要 C 或 C++ 代码的应用，可以使用 &lt;a class="link" href="https://developer.android.com/ndk?hl=zh-cn" target="_blank" rel="noopener"
-&gt;Android NDK&lt;/a&gt; 直接从原生代码访问某些&lt;a class="link" href="https://developer.android.com/ndk/guides/stable_apis?hl=zh-cn" target="_blank" rel="noopener"
-&gt;原生平台库&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;许多核心 Android 系统组件和服务(例如 ART 和 HAL)构建自原生代码，需要以 C 和 C++ 编写的原生库。Android 平台提供 Java 框架 API 以向应用显示其中部分原生库的功能。例如，您可以通过 Android 框架的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/reference/android/opengl/package-summary?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Java OpenGL API&lt;/a&gt; 访问 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/graphics/opengl?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenGL ES&lt;/a&gt;，以支持在应用中绘制和操作 2D 和 3D 图形。&lt;/p&gt;
+&lt;p&gt;如果开发的是需要 C 或 C++ 代码的应用，可以使用 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Android NDK&lt;/a&gt; 直接从原生代码访问某些&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/ndk/guides/stable_apis?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原生平台库&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;简介&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Webkit&lt;/td&gt;
-&lt;td&gt;一个开源的Web浏览器引擎&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OpenMAX AL&lt;/td&gt;
-&lt;td&gt;一个不需要授权、跨平台的软件抽象层，以C语言实现的软件接口，用来处理多媒体。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Libc&lt;/td&gt;
-&lt;td&gt;Linux下的ANSI C的函数库&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Media Framework&lt;/td&gt;
-&lt;td&gt;基于PacketVideo的OpenCORE的多媒体库，支持多种常见音视频格式的录制和播放&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OpenGL ES&lt;/td&gt;
-&lt;td&gt;免授权费的，跨平台的，功能完善的2D和3D图形应用程序接口API，主要针对多种嵌入式系统专门设计&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;名称&lt;/th&gt;
+          &lt;th&gt;简介&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Webkit&lt;/td&gt;
+          &lt;td&gt;一个开源的Web浏览器引擎&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OpenMAX AL&lt;/td&gt;
+          &lt;td&gt;一个不需要授权、跨平台的软件抽象层，以C语言实现的软件接口，用来处理多媒体。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Libc&lt;/td&gt;
+          &lt;td&gt;Linux下的ANSI C的函数库&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Media Framework&lt;/td&gt;
+          &lt;td&gt;基于PacketVideo的OpenCORE的多媒体库，支持多种常见音视频格式的录制和播放&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OpenGL ES&lt;/td&gt;
+          &lt;td&gt;免授权费的，跨平台的，功能完善的2D和3D图形应用程序接口API，主要针对多种嵌入式系统专门设计&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id="android运行时-android-runtime"&gt;Android运行时 (Android Runtime)
+&lt;h3 id=&#34;android运行时-android-runtime&#34;&gt;Android运行时 (Android Runtime)
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;对于运行 Android 5.0(API 级别 21)或更高版本的设备，每个应用都在其自己的进程中运行，并且有其自己的 &lt;a class="link" href="https://source.android.com/devices/tech/dalvik/index.html?hl=zh-cn" target="_blank" rel="noopener"
-&gt;Android Runtime (ART)&lt;/a&gt; 实例。ART 编写为通过执行 DEX 文件在低内存设备上运行多个虚拟机，DEX 文件是一种专为 Android 设计的字节码格式，经过优化，使用的内存很少。编译工具链(例如 &lt;a class="link" href="https://source.android.com/source/jack.html?hl=zh-cn" target="_blank" rel="noopener"
-&gt;Jack&lt;/a&gt;)将 Java 源代码编译为 DEX 字节码，使其可在 Android 平台上运行。&lt;/p&gt;
+&lt;p&gt;对于运行 Android 5.0(API 级别 21)或更高版本的设备，每个应用都在其自己的进程中运行，并且有其自己的 &lt;a class=&#34;link&#34; href=&#34;https://source.android.com/devices/tech/dalvik/index.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Android Runtime (ART)&lt;/a&gt; 实例。ART 编写为通过执行 DEX 文件在低内存设备上运行多个虚拟机，DEX 文件是一种专为 Android 设计的字节码格式，经过优化，使用的内存很少。编译工具链(例如 &lt;a class=&#34;link&#34; href=&#34;https://source.android.com/source/jack.html?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jack&lt;/a&gt;)将 Java 源代码编译为 DEX 字节码，使其可在 Android 平台上运行。&lt;/p&gt;
 &lt;p&gt;ART 的部分主要功能包括：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -544,41 +635,41 @@ data-flex-basis="162px"
 &lt;p&gt;优化的垃圾回收 (GC)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;在 Android 9(API 级别 28)及更高版本的系统中，支持将应用软件包中的 &lt;a class="link" href="https://developer.android.com/about/versions/pie/android-9.0?hl=zh-cn#art-aot-dex" target="_blank" rel="noopener"
-&gt;Dalvik Executable 格式 (DEX) 文件转换为更紧凑的机器代码&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在 Android 9(API 级别 28)及更高版本的系统中，支持将应用软件包中的 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/about/versions/pie/android-9.0?hl=zh-cn#art-aot-dex&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dalvik Executable 格式 (DEX) 文件转换为更紧凑的机器代码&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;更好的调试支持，包括专用采样分析器、详细的诊断异常和崩溃报告，并且能够设置观察点以监控特定字段&lt;/p&gt;
-&lt;p&gt;在 Android 版本 5.0(API 级别 21)之前，Dalvik 是 Android Runtime。如果您的应用在 ART 上运行效果很好，那么它应该也可在 Dalvik 上运行，但&lt;a class="link" href="https://developer.android.com/guide/practices/verifying-apps-art?hl=zh-cn" target="_blank" rel="noopener"
-&gt;反过来不一定&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;Android 还包含一套核心运行时库，可提供 Java API 框架所使用的 Java 编程语言中的大部分功能，包括一些 &lt;a class="link" href="https://developer.android.com/guide/platform/j8-jack?hl=zh-cn" target="_blank" rel="noopener"
-&gt;Java 8 语言功能&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在 Android 版本 5.0(API 级别 21)之前，Dalvik 是 Android Runtime。如果您的应用在 ART 上运行效果很好，那么它应该也可在 Dalvik 上运行，但&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/practices/verifying-apps-art?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;反过来不一定&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;Android 还包含一套核心运行时库，可提供 Java API 框架所使用的 Java 编程语言中的大部分功能，包括一些 &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/platform/j8-jack?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Java 8 语言功能&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id="java-api-框架-java-api--framework"&gt;Java API 框架 (Java API Framework)
+&lt;h2 id=&#34;java-api-框架-java-api--framework&#34;&gt;Java API 框架 (Java API  Framework)
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;您可通过以 Java 语言编写的 API 使用 Android OS 的整个功能集。这些 API 形成创建 Android 应用所需的构建块，它们可简化核心模块化系统组件和服务的重复使用，包括以下组件和服务：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;丰富、可扩展的&lt;a class="link" href="https://developer.android.com/guide/topics/ui/overview?hl=zh-cn" target="_blank" rel="noopener"
-&gt;视图系统&lt;/a&gt;，可用以构建应用的 UI，包括列表、网格、文本框、按钮甚至可嵌入的网络浏览器&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://developer.android.com/guide/topics/resources/overview?hl=zh-cn" target="_blank" rel="noopener"
-&gt;资源管理器&lt;/a&gt;，用于访问非代码资源，例如本地化的字符串、图形和布局文件&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://developer.android.com/guide/topics/ui/notifiers/notifications?hl=zh-cn" target="_blank" rel="noopener"
-&gt;通知管理器&lt;/a&gt;，可让所有应用在状态栏中显示自定义提醒&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://developer.android.com/guide/components/activities?hl=zh-cn" target="_blank" rel="noopener"
-&gt;Activity 管理器&lt;/a&gt;，用于管理应用的生命周期，提供常见的&lt;a class="link" href="https://developer.android.com/guide/components/tasks-and-back-stack?hl=zh-cn" target="_blank" rel="noopener"
-&gt;导航返回栈&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="link" href="https://developer.android.com/guide/topics/providers/content-providers?hl=zh-cn" target="_blank" rel="noopener"
-&gt;内容提供程序&lt;/a&gt;，可让应用访问其他应用(例如“联系人”应用)中的数据或者共享其自己的数据&lt;/li&gt;
+&lt;li&gt;丰富、可扩展的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/ui/overview?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;视图系统&lt;/a&gt;，可用以构建应用的 UI，包括列表、网格、文本框、按钮甚至可嵌入的网络浏览器&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/resources/overview?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;资源管理器&lt;/a&gt;，用于访问非代码资源，例如本地化的字符串、图形和布局文件&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/ui/notifiers/notifications?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;通知管理器&lt;/a&gt;，可让所有应用在状态栏中显示自定义提醒&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/components/activities?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Activity 管理器&lt;/a&gt;，用于管理应用的生命周期，提供常见的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/components/tasks-and-back-stack?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;导航返回栈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/guide/topics/providers/content-providers?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;内容提供程序&lt;/a&gt;，可让应用访问其他应用(例如“联系人”应用)中的数据或者共享其自己的数据&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;开发者可以完全访问 Android 系统应用使用的&lt;a class="link" href="https://developer.android.com/reference/packages?hl=zh-cn" target="_blank" rel="noopener"
-&gt;框架 API&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;开发者可以完全访问 Android 系统应用使用的&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/reference/packages?hl=zh-cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;框架 API&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;与&amp;quot;C库层&amp;quot;对应，这一层往往被称作“Java库层”。一方面为上层应用层提供API接口，另一方面也是不少系统级服务进程的实现，是与Android应用开发者关系最直接的一层。提供了开发Android应用程序所需的一系列类库，高度封装直接调用。应用框架层的主要实现代码在frameworks/base和frameworks/av目录下。&lt;/p&gt;
-&lt;h2 id="系统应用-system-apps"&gt;系统应用 (System Apps)
+&lt;h2 id=&#34;系统应用-system-apps&#34;&gt;系统应用 (System Apps)
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Android 随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。&lt;/p&gt;
+&lt;p&gt;Android  随附一套用于电子邮件、短信、日历、互联网浏览和联系人等的核心应用。平台随附的应用与用户可以选择安装的应用一样，没有特殊状态。因此第三方应用可成为用户的默认网络浏览器、短信 Messenger 甚至默认键盘(有一些例外，例如系统的“设置”应用)。&lt;/p&gt;
 &lt;p&gt;系统应用可用作用户的应用，以及提供开发者可从其自己的应用访问的主要功能。例如，如果您的应用要发短信，您无需自己构建该功能，可以改为调用已安装的短信应用向您指定的接收者发送消息。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;源码根目录中的packages目录对应着系统应用，其中：&lt;/p&gt;
@@ -590,7 +681,16 @@ data-flex-basis="162px"
 &lt;li&gt;screensavers 屏幕保护&lt;/li&gt;
 &lt;li&gt;services 通信服务&lt;/li&gt;
 &lt;li&gt;wallpaper 墙纸&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>一加8的Android 11 折腾指南</title><link>https://bestoko.cc/p/oneplus8/</link><pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate><guid>https://bestoko.cc/p/oneplus8/</guid><description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id="准备工作"&gt;准备工作
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>一加8的Android 11 折腾指南</title>
+        <link>https://bestoko.cc/p/oneplus8/</link>
+        <pubDate>Wed, 28 Oct 2020 09:00:01 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/p/oneplus8/</guid>
+        <description>&lt;img src="https://bestoko.cc/p/oneplus8/onepluslogo.jpg" alt="Featured image of post 一加8的Android 11 折腾指南" /&gt;&lt;h1 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;解锁Bootloader且打开USB调试的一加8&lt;/p&gt;
@@ -606,8 +706,8 @@ data-flex-basis="162px"
 &lt;p&gt;打包下载： pan.baidu.com/s/1afSr1snXan4LoBLX9l0Urg 【pcge】&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="刷入magisk"&gt;刷入Magisk
-&lt;/h1&gt;&lt;h2 id="制作magisk_patchedimg"&gt;制作magisk_patched.img
+&lt;h1 id=&#34;刷入magisk&#34;&gt;刷入Magisk
+&lt;/h1&gt;&lt;h2 id=&#34;制作magisk_patchedimg&#34;&gt;制作magisk_patched.img
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将官方包内的&lt;code&gt;payload.bin&lt;/code&gt; 解压并放入Payload Dumber 的payload_input目录&lt;/p&gt;
@@ -619,27 +719,27 @@ data-flex-basis="162px"
 &lt;p&gt;打开payload_output目录，将解压出的&lt;code&gt;boot.img&lt;/code&gt;复制到手机根目录&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;下载并安装Magisk最新版本 (&lt;a class="link" href="https://github.com/topjohnwu/Magisk/releases" target="_blank" rel="noopener"
-&gt;https://github.com/topjohnwu/Magisk/releases&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;下载并安装Magisk最新版本 (&lt;a class=&#34;link&#34; href=&#34;https://github.com/topjohnwu/Magisk/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/topjohnwu/Magisk/releases&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;选择安装Magisk-选择并修补一个文件，选中放在根目录的&lt;code&gt;boot.img&lt;/code&gt; ，等待修补完成&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;将手机download目录下的修补完成的&lt;code&gt;magisk_patched.img&lt;/code&gt;复制到电脑&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="工具刷入mgisk_patchedimg"&gt;工具刷入mgisk_patched.img
+&lt;h2 id=&#34;工具刷入mgisk_patchedimg&#34;&gt;工具刷入mgisk_patched.img
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;将&lt;code&gt;mgisk_patched.img&lt;/code&gt;放入 platform-tools 目录下&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;运行&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;打开CMD命令行.bat
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;打开CMD命令行.bat
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
@@ -650,13 +750,13 @@ data-flex-basis="162px"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="刷入edxposed"&gt;刷入EdXposed
+&lt;h1 id=&#34;刷入edxposed&#34;&gt;刷入EdXposed
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;刷入&lt;code&gt;Riru - Core&lt;/code&gt;模块&lt;/li&gt;
 &lt;li&gt;刷入&lt;code&gt;Riru - EdXposed(YAHFA)&lt;/code&gt; 或&lt;code&gt;Riru - EdXposed(SandHook)&lt;/code&gt;模块&lt;/li&gt;
 &lt;li&gt;安装最新的&lt;code&gt;Edxposed Manager&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="总结与注意事项"&gt;总结与注意事项
+&lt;h1 id=&#34;总结与注意事项&#34;&gt;总结与注意事项
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;制作&lt;code&gt;mgisk_patched.img&lt;/code&gt;时要用最新的 v8.0.x版本，不能使用以往的v21.0版本&lt;/p&gt;
@@ -674,43 +774,64 @@ data-flex-basis="162px"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus8/op8info.jpg"
-width="1080"
-height="2400"
-srcset="https://bestoko.cc/p/oneplus8/op8info_hu_8d74a0d8beb7876b.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_f9e8f7e0e015a2a5.jpg 1024w"
-loading="lazy"
-alt="op8info"
-class="gallery-image"
-data-flex-grow="45"
-data-flex-basis="108px"
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8info.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8info_hu_8d74a0d8beb7876b.jpg 480w, https://bestoko.cc/p/oneplus8/op8info_hu_f9e8f7e0e015a2a5.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8info&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus8/op8magisk1.jpg"
-width="1080"
-height="2400"
-srcset="https://bestoko.cc/p/oneplus8/op8magisk1_hu_d0203a6ccfb444a4.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_7a781abe761c60d3.jpg 1024w"
-loading="lazy"
-alt="op8magisk1"
-class="gallery-image"
-data-flex-grow="45"
-data-flex-basis="108px"
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk1.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk1_hu_d0203a6ccfb444a4.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk1_hu_7a781abe761c60d3.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8magisk1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus8/op8magisk2.jpg"
-width="1080"
-height="2400"
-srcset="https://bestoko.cc/p/oneplus8/op8magisk2_hu_a4a5fc19099f339f.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_ed4a925312ed9577.jpg 1024w"
-loading="lazy"
-alt="op8magisk2"
-class="gallery-image"
-data-flex-grow="45"
-data-flex-basis="108px"
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8magisk2.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8magisk2_hu_a4a5fc19099f339f.jpg 480w, https://bestoko.cc/p/oneplus8/op8magisk2_hu_ed4a925312ed9577.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8magisk2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://bestoko.cc/p/oneplus8/op8edxposed.jpg"
-width="1080"
-height="2400"
-srcset="https://bestoko.cc/p/oneplus8/op8edxposed_hu_59a4e06792f9df86.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_c596c0e49186055b.jpg 1024w"
-loading="lazy"
-alt="op8edxposed"
-class="gallery-image"
-data-flex-grow="45"
-data-flex-basis="108px"
-&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;img src=&#34;https://bestoko.cc/p/oneplus8/op8edxposed.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2400&#34;
+	srcset=&#34;https://bestoko.cc/p/oneplus8/op8edxposed_hu_59a4e06792f9df86.jpg 480w, https://bestoko.cc/p/oneplus8/op8edxposed_hu_c596c0e49186055b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;op8edxposed&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;45&#34;
+		data-flex-basis=&#34;108px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

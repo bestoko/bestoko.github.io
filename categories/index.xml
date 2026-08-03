@@ -1,1 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Toko's blog</title><link>https://bestoko.cc/categories/</link><description>Recent content in Categories on Toko's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>修业</title><link>https://bestoko.cc/categories/growth/</link><pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate><guid>https://bestoko.cc/categories/growth/</guid><description>&lt;img src="https://bestoko.cc/categories/growth/TakiShiina.png" alt="Featured image of post 修业" /&gt;</description></item><item><title>折腾</title><link>https://bestoko.cc/categories/tinker/</link><pubDate>Sun, 14 Dec 2025 23:28:34 +0800</pubDate><guid>https://bestoko.cc/categories/tinker/</guid><description>&lt;img src="https://bestoko.cc/categories/tinker/TomoriTakamatsu.png" alt="Featured image of post 折腾" /&gt;</description></item><item><title>次元</title><link>https://bestoko.cc/categories/acgn/</link><pubDate>Sun, 01 Jun 2025 17:09:50 +0800</pubDate><guid>https://bestoko.cc/categories/acgn/</guid><description>&lt;img src="https://bestoko.cc/categories/acgn/RanaKaname.png" alt="Featured image of post 次元" /&gt;</description></item><item><title>器物</title><link>https://bestoko.cc/categories/gadgets/</link><pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate><guid>https://bestoko.cc/categories/gadgets/</guid><description>&lt;img src="https://bestoko.cc/categories/gadgets/SoyoNagasaki.png" alt="Featured image of post 器物" /&gt;</description></item><item><title>浮生</title><link>https://bestoko.cc/categories/life/</link><pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate><guid>https://bestoko.cc/categories/life/</guid><description>&lt;img src="https://bestoko.cc/categories/life/AnonChihaya.png" alt="Featured image of post 浮生" /&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Toko&#39;s blog</title>
+        <link>https://bestoko.cc/categories/</link>
+        <description>Recent content in Categories on Toko&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://bestoko.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>修业</title>
+        <link>https://bestoko.cc/categories/growth/</link>
+        <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/growth/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/growth/TakiShiina.png" alt="Featured image of post 修业" /&gt;</description>
+        </item>
+        <item>
+        <title>折腾</title>
+        <link>https://bestoko.cc/categories/tinker/</link>
+        <pubDate>Sun, 14 Dec 2025 23:28:34 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/tinker/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/tinker/TomoriTakamatsu.png" alt="Featured image of post 折腾" /&gt;</description>
+        </item>
+        <item>
+        <title>次元</title>
+        <link>https://bestoko.cc/categories/acgn/</link>
+        <pubDate>Sun, 01 Jun 2025 17:09:50 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/acgn/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/acgn/RanaKaname.png" alt="Featured image of post 次元" /&gt;</description>
+        </item>
+        <item>
+        <title>器物</title>
+        <link>https://bestoko.cc/categories/gadgets/</link>
+        <pubDate>Thu, 01 May 2025 23:00:00 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/gadgets/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/gadgets/SoyoNagasaki.png" alt="Featured image of post 器物" /&gt;</description>
+        </item>
+        <item>
+        <title>浮生</title>
+        <link>https://bestoko.cc/categories/life/</link>
+        <pubDate>Sat, 25 Mar 2023 23:31:05 +0800</pubDate>
+        
+        <guid>https://bestoko.cc/categories/life/</guid>
+        <description>&lt;img src="https://bestoko.cc/categories/life/AnonChihaya.png" alt="Featured image of post 浮生" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

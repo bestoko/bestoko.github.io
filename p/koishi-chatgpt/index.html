@@ -1,23 +1,833 @@
-<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT"><title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title><link rel=canonical href=https://bestoko.cc/p/koishi-chatgpt/><link rel=stylesheet href=/scss/style.min.b1a5b48e9268da293f0e82d09fd1299e5ecbd5ea47ba1f408b3687d520ce0c2b.css><meta property='og:title' content="从零开始拥有一个属于自己的 ChatGPT QQ机器人"><meta property='og:description' content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT"><meta property='og:url' content='https://bestoko.cc/p/koishi-chatgpt/'><meta property='og:site_name' content="Toko's blog"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='ChatGPT'><meta property='article:tag' content='Koishi'><meta property='article:tag' content='QQ bot'><meta property='article:tag' content='Unraid'><meta property='article:tag' content='Docker'><meta property='article:published_time' content='2023-03-01T21:30:00+08:00'><meta property='article:modified_time' content='2023-03-01T21:30:00+08:00'><meta property='og:image' content='https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png'><meta name=twitter:site content="@bestokoCC"><meta name=twitter:creator content="@bestokoCC"><meta name=twitter:title content="从零开始拥有一个属于自己的 ChatGPT QQ机器人"><meta name=twitter:description content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png'><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_acf6d2dc3da62cd2.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-</a><span class=emoji>🍟</span></figure><div class=site-meta><h1 class=site-name><a href=/>Toko's blog</a></h1><h2 class=site-description>Never Knows Best</h2></div></header><ol class=menu-social><li><a href=https://github.com/bestoko target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://steamcommunity.com/id/bestoko/ target=_blank title=Steam rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5.0 11-.653 8.953L11.5 16.962V17a3 3 0 01-2.824 3H8.5a3 3 0 01-2.94-2.402L3 16.5V13l3.51 1.755a2.989 2.989.0 012.834-.635l2.727-3.818A4.5 4.5.0 0116.5 5z"/><circle cx="16.5" cy="9.5" r="1" fill="currentColor"/></svg></a></li><li><a href=https://t.me/bestoko target=_blank title=Telegram rel=me><svg class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4"/></svg></a></li><li><a href=https://twitter.com/bestokoCC target=_blank title=Twitter rel=me><svg class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
-<span>Home</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>Search</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-<span>About</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
-<span>Links</span></a></li><li><a href=https://www.travellings.cn/plain.html target=_blank><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0-3.87-3.37-7-10-7H3"/><path d="M3 15h16a2 2 0 002-2"/><path d="M3 6v5h17.5"/><path d="M3 11v4"/><path d="M8 11V6"/><path d="M13 11V6.5"/><path d="M3 19h18"/></svg>
-<span>Travelling</span></a></li><li><a href=https://bestoko.cc/index.xml target=_blank><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg>
-<span>RSS</span></a></li><li class=menu-bottom-section><ol class=menu></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#事前准备>事前准备</a></li><li><a href=#操作部署>操作部署</a><ol><li><a href=#unraid-docker-部署-koishi>unraid docker 部署 koishi</a></li><li><a href=#koishi-以及-chatgpt-插件的配置>koishi 以及 chatGPT 插件的配置</a></li></ol></li><li><a href=#enjoy-it>Enjoy it</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/koishi-chatgpt/><img src=/p/koishi-chatgpt/KoishiJS_hu_ad49cf8bd2b31608.png srcset="/p/koishi-chatgpt/KoishiJS_hu_ad49cf8bd2b31608.png 800w, /p/koishi-chatgpt/KoishiJS_hu_cfb2568c6b937635.png 1600w" width=800 height=400 loading=lazy alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人"></a></div><div class=article-details><header class=article-category><a href=/categories/tinker/ style=background-color:#3a86ff;color:#fff>折腾</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/koishi-chatgpt/>从零开始拥有一个属于自己的 ChatGPT QQ机器人</a></h2><h3 class=article-subtitle>在 unraid 上通过 docker 部署 koishi ，接入chatGPT</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Mar 01, 2023</time></div></footer></div></header><section class=article-content><p>OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。</p><h2 id=事前准备>事前准备</h2><p>你需要准备：</p><ol><li><a class=link href=https://koishi.chat/ target=_blank rel=noopener>koishi</a> koishi是一个高性能的机器人服务，你可以在官网任选一个合适的方式部署（Windows/macOS/Linux/Android/容器）</li><li><a class=link href=https://platform.openai.com/account/api-keys target=_blank rel=noopener>chatGPT API key</a> 你可以通过 <a class=link href=https://platform.openai.com/account/api-keys target=_blank rel=noopener>https://platform.openai.com/account/api-keys</a> 获取 （注册openAI 账号的方法不在本文介绍 <del>事实上随便找个国外的接码平台就可以了</del>）</li><li>一个 QQ 小号，等级尽可能高一点以免风控 （koishi 事实上支持包括 QQ/discord/telegram/kook/feishu等的部署）</li></ol><p>下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）</p><h2 id=操作部署>操作部署</h2><h3 id=unraid-docker-部署-koishi>unraid docker 部署 koishi</h3><p><img src=/p/koishi-chatgpt/koishi.png width=1180 height=1326 srcset="/p/koishi-chatgpt/koishi_hu_c7df4b6c7dddccbd.png 480w, /p/koishi-chatgpt/koishi_hu_741ab1aaa45d3d3a.png 1024w" loading=lazy class=gallery-image data-flex-grow=88 data-flex-basis=213px></p><p>也可通过 unraid 的 docker 配置，具体如下</p><p><img src=/p/koishi-chatgpt/unraid_koishi_docker.png width=1657 height=893 srcset="/p/koishi-chatgpt/unraid_koishi_docker_hu_cf972a6b91c3f67e.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_hu_208df3a194edd877.png 1024w" loading=lazy class=gallery-image data-flex-grow=185 data-flex-basis=445px></p><p>在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:</p><p><img src=/p/koishi-chatgpt/unraid_koishi_docker_logo.png width=1187 height=425 srcset="/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_643514a7c7bb28b2.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_logo_hu_f762aed3603a6815.png 1024w" loading=lazy class=gallery-image data-flex-grow=279 data-flex-basis=670px></p><h3 id=koishi-以及-chatgpt-插件的配置>koishi 以及 chatGPT 插件的配置</h3><p><img src=/p/koishi-chatgpt/koishi_adapter-onebot.png width=2316 height=1310 srcset="/p/koishi-chatgpt/koishi_adapter-onebot_hu_5ae7e3af2445a8a6.png 480w, /p/koishi-chatgpt/koishi_adapter-onebot_hu_1d7d56dafd273fd9.png 1024w" loading=lazy class=gallery-image data-flex-grow=176 data-flex-basis=424px></p><p>按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。</p><p>接着去插件市场安装 <a class=link href=https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api target=_blank rel=noopener>koishi_chatGPT 插件</a>根据提示加载 cache 服务并配置 apiKey ：</p><p><img src=/p/koishi-chatgpt/koishi_chatgpt.png width=594 height=303 srcset="/p/koishi-chatgpt/koishi_chatgpt_hu_a3c79a360c8fec8.png 480w, /p/koishi-chatgpt/koishi_chatgpt_hu_38de11c7c711f896.png 1024w" loading=lazy class=gallery-image data-flex-grow=196 data-flex-basis=470px></p><p><img src=/p/koishi-chatgpt/koishi_chatgpt2.png width=1268 height=782 srcset="/p/koishi-chatgpt/koishi_chatgpt2_hu_584cf79b070d5d9b.png 480w, /p/koishi-chatgpt/koishi_chatgpt2_hu_f7bfa5eb1cf6f80c.png 1024w" loading=lazy class=gallery-image data-flex-grow=162 data-flex-basis=389px></p><p>apikey 可以在 <a class=link href=https://platform.openai.com/account/api-keys target=_blank rel=noopener>https://platform.openai.com/account/api-keys</a> 获取。</p><p>然后启用插件</p><h2 id=enjoy-it>Enjoy it</h2><p>接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD</p><p>20220305补充：</p><p>请尽可能的在<strong>可信任</strong>的朋友的群里使用，我的群友们疑似因为提问了太多不能碰的滑梯，两天用完了免费的 18$ 余额，第三天群也炸了 &mldr;</p></section><footer class=article-footer><section class=article-tags><a href=/tags/chatgpt/>ChatGPT</a>
-<a href=/tags/koishi/>Koishi</a>
-<a href=/tags/qq-bot/>QQ Bot</a>
-<a href=/tags/unraid/>Unraid</a>
-<a href=/tags/docker/>Docker</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/fnos_unraid/><div class=article-image><img src=/p/fnos_unraid/FNOS_VM_install6.c2b318d3027c3414e6eebf50fbaec81b_hu_840880bdd76d359a.png width=250 height=150 loading=lazy alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记" data-key=fnOS_UNraid data-hash="md5-wrMY0wJ8NBTm7r9Q+67IGw=="></div><div class=article-details><h2 class=article-title>Unraid 上部署飞牛OS虚拟机小记</h2></div></a></article><article class=has-image><a href=/p/teslap4_unraid/><div class=article-image><img src=/p/teslap4_unraid/TeslaP4.66c0c57e65d9a1dca31dc09e852d2964_hu_98c9012665adaf13.jpg width=250 height=150 loading=lazy alt="Featured image of post Tesla P4 Unraid 下折腾小记" data-key=TeslaP4_UNraid data-hash="md5-ZsDFfmXZodyjHcCehS0pZA=="></div><div class=article-details><h2 class=article-title>Tesla P4 Unraid 下折腾小记</h2></div></a></article><article class=has-image><a href=/p/install-pve-emmc/><div class=article-image><img src=/p/install-pve-emmc/pve.64b2966ec4d0d30d75b0cadb2c0ed808_hu_4ecf1076905de507.png width=250 height=150 loading=lazy alt="Featured image of post 如何在eMMC上安装PVE与优化配置" data-key=Install-PVE-eMMC data-hash="md5-ZLKWbsTQ0w11sMrbLA7YCA=="></div><div class=article-details><h2 class=article-title>如何在eMMC上安装PVE与优化配置</h2></div></a></article><article class=has-image><a href=/p/tbr3-fnos/><div class=article-image><img src=/p/tbr3-fnos/tbr3.ca51bb1b744b8571d7311b9ed706a773_hu_d4717018ae8afc28.png width=250 height=150 loading=lazy alt="Featured image of post 是真香还是...?天钡R3+飞牛fnOS 自组家庭影音NAS" data-key=tbr3-fnos data-hash="md5-ylG7G3RLhXHXMRue1wancw=="></div><div class=article-details><h2 class=article-title>是真香还是...?天钡R3+飞牛fnOS 自组家庭影音NAS</h2></div></a></article><article class=has-image><a href=/p/scr01/><div class=article-image><img src=/p/scr01/SCR01.566e23c67fe8e869be6257f16e3c276e_hu_2ce34e2511d75812.png width=250 height=150 loading=lazy alt="Featured image of post 三星 SCR01 入手简单折腾 " data-key=SCR01 data-hash="md5-Vm4jxn/o6Gm+Ylfxbjwnbg=="></div><div class=article-details><h2 class=article-title>三星 SCR01 入手简单折腾</h2></div></a></article></div></div></aside><script src=https://utteranc.es/client.js repo=bestoko/utterances issue-term=pathname crossorigin=anonymous async></script><style>.utterances{max-width:unset}</style><script>let utterancesLoaded=!1;function setUtterancesTheme(e){let t=document.querySelector(".utterances iframe");t&&t.contentWindow.postMessage({type:"set-theme",theme:`github-${e}`},"https://utteranc.es")}addEventListener("message",e=>{if(e.origin!=="https://utteranc.es")return;utterancesLoaded=!0,setUtterancesTheme(document.documentElement.dataset.scheme)}),window.addEventListener("onColorSchemeChange",e=>{if(!utterancesLoaded)return;setUtterancesTheme(e.detail)})</script><footer class=site-footer><section class=copyright>&copy;
-2020 -
-2026 Toko's blog</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.27.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT">
+<title>从零开始拥有一个属于自己的 ChatGPT QQ机器人</title>
+
+<link rel='canonical' href='https://bestoko.cc/p/koishi-chatgpt/'>
+
+<link rel="stylesheet" href="/scss/style.min.8e2ca32629e4402d3e42ca7f0a1490098010dbdb5eec726dfb595eba0049a566.css"><meta property='og:title' content="从零开始拥有一个属于自己的 ChatGPT QQ机器人">
+<meta property='og:description' content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT">
+<meta property='og:url' content='https://bestoko.cc/p/koishi-chatgpt/'>
+<meta property='og:site_name' content='Toko&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ChatGPT' /><meta property='article:tag' content='Koishi' /><meta property='article:tag' content='QQ bot' /><meta property='article:tag' content='Unraid' /><meta property='article:tag' content='Docker' /><meta property='article:published_time' content='2023-03-01T21:30:00&#43;08:00'/><meta property='article:modified_time' content='2023-03-01T21:30:00&#43;08:00'/><meta property='og:image' content='https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png' />
+<meta name="twitter:site" content="@bestokoCC">
+    <meta name="twitter:creator" content="@bestokoCC"><meta name="twitter:title" content="从零开始拥有一个属于自己的 ChatGPT QQ机器人">
+<meta name="twitter:description" content="在 unraid 上通过 docker 部署 koishi ，接入chatGPT"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bestoko.cc/p/koishi-chatgpt/KoishiJS.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_acf6d2dc3da62cd2.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍟</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Toko&#39;s blog</a></h1>
+            <h2 class="site-description">Never Knows Best</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/bestoko'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://steamcommunity.com/id/bestoko/'
+                        target="_blank"
+                        title="Steam"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-steam"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z" /><circle cx="16.5" cy="9.5" r="1" fill="currentColor" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/bestoko'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/bestokoCC'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.travellings.cn/plain.html' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-train"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 13c0 -3.87 -3.37 -7 -10 -7h-8" /><path d="M3 15h16a2 2 0 0 0 2 -2" /><path d="M3 6v5h17.5" /><path d="M3 11v4" /><path d="M8 11v-5" /><path d="M13 11v-4.5" /><path d="M3 19h18" /></svg>
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://bestoko.cc/index.xml' target="_blank">
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#事前准备">事前准备</a></li>
+    <li><a href="#操作部署">操作部署</a>
+      <ol>
+        <li><a href="#unraid-docker-部署-koishi">unraid docker 部署 koishi</a></li>
+        <li><a href="#koishi-以及-chatgpt-插件的配置">koishi 以及 chatGPT 插件的配置</a></li>
+      </ol>
+    </li>
+    <li><a href="#enjoy-it">Enjoy it</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/koishi-chatgpt/">
+                <img src="/p/koishi-chatgpt/KoishiJS_hu_ad49cf8bd2b31608.png"
+                        srcset="/p/koishi-chatgpt/KoishiJS_hu_ad49cf8bd2b31608.png 800w, /p/koishi-chatgpt/KoishiJS_hu_cfb2568c6b937635.png 1600w"
+                        width="800" 
+                        height="400" 
+                        loading="lazy"
+                        alt="Featured image of post 从零开始拥有一个属于自己的 ChatGPT QQ机器人" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tinker/" style="background-color: #3a86ff; color: #fff;">
+                折腾
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/koishi-chatgpt/">从零开始拥有一个属于自己的 ChatGPT QQ机器人</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            在 unraid 上通过 docker 部署 koishi ，接入chatGPT
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 01, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>OpenAI家的chatGPT 最近的火热不必多说，还有很多墙内的小伙伴由于种种原因不能很方便地使用，正巧我最近在折腾在 NAS 上部署 QQ 机器人，找到一个很方便的将 ChatGPT 接入 QQ 机器人的插件。</p>
+<h2 id="事前准备">事前准备
+</h2><p>你需要准备：</p>
+<ol>
+<li><a class="link" href="https://koishi.chat/"  target="_blank" rel="noopener"
+    >koishi</a>  koishi是一个高性能的机器人服务，你可以在官网任选一个合适的方式部署（Windows/macOS/Linux/Android/容器）</li>
+<li><a class="link" href="https://platform.openai.com/account/api-keys"  target="_blank" rel="noopener"
+    >chatGPT API key</a> 你可以通过 <a class="link" href="https://platform.openai.com/account/api-keys"  target="_blank" rel="noopener"
+    >https://platform.openai.com/account/api-keys</a> 获取 （注册openAI 账号的方法不在本文介绍 <del>事实上随便找个国外的接码平台就可以了</del>）</li>
+<li>一个 QQ 小号，等级尽可能高一点以免风控 （koishi 事实上支持包括 QQ/discord/telegram/kook/feishu等的部署）</li>
+</ol>
+<p>下面，我将在我自己的 NAS 上通过 koishi 容器的方式进行操作，我的 NAS 系统是 unraid 6.11.5 （ Linux 内核 5.19.17）</p>
+<h2 id="操作部署">操作部署
+</h2><h3 id="unraid-docker-部署-koishi">unraid docker 部署 koishi
+</h3><p><img src="/p/koishi-chatgpt/koishi.png"
+	width="1180"
+	height="1326"
+	srcset="/p/koishi-chatgpt/koishi_hu_c7df4b6c7dddccbd.png 480w, /p/koishi-chatgpt/koishi_hu_741ab1aaa45d3d3a.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="88"
+		data-flex-basis="213px"
+	
+></p>
+<p>也可通过 unraid 的 docker 配置，具体如下</p>
+<p><img src="/p/koishi-chatgpt/unraid_koishi_docker.png"
+	width="1657"
+	height="893"
+	srcset="/p/koishi-chatgpt/unraid_koishi_docker_hu_cf972a6b91c3f67e.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_hu_208df3a194edd877.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="445px"
+	
+></p>
+<p>在 unraid 上使用推荐后面一种方法，方便设置图标（看着更舒服一点） 效果如下:</p>
+<p><img src="/p/koishi-chatgpt/unraid_koishi_docker_logo.png"
+	width="1187"
+	height="425"
+	srcset="/p/koishi-chatgpt/unraid_koishi_docker_logo_hu_643514a7c7bb28b2.png 480w, /p/koishi-chatgpt/unraid_koishi_docker_logo_hu_f762aed3603a6815.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="279"
+		data-flex-basis="670px"
+	
+></p>
+<h3 id="koishi-以及-chatgpt-插件的配置">koishi 以及 chatGPT 插件的配置
+</h3><p><img src="/p/koishi-chatgpt/koishi_adapter-onebot.png"
+	width="2316"
+	height="1310"
+	srcset="/p/koishi-chatgpt/koishi_adapter-onebot_hu_5ae7e3af2445a8a6.png 480w, /p/koishi-chatgpt/koishi_adapter-onebot_hu_1d7d56dafd273fd9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="176"
+		data-flex-basis="424px"
+	
+></p>
+<p>按照你的 QQ 小号设置 adapter-onebot ，设置完后右上角找到启用插件。需要注意的是 protocol 需要选择 ws-reverse。</p>
+<p>接着去插件市场安装 <a class="link" href="https://code.mycard.moe/3rdeye/koishi-plugin-chatgpt-api"  target="_blank" rel="noopener"
+    >koishi_chatGPT 插件</a>根据提示加载 cache 服务并配置 apiKey ：</p>
+<p><img src="/p/koishi-chatgpt/koishi_chatgpt.png"
+	width="594"
+	height="303"
+	srcset="/p/koishi-chatgpt/koishi_chatgpt_hu_a3c79a360c8fec8.png 480w, /p/koishi-chatgpt/koishi_chatgpt_hu_38de11c7c711f896.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="470px"
+	
+></p>
+<p><img src="/p/koishi-chatgpt/koishi_chatgpt2.png"
+	width="1268"
+	height="782"
+	srcset="/p/koishi-chatgpt/koishi_chatgpt2_hu_584cf79b070d5d9b.png 480w, /p/koishi-chatgpt/koishi_chatgpt2_hu_f7bfa5eb1cf6f80c.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="389px"
+	
+></p>
+<p>apikey 可以在 <a class="link" href="https://platform.openai.com/account/api-keys"  target="_blank" rel="noopener"
+    >https://platform.openai.com/account/api-keys</a> 获取。</p>
+<p>然后启用插件</p>
+<h2 id="enjoy-it">Enjoy it
+</h2><p>接下来 你就可以和群友们一起好好提(调)问(教) ChatGPT 了 XD</p>
+<p>20220305补充：</p>
+<p>请尽可能的在<strong>可信任</strong>的朋友的群里使用，我的群友们疑似因为提问了太多不能碰的滑梯，两天用完了免费的 18$ 余额，第三天群也炸了 &hellip;</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/chatgpt/">ChatGPT</a>
+        
+            <a href="/tags/koishi/">Koishi</a>
+        
+            <a href="/tags/qq-bot/">QQ Bot</a>
+        
+            <a href="/tags/unraid/">Unraid</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/fnos_unraid/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fnos_unraid/FNOS_VM_install6.c2b318d3027c3414e6eebf50fbaec81b_hu_840880bdd76d359a.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Unraid 上部署飞牛OS虚拟机小记"
+                        data-key="fnOS_UNraid" 
+                        data-hash="md5-wrMY0wJ8NBTm7r9Q&#43;67IGw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Unraid 上部署飞牛OS虚拟机小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/teslap4_unraid/">
+        
+        
+            <div class="article-image">
+                <img src="/p/teslap4_unraid/TeslaP4.66c0c57e65d9a1dca31dc09e852d2964_hu_98c9012665adaf13.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Tesla P4 Unraid 下折腾小记"
+                        data-key="TeslaP4_UNraid" 
+                        data-hash="md5-ZsDFfmXZodyjHcCehS0pZA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tesla P4 Unraid 下折腾小记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/install-pve-emmc/">
+        
+        
+            <div class="article-image">
+                <img src="/p/install-pve-emmc/pve.64b2966ec4d0d30d75b0cadb2c0ed808_hu_4ecf1076905de507.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 如何在eMMC上安装PVE与优化配置"
+                        data-key="Install-PVE-eMMC" 
+                        data-hash="md5-ZLKWbsTQ0w11sMrbLA7YCA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">如何在eMMC上安装PVE与优化配置</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/tbr3-fnos/">
+        
+        
+            <div class="article-image">
+                <img src="/p/tbr3-fnos/tbr3.ca51bb1b744b8571d7311b9ed706a773_hu_d4717018ae8afc28.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS"
+                        data-key="tbr3-fnos" 
+                        data-hash="md5-ylG7G3RLhXHXMRue1wancw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">是真香还是...?天钡R3&#43;飞牛fnOS 自组家庭影音NAS</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/scr01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/scr01/SCR01.566e23c67fe8e869be6257f16e3c276e_hu_2ce34e2511d75812.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 三星 SCR01 入手简单折腾 "
+                        data-key="SCR01" 
+                        data-hash="md5-Vm4jxn/o6Gm&#43;Ylfxbjwnbg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">三星 SCR01 入手简单折腾 </h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="bestoko/utterances"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Toko&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
